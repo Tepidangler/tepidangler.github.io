@@ -1,0 +1,425 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_a_g_e_1_1_entity" kind="class" language="C++" prot="public">
+    <compoundname>AGE::Entity</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_a_g_e_1_1_entity_1a1e427d145559e10c9891a182d2df2484" prot="private" static="no" mutable="no">
+        <type>entt::entity</type>
+        <definition>entt::entity AGE::Entity::m_EntityHandle</definition>
+        <argsstring></argsstring>
+        <name>m_EntityHandle</name>
+        <qualifiedname>AGE::Entity::m_EntityHandle</qualifiedname>
+        <initializer>= entt::null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Entity.h" line="186" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Entity.h" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_entity_1a67ff82fcc33f0bdabe6ac84cb69b953f" prot="private" static="no" mutable="no">
+        <type><ref refid="class_a_g_e_1_1_scene" kindref="compound">Scene</ref> *</type>
+        <definition>Scene* AGE::Entity::m_Scene</definition>
+        <argsstring></argsstring>
+        <name>m_Scene</name>
+        <qualifiedname>AGE::Entity::m_Scene</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Entity.h" line="187" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Entity.h" bodystart="187" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_entity_1ab1751a1d9034f3efabd05295daf36821" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AGE::Entity::Entity</definition>
+        <argsstring>()=default</argsstring>
+        <name>Entity</name>
+        <qualifiedname>AGE::Entity::Entity</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Entity.h" line="12" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_entity_1af3ecf8bf10c6a7297d8fd551121f469d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AGE::Entity::Entity</definition>
+        <argsstring>(entt::entity Handle, Scene *ScenePtr)</argsstring>
+        <name>Entity</name>
+        <qualifiedname>AGE::Entity::Entity</qualifiedname>
+        <param>
+          <type>entt::entity</type>
+          <declname>Handle</declname>
+        </param>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_scene" kindref="compound">Scene</ref> *</type>
+          <declname>ScenePtr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Entity.h" line="13" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/Entity.cpp" bodystart="7" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_entity_1a1e273f0493181b06ef82a66005362f1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AGE::Entity::Entity</definition>
+        <argsstring>(const Entity &amp;other)=default</argsstring>
+        <name>Entity</name>
+        <qualifiedname>AGE::Entity::Entity</qualifiedname>
+        <param>
+          <type>const <ref refid="class_a_g_e_1_1_entity" kindref="compound">Entity</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Entity.h" line="14" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_entity_1af333a011993d779bca697c1c14375ad7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename ...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>T &amp;</type>
+        <definition>T &amp; AGE::Entity::AddComponent</definition>
+        <argsstring>(Args &amp;&amp;... args)</argsstring>
+        <name>AddComponent</name>
+        <qualifiedname>AGE::Entity::AddComponent</qualifiedname>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Entity.h" line="18" column="3" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Entity.h" bodystart="18" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_entity_1a4e57f9a6f80ee66443353d24e19eadd1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool AGE::Entity::HasComponent</definition>
+        <argsstring>()</argsstring>
+        <name>HasComponent</name>
+        <qualifiedname>AGE::Entity::HasComponent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Entity.h" line="27" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Entity.h" bodystart="27" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_entity_1a3a204e470fc9c3868766a512a8c9ae30" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool AGE::Entity::HasComponent</definition>
+        <argsstring>() const</argsstring>
+        <name>HasComponent</name>
+        <qualifiedname>AGE::Entity::HasComponent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Entity.h" line="34" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Entity.h" bodystart="34" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_entity_1af06a81612c2370f2661132a477d5f5d2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>T &amp;</type>
+        <definition>T &amp; AGE::Entity::AddOrReplaceComponent</definition>
+        <argsstring>(Args &amp;&amp;... args)</argsstring>
+        <name>AddOrReplaceComponent</name>
+        <qualifiedname>AGE::Entity::AddOrReplaceComponent</qualifiedname>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Entity.h" line="41" column="3" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Entity.h" bodystart="41" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_entity_1a926a53afa0a14bcb226ac20e0e29ec59" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T &amp;</type>
+        <definition>T &amp; AGE::Entity::GetComponent</definition>
+        <argsstring>()</argsstring>
+        <name>GetComponent</name>
+        <qualifiedname>AGE::Entity::GetComponent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Entity.h" line="49" column="3" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Entity.h" bodystart="49" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_entity_1a46bcd01425ba4168dbebd6a3f679bdce" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T &amp;</type>
+        <definition>T &amp; AGE::Entity::GetComponent</definition>
+        <argsstring>() const</argsstring>
+        <name>GetComponent</name>
+        <qualifiedname>AGE::Entity::GetComponent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Entity.h" line="56" column="3" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Entity.h" bodystart="56" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_entity_1a5f39451ef29b4844b825e5e8404ef72c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void AGE::Entity::RemoveComponent</definition>
+        <argsstring>()</argsstring>
+        <name>RemoveComponent</name>
+        <qualifiedname>AGE::Entity::RemoveComponent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Entity.h" line="63" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Entity.h" bodystart="63" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_entity_1a41a2881ca3c15b4b0e75485eb03b38e8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>AGE::Entity::operator bool</definition>
+        <argsstring>() const</argsstring>
+        <name>operator bool</name>
+        <qualifiedname>AGE::Entity::operator bool</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Entity.h" line="69" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Entity.h" bodystart="69" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_entity_1afe44179b4602ad0cd366e90307a61e25" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>AGE::Entity::operator entt::entity</definition>
+        <argsstring>() const</argsstring>
+        <name>operator entt::entity</name>
+        <qualifiedname>AGE::Entity::entity</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Entity.h" line="70" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Entity.h" bodystart="70" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_entity_1a01d9c47bea2bd82b5bf2de1306a96612" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>AGE::Entity::operator uint32_t</definition>
+        <argsstring>() const</argsstring>
+        <name>operator uint32_t</name>
+        <qualifiedname>AGE::Entity::operator uint32_t</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Entity.h" line="71" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Entity.h" bodystart="71" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_entity_1acfdb273982ccec927f19860ae08328ae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref></type>
+        <definition>UUID AGE::Entity::GetUUID</definition>
+        <argsstring>()</argsstring>
+        <name>GetUUID</name>
+        <qualifiedname>AGE::Entity::GetUUID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Entity.h" line="73" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Entity.h" bodystart="73" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_entity_1abcb2e897bef6b918338f840a41c6d0e6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string &amp; AGE::Entity::GetName</definition>
+        <argsstring>()</argsstring>
+        <name>GetName</name>
+        <qualifiedname>AGE::Entity::GetName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Entity.h" line="74" column="19" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Entity.h" bodystart="74" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_entity_1a5cf1cd921934e3d353a0e59fd1c0f298" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AGE::Entity::operator==</definition>
+        <argsstring>(const Entity &amp;Other) const</argsstring>
+        <name>operator==</name>
+        <qualifiedname>AGE::Entity::operator==</qualifiedname>
+        <param>
+          <type>const <ref refid="class_a_g_e_1_1_entity" kindref="compound">Entity</ref> &amp;</type>
+          <declname>Other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Entity.h" line="76" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Entity.h" bodystart="76" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_entity_1ad3a2c2ba1953f94308be23a95376735d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AGE::Entity::operator!=</definition>
+        <argsstring>(const Entity &amp;Other) const</argsstring>
+        <name>operator!=</name>
+        <qualifiedname>AGE::Entity::operator!=</qualifiedname>
+        <param>
+          <type>const <ref refid="class_a_g_e_1_1_entity" kindref="compound">Entity</ref> &amp;</type>
+          <declname>Other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Entity.h" line="81" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Entity.h" bodystart="81" bodyend="84"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_entity_1ad6724a3eb2d5f9980968b98748030abf" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AGE::Entity::Serialize</definition>
+        <argsstring>(DataWriter *Serializer, const Entity &amp;Data)</argsstring>
+        <name>Serialize</name>
+        <qualifiedname>AGE::Entity::Serialize</qualifiedname>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref> *</type>
+          <declname>Serializer</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_a_g_e_1_1_entity" kindref="compound">Entity</ref> &amp;</type>
+          <declname>Data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Entity.h" line="86" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Entity.h" bodystart="86" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_entity_1a6810edddadecf23ad1feb73151aabe36" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AGE::Entity::Deserialize</definition>
+        <argsstring>(DataReader *Deserializer, Entity &amp;Data)</argsstring>
+        <name>Deserialize</name>
+        <qualifiedname>AGE::Entity::Deserialize</qualifiedname>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref> *</type>
+          <declname>Deserializer</declname>
+        </param>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_entity" kindref="compound">Entity</ref> &amp;</type>
+          <declname>Data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Entity.h" line="180" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Entity.h" bodystart="180" bodyend="183"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Entity.h" line="9" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Entity.h" bodystart="10" bodyend="189"/>
+    <listofallmembers>
+      <member refid="class_a_g_e_1_1_entity_1af333a011993d779bca697c1c14375ad7" prot="public" virt="non-virtual"><scope>AGE::Entity</scope><name>AddComponent</name></member>
+      <member refid="class_a_g_e_1_1_entity_1af06a81612c2370f2661132a477d5f5d2" prot="public" virt="non-virtual"><scope>AGE::Entity</scope><name>AddOrReplaceComponent</name></member>
+      <member refid="class_a_g_e_1_1_entity_1a6810edddadecf23ad1feb73151aabe36" prot="public" virt="non-virtual"><scope>AGE::Entity</scope><name>Deserialize</name></member>
+      <member refid="class_a_g_e_1_1_entity_1ab1751a1d9034f3efabd05295daf36821" prot="public" virt="non-virtual"><scope>AGE::Entity</scope><name>Entity</name></member>
+      <member refid="class_a_g_e_1_1_entity_1af3ecf8bf10c6a7297d8fd551121f469d" prot="public" virt="non-virtual"><scope>AGE::Entity</scope><name>Entity</name></member>
+      <member refid="class_a_g_e_1_1_entity_1a1e273f0493181b06ef82a66005362f1b" prot="public" virt="non-virtual"><scope>AGE::Entity</scope><name>Entity</name></member>
+      <member refid="class_a_g_e_1_1_entity_1a926a53afa0a14bcb226ac20e0e29ec59" prot="public" virt="non-virtual"><scope>AGE::Entity</scope><name>GetComponent</name></member>
+      <member refid="class_a_g_e_1_1_entity_1a46bcd01425ba4168dbebd6a3f679bdce" prot="public" virt="non-virtual"><scope>AGE::Entity</scope><name>GetComponent</name></member>
+      <member refid="class_a_g_e_1_1_entity_1abcb2e897bef6b918338f840a41c6d0e6" prot="public" virt="non-virtual"><scope>AGE::Entity</scope><name>GetName</name></member>
+      <member refid="class_a_g_e_1_1_entity_1acfdb273982ccec927f19860ae08328ae" prot="public" virt="non-virtual"><scope>AGE::Entity</scope><name>GetUUID</name></member>
+      <member refid="class_a_g_e_1_1_entity_1a4e57f9a6f80ee66443353d24e19eadd1" prot="public" virt="non-virtual"><scope>AGE::Entity</scope><name>HasComponent</name></member>
+      <member refid="class_a_g_e_1_1_entity_1a3a204e470fc9c3868766a512a8c9ae30" prot="public" virt="non-virtual"><scope>AGE::Entity</scope><name>HasComponent</name></member>
+      <member refid="class_a_g_e_1_1_entity_1a1e427d145559e10c9891a182d2df2484" prot="private" virt="non-virtual"><scope>AGE::Entity</scope><name>m_EntityHandle</name></member>
+      <member refid="class_a_g_e_1_1_entity_1a67ff82fcc33f0bdabe6ac84cb69b953f" prot="private" virt="non-virtual"><scope>AGE::Entity</scope><name>m_Scene</name></member>
+      <member refid="class_a_g_e_1_1_entity_1a41a2881ca3c15b4b0e75485eb03b38e8" prot="public" virt="non-virtual"><scope>AGE::Entity</scope><name>operator bool</name></member>
+      <member refid="class_a_g_e_1_1_entity_1afe44179b4602ad0cd366e90307a61e25" prot="public" virt="non-virtual"><scope>AGE::Entity</scope><name>operator entt::entity</name></member>
+      <member refid="class_a_g_e_1_1_entity_1a01d9c47bea2bd82b5bf2de1306a96612" prot="public" virt="non-virtual"><scope>AGE::Entity</scope><name>operator uint32_t</name></member>
+      <member refid="class_a_g_e_1_1_entity_1ad3a2c2ba1953f94308be23a95376735d" prot="public" virt="non-virtual"><scope>AGE::Entity</scope><name>operator!=</name></member>
+      <member refid="class_a_g_e_1_1_entity_1a5cf1cd921934e3d353a0e59fd1c0f298" prot="public" virt="non-virtual"><scope>AGE::Entity</scope><name>operator==</name></member>
+      <member refid="class_a_g_e_1_1_entity_1a5f39451ef29b4844b825e5e8404ef72c" prot="public" virt="non-virtual"><scope>AGE::Entity</scope><name>RemoveComponent</name></member>
+      <member refid="class_a_g_e_1_1_entity_1ad6724a3eb2d5f9980968b98748030abf" prot="public" virt="non-virtual"><scope>AGE::Entity</scope><name>Serialize</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

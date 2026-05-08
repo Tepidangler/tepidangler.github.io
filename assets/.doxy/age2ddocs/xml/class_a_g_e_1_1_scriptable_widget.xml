@@ -1,0 +1,423 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_a_g_e_1_1_scriptable_widget" kind="class" language="C++" prot="public">
+    <compoundname>AGE::ScriptableWidget</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::enable_shared_from_this&lt; ScriptableWidget &gt;</basecompoundref>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_a_g_e_1_1_scriptable_widget_1a3f01e6b918e038f5942b40407549db83" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string AGE::ScriptableWidget::m_Name</definition>
+        <argsstring></argsstring>
+        <name>m_Name</name>
+        <qualifiedname>AGE::ScriptableWidget::m_Name</qualifiedname>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" line="58" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_scriptable_widget_1a29a323621ed7c0843b6004734aea2981" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool AGE::ScriptableWidget::bIsVisible</definition>
+        <argsstring></argsstring>
+        <name>bIsVisible</name>
+        <qualifiedname>AGE::ScriptableWidget::bIsVisible</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" line="59" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_scriptable_widget_1aed047732312fb046ab9e4349667fe946" prot="protected" static="no" mutable="no">
+        <type><ref refid="struct_a_g_e_1_1_screen_resolution" kindref="compound">ScreenResolution</ref></type>
+        <definition>ScreenResolution AGE::ScriptableWidget::m_Resolution</definition>
+        <argsstring></argsstring>
+        <name>m_Resolution</name>
+        <qualifiedname>AGE::ScriptableWidget::m_Resolution</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" line="60" column="18" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_scriptable_widget_1ab07a05a67536852fc41afc74540813d7" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; Ref&lt; <ref refid="class_a_g_e_1_1_u_i_component" kindref="compound">UIComponent</ref> &gt; &gt;</type>
+        <definition>std::vector&lt;Ref&lt;UIComponent&gt; &gt; AGE::ScriptableWidget::m_UIComponents</definition>
+        <argsstring></argsstring>
+        <name>m_UIComponents</name>
+        <qualifiedname>AGE::ScriptableWidget::m_UIComponents</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" line="61" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_scriptable_widget_1a93887e3ebd7ad95880c728cb2f5dffe3" prot="protected" static="no" mutable="no">
+        <type>EWidgetStack</type>
+        <definition>EWidgetStack AGE::ScriptableWidget::m_Stack</definition>
+        <argsstring></argsstring>
+        <name>m_Stack</name>
+        <qualifiedname>AGE::ScriptableWidget::m_Stack</qualifiedname>
+        <initializer>= EWidgetStack::INVALID</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" line="62" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_a_g_e_1_1_scriptable_widget_1a23bb096a90d9b42ddbde5569ed533e7e" prot="private" static="no" mutable="no">
+        <type><ref refid="class_a_g_e_1_1_entity" kindref="compound">Entity</ref></type>
+        <definition>Entity AGE::ScriptableWidget::m_Entity</definition>
+        <argsstring></argsstring>
+        <name>m_Entity</name>
+        <qualifiedname>AGE::ScriptableWidget::m_Entity</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" line="65" column="8" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_a_g_e_1_1_scriptable_widget_1a032858ae1fe02d2d1170981c2af2d67c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class Scene</definition>
+        <argsstring></argsstring>
+        <name>Scene</name>
+        <qualifiedname>AGE::ScriptableWidget::Scene</qualifiedname>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_scene" kindref="compound">Scene</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" line="66" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_a_g_e_1_1_scriptable_widget_1a3a91caa34c61113015704113b850b689" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class WidgetStack</definition>
+        <argsstring></argsstring>
+        <name>WidgetStack</name>
+        <qualifiedname>AGE::ScriptableWidget::WidgetStack</qualifiedname>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_widget_stack" kindref="compound">WidgetStack</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" line="67" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_scriptable_widget_1abc7adfe3e5ed1f9a0202dce8207faa8f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual AGE::ScriptableWidget::~ScriptableWidget</definition>
+        <argsstring>()</argsstring>
+        <name>~ScriptableWidget</name>
+        <qualifiedname>AGE::ScriptableWidget::~ScriptableWidget</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" line="29" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" bodystart="29" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_scriptable_widget_1af6c348d689009aceccf75d13da33add4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T &amp;</type>
+        <definition>T &amp; AGE::ScriptableWidget::GetComponent</definition>
+        <argsstring>()</argsstring>
+        <name>GetComponent</name>
+        <qualifiedname>AGE::ScriptableWidget::GetComponent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" line="32" column="3" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" bodystart="32" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_scriptable_widget_1a1eafbe928148b3f22cc138613113fd16" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename ...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>T &amp;</type>
+        <definition>T &amp; AGE::ScriptableWidget::AddComponent</definition>
+        <argsstring>(Args &amp;&amp;... args)</argsstring>
+        <name>AddComponent</name>
+        <qualifiedname>AGE::ScriptableWidget::AddComponent</qualifiedname>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" line="38" column="3" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" bodystart="38" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_scriptable_widget_1a906fab1e80b7fd981b61d41273325cfa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void AGE::ScriptableWidget::OnEvent</definition>
+        <argsstring>(Event &amp;E)</argsstring>
+        <name>OnEvent</name>
+        <qualifiedname>AGE::ScriptableWidget::OnEvent</qualifiedname>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref> &amp;</type>
+          <declname>E</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" line="43" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" bodystart="43" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_scriptable_widget_1a5077a3bc9072b022193288548007d21a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>std::string</type>
+        <definition>virtual std::string AGE::ScriptableWidget::GetName</definition>
+        <argsstring>()</argsstring>
+        <name>GetName</name>
+        <qualifiedname>AGE::ScriptableWidget::GetName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" line="44" column="21" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" bodystart="44" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_scriptable_widget_1a3d80e45135a549a26a4c497bf27a8c4a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref></type>
+        <definition>virtual UUID AGE::ScriptableWidget::GetID</definition>
+        <argsstring>()</argsstring>
+        <name>GetID</name>
+        <qualifiedname>AGE::ScriptableWidget::GetID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" line="45" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" bodystart="45" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_scriptable_widget_1ae7541c615bb2e6da20170f6f1cb43d46" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool AGE::ScriptableWidget::IsVisible</definition>
+        <argsstring>()</argsstring>
+        <name>IsVisible</name>
+        <qualifiedname>AGE::ScriptableWidget::IsVisible</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" line="46" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" bodystart="46" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_scriptable_widget_1a4babe08abe016cb78e13e06dbe16d920" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void AGE::ScriptableWidget::SetVisibility</definition>
+        <argsstring>(bool Visibility)</argsstring>
+        <name>SetVisibility</name>
+        <qualifiedname>AGE::ScriptableWidget::SetVisibility</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>Visibility</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" line="47" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" bodystart="47" bodyend="47"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_scriptable_widget_1a7f23f210ebee6bce04bdce78de51302a" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void AGE::ScriptableWidget::OnInit</definition>
+        <argsstring>()</argsstring>
+        <name>OnInit</name>
+        <qualifiedname>AGE::ScriptableWidget::OnInit</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" line="52" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" bodystart="52" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_scriptable_widget_1a290a612ef49e34af19c7b9984e78302f" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void AGE::ScriptableWidget::OnConstruct</definition>
+        <argsstring>()</argsstring>
+        <name>OnConstruct</name>
+        <qualifiedname>AGE::ScriptableWidget::OnConstruct</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" line="53" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" bodystart="53" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_scriptable_widget_1ac897b6a9840bb8243d28f895636869a6" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void AGE::ScriptableWidget::OnDestroy</definition>
+        <argsstring>()</argsstring>
+        <name>OnDestroy</name>
+        <qualifiedname>AGE::ScriptableWidget::OnDestroy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" line="54" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" bodystart="54" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_scriptable_widget_1a9be85277f4ff1b1f814dee87e51d09fe" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void AGE::ScriptableWidget::OnUpdate</definition>
+        <argsstring>(TimeStep DeltaTime)</argsstring>
+        <name>OnUpdate</name>
+        <qualifiedname>AGE::ScriptableWidget::OnUpdate</qualifiedname>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_time_step" kindref="compound">TimeStep</ref></type>
+          <declname>DeltaTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" line="55" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" bodystart="55" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_scriptable_widget_1ad9f7497cc7260624050c4be87d260da9" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void AGE::ScriptableWidget::Reset</definition>
+        <argsstring>()</argsstring>
+        <name>Reset</name>
+        <qualifiedname>AGE::ScriptableWidget::Reset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" line="56" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" bodystart="56" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_scriptable_widget_1a5afb5ae1a0472c0235292e108216e6bc" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="class_a_g_e_1_1_entity" kindref="compound">Entity</ref> &amp;</type>
+        <definition>virtual Entity &amp; AGE::ScriptableWidget::GetEntityHandle</definition>
+        <argsstring>()</argsstring>
+        <name>GetEntityHandle</name>
+        <qualifiedname>AGE::ScriptableWidget::GetEntityHandle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" line="57" column="16" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" bodystart="57" bodyend="57"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>AGE::ScriptableWidget</label>
+        <link refid="class_a_g_e_1_1_scriptable_widget"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::enable_shared_from_this&lt; ScriptableWidget &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>AGE::ScreenResolution</label>
+        <link refid="struct_a_g_e_1_1_screen_resolution"/>
+      </node>
+      <node id="1">
+        <label>AGE::ScriptableWidget</label>
+        <link refid="class_a_g_e_1_1_scriptable_widget"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>m_Resolution</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::enable_shared_from_this&lt; ScriptableWidget &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" line="26" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/ScriptableWidget.h" bodystart="27" bodyend="69"/>
+    <listofallmembers>
+      <member refid="class_a_g_e_1_1_scriptable_widget_1a1eafbe928148b3f22cc138613113fd16" prot="public" virt="non-virtual"><scope>AGE::ScriptableWidget</scope><name>AddComponent</name></member>
+      <member refid="class_a_g_e_1_1_scriptable_widget_1a29a323621ed7c0843b6004734aea2981" prot="protected" virt="non-virtual"><scope>AGE::ScriptableWidget</scope><name>bIsVisible</name></member>
+      <member refid="class_a_g_e_1_1_scriptable_widget_1af6c348d689009aceccf75d13da33add4" prot="public" virt="non-virtual"><scope>AGE::ScriptableWidget</scope><name>GetComponent</name></member>
+      <member refid="class_a_g_e_1_1_scriptable_widget_1a5afb5ae1a0472c0235292e108216e6bc" prot="protected" virt="virtual"><scope>AGE::ScriptableWidget</scope><name>GetEntityHandle</name></member>
+      <member refid="class_a_g_e_1_1_scriptable_widget_1a3d80e45135a549a26a4c497bf27a8c4a" prot="public" virt="virtual"><scope>AGE::ScriptableWidget</scope><name>GetID</name></member>
+      <member refid="class_a_g_e_1_1_scriptable_widget_1a5077a3bc9072b022193288548007d21a" prot="public" virt="virtual"><scope>AGE::ScriptableWidget</scope><name>GetName</name></member>
+      <member refid="class_a_g_e_1_1_scriptable_widget_1ae7541c615bb2e6da20170f6f1cb43d46" prot="public" virt="virtual"><scope>AGE::ScriptableWidget</scope><name>IsVisible</name></member>
+      <member refid="class_a_g_e_1_1_scriptable_widget_1a23bb096a90d9b42ddbde5569ed533e7e" prot="private" virt="non-virtual"><scope>AGE::ScriptableWidget</scope><name>m_Entity</name></member>
+      <member refid="class_a_g_e_1_1_scriptable_widget_1a3f01e6b918e038f5942b40407549db83" prot="protected" virt="non-virtual"><scope>AGE::ScriptableWidget</scope><name>m_Name</name></member>
+      <member refid="class_a_g_e_1_1_scriptable_widget_1aed047732312fb046ab9e4349667fe946" prot="protected" virt="non-virtual"><scope>AGE::ScriptableWidget</scope><name>m_Resolution</name></member>
+      <member refid="class_a_g_e_1_1_scriptable_widget_1a93887e3ebd7ad95880c728cb2f5dffe3" prot="protected" virt="non-virtual"><scope>AGE::ScriptableWidget</scope><name>m_Stack</name></member>
+      <member refid="class_a_g_e_1_1_scriptable_widget_1ab07a05a67536852fc41afc74540813d7" prot="protected" virt="non-virtual"><scope>AGE::ScriptableWidget</scope><name>m_UIComponents</name></member>
+      <member refid="class_a_g_e_1_1_scriptable_widget_1a290a612ef49e34af19c7b9984e78302f" prot="protected" virt="virtual"><scope>AGE::ScriptableWidget</scope><name>OnConstruct</name></member>
+      <member refid="class_a_g_e_1_1_scriptable_widget_1ac897b6a9840bb8243d28f895636869a6" prot="protected" virt="virtual"><scope>AGE::ScriptableWidget</scope><name>OnDestroy</name></member>
+      <member refid="class_a_g_e_1_1_scriptable_widget_1a906fab1e80b7fd981b61d41273325cfa" prot="public" virt="virtual"><scope>AGE::ScriptableWidget</scope><name>OnEvent</name></member>
+      <member refid="class_a_g_e_1_1_scriptable_widget_1a7f23f210ebee6bce04bdce78de51302a" prot="protected" virt="virtual"><scope>AGE::ScriptableWidget</scope><name>OnInit</name></member>
+      <member refid="class_a_g_e_1_1_scriptable_widget_1a9be85277f4ff1b1f814dee87e51d09fe" prot="protected" virt="virtual"><scope>AGE::ScriptableWidget</scope><name>OnUpdate</name></member>
+      <member refid="class_a_g_e_1_1_scriptable_widget_1ad9f7497cc7260624050c4be87d260da9" prot="protected" virt="virtual"><scope>AGE::ScriptableWidget</scope><name>Reset</name></member>
+      <member refid="class_a_g_e_1_1_scriptable_widget_1a032858ae1fe02d2d1170981c2af2d67c" prot="private" virt="non-virtual"><scope>AGE::ScriptableWidget</scope><name>Scene</name></member>
+      <member refid="class_a_g_e_1_1_scriptable_widget_1a4babe08abe016cb78e13e06dbe16d920" prot="public" virt="virtual"><scope>AGE::ScriptableWidget</scope><name>SetVisibility</name></member>
+      <member refid="class_a_g_e_1_1_scriptable_widget_1a3a91caa34c61113015704113b850b689" prot="private" virt="non-virtual"><scope>AGE::ScriptableWidget</scope><name>WidgetStack</name></member>
+      <member refid="class_a_g_e_1_1_scriptable_widget_1abc7adfe3e5ed1f9a0202dce8207faa8f" prot="public" virt="virtual"><scope>AGE::ScriptableWidget</scope><name>~ScriptableWidget</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,931 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_a_g_e_1_1_app" kind="class" language="C++" prot="public">
+    <compoundname>AGE::App</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_a_g_e_1_1_app_1aee09768c28cdc74072050aec1f2dc272" prot="private" static="no" mutable="no">
+        <type>Scope&lt; <ref refid="class_a_g_e_1_1_device_manager" kindref="compound">DeviceManager</ref> &gt;</type>
+        <definition>Scope&lt;DeviceManager&gt; AGE::App::m_DeviceManager</definition>
+        <argsstring></argsstring>
+        <name>m_DeviceManager</name>
+        <qualifiedname>AGE::App::m_DeviceManager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="131" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_app_1a0f9d2f993e29cf14c913a91de1e44c8e" prot="private" static="no" mutable="no">
+        <type><ref refid="class_a_g_e_1_1_im_gui_layer" kindref="compound">ImGuiLayer</ref> *</type>
+        <definition>ImGuiLayer* AGE::App::m_ImGuiLayer</definition>
+        <argsstring></argsstring>
+        <name>m_ImGuiLayer</name>
+        <qualifiedname>AGE::App::m_ImGuiLayer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="132" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_app_1a145e25492c72cb454fb07027fa1dc5e0" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool AGE::App::m_Running</definition>
+        <argsstring></argsstring>
+        <name>m_Running</name>
+        <qualifiedname>AGE::App::m_Running</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="135" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_app_1a6a03efcc5fd0c9c12594ec570e9c6aa6" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool AGE::App::m_Minimized</definition>
+        <argsstring></argsstring>
+        <name>m_Minimized</name>
+        <qualifiedname>AGE::App::m_Minimized</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="137" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_app_1a8c57f7c532549a1ba1671f70658dcecb" prot="private" static="no" mutable="no">
+        <type><ref refid="class_a_g_e_1_1_layer_stack" kindref="compound">LayerStack</ref></type>
+        <definition>LayerStack AGE::App::m_LayerStack</definition>
+        <argsstring></argsstring>
+        <name>m_LayerStack</name>
+        <qualifiedname>AGE::App::m_LayerStack</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="139" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_app_1a6b8efcb0b1a1c0593afb1fa7bdc6dffc" prot="private" static="no" mutable="no">
+        <type><ref refid="class_game_framework_1_1_scriptable_comp_stack" kindref="compound">GameFramework::ScriptableCompStack</ref></type>
+        <definition>GameFramework::ScriptableCompStack AGE::App::m_CompStack</definition>
+        <argsstring></argsstring>
+        <name>m_CompStack</name>
+        <qualifiedname>AGE::App::m_CompStack</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="141" column="36" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_app_1a6f2d094c638d487d3068a99b536e568f" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_a_g_e_1_1_app_config" kindref="compound">AppConfig</ref></type>
+        <definition>AppConfig AGE::App::m_AppConfig</definition>
+        <argsstring></argsstring>
+        <name>m_AppConfig</name>
+        <qualifiedname>AGE::App::m_AppConfig</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="143" column="11" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_app_1ae070148d8d75bbf770080075d387ebbc" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref></type>
+        <definition>Vector2 AGE::App::m_FramebufferSize</definition>
+        <argsstring></argsstring>
+        <name>m_FramebufferSize</name>
+        <qualifiedname>AGE::App::m_FramebufferSize</qualifiedname>
+        <initializer>= {1280.f, 720.f}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="147" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" bodystart="147" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_app_1a5d4acd078539264695a8f8fd8d7b78d8" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AGE::App::m_CurrentFrame</definition>
+        <argsstring></argsstring>
+        <name>m_CurrentFrame</name>
+        <qualifiedname>AGE::App::m_CurrentFrame</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="149" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_app_1af3281e21e77100d8b5db03643932d494" prot="private" static="no" mutable="no">
+        <type><ref refid="class_a_g_e_1_1_time_step" kindref="compound">TimeStep</ref></type>
+        <definition>TimeStep AGE::App::m_DeltaTime</definition>
+        <argsstring></argsstring>
+        <name>m_DeltaTime</name>
+        <qualifiedname>AGE::App::m_DeltaTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="150" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_app_1ac214e174a5acf9239006faa1372af5f6" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AGE::App::m_LastFrame</definition>
+        <argsstring></argsstring>
+        <name>m_LastFrame</name>
+        <qualifiedname>AGE::App::m_LastFrame</qualifiedname>
+        <initializer>= 0.f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="151" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_app_1afccafc62d26b62febd8c7cf089ffe154" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool AGE::App::bShowNewProjectMenu</definition>
+        <argsstring></argsstring>
+        <name>bShowNewProjectMenu</name>
+        <qualifiedname>AGE::App::bShowNewProjectMenu</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="153" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_app_1a05cc9a9aeb95099e1d3594eae19e517e" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool AGE::App::bBlockThisFrame</definition>
+        <argsstring></argsstring>
+        <name>bBlockThisFrame</name>
+        <qualifiedname>AGE::App::bBlockThisFrame</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="154" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_app_1abf0c6a55ce3d909dad0f4ef34b01c084" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::thread &gt;</type>
+        <definition>std::vector&lt;std::thread&gt; AGE::App::m_Threads</definition>
+        <argsstring></argsstring>
+        <name>m_Threads</name>
+        <qualifiedname>AGE::App::m_Threads</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="157" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_app_1a0d7b32ddf2abe1cb82b4200717a1d800" prot="private" static="no" mutable="no">
+        <type>TargetPlatform</type>
+        <definition>TargetPlatform AGE::App::m_Target</definition>
+        <argsstring></argsstring>
+        <name>m_Target</name>
+        <qualifiedname>AGE::App::m_Target</qualifiedname>
+        <initializer>= TargetPlatform::Windows</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="159" column="16" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_app_1af8763e16d12431d049dd7c87f3c90ac0" prot="private" static="no" mutable="no">
+        <type>Ref&lt; <ref refid="class_a_g_e_1_1_project" kindref="compound">Project</ref> &gt;</type>
+        <definition>Ref&lt;Project&gt; AGE::App::m_Project</definition>
+        <argsstring></argsstring>
+        <name>m_Project</name>
+        <qualifiedname>AGE::App::m_Project</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="160" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_app_1a10385568d7148eb722003b9567323553" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_a_g_e_1_1_application_command_line_args" kindref="compound">ApplicationCommandLineArgs</ref></type>
+        <definition>ApplicationCommandLineArgs AGE::App::m_CommandLineArgs</definition>
+        <argsstring></argsstring>
+        <name>m_CommandLineArgs</name>
+        <qualifiedname>AGE::App::m_CommandLineArgs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="161" column="28" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_app_1a8e08cc5b31bc19a532290b244ab66c6e" prot="private" static="no" mutable="no">
+        <type>Scope&lt; <ref refid="class_a_g_e_1_1_asset_manager" kindref="compound">AssetManager</ref> &gt;</type>
+        <definition>Scope&lt;AssetManager&gt; AGE::App::m_AssetManager</definition>
+        <argsstring></argsstring>
+        <name>m_AssetManager</name>
+        <qualifiedname>AGE::App::m_AssetManager</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="163" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_app_1ae6462a4c05c484513eea37f127587c65" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::thread &gt;</type>
+        <definition>std::vector&lt;std::thread&gt; AGE::App::m_AssetLoadThreads</definition>
+        <argsstring></argsstring>
+        <name>m_AssetLoadThreads</name>
+        <qualifiedname>AGE::App::m_AssetLoadThreads</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="164" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_app_1a0f1db28da5827d143acc85b1e850ced7" prot="private" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex AGE::App::Mutex</definition>
+        <argsstring></argsstring>
+        <name>Mutex</name>
+        <qualifiedname>AGE::App::Mutex</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="165" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_a_g_e_1_1_app_1af569bcf08a06e39ed7071e226f897d7a" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_a_g_e_1_1_app" kindref="compound">App</ref> *</type>
+        <definition>App * AGE::App::s_Instance</definition>
+        <argsstring></argsstring>
+        <name>s_Instance</name>
+        <qualifiedname>AGE::App::s_Instance</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="145" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_app_1a4d0831a764a9a7ba9f89f8e4130e203c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AGE::App::App</definition>
+        <argsstring>(const std::string &amp;name=&quot;AGE App&quot;, ApplicationCommandLineArgs Args=ApplicationCommandLineArgs())</argsstring>
+        <name>App</name>
+        <qualifiedname>AGE::App::App</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+          <defval>&quot;AGE App&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="struct_a_g_e_1_1_application_command_line_args" kindref="compound">ApplicationCommandLineArgs</ref></type>
+          <declname>Args</declname>
+          <defval><ref refid="struct_a_g_e_1_1_application_command_line_args" kindref="compound">ApplicationCommandLineArgs</ref>()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="72" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/App.cpp" bodystart="24" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_app_1a28c6840a86bc3956ef23edf9c8b2eae3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>AGE::App::~App</definition>
+        <argsstring>()</argsstring>
+        <name>~App</name>
+        <qualifiedname>AGE::App::~App</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="73" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/App.cpp" bodystart="73" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_app_1adab5a54848ff90dc11f85917c902fd1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::App::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <qualifiedname>AGE::App::Init</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="75" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/App.cpp" bodystart="78" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_app_1aee4755b1221da43f36a9d24ccf0c235a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::App::InitRenderer</definition>
+        <argsstring>()</argsstring>
+        <name>InitRenderer</name>
+        <qualifiedname>AGE::App::InitRenderer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="76" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/App.cpp" bodystart="105" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_app_1a24136c3b74ac7e4acf289387d21f6cea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::App::InitLayers</definition>
+        <argsstring>()</argsstring>
+        <name>InitLayers</name>
+        <qualifiedname>AGE::App::InitLayers</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="77" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/App.cpp" bodystart="110" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_app_1a5ccc11cc012444acfc27498835033f81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::App::LoadAssets</definition>
+        <argsstring>()</argsstring>
+        <name>LoadAssets</name>
+        <qualifiedname>AGE::App::LoadAssets</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="78" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/App.cpp" bodystart="124" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_app_1a4f51cf39bb38669948c1cf974f2585d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::App::Shutdown</definition>
+        <argsstring>()</argsstring>
+        <name>Shutdown</name>
+        <qualifiedname>AGE::App::Shutdown</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="79" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/App.cpp" bodystart="137" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_app_1a23efe04193d55618669ccc63cb6450bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::App::Run</definition>
+        <argsstring>()</argsstring>
+        <name>Run</name>
+        <qualifiedname>AGE::App::Run</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="81" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/App.cpp" bodystart="216" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_app_1a5415619b8a71ba44c703482acf5a3cba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::App::Close</definition>
+        <argsstring>()</argsstring>
+        <name>Close</name>
+        <qualifiedname>AGE::App::Close</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="83" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/App.cpp" bodystart="404" bodyend="407"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_app_1a12b88aade2f3b436465e44e252b2194c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::App::OnEvent</definition>
+        <argsstring>(Event &amp;E)</argsstring>
+        <name>OnEvent</name>
+        <qualifiedname>AGE::App::OnEvent</qualifiedname>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref> &amp;</type>
+          <declname>E</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="85" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/App.cpp" bodystart="145" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_app_1a1a8db9d4dcdfe05404fc74cc2138ac3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::App::PushLayer</definition>
+        <argsstring>(Layer *Layer)</argsstring>
+        <name>PushLayer</name>
+        <qualifiedname>AGE::App::PushLayer</qualifiedname>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_layer" kindref="compound">Layer</ref> *</type>
+          <declname>Layer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="87" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/App.cpp" bodystart="192" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_app_1af1b53faec585b0da6f872a6ccec2498a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::App::PushOverlay</definition>
+        <argsstring>(Layer *Layer)</argsstring>
+        <name>PushOverlay</name>
+        <qualifiedname>AGE::App::PushOverlay</qualifiedname>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_layer" kindref="compound">Layer</ref> *</type>
+          <declname>Layer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="89" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/App.cpp" bodystart="199" bodyend="204"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_app_1a8f11d0d9778678a806356d56f8eb6c1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::App::PushScriptableComp</definition>
+        <argsstring>(ScriptableEntity *Comp)</argsstring>
+        <name>PushScriptableComp</name>
+        <qualifiedname>AGE::App::PushScriptableComp</qualifiedname>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_scriptable_entity" kindref="compound">ScriptableEntity</ref> *</type>
+          <declname>Comp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="91" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/App.cpp" bodystart="206" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_app_1a6e45cb5c0ba9de18ba8e8638003d2c71" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_a_g_e_1_1_device_manager" kindref="compound">DeviceManager</ref> &amp;</type>
+        <definition>DeviceManager &amp; AGE::App::GetDeviceManager</definition>
+        <argsstring>()</argsstring>
+        <name>GetDeviceManager</name>
+        <qualifiedname>AGE::App::GetDeviceManager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="94" column="22" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" bodystart="94" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_app_1aa123a62c828c314f9a47689c32600a04" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_a_g_e_1_1_application_command_line_args" kindref="compound">ApplicationCommandLineArgs</ref></type>
+        <definition>ApplicationCommandLineArgs AGE::App::GetCommandLineArgs</definition>
+        <argsstring>() const</argsstring>
+        <name>GetCommandLineArgs</name>
+        <qualifiedname>AGE::App::GetCommandLineArgs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="98" column="28" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" bodystart="98" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_app_1a74f1a3d21dc255e7845ebff1a6e1194e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_a_g_e_1_1_im_gui_layer" kindref="compound">ImGuiLayer</ref> *</type>
+        <definition>ImGuiLayer * AGE::App::GetImGuiLayer</definition>
+        <argsstring>()</argsstring>
+        <name>GetImGuiLayer</name>
+        <qualifiedname>AGE::App::GetImGuiLayer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="100" column="19" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" bodystart="100" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_app_1af1ba9022e56e89b16250183abe4fcaad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t AGE::App::GetTargetPlatform</definition>
+        <argsstring>()</argsstring>
+        <name>GetTargetPlatform</name>
+        <qualifiedname>AGE::App::GetTargetPlatform</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="102" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" bodystart="102" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_app_1a15b3a30eb819e46b1f76b40e2d8613c4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::App::SetTargetPlatform</definition>
+        <argsstring>(uint16_t Target)</argsstring>
+        <name>SetTargetPlatform</name>
+        <qualifiedname>AGE::App::SetTargetPlatform</qualifiedname>
+        <param>
+          <type>uint16_t</type>
+          <declname>Target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="103" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" bodystart="103" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_app_1ae404abb34026e82c0baa2f7d62fdf3a9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_a_g_e_1_1_app_config" kindref="compound">AppConfig</ref> &amp;</type>
+        <definition>AppConfig &amp; AGE::App::GetAppConfig</definition>
+        <argsstring>()</argsstring>
+        <name>GetAppConfig</name>
+        <qualifiedname>AGE::App::GetAppConfig</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="105" column="11" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" bodystart="105" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_app_1a77c078c65318c8bc5f05b85213bd1e69" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Ref&lt; <ref refid="class_a_g_e_1_1_project" kindref="compound">Project</ref> &gt; &amp;</type>
+        <definition>Ref&lt; Project &gt; &amp; AGE::App::GetProject</definition>
+        <argsstring>()</argsstring>
+        <name>GetProject</name>
+        <qualifiedname>AGE::App::GetProject</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="107" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" bodystart="107" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_app_1a35d8dbb20ad546e3c653809bf4808274" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> &amp;</type>
+        <definition>const Vector2 &amp; AGE::App::GetFramebufferSize</definition>
+        <argsstring>()</argsstring>
+        <name>GetFramebufferSize</name>
+        <qualifiedname>AGE::App::GetFramebufferSize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="109" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" bodystart="109" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_app_1ab73a49a75c01a4d09fd1ac0a9388faa5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::App::SetProject</definition>
+        <argsstring>(Ref&lt; Project &gt; Proj)</argsstring>
+        <name>SetProject</name>
+        <qualifiedname>AGE::App::SetProject</qualifiedname>
+        <param>
+          <type>Ref&lt; <ref refid="class_a_g_e_1_1_project" kindref="compound">Project</ref> &gt;</type>
+          <declname>Proj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="111" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" bodystart="111" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_app_1a0edcd1685fabd29a5c3b18436c193417" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::App::GetDirectXErrorMessages</definition>
+        <argsstring>()</argsstring>
+        <name>GetDirectXErrorMessages</name>
+        <qualifiedname>AGE::App::GetDirectXErrorMessages</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="113" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/App.cpp" bodystart="211" bodyend="214"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_app_1aa12c4bddce167e5c4870260bbefa20e1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_a_g_e_1_1_app" kindref="compound">App</ref> &amp;</type>
+        <definition>static App &amp; AGE::App::Get</definition>
+        <argsstring>()</argsstring>
+        <name>Get</name>
+        <qualifiedname>AGE::App::Get</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="96" column="19" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" bodystart="96" bodyend="96"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_app_1a91028dc4fca9a306474eaf50fbbd4fc7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AGE::App::OnWindowClose</definition>
+        <argsstring>(WindowCloseEvent &amp;E)</argsstring>
+        <name>OnWindowClose</name>
+        <qualifiedname>AGE::App::OnWindowClose</qualifiedname>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_window_close_event" kindref="compound">WindowCloseEvent</ref> &amp;</type>
+          <declname>E</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="116" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/App.cpp" bodystart="409" bodyend="417"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_app_1a3c0aa70f7ba2b6f69ae5b5481b2b4bf1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AGE::App::OnWindowResize</definition>
+        <argsstring>(WindowResizeEvent &amp;E)</argsstring>
+        <name>OnWindowResize</name>
+        <qualifiedname>AGE::App::OnWindowResize</qualifiedname>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_window_resize_event" kindref="compound">WindowResizeEvent</ref> &amp;</type>
+          <declname>E</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="117" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/App.cpp" bodystart="418" bodyend="431"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_app_1af0a10f05ba99c3fa4238d711891770f9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AGE::App::OnFramebufferResize</definition>
+        <argsstring>(FramebufferResizeEvent &amp;E)</argsstring>
+        <name>OnFramebufferResize</name>
+        <qualifiedname>AGE::App::OnFramebufferResize</qualifiedname>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_framebuffer_resize_event" kindref="compound">FramebufferResizeEvent</ref> &amp;</type>
+          <declname>E</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="118" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/App.cpp" bodystart="432" bodyend="437"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_app_1a6f2546f68b76773c172aa0825d4ea28f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AGE::App::OnRendererChanged</definition>
+        <argsstring>(RendererChangeEvent &amp;E)</argsstring>
+        <name>OnRendererChanged</name>
+        <qualifiedname>AGE::App::OnRendererChanged</qualifiedname>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_renderer_change_event" kindref="compound">RendererChangeEvent</ref> &amp;</type>
+          <declname>E</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="119" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/App.cpp" bodystart="439" bodyend="442"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_app_1a2b5e2770503a346885ef20ee14447bd1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AGE::App::OnProjectCreated</definition>
+        <argsstring>(ProjectCreatedEvent &amp;E)</argsstring>
+        <name>OnProjectCreated</name>
+        <qualifiedname>AGE::App::OnProjectCreated</qualifiedname>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_project_created_event" kindref="compound">ProjectCreatedEvent</ref> &amp;</type>
+          <declname>E</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="120" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/App.cpp" bodystart="444" bodyend="453"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_app_1a3c0f08e7aeb686edb2a51e246574978e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AGE::App::OnProjectLoaded</definition>
+        <argsstring>(ProjectLoadedEvent &amp;E)</argsstring>
+        <name>OnProjectLoaded</name>
+        <qualifiedname>AGE::App::OnProjectLoaded</qualifiedname>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_project_loaded_event" kindref="compound">ProjectLoadedEvent</ref> &amp;</type>
+          <declname>E</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="121" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/App.cpp" bodystart="455" bodyend="465"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_app_1acd89237243dad76d3281b117858acf8a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::App::LoadScenes</definition>
+        <argsstring>()</argsstring>
+        <name>LoadScenes</name>
+        <qualifiedname>AGE::App::LoadScenes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="123" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/App.cpp" bodystart="264" bodyend="284"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_app_1a96d83321ce4c88c601c52d55e262fea3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::App::LoadShaders</definition>
+        <argsstring>()</argsstring>
+        <name>LoadShaders</name>
+        <qualifiedname>AGE::App::LoadShaders</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="124" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/App.cpp" bodystart="285" bodyend="306"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_app_1a96fdb6eeea2e9b6c4e007364d5e822aa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::App::LoadTextures</definition>
+        <argsstring>()</argsstring>
+        <name>LoadTextures</name>
+        <qualifiedname>AGE::App::LoadTextures</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="125" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/App.cpp" bodystart="307" bodyend="323"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_app_1a49a5e72fa7c44f432af70f373ac0ea92" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::App::LoadSoundBanks</definition>
+        <argsstring>()</argsstring>
+        <name>LoadSoundBanks</name>
+        <qualifiedname>AGE::App::LoadSoundBanks</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="126" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/App.cpp" bodystart="324" bodyend="392"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_app_1ab1cdb7b7a79593278b0d3b9dcb319d5e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::App::LoadAsepriteFiles</definition>
+        <argsstring>()</argsstring>
+        <name>LoadAsepriteFiles</name>
+        <qualifiedname>AGE::App::LoadAsepriteFiles</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="127" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/App.cpp" bodystart="393" bodyend="402"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="68" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" bodystart="69" bodyend="166"/>
+    <listofallmembers>
+      <member refid="class_a_g_e_1_1_app_1a4d0831a764a9a7ba9f89f8e4130e203c" prot="public" virt="non-virtual"><scope>AGE::App</scope><name>App</name></member>
+      <member refid="class_a_g_e_1_1_app_1a05cc9a9aeb95099e1d3594eae19e517e" prot="private" virt="non-virtual"><scope>AGE::App</scope><name>bBlockThisFrame</name></member>
+      <member refid="class_a_g_e_1_1_app_1afccafc62d26b62febd8c7cf089ffe154" prot="private" virt="non-virtual"><scope>AGE::App</scope><name>bShowNewProjectMenu</name></member>
+      <member refid="class_a_g_e_1_1_app_1a5415619b8a71ba44c703482acf5a3cba" prot="public" virt="non-virtual"><scope>AGE::App</scope><name>Close</name></member>
+      <member refid="class_a_g_e_1_1_app_1aa12c4bddce167e5c4870260bbefa20e1" prot="public" virt="non-virtual"><scope>AGE::App</scope><name>Get</name></member>
+      <member refid="class_a_g_e_1_1_app_1ae404abb34026e82c0baa2f7d62fdf3a9" prot="public" virt="non-virtual"><scope>AGE::App</scope><name>GetAppConfig</name></member>
+      <member refid="class_a_g_e_1_1_app_1aa123a62c828c314f9a47689c32600a04" prot="public" virt="non-virtual"><scope>AGE::App</scope><name>GetCommandLineArgs</name></member>
+      <member refid="class_a_g_e_1_1_app_1a6e45cb5c0ba9de18ba8e8638003d2c71" prot="public" virt="non-virtual"><scope>AGE::App</scope><name>GetDeviceManager</name></member>
+      <member refid="class_a_g_e_1_1_app_1a0edcd1685fabd29a5c3b18436c193417" prot="public" virt="non-virtual"><scope>AGE::App</scope><name>GetDirectXErrorMessages</name></member>
+      <member refid="class_a_g_e_1_1_app_1a35d8dbb20ad546e3c653809bf4808274" prot="public" virt="non-virtual"><scope>AGE::App</scope><name>GetFramebufferSize</name></member>
+      <member refid="class_a_g_e_1_1_app_1a74f1a3d21dc255e7845ebff1a6e1194e" prot="public" virt="non-virtual"><scope>AGE::App</scope><name>GetImGuiLayer</name></member>
+      <member refid="class_a_g_e_1_1_app_1a77c078c65318c8bc5f05b85213bd1e69" prot="public" virt="non-virtual"><scope>AGE::App</scope><name>GetProject</name></member>
+      <member refid="class_a_g_e_1_1_app_1af1ba9022e56e89b16250183abe4fcaad" prot="public" virt="non-virtual"><scope>AGE::App</scope><name>GetTargetPlatform</name></member>
+      <member refid="class_a_g_e_1_1_app_1adab5a54848ff90dc11f85917c902fd1e" prot="public" virt="non-virtual"><scope>AGE::App</scope><name>Init</name></member>
+      <member refid="class_a_g_e_1_1_app_1a24136c3b74ac7e4acf289387d21f6cea" prot="public" virt="non-virtual"><scope>AGE::App</scope><name>InitLayers</name></member>
+      <member refid="class_a_g_e_1_1_app_1aee4755b1221da43f36a9d24ccf0c235a" prot="public" virt="non-virtual"><scope>AGE::App</scope><name>InitRenderer</name></member>
+      <member refid="class_a_g_e_1_1_app_1ab1cdb7b7a79593278b0d3b9dcb319d5e" prot="private" virt="non-virtual"><scope>AGE::App</scope><name>LoadAsepriteFiles</name></member>
+      <member refid="class_a_g_e_1_1_app_1a5ccc11cc012444acfc27498835033f81" prot="public" virt="non-virtual"><scope>AGE::App</scope><name>LoadAssets</name></member>
+      <member refid="class_a_g_e_1_1_app_1acd89237243dad76d3281b117858acf8a" prot="private" virt="non-virtual"><scope>AGE::App</scope><name>LoadScenes</name></member>
+      <member refid="class_a_g_e_1_1_app_1a96d83321ce4c88c601c52d55e262fea3" prot="private" virt="non-virtual"><scope>AGE::App</scope><name>LoadShaders</name></member>
+      <member refid="class_a_g_e_1_1_app_1a49a5e72fa7c44f432af70f373ac0ea92" prot="private" virt="non-virtual"><scope>AGE::App</scope><name>LoadSoundBanks</name></member>
+      <member refid="class_a_g_e_1_1_app_1a96fdb6eeea2e9b6c4e007364d5e822aa" prot="private" virt="non-virtual"><scope>AGE::App</scope><name>LoadTextures</name></member>
+      <member refid="class_a_g_e_1_1_app_1a6f2d094c638d487d3068a99b536e568f" prot="private" virt="non-virtual"><scope>AGE::App</scope><name>m_AppConfig</name></member>
+      <member refid="class_a_g_e_1_1_app_1ae6462a4c05c484513eea37f127587c65" prot="private" virt="non-virtual"><scope>AGE::App</scope><name>m_AssetLoadThreads</name></member>
+      <member refid="class_a_g_e_1_1_app_1a8e08cc5b31bc19a532290b244ab66c6e" prot="private" virt="non-virtual"><scope>AGE::App</scope><name>m_AssetManager</name></member>
+      <member refid="class_a_g_e_1_1_app_1a10385568d7148eb722003b9567323553" prot="private" virt="non-virtual"><scope>AGE::App</scope><name>m_CommandLineArgs</name></member>
+      <member refid="class_a_g_e_1_1_app_1a6b8efcb0b1a1c0593afb1fa7bdc6dffc" prot="private" virt="non-virtual"><scope>AGE::App</scope><name>m_CompStack</name></member>
+      <member refid="class_a_g_e_1_1_app_1a5d4acd078539264695a8f8fd8d7b78d8" prot="private" virt="non-virtual"><scope>AGE::App</scope><name>m_CurrentFrame</name></member>
+      <member refid="class_a_g_e_1_1_app_1af3281e21e77100d8b5db03643932d494" prot="private" virt="non-virtual"><scope>AGE::App</scope><name>m_DeltaTime</name></member>
+      <member refid="class_a_g_e_1_1_app_1aee09768c28cdc74072050aec1f2dc272" prot="private" virt="non-virtual"><scope>AGE::App</scope><name>m_DeviceManager</name></member>
+      <member refid="class_a_g_e_1_1_app_1ae070148d8d75bbf770080075d387ebbc" prot="private" virt="non-virtual"><scope>AGE::App</scope><name>m_FramebufferSize</name></member>
+      <member refid="class_a_g_e_1_1_app_1a0f9d2f993e29cf14c913a91de1e44c8e" prot="private" virt="non-virtual"><scope>AGE::App</scope><name>m_ImGuiLayer</name></member>
+      <member refid="class_a_g_e_1_1_app_1ac214e174a5acf9239006faa1372af5f6" prot="private" virt="non-virtual"><scope>AGE::App</scope><name>m_LastFrame</name></member>
+      <member refid="class_a_g_e_1_1_app_1a8c57f7c532549a1ba1671f70658dcecb" prot="private" virt="non-virtual"><scope>AGE::App</scope><name>m_LayerStack</name></member>
+      <member refid="class_a_g_e_1_1_app_1a6a03efcc5fd0c9c12594ec570e9c6aa6" prot="private" virt="non-virtual"><scope>AGE::App</scope><name>m_Minimized</name></member>
+      <member refid="class_a_g_e_1_1_app_1af8763e16d12431d049dd7c87f3c90ac0" prot="private" virt="non-virtual"><scope>AGE::App</scope><name>m_Project</name></member>
+      <member refid="class_a_g_e_1_1_app_1a145e25492c72cb454fb07027fa1dc5e0" prot="private" virt="non-virtual"><scope>AGE::App</scope><name>m_Running</name></member>
+      <member refid="class_a_g_e_1_1_app_1a0d7b32ddf2abe1cb82b4200717a1d800" prot="private" virt="non-virtual"><scope>AGE::App</scope><name>m_Target</name></member>
+      <member refid="class_a_g_e_1_1_app_1abf0c6a55ce3d909dad0f4ef34b01c084" prot="private" virt="non-virtual"><scope>AGE::App</scope><name>m_Threads</name></member>
+      <member refid="class_a_g_e_1_1_app_1a0f1db28da5827d143acc85b1e850ced7" prot="private" virt="non-virtual"><scope>AGE::App</scope><name>Mutex</name></member>
+      <member refid="class_a_g_e_1_1_app_1a12b88aade2f3b436465e44e252b2194c" prot="public" virt="non-virtual"><scope>AGE::App</scope><name>OnEvent</name></member>
+      <member refid="class_a_g_e_1_1_app_1af0a10f05ba99c3fa4238d711891770f9" prot="private" virt="non-virtual"><scope>AGE::App</scope><name>OnFramebufferResize</name></member>
+      <member refid="class_a_g_e_1_1_app_1a2b5e2770503a346885ef20ee14447bd1" prot="private" virt="non-virtual"><scope>AGE::App</scope><name>OnProjectCreated</name></member>
+      <member refid="class_a_g_e_1_1_app_1a3c0f08e7aeb686edb2a51e246574978e" prot="private" virt="non-virtual"><scope>AGE::App</scope><name>OnProjectLoaded</name></member>
+      <member refid="class_a_g_e_1_1_app_1a6f2546f68b76773c172aa0825d4ea28f" prot="private" virt="non-virtual"><scope>AGE::App</scope><name>OnRendererChanged</name></member>
+      <member refid="class_a_g_e_1_1_app_1a91028dc4fca9a306474eaf50fbbd4fc7" prot="private" virt="non-virtual"><scope>AGE::App</scope><name>OnWindowClose</name></member>
+      <member refid="class_a_g_e_1_1_app_1a3c0aa70f7ba2b6f69ae5b5481b2b4bf1" prot="private" virt="non-virtual"><scope>AGE::App</scope><name>OnWindowResize</name></member>
+      <member refid="class_a_g_e_1_1_app_1a1a8db9d4dcdfe05404fc74cc2138ac3b" prot="public" virt="non-virtual"><scope>AGE::App</scope><name>PushLayer</name></member>
+      <member refid="class_a_g_e_1_1_app_1af1b53faec585b0da6f872a6ccec2498a" prot="public" virt="non-virtual"><scope>AGE::App</scope><name>PushOverlay</name></member>
+      <member refid="class_a_g_e_1_1_app_1a8f11d0d9778678a806356d56f8eb6c1a" prot="public" virt="non-virtual"><scope>AGE::App</scope><name>PushScriptableComp</name></member>
+      <member refid="class_a_g_e_1_1_app_1a23efe04193d55618669ccc63cb6450bb" prot="public" virt="non-virtual"><scope>AGE::App</scope><name>Run</name></member>
+      <member refid="class_a_g_e_1_1_app_1af569bcf08a06e39ed7071e226f897d7a" prot="private" virt="non-virtual"><scope>AGE::App</scope><name>s_Instance</name></member>
+      <member refid="class_a_g_e_1_1_app_1ab73a49a75c01a4d09fd1ac0a9388faa5" prot="public" virt="non-virtual"><scope>AGE::App</scope><name>SetProject</name></member>
+      <member refid="class_a_g_e_1_1_app_1a15b3a30eb819e46b1f76b40e2d8613c4" prot="public" virt="non-virtual"><scope>AGE::App</scope><name>SetTargetPlatform</name></member>
+      <member refid="class_a_g_e_1_1_app_1a4f51cf39bb38669948c1cf974f2585d5" prot="public" virt="non-virtual"><scope>AGE::App</scope><name>Shutdown</name></member>
+      <member refid="class_a_g_e_1_1_app_1a28c6840a86bc3956ef23edf9c8b2eae3" prot="public" virt="virtual"><scope>AGE::App</scope><name>~App</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

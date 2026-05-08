@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_a_g_e_1_1_memory_stream_writer" kind="class" language="C++" prot="public">
+    <compoundname>AGE::MemoryStreamWriter</compoundname>
+    <basecompoundref refid="class_a_g_e_1_1_data_writer" prot="public" virt="non-virtual">AGE::DataWriter</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_a_g_e_1_1_memory_stream_writer_1aaae6ac0326c66899f1f933b1975dc338" prot="private" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* AGE::MemoryStreamWriter::m_Addr</definition>
+        <argsstring></argsstring>
+        <name>m_Addr</name>
+        <qualifiedname>AGE::MemoryStreamWriter::m_Addr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="210" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_memory_stream_writer_1a36ed57284e6e48f84d31f539df14ef7b" prot="private" static="no" mutable="no">
+        <type>std::stringstream</type>
+        <definition>std::stringstream AGE::MemoryStreamWriter::m_Stream</definition>
+        <argsstring></argsstring>
+        <name>m_Stream</name>
+        <qualifiedname>AGE::MemoryStreamWriter::m_Stream</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="211" column="19" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" bodystart="211" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_memory_stream_writer_1afb3fc50763f895eb909b5d1129e3bf99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AGE::MemoryStreamWriter::MemoryStreamWriter</definition>
+        <argsstring>(void *Addr)</argsstring>
+        <name>MemoryStreamWriter</name>
+        <qualifiedname>AGE::MemoryStreamWriter::MemoryStreamWriter</qualifiedname>
+        <param>
+          <type>void *</type>
+          <declname>Addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="185" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Private/DataWriter.cpp" bodystart="49" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_memory_stream_writer_1a815da04dcf8444b60a217d27e7492902" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AGE::MemoryStreamWriter::MemoryStreamWriter</definition>
+        <argsstring>(const MemoryStreamWriter &amp;)=delete</argsstring>
+        <name>MemoryStreamWriter</name>
+        <qualifiedname>AGE::MemoryStreamWriter::MemoryStreamWriter</qualifiedname>
+        <param>
+          <type>const <ref refid="class_a_g_e_1_1_memory_stream_writer" kindref="compound">MemoryStreamWriter</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="186" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_memory_stream_writer_1afd193708ab1a3aef1e7c826882cab11d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>AGE::MemoryStreamWriter::~MemoryStreamWriter</definition>
+        <argsstring>()</argsstring>
+        <name>~MemoryStreamWriter</name>
+        <qualifiedname>AGE::MemoryStreamWriter::~MemoryStreamWriter</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="188" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Private/DataWriter.cpp" bodystart="54" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_memory_stream_writer_1a27d49d51f0b7a62ee1157664a00fe728" prot="public" static="no" const="yes" explicit="no" inline="yes" final="yes" virt="virtual">
+        <type>bool</type>
+        <definition>bool AGE::MemoryStreamWriter::IsStreamGood</definition>
+        <argsstring>() const final</argsstring>
+        <name>IsStreamGood</name>
+        <qualifiedname>AGE::MemoryStreamWriter::IsStreamGood</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_data_writer_1ab2adde183d93b4ebd8f692512584dc72">IsStreamGood</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="190" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" bodystart="190" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_memory_stream_writer_1a30d6ed960f71caf17f2825ec3a597954" prot="public" static="no" const="no" explicit="no" inline="yes" final="yes" virt="virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t AGE::MemoryStreamWriter::GetStreamPosition</definition>
+        <argsstring>() final</argsstring>
+        <name>GetStreamPosition</name>
+        <qualifiedname>AGE::MemoryStreamWriter::GetStreamPosition</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_data_writer_1a4bff8ad0e0762dc50d0ba96e66498f1b">GetStreamPosition</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="192" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" bodystart="192" bodyend="204"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_memory_stream_writer_1a4cc0780e8096a0166dea3009dd3d554a" prot="public" static="no" const="no" explicit="no" inline="yes" final="yes" virt="virtual">
+        <type>void</type>
+        <definition>void AGE::MemoryStreamWriter::SetStreamPosition</definition>
+        <argsstring>(uint64_t Pos) final</argsstring>
+        <name>SetStreamPosition</name>
+        <qualifiedname>AGE::MemoryStreamWriter::SetStreamPosition</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_data_writer_1a9412692ac45ae08701bf5315b5aa9c07">SetStreamPosition</reimplements>
+        <param>
+          <type>uint64_t</type>
+          <declname>Pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="205" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" bodystart="205" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_memory_stream_writer_1a5d8584eb04ce18aaa54daa6910190b6d" prot="public" static="no" const="no" explicit="no" inline="no" final="yes" virt="virtual">
+        <type>bool</type>
+        <definition>bool AGE::MemoryStreamWriter::WriteData</definition>
+        <argsstring>(const char *Data, size_t Size) final</argsstring>
+        <name>WriteData</name>
+        <qualifiedname>AGE::MemoryStreamWriter::WriteData</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_data_writer_1a523968a2786e5d90138df74e101f9365">WriteData</reimplements>
+        <param>
+          <type>const char *</type>
+          <declname>Data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>Size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="206" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Private/DataWriter.cpp" bodystart="58" bodyend="67"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>AGE::DataWriter</label>
+        <link refid="class_a_g_e_1_1_data_writer"/>
+      </node>
+      <node id="1">
+        <label>AGE::MemoryStreamWriter</label>
+        <link refid="class_a_g_e_1_1_memory_stream_writer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>AGE::DataWriter</label>
+        <link refid="class_a_g_e_1_1_data_writer"/>
+      </node>
+      <node id="1">
+        <label>AGE::MemoryStreamWriter</label>
+        <link refid="class_a_g_e_1_1_memory_stream_writer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="181" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" bodystart="182" bodyend="212"/>
+    <listofallmembers>
+      <member refid="class_a_g_e_1_1_memory_stream_writer_1a30d6ed960f71caf17f2825ec3a597954" prot="public" virt="virtual"><scope>AGE::MemoryStreamWriter</scope><name>GetStreamPosition</name></member>
+      <member refid="class_a_g_e_1_1_memory_stream_writer_1a27d49d51f0b7a62ee1157664a00fe728" prot="public" virt="virtual"><scope>AGE::MemoryStreamWriter</scope><name>IsStreamGood</name></member>
+      <member refid="class_a_g_e_1_1_memory_stream_writer_1aaae6ac0326c66899f1f933b1975dc338" prot="private" virt="non-virtual"><scope>AGE::MemoryStreamWriter</scope><name>m_Addr</name></member>
+      <member refid="class_a_g_e_1_1_memory_stream_writer_1a36ed57284e6e48f84d31f539df14ef7b" prot="private" virt="non-virtual"><scope>AGE::MemoryStreamWriter</scope><name>m_Stream</name></member>
+      <member refid="class_a_g_e_1_1_memory_stream_writer_1afb3fc50763f895eb909b5d1129e3bf99" prot="public" virt="non-virtual"><scope>AGE::MemoryStreamWriter</scope><name>MemoryStreamWriter</name></member>
+      <member refid="class_a_g_e_1_1_memory_stream_writer_1a815da04dcf8444b60a217d27e7492902" prot="public" virt="non-virtual"><scope>AGE::MemoryStreamWriter</scope><name>MemoryStreamWriter</name></member>
+      <member refid="class_a_g_e_1_1_data_writer_1a3f96ae39ec061203c9c8ebfcfc7902bd" prot="public" virt="non-virtual"><scope>AGE::MemoryStreamWriter</scope><name>operator bool</name></member>
+      <member refid="class_a_g_e_1_1_memory_stream_writer_1a4cc0780e8096a0166dea3009dd3d554a" prot="public" virt="virtual"><scope>AGE::MemoryStreamWriter</scope><name>SetStreamPosition</name></member>
+      <member refid="class_a_g_e_1_1_data_writer_1abce1cda67fe6ea10e28465418400d8ae" prot="public" virt="non-virtual"><scope>AGE::MemoryStreamWriter</scope><name>WriteArray</name></member>
+      <member refid="class_a_g_e_1_1_data_writer_1a452f60aa620efbb975387570a3b247b5" prot="public" virt="non-virtual"><scope>AGE::MemoryStreamWriter</scope><name>WriteBuffer</name></member>
+      <member refid="class_a_g_e_1_1_memory_stream_writer_1a5d8584eb04ce18aaa54daa6910190b6d" prot="public" virt="virtual"><scope>AGE::MemoryStreamWriter</scope><name>WriteData</name></member>
+      <member refid="class_a_g_e_1_1_data_writer_1a8ca73e32092bd6dbe55f37f7a4209457" prot="public" virt="non-virtual"><scope>AGE::MemoryStreamWriter</scope><name>WriteMap</name></member>
+      <member refid="class_a_g_e_1_1_data_writer_1afa8eb2ea4149c5aaeb42e00ef612cb0e" prot="public" virt="non-virtual"><scope>AGE::MemoryStreamWriter</scope><name>WriteMap</name></member>
+      <member refid="class_a_g_e_1_1_data_writer_1a6e2db11307f941fd7ec89326e9a65382" prot="public" virt="non-virtual"><scope>AGE::MemoryStreamWriter</scope><name>WriteMap</name></member>
+      <member refid="class_a_g_e_1_1_data_writer_1a8895c1fa7eb43eea981ce27c75df6b63" prot="public" virt="non-virtual"><scope>AGE::MemoryStreamWriter</scope><name>WriteObject</name></member>
+      <member refid="class_a_g_e_1_1_data_writer_1a102599be50dde474a4338b4cf326fa61" prot="public" virt="non-virtual"><scope>AGE::MemoryStreamWriter</scope><name>WriteRaw</name></member>
+      <member refid="class_a_g_e_1_1_data_writer_1a0aaef37101d4b2768cbd38211802032a" prot="public" virt="non-virtual"><scope>AGE::MemoryStreamWriter</scope><name>WriteString</name></member>
+      <member refid="class_a_g_e_1_1_data_writer_1a9515ea3ee2bfbefaadb38955a72315b2" prot="public" virt="non-virtual"><scope>AGE::MemoryStreamWriter</scope><name>WriteZero</name></member>
+      <member refid="class_a_g_e_1_1_data_writer_1a9f5b859927627f63eec292677fa7bc2a" prot="public" virt="virtual"><scope>AGE::MemoryStreamWriter</scope><name>~DataWriter</name></member>
+      <member refid="class_a_g_e_1_1_memory_stream_writer_1afd193708ab1a3aef1e7c826882cab11d" prot="public" virt="virtual"><scope>AGE::MemoryStreamWriter</scope><name>~MemoryStreamWriter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

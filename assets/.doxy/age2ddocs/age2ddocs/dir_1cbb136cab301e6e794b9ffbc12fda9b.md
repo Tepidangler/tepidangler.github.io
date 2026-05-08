@@ -1,0 +1,87 @@
+
+
+# Dir C:/Programming/AGE2D/Engine/src/AGE/Utils/Private
+
+
+
+[**FileList**](files.md) **>** [**AGE**](dir_c1649042ac9dcb65c6181568c305ecb0.md) **>** [**Utils**](dir_2ea46939f511f6144e40e8e7d32aa78e.md) **>** [**Private**](dir_1cbb136cab301e6e794b9ffbc12fda9b.md)
+
+
+
+
+
+
+
+
+
+
+
+
+## Files
+
+| Type | Name |
+| ---: | :--- |
+| file | [**Serializers.cpp**](_serializers_8cpp.md) <br> |
+| file | [**WindowsUtils.cpp**](_windows_utils_8cpp.md) <br> |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------
+The documentation for this class was generated from the following file `C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/`
+

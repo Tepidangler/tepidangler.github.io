@@ -1,0 +1,226 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_a_g_e_1_1_file_stream_writer" kind="class" language="C++" prot="public">
+    <compoundname>AGE::FileStreamWriter</compoundname>
+    <basecompoundref refid="class_a_g_e_1_1_data_writer" prot="public" virt="non-virtual">AGE::DataWriter</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_a_g_e_1_1_file_stream_writer_1aa88adbbff57b0acf6da23e78ef918cf4" prot="private" static="no" mutable="no">
+        <type>std::filesystem::path</type>
+        <definition>std::filesystem::path AGE::FileStreamWriter::m_Path</definition>
+        <argsstring></argsstring>
+        <name>m_Path</name>
+        <qualifiedname>AGE::FileStreamWriter::m_Path</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="177" column="23" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_file_stream_writer_1ac78616f4a34130d9b6325772e52df547" prot="private" static="no" mutable="no">
+        <type>std::ofstream</type>
+        <definition>std::ofstream AGE::FileStreamWriter::m_Stream</definition>
+        <argsstring></argsstring>
+        <name>m_Stream</name>
+        <qualifiedname>AGE::FileStreamWriter::m_Stream</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="178" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_file_stream_writer_1a0e3bafc9d9d19544639e1ac3caf7da19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AGE::FileStreamWriter::FileStreamWriter</definition>
+        <argsstring>()=default</argsstring>
+        <name>FileStreamWriter</name>
+        <qualifiedname>AGE::FileStreamWriter::FileStreamWriter</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="151" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_file_stream_writer_1a231ad3431903903ed87f178f53918017" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AGE::FileStreamWriter::FileStreamWriter</definition>
+        <argsstring>(const std::filesystem::path &amp;Path)</argsstring>
+        <name>FileStreamWriter</name>
+        <qualifiedname>AGE::FileStreamWriter::FileStreamWriter</qualifiedname>
+        <param>
+          <type>const std::filesystem::path &amp;</type>
+          <declname>Path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="152" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Private/DataWriter.cpp" bodystart="7" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_file_stream_writer_1adae0af988bb95dfe34571808729c039e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AGE::FileStreamWriter::FileStreamWriter</definition>
+        <argsstring>(const FileStreamWriter &amp;)=delete</argsstring>
+        <name>FileStreamWriter</name>
+        <qualifiedname>AGE::FileStreamWriter::FileStreamWriter</qualifiedname>
+        <param>
+          <type>const <ref refid="class_a_g_e_1_1_file_stream_writer" kindref="compound">FileStreamWriter</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="153" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_file_stream_writer_1a9ecbe4156d9837f7797f5a5e38b48ca3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>AGE::FileStreamWriter::~FileStreamWriter</definition>
+        <argsstring>()</argsstring>
+        <name>~FileStreamWriter</name>
+        <qualifiedname>AGE::FileStreamWriter::~FileStreamWriter</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="155" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Private/DataWriter.cpp" bodystart="12" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_file_stream_writer_1ab1ee5be7e2774cbbe0f3955ba2b86dc0" prot="public" static="no" const="yes" explicit="no" inline="yes" final="yes" virt="virtual">
+        <type>bool</type>
+        <definition>bool AGE::FileStreamWriter::IsStreamGood</definition>
+        <argsstring>() const final</argsstring>
+        <name>IsStreamGood</name>
+        <qualifiedname>AGE::FileStreamWriter::IsStreamGood</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_data_writer_1ab2adde183d93b4ebd8f692512584dc72">IsStreamGood</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="157" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" bodystart="157" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_file_stream_writer_1a47ad863978956575190ecb938b5f3771" prot="public" static="no" const="no" explicit="no" inline="yes" final="yes" virt="virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t AGE::FileStreamWriter::GetStreamPosition</definition>
+        <argsstring>() final</argsstring>
+        <name>GetStreamPosition</name>
+        <qualifiedname>AGE::FileStreamWriter::GetStreamPosition</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_data_writer_1a4bff8ad0e0762dc50d0ba96e66498f1b">GetStreamPosition</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="159" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" bodystart="159" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_file_stream_writer_1a95300f70caf2db2093d12ae415e1ffb5" prot="public" static="no" const="no" explicit="no" inline="yes" final="yes" virt="virtual">
+        <type>void</type>
+        <definition>void AGE::FileStreamWriter::SetStreamPosition</definition>
+        <argsstring>(uint64_t Pos) final</argsstring>
+        <name>SetStreamPosition</name>
+        <qualifiedname>AGE::FileStreamWriter::SetStreamPosition</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_data_writer_1a9412692ac45ae08701bf5315b5aa9c07">SetStreamPosition</reimplements>
+        <param>
+          <type>uint64_t</type>
+          <declname>Pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="172" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" bodystart="172" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_file_stream_writer_1ae0f2bad3b514d75a4578353df22e98a5" prot="public" static="no" const="no" explicit="no" inline="no" final="yes" virt="virtual">
+        <type>bool</type>
+        <definition>bool AGE::FileStreamWriter::WriteData</definition>
+        <argsstring>(const char *Data, size_t Size) final</argsstring>
+        <name>WriteData</name>
+        <qualifiedname>AGE::FileStreamWriter::WriteData</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_data_writer_1a523968a2786e5d90138df74e101f9365">WriteData</reimplements>
+        <param>
+          <type>const char *</type>
+          <declname>Data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>Size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="173" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Private/DataWriter.cpp" bodystart="16" bodyend="24"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>AGE::DataWriter</label>
+        <link refid="class_a_g_e_1_1_data_writer"/>
+      </node>
+      <node id="1">
+        <label>AGE::FileStreamWriter</label>
+        <link refid="class_a_g_e_1_1_file_stream_writer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>AGE::DataWriter</label>
+        <link refid="class_a_g_e_1_1_data_writer"/>
+      </node>
+      <node id="1">
+        <label>AGE::FileStreamWriter</label>
+        <link refid="class_a_g_e_1_1_file_stream_writer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="147" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" bodystart="148" bodyend="179"/>
+    <listofallmembers>
+      <member refid="class_a_g_e_1_1_file_stream_writer_1a0e3bafc9d9d19544639e1ac3caf7da19" prot="public" virt="non-virtual"><scope>AGE::FileStreamWriter</scope><name>FileStreamWriter</name></member>
+      <member refid="class_a_g_e_1_1_file_stream_writer_1a231ad3431903903ed87f178f53918017" prot="public" virt="non-virtual"><scope>AGE::FileStreamWriter</scope><name>FileStreamWriter</name></member>
+      <member refid="class_a_g_e_1_1_file_stream_writer_1adae0af988bb95dfe34571808729c039e" prot="public" virt="non-virtual"><scope>AGE::FileStreamWriter</scope><name>FileStreamWriter</name></member>
+      <member refid="class_a_g_e_1_1_file_stream_writer_1a47ad863978956575190ecb938b5f3771" prot="public" virt="virtual"><scope>AGE::FileStreamWriter</scope><name>GetStreamPosition</name></member>
+      <member refid="class_a_g_e_1_1_file_stream_writer_1ab1ee5be7e2774cbbe0f3955ba2b86dc0" prot="public" virt="virtual"><scope>AGE::FileStreamWriter</scope><name>IsStreamGood</name></member>
+      <member refid="class_a_g_e_1_1_file_stream_writer_1aa88adbbff57b0acf6da23e78ef918cf4" prot="private" virt="non-virtual"><scope>AGE::FileStreamWriter</scope><name>m_Path</name></member>
+      <member refid="class_a_g_e_1_1_file_stream_writer_1ac78616f4a34130d9b6325772e52df547" prot="private" virt="non-virtual"><scope>AGE::FileStreamWriter</scope><name>m_Stream</name></member>
+      <member refid="class_a_g_e_1_1_data_writer_1a3f96ae39ec061203c9c8ebfcfc7902bd" prot="public" virt="non-virtual"><scope>AGE::FileStreamWriter</scope><name>operator bool</name></member>
+      <member refid="class_a_g_e_1_1_file_stream_writer_1a95300f70caf2db2093d12ae415e1ffb5" prot="public" virt="virtual"><scope>AGE::FileStreamWriter</scope><name>SetStreamPosition</name></member>
+      <member refid="class_a_g_e_1_1_data_writer_1abce1cda67fe6ea10e28465418400d8ae" prot="public" virt="non-virtual"><scope>AGE::FileStreamWriter</scope><name>WriteArray</name></member>
+      <member refid="class_a_g_e_1_1_data_writer_1a452f60aa620efbb975387570a3b247b5" prot="public" virt="non-virtual"><scope>AGE::FileStreamWriter</scope><name>WriteBuffer</name></member>
+      <member refid="class_a_g_e_1_1_file_stream_writer_1ae0f2bad3b514d75a4578353df22e98a5" prot="public" virt="virtual"><scope>AGE::FileStreamWriter</scope><name>WriteData</name></member>
+      <member refid="class_a_g_e_1_1_data_writer_1a8ca73e32092bd6dbe55f37f7a4209457" prot="public" virt="non-virtual"><scope>AGE::FileStreamWriter</scope><name>WriteMap</name></member>
+      <member refid="class_a_g_e_1_1_data_writer_1afa8eb2ea4149c5aaeb42e00ef612cb0e" prot="public" virt="non-virtual"><scope>AGE::FileStreamWriter</scope><name>WriteMap</name></member>
+      <member refid="class_a_g_e_1_1_data_writer_1a6e2db11307f941fd7ec89326e9a65382" prot="public" virt="non-virtual"><scope>AGE::FileStreamWriter</scope><name>WriteMap</name></member>
+      <member refid="class_a_g_e_1_1_data_writer_1a8895c1fa7eb43eea981ce27c75df6b63" prot="public" virt="non-virtual"><scope>AGE::FileStreamWriter</scope><name>WriteObject</name></member>
+      <member refid="class_a_g_e_1_1_data_writer_1a102599be50dde474a4338b4cf326fa61" prot="public" virt="non-virtual"><scope>AGE::FileStreamWriter</scope><name>WriteRaw</name></member>
+      <member refid="class_a_g_e_1_1_data_writer_1a0aaef37101d4b2768cbd38211802032a" prot="public" virt="non-virtual"><scope>AGE::FileStreamWriter</scope><name>WriteString</name></member>
+      <member refid="class_a_g_e_1_1_data_writer_1a9515ea3ee2bfbefaadb38955a72315b2" prot="public" virt="non-virtual"><scope>AGE::FileStreamWriter</scope><name>WriteZero</name></member>
+      <member refid="class_a_g_e_1_1_data_writer_1a9f5b859927627f63eec292677fa7bc2a" prot="public" virt="virtual"><scope>AGE::FileStreamWriter</scope><name>~DataWriter</name></member>
+      <member refid="class_a_g_e_1_1_file_stream_writer_1a9ecbe4156d9837f7797f5a5e38b48ca3" prot="public" virt="virtual"><scope>AGE::FileStreamWriter</scope><name>~FileStreamWriter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

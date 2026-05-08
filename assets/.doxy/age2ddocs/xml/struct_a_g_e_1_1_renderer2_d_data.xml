@@ -1,0 +1,924 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="struct_a_g_e_1_1_renderer2_d_data" kind="struct" language="C++" prot="public">
+    <compoundname>AGE::Renderer2DData</compoundname>
+    <innerclass refid="struct_a_g_e_1_1_renderer2_d_data_1_1_camera_data" prot="public">AGE::Renderer2DData::CameraData</innerclass>
+    <innerclass refid="struct_a_g_e_1_1_renderer2_d_data_1_1_tex_coord_data" prot="public">AGE::Renderer2DData::TexCoordData</innerclass>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1a167174428923e79035edb113b5dc73f8" prot="public" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t AGE::Renderer2DData::MaxQuadCount</definition>
+        <argsstring></argsstring>
+        <name>MaxQuadCount</name>
+        <qualifiedname>AGE::Renderer2DData::MaxQuadCount</qualifiedname>
+        <initializer>= 20000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="14" column="23" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1a8e992bdbd2c8c5fc111e829b59e88640" prot="public" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t AGE::Renderer2DData::MaxVertices</definition>
+        <argsstring></argsstring>
+        <name>MaxVertices</name>
+        <qualifiedname>AGE::Renderer2DData::MaxVertices</qualifiedname>
+        <initializer>= MaxQuadCount * 4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="15" column="23" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1a9de4c574294b5e025229e8f9bc49ed11" prot="public" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t AGE::Renderer2DData::MaxIndexCount</definition>
+        <argsstring></argsstring>
+        <name>MaxIndexCount</name>
+        <qualifiedname>AGE::Renderer2DData::MaxIndexCount</qualifiedname>
+        <initializer>= MaxQuadCount * 6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="16" column="23" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1a79cc852a20a628c90f704102e76d0808" prot="public" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t AGE::Renderer2DData::MaxTextureSlots</definition>
+        <argsstring></argsstring>
+        <name>MaxTextureSlots</name>
+        <qualifiedname>AGE::Renderer2DData::MaxTextureSlots</qualifiedname>
+        <initializer>= 32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="17" column="23" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1a5ffaeb85f8f483ac0cf6d078236f7169" prot="public" static="no" mutable="no">
+        <type>Ref&lt; <ref refid="class_a_g_e_1_1_vertex_array" kindref="compound">VertexArray</ref> &gt;</type>
+        <definition>Ref&lt;VertexArray&gt; AGE::Renderer2DData::QuadVertexArray</definition>
+        <argsstring></argsstring>
+        <name>QuadVertexArray</name>
+        <qualifiedname>AGE::Renderer2DData::QuadVertexArray</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="19" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1ad7f6e91be8808b5b0b2a3424dd1eca54" prot="public" static="no" mutable="no">
+        <type>Ref&lt; <ref refid="class_a_g_e_1_1_shader" kindref="compound">Shader</ref> &gt;</type>
+        <definition>Ref&lt;Shader&gt; AGE::Renderer2DData::QuadShader</definition>
+        <argsstring></argsstring>
+        <name>QuadShader</name>
+        <qualifiedname>AGE::Renderer2DData::QuadShader</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="20" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1a7578ac3d003868580cb4a42db55eb284" prot="public" static="no" mutable="no">
+        <type>Ref&lt; <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> &gt;</type>
+        <definition>Ref&lt;Texture2D&gt; AGE::Renderer2DData::WhiteTexture</definition>
+        <argsstring></argsstring>
+        <name>WhiteTexture</name>
+        <qualifiedname>AGE::Renderer2DData::WhiteTexture</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="21" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1a2e5cb23670793614cb2df5e2417a972c" prot="public" static="no" mutable="no">
+        <type><ref refid="class_a_g_e_1_1_shader_library" kindref="compound">ShaderLibrary</ref></type>
+        <definition>ShaderLibrary AGE::Renderer2DData::Library</definition>
+        <argsstring></argsstring>
+        <name>Library</name>
+        <qualifiedname>AGE::Renderer2DData::Library</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="22" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1a445a5260887c7789e860ba04dfd7816b" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t AGE::Renderer2DData::QuadIndexCount</definition>
+        <argsstring></argsstring>
+        <name>QuadIndexCount</name>
+        <qualifiedname>AGE::Renderer2DData::QuadIndexCount</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="24" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1afda6528500c996de4c6d5bec53260ab1" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_a_g_e_1_1_vertex" kindref="compound">Vertex</ref> *</type>
+        <definition>Vertex* AGE::Renderer2DData::QuadVertexBufferBase</definition>
+        <argsstring></argsstring>
+        <name>QuadVertexBufferBase</name>
+        <qualifiedname>AGE::Renderer2DData::QuadVertexBufferBase</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="25" column="8" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1afb45a59c1b6ed28a45a975d69e8c9c10" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_a_g_e_1_1_vertex" kindref="compound">Vertex</ref> *</type>
+        <definition>Vertex* AGE::Renderer2DData::QuadVertexBufferPtr</definition>
+        <argsstring></argsstring>
+        <name>QuadVertexBufferPtr</name>
+        <qualifiedname>AGE::Renderer2DData::QuadVertexBufferPtr</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="26" column="8" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1ae932e4816e685de72ba8a5f79aee6f66" prot="public" static="no" mutable="no">
+        <type>Ref&lt; <ref refid="class_a_g_e_1_1_vertex_array" kindref="compound">VertexArray</ref> &gt;</type>
+        <definition>Ref&lt;VertexArray&gt; AGE::Renderer2DData::CircleVertexArray</definition>
+        <argsstring></argsstring>
+        <name>CircleVertexArray</name>
+        <qualifiedname>AGE::Renderer2DData::CircleVertexArray</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="28" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1aecba8b674a2dc7109e8edcdbdbefbaf6" prot="public" static="no" mutable="no">
+        <type>Ref&lt; <ref refid="class_a_g_e_1_1_shader" kindref="compound">Shader</ref> &gt;</type>
+        <definition>Ref&lt;Shader&gt; AGE::Renderer2DData::CircleShader</definition>
+        <argsstring></argsstring>
+        <name>CircleShader</name>
+        <qualifiedname>AGE::Renderer2DData::CircleShader</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="29" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1aa44d740d8f08ba7f4e15e2848178f820" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t AGE::Renderer2DData::CircleIndexCount</definition>
+        <argsstring></argsstring>
+        <name>CircleIndexCount</name>
+        <qualifiedname>AGE::Renderer2DData::CircleIndexCount</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="31" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1a8742926493f2ed6599be61188020d7db" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_a_g_e_1_1_circle_vertex" kindref="compound">CircleVertex</ref> *</type>
+        <definition>CircleVertex* AGE::Renderer2DData::CircleVertexBufferBase</definition>
+        <argsstring></argsstring>
+        <name>CircleVertexBufferBase</name>
+        <qualifiedname>AGE::Renderer2DData::CircleVertexBufferBase</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="32" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1a715e37ad408ce256a5b3950aa063801c" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_a_g_e_1_1_circle_vertex" kindref="compound">CircleVertex</ref> *</type>
+        <definition>CircleVertex* AGE::Renderer2DData::CircleVertexBufferPtr</definition>
+        <argsstring></argsstring>
+        <name>CircleVertexBufferPtr</name>
+        <qualifiedname>AGE::Renderer2DData::CircleVertexBufferPtr</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="33" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1ac591fbca3a1752e987d4ec1076359ed6" prot="public" static="no" mutable="no">
+        <type>Ref&lt; <ref refid="class_a_g_e_1_1_vertex_array" kindref="compound">VertexArray</ref> &gt;</type>
+        <definition>Ref&lt;VertexArray&gt; AGE::Renderer2DData::LineVertexArray</definition>
+        <argsstring></argsstring>
+        <name>LineVertexArray</name>
+        <qualifiedname>AGE::Renderer2DData::LineVertexArray</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="36" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1a79843003d3124c6e46c20a7795ce14d3" prot="public" static="no" mutable="no">
+        <type>Ref&lt; <ref refid="class_a_g_e_1_1_shader" kindref="compound">Shader</ref> &gt;</type>
+        <definition>Ref&lt;Shader&gt; AGE::Renderer2DData::LineShader</definition>
+        <argsstring></argsstring>
+        <name>LineShader</name>
+        <qualifiedname>AGE::Renderer2DData::LineShader</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="37" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1a171541fec01bd526cea89319111c18a2" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t AGE::Renderer2DData::LineVertexCount</definition>
+        <argsstring></argsstring>
+        <name>LineVertexCount</name>
+        <qualifiedname>AGE::Renderer2DData::LineVertexCount</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="39" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1a9487eae7a6b960a9e2960f71a8146ad5" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_a_g_e_1_1_line_vertex" kindref="compound">LineVertex</ref> *</type>
+        <definition>LineVertex* AGE::Renderer2DData::LineVertexBufferBase</definition>
+        <argsstring></argsstring>
+        <name>LineVertexBufferBase</name>
+        <qualifiedname>AGE::Renderer2DData::LineVertexBufferBase</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="40" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1a081dd9eebb79250e5f56f51b905d0ab2" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_a_g_e_1_1_line_vertex" kindref="compound">LineVertex</ref> *</type>
+        <definition>LineVertex* AGE::Renderer2DData::LineVertexBufferPtr</definition>
+        <argsstring></argsstring>
+        <name>LineVertexBufferPtr</name>
+        <qualifiedname>AGE::Renderer2DData::LineVertexBufferPtr</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="41" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1aae1f8824ab64d3f6c209ef6161745cac" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AGE::Renderer2DData::LineWidth</definition>
+        <argsstring></argsstring>
+        <name>LineWidth</name>
+        <qualifiedname>AGE::Renderer2DData::LineWidth</qualifiedname>
+        <initializer>= 2.f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="42" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1a9bb861f1bfa0fa45e6016975c1ea067b" prot="public" static="no" mutable="no">
+        <type>Ref&lt; <ref refid="class_a_g_e_1_1_vertex_array" kindref="compound">VertexArray</ref> &gt;</type>
+        <definition>Ref&lt;VertexArray&gt; AGE::Renderer2DData::TextVertexArray</definition>
+        <argsstring></argsstring>
+        <name>TextVertexArray</name>
+        <qualifiedname>AGE::Renderer2DData::TextVertexArray</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="44" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1ab6598a3100f98b3c02f1148307b5757d" prot="public" static="no" mutable="no">
+        <type>Ref&lt; <ref refid="class_a_g_e_1_1_shader" kindref="compound">Shader</ref> &gt;</type>
+        <definition>Ref&lt;Shader&gt; AGE::Renderer2DData::TextShader</definition>
+        <argsstring></argsstring>
+        <name>TextShader</name>
+        <qualifiedname>AGE::Renderer2DData::TextShader</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="45" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1a95d04e4d6f27d12e786fff68c55cadd4" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t AGE::Renderer2DData::TextIndexCount</definition>
+        <argsstring></argsstring>
+        <name>TextIndexCount</name>
+        <qualifiedname>AGE::Renderer2DData::TextIndexCount</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="47" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1a6f7357fb334d1c6f67fcaa117346bc2e" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_a_g_e_1_1_text_vertex" kindref="compound">TextVertex</ref> *</type>
+        <definition>TextVertex* AGE::Renderer2DData::TextVertexBufferBase</definition>
+        <argsstring></argsstring>
+        <name>TextVertexBufferBase</name>
+        <qualifiedname>AGE::Renderer2DData::TextVertexBufferBase</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="48" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1a9ebf9d380186b9e2e8c6271931606208" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_a_g_e_1_1_text_vertex" kindref="compound">TextVertex</ref> *</type>
+        <definition>TextVertex* AGE::Renderer2DData::TextVertexBufferPtr</definition>
+        <argsstring></argsstring>
+        <name>TextVertexBufferPtr</name>
+        <qualifiedname>AGE::Renderer2DData::TextVertexBufferPtr</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="49" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1a5d7478854ecd4a0b3b7f4ef88923448f" prot="public" static="no" mutable="no">
+        <type>Ref&lt; <ref refid="class_a_g_e_1_1_vertex_array" kindref="compound">VertexArray</ref> &gt;</type>
+        <definition>Ref&lt;VertexArray&gt; AGE::Renderer2DData::TileVertexArray</definition>
+        <argsstring></argsstring>
+        <name>TileVertexArray</name>
+        <qualifiedname>AGE::Renderer2DData::TileVertexArray</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="51" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1aded3b318e3baa49717ddd2100b7bc43d" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_a_g_e_1_1_tilemap_vertex" kindref="compound">TilemapVertex</ref> *</type>
+        <definition>TilemapVertex* AGE::Renderer2DData::TileVertexBufferBase</definition>
+        <argsstring></argsstring>
+        <name>TileVertexBufferBase</name>
+        <qualifiedname>AGE::Renderer2DData::TileVertexBufferBase</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="52" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1ae0f1a4d08d788b8ad219bdbfad0a8d7d" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_a_g_e_1_1_tilemap_vertex" kindref="compound">TilemapVertex</ref> *</type>
+        <definition>TilemapVertex* AGE::Renderer2DData::TileVertexBufferPtr</definition>
+        <argsstring></argsstring>
+        <name>TileVertexBufferPtr</name>
+        <qualifiedname>AGE::Renderer2DData::TileVertexBufferPtr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="53" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1ab224ad207aba3b49c407bda94213c779" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t AGE::Renderer2DData::TileVertexCount</definition>
+        <argsstring></argsstring>
+        <name>TileVertexCount</name>
+        <qualifiedname>AGE::Renderer2DData::TileVertexCount</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="54" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1afdfc4baabccc64eb7b90524c1e4021b3" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t AGE::Renderer2DData::TileIndexCount</definition>
+        <argsstring></argsstring>
+        <name>TileIndexCount</name>
+        <qualifiedname>AGE::Renderer2DData::TileIndexCount</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="55" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1a189a7f6ea34104203943bdd83aaedfaf" prot="public" static="no" mutable="no">
+        <type>Ref&lt; <ref refid="class_a_g_e_1_1_shader" kindref="compound">Shader</ref> &gt;</type>
+        <definition>Ref&lt;Shader&gt; AGE::Renderer2DData::TileShader</definition>
+        <argsstring></argsstring>
+        <name>TileShader</name>
+        <qualifiedname>AGE::Renderer2DData::TileShader</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="56" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1a292d7d1f19f65147d11cdc42dfc489b7" prot="public" static="no" mutable="no">
+        <type>Ref&lt; class <ref refid="class_a_g_e_1_1_tilemap" kindref="compound">Tilemap</ref> &gt;</type>
+        <definition>Ref&lt;class Tilemap&gt; AGE::Renderer2DData::CurrentTilemap</definition>
+        <argsstring></argsstring>
+        <name>CurrentTilemap</name>
+        <qualifiedname>AGE::Renderer2DData::CurrentTilemap</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="57" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1a2b58e4bd98a6b503af0e4d1bfdacc7d6" prot="public" static="no" mutable="no">
+        <type>std::array&lt; Ref&lt; <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> &gt;, MaxTextureSlots &gt;</type>
+        <definition>std::array&lt;Ref&lt;Texture2D&gt;, MaxTextureSlots&gt; AGE::Renderer2DData::FontAtlasTextures</definition>
+        <argsstring></argsstring>
+        <name>FontAtlasTextures</name>
+        <qualifiedname>AGE::Renderer2DData::FontAtlasTextures</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="58" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1afa38a3a1d10320d4e646adb35fe27752" prot="public" static="no" mutable="no">
+        <type>std::array&lt; Ref&lt; <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> &gt;, MaxTextureSlots &gt;</type>
+        <definition>std::array&lt;Ref&lt;Texture2D&gt;, MaxTextureSlots&gt; AGE::Renderer2DData::TileSetTextures</definition>
+        <argsstring></argsstring>
+        <name>TileSetTextures</name>
+        <qualifiedname>AGE::Renderer2DData::TileSetTextures</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="59" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1a580882fc1ae289807f83ba4dceef2c1a" prot="public" static="no" mutable="no">
+        <type>std::array&lt; Ref&lt; <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> &gt;, MaxTextureSlots &gt;</type>
+        <definition>std::array&lt;Ref&lt;Texture2D&gt;, MaxTextureSlots&gt; AGE::Renderer2DData::TextureSlots</definition>
+        <argsstring></argsstring>
+        <name>TextureSlots</name>
+        <qualifiedname>AGE::Renderer2DData::TextureSlots</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="61" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1a8ce2f89d64b5f5a8a603f42f129a1938" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t AGE::Renderer2DData::TextureSlotIndex</definition>
+        <argsstring></argsstring>
+        <name>TextureSlotIndex</name>
+        <qualifiedname>AGE::Renderer2DData::TextureSlotIndex</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="62" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1ad04540a04fe3c7cc03c5be66fbd29507" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t AGE::Renderer2DData::AtlusSlotIndex</definition>
+        <argsstring></argsstring>
+        <name>AtlusSlotIndex</name>
+        <qualifiedname>AGE::Renderer2DData::AtlusSlotIndex</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="63" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1a42e93f0a6033f46468ef8521ebe6231e" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t AGE::Renderer2DData::TilesetSlotIndex</definition>
+        <argsstring></argsstring>
+        <name>TilesetSlotIndex</name>
+        <qualifiedname>AGE::Renderer2DData::TilesetSlotIndex</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="64" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1ad73c4121b24e321400569f784e28d2ee" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref></type>
+        <definition>Vector4 AGE::Renderer2DData::QuadVertexPositions[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>QuadVertexPositions</name>
+        <qualifiedname>AGE::Renderer2DData::QuadVertexPositions</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="66" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1a4860c12730f5b24fc5a96b9f8165cfe3" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref></type>
+        <definition>Vector4 AGE::Renderer2DData::TileVertexPositions[6]</definition>
+        <argsstring>[6]</argsstring>
+        <name>TileVertexPositions</name>
+        <qualifiedname>AGE::Renderer2DData::TileVertexPositions</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="67" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1a5a0f1a5a28863727d0615f6dabbb5568" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_a_g_e_1_1_renderer2_d_data_1_1_camera_data" kindref="compound">CameraData</ref></type>
+        <definition>CameraData AGE::Renderer2DData::CameraBuffer</definition>
+        <argsstring></argsstring>
+        <name>CameraBuffer</name>
+        <qualifiedname>AGE::Renderer2DData::CameraBuffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="80" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1ac08d5f64a76f9e1a3dc09395c0b540d7" prot="public" static="no" mutable="no">
+        <type>Ref&lt; <ref refid="class_a_g_e_1_1_uniform_buffer" kindref="compound">UniformBuffer</ref> &gt;</type>
+        <definition>Ref&lt;UniformBuffer&gt; AGE::Renderer2DData::CameraUniformBuffer</definition>
+        <argsstring></argsstring>
+        <name>CameraUniformBuffer</name>
+        <qualifiedname>AGE::Renderer2DData::CameraUniformBuffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="81" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1a45a8d52e92c85bcdd368c0c78822ba26" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_a_g_e_1_1_renderer2_d_data_1_1_tex_coord_data" kindref="compound">TexCoordData</ref></type>
+        <definition>TexCoordData AGE::Renderer2DData::CoordBuffer</definition>
+        <argsstring></argsstring>
+        <name>CoordBuffer</name>
+        <qualifiedname>AGE::Renderer2DData::CoordBuffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="83" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1ae05932b600858be442b1bffcebdacdfc" prot="public" static="no" mutable="no">
+        <type>Ref&lt; <ref refid="class_a_g_e_1_1_uniform_buffer" kindref="compound">UniformBuffer</ref> &gt;</type>
+        <definition>Ref&lt;UniformBuffer&gt; AGE::Renderer2DData::TexCoordUniformBuffer</definition>
+        <argsstring></argsstring>
+        <name>TexCoordUniformBuffer</name>
+        <qualifiedname>AGE::Renderer2DData::TexCoordUniformBuffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="84" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1aca75b8190495bac717c611213201717a" prot="public" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, Ref&lt; <ref refid="class_a_g_e_1_1_vertex_buffer" kindref="compound">VertexBuffer</ref> &gt; &gt;</type>
+        <definition>std::unordered_map&lt;std::string, Ref&lt;VertexBuffer&gt; &gt; AGE::Renderer2DData::VertexBuffers</definition>
+        <argsstring></argsstring>
+        <name>VertexBuffers</name>
+        <qualifiedname>AGE::Renderer2DData::VertexBuffers</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="87" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_renderer2_d_data_1a489bd69841239ef1eb60a315ab52bcf4" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_a_g_e_1_1_statistics" kindref="compound">Statistics</ref></type>
+        <definition>Statistics AGE::Renderer2DData::Stats</definition>
+        <argsstring></argsstring>
+        <name>Stats</name>
+        <qualifiedname>AGE::Renderer2DData::Stats</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="94" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_a_g_e_1_1_renderer2_d_data_1afc022260db8fe97ccb0a5b926c0c0916" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Ref&lt; <ref refid="class_a_g_e_1_1_vertex_buffer" kindref="compound">VertexBuffer</ref> &gt;</type>
+        <definition>Ref&lt; VertexBuffer &gt; AGE::Renderer2DData::GetVertexBuffer</definition>
+        <argsstring>(const std::string &amp;Name)</argsstring>
+        <name>GetVertexBuffer</name>
+        <qualifiedname>AGE::Renderer2DData::GetVertexBuffer</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>Name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="88" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="88" bodyend="91"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="7">
+        <label>AGE::CircleVertex</label>
+        <link refid="struct_a_g_e_1_1_circle_vertex"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>VertexLocalPosition</edgelabel>
+          <edgelabel>VertexWorldPosition</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>VertexColor</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>AGE::LineVertex</label>
+        <link refid="struct_a_g_e_1_1_line_vertex"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>VertexPosition</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>VertexColor</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>AGE::Matrix4D</label>
+        <link refid="struct_a_g_e_1_1_matrix4_d"/>
+      </node>
+      <node id="1">
+        <label>AGE::Renderer2DData</label>
+        <link refid="struct_a_g_e_1_1_renderer2_d_data"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>Library</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>QuadVertexBufferBase</edgelabel>
+          <edgelabel>QuadVertexBufferPtr</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>CircleVertexBufferBase</edgelabel>
+          <edgelabel>CircleVertexBufferPtr</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>LineVertexBufferBase</edgelabel>
+          <edgelabel>LineVertexBufferPtr</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>TextVertexBufferBase</edgelabel>
+          <edgelabel>TextVertexBufferPtr</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>TileVertexBufferBase</edgelabel>
+          <edgelabel>TileVertexBufferPtr</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>QuadVertexPositions</edgelabel>
+          <edgelabel>TileVertexPositions</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>CameraBuffer</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>CoordBuffer</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>Stats</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>AGE::Renderer2DData::CameraData</label>
+        <link refid="struct_a_g_e_1_1_renderer2_d_data_1_1_camera_data"/>
+        <childnode refid="12" relation="usage">
+          <edgelabel>CameraViewProjection</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>AGE::Renderer2DData::TexCoordData</label>
+        <link refid="struct_a_g_e_1_1_renderer2_d_data_1_1_tex_coord_data"/>
+      </node>
+      <node id="2">
+        <label>AGE::ShaderLibrary</label>
+        <link refid="class_a_g_e_1_1_shader_library"/>
+      </node>
+      <node id="14">
+        <label>AGE::Statistics</label>
+        <link refid="struct_a_g_e_1_1_statistics"/>
+      </node>
+      <node id="9">
+        <label>AGE::TextVertex</label>
+        <link refid="struct_a_g_e_1_1_text_vertex"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>VertexPosition</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>VertexColor</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>VertexTexCoords</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>AGE::TilemapVertex</label>
+        <link refid="struct_a_g_e_1_1_tilemap_vertex"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>VertexPosition</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>VertexColor</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>VertexUV</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>AGE::Vector2</label>
+        <link refid="struct_a_g_e_1_1_vector2"/>
+      </node>
+      <node id="4">
+        <label>AGE::Vector3</label>
+        <link refid="struct_a_g_e_1_1_vector3"/>
+      </node>
+      <node id="6">
+        <label>AGE::Vector4</label>
+        <link refid="struct_a_g_e_1_1_vector4"/>
+      </node>
+      <node id="3">
+        <label>AGE::Vertex</label>
+        <link refid="struct_a_g_e_1_1_vertex"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>VertexPosition</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>VertexTexCoords</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>VertexColor</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" line="12" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Pipeline.h" bodystart="13" bodyend="95"/>
+    <listofallmembers>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1ad04540a04fe3c7cc03c5be66fbd29507" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>AtlusSlotIndex</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1a5a0f1a5a28863727d0615f6dabbb5568" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>CameraBuffer</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1ac08d5f64a76f9e1a3dc09395c0b540d7" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>CameraUniformBuffer</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1aa44d740d8f08ba7f4e15e2848178f820" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>CircleIndexCount</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1aecba8b674a2dc7109e8edcdbdbefbaf6" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>CircleShader</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1ae932e4816e685de72ba8a5f79aee6f66" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>CircleVertexArray</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1a8742926493f2ed6599be61188020d7db" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>CircleVertexBufferBase</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1a715e37ad408ce256a5b3950aa063801c" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>CircleVertexBufferPtr</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1a45a8d52e92c85bcdd368c0c78822ba26" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>CoordBuffer</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1a292d7d1f19f65147d11cdc42dfc489b7" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>CurrentTilemap</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1a2b58e4bd98a6b503af0e4d1bfdacc7d6" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>FontAtlasTextures</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1afc022260db8fe97ccb0a5b926c0c0916" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>GetVertexBuffer</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1a2e5cb23670793614cb2df5e2417a972c" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>Library</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1a79843003d3124c6e46c20a7795ce14d3" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>LineShader</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1ac591fbca3a1752e987d4ec1076359ed6" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>LineVertexArray</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1a9487eae7a6b960a9e2960f71a8146ad5" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>LineVertexBufferBase</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1a081dd9eebb79250e5f56f51b905d0ab2" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>LineVertexBufferPtr</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1a171541fec01bd526cea89319111c18a2" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>LineVertexCount</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1aae1f8824ab64d3f6c209ef6161745cac" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>LineWidth</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1a9de4c574294b5e025229e8f9bc49ed11" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>MaxIndexCount</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1a167174428923e79035edb113b5dc73f8" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>MaxQuadCount</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1a79cc852a20a628c90f704102e76d0808" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>MaxTextureSlots</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1a8e992bdbd2c8c5fc111e829b59e88640" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>MaxVertices</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1a445a5260887c7789e860ba04dfd7816b" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>QuadIndexCount</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1ad7f6e91be8808b5b0b2a3424dd1eca54" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>QuadShader</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1a5ffaeb85f8f483ac0cf6d078236f7169" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>QuadVertexArray</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1afda6528500c996de4c6d5bec53260ab1" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>QuadVertexBufferBase</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1afb45a59c1b6ed28a45a975d69e8c9c10" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>QuadVertexBufferPtr</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1ad73c4121b24e321400569f784e28d2ee" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>QuadVertexPositions</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1a489bd69841239ef1eb60a315ab52bcf4" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>Stats</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1ae05932b600858be442b1bffcebdacdfc" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>TexCoordUniformBuffer</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1a95d04e4d6f27d12e786fff68c55cadd4" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>TextIndexCount</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1ab6598a3100f98b3c02f1148307b5757d" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>TextShader</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1a8ce2f89d64b5f5a8a603f42f129a1938" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>TextureSlotIndex</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1a580882fc1ae289807f83ba4dceef2c1a" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>TextureSlots</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1a9bb861f1bfa0fa45e6016975c1ea067b" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>TextVertexArray</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1a6f7357fb334d1c6f67fcaa117346bc2e" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>TextVertexBufferBase</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1a9ebf9d380186b9e2e8c6271931606208" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>TextVertexBufferPtr</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1afdfc4baabccc64eb7b90524c1e4021b3" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>TileIndexCount</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1a42e93f0a6033f46468ef8521ebe6231e" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>TilesetSlotIndex</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1afa38a3a1d10320d4e646adb35fe27752" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>TileSetTextures</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1a189a7f6ea34104203943bdd83aaedfaf" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>TileShader</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1a5d7478854ecd4a0b3b7f4ef88923448f" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>TileVertexArray</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1aded3b318e3baa49717ddd2100b7bc43d" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>TileVertexBufferBase</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1ae0f1a4d08d788b8ad219bdbfad0a8d7d" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>TileVertexBufferPtr</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1ab224ad207aba3b49c407bda94213c779" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>TileVertexCount</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1a4860c12730f5b24fc5a96b9f8165cfe3" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>TileVertexPositions</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1aca75b8190495bac717c611213201717a" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>VertexBuffers</name></member>
+      <member refid="struct_a_g_e_1_1_renderer2_d_data_1a7578ac3d003868580cb4a42db55eb284" prot="public" virt="non-virtual"><scope>AGE::Renderer2DData</scope><name>WhiteTexture</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

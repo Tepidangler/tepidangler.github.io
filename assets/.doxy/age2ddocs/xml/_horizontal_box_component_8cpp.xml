@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="_horizontal_box_component_8cpp" kind="file" language="C++">
+    <compoundname>HorizontalBoxComponent.cpp</compoundname>
+    <includes refid="_horizontal_box_component_8h" local="yes">../Public/HorizontalBoxComponent.h</includes>
+    <innernamespace refid="namespace_a_g_e">AGE</innernamespace>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="_horizontal_box_component_8cpp_1aa85998502208f6b5493127968965072a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>RTTR_REGISTRATION</definition>
+        <argsstring></argsstring>
+        <name>RTTR_REGISTRATION</name>
+        <initializer>{
+    rttr::registration::class_&lt;<ref refid="class_a_g_e_1_1_horizontal_box_component" kindref="compound">AGE::HorizontalBoxComponent</ref>&gt;(&quot;HorizontalBoxComponent&quot;)
+    .constructor&lt;const std::string&amp;&gt;()
+    .method(&quot;OnUpdate&quot;, &amp;AGE::HorizontalBoxComponent::OnUpdate)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/HorizontalBoxComponent.cpp" line="6" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/HorizontalBoxComponent.cpp" bodystart="6" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Created<sp/>by<sp/>gdmgp<sp/>on<sp/>2/1/2026.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../Public/HorizontalBoxComponent.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">RTTR_REGISTRATION{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>rttr::registration::class_&lt;AGE::HorizontalBoxComponent&gt;(</highlight><highlight class="stringliteral">&quot;HorizontalBoxComponent&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>.constructor&lt;</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;&gt;()</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>.method(</highlight><highlight class="stringliteral">&quot;OnUpdate&quot;</highlight><highlight class="normal">,<sp/>&amp;AGE::HorizontalBoxComponent::OnUpdate);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//.property(&quot;Children&quot;,<sp/>&amp;AGE::HorizontalBoxComponent::m_Components)(rttr::metadata(&quot;Description&quot;,<sp/>&quot;Child<sp/>components<sp/>attached<sp/>to<sp/>this<sp/>box&quot;));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">AGE</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>HorizontalBoxComponent::HorizontalBoxComponent(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;Name)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_Name<sp/>=<sp/>Name;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_Type<sp/>=<sp/>UIComponentType::HorizontalBoxComponent;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>HorizontalBoxComponent::OnUpdate(<ref refid="class_a_g_e_1_1_time_step" kindref="compound">TimeStep</ref><sp/>DeltaTime)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UIComponent::OnUpdate(DeltaTime);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>HorizontalBoxComponent::OnEvent(<ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref><sp/>&amp;<ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>HorizontalBoxComponent::DrawContent()<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>AGE</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/HorizontalBoxComponent.cpp"/>
+  </compounddef>
+</doxygen>

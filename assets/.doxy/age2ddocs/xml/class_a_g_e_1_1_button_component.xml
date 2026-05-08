@@ -1,0 +1,348 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_a_g_e_1_1_button_component" kind="class" language="C++" prot="public">
+    <compoundname>AGE::ButtonComponent</compoundname>
+    <basecompoundref refid="class_a_g_e_1_1_u_i_component" prot="public" virt="non-virtual">AGE::UIComponent</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_a_g_e_1_1_button_component_1aea59b4a48da7ad471d85a7fa8d9f1db8" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool AGE::ButtonComponent::bIsPressed</definition>
+        <argsstring></argsstring>
+        <name>bIsPressed</name>
+        <qualifiedname>AGE::ButtonComponent::bIsPressed</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="42" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_button_component_1a4c4b91b3f530a1bf4bb8615b041fbfc8" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool AGE::ButtonComponent::bIsHovered</definition>
+        <argsstring></argsstring>
+        <name>bIsHovered</name>
+        <qualifiedname>AGE::ButtonComponent::bIsHovered</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="43" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_button_component_1a84fe6f1afd368be678eec72b66a41401" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_a_g_e_1_1_box_properties" kindref="compound">BoxProperties</ref></type>
+        <definition>BoxProperties AGE::ButtonComponent::m_BoxProperties</definition>
+        <argsstring></argsstring>
+        <name>m_BoxProperties</name>
+        <qualifiedname>AGE::ButtonComponent::m_BoxProperties</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="45" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_button_component_1a8bcb162efaa917017df24c1c16ce7329" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref></type>
+        <definition>Vector2 AGE::ButtonComponent::m_Bounds[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>m_Bounds</name>
+        <qualifiedname>AGE::ButtonComponent::m_Bounds</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="46" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_button_component_1a18f4a25afece09b97973d50d070b1ac3" prot="private" static="no" mutable="no">
+        <type>std::function&lt; void()&gt;</type>
+        <definition>std::function&lt;void()&gt; AGE::ButtonComponent::m_OnClick</definition>
+        <argsstring></argsstring>
+        <name>m_OnClick</name>
+        <qualifiedname>AGE::ButtonComponent::m_OnClick</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="48" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_button_component_1a707e9a9f06c18ff0fb83ac96f347ec9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AGE::ButtonComponent::ButtonComponent</definition>
+        <argsstring>(const std::string &amp;Name)</argsstring>
+        <name>ButtonComponent</name>
+        <qualifiedname>AGE::ButtonComponent::ButtonComponent</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>Name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="17" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/ButtonComponent.cpp" bodystart="20" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_button_component_1ae3d6bf628ce87f47af1103aaa9198156" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AGE::ButtonComponent::DrawContent</definition>
+        <argsstring>() override</argsstring>
+        <name>DrawContent</name>
+        <qualifiedname>AGE::ButtonComponent::DrawContent</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_u_i_component_1ab7694d7df5410816a9fa16f17e4dbe42">DrawContent</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="19" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/ButtonComponent.cpp" bodystart="29" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_button_component_1a2abd07eb02072e41ced466ef9bcc0355" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AGE::ButtonComponent::OnUpdate</definition>
+        <argsstring>(TimeStep DeltaTime) override</argsstring>
+        <name>OnUpdate</name>
+        <qualifiedname>AGE::ButtonComponent::OnUpdate</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_u_i_component_1ae4301442c1ffde16569eb25b55faf29a">OnUpdate</reimplements>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_time_step" kindref="compound">TimeStep</ref></type>
+          <declname>DeltaTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="20" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/ButtonComponent.cpp" bodystart="37" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_button_component_1af83679edef87b696c95bd38768b3529d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AGE::ButtonComponent::OnEvent</definition>
+        <argsstring>(Event &amp;Event) override</argsstring>
+        <name>OnEvent</name>
+        <qualifiedname>AGE::ButtonComponent::OnEvent</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_u_i_component_1af262f42df2803d3e99fc07d7de0cb76e">OnEvent</reimplements>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref> &amp;</type>
+          <declname>Event</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="21" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/ButtonComponent.cpp" bodystart="49" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_button_component_1acf9558a828a3274d9843291b8fd287c6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void AGE::ButtonComponent::CallSerialize</definition>
+        <argsstring>(DataWriter *Serializer) override</argsstring>
+        <name>CallSerialize</name>
+        <qualifiedname>AGE::ButtonComponent::CallSerialize</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_u_i_component_1ab980baa2a8dba2ec06867b6208e352ee">CallSerialize</reimplements>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref> *</type>
+          <declname>Serializer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="22" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" bodystart="22" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_button_component_1aae2c06d51774e4c4a843edca8f8f0337" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void AGE::ButtonComponent::CallDeserialize</definition>
+        <argsstring>(DataReader *Serializer) override</argsstring>
+        <name>CallDeserialize</name>
+        <qualifiedname>AGE::ButtonComponent::CallDeserialize</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_u_i_component_1aadb5753077366d876badd0bc7919e7f2">CallDeserialize</reimplements>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref> *</type>
+          <declname>Serializer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="26" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" bodystart="26" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_button_component_1a5f8d876c64cadb91bf33a95463298176" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::ButtonComponent::SetOnClickFunc</definition>
+        <argsstring>(const std::function&lt; void()&gt; &amp;func)</argsstring>
+        <name>SetOnClickFunc</name>
+        <qualifiedname>AGE::ButtonComponent::SetOnClickFunc</qualifiedname>
+        <param>
+          <type>const std::function&lt; void()&gt; &amp;</type>
+          <declname>func</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="30" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" bodystart="30" bodyend="30"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_button_component_1abaf8f088dc961e76ad47afe15d308c26" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AGE::ButtonComponent::IsButtonHovered</definition>
+        <argsstring>()</argsstring>
+        <name>IsButtonHovered</name>
+        <qualifiedname>AGE::ButtonComponent::IsButtonHovered</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="36" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/ButtonComponent.cpp" bodystart="62" bodyend="70"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_button_component_1a9238262d3fb4c0c66f1ed1f602afc957" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AGE::ButtonComponent::OnKeyPressed</definition>
+        <argsstring>(KeyPressedEvent &amp;E)</argsstring>
+        <name>OnKeyPressed</name>
+        <qualifiedname>AGE::ButtonComponent::OnKeyPressed</qualifiedname>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_key_pressed_event" kindref="compound">KeyPressedEvent</ref> &amp;</type>
+          <declname>E</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="39" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/ButtonComponent.cpp" bodystart="72" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_button_component_1aa029a066cb8d801b487ddba5995c6b2d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AGE::ButtonComponent::OnClicked</definition>
+        <argsstring>(MouseButtonPressedEvent &amp;E)</argsstring>
+        <name>OnClicked</name>
+        <qualifiedname>AGE::ButtonComponent::OnClicked</qualifiedname>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_mouse_button_pressed_event" kindref="compound">MouseButtonPressedEvent</ref> &amp;</type>
+          <declname>E</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="40" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/ButtonComponent.cpp" bodystart="89" bodyend="93"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>AGE::ButtonComponent</label>
+        <link refid="class_a_g_e_1_1_button_component"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>AGE::UIComponent</label>
+        <link refid="class_a_g_e_1_1_u_i_component"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>AGE::ButtonComponent</label>
+        <link refid="class_a_g_e_1_1_button_component"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>AGE::UIComponent</label>
+        <link refid="class_a_g_e_1_1_u_i_component"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>m_CompProperties</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>m_Type</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>AGE::UIComponentType</label>
+        <link refid="struct_a_g_e_1_1_u_i_component_type"/>
+      </node>
+      <node id="3">
+        <label>AGE::UIProperties</label>
+        <link refid="struct_a_g_e_1_1_u_i_properties"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>Position</edgelabel>
+          <edgelabel>Rotation</edgelabel>
+          <edgelabel>Scale</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>AGE::Vector3</label>
+        <link refid="struct_a_g_e_1_1_vector3"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="14" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" bodystart="15" bodyend="50"/>
+    <listofallmembers>
+      <member refid="class_a_g_e_1_1_u_i_component_1a98e1aaddee431d6b3b7ff6f5e5536de4" prot="public" virt="non-virtual"><scope>AGE::ButtonComponent</scope><name>As</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1a3dfa8952db40b83e29831b76352fa8e5" prot="public" virt="non-virtual"><scope>AGE::ButtonComponent</scope><name>As</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1acf6c7eb7b2a777afa18e6493d3897dba" prot="public" virt="non-virtual"><scope>AGE::ButtonComponent</scope><name>As</name></member>
+      <member refid="class_a_g_e_1_1_button_component_1a4c4b91b3f530a1bf4bb8615b041fbfc8" prot="private" virt="non-virtual"><scope>AGE::ButtonComponent</scope><name>bIsHovered</name></member>
+      <member refid="class_a_g_e_1_1_button_component_1aea59b4a48da7ad471d85a7fa8d9f1db8" prot="private" virt="non-virtual"><scope>AGE::ButtonComponent</scope><name>bIsPressed</name></member>
+      <member refid="class_a_g_e_1_1_button_component_1a707e9a9f06c18ff0fb83ac96f347ec9b" prot="public" virt="non-virtual"><scope>AGE::ButtonComponent</scope><name>ButtonComponent</name></member>
+      <member refid="class_a_g_e_1_1_button_component_1aae2c06d51774e4c4a843edca8f8f0337" prot="public" virt="virtual"><scope>AGE::ButtonComponent</scope><name>CallDeserialize</name></member>
+      <member refid="class_a_g_e_1_1_button_component_1acf9558a828a3274d9843291b8fd287c6" prot="public" virt="virtual"><scope>AGE::ButtonComponent</scope><name>CallSerialize</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1a4088d9575b7ec2ee48863d8aa4b5e6a3" prot="public" virt="non-virtual"><scope>AGE::ButtonComponent</scope><name>Create</name></member>
+      <member refid="class_a_g_e_1_1_button_component_1ae3d6bf628ce87f47af1103aaa9198156" prot="public" virt="virtual"><scope>AGE::ButtonComponent</scope><name>DrawContent</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1a889fdb1f193f054f459e23dd8e9ce4ea" prot="public" virt="virtual"><scope>AGE::ButtonComponent</scope><name>DrawFontSelectionComboBox</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1af6baa3f8d5e27906bb0cf5505920323d" prot="public" virt="non-virtual"><scope>AGE::ButtonComponent</scope><name>DrawVec3Control</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1a3df91ca59da478917bd7eb78d549db12" prot="public" virt="non-virtual"><scope>AGE::ButtonComponent</scope><name>GetName</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1a4ef9f31a7abf44b81eaafc8b9833cc06" prot="public" virt="non-virtual"><scope>AGE::ButtonComponent</scope><name>GetProperties</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1a2914f47755abcb3dbfcf0b569b820941" prot="public" virt="non-virtual"><scope>AGE::ButtonComponent</scope><name>GetType</name></member>
+      <member refid="class_a_g_e_1_1_button_component_1abaf8f088dc961e76ad47afe15d308c26" prot="protected" virt="non-virtual"><scope>AGE::ButtonComponent</scope><name>IsButtonHovered</name></member>
+      <member refid="class_a_g_e_1_1_button_component_1a8bcb162efaa917017df24c1c16ce7329" prot="private" virt="non-virtual"><scope>AGE::ButtonComponent</scope><name>m_Bounds</name></member>
+      <member refid="class_a_g_e_1_1_button_component_1a84fe6f1afd368be678eec72b66a41401" prot="private" virt="non-virtual"><scope>AGE::ButtonComponent</scope><name>m_BoxProperties</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1a8e74315a28174ed994140cee418bd474" prot="public" virt="non-virtual"><scope>AGE::ButtonComponent</scope><name>m_CompProperties</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1ab4c43eed0f90da0db0f34d74bc674575" prot="public" virt="non-virtual"><scope>AGE::ButtonComponent</scope><name>m_Name</name></member>
+      <member refid="class_a_g_e_1_1_button_component_1a18f4a25afece09b97973d50d070b1ac3" prot="private" virt="non-virtual"><scope>AGE::ButtonComponent</scope><name>m_OnClick</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1aaa85c9e119337b1324a36e6a0789da17" prot="protected" virt="non-virtual"><scope>AGE::ButtonComponent</scope><name>m_Type</name></member>
+      <member refid="class_a_g_e_1_1_button_component_1aa029a066cb8d801b487ddba5995c6b2d" prot="private" virt="non-virtual"><scope>AGE::ButtonComponent</scope><name>OnClicked</name></member>
+      <member refid="class_a_g_e_1_1_button_component_1af83679edef87b696c95bd38768b3529d" prot="public" virt="virtual"><scope>AGE::ButtonComponent</scope><name>OnEvent</name></member>
+      <member refid="class_a_g_e_1_1_button_component_1a9238262d3fb4c0c66f1ed1f602afc957" prot="private" virt="non-virtual"><scope>AGE::ButtonComponent</scope><name>OnKeyPressed</name></member>
+      <member refid="class_a_g_e_1_1_button_component_1a2abd07eb02072e41ced466ef9bcc0355" prot="public" virt="virtual"><scope>AGE::ButtonComponent</scope><name>OnUpdate</name></member>
+      <member refid="class_a_g_e_1_1_button_component_1a5f8d876c64cadb91bf33a95463298176" prot="public" virt="non-virtual"><scope>AGE::ButtonComponent</scope><name>SetOnClickFunc</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1a7955733141e63b2394ce979b66bc0c56" prot="public" virt="non-virtual"><scope>AGE::ButtonComponent</scope><name>UIComponent</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1a29c332b5bd25803ae65891fb6c8714dd" prot="protected" virt="non-virtual"><scope>AGE::ButtonComponent</scope><name>UIComponent</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1a1285b3235baab89e21dec5dedc9644d8" prot="public" virt="virtual"><scope>AGE::ButtonComponent</scope><name>~UIComponent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

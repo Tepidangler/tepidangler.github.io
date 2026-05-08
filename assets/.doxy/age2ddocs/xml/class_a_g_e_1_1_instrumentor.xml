@@ -1,0 +1,250 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_a_g_e_1_1_instrumentor" kind="class" language="C++" prot="public">
+    <compoundname>AGE::Instrumentor</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_a_g_e_1_1_instrumentor_1a905820240ec508b9ab73a5bf5b36bce4" prot="private" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex AGE::Instrumentor::m_Mutex</definition>
+        <argsstring></argsstring>
+        <name>m_Mutex</name>
+        <qualifiedname>AGE::Instrumentor::m_Mutex</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" line="138" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_instrumentor_1a655a76900012873d8a36d73cb0af6a91" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_a_g_e_1_1_instrumentation_session" kindref="compound">InstrumentationSession</ref> *</type>
+        <definition>InstrumentationSession* AGE::Instrumentor::m_CurrentSession</definition>
+        <argsstring></argsstring>
+        <name>m_CurrentSession</name>
+        <qualifiedname>AGE::Instrumentor::m_CurrentSession</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" line="139" column="24" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_instrumentor_1add79a748411de8872148b2e139bed874" prot="private" static="no" mutable="no">
+        <type>std::ofstream</type>
+        <definition>std::ofstream AGE::Instrumentor::m_OutputStream</definition>
+        <argsstring></argsstring>
+        <name>m_OutputStream</name>
+        <qualifiedname>AGE::Instrumentor::m_OutputStream</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" line="140" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_instrumentor_1a51c3db0d707f92e3eab312f8182235b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AGE::Instrumentor::Instrumentor</definition>
+        <argsstring>(const Instrumentor &amp;)=delete</argsstring>
+        <name>Instrumentor</name>
+        <qualifiedname>AGE::Instrumentor::Instrumentor</qualifiedname>
+        <param>
+          <type>const <ref refid="class_a_g_e_1_1_instrumentor" kindref="compound">Instrumentor</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" line="34" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_instrumentor_1a0bc802846b20119d123b64badff1254a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AGE::Instrumentor::Instrumentor</definition>
+        <argsstring>(Instrumentor &amp;&amp;)=delete</argsstring>
+        <name>Instrumentor</name>
+        <qualifiedname>AGE::Instrumentor::Instrumentor</qualifiedname>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_instrumentor" kindref="compound">Instrumentor</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_instrumentor_1a781be29c60c15fd22b16894f84fc26b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Instrumentor::BeginSession</definition>
+        <argsstring>(const std::string &amp;name, const std::string &amp;filepath=&quot;results.json&quot;)</argsstring>
+        <name>BeginSession</name>
+        <qualifiedname>AGE::Instrumentor::BeginSession</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>filepath</declname>
+          <defval>&quot;results.json&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" line="37" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" bodystart="37" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_instrumentor_1a6412e7f7bc8440cdf54bf502bbce41cd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Instrumentor::EndSession</definition>
+        <argsstring>()</argsstring>
+        <name>EndSession</name>
+        <qualifiedname>AGE::Instrumentor::EndSession</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" line="68" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" bodystart="68" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_instrumentor_1a81ee92c84f3fb59cdf6d025f920abb54" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Instrumentor::WriteProfile</definition>
+        <argsstring>(const ProfileResult &amp;result)</argsstring>
+        <name>WriteProfile</name>
+        <qualifiedname>AGE::Instrumentor::WriteProfile</qualifiedname>
+        <param>
+          <type>const <ref refid="struct_a_g_e_1_1_profile_result" kindref="compound">ProfileResult</ref> &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" line="74" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" bodystart="74" bodyend="95"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_instrumentor_1a68ed4c4de65638a1bacf53e113fae7f7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_a_g_e_1_1_instrumentor" kindref="compound">Instrumentor</ref> &amp;</type>
+        <definition>static Instrumentor &amp; AGE::Instrumentor::Get</definition>
+        <argsstring>()</argsstring>
+        <name>Get</name>
+        <qualifiedname>AGE::Instrumentor::Get</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" line="97" column="21" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" bodystart="97" bodyend="101"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_instrumentor_1a53f95afec81c69c854d7cf4454c8dd69" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>AGE::Instrumentor::Instrumentor</definition>
+        <argsstring>()</argsstring>
+        <name>Instrumentor</name>
+        <qualifiedname>AGE::Instrumentor::Instrumentor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" line="103" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" bodystart="103" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_instrumentor_1ab4e2c1b9b7af21c4fe424d0d0777ffff" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>AGE::Instrumentor::~Instrumentor</definition>
+        <argsstring>()</argsstring>
+        <name>~Instrumentor</name>
+        <qualifiedname>AGE::Instrumentor::~Instrumentor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" line="108" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" bodystart="108" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_instrumentor_1a02630c5f72bc6ab30430b465f265709d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Instrumentor::WriteHeader</definition>
+        <argsstring>()</argsstring>
+        <name>WriteHeader</name>
+        <qualifiedname>AGE::Instrumentor::WriteHeader</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" line="113" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" bodystart="113" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_instrumentor_1a29e2daad4126ca56aebd07eba3190520" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Instrumentor::WriteFooter</definition>
+        <argsstring>()</argsstring>
+        <name>WriteFooter</name>
+        <qualifiedname>AGE::Instrumentor::WriteFooter</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" line="119" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" bodystart="119" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_instrumentor_1a557466631a92b8ec3524b48c56dcf7ff" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Instrumentor::InternalEndSession</definition>
+        <argsstring>()</argsstring>
+        <name>InternalEndSession</name>
+        <qualifiedname>AGE::Instrumentor::InternalEndSession</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" line="127" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" bodystart="127" bodyend="136"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" line="31" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" bodystart="32" bodyend="141"/>
+    <listofallmembers>
+      <member refid="class_a_g_e_1_1_instrumentor_1a781be29c60c15fd22b16894f84fc26b7" prot="public" virt="non-virtual"><scope>AGE::Instrumentor</scope><name>BeginSession</name></member>
+      <member refid="class_a_g_e_1_1_instrumentor_1a6412e7f7bc8440cdf54bf502bbce41cd" prot="public" virt="non-virtual"><scope>AGE::Instrumentor</scope><name>EndSession</name></member>
+      <member refid="class_a_g_e_1_1_instrumentor_1a68ed4c4de65638a1bacf53e113fae7f7" prot="public" virt="non-virtual"><scope>AGE::Instrumentor</scope><name>Get</name></member>
+      <member refid="class_a_g_e_1_1_instrumentor_1a51c3db0d707f92e3eab312f8182235b9" prot="public" virt="non-virtual"><scope>AGE::Instrumentor</scope><name>Instrumentor</name></member>
+      <member refid="class_a_g_e_1_1_instrumentor_1a0bc802846b20119d123b64badff1254a" prot="public" virt="non-virtual"><scope>AGE::Instrumentor</scope><name>Instrumentor</name></member>
+      <member refid="class_a_g_e_1_1_instrumentor_1a53f95afec81c69c854d7cf4454c8dd69" prot="private" virt="non-virtual"><scope>AGE::Instrumentor</scope><name>Instrumentor</name></member>
+      <member refid="class_a_g_e_1_1_instrumentor_1a557466631a92b8ec3524b48c56dcf7ff" prot="private" virt="non-virtual"><scope>AGE::Instrumentor</scope><name>InternalEndSession</name></member>
+      <member refid="class_a_g_e_1_1_instrumentor_1a655a76900012873d8a36d73cb0af6a91" prot="private" virt="non-virtual"><scope>AGE::Instrumentor</scope><name>m_CurrentSession</name></member>
+      <member refid="class_a_g_e_1_1_instrumentor_1a905820240ec508b9ab73a5bf5b36bce4" prot="private" virt="non-virtual"><scope>AGE::Instrumentor</scope><name>m_Mutex</name></member>
+      <member refid="class_a_g_e_1_1_instrumentor_1add79a748411de8872148b2e139bed874" prot="private" virt="non-virtual"><scope>AGE::Instrumentor</scope><name>m_OutputStream</name></member>
+      <member refid="class_a_g_e_1_1_instrumentor_1a29e2daad4126ca56aebd07eba3190520" prot="private" virt="non-virtual"><scope>AGE::Instrumentor</scope><name>WriteFooter</name></member>
+      <member refid="class_a_g_e_1_1_instrumentor_1a02630c5f72bc6ab30430b465f265709d" prot="private" virt="non-virtual"><scope>AGE::Instrumentor</scope><name>WriteHeader</name></member>
+      <member refid="class_a_g_e_1_1_instrumentor_1a81ee92c84f3fb59cdf6d025f920abb54" prot="public" virt="non-virtual"><scope>AGE::Instrumentor</scope><name>WriteProfile</name></member>
+      <member refid="class_a_g_e_1_1_instrumentor_1ab4e2c1b9b7af21c4fe424d0d0777ffff" prot="private" virt="non-virtual"><scope>AGE::Instrumentor</scope><name>~Instrumentor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

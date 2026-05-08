@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_a_g_e_1_1_ini_reader" kind="class" language="C++" prot="public">
+    <compoundname>AGE::IniReader</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_a_g_e_1_1_ini_reader_1a251c363e98b2e3dfeee7f8cb9eeeb180" prot="private" static="no" mutable="no">
+        <type>std::filesystem::path</type>
+        <definition>std::filesystem::path AGE::IniReader::m_IniPath</definition>
+        <argsstring></argsstring>
+        <name>m_IniPath</name>
+        <qualifiedname>AGE::IniReader::m_IniPath</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/IniReader.h" line="39" column="23" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/IniReader.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_ini_reader_1ac2ebcc8686ebeb180189d6312fc4aef5" prot="private" static="no" mutable="no">
+        <type>CSimpleIniA</type>
+        <definition>CSimpleIniA AGE::IniReader::m_Ini</definition>
+        <argsstring></argsstring>
+        <name>m_Ini</name>
+        <qualifiedname>AGE::IniReader::m_Ini</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/IniReader.h" line="40" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/IniReader.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_ini_reader_1a770d48b4bf777b85af2f108292eabbe0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AGE::IniReader::IniReader</definition>
+        <argsstring>(const std::filesystem::path &amp;Path)</argsstring>
+        <name>IniReader</name>
+        <qualifiedname>AGE::IniReader::IniReader</qualifiedname>
+        <param>
+          <type>const std::filesystem::path &amp;</type>
+          <declname>Path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/IniReader.h" line="32" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Private/IniReader.cpp" bodystart="11" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_ini_reader_1a3e9fa22b79f068af0e6e98b357ed05b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AGE::IniReader::~IniReader</definition>
+        <argsstring>()=default</argsstring>
+        <name>~IniReader</name>
+        <qualifiedname>AGE::IniReader::~IniReader</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/IniReader.h" line="33" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_ini_reader_1a3664bc58ba3636572eff6046854f4547" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string AGE::IniReader::Read</definition>
+        <argsstring>(const std::string &amp;Section, const std::string &amp;Key, bool &amp;HasMultipleValues)</argsstring>
+        <name>Read</name>
+        <qualifiedname>AGE::IniReader::Read</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>Section</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>Key</declname>
+        </param>
+        <param>
+          <type>bool &amp;</type>
+          <declname>HasMultipleValues</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/IniReader.h" line="35" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Private/IniReader.cpp" bodystart="24" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_ini_reader_1a4549ad062a50895ed08455263198fd37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; AGE::IniReader::ReadAll</definition>
+        <argsstring>(const std::string &amp;Section, const std::string &amp;Key)</argsstring>
+        <name>ReadAll</name>
+        <qualifiedname>AGE::IniReader::ReadAll</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>Section</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>Key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/IniReader.h" line="37" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Private/IniReader.cpp" bodystart="40" bodyend="61"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/IniReader.h" line="29" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/IniReader.h" bodystart="30" bodyend="41"/>
+    <listofallmembers>
+      <member refid="class_a_g_e_1_1_ini_reader_1a770d48b4bf777b85af2f108292eabbe0" prot="public" virt="non-virtual"><scope>AGE::IniReader</scope><name>IniReader</name></member>
+      <member refid="class_a_g_e_1_1_ini_reader_1ac2ebcc8686ebeb180189d6312fc4aef5" prot="private" virt="non-virtual"><scope>AGE::IniReader</scope><name>m_Ini</name></member>
+      <member refid="class_a_g_e_1_1_ini_reader_1a251c363e98b2e3dfeee7f8cb9eeeb180" prot="private" virt="non-virtual"><scope>AGE::IniReader</scope><name>m_IniPath</name></member>
+      <member refid="class_a_g_e_1_1_ini_reader_1a3664bc58ba3636572eff6046854f4547" prot="public" virt="non-virtual"><scope>AGE::IniReader</scope><name>Read</name></member>
+      <member refid="class_a_g_e_1_1_ini_reader_1a4549ad062a50895ed08455263198fd37" prot="public" virt="non-virtual"><scope>AGE::IniReader</scope><name>ReadAll</name></member>
+      <member refid="class_a_g_e_1_1_ini_reader_1a3e9fa22b79f068af0e6e98b357ed05b7" prot="public" virt="non-virtual"><scope>AGE::IniReader</scope><name>~IniReader</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

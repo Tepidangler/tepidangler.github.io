@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_a_g_e_1_1_shader_library" kind="class" language="C++" prot="public">
+    <compoundname>AGE::ShaderLibrary</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_a_g_e_1_1_shader_library_1a78a309905ac9bfa72bd730e407cf3153" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, Ref&lt; <ref refid="class_a_g_e_1_1_shader" kindref="compound">Shader</ref> &gt; &gt;</type>
+        <definition>std::unordered_map&lt;std::string, Ref&lt;Shader&gt; &gt; AGE::ShaderLibrary::m_Shaders</definition>
+        <argsstring></argsstring>
+        <name>m_Shaders</name>
+        <qualifiedname>AGE::ShaderLibrary::m_Shaders</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Shader.h" line="57" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Shader.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_shader_library_1a3952ca9ebfaeaab0f97373b8b0ff9190" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::ShaderLibrary::Add</definition>
+        <argsstring>(const std::string &amp;Name, const Ref&lt; Shader &gt; &amp;Shader)</argsstring>
+        <name>Add</name>
+        <qualifiedname>AGE::ShaderLibrary::Add</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>Name</declname>
+        </param>
+        <param>
+          <type>const Ref&lt; <ref refid="class_a_g_e_1_1_shader" kindref="compound">Shader</ref> &gt; &amp;</type>
+          <declname>Shader</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Shader.h" line="44" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Shader.cpp" bodystart="89" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_shader_library_1a15f1552db48ae919705b6bfb87576bae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::ShaderLibrary::Add</definition>
+        <argsstring>(Ref&lt; Shader &gt; &amp;Shader)</argsstring>
+        <name>Add</name>
+        <qualifiedname>AGE::ShaderLibrary::Add</qualifiedname>
+        <param>
+          <type>Ref&lt; <ref refid="class_a_g_e_1_1_shader" kindref="compound">Shader</ref> &gt; &amp;</type>
+          <declname>Shader</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Shader.h" line="45" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Shader.cpp" bodystart="98" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_shader_library_1a11eb65c6ff31507f8c31194c4d1145b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Ref&lt; <ref refid="class_a_g_e_1_1_shader" kindref="compound">Shader</ref> &gt;</type>
+        <definition>Ref&lt; Shader &gt; AGE::ShaderLibrary::Load</definition>
+        <argsstring>(const std::string &amp;FilePath)</argsstring>
+        <name>Load</name>
+        <qualifiedname>AGE::ShaderLibrary::Load</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>FilePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Shader.h" line="47" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Shader.cpp" bodystart="121" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_shader_library_1a1aa6400c6431623b4dad9e089ddf4c7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Ref&lt; <ref refid="class_a_g_e_1_1_shader" kindref="compound">Shader</ref> &gt;</type>
+        <definition>Ref&lt; Shader &gt; AGE::ShaderLibrary::Load</definition>
+        <argsstring>(const std::string &amp;FilePath1, const std::string &amp;FilePath2)</argsstring>
+        <name>Load</name>
+        <qualifiedname>AGE::ShaderLibrary::Load</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>FilePath1</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>FilePath2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Shader.h" line="48" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Shader.cpp" bodystart="128" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_shader_library_1a527dd403e661b277bf4d969672db171c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Ref&lt; <ref refid="class_a_g_e_1_1_shader" kindref="compound">Shader</ref> &gt;</type>
+        <definition>Ref&lt; Shader &gt; AGE::ShaderLibrary::Load</definition>
+        <argsstring>(const int Name, const std::string &amp;Source)</argsstring>
+        <name>Load</name>
+        <qualifiedname>AGE::ShaderLibrary::Load</qualifiedname>
+        <param>
+          <type>const int</type>
+          <declname>Name</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>Source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Shader.h" line="49" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Shader.cpp" bodystart="106" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_shader_library_1a135a3471469f2a5ea3ddc047e858dfae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Ref&lt; <ref refid="class_a_g_e_1_1_shader" kindref="compound">Shader</ref> &gt;</type>
+        <definition>Ref&lt; Shader &gt; AGE::ShaderLibrary::Get</definition>
+        <argsstring>(const std::string &amp;Name)</argsstring>
+        <name>Get</name>
+        <qualifiedname>AGE::ShaderLibrary::Get</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>Name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Shader.h" line="50" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Shader.cpp" bodystart="135" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_shader_library_1a81f1e430003375e41675d5025191b2af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AGE::ShaderLibrary::Exists</definition>
+        <argsstring>(const std::string &amp;Name)</argsstring>
+        <name>Exists</name>
+        <qualifiedname>AGE::ShaderLibrary::Exists</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>Name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Shader.h" line="52" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Shader.cpp" bodystart="141" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_shader_library_1a1bfd1c31f1c8eab889a97e9678460c0f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::unordered_map&lt; std::string, Ref&lt; <ref refid="class_a_g_e_1_1_shader" kindref="compound">Shader</ref> &gt; &gt;</type>
+        <definition>std::unordered_map&lt; std::string, Ref&lt; Shader &gt; &gt; AGE::ShaderLibrary::GetLibrary</definition>
+        <argsstring>()</argsstring>
+        <name>GetLibrary</name>
+        <qualifiedname>AGE::ShaderLibrary::GetLibrary</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Shader.h" line="54" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Shader.h" bodystart="54" bodyend="54"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Shader.h" line="40" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Shader.h" bodystart="41" bodyend="58"/>
+    <listofallmembers>
+      <member refid="class_a_g_e_1_1_shader_library_1a3952ca9ebfaeaab0f97373b8b0ff9190" prot="public" virt="non-virtual"><scope>AGE::ShaderLibrary</scope><name>Add</name></member>
+      <member refid="class_a_g_e_1_1_shader_library_1a15f1552db48ae919705b6bfb87576bae" prot="public" virt="non-virtual"><scope>AGE::ShaderLibrary</scope><name>Add</name></member>
+      <member refid="class_a_g_e_1_1_shader_library_1a81f1e430003375e41675d5025191b2af" prot="public" virt="non-virtual"><scope>AGE::ShaderLibrary</scope><name>Exists</name></member>
+      <member refid="class_a_g_e_1_1_shader_library_1a135a3471469f2a5ea3ddc047e858dfae" prot="public" virt="non-virtual"><scope>AGE::ShaderLibrary</scope><name>Get</name></member>
+      <member refid="class_a_g_e_1_1_shader_library_1a1bfd1c31f1c8eab889a97e9678460c0f" prot="public" virt="non-virtual"><scope>AGE::ShaderLibrary</scope><name>GetLibrary</name></member>
+      <member refid="class_a_g_e_1_1_shader_library_1a11eb65c6ff31507f8c31194c4d1145b9" prot="public" virt="non-virtual"><scope>AGE::ShaderLibrary</scope><name>Load</name></member>
+      <member refid="class_a_g_e_1_1_shader_library_1a1aa6400c6431623b4dad9e089ddf4c7d" prot="public" virt="non-virtual"><scope>AGE::ShaderLibrary</scope><name>Load</name></member>
+      <member refid="class_a_g_e_1_1_shader_library_1a527dd403e661b277bf4d969672db171c" prot="public" virt="non-virtual"><scope>AGE::ShaderLibrary</scope><name>Load</name></member>
+      <member refid="class_a_g_e_1_1_shader_library_1a78a309905ac9bfa72bd730e407cf3153" prot="private" virt="non-virtual"><scope>AGE::ShaderLibrary</scope><name>m_Shaders</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

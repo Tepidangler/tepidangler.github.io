@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_a_g_e_1_1_particle_system" kind="class" language="C++" prot="public">
+    <compoundname>AGE::ParticleSystem</compoundname>
+    <innerclass refid="struct_a_g_e_1_1_particle_system_1_1_particle" prot="private">AGE::ParticleSystem::Particle</innerclass>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_a_g_e_1_1_particle_system_1ae8d10aa4d3c32c95fad78db00cf4aad3" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; Particle &gt;</type>
+        <definition>std::vector&lt;Particle&gt; AGE::ParticleSystem::m_ParticlePool</definition>
+        <argsstring></argsstring>
+        <name>m_ParticlePool</name>
+        <qualifiedname>AGE::ParticleSystem::m_ParticlePool</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Particles/Public/ParticleSystem.h" line="56" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Particles/Public/ParticleSystem.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_particle_system_1ab689763c69a03c170aa14b4ae3f1c8f2" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t AGE::ParticleSystem::m_PoolIndex</definition>
+        <argsstring></argsstring>
+        <name>m_PoolIndex</name>
+        <qualifiedname>AGE::ParticleSystem::m_PoolIndex</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Particles/Public/ParticleSystem.h" line="58" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Particles/Public/ParticleSystem.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_particle_system_1ae1c07097668b24ae27f9fcceaa6ad276" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AGE::ParticleSystem::ParticleSystem</definition>
+        <argsstring>(uint32_t MaxParticles=100000)</argsstring>
+        <name>ParticleSystem</name>
+        <qualifiedname>AGE::ParticleSystem::ParticleSystem</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>MaxParticles</declname>
+          <defval>100000</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Particles/Public/ParticleSystem.h" line="28" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Particles/Private/ParticleSystem.cpp" bodystart="16" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_particle_system_1ab00bdbdd5d6275a80902b3d29791feea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::ParticleSystem::OnUpdate</definition>
+        <argsstring>(TimeStep DeltaTime)</argsstring>
+        <name>OnUpdate</name>
+        <qualifiedname>AGE::ParticleSystem::OnUpdate</qualifiedname>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_time_step" kindref="compound">TimeStep</ref></type>
+          <declname>DeltaTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Particles/Public/ParticleSystem.h" line="30" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Particles/Private/ParticleSystem.cpp" bodystart="24" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_particle_system_1a45980ff6a4a0f4aba6ff47af1b562385" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::ParticleSystem::OnRender</definition>
+        <argsstring>(const Camera &amp;Camera, const Matrix4D &amp;Transform)</argsstring>
+        <name>OnRender</name>
+        <qualifiedname>AGE::ParticleSystem::OnRender</qualifiedname>
+        <param>
+          <type>const <ref refid="class_a_g_e_1_1_camera" kindref="compound">Camera</ref> &amp;</type>
+          <declname>Camera</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> &amp;</type>
+          <declname>Transform</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Particles/Public/ParticleSystem.h" line="31" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Particles/Private/ParticleSystem.cpp" bodystart="43" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_particle_system_1af19a0ba9d783cafcc37e33e6aefec5a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::ParticleSystem::Emit</definition>
+        <argsstring>(const ParticleProps &amp;Properties)</argsstring>
+        <name>Emit</name>
+        <qualifiedname>AGE::ParticleSystem::Emit</qualifiedname>
+        <param>
+          <type>const <ref refid="struct_a_g_e_1_1_particle_props" kindref="compound">ParticleProps</ref> &amp;</type>
+          <declname>Properties</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Particles/Public/ParticleSystem.h" line="33" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Particles/Private/ParticleSystem.cpp" bodystart="64" bodyend="86"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Particles/Public/ParticleSystem.h" line="25" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Particles/Public/ParticleSystem.h" bodystart="26" bodyend="59"/>
+    <listofallmembers>
+      <member refid="class_a_g_e_1_1_particle_system_1af19a0ba9d783cafcc37e33e6aefec5a1" prot="public" virt="non-virtual"><scope>AGE::ParticleSystem</scope><name>Emit</name></member>
+      <member refid="class_a_g_e_1_1_particle_system_1ae8d10aa4d3c32c95fad78db00cf4aad3" prot="private" virt="non-virtual"><scope>AGE::ParticleSystem</scope><name>m_ParticlePool</name></member>
+      <member refid="class_a_g_e_1_1_particle_system_1ab689763c69a03c170aa14b4ae3f1c8f2" prot="private" virt="non-virtual"><scope>AGE::ParticleSystem</scope><name>m_PoolIndex</name></member>
+      <member refid="class_a_g_e_1_1_particle_system_1a45980ff6a4a0f4aba6ff47af1b562385" prot="public" virt="non-virtual"><scope>AGE::ParticleSystem</scope><name>OnRender</name></member>
+      <member refid="class_a_g_e_1_1_particle_system_1ab00bdbdd5d6275a80902b3d29791feea" prot="public" virt="non-virtual"><scope>AGE::ParticleSystem</scope><name>OnUpdate</name></member>
+      <member refid="class_a_g_e_1_1_particle_system_1ae1c07097668b24ae27f9fcceaa6ad276" prot="public" virt="non-virtual"><scope>AGE::ParticleSystem</scope><name>ParticleSystem</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

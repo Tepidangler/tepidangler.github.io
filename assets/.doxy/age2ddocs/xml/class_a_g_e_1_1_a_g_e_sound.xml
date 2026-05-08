@@ -1,0 +1,669 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_a_g_e_1_1_a_g_e_sound" kind="class" language="C++" prot="public">
+    <compoundname>AGE::AGESound</compoundname>
+    <basecompoundref refid="class_a_g_e_1_1_audio_engine" prot="public" virt="non-virtual">AGE::AudioEngine</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_a_g_e_1_1_a_g_e_sound_1aa35627b643c3558789cbd26d78d55aa7" prot="private" static="no" mutable="no">
+        <type>ALCdevice *</type>
+        <definition>ALCdevice* AGE::AGESound::m_Device</definition>
+        <argsstring></argsstring>
+        <name>m_Device</name>
+        <qualifiedname>AGE::AGESound::m_Device</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="66" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_a_g_e_sound_1ae73767b2abe069a316e3566d797281ae" prot="private" static="no" mutable="no">
+        <type>ALCcontext *</type>
+        <definition>ALCcontext* AGE::AGESound::m_Context</definition>
+        <argsstring></argsstring>
+        <name>m_Context</name>
+        <qualifiedname>AGE::AGESound::m_Context</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="68" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_a_g_e_sound_1a725c3689fb42d0dbf1206cc3d487dffe" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; AGE::AGESound::m_AvailableSoundDevices</definition>
+        <argsstring></argsstring>
+        <name>m_AvailableSoundDevices</name>
+        <qualifiedname>AGE::AGESound::m_AvailableSoundDevices</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="70" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_a_g_e_sound_1a6e3514d80f8704bd9e344bcc6ce61122" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string AGE::AGESound::m_EventName</definition>
+        <argsstring></argsstring>
+        <name>m_EventName</name>
+        <qualifiedname>AGE::AGESound::m_EventName</qualifiedname>
+        <initializer>= &quot;NONE&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="72" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1acf593b094a1e621acb22ae6b4ffe60e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AGE::AGESound::AGESound</definition>
+        <argsstring>()</argsstring>
+        <name>AGESound</name>
+        <qualifiedname>AGE::AGESound::AGESound</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="15" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="117" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1ac7c399655f6b93b37ad9768f80fef51a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AGE::AGESound::~AGESound</definition>
+        <argsstring>() override=default</argsstring>
+        <name>~AGESound</name>
+        <qualifiedname>AGE::AGESound::~AGESound</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="16" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1a8e5ebb3330fa88235c1ebdecb4dab39a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AGE::AGESound::Init</definition>
+        <argsstring>() override</argsstring>
+        <name>Init</name>
+        <qualifiedname>AGE::AGESound::Init</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_audio_engine_1a32d867609bbb9a94bddc93cb9cd39f70">Init</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="17" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="122" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1a223cb2c73030f8d5bb33cbc821a223aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AGE::AGESound::Start</definition>
+        <argsstring>() override</argsstring>
+        <name>Start</name>
+        <qualifiedname>AGE::AGESound::Start</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_audio_engine_1ae3c47184585fce229ff01300add27b94">Start</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="18" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="145" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1af06a8788f9f2c400b9ae672e81589770" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AGE::AGESound::Update</definition>
+        <argsstring>() override</argsstring>
+        <name>Update</name>
+        <qualifiedname>AGE::AGESound::Update</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_audio_engine_1ac54c71ca4b76c307a6c3feb01f1d5550">Update</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="19" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="149" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1acb2c61bd9502946e950c4c55b84b5a78" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AGE::AGESound::Stop</definition>
+        <argsstring>() override</argsstring>
+        <name>Stop</name>
+        <qualifiedname>AGE::AGESound::Stop</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_audio_engine_1ab144467b0185e2a7b83fabdec98f0ef5">Stop</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="20" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="153" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1af5f8adb837115ea2732869ad29072303" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AGE::AGESound::LoadBanks</definition>
+        <argsstring>(const std::vector&lt; Ref&lt; SoundBank &gt; &gt; &amp;Banks) override</argsstring>
+        <name>LoadBanks</name>
+        <qualifiedname>AGE::AGESound::LoadBanks</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_audio_engine_1a020f2c22de75e14545946c8a2637b5d9">LoadBanks</reimplements>
+        <param>
+          <type>const std::vector&lt; Ref&lt; <ref refid="class_a_g_e_1_1_sound_bank" kindref="compound">SoundBank</ref> &gt; &gt; &amp;</type>
+          <declname>Banks</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="22" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="157" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1a8469c75020afb6597461f07908d50078" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AGE::AGESound::LoadBank</definition>
+        <argsstring>(Ref&lt; SoundBank &gt; Bank) override</argsstring>
+        <name>LoadBank</name>
+        <qualifiedname>AGE::AGESound::LoadBank</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_audio_engine_1a6c65f731c7449aa9154e8063b37764d5">LoadBank</reimplements>
+        <param>
+          <type>Ref&lt; <ref refid="class_a_g_e_1_1_sound_bank" kindref="compound">SoundBank</ref> &gt;</type>
+          <declname>Bank</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="23" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="161" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1a9b5aef971fb142e5d62be2c7b89fcc8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>std::string &amp;</type>
+        <definition>std::string &amp; AGE::AGESound::GetCurrentEventName</definition>
+        <argsstring>() override</argsstring>
+        <name>GetCurrentEventName</name>
+        <qualifiedname>AGE::AGESound::GetCurrentEventName</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_audio_engine_1a11ee1a0e6822c6c1a297e710a925bcec">GetCurrentEventName</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="25" column="21" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="165" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1a19385df01ad12e7cb4305bb33c781f17" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AGE::AGESound::SetCurrentEventName</definition>
+        <argsstring>(const std::string &amp;Name) override</argsstring>
+        <name>SetCurrentEventName</name>
+        <qualifiedname>AGE::AGESound::SetCurrentEventName</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_audio_engine_1a8043959f6e4fb51c613af0c863c1c986">SetCurrentEventName</reimplements>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>Name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="26" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="170" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1a7c55a7b4ace491c107879ee1fca37741" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void AGE::AGESound::LoadEvents</definition>
+        <argsstring>() override</argsstring>
+        <name>LoadEvents</name>
+        <qualifiedname>AGE::AGESound::LoadEvents</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_audio_engine_1a40855c5294ea737aad7524bbc41539d6">LoadEvents</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="27" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" bodystart="27" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1a3407f11a4b60101f98d0b1586c770e0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AGE::AGESound::Shutdown</definition>
+        <argsstring>() override</argsstring>
+        <name>Shutdown</name>
+        <qualifiedname>AGE::AGESound::Shutdown</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_audio_engine_1a12ef15e7d376905f2a17be365180e3d5">Shutdown</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="28" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="174" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1a3be17705d0f540cab81a144e043255dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool AGE::AGESound::IsEventValid</definition>
+        <argsstring>(const std::string &amp;EventName) override</argsstring>
+        <name>IsEventValid</name>
+        <qualifiedname>AGE::AGESound::IsEventValid</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_audio_engine_1a02ab665a950a5de2a7b22c4a08bf4261">IsEventValid</reimplements>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>EventName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="29" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="178" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1a2203ebd82839e88f38d68cd1734e254b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AGE::AGESound::SetParameterByName</definition>
+        <argsstring>(const std::string &amp;Name, float Value) override</argsstring>
+        <name>SetParameterByName</name>
+        <qualifiedname>AGE::AGESound::SetParameterByName</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_audio_engine_1a84d0c567c99f6bd274b6b1a136c7929c">SetParameterByName</reimplements>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>Name</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>Value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="31" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="183" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1a58ec988a00b82a15e5d03b7542fb5ef6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AGE::AGESound::Set3DAttributes</definition>
+        <argsstring>(void *Attributes) override</argsstring>
+        <name>Set3DAttributes</name>
+        <qualifiedname>AGE::AGESound::Set3DAttributes</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_audio_engine_1ae0de760b072d80ddbb5e026ac1e8507f">Set3DAttributes</reimplements>
+        <param>
+          <type>void *</type>
+          <declname>Attributes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="32" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="187" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1a38cd44063727d2a1849abc2e5e0285e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::AGESound::Play</definition>
+        <argsstring>(const Ref&lt; AudioSource &gt; &amp;Source)</argsstring>
+        <name>Play</name>
+        <qualifiedname>AGE::AGESound::Play</qualifiedname>
+        <param>
+          <type>const Ref&lt; <ref refid="class_a_g_e_1_1_audio_source" kindref="compound">AudioSource</ref> &gt; &amp;</type>
+          <declname>Source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="34" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="364" bodyend="367"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1a73a24d69103650385a5dd7452dbc3127" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::AGESound::Stop</definition>
+        <argsstring>(const Ref&lt; AudioSource &gt; &amp;Source)</argsstring>
+        <name>Stop</name>
+        <qualifiedname>AGE::AGESound::Stop</qualifiedname>
+        <param>
+          <type>const Ref&lt; <ref refid="class_a_g_e_1_1_audio_source" kindref="compound">AudioSource</ref> &gt; &amp;</type>
+          <declname>Source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="35" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="368" bodyend="371"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1afcd894a5a9803a806be653384e697be0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::AGESound::Stop</definition>
+        <argsstring>(const std::vector&lt; Ref&lt; AudioSource &gt; &gt; &amp;Sources)</argsstring>
+        <name>Stop</name>
+        <qualifiedname>AGE::AGESound::Stop</qualifiedname>
+        <param>
+          <type>const std::vector&lt; Ref&lt; <ref refid="class_a_g_e_1_1_audio_source" kindref="compound">AudioSource</ref> &gt; &gt; &amp;</type>
+          <declname>Sources</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="36" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="372" bodyend="378"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1a81814922aacd2424d518f55cd7fe7b72" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_a_g_e_1_1_audio_source" kindref="compound">AudioSource</ref></type>
+        <definition>AudioSource AGE::AGESound::LoadAudioSource</definition>
+        <argsstring>(const std::string &amp;FileName)</argsstring>
+        <name>LoadAudioSource</name>
+        <qualifiedname>AGE::AGESound::LoadAudioSource</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>FileName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="33" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="341" bodyend="362"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1a97351d66ae1ce2b72874066be46cce7f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::AGESound::SetDebugLogging</definition>
+        <argsstring>(bool Log)</argsstring>
+        <name>SetDebugLogging</name>
+        <qualifiedname>AGE::AGESound::SetDebugLogging</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>Log</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="41" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="379" bodyend="381"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1a9e8893744d7f9805e5971374cbabf58d" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>int32_t AGE::AGESound::ConvertToInt</definition>
+        <argsstring>(char *Buffer, size_t Length)</argsstring>
+        <name>ConvertToInt</name>
+        <qualifiedname>AGE::AGESound::ConvertToInt</qualifiedname>
+        <param>
+          <type>char *</type>
+          <declname>Buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>Length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="45" column="16" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="383" bodyend="398"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1a5e082d02f6cd8153fea714b8efda98c7" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_a_g_e_1_1_audio_source" kindref="compound">AudioSource</ref></type>
+        <definition>AudioSource AGE::AGESound::LoadAudioSourceMP3</definition>
+        <argsstring>(const std::string &amp;FileName)</argsstring>
+        <name>LoadAudioSourceMP3</name>
+        <qualifiedname>AGE::AGESound::LoadAudioSourceMP3</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>FileName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="46" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="399" bodyend="433"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1aee42b508c7135281b0a1f2a94a38b3e6" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_a_g_e_1_1_audio_source" kindref="compound">AudioSource</ref></type>
+        <definition>AudioSource AGE::AGESound::LoadWav</definition>
+        <argsstring>(const std::string &amp;FileName)</argsstring>
+        <name>LoadWav</name>
+        <qualifiedname>AGE::AGESound::LoadWav</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>FileName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="47" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="434" bodyend="462"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1a0b6f8144d16de4af34c1409ad04e59e7" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AGE::AGESound::LoadWavFileHeader</definition>
+        <argsstring>(std::ifstream &amp;File, uint8_t &amp;Channels, int32_t &amp;SampleRate, uint8_t &amp;BitsPerSample, ALsizei &amp;Size)</argsstring>
+        <name>LoadWavFileHeader</name>
+        <qualifiedname>AGE::AGESound::LoadWavFileHeader</qualifiedname>
+        <param>
+          <type>std::ifstream &amp;</type>
+          <declname>File</declname>
+        </param>
+        <param>
+          <type>uint8_t &amp;</type>
+          <declname>Channels</declname>
+        </param>
+        <param>
+          <type>int32_t &amp;</type>
+          <declname>SampleRate</declname>
+        </param>
+        <param>
+          <type>uint8_t &amp;</type>
+          <declname>BitsPerSample</declname>
+        </param>
+        <param>
+          <type>ALsizei &amp;</type>
+          <declname>Size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="48" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="463" bodyend="592"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1ada18a43387f227f7715ba8734b171a3a" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::AGESound::UnloadSound</definition>
+        <argsstring>(const Ref&lt; AudioSource &gt; &amp;Source)</argsstring>
+        <name>UnloadSound</name>
+        <qualifiedname>AGE::AGESound::UnloadSound</qualifiedname>
+        <param>
+          <type>const Ref&lt; <ref refid="class_a_g_e_1_1_audio_source" kindref="compound">AudioSource</ref> &gt; &amp;</type>
+          <declname>Source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="52" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="195" bodyend="207"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1a6ee37cf7c51908c501af0b8d7e0bee84" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AGE::AGESound::DisplayErrorCode</definition>
+        <argsstring>(const std::string &amp;FN, const uint32_t line, ALenum Error)</argsstring>
+        <name>DisplayErrorCode</name>
+        <qualifiedname>AGE::AGESound::DisplayErrorCode</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>FN</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type>ALenum</type>
+          <declname>Error</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="60" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="286" bodyend="339"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1abf34efc578e7bbd7d7eafb2d43f224aa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::AGESound::StopSound</definition>
+        <argsstring>()</argsstring>
+        <name>StopSound</name>
+        <qualifiedname>AGE::AGESound::StopSound</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="51" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="191" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1a00a4ef8182ceda433017d4fe76355d69" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; AGE::AGESound::GetAvailableSoundDevices</definition>
+        <argsstring>()</argsstring>
+        <name>GetAvailableSoundDevices</name>
+        <qualifiedname>AGE::AGESound::GetAvailableSoundDevices</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="58" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" bodystart="58" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1a056497010d8305cbfcef5a082377f8a5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AGE::AGESound::FindAvailableDevices</definition>
+        <argsstring>(std::vector&lt; std::string &gt; &amp;DevicesArray, ALCdevice *Device)</argsstring>
+        <name>FindAvailableDevices</name>
+        <qualifiedname>AGE::AGESound::FindAvailableDevices</qualifiedname>
+        <param>
+          <type>std::vector&lt; std::string &gt; &amp;</type>
+          <declname>DevicesArray</declname>
+        </param>
+        <param>
+          <type>ALCdevice *</type>
+          <declname>Device</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="63" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="265" bodyend="284"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>AGE::AGESound</label>
+        <link refid="class_a_g_e_1_1_a_g_e_sound"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>AGE::AudioEngine</label>
+        <link refid="class_a_g_e_1_1_audio_engine"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>AGE::AGESound</label>
+        <link refid="class_a_g_e_1_1_a_g_e_sound"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>AGE::AudioEngine</label>
+        <link refid="class_a_g_e_1_1_audio_engine"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="12" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" bodystart="13" bodyend="73"/>
+    <listofallmembers>
+      <member refid="class_a_g_e_1_1_a_g_e_sound_1acf593b094a1e621acb22ae6b4ffe60e2" prot="public" virt="non-virtual"><scope>AGE::AGESound</scope><name>AGESound</name></member>
+      <member refid="class_a_g_e_1_1_audio_engine_1ae19f90501824e87fed8925e43bc67c06" prot="public" virt="non-virtual"><scope>AGE::AGESound</scope><name>As</name></member>
+      <member refid="class_a_g_e_1_1_audio_engine_1a72681b8cca885a5036548c5c8b8154cb" prot="public" virt="non-virtual"><scope>AGE::AGESound</scope><name>As</name></member>
+      <member refid="class_a_g_e_1_1_a_g_e_sound_1a9e8893744d7f9805e5971374cbabf58d" prot="private" virt="non-virtual"><scope>AGE::AGESound</scope><name>ConvertToInt</name></member>
+      <member refid="class_a_g_e_1_1_audio_engine_1a026fb9c4808e5e95f74336b159dfea04" prot="public" virt="non-virtual"><scope>AGE::AGESound</scope><name>Create</name></member>
+      <member refid="class_a_g_e_1_1_a_g_e_sound_1a6ee37cf7c51908c501af0b8d7e0bee84" prot="private" virt="non-virtual"><scope>AGE::AGESound</scope><name>DisplayErrorCode</name></member>
+      <member refid="class_a_g_e_1_1_a_g_e_sound_1a056497010d8305cbfcef5a082377f8a5" prot="private" virt="non-virtual"><scope>AGE::AGESound</scope><name>FindAvailableDevices</name></member>
+      <member refid="class_a_g_e_1_1_a_g_e_sound_1a00a4ef8182ceda433017d4fe76355d69" prot="private" virt="non-virtual"><scope>AGE::AGESound</scope><name>GetAvailableSoundDevices</name></member>
+      <member refid="class_a_g_e_1_1_a_g_e_sound_1a9b5aef971fb142e5d62be2c7b89fcc8b" prot="public" virt="virtual"><scope>AGE::AGESound</scope><name>GetCurrentEventName</name></member>
+      <member refid="class_a_g_e_1_1_a_g_e_sound_1a8e5ebb3330fa88235c1ebdecb4dab39a" prot="public" virt="virtual"><scope>AGE::AGESound</scope><name>Init</name></member>
+      <member refid="class_a_g_e_1_1_a_g_e_sound_1a3be17705d0f540cab81a144e043255dd" prot="public" virt="virtual"><scope>AGE::AGESound</scope><name>IsEventValid</name></member>
+      <member refid="class_a_g_e_1_1_a_g_e_sound_1a81814922aacd2424d518f55cd7fe7b72" prot="public" virt="non-virtual"><scope>AGE::AGESound</scope><name>LoadAudioSource</name></member>
+      <member refid="class_a_g_e_1_1_a_g_e_sound_1a5e082d02f6cd8153fea714b8efda98c7" prot="private" virt="non-virtual"><scope>AGE::AGESound</scope><name>LoadAudioSourceMP3</name></member>
+      <member refid="class_a_g_e_1_1_a_g_e_sound_1a8469c75020afb6597461f07908d50078" prot="public" virt="virtual"><scope>AGE::AGESound</scope><name>LoadBank</name></member>
+      <member refid="class_a_g_e_1_1_a_g_e_sound_1af5f8adb837115ea2732869ad29072303" prot="public" virt="virtual"><scope>AGE::AGESound</scope><name>LoadBanks</name></member>
+      <member refid="class_a_g_e_1_1_a_g_e_sound_1a7c55a7b4ace491c107879ee1fca37741" prot="public" virt="virtual"><scope>AGE::AGESound</scope><name>LoadEvents</name></member>
+      <member refid="class_a_g_e_1_1_a_g_e_sound_1aee42b508c7135281b0a1f2a94a38b3e6" prot="private" virt="non-virtual"><scope>AGE::AGESound</scope><name>LoadWav</name></member>
+      <member refid="class_a_g_e_1_1_a_g_e_sound_1a0b6f8144d16de4af34c1409ad04e59e7" prot="private" virt="non-virtual"><scope>AGE::AGESound</scope><name>LoadWavFileHeader</name></member>
+      <member refid="class_a_g_e_1_1_a_g_e_sound_1a725c3689fb42d0dbf1206cc3d487dffe" prot="private" virt="non-virtual"><scope>AGE::AGESound</scope><name>m_AvailableSoundDevices</name></member>
+      <member refid="class_a_g_e_1_1_a_g_e_sound_1ae73767b2abe069a316e3566d797281ae" prot="private" virt="non-virtual"><scope>AGE::AGESound</scope><name>m_Context</name></member>
+      <member refid="class_a_g_e_1_1_a_g_e_sound_1aa35627b643c3558789cbd26d78d55aa7" prot="private" virt="non-virtual"><scope>AGE::AGESound</scope><name>m_Device</name></member>
+      <member refid="class_a_g_e_1_1_a_g_e_sound_1a6e3514d80f8704bd9e344bcc6ce61122" prot="private" virt="non-virtual"><scope>AGE::AGESound</scope><name>m_EventName</name></member>
+      <member refid="class_a_g_e_1_1_a_g_e_sound_1a38cd44063727d2a1849abc2e5e0285e1" prot="public" virt="non-virtual"><scope>AGE::AGESound</scope><name>Play</name></member>
+      <member refid="class_a_g_e_1_1_a_g_e_sound_1a58ec988a00b82a15e5d03b7542fb5ef6" prot="public" virt="virtual"><scope>AGE::AGESound</scope><name>Set3DAttributes</name></member>
+      <member refid="class_a_g_e_1_1_a_g_e_sound_1a19385df01ad12e7cb4305bb33c781f17" prot="public" virt="virtual"><scope>AGE::AGESound</scope><name>SetCurrentEventName</name></member>
+      <member refid="class_a_g_e_1_1_a_g_e_sound_1a97351d66ae1ce2b72874066be46cce7f" prot="public" virt="non-virtual"><scope>AGE::AGESound</scope><name>SetDebugLogging</name></member>
+      <member refid="class_a_g_e_1_1_a_g_e_sound_1a2203ebd82839e88f38d68cd1734e254b" prot="public" virt="virtual"><scope>AGE::AGESound</scope><name>SetParameterByName</name></member>
+      <member refid="class_a_g_e_1_1_a_g_e_sound_1a3407f11a4b60101f98d0b1586c770e0f" prot="public" virt="virtual"><scope>AGE::AGESound</scope><name>Shutdown</name></member>
+      <member refid="class_a_g_e_1_1_a_g_e_sound_1a223cb2c73030f8d5bb33cbc821a223aa" prot="public" virt="virtual"><scope>AGE::AGESound</scope><name>Start</name></member>
+      <member refid="class_a_g_e_1_1_a_g_e_sound_1acb2c61bd9502946e950c4c55b84b5a78" prot="public" virt="virtual"><scope>AGE::AGESound</scope><name>Stop</name></member>
+      <member refid="class_a_g_e_1_1_a_g_e_sound_1a73a24d69103650385a5dd7452dbc3127" prot="public" virt="non-virtual"><scope>AGE::AGESound</scope><name>Stop</name></member>
+      <member refid="class_a_g_e_1_1_a_g_e_sound_1afcd894a5a9803a806be653384e697be0" prot="public" virt="non-virtual"><scope>AGE::AGESound</scope><name>Stop</name></member>
+      <member refid="class_a_g_e_1_1_a_g_e_sound_1abf34efc578e7bbd7d7eafb2d43f224aa" prot="private" virt="non-virtual"><scope>AGE::AGESound</scope><name>StopSound</name></member>
+      <member refid="class_a_g_e_1_1_a_g_e_sound_1ada18a43387f227f7715ba8734b171a3a" prot="private" virt="non-virtual"><scope>AGE::AGESound</scope><name>UnloadSound</name></member>
+      <member refid="class_a_g_e_1_1_a_g_e_sound_1af06a8788f9f2c400b9ae672e81589770" prot="public" virt="virtual"><scope>AGE::AGESound</scope><name>Update</name></member>
+      <member refid="class_a_g_e_1_1_a_g_e_sound_1ac7c399655f6b93b37ad9768f80fef51a" prot="public" virt="non-virtual"><scope>AGE::AGESound</scope><name>~AGESound</name></member>
+      <member refid="class_a_g_e_1_1_audio_engine_1a47b6cbfc30d4e7ad9f77593202f6e128" prot="public" virt="virtual"><scope>AGE::AGESound</scope><name>~AudioEngine</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

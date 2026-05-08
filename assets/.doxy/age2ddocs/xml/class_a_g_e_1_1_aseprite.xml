@@ -1,0 +1,579 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_a_g_e_1_1_aseprite" kind="class" language="C++" prot="public">
+    <compoundname>AGE::Aseprite</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_a_g_e_1_1_aseprite_1ae3d053d64763abefb580a3184c453ad2" prot="private" static="no" mutable="no">
+        <type>std::ifstream</type>
+        <definition>std::ifstream AGE::Aseprite::m_Stream</definition>
+        <argsstring></argsstring>
+        <name>m_Stream</name>
+        <qualifiedname>AGE::Aseprite::m_Stream</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Public/Aseprite.h" line="64" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Public/Aseprite.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_aseprite_1abb02557c15b654c92b50584eefda99ad" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, <ref refid="struct_a_g_e_1_1_aseprite_file_data" kindref="compound">AsepriteFileData</ref> &gt;</type>
+        <definition>std::unordered_map&lt;std::string, AsepriteFileData&gt; AGE::Aseprite::m_AsepriteData</definition>
+        <argsstring></argsstring>
+        <name>m_AsepriteData</name>
+        <qualifiedname>AGE::Aseprite::m_AsepriteData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Public/Aseprite.h" line="65" column="21" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Public/Aseprite.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_aseprite_1ad797eca1814c436110759629c38d898e" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, Ref&lt; <ref refid="class_a_g_e_1_1_image" kindref="compound">Image</ref> &gt; &gt;</type>
+        <definition>std::unordered_map&lt;std::string, Ref&lt;Image&gt; &gt; AGE::Aseprite::m_ImagePairs</definition>
+        <argsstring></argsstring>
+        <name>m_ImagePairs</name>
+        <qualifiedname>AGE::Aseprite::m_ImagePairs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Public/Aseprite.h" line="66" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Public/Aseprite.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_a_g_e_1_1_aseprite_1a5222bc319f9a1a80f91167670e26e8db" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class Renderer2D</definition>
+        <argsstring></argsstring>
+        <name>Renderer2D</name>
+        <qualifiedname>AGE::Aseprite::Renderer2D</qualifiedname>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_renderer2_d" kindref="compound">Renderer2D</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Public/Aseprite.h" line="68" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Public/Aseprite.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_a_g_e_1_1_aseprite_1a7bca5cfa232fc18c396e92bc6c1db7bf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct</type>
+        <definition>friend struct SpriteRendererComponent</definition>
+        <argsstring></argsstring>
+        <name>SpriteRendererComponent</name>
+        <qualifiedname>AGE::Aseprite::SpriteRendererComponent</qualifiedname>
+        <param>
+          <type><ref refid="struct_a_g_e_1_1_sprite_renderer_component" kindref="compound">SpriteRendererComponent</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Public/Aseprite.h" line="69" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Public/Aseprite.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_aseprite_1a865e2c3c53ff611621bf6edda9f758e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AGE::Aseprite::Aseprite</definition>
+        <argsstring>()=default</argsstring>
+        <name>Aseprite</name>
+        <qualifiedname>AGE::Aseprite::Aseprite</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Public/Aseprite.h" line="21" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_aseprite_1aa0f411103b46223b2e9dc1334ad51afb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AGE::Aseprite::Aseprite</definition>
+        <argsstring>(const Aseprite &amp;)=delete</argsstring>
+        <name>Aseprite</name>
+        <qualifiedname>AGE::Aseprite::Aseprite</qualifiedname>
+        <param>
+          <type>const <ref refid="class_a_g_e_1_1_aseprite" kindref="compound">Aseprite</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Public/Aseprite.h" line="22" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_aseprite_1a0750a2e8d77efd401840752c0990a463" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AGE::Aseprite::Aseprite</definition>
+        <argsstring>(const Aseprite &amp;&amp;)=delete</argsstring>
+        <name>Aseprite</name>
+        <qualifiedname>AGE::Aseprite::Aseprite</qualifiedname>
+        <param>
+          <type>const <ref refid="class_a_g_e_1_1_aseprite" kindref="compound">Aseprite</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Public/Aseprite.h" line="23" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_aseprite_1a4f3e4395c69d776b21e0fa1cd4ce883b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Aseprite::ReadData</definition>
+        <argsstring>(const std::filesystem::path &amp;Filepath)</argsstring>
+        <name>ReadData</name>
+        <qualifiedname>AGE::Aseprite::ReadData</qualifiedname>
+        <param>
+          <type>const std::filesystem::path &amp;</type>
+          <declname>Filepath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Public/Aseprite.h" line="25" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Private/Aseprite.cpp" bodystart="15" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_aseprite_1acf501c2ffac8205210eee38a0760cab2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Ref&lt; <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> &gt;</type>
+        <definition>Ref&lt; Texture2D &gt; AGE::Aseprite::CreateImage</definition>
+        <argsstring>(const std::string &amp;Filename, bool ShouldCreateTexture, bool ShouldFlipOnLoad=false)</argsstring>
+        <name>CreateImage</name>
+        <qualifiedname>AGE::Aseprite::CreateImage</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>Filename</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>ShouldCreateTexture</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>ShouldFlipOnLoad</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Public/Aseprite.h" line="27" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Private/Aseprite.cpp" bodystart="63" bodyend="94"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_aseprite_1a1d903c0fd5487ca1b1f8cf1e5aa831bb" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="struct_a_g_e_1_1_aseprite_frame_data" kindref="compound">AsepriteFrameData</ref> &gt; &amp;</type>
+        <definition>std::vector&lt; AsepriteFrameData &gt; &amp; AGE::Aseprite::GetSpriteFrameData</definition>
+        <argsstring>(const std::string &amp;SpriteName)</argsstring>
+        <name>GetSpriteFrameData</name>
+        <qualifiedname>AGE::Aseprite::GetSpriteFrameData</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>SpriteName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Public/Aseprite.h" line="30" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Private/Aseprite.cpp" bodystart="102" bodyend="105"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_aseprite_1a5bdd6566efb5addad50d61d7d9f5815d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Aseprite::ReadFrameData</definition>
+        <argsstring>(const std::string &amp;Filename, FileStreamReader *Stream, size_t Size)</argsstring>
+        <name>ReadFrameData</name>
+        <qualifiedname>AGE::Aseprite::ReadFrameData</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>Filename</declname>
+        </param>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_file_stream_reader" kindref="compound">FileStreamReader</ref> *</type>
+          <declname>Stream</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>Size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Public/Aseprite.h" line="34" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Private/Aseprite.cpp" bodystart="107" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_aseprite_1a4dc1efc255480a3266ef9ecaf5070658" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Aseprite::ReadOldPaletteChunk</definition>
+        <argsstring>(AsepriteFileData &amp;Data)</argsstring>
+        <name>ReadOldPaletteChunk</name>
+        <qualifiedname>AGE::Aseprite::ReadOldPaletteChunk</qualifiedname>
+        <param>
+          <type><ref refid="struct_a_g_e_1_1_aseprite_file_data" kindref="compound">AsepriteFileData</ref> &amp;</type>
+          <declname>Data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Public/Aseprite.h" line="35" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Private/Aseprite.cpp" bodystart="157" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_aseprite_1abec1c56961ed3b0f9bd260ece9f1561e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Aseprite::ReadLayerChunk</definition>
+        <argsstring>(AsepriteFileData &amp;Data)</argsstring>
+        <name>ReadLayerChunk</name>
+        <qualifiedname>AGE::Aseprite::ReadLayerChunk</qualifiedname>
+        <param>
+          <type><ref refid="struct_a_g_e_1_1_aseprite_file_data" kindref="compound">AsepriteFileData</ref> &amp;</type>
+          <declname>Data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Public/Aseprite.h" line="36" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Private/Aseprite.cpp" bodystart="199" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_aseprite_1a643ee399a0c54afe6528527664a6cad7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_a_g_e_1_1_aseprite_cel_chunk" kindref="compound">AsepriteCelChunk</ref></type>
+        <definition>AsepriteCelChunk AGE::Aseprite::ReadCelChunk</definition>
+        <argsstring>(AsepriteFileData &amp;Data)</argsstring>
+        <name>ReadCelChunk</name>
+        <qualifiedname>AGE::Aseprite::ReadCelChunk</qualifiedname>
+        <param>
+          <type><ref refid="struct_a_g_e_1_1_aseprite_file_data" kindref="compound">AsepriteFileData</ref> &amp;</type>
+          <declname>Data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Public/Aseprite.h" line="37" column="18" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Private/Aseprite.cpp" bodystart="237" bodyend="312"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_aseprite_1a64dd6f03baa52118e2e35e0c7d654382" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Aseprite::ReadColorProfileChunk</definition>
+        <argsstring>(AsepriteFileData &amp;Data)</argsstring>
+        <name>ReadColorProfileChunk</name>
+        <qualifiedname>AGE::Aseprite::ReadColorProfileChunk</qualifiedname>
+        <param>
+          <type><ref refid="struct_a_g_e_1_1_aseprite_file_data" kindref="compound">AsepriteFileData</ref> &amp;</type>
+          <declname>Data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Public/Aseprite.h" line="38" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Private/Aseprite.cpp" bodystart="314" bodyend="346"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_aseprite_1a85467e06413ab5f40282cbbfa69f831f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Aseprite::ReadExternalFilesChunk</definition>
+        <argsstring>(AsepriteFileData &amp;Data)</argsstring>
+        <name>ReadExternalFilesChunk</name>
+        <qualifiedname>AGE::Aseprite::ReadExternalFilesChunk</qualifiedname>
+        <param>
+          <type><ref refid="struct_a_g_e_1_1_aseprite_file_data" kindref="compound">AsepriteFileData</ref> &amp;</type>
+          <declname>Data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Public/Aseprite.h" line="39" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Private/Aseprite.cpp" bodystart="348" bodyend="379"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_aseprite_1acfa54f2d387ca53aa2a09090b169f7f1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Aseprite::ReadMaskChunk</definition>
+        <argsstring>(AsepriteFileData &amp;Data)</argsstring>
+        <name>ReadMaskChunk</name>
+        <qualifiedname>AGE::Aseprite::ReadMaskChunk</qualifiedname>
+        <param>
+          <type><ref refid="struct_a_g_e_1_1_aseprite_file_data" kindref="compound">AsepriteFileData</ref> &amp;</type>
+          <declname>Data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Public/Aseprite.h" line="41" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Private/Aseprite.cpp" bodystart="381" bodyend="412"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_aseprite_1aaa556cd373c0cb0aae2c28f32b0c55c7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Aseprite::ReadTagsChunk</definition>
+        <argsstring>(AsepriteFileData &amp;Data)</argsstring>
+        <name>ReadTagsChunk</name>
+        <qualifiedname>AGE::Aseprite::ReadTagsChunk</qualifiedname>
+        <param>
+          <type><ref refid="struct_a_g_e_1_1_aseprite_file_data" kindref="compound">AsepriteFileData</ref> &amp;</type>
+          <declname>Data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Public/Aseprite.h" line="42" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Private/Aseprite.cpp" bodystart="414" bodyend="454"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_aseprite_1ac8fa726d71a077bf57b85f8460cd9d09" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Aseprite::ReadNewPaletteChunk</definition>
+        <argsstring>(AsepriteFileData &amp;Data)</argsstring>
+        <name>ReadNewPaletteChunk</name>
+        <qualifiedname>AGE::Aseprite::ReadNewPaletteChunk</qualifiedname>
+        <param>
+          <type><ref refid="struct_a_g_e_1_1_aseprite_file_data" kindref="compound">AsepriteFileData</ref> &amp;</type>
+          <declname>Data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Public/Aseprite.h" line="43" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Private/Aseprite.cpp" bodystart="456" bodyend="502"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_aseprite_1a7f378a3e7b2ed2185d647368e125efdc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Aseprite::ReadUserDataChunk</definition>
+        <argsstring>(AsepriteFileData &amp;Data)</argsstring>
+        <name>ReadUserDataChunk</name>
+        <qualifiedname>AGE::Aseprite::ReadUserDataChunk</qualifiedname>
+        <param>
+          <type><ref refid="struct_a_g_e_1_1_aseprite_file_data" kindref="compound">AsepriteFileData</ref> &amp;</type>
+          <declname>Data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Public/Aseprite.h" line="44" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Private/Aseprite.cpp" bodystart="504" bodyend="715"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_aseprite_1a6f55a04d5dd593c21a3ba88faa86e0c7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Aseprite::ReadSliceChunk</definition>
+        <argsstring>(AsepriteFileData &amp;Data)</argsstring>
+        <name>ReadSliceChunk</name>
+        <qualifiedname>AGE::Aseprite::ReadSliceChunk</qualifiedname>
+        <param>
+          <type><ref refid="struct_a_g_e_1_1_aseprite_file_data" kindref="compound">AsepriteFileData</ref> &amp;</type>
+          <declname>Data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Public/Aseprite.h" line="45" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Private/Aseprite.cpp" bodystart="717" bodyend="761"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_aseprite_1a900a8bf00b95a830ff77b526d983df61" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Aseprite::ReadTilesetChunk</definition>
+        <argsstring>(AsepriteFileData &amp;Data)</argsstring>
+        <name>ReadTilesetChunk</name>
+        <qualifiedname>AGE::Aseprite::ReadTilesetChunk</qualifiedname>
+        <param>
+          <type><ref refid="struct_a_g_e_1_1_aseprite_file_data" kindref="compound">AsepriteFileData</ref> &amp;</type>
+          <declname>Data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Public/Aseprite.h" line="46" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Public/Aseprite.h" bodystart="46" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_aseprite_1a02a3ed1a2a3eb382c24896df90139832" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Aseprite::ReorderLayers</definition>
+        <argsstring>(const std::string &amp;Filename)</argsstring>
+        <name>ReorderLayers</name>
+        <qualifiedname>AGE::Aseprite::ReorderLayers</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>Filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Public/Aseprite.h" line="48" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Private/Aseprite.cpp" bodystart="763" bodyend="803"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_aseprite_1ac11723a06474d467c4713a27c6633241" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Ref&lt; <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> &gt;</type>
+        <definition>Ref&lt; Texture2D &gt; AGE::Aseprite::CreateTexture</definition>
+        <argsstring>(std::string ImageName)</argsstring>
+        <name>CreateTexture</name>
+        <qualifiedname>AGE::Aseprite::CreateTexture</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>ImageName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Public/Aseprite.h" line="49" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Private/Aseprite.cpp" bodystart="96" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_aseprite_1acc22376e8eb8d606a12eb53ef2b240b3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string AGE::Aseprite::GetFileName</definition>
+        <argsstring>(const std::filesystem::path &amp;Path)</argsstring>
+        <name>GetFileName</name>
+        <qualifiedname>AGE::Aseprite::GetFileName</qualifiedname>
+        <param>
+          <type>const std::filesystem::path &amp;</type>
+          <declname>Path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Public/Aseprite.h" line="52" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Private/Aseprite.cpp" bodystart="805" bodyend="818"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_aseprite_1ae19709998fdca2d2bd5c664158def6d7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>AsepritePropertyTypes</type>
+        <definition>AsepritePropertyTypes AGE::Aseprite::ConvertToType</definition>
+        <argsstring>(uint16_t T)</argsstring>
+        <name>ConvertToType</name>
+        <qualifiedname>AGE::Aseprite::ConvertToType</qualifiedname>
+        <param>
+          <type>uint16_t</type>
+          <declname>T</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Public/Aseprite.h" line="54" column="23" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Private/Aseprite.cpp" bodystart="819" bodyend="822"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_aseprite_1a45cd95856767fdef52abdc71dccf762a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Aseprite::ProcessElement</definition>
+        <argsstring>(MemoryStreamReader *Stream, AsepritePropertyTypes T, AsepriteUserProps &amp;Data)</argsstring>
+        <name>ProcessElement</name>
+        <qualifiedname>AGE::Aseprite::ProcessElement</qualifiedname>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_memory_stream_reader" kindref="compound">MemoryStreamReader</ref> *</type>
+          <declname>Stream</declname>
+        </param>
+        <param>
+          <type>AsepritePropertyTypes</type>
+          <declname>T</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_a_g_e_1_1_aseprite_user_props" kindref="compound">AsepriteUserProps</ref> &amp;</type>
+          <declname>Data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Public/Aseprite.h" line="55" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Private/Aseprite.cpp" bodystart="823" bodyend="981"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_aseprite_1ab1a7becb40a4ef8dc9dd603ab3328bc7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Aseprite::operator=</definition>
+        <argsstring>(const Aseprite &amp;Other)</argsstring>
+        <name>operator=</name>
+        <qualifiedname>AGE::Aseprite::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="class_a_g_e_1_1_aseprite" kindref="compound">Aseprite</ref> &amp;</type>
+          <declname>Other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Public/Aseprite.h" line="57" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Public/Aseprite.h" bodystart="57" bodyend="60"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Public/Aseprite.h" line="18" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Sprite/Public/Aseprite.h" bodystart="19" bodyend="71"/>
+    <listofallmembers>
+      <member refid="class_a_g_e_1_1_aseprite_1a865e2c3c53ff611621bf6edda9f758e5" prot="public" virt="non-virtual"><scope>AGE::Aseprite</scope><name>Aseprite</name></member>
+      <member refid="class_a_g_e_1_1_aseprite_1aa0f411103b46223b2e9dc1334ad51afb" prot="public" virt="non-virtual"><scope>AGE::Aseprite</scope><name>Aseprite</name></member>
+      <member refid="class_a_g_e_1_1_aseprite_1a0750a2e8d77efd401840752c0990a463" prot="public" virt="non-virtual"><scope>AGE::Aseprite</scope><name>Aseprite</name></member>
+      <member refid="class_a_g_e_1_1_aseprite_1ae19709998fdca2d2bd5c664158def6d7" prot="private" virt="non-virtual"><scope>AGE::Aseprite</scope><name>ConvertToType</name></member>
+      <member refid="class_a_g_e_1_1_aseprite_1acf501c2ffac8205210eee38a0760cab2" prot="public" virt="non-virtual"><scope>AGE::Aseprite</scope><name>CreateImage</name></member>
+      <member refid="class_a_g_e_1_1_aseprite_1ac11723a06474d467c4713a27c6633241" prot="private" virt="non-virtual"><scope>AGE::Aseprite</scope><name>CreateTexture</name></member>
+      <member refid="class_a_g_e_1_1_aseprite_1acc22376e8eb8d606a12eb53ef2b240b3" prot="private" virt="non-virtual"><scope>AGE::Aseprite</scope><name>GetFileName</name></member>
+      <member refid="class_a_g_e_1_1_aseprite_1a1d903c0fd5487ca1b1f8cf1e5aa831bb" prot="protected" virt="non-virtual"><scope>AGE::Aseprite</scope><name>GetSpriteFrameData</name></member>
+      <member refid="class_a_g_e_1_1_aseprite_1abb02557c15b654c92b50584eefda99ad" prot="private" virt="non-virtual"><scope>AGE::Aseprite</scope><name>m_AsepriteData</name></member>
+      <member refid="class_a_g_e_1_1_aseprite_1ad797eca1814c436110759629c38d898e" prot="private" virt="non-virtual"><scope>AGE::Aseprite</scope><name>m_ImagePairs</name></member>
+      <member refid="class_a_g_e_1_1_aseprite_1ae3d053d64763abefb580a3184c453ad2" prot="private" virt="non-virtual"><scope>AGE::Aseprite</scope><name>m_Stream</name></member>
+      <member refid="class_a_g_e_1_1_aseprite_1ab1a7becb40a4ef8dc9dd603ab3328bc7" prot="private" virt="non-virtual"><scope>AGE::Aseprite</scope><name>operator=</name></member>
+      <member refid="class_a_g_e_1_1_aseprite_1a45cd95856767fdef52abdc71dccf762a" prot="private" virt="non-virtual"><scope>AGE::Aseprite</scope><name>ProcessElement</name></member>
+      <member refid="class_a_g_e_1_1_aseprite_1a643ee399a0c54afe6528527664a6cad7" prot="private" virt="non-virtual"><scope>AGE::Aseprite</scope><name>ReadCelChunk</name></member>
+      <member refid="class_a_g_e_1_1_aseprite_1a64dd6f03baa52118e2e35e0c7d654382" prot="private" virt="non-virtual"><scope>AGE::Aseprite</scope><name>ReadColorProfileChunk</name></member>
+      <member refid="class_a_g_e_1_1_aseprite_1a4f3e4395c69d776b21e0fa1cd4ce883b" prot="public" virt="non-virtual"><scope>AGE::Aseprite</scope><name>ReadData</name></member>
+      <member refid="class_a_g_e_1_1_aseprite_1a85467e06413ab5f40282cbbfa69f831f" prot="private" virt="non-virtual"><scope>AGE::Aseprite</scope><name>ReadExternalFilesChunk</name></member>
+      <member refid="class_a_g_e_1_1_aseprite_1a5bdd6566efb5addad50d61d7d9f5815d" prot="private" virt="non-virtual"><scope>AGE::Aseprite</scope><name>ReadFrameData</name></member>
+      <member refid="class_a_g_e_1_1_aseprite_1abec1c56961ed3b0f9bd260ece9f1561e" prot="private" virt="non-virtual"><scope>AGE::Aseprite</scope><name>ReadLayerChunk</name></member>
+      <member refid="class_a_g_e_1_1_aseprite_1acfa54f2d387ca53aa2a09090b169f7f1" prot="private" virt="non-virtual"><scope>AGE::Aseprite</scope><name>ReadMaskChunk</name></member>
+      <member refid="class_a_g_e_1_1_aseprite_1ac8fa726d71a077bf57b85f8460cd9d09" prot="private" virt="non-virtual"><scope>AGE::Aseprite</scope><name>ReadNewPaletteChunk</name></member>
+      <member refid="class_a_g_e_1_1_aseprite_1a4dc1efc255480a3266ef9ecaf5070658" prot="private" virt="non-virtual"><scope>AGE::Aseprite</scope><name>ReadOldPaletteChunk</name></member>
+      <member refid="class_a_g_e_1_1_aseprite_1a6f55a04d5dd593c21a3ba88faa86e0c7" prot="private" virt="non-virtual"><scope>AGE::Aseprite</scope><name>ReadSliceChunk</name></member>
+      <member refid="class_a_g_e_1_1_aseprite_1aaa556cd373c0cb0aae2c28f32b0c55c7" prot="private" virt="non-virtual"><scope>AGE::Aseprite</scope><name>ReadTagsChunk</name></member>
+      <member refid="class_a_g_e_1_1_aseprite_1a900a8bf00b95a830ff77b526d983df61" prot="private" virt="non-virtual"><scope>AGE::Aseprite</scope><name>ReadTilesetChunk</name></member>
+      <member refid="class_a_g_e_1_1_aseprite_1a7f378a3e7b2ed2185d647368e125efdc" prot="private" virt="non-virtual"><scope>AGE::Aseprite</scope><name>ReadUserDataChunk</name></member>
+      <member refid="class_a_g_e_1_1_aseprite_1a5222bc319f9a1a80f91167670e26e8db" prot="private" virt="non-virtual"><scope>AGE::Aseprite</scope><name>Renderer2D</name></member>
+      <member refid="class_a_g_e_1_1_aseprite_1a02a3ed1a2a3eb382c24896df90139832" prot="private" virt="non-virtual"><scope>AGE::Aseprite</scope><name>ReorderLayers</name></member>
+      <member refid="class_a_g_e_1_1_aseprite_1a7bca5cfa232fc18c396e92bc6c1db7bf" prot="private" virt="non-virtual"><scope>AGE::Aseprite</scope><name>SpriteRendererComponent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

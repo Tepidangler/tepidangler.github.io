@@ -1,0 +1,313 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_a_g_e_1_1_frame_buffer" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>AGE::FrameBuffer</compoundname>
+    <derivedcompoundref refid="class_a_g_e_1_1_open_g_l_frame_buffer" prot="public" virt="non-virtual">AGE::OpenGLFrameBuffer</derivedcompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_frame_buffer_1a8d290afc28ecdb4f679e11f31e6c2f15" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual AGE::FrameBuffer::~FrameBuffer</definition>
+        <argsstring>()</argsstring>
+        <name>~FrameBuffer</name>
+        <qualifiedname>AGE::FrameBuffer::~FrameBuffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/FrameBuffer.h" line="66" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/FrameBuffer.h" bodystart="66" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_frame_buffer_1a9b0d03a472fcacfbf43ba22d18ae2547" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="struct_a_g_e_1_1_frame_buffer_specification" kindref="compound">FrameBufferSpecification</ref> &amp;</type>
+        <definition>virtual FrameBufferSpecification &amp; AGE::FrameBuffer::GetSpecification</definition>
+        <argsstring>()=0</argsstring>
+        <name>GetSpecification</name>
+        <qualifiedname>AGE::FrameBuffer::GetSpecification</qualifiedname>
+        <reimplementedby refid="class_a_g_e_1_1_open_g_l_frame_buffer_1abe6827bb21d81b951292741864d9279b">GetSpecification</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/FrameBuffer.h" line="68" column="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_frame_buffer_1ab50e8d7f6af4928d7fe8eaad488a94d6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>const <ref refid="struct_a_g_e_1_1_frame_buffer_specification" kindref="compound">FrameBufferSpecification</ref> &amp;</type>
+        <definition>virtual const FrameBufferSpecification &amp; AGE::FrameBuffer::GetSpecification</definition>
+        <argsstring>() const =0</argsstring>
+        <name>GetSpecification</name>
+        <qualifiedname>AGE::FrameBuffer::GetSpecification</qualifiedname>
+        <reimplementedby refid="class_a_g_e_1_1_open_g_l_frame_buffer_1a497b522f9ec285f01e2ce54b791751b7">GetSpecification</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/FrameBuffer.h" line="69" column="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_frame_buffer_1adfe21b4e1d98daa874dcb3821b275bd7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>uint32_t</type>
+        <definition>virtual uint32_t AGE::FrameBuffer::GetColorAttachmentRendererID</definition>
+        <argsstring>(uint32_t Index=0) const =0</argsstring>
+        <name>GetColorAttachmentRendererID</name>
+        <qualifiedname>AGE::FrameBuffer::GetColorAttachmentRendererID</qualifiedname>
+        <reimplementedby refid="class_a_g_e_1_1_open_g_l_frame_buffer_1abc68c4a500a77ba469d19ba1e9cec3e3">GetColorAttachmentRendererID</reimplementedby>
+        <param>
+          <type>uint32_t</type>
+          <declname>Index</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/FrameBuffer.h" line="71" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_frame_buffer_1a7ff6bc40ea6e80ee968e4e213424c188" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>uint32_t</type>
+        <definition>virtual uint32_t AGE::FrameBuffer::GetDepthAttachmentRendererID</definition>
+        <argsstring>() const =0</argsstring>
+        <name>GetDepthAttachmentRendererID</name>
+        <qualifiedname>AGE::FrameBuffer::GetDepthAttachmentRendererID</qualifiedname>
+        <reimplementedby refid="class_a_g_e_1_1_open_g_l_frame_buffer_1a718d31ef3b155ef79e3fdf2471cb52e5">GetDepthAttachmentRendererID</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/FrameBuffer.h" line="72" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_frame_buffer_1a97bb158bb6a1651a122216909bb06a51" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void AGE::FrameBuffer::Resize</definition>
+        <argsstring>(const uint32_t Width, const uint32_t Height)=0</argsstring>
+        <name>Resize</name>
+        <qualifiedname>AGE::FrameBuffer::Resize</qualifiedname>
+        <reimplementedby refid="class_a_g_e_1_1_open_g_l_frame_buffer_1abc9e55d60bc3dbba4dd4366fc0648446">Resize</reimplementedby>
+        <param>
+          <type>const uint32_t</type>
+          <declname>Width</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>Height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/FrameBuffer.h" line="75" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_frame_buffer_1a3993c80dacb8a7adcd7401ae81c6bde5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>const <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref></type>
+        <definition>virtual const Vector2 AGE::FrameBuffer::GetWidthHeight</definition>
+        <argsstring>() const =0</argsstring>
+        <name>GetWidthHeight</name>
+        <qualifiedname>AGE::FrameBuffer::GetWidthHeight</qualifiedname>
+        <reimplementedby refid="class_a_g_e_1_1_open_g_l_frame_buffer_1af2835ee5ab23756f14829cdfa2eb72ea">GetWidthHeight</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/FrameBuffer.h" line="76" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_frame_buffer_1a641dab4ced39c189082690df9fa41833" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void AGE::FrameBuffer::Bind</definition>
+        <argsstring>()=0</argsstring>
+        <name>Bind</name>
+        <qualifiedname>AGE::FrameBuffer::Bind</qualifiedname>
+        <reimplementedby refid="class_a_g_e_1_1_open_g_l_frame_buffer_1aba49cc4715315c3745d21009cfd4f046">Bind</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/FrameBuffer.h" line="78" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_frame_buffer_1a9e0f2f5974c5c1eea0fc9d97eab7bb11" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void AGE::FrameBuffer::Unbind</definition>
+        <argsstring>()=0</argsstring>
+        <name>Unbind</name>
+        <qualifiedname>AGE::FrameBuffer::Unbind</qualifiedname>
+        <reimplementedby refid="class_a_g_e_1_1_open_g_l_frame_buffer_1a554783f05379d5270609b2c9ee8c3ade">Unbind</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/FrameBuffer.h" line="79" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_frame_buffer_1a4df14804895b9e4481d19e27b37510a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int AGE::FrameBuffer::ReadPixel</definition>
+        <argsstring>(uint32_t AttachmentIndex, int x, int y)=0</argsstring>
+        <name>ReadPixel</name>
+        <qualifiedname>AGE::FrameBuffer::ReadPixel</qualifiedname>
+        <reimplementedby refid="class_a_g_e_1_1_open_g_l_frame_buffer_1abdcae0ae89dcae31634be1d7bedf9abd">ReadPixel</reimplementedby>
+        <param>
+          <type>uint32_t</type>
+          <declname>AttachmentIndex</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/FrameBuffer.h" line="81" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_frame_buffer_1a6241b9ffed79331a972d683d73f13902" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void AGE::FrameBuffer::ClearAttachment</definition>
+        <argsstring>(uint32_t Index, int Value)=0</argsstring>
+        <name>ClearAttachment</name>
+        <qualifiedname>AGE::FrameBuffer::ClearAttachment</qualifiedname>
+        <reimplementedby refid="class_a_g_e_1_1_open_g_l_frame_buffer_1ab936aaf3838c6e73bc5f02c5ca1c94a6">ClearAttachment</reimplementedby>
+        <param>
+          <type>uint32_t</type>
+          <declname>Index</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>Value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/FrameBuffer.h" line="83" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_frame_buffer_1a344a706889b08893d289a690ce6b3051" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void AGE::FrameBuffer::Present</definition>
+        <argsstring>()=0</argsstring>
+        <name>Present</name>
+        <qualifiedname>AGE::FrameBuffer::Present</qualifiedname>
+        <reimplementedby refid="class_a_g_e_1_1_open_g_l_frame_buffer_1a9ddf6ad829da22ccda943ac118d1f520">Present</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/FrameBuffer.h" line="85" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_frame_buffer_1a02fd9e0cc7fbc477d44daf55ef3abb96" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void AGE::FrameBuffer::OnEvent</definition>
+        <argsstring>(Event &amp;E)=0</argsstring>
+        <name>OnEvent</name>
+        <qualifiedname>AGE::FrameBuffer::OnEvent</qualifiedname>
+        <reimplementedby refid="class_a_g_e_1_1_open_g_l_frame_buffer_1a57635cdc87d54c6d58c8f0db8f4e57ce">OnEvent</reimplementedby>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref> &amp;</type>
+          <declname>E</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/FrameBuffer.h" line="87" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_frame_buffer_1a166488f46a78b06085e1809601916ac5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T *</type>
+        <definition>T * AGE::FrameBuffer::As</definition>
+        <argsstring>()</argsstring>
+        <name>As</name>
+        <qualifiedname>AGE::FrameBuffer::As</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/FrameBuffer.h" line="92" column="3" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/FrameBuffer.cpp" bodystart="29" bodyend="33"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_frame_buffer_1add346a3dcd4a2e931b61bdc3c9471327" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Ref&lt; <ref refid="class_a_g_e_1_1_frame_buffer" kindref="compound">FrameBuffer</ref> &gt;</type>
+        <definition>Ref&lt; FrameBuffer &gt; AGE::FrameBuffer::Create</definition>
+        <argsstring>(const FrameBufferSpecification &amp;Spec)</argsstring>
+        <name>Create</name>
+        <qualifiedname>AGE::FrameBuffer::Create</qualifiedname>
+        <param>
+          <type>const <ref refid="struct_a_g_e_1_1_frame_buffer_specification" kindref="compound">FrameBufferSpecification</ref> &amp;</type>
+          <declname>Spec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/FrameBuffer.h" line="89" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/FrameBuffer.cpp" bodystart="8" bodyend="26"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>AGE::FrameBuffer</label>
+        <link refid="class_a_g_e_1_1_frame_buffer"/>
+      </node>
+      <node id="2">
+        <label>AGE::OpenGLFrameBuffer</label>
+        <link refid="class_a_g_e_1_1_open_g_l_frame_buffer"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/FrameBuffer.h" line="63" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/FrameBuffer.h" bodystart="64" bodyend="93"/>
+    <listofallmembers>
+      <member refid="class_a_g_e_1_1_frame_buffer_1a166488f46a78b06085e1809601916ac5" prot="public" virt="non-virtual"><scope>AGE::FrameBuffer</scope><name>As</name></member>
+      <member refid="class_a_g_e_1_1_frame_buffer_1a641dab4ced39c189082690df9fa41833" prot="public" virt="pure-virtual"><scope>AGE::FrameBuffer</scope><name>Bind</name></member>
+      <member refid="class_a_g_e_1_1_frame_buffer_1a6241b9ffed79331a972d683d73f13902" prot="public" virt="pure-virtual"><scope>AGE::FrameBuffer</scope><name>ClearAttachment</name></member>
+      <member refid="class_a_g_e_1_1_frame_buffer_1add346a3dcd4a2e931b61bdc3c9471327" prot="public" virt="non-virtual"><scope>AGE::FrameBuffer</scope><name>Create</name></member>
+      <member refid="class_a_g_e_1_1_frame_buffer_1adfe21b4e1d98daa874dcb3821b275bd7" prot="public" virt="pure-virtual"><scope>AGE::FrameBuffer</scope><name>GetColorAttachmentRendererID</name></member>
+      <member refid="class_a_g_e_1_1_frame_buffer_1a7ff6bc40ea6e80ee968e4e213424c188" prot="public" virt="pure-virtual"><scope>AGE::FrameBuffer</scope><name>GetDepthAttachmentRendererID</name></member>
+      <member refid="class_a_g_e_1_1_frame_buffer_1a9b0d03a472fcacfbf43ba22d18ae2547" prot="public" virt="pure-virtual"><scope>AGE::FrameBuffer</scope><name>GetSpecification</name></member>
+      <member refid="class_a_g_e_1_1_frame_buffer_1ab50e8d7f6af4928d7fe8eaad488a94d6" prot="public" virt="pure-virtual"><scope>AGE::FrameBuffer</scope><name>GetSpecification</name></member>
+      <member refid="class_a_g_e_1_1_frame_buffer_1a3993c80dacb8a7adcd7401ae81c6bde5" prot="public" virt="pure-virtual"><scope>AGE::FrameBuffer</scope><name>GetWidthHeight</name></member>
+      <member refid="class_a_g_e_1_1_frame_buffer_1a02fd9e0cc7fbc477d44daf55ef3abb96" prot="public" virt="pure-virtual"><scope>AGE::FrameBuffer</scope><name>OnEvent</name></member>
+      <member refid="class_a_g_e_1_1_frame_buffer_1a344a706889b08893d289a690ce6b3051" prot="public" virt="pure-virtual"><scope>AGE::FrameBuffer</scope><name>Present</name></member>
+      <member refid="class_a_g_e_1_1_frame_buffer_1a4df14804895b9e4481d19e27b37510a6" prot="public" virt="pure-virtual"><scope>AGE::FrameBuffer</scope><name>ReadPixel</name></member>
+      <member refid="class_a_g_e_1_1_frame_buffer_1a97bb158bb6a1651a122216909bb06a51" prot="public" virt="pure-virtual"><scope>AGE::FrameBuffer</scope><name>Resize</name></member>
+      <member refid="class_a_g_e_1_1_frame_buffer_1a9e0f2f5974c5c1eea0fc9d97eab7bb11" prot="public" virt="pure-virtual"><scope>AGE::FrameBuffer</scope><name>Unbind</name></member>
+      <member refid="class_a_g_e_1_1_frame_buffer_1a8d290afc28ecdb4f679e11f31e6c2f15" prot="public" virt="virtual"><scope>AGE::FrameBuffer</scope><name>~FrameBuffer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

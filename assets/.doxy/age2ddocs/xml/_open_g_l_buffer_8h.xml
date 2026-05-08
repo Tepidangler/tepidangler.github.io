@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="_open_g_l_buffer_8h" kind="file" language="C++">
+    <compoundname>OpenGLBuffer.h</compoundname>
+    <includes refid="_render_buffer_8h" local="yes">Render/Public/RenderBuffer.h</includes>
+    <includedby refid="_open_g_l_buffer_8cpp" local="yes">C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp</includedby>
+    <includedby refid="_render_buffer_8cpp" local="yes">C:/Programming/AGE2D/Engine/src/AGE/Render/Private/RenderBuffer.cpp</includedby>
+    <innerclass refid="class_a_g_e_1_1_open_g_l_vertex_buffer" prot="public">AGE::OpenGLVertexBuffer</innerclass>
+    <innerclass refid="class_a_g_e_1_1_open_g_l_index_buffer" prot="public">AGE::OpenGLIndexBuffer</innerclass>
+    <innerclass refid="class_a_g_e_1_1_open_g_l_uniform_buffer" prot="public">AGE::OpenGLUniformBuffer</innerclass>
+    <innernamespace refid="namespace_a_g_e">AGE</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Render/Public/RenderBuffer.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">AGE</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="class_a_g_e_1_1_open_g_l_vertex_buffer" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">OpenGLVertexBuffer<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_vertex_buffer" kindref="compound">VertexBuffer</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OpenGLVertexBuffer(uint32_t<sp/>Size);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OpenGLVertexBuffer(<ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref>*<sp/>Vertices,<sp/>uint32_t<sp/>Size);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OpenGLVertexBuffer(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>Vertices,<sp/>uint32_t<sp/>Size);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~OpenGLVertexBuffer();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//virtual<sp/>void<sp/>SetData()<sp/>=<sp/>0;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Bind()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Unbind()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>InvalidateBuffer()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SetLayout(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_buffer_layout" kindref="compound">BufferLayout</ref>&amp;<sp/>Layout)</highlight><highlight class="keyword"><sp/>override<sp/></highlight><highlight class="normal">{<sp/>m_Layout<sp/>=<sp/>Layout;<sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint32_t<sp/>GetRendererID()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>s_RendererID;<sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>AddDataToBuffer(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>Verticies,<sp/>uint32_t<sp/>Size)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>AddDataToBuffer(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>Verticies,<sp/>uint32_t<sp/>Size)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_a_g_e_1_1_vertex" kindref="compound">Vertex</ref>*<sp/>CreateQuad(<ref refid="struct_a_g_e_1_1_vertex" kindref="compound">Vertex</ref>*<sp/>Target,<sp/><ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref><sp/>Color,<sp/><ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref>*<sp/>Position,<sp/><ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref><sp/>Size,<sp/><ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref><sp/>Transform,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref>*<sp/>TexCoords,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>TilingFactor,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>ID,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>EnttID)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_a_g_e_1_1_circle_vertex" kindref="compound">CircleVertex</ref>*<sp/>CreateCircle(<ref refid="struct_a_g_e_1_1_circle_vertex" kindref="compound">CircleVertex</ref>*<sp/>Target,<sp/><ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref><sp/>Transform,<sp/><ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref>*<sp/>Position,<sp/><ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref><sp/>Color,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Thickness,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Fade,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>EntID)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_a_g_e_1_1_line_vertex" kindref="compound">LineVertex</ref>*<sp/>CreateLine(<ref refid="struct_a_g_e_1_1_line_vertex" kindref="compound">LineVertex</ref>*<sp/>Target,<sp/><ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref><sp/>Color,<sp/><ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref><sp/>Position0,<sp/><ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref><sp/>Position1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>EntID)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_a_g_e_1_1_text_vertex" kindref="compound">TextVertex</ref>*<sp/>CreateText(<ref refid="struct_a_g_e_1_1_text_vertex" kindref="compound">TextVertex</ref>*<sp/>Target,<sp/><ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref><sp/>Transform,<sp/><ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref>*<sp/>Position,<sp/><ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref><sp/>Color,<sp/><ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref>*<sp/>TexCoords,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>TexID,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>EntID)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_a_g_e_1_1_tilemap_vertex" kindref="compound">TilemapVertex</ref>*<sp/>CreateTile(<ref refid="struct_a_g_e_1_1_tilemap_vertex" kindref="compound">TilemapVertex</ref>*<sp/>Target,<sp/><ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref><sp/>Color,<sp/><ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref>*<sp/>Position,<sp/><ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref><sp/>Transform,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref>*<sp/>UV,<sp/><sp/>uint32_t<sp/>TSID,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>EnttID)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_buffer_layout" kindref="compound">BufferLayout</ref>&amp;<sp/>GetLayout()</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_Layout;<sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>m_RendererID;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint32_t<sp/>s_RendererID;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_a_g_e_1_1_buffer_layout" kindref="compound">BufferLayout</ref><sp/>m_Layout;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="class_a_g_e_1_1_open_g_l_index_buffer" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">OpenGLIndexBuffer<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_index_buffer" kindref="compound">IndexBuffer</ref></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OpenGLIndexBuffer(uint32_t*<sp/>Indices,<sp/>uint32_t<sp/>Size);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~OpenGLIndexBuffer();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>virtual<sp/>void<sp/>SetData()<sp/>=<sp/>0;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Bind()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Unbind()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>InvalidateBuffer()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>GetCount()</highlight><highlight class="keyword"><sp/>override<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_Count;<sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>m_RendererID;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>m_Count;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="class_a_g_e_1_1_open_g_l_uniform_buffer" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">OpenGLUniformBuffer<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_uniform_buffer" kindref="compound">UniformBuffer</ref></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OpenGLUniformBuffer(uint32_t<sp/>Size,<sp/>uint32_t<sp/>Binding);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~OpenGLUniformBuffer();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Bind()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Unbind()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SetData(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>Data,<sp/>uint32_t<sp/>Size,<sp/>uint32_t<sp/>Offset<sp/>=<sp/>0)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>m_RendererID;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h"/>
+  </compounddef>
+</doxygen>

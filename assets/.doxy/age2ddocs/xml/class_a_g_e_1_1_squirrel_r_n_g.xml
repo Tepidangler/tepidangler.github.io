@@ -1,0 +1,353 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_a_g_e_1_1_squirrel_r_n_g" kind="class" language="C++" prot="public">
+    <compoundname>AGE::SquirrelRNG</compoundname>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_a_g_e_1_1_squirrel_r_n_g_1a85d0cfa0883a7f51735942cda1463096" prot="private" static="yes" mutable="no">
+        <type>Scope&lt; <ref refid="class_a_g_e_1_1_squirrel_noise" kindref="compound">SquirrelNoise</ref> &gt;</type>
+        <definition>Scope&lt; SquirrelNoise &gt; AGE::SquirrelRNG::s_NoiseObj</definition>
+        <argsstring></argsstring>
+        <name>s_NoiseObj</name>
+        <qualifiedname>AGE::SquirrelRNG::s_NoiseObj</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This can probably be of some use if you can figure out how. void RollRandomDirection3D(float&amp; out_x, float&amp; out_y, float&amp; out_z); </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="85" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_squirrel_r_n_g_1afea46f161c5795912316f26e7d8c1559" prot="private" static="yes" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t AGE::SquirrelRNG::s_Seed</definition>
+        <argsstring></argsstring>
+        <name>s_Seed</name>
+        <qualifiedname>AGE::SquirrelRNG::s_Seed</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="87" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_squirrel_r_n_g_1a64655ce51f958015879d5284d031177a" prot="private" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int AGE::SquirrelRNG::s_Position</definition>
+        <argsstring></argsstring>
+        <name>s_Position</name>
+        <qualifiedname>AGE::SquirrelRNG::s_Position</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="89" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_squirrel_r_n_g_1aea07152fbd841d94ef45e5be9b7b56d9" prot="private" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int AGE::SquirrelRNG::s_Rotation</definition>
+        <argsstring></argsstring>
+        <name>s_Rotation</name>
+        <qualifiedname>AGE::SquirrelRNG::s_Rotation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="90" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_squirrel_r_n_g_1ab430977df5d2a41d5175fc7c97b140d4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::SquirrelRNG::Init</definition>
+        <argsstring>(uint32_t Seed=0)</argsstring>
+        <name>Init</name>
+        <qualifiedname>AGE::SquirrelRNG::Init</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>Seed</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="49" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="18" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_squirrel_r_n_g_1a4af143f270b477b9aaf9844e9d2b95bd" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AGE::SquirrelRNG::ResetSeed</definition>
+        <argsstring>(uint32_t Seed, int Position=0)</argsstring>
+        <name>ResetSeed</name>
+        <qualifiedname>AGE::SquirrelRNG::ResetSeed</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>Seed</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>Position</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="52" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" bodystart="52" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_squirrel_r_n_g_1a559c36d20dbe95faee77e38a10e4021f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t AGE::SquirrelRNG::GetSeed</definition>
+        <argsstring>()</argsstring>
+        <name>GetSeed</name>
+        <qualifiedname>AGE::SquirrelRNG::GetSeed</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="58" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" bodystart="58" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_squirrel_r_n_g_1a8d99814c0bb037123c39b46258da21f8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AGE::SquirrelRNG::SetCurrentPosition</definition>
+        <argsstring>(int Position)</argsstring>
+        <name>SetCurrentPosition</name>
+        <qualifiedname>AGE::SquirrelRNG::SetCurrentPosition</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>Position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="60" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" bodystart="60" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_squirrel_r_n_g_1a3bb5a40e5820a2415933e651713ebd40" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int AGE::SquirrelRNG::GetCurrentPosition</definition>
+        <argsstring>()</argsstring>
+        <name>GetCurrentPosition</name>
+        <qualifiedname>AGE::SquirrelRNG::GetCurrentPosition</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="62" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" bodystart="62" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_squirrel_r_n_g_1af3cf0a16de3e7a9099e6786a8d6a6251" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t AGE::SquirrelRNG::RollRandomUint32</definition>
+        <argsstring>()</argsstring>
+        <name>RollRandomUint32</name>
+        <qualifiedname>AGE::SquirrelRNG::RollRandomUint32</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="66" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="26" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_squirrel_r_n_g_1acef70099eb67701ffb261e76f424e43f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t AGE::SquirrelRNG::RollRandomUint16</definition>
+        <argsstring>()</argsstring>
+        <name>RollRandomUint16</name>
+        <qualifiedname>AGE::SquirrelRNG::RollRandomUint16</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="68" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="31" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_squirrel_r_n_g_1a58b24459938d540372029f84231829f5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t AGE::SquirrelRNG::RollRandomByte</definition>
+        <argsstring>()</argsstring>
+        <name>RollRandomByte</name>
+        <qualifiedname>AGE::SquirrelRNG::RollRandomByte</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="70" column="16" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="36" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_squirrel_r_n_g_1a0510b51dcf3d590506ed83d092c078b1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t AGE::SquirrelRNG::RollRandomIntLessThan</definition>
+        <argsstring>(uint32_t MaxValueNotInclusive)</argsstring>
+        <name>RollRandomIntLessThan</name>
+        <qualifiedname>AGE::SquirrelRNG::RollRandomIntLessThan</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>MaxValueNotInclusive</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="72" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="41" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_squirrel_r_n_g_1a45d767ce1ca779fbb6c8f1efb531d79d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int AGE::SquirrelRNG::RollRandomIntInRange</definition>
+        <argsstring>(int MinValueInclusive, int MaxValueInclusive)</argsstring>
+        <name>RollRandomIntInRange</name>
+        <qualifiedname>AGE::SquirrelRNG::RollRandomIntInRange</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>MinValueInclusive</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>MaxValueInclusive</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="73" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="46" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_squirrel_r_n_g_1a07c831c9d2b9fabf3a8ff9a6f583bfd4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float AGE::SquirrelRNG::RollRandomFloatZeroToOne</definition>
+        <argsstring>()</argsstring>
+        <name>RollRandomFloatZeroToOne</name>
+        <qualifiedname>AGE::SquirrelRNG::RollRandomFloatZeroToOne</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="74" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="51" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_squirrel_r_n_g_1af6fcf7987cfe7cc2d2b2a183d29d708d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float AGE::SquirrelRNG::RollRandomFloatInRange</definition>
+        <argsstring>(float MinValueInclusive, float MaxValueInclusive)</argsstring>
+        <name>RollRandomFloatInRange</name>
+        <qualifiedname>AGE::SquirrelRNG::RollRandomFloatInRange</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>MinValueInclusive</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>MaxValueInclusive</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="75" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="56" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_squirrel_r_n_g_1a02145e4b6cdf061fa2983de565bfc6fd" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AGE::SquirrelRNG::RollRandomChance</definition>
+        <argsstring>(float ProbabilityofReturnTrue)</argsstring>
+        <name>RollRandomChance</name>
+        <qualifiedname>AGE::SquirrelRNG::RollRandomChance</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>ProbabilityofReturnTrue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="76" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="63" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_squirrel_r_n_g_1a9065672ab7f0587b504d0505bbf26ade" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::SquirrelRNG::RollRandomDirection2D</definition>
+        <argsstring>(float &amp;out_x, float &amp;out_y)</argsstring>
+        <name>RollRandomDirection2D</name>
+        <qualifiedname>AGE::SquirrelRNG::RollRandomDirection2D</qualifiedname>
+        <param>
+          <type>float &amp;</type>
+          <declname>out_x</declname>
+        </param>
+        <param>
+          <type>float &amp;</type>
+          <declname>out_y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="77" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="68" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_squirrel_r_n_g_1a35be0a204ed8949f3cd442203749e5ce" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float AGE::SquirrelRNG::RollRandomRotationFloat</definition>
+        <argsstring>()</argsstring>
+        <name>RollRandomRotationFloat</name>
+        <qualifiedname>AGE::SquirrelRNG::RollRandomRotationFloat</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="78" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="74" bodyend="77"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="45" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" bodystart="46" bodyend="92"/>
+    <listofallmembers>
+      <member refid="class_a_g_e_1_1_squirrel_r_n_g_1a3bb5a40e5820a2415933e651713ebd40" prot="public" virt="non-virtual"><scope>AGE::SquirrelRNG</scope><name>GetCurrentPosition</name></member>
+      <member refid="class_a_g_e_1_1_squirrel_r_n_g_1a559c36d20dbe95faee77e38a10e4021f" prot="public" virt="non-virtual"><scope>AGE::SquirrelRNG</scope><name>GetSeed</name></member>
+      <member refid="class_a_g_e_1_1_squirrel_r_n_g_1ab430977df5d2a41d5175fc7c97b140d4" prot="public" virt="non-virtual"><scope>AGE::SquirrelRNG</scope><name>Init</name></member>
+      <member refid="class_a_g_e_1_1_squirrel_r_n_g_1a4af143f270b477b9aaf9844e9d2b95bd" prot="public" virt="non-virtual"><scope>AGE::SquirrelRNG</scope><name>ResetSeed</name></member>
+      <member refid="class_a_g_e_1_1_squirrel_r_n_g_1a58b24459938d540372029f84231829f5" prot="public" virt="non-virtual"><scope>AGE::SquirrelRNG</scope><name>RollRandomByte</name></member>
+      <member refid="class_a_g_e_1_1_squirrel_r_n_g_1a02145e4b6cdf061fa2983de565bfc6fd" prot="public" virt="non-virtual"><scope>AGE::SquirrelRNG</scope><name>RollRandomChance</name></member>
+      <member refid="class_a_g_e_1_1_squirrel_r_n_g_1a9065672ab7f0587b504d0505bbf26ade" prot="public" virt="non-virtual"><scope>AGE::SquirrelRNG</scope><name>RollRandomDirection2D</name></member>
+      <member refid="class_a_g_e_1_1_squirrel_r_n_g_1af6fcf7987cfe7cc2d2b2a183d29d708d" prot="public" virt="non-virtual"><scope>AGE::SquirrelRNG</scope><name>RollRandomFloatInRange</name></member>
+      <member refid="class_a_g_e_1_1_squirrel_r_n_g_1a07c831c9d2b9fabf3a8ff9a6f583bfd4" prot="public" virt="non-virtual"><scope>AGE::SquirrelRNG</scope><name>RollRandomFloatZeroToOne</name></member>
+      <member refid="class_a_g_e_1_1_squirrel_r_n_g_1a45d767ce1ca779fbb6c8f1efb531d79d" prot="public" virt="non-virtual"><scope>AGE::SquirrelRNG</scope><name>RollRandomIntInRange</name></member>
+      <member refid="class_a_g_e_1_1_squirrel_r_n_g_1a0510b51dcf3d590506ed83d092c078b1" prot="public" virt="non-virtual"><scope>AGE::SquirrelRNG</scope><name>RollRandomIntLessThan</name></member>
+      <member refid="class_a_g_e_1_1_squirrel_r_n_g_1a35be0a204ed8949f3cd442203749e5ce" prot="public" virt="non-virtual"><scope>AGE::SquirrelRNG</scope><name>RollRandomRotationFloat</name></member>
+      <member refid="class_a_g_e_1_1_squirrel_r_n_g_1acef70099eb67701ffb261e76f424e43f" prot="public" virt="non-virtual"><scope>AGE::SquirrelRNG</scope><name>RollRandomUint16</name></member>
+      <member refid="class_a_g_e_1_1_squirrel_r_n_g_1af3cf0a16de3e7a9099e6786a8d6a6251" prot="public" virt="non-virtual"><scope>AGE::SquirrelRNG</scope><name>RollRandomUint32</name></member>
+      <member refid="class_a_g_e_1_1_squirrel_r_n_g_1a85d0cfa0883a7f51735942cda1463096" prot="private" virt="non-virtual"><scope>AGE::SquirrelRNG</scope><name>s_NoiseObj</name></member>
+      <member refid="class_a_g_e_1_1_squirrel_r_n_g_1a64655ce51f958015879d5284d031177a" prot="private" virt="non-virtual"><scope>AGE::SquirrelRNG</scope><name>s_Position</name></member>
+      <member refid="class_a_g_e_1_1_squirrel_r_n_g_1aea07152fbd841d94ef45e5be9b7b56d9" prot="private" virt="non-virtual"><scope>AGE::SquirrelRNG</scope><name>s_Rotation</name></member>
+      <member refid="class_a_g_e_1_1_squirrel_r_n_g_1afea46f161c5795912316f26e7d8c1559" prot="private" virt="non-virtual"><scope>AGE::SquirrelRNG</scope><name>s_Seed</name></member>
+      <member refid="class_a_g_e_1_1_squirrel_r_n_g_1a8d99814c0bb037123c39b46258da21f8" prot="public" virt="non-virtual"><scope>AGE::SquirrelRNG</scope><name>SetCurrentPosition</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

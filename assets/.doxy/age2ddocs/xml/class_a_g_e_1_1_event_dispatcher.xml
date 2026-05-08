@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_a_g_e_1_1_event_dispatcher" kind="class" language="C++" prot="public">
+    <compoundname>AGE::EventDispatcher</compoundname>
+    <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_a_g_e_1_1_event_dispatcher_1aeb449263c2ae4f5006ebb261b79c8043" prot="private" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::function&lt; bool(T &amp;)&gt;</type>
+        <definition>using AGE::EventDispatcher::EventFn =  std::function&lt;bool(T&amp;)&gt;</definition>
+        <argsstring></argsstring>
+        <name>EventFn</name>
+        <qualifiedname>AGE::EventDispatcher::EventFn</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" line="72" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_a_g_e_1_1_event_dispatcher_1a3bb3afccce285526e6e53e0dc4d61357" prot="private" static="no" mutable="no">
+        <type><ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref> &amp;</type>
+        <definition>Event&amp; AGE::EventDispatcher::m_Event</definition>
+        <argsstring></argsstring>
+        <name>m_Event</name>
+        <qualifiedname>AGE::EventDispatcher::m_Event</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" line="90" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_event_dispatcher_1a1dc93ba3dd4cd9a727acb08d40b15277" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>AGE::EventDispatcher::EventDispatcher</definition>
+        <argsstring>(Event &amp;Event)</argsstring>
+        <name>EventDispatcher</name>
+        <qualifiedname>AGE::EventDispatcher::EventDispatcher</qualifiedname>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref> &amp;</type>
+          <declname>Event</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" line="74" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" bodystart="74" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_event_dispatcher_1ab61dff7dcfb6cd4ed2498d4812e75b3e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool AGE::EventDispatcher::Dispatch</definition>
+        <argsstring>(EventFn&lt; T &gt; func)</argsstring>
+        <name>Dispatch</name>
+        <qualifiedname>AGE::EventDispatcher::Dispatch</qualifiedname>
+        <param>
+          <type>EventFn&lt; T &gt;</type>
+          <declname>func</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" line="79" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" bodystart="79" bodyend="87"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" line="69" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" bodystart="70" bodyend="91"/>
+    <listofallmembers>
+      <member refid="class_a_g_e_1_1_event_dispatcher_1ab61dff7dcfb6cd4ed2498d4812e75b3e" prot="public" virt="non-virtual"><scope>AGE::EventDispatcher</scope><name>Dispatch</name></member>
+      <member refid="class_a_g_e_1_1_event_dispatcher_1a1dc93ba3dd4cd9a727acb08d40b15277" prot="public" virt="non-virtual"><scope>AGE::EventDispatcher</scope><name>EventDispatcher</name></member>
+      <member refid="class_a_g_e_1_1_event_dispatcher_1aeb449263c2ae4f5006ebb261b79c8043" prot="private" virt="non-virtual"><scope>AGE::EventDispatcher</scope><name>EventFn</name></member>
+      <member refid="class_a_g_e_1_1_event_dispatcher_1a3bb3afccce285526e6e53e0dc4d61357" prot="private" virt="non-virtual"><scope>AGE::EventDispatcher</scope><name>m_Event</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

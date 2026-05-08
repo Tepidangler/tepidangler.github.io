@@ -1,0 +1,340 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_a_g_e_1_1_open_g_l_renderer_a_p_i" kind="class" language="C++" prot="public">
+    <compoundname>AGE::OpenGLRendererAPI</compoundname>
+    <basecompoundref refid="class_a_g_e_1_1_renderer_a_p_i" prot="public" virt="non-virtual">AGE::RendererAPI</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_renderer_a_p_i_1a87e29680a517a6c4f8da05880c87fe5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AGE::OpenGLRendererAPI::~OpenGLRendererAPI</definition>
+        <argsstring>()=default</argsstring>
+        <name>~OpenGLRendererAPI</name>
+        <qualifiedname>AGE::OpenGLRendererAPI::~OpenGLRendererAPI</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLRendererAPI.h" line="10" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_renderer_a_p_i_1afadc2092708434fcfd6365ca27a17a59" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AGE::OpenGLRendererAPI::Init</definition>
+        <argsstring>() override</argsstring>
+        <name>Init</name>
+        <qualifiedname>AGE::OpenGLRendererAPI::Init</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_renderer_a_p_i_1ae3488c25a4da67baebaa3116268d7b2e">Init</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLRendererAPI.h" line="11" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLRendererAPI.cpp" bodystart="8" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_renderer_a_p_i_1aadc11ef3fe1668c66302564d7eefad5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AGE::OpenGLRendererAPI::SetClearColor</definition>
+        <argsstring>(const Vector4 Color) override</argsstring>
+        <name>SetClearColor</name>
+        <qualifiedname>AGE::OpenGLRendererAPI::SetClearColor</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_renderer_a_p_i_1a2855685bbbe23f2e9aca1212723a311f">SetClearColor</reimplements>
+        <param>
+          <type>const <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref></type>
+          <declname>Color</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLRendererAPI.h" line="12" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLRendererAPI.cpp" bodystart="20" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_renderer_a_p_i_1a727546a63daa627f217258c80b446b0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AGE::OpenGLRendererAPI::SetViewport</definition>
+        <argsstring>(uint32_t x, uint32_t y, uint32_t Width, uint32_t Height) override</argsstring>
+        <name>SetViewport</name>
+        <qualifiedname>AGE::OpenGLRendererAPI::SetViewport</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_renderer_a_p_i_1a44952d1edbac0dcec2ce6aff8a2869ab">SetViewport</reimplements>
+        <param>
+          <type>uint32_t</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>Width</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>Height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLRendererAPI.h" line="13" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLRendererAPI.cpp" bodystart="26" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_renderer_a_p_i_1ad055aceaba418dca6a639607185296b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AGE::OpenGLRendererAPI::Clear</definition>
+        <argsstring>() override</argsstring>
+        <name>Clear</name>
+        <qualifiedname>AGE::OpenGLRendererAPI::Clear</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_renderer_a_p_i_1a38799865f7c521674297bd44c81d1e3d">Clear</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLRendererAPI.h" line="14" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLRendererAPI.cpp" bodystart="31" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_renderer_a_p_i_1a0f0b151375e2e382e503d0ec15d227c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AGE::OpenGLRendererAPI::Flush</definition>
+        <argsstring>() override</argsstring>
+        <name>Flush</name>
+        <qualifiedname>AGE::OpenGLRendererAPI::Flush</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_renderer_a_p_i_1a53042de46356a65648808a30c5667b7d">Flush</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLRendererAPI.h" line="16" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLRendererAPI.cpp" bodystart="36" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_renderer_a_p_i_1a469d1eda3042b1e1822aee1a6c1bda2f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void AGE::OpenGLRendererAPI::DrawIndexed</definition>
+        <argsstring>(uint32_t IndexCount, uint32_t IndexStart, int VertexStart) override</argsstring>
+        <name>DrawIndexed</name>
+        <qualifiedname>AGE::OpenGLRendererAPI::DrawIndexed</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_renderer_a_p_i_1a72b89f7e09639acc1df2583d1eadb62d">DrawIndexed</reimplements>
+        <param>
+          <type>uint32_t</type>
+          <declname>IndexCount</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>IndexStart</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>VertexStart</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLRendererAPI.h" line="17" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLRendererAPI.h" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_renderer_a_p_i_1af8a7c38024263591cae222369a41c8b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AGE::OpenGLRendererAPI::DrawIndexed</definition>
+        <argsstring>(const Ref&lt; VertexArray &gt; &amp;VertexArray, uint32_t IndexCount) override</argsstring>
+        <name>DrawIndexed</name>
+        <qualifiedname>AGE::OpenGLRendererAPI::DrawIndexed</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_renderer_a_p_i_1a1b202df5a96ed8a047ffbf3c277ca866">DrawIndexed</reimplements>
+        <param>
+          <type>const Ref&lt; <ref refid="class_a_g_e_1_1_vertex_array" kindref="compound">VertexArray</ref> &gt; &amp;</type>
+          <declname>VertexArray</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>IndexCount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLRendererAPI.h" line="18" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLRendererAPI.cpp" bodystart="40" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_renderer_a_p_i_1a155d5cbf1677c608fbfc4e38c927676e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AGE::OpenGLRendererAPI::DrawArrays</definition>
+        <argsstring>(const Ref&lt; VertexArray &gt; &amp;VertexArray, uint32_t IndexCount) override</argsstring>
+        <name>DrawArrays</name>
+        <qualifiedname>AGE::OpenGLRendererAPI::DrawArrays</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_renderer_a_p_i_1a5cb4b8e410b01f2becf8da9524aaa661">DrawArrays</reimplements>
+        <param>
+          <type>const Ref&lt; <ref refid="class_a_g_e_1_1_vertex_array" kindref="compound">VertexArray</ref> &gt; &amp;</type>
+          <declname>VertexArray</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>IndexCount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLRendererAPI.h" line="19" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLRendererAPI.cpp" bodystart="50" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_renderer_a_p_i_1ab66404252d2a73fffdf8e65eff9a13f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AGE::OpenGLRendererAPI::DrawLines</definition>
+        <argsstring>(const Ref&lt; VertexArray &gt; &amp;VertexArray, uint32_t VertexCount) override</argsstring>
+        <name>DrawLines</name>
+        <qualifiedname>AGE::OpenGLRendererAPI::DrawLines</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_renderer_a_p_i_1a3bf8971007535abda2083b296e568ae4">DrawLines</reimplements>
+        <param>
+          <type>const Ref&lt; <ref refid="class_a_g_e_1_1_vertex_array" kindref="compound">VertexArray</ref> &gt; &amp;</type>
+          <declname>VertexArray</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>VertexCount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLRendererAPI.h" line="20" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLRendererAPI.cpp" bodystart="57" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_renderer_a_p_i_1a207ae9f3970044c4043742dee75e8b59" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AGE::OpenGLRendererAPI::DrawStrips</definition>
+        <argsstring>(const Ref&lt; VertexArray &gt; &amp;VertexArray, uint32_t IndexCount) override</argsstring>
+        <name>DrawStrips</name>
+        <qualifiedname>AGE::OpenGLRendererAPI::DrawStrips</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_renderer_a_p_i_1a58c74b240efa0fcd5717faeb115212e2">DrawStrips</reimplements>
+        <param>
+          <type>const Ref&lt; <ref refid="class_a_g_e_1_1_vertex_array" kindref="compound">VertexArray</ref> &gt; &amp;</type>
+          <declname>VertexArray</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>IndexCount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLRendererAPI.h" line="21" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLRendererAPI.cpp" bodystart="62" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_renderer_a_p_i_1a27e5a3d35a5ff8cb4c0dc1e89f8eba6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AGE::OpenGLRendererAPI::SetLineWidth</definition>
+        <argsstring>(float Width) override</argsstring>
+        <name>SetLineWidth</name>
+        <qualifiedname>AGE::OpenGLRendererAPI::SetLineWidth</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_renderer_a_p_i_1a874e5c3e2ca0a656179e7467e4727298">SetLineWidth</reimplements>
+        <param>
+          <type>float</type>
+          <declname>Width</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLRendererAPI.h" line="22" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLRendererAPI.cpp" bodystart="70" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_renderer_a_p_i_1a50a3a2e6ba1c04083cbdb0956933e27a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AGE::OpenGLRendererAPI::Submit</definition>
+        <argsstring>() override</argsstring>
+        <name>Submit</name>
+        <qualifiedname>AGE::OpenGLRendererAPI::Submit</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_renderer_a_p_i_1a4ed43bb7836e5475fcb5540707a45221">Submit</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This Function Currently Fails silently since there is really no use for them however because of how pure virtual classes work it has to be here to compile </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLRendererAPI.h" line="28" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLRendererAPI.cpp" bodystart="74" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_renderer_a_p_i_1ab5c2441a5f04e936a74c81b0458c22ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AGE::OpenGLRendererAPI::Present</definition>
+        <argsstring>() override</argsstring>
+        <name>Present</name>
+        <qualifiedname>AGE::OpenGLRendererAPI::Present</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_renderer_a_p_i_1aedaf757a78a5ae71f0c8204922cd756a">Present</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This Function Currently Fails silently since there is really no use for them however because of how pure virtual classes work it has to be here to compile </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLRendererAPI.h" line="32" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLRendererAPI.cpp" bodystart="77" bodyend="79"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>AGE::OpenGLRendererAPI</label>
+        <link refid="class_a_g_e_1_1_open_g_l_renderer_a_p_i"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>AGE::RendererAPI</label>
+        <link refid="class_a_g_e_1_1_renderer_a_p_i"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>AGE::OpenGLRendererAPI</label>
+        <link refid="class_a_g_e_1_1_open_g_l_renderer_a_p_i"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>AGE::RendererAPI</label>
+        <link refid="class_a_g_e_1_1_renderer_a_p_i"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLRendererAPI.h" line="6" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLRendererAPI.h" bodystart="7" bodyend="33"/>
+    <listofallmembers>
+      <member refid="class_a_g_e_1_1_renderer_a_p_i_1a250b9226de465d3ae74b52f6254fad00" prot="public" virt="non-virtual"><scope>AGE::OpenGLRendererAPI</scope><name>API</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_renderer_a_p_i_1ad055aceaba418dca6a639607185296b0" prot="public" virt="virtual"><scope>AGE::OpenGLRendererAPI</scope><name>Clear</name></member>
+      <member refid="class_a_g_e_1_1_renderer_a_p_i_1a98a8ec3558c0a1ba1d1af9e795f44549" prot="public" virt="non-virtual"><scope>AGE::OpenGLRendererAPI</scope><name>Create</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_renderer_a_p_i_1a155d5cbf1677c608fbfc4e38c927676e" prot="public" virt="virtual"><scope>AGE::OpenGLRendererAPI</scope><name>DrawArrays</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_renderer_a_p_i_1a469d1eda3042b1e1822aee1a6c1bda2f" prot="public" virt="virtual"><scope>AGE::OpenGLRendererAPI</scope><name>DrawIndexed</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_renderer_a_p_i_1af8a7c38024263591cae222369a41c8b7" prot="public" virt="virtual"><scope>AGE::OpenGLRendererAPI</scope><name>DrawIndexed</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_renderer_a_p_i_1ab66404252d2a73fffdf8e65eff9a13f1" prot="public" virt="virtual"><scope>AGE::OpenGLRendererAPI</scope><name>DrawLines</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_renderer_a_p_i_1a207ae9f3970044c4043742dee75e8b59" prot="public" virt="virtual"><scope>AGE::OpenGLRendererAPI</scope><name>DrawStrips</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_renderer_a_p_i_1a0f0b151375e2e382e503d0ec15d227c3" prot="public" virt="virtual"><scope>AGE::OpenGLRendererAPI</scope><name>Flush</name></member>
+      <member refid="class_a_g_e_1_1_renderer_a_p_i_1ab16ab91724de81fb8180a4c9e3fb99da" prot="public" virt="non-virtual"><scope>AGE::OpenGLRendererAPI</scope><name>GetAPI</name></member>
+      <member refid="class_a_g_e_1_1_renderer_a_p_i_1a250b9226de465d3ae74b52f6254fad00aca6a6273c360a65092fe3a2c02e477eb" prot="public" virt="non-virtual"><scope>AGE::OpenGLRendererAPI</scope><name>Headless</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_renderer_a_p_i_1afadc2092708434fcfd6365ca27a17a59" prot="public" virt="virtual"><scope>AGE::OpenGLRendererAPI</scope><name>Init</name></member>
+      <member refid="class_a_g_e_1_1_renderer_a_p_i_1a250b9226de465d3ae74b52f6254fad00ad60dcd74085d002845991b5c69ef9cc0" prot="public" virt="non-virtual"><scope>AGE::OpenGLRendererAPI</scope><name>OpenGL</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_renderer_a_p_i_1ab5c2441a5f04e936a74c81b0458c22ea" prot="public" virt="virtual"><scope>AGE::OpenGLRendererAPI</scope><name>Present</name></member>
+      <member refid="class_a_g_e_1_1_renderer_a_p_i_1a61a74e229f23e0a2663a70d6eeaa599b" prot="public" virt="non-virtual"><scope>AGE::OpenGLRendererAPI</scope><name>SetAPI</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_renderer_a_p_i_1aadc11ef3fe1668c66302564d7eefad5f" prot="public" virt="virtual"><scope>AGE::OpenGLRendererAPI</scope><name>SetClearColor</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_renderer_a_p_i_1a27e5a3d35a5ff8cb4c0dc1e89f8eba6d" prot="public" virt="virtual"><scope>AGE::OpenGLRendererAPI</scope><name>SetLineWidth</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_renderer_a_p_i_1a727546a63daa627f217258c80b446b0e" prot="public" virt="virtual"><scope>AGE::OpenGLRendererAPI</scope><name>SetViewport</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_renderer_a_p_i_1a50a3a2e6ba1c04083cbdb0956933e27a" prot="public" virt="virtual"><scope>AGE::OpenGLRendererAPI</scope><name>Submit</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_renderer_a_p_i_1a87e29680a517a6c4f8da05880c87fe5b" prot="public" virt="non-virtual"><scope>AGE::OpenGLRendererAPI</scope><name>~OpenGLRendererAPI</name></member>
+      <member refid="class_a_g_e_1_1_renderer_a_p_i_1a5fa71e19d5aa12d0084d64c0346a2326" prot="public" virt="virtual"><scope>AGE::OpenGLRendererAPI</scope><name>~RendererAPI</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

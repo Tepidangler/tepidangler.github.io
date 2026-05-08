@@ -1,0 +1,364 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_a_g_e_1_1_render_command" kind="class" language="C++" prot="public">
+    <compoundname>AGE::RenderCommand</compoundname>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_a_g_e_1_1_render_command_1a3a4bd7b7de4f15b3f565b360f83cecc9" prot="public" static="yes" mutable="no">
+        <type>Ref&lt; <ref refid="class_a_g_e_1_1_pipeline" kindref="compound">Pipeline</ref> &gt;</type>
+        <definition>Ref&lt; Pipeline &gt; AGE::RenderCommand::s_GraphicsPipeline</definition>
+        <argsstring></argsstring>
+        <name>s_GraphicsPipeline</name>
+        <qualifiedname>AGE::RenderCommand::s_GraphicsPipeline</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderCommand.h" line="50" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderCommand.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_a_g_e_1_1_render_command_1aa6ac316c25f964da9a4ebd521b5d6f6d" prot="private" static="yes" mutable="no">
+        <type>Scope&lt; <ref refid="class_a_g_e_1_1_renderer_a_p_i" kindref="compound">RendererAPI</ref> &gt;</type>
+        <definition>Scope&lt; RendererAPI &gt; AGE::RenderCommand::s_RendererAPI</definition>
+        <argsstring></argsstring>
+        <name>s_RendererAPI</name>
+        <qualifiedname>AGE::RenderCommand::s_RendererAPI</qualifiedname>
+        <initializer>= RendererAPI::Create()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderCommand.h" line="54" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderCommand.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_render_command_1abdb7045647cf05b08f90623ffb62ed48" prot="private" static="yes" mutable="no">
+        <type>RendererAPI::API</type>
+        <definition>RendererAPI::API AGE::RenderCommand::s_CurrentAPI</definition>
+        <argsstring></argsstring>
+        <name>s_CurrentAPI</name>
+        <qualifiedname>AGE::RenderCommand::s_CurrentAPI</qualifiedname>
+        <initializer>= RendererAPI::API::OpenGL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderCommand.h" line="57" column="25" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderCommand.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_render_command_1a56f80d16636c90faceb85a8adf61ecdc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::RenderCommand::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <qualifiedname>AGE::RenderCommand::Init</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderCommand.h" line="13" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/RenderCommand.cpp" bodystart="13" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_render_command_1a12f805e3816c9dbe114621ed8de39c50" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::RenderCommand::SetClearColor</definition>
+        <argsstring>(const Vector4 Color)</argsstring>
+        <name>SetClearColor</name>
+        <qualifiedname>AGE::RenderCommand::SetClearColor</qualifiedname>
+        <param>
+          <type>const <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref></type>
+          <declname>Color</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderCommand.h" line="14" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/RenderCommand.cpp" bodystart="35" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_render_command_1af04a15ca69e0f08cca6d015615ab9899" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::RenderCommand::SetViewport</definition>
+        <argsstring>(uint32_t x, uint32_t y, uint32_t Width, uint32_t Height)</argsstring>
+        <name>SetViewport</name>
+        <qualifiedname>AGE::RenderCommand::SetViewport</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>Width</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>Height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderCommand.h" line="15" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/RenderCommand.cpp" bodystart="39" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_render_command_1aadaff2658b4b0b792ecf9abd35a36123" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::RenderCommand::Clear</definition>
+        <argsstring>()</argsstring>
+        <name>Clear</name>
+        <qualifiedname>AGE::RenderCommand::Clear</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderCommand.h" line="16" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/RenderCommand.cpp" bodystart="43" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_render_command_1a12b5d045ec2c2627d5aecd4dade5bbb7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::RenderCommand::Submit</definition>
+        <argsstring>()</argsstring>
+        <name>Submit</name>
+        <qualifiedname>AGE::RenderCommand::Submit</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderCommand.h" line="17" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/RenderCommand.cpp" bodystart="47" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_render_command_1a2285f2372336b265a5e57fa56a0a61dd" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::RenderCommand::Present</definition>
+        <argsstring>()</argsstring>
+        <name>Present</name>
+        <qualifiedname>AGE::RenderCommand::Present</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderCommand.h" line="18" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/RenderCommand.cpp" bodystart="51" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_render_command_1a87c15941ed0dea7684b0cfa14d71447e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::RenderCommand::Flush</definition>
+        <argsstring>()</argsstring>
+        <name>Flush</name>
+        <qualifiedname>AGE::RenderCommand::Flush</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderCommand.h" line="19" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/RenderCommand.cpp" bodystart="55" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_render_command_1af74b5e1f4f91bb83736f3fb3f5f6c865" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::RenderCommand::ResetStats</definition>
+        <argsstring>()</argsstring>
+        <name>ResetStats</name>
+        <qualifiedname>AGE::RenderCommand::ResetStats</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderCommand.h" line="20" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/RenderCommand.cpp" bodystart="59" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_render_command_1a7e447036e2bb3fc8eefcff16fdde669d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>RendererAPI::API &amp;</type>
+        <definition>static RendererAPI::API &amp; AGE::RenderCommand::GetCurrentRendererAPI</definition>
+        <argsstring>()</argsstring>
+        <name>GetCurrentRendererAPI</name>
+        <qualifiedname>AGE::RenderCommand::GetCurrentRendererAPI</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderCommand.h" line="21" column="25" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderCommand.h" bodystart="21" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_render_command_1a2b98280cfbc2681b439262abc145b43a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AGE::RenderCommand::DrawIndexed</definition>
+        <argsstring>(uint32_t IndexCount, uint32_t IndexStart, int VertexStart)</argsstring>
+        <name>DrawIndexed</name>
+        <qualifiedname>AGE::RenderCommand::DrawIndexed</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>IndexCount</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>IndexStart</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>VertexStart</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderCommand.h" line="25" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderCommand.h" bodystart="25" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_render_command_1a6859e48e50dde31ddbd008d13291f9d9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AGE::RenderCommand::DrawIndexed</definition>
+        <argsstring>(const Ref&lt; VertexArray &gt; &amp;VertexArray, uint32_t IndexCount=0)</argsstring>
+        <name>DrawIndexed</name>
+        <qualifiedname>AGE::RenderCommand::DrawIndexed</qualifiedname>
+        <param>
+          <type>const Ref&lt; <ref refid="class_a_g_e_1_1_vertex_array" kindref="compound">VertexArray</ref> &gt; &amp;</type>
+          <declname>VertexArray</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>IndexCount</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderCommand.h" line="29" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderCommand.h" bodystart="29" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_render_command_1ab53a4096ce4124990d2d15edfc8d94a1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AGE::RenderCommand::DrawArray</definition>
+        <argsstring>(const Ref&lt; VertexArray &gt; &amp;VertexArray, uint32_t IndexCount=0)</argsstring>
+        <name>DrawArray</name>
+        <qualifiedname>AGE::RenderCommand::DrawArray</qualifiedname>
+        <param>
+          <type>const Ref&lt; <ref refid="class_a_g_e_1_1_vertex_array" kindref="compound">VertexArray</ref> &gt; &amp;</type>
+          <declname>VertexArray</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>IndexCount</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderCommand.h" line="33" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderCommand.h" bodystart="33" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_render_command_1a4032e94962b2a1d91a3aadcf179dd820" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AGE::RenderCommand::DrawLines</definition>
+        <argsstring>(const Ref&lt; VertexArray &gt; &amp;VertexArray, uint32_t VertexCount=0)</argsstring>
+        <name>DrawLines</name>
+        <qualifiedname>AGE::RenderCommand::DrawLines</qualifiedname>
+        <param>
+          <type>const Ref&lt; <ref refid="class_a_g_e_1_1_vertex_array" kindref="compound">VertexArray</ref> &gt; &amp;</type>
+          <declname>VertexArray</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>VertexCount</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderCommand.h" line="37" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderCommand.h" bodystart="37" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_render_command_1ad186ede2908291648843bda1884a7b23" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AGE::RenderCommand::DrawStrips</definition>
+        <argsstring>(const Ref&lt; VertexArray &gt; &amp;VertexArray, uint32_t VertexCount=0)</argsstring>
+        <name>DrawStrips</name>
+        <qualifiedname>AGE::RenderCommand::DrawStrips</qualifiedname>
+        <param>
+          <type>const Ref&lt; <ref refid="class_a_g_e_1_1_vertex_array" kindref="compound">VertexArray</ref> &gt; &amp;</type>
+          <declname>VertexArray</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>VertexCount</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderCommand.h" line="41" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderCommand.h" bodystart="41" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_render_command_1a5a5242442b1003fba98915ef5077a0df" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AGE::RenderCommand::SetLineWidth</definition>
+        <argsstring>(float Width)</argsstring>
+        <name>SetLineWidth</name>
+        <qualifiedname>AGE::RenderCommand::SetLineWidth</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>Width</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderCommand.h" line="46" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderCommand.h" bodystart="46" bodyend="49"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderCommand.h" line="9" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderCommand.h" bodystart="10" bodyend="58"/>
+    <listofallmembers>
+      <member refid="class_a_g_e_1_1_render_command_1aadaff2658b4b0b792ecf9abd35a36123" prot="public" virt="non-virtual"><scope>AGE::RenderCommand</scope><name>Clear</name></member>
+      <member refid="class_a_g_e_1_1_render_command_1ab53a4096ce4124990d2d15edfc8d94a1" prot="public" virt="non-virtual"><scope>AGE::RenderCommand</scope><name>DrawArray</name></member>
+      <member refid="class_a_g_e_1_1_render_command_1a2b98280cfbc2681b439262abc145b43a" prot="public" virt="non-virtual"><scope>AGE::RenderCommand</scope><name>DrawIndexed</name></member>
+      <member refid="class_a_g_e_1_1_render_command_1a6859e48e50dde31ddbd008d13291f9d9" prot="public" virt="non-virtual"><scope>AGE::RenderCommand</scope><name>DrawIndexed</name></member>
+      <member refid="class_a_g_e_1_1_render_command_1a4032e94962b2a1d91a3aadcf179dd820" prot="public" virt="non-virtual"><scope>AGE::RenderCommand</scope><name>DrawLines</name></member>
+      <member refid="class_a_g_e_1_1_render_command_1ad186ede2908291648843bda1884a7b23" prot="public" virt="non-virtual"><scope>AGE::RenderCommand</scope><name>DrawStrips</name></member>
+      <member refid="class_a_g_e_1_1_render_command_1a87c15941ed0dea7684b0cfa14d71447e" prot="public" virt="non-virtual"><scope>AGE::RenderCommand</scope><name>Flush</name></member>
+      <member refid="class_a_g_e_1_1_render_command_1a7e447036e2bb3fc8eefcff16fdde669d" prot="public" virt="non-virtual"><scope>AGE::RenderCommand</scope><name>GetCurrentRendererAPI</name></member>
+      <member refid="class_a_g_e_1_1_render_command_1a56f80d16636c90faceb85a8adf61ecdc" prot="public" virt="non-virtual"><scope>AGE::RenderCommand</scope><name>Init</name></member>
+      <member refid="class_a_g_e_1_1_render_command_1a2285f2372336b265a5e57fa56a0a61dd" prot="public" virt="non-virtual"><scope>AGE::RenderCommand</scope><name>Present</name></member>
+      <member refid="class_a_g_e_1_1_render_command_1af74b5e1f4f91bb83736f3fb3f5f6c865" prot="public" virt="non-virtual"><scope>AGE::RenderCommand</scope><name>ResetStats</name></member>
+      <member refid="class_a_g_e_1_1_render_command_1abdb7045647cf05b08f90623ffb62ed48" prot="private" virt="non-virtual"><scope>AGE::RenderCommand</scope><name>s_CurrentAPI</name></member>
+      <member refid="class_a_g_e_1_1_render_command_1a3a4bd7b7de4f15b3f565b360f83cecc9" prot="public" virt="non-virtual"><scope>AGE::RenderCommand</scope><name>s_GraphicsPipeline</name></member>
+      <member refid="class_a_g_e_1_1_render_command_1aa6ac316c25f964da9a4ebd521b5d6f6d" prot="private" virt="non-virtual"><scope>AGE::RenderCommand</scope><name>s_RendererAPI</name></member>
+      <member refid="class_a_g_e_1_1_render_command_1a12f805e3816c9dbe114621ed8de39c50" prot="public" virt="non-virtual"><scope>AGE::RenderCommand</scope><name>SetClearColor</name></member>
+      <member refid="class_a_g_e_1_1_render_command_1a5a5242442b1003fba98915ef5077a0df" prot="public" virt="non-virtual"><scope>AGE::RenderCommand</scope><name>SetLineWidth</name></member>
+      <member refid="class_a_g_e_1_1_render_command_1af04a15ca69e0f08cca6d015615ab9899" prot="public" virt="non-virtual"><scope>AGE::RenderCommand</scope><name>SetViewport</name></member>
+      <member refid="class_a_g_e_1_1_render_command_1a12b5d045ec2c2627d5aecd4dade5bbb7" prot="public" virt="non-virtual"><scope>AGE::RenderCommand</scope><name>Submit</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

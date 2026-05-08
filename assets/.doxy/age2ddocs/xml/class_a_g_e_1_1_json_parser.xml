@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_a_g_e_1_1_json_parser" kind="class" language="C++" prot="public">
+    <compoundname>AGE::JsonParser</compoundname>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_json_parser_1a906375a59c60c02d40d6d206f9c1b2e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AGE::JsonParser::JsonParser</definition>
+        <argsstring>()=default</argsstring>
+        <name>JsonParser</name>
+        <qualifiedname>AGE::JsonParser::JsonParser</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/JsonParser.h" line="13" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_json_parser_1a5cf2ecf5f3c0c0a3d21023827c590935" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AGE::JsonParser::JsonParser</definition>
+        <argsstring>(const std::string &amp;FilePath)</argsstring>
+        <name>JsonParser</name>
+        <qualifiedname>AGE::JsonParser::JsonParser</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>FilePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/JsonParser.h" line="14" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Parser/Private/JsonParser.cpp" bodystart="8" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_json_parser_1af1cda4fed351c9994917e35b3341e6c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool AGE::JsonParser::SaveJsonFile</definition>
+        <argsstring>(const std::filesystem::path &amp;Filepath, std::vector&lt; T &gt; &amp;Data)</argsstring>
+        <name>SaveJsonFile</name>
+        <qualifiedname>AGE::JsonParser::SaveJsonFile</qualifiedname>
+        <param>
+          <type>const std::filesystem::path &amp;</type>
+          <declname>Filepath</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; T &gt; &amp;</type>
+          <declname>Data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/JsonParser.h" line="17" column="6"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_json_parser_1ac51e68e55589a188cc5ca208fc09b385" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>nlohmann::json</type>
+        <definition>nlohmann::json AGE::JsonParser::LoadJsonFile</definition>
+        <argsstring>(const std::filesystem::path &amp;Filepath)</argsstring>
+        <name>LoadJsonFile</name>
+        <qualifiedname>AGE::JsonParser::LoadJsonFile</qualifiedname>
+        <param>
+          <type>const std::filesystem::path &amp;</type>
+          <declname>Filepath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/JsonParser.h" line="19" column="23" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Parser/Private/JsonParser.cpp" bodystart="151" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_json_parser_1a032c1f23831e5328f398a7be659ce328" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string AGE::JsonParser::Parse</definition>
+        <argsstring>(const std::string &amp;FilePath)</argsstring>
+        <name>Parse</name>
+        <qualifiedname>AGE::JsonParser::Parse</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>FilePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/JsonParser.h" line="21" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Parser/Private/JsonParser.cpp" bodystart="176" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_json_parser_1ac67c46ecc5338b81830e577187d6492b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string AGE::JsonParser::ParseString</definition>
+        <argsstring>(const std::string &amp;String)</argsstring>
+        <name>ParseString</name>
+        <qualifiedname>AGE::JsonParser::ParseString</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>String</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/JsonParser.h" line="23" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Parser/Private/JsonParser.cpp" bodystart="185" bodyend="191"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/JsonParser.h" line="9" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/JsonParser.h" bodystart="10" bodyend="25"/>
+    <listofallmembers>
+      <member refid="class_a_g_e_1_1_json_parser_1a906375a59c60c02d40d6d206f9c1b2e1" prot="public" virt="non-virtual"><scope>AGE::JsonParser</scope><name>JsonParser</name></member>
+      <member refid="class_a_g_e_1_1_json_parser_1a5cf2ecf5f3c0c0a3d21023827c590935" prot="public" virt="non-virtual"><scope>AGE::JsonParser</scope><name>JsonParser</name></member>
+      <member refid="class_a_g_e_1_1_json_parser_1ac51e68e55589a188cc5ca208fc09b385" prot="public" virt="non-virtual"><scope>AGE::JsonParser</scope><name>LoadJsonFile</name></member>
+      <member refid="class_a_g_e_1_1_json_parser_1a032c1f23831e5328f398a7be659ce328" prot="public" virt="non-virtual"><scope>AGE::JsonParser</scope><name>Parse</name></member>
+      <member refid="class_a_g_e_1_1_json_parser_1ac67c46ecc5338b81830e577187d6492b" prot="public" virt="non-virtual"><scope>AGE::JsonParser</scope><name>ParseString</name></member>
+      <member refid="class_a_g_e_1_1_json_parser_1af1cda4fed351c9994917e35b3341e6c7" prot="public" virt="non-virtual"><scope>AGE::JsonParser</scope><name>SaveJsonFile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

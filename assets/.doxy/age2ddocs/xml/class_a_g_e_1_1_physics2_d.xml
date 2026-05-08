@@ -1,0 +1,604 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_a_g_e_1_1_physics2_d" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>AGE::Physics2D</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_a_g_e_1_1_physics2_d_1ade19b33749a6d5453f8a4a3f1525dd6a" prot="private" static="no" mutable="no">
+        <type>Ref&lt; <ref refid="class_a_g_e_1_1_world" kindref="compound">World</ref> &gt;</type>
+        <definition>Ref&lt;World&gt; AGE::Physics2D::m_World</definition>
+        <argsstring></argsstring>
+        <name>m_World</name>
+        <qualifiedname>AGE::Physics2D::m_World</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="102" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1ad37ce5f62d4c41b2e76449cb04908e6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AGE::Physics2D::Physics2D</definition>
+        <argsstring>()=default</argsstring>
+        <name>Physics2D</name>
+        <qualifiedname>AGE::Physics2D::Physics2D</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="25" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1abc1e0715af2e0158acc97998f1ac9345" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AGE::Physics2D::~Physics2D</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Physics2D</name>
+        <qualifiedname>AGE::Physics2D::~Physics2D</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="27" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1aa946f6a04682792de0513006b5ac48b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AGE::Physics2D::CreateNewPhysicsWorld</definition>
+        <argsstring>(Ref&lt; Scene &gt; scene)</argsstring>
+        <name>CreateNewPhysicsWorld</name>
+        <qualifiedname>AGE::Physics2D::CreateNewPhysicsWorld</qualifiedname>
+        <param>
+          <type>Ref&lt; <ref refid="class_a_g_e_1_1_scene" kindref="compound">Scene</ref> &gt;</type>
+          <declname>scene</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="29" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="9" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1a1da615ee461b4a00fbfaa677ed7a4da9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Physics2D::DestroyWorld</definition>
+        <argsstring>()</argsstring>
+        <name>DestroyWorld</name>
+        <qualifiedname>AGE::Physics2D::DestroyWorld</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="31" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="16" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1aab2e4d5046befe7a103abf19c1a00ae6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Physics2D::Step</definition>
+        <argsstring>(TimeStep DeltaTime)</argsstring>
+        <name>Step</name>
+        <qualifiedname>AGE::Physics2D::Step</qualifiedname>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_time_step" kindref="compound">TimeStep</ref></type>
+          <declname>DeltaTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="33" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="21" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1a7ca9eb4ef92b4f99aeb6dec5145d74c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>b2BodyId</type>
+        <definition>b2BodyId AGE::Physics2D::CreateBody</definition>
+        <argsstring>(b2BodyDef &amp;Def)</argsstring>
+        <name>CreateBody</name>
+        <qualifiedname>AGE::Physics2D::CreateBody</qualifiedname>
+        <param>
+          <type>b2BodyDef &amp;</type>
+          <declname>Def</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="35" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="27" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1a0d3ea824190894f0351ce3e3d1bab6a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>b2BodyDef</type>
+        <definition>b2BodyDef AGE::Physics2D::MakeBodyDefinition</definition>
+        <argsstring>(const BodyType &amp;Type, const Vector3 &amp;Translation, const Vector3 &amp;Rotation, bool IsRotationFixed, void *UserData)</argsstring>
+        <name>MakeBodyDefinition</name>
+        <qualifiedname>AGE::Physics2D::MakeBodyDefinition</qualifiedname>
+        <param>
+          <type>const BodyType &amp;</type>
+          <declname>Type</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> &amp;</type>
+          <declname>Translation</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> &amp;</type>
+          <declname>Rotation</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>IsRotationFixed</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>UserData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="37" column="11" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="32" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1a78ea4e0c6124d7e8dd37fbcfe611fd4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>b2ShapeDef</type>
+        <definition>b2ShapeDef AGE::Physics2D::MakeShapeDefinition</definition>
+        <argsstring>(float Density, float Friction, float Restitution, bool ShouldGenerateEvents, void *UserData)</argsstring>
+        <name>MakeShapeDefinition</name>
+        <qualifiedname>AGE::Physics2D::MakeShapeDefinition</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>Density</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>Friction</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>Restitution</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>ShouldGenerateEvents</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>UserData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="39" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="37" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1a89852b176be5aded9168e8bb42c68b6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>b2Rot</type>
+        <definition>b2Rot AGE::Physics2D::MakeRotation</definition>
+        <argsstring>(float Z)</argsstring>
+        <name>MakeRotation</name>
+        <qualifiedname>AGE::Physics2D::MakeRotation</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>Z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="41" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="42" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1aa7812f887b022c7109f39cb6663d5bfd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>b2Polygon</type>
+        <definition>b2Polygon AGE::Physics2D::CreateBox</definition>
+        <argsstring>(float HeightX, float HeightY, const Vector3 &amp;Scale)</argsstring>
+        <name>CreateBox</name>
+        <qualifiedname>AGE::Physics2D::CreateBox</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>HeightX</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>HeightY</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> &amp;</type>
+          <declname>Scale</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="43" column="11" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="47" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1a09288cbc0be113f9d356d730e2b2348a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>b2ShapeId</type>
+        <definition>b2ShapeId AGE::Physics2D::CreatePolygonShape</definition>
+        <argsstring>(const b2BodyId &amp;ID, const b2ShapeDef &amp;Fixture, const b2Polygon &amp;Box)</argsstring>
+        <name>CreatePolygonShape</name>
+        <qualifiedname>AGE::Physics2D::CreatePolygonShape</qualifiedname>
+        <param>
+          <type>const b2BodyId &amp;</type>
+          <declname>ID</declname>
+        </param>
+        <param>
+          <type>const b2ShapeDef &amp;</type>
+          <declname>Fixture</declname>
+        </param>
+        <param>
+          <type>const b2Polygon &amp;</type>
+          <declname>Box</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="44" column="11" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="52" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1a5ddbde137d8a60e89347371184146238" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>b2Capsule</type>
+        <definition>b2Capsule AGE::Physics2D::CreateCapsule</definition>
+        <argsstring>(const Vector2 &amp;Offset, const Vector3 &amp;Scale, const float Radius)</argsstring>
+        <name>CreateCapsule</name>
+        <qualifiedname>AGE::Physics2D::CreateCapsule</qualifiedname>
+        <param>
+          <type>const <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> &amp;</type>
+          <declname>Offset</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> &amp;</type>
+          <declname>Scale</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>Radius</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="46" column="11" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="57" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1a4d0008a402acfdd194fded0badb193f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>b2ShapeId</type>
+        <definition>b2ShapeId AGE::Physics2D::CreateCapsuleShape</definition>
+        <argsstring>(const b2BodyId &amp;ID, const b2ShapeDef &amp;Fixture, const b2Capsule &amp;Capsule)</argsstring>
+        <name>CreateCapsuleShape</name>
+        <qualifiedname>AGE::Physics2D::CreateCapsuleShape</qualifiedname>
+        <param>
+          <type>const b2BodyId &amp;</type>
+          <declname>ID</declname>
+        </param>
+        <param>
+          <type>const b2ShapeDef &amp;</type>
+          <declname>Fixture</declname>
+        </param>
+        <param>
+          <type>const b2Capsule &amp;</type>
+          <declname>Capsule</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="47" column="11" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="62" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1af0a7c9f196572e4486910f42cedde798" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>b2Segment</type>
+        <definition>b2Segment AGE::Physics2D::CreateSegment</definition>
+        <argsstring>()</argsstring>
+        <name>CreateSegment</name>
+        <qualifiedname>AGE::Physics2D::CreateSegment</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="49" column="11" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="67" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1a667aa9a767046869cd8e4e1cbbe2c153" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>b2ShapeId</type>
+        <definition>b2ShapeId AGE::Physics2D::CreateSegmentShape</definition>
+        <argsstring>(const b2BodyId &amp;ID, const b2ShapeDef &amp;Fixture, const b2Segment &amp;Segment)</argsstring>
+        <name>CreateSegmentShape</name>
+        <qualifiedname>AGE::Physics2D::CreateSegmentShape</qualifiedname>
+        <param>
+          <type>const b2BodyId &amp;</type>
+          <declname>ID</declname>
+        </param>
+        <param>
+          <type>const b2ShapeDef &amp;</type>
+          <declname>Fixture</declname>
+        </param>
+        <param>
+          <type>const b2Segment &amp;</type>
+          <declname>Segment</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="50" column="11" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="72" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1a01a3ed94bda0b004e73eeeee91877c8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>b2BodyId</type>
+        <definition>b2BodyId AGE::Physics2D::GetBody</definition>
+        <argsstring>(const b2ShapeId &amp;ID)</argsstring>
+        <name>GetBody</name>
+        <qualifiedname>AGE::Physics2D::GetBody</qualifiedname>
+        <param>
+          <type>const b2ShapeId &amp;</type>
+          <declname>ID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="52" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="77" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1ac4a1b85b35458eacc61bd0a37e3c05ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref></type>
+        <definition>Vector2 AGE::Physics2D::GetBodyPosition</definition>
+        <argsstring>(const b2BodyId &amp;ID)</argsstring>
+        <name>GetBodyPosition</name>
+        <qualifiedname>AGE::Physics2D::GetBodyPosition</qualifiedname>
+        <param>
+          <type>const b2BodyId &amp;</type>
+          <declname>ID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="54" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="82" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1a36327e8fe7645a27c5e238304125aba7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>b2Polygon</type>
+        <definition>b2Polygon AGE::Physics2D::GetPolygon</definition>
+        <argsstring>(const b2ShapeId &amp;ID)</argsstring>
+        <name>GetPolygon</name>
+        <qualifiedname>AGE::Physics2D::GetPolygon</qualifiedname>
+        <param>
+          <type>const b2ShapeId &amp;</type>
+          <declname>ID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="56" column="11" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="87" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1aea9cfd3b1e69cfe440b062e12bbcff46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>b2Capsule</type>
+        <definition>b2Capsule AGE::Physics2D::GetCapsule</definition>
+        <argsstring>(const b2ShapeId &amp;ID)</argsstring>
+        <name>GetCapsule</name>
+        <qualifiedname>AGE::Physics2D::GetCapsule</qualifiedname>
+        <param>
+          <type>const b2ShapeId &amp;</type>
+          <declname>ID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="58" column="11" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="92" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1a55bfb348e08983085fc747aa28499571" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void * AGE::Physics2D::GetUserData</definition>
+        <argsstring>(const b2ShapeId &amp;ID)</argsstring>
+        <name>GetUserData</name>
+        <qualifiedname>AGE::Physics2D::GetUserData</qualifiedname>
+        <param>
+          <type>const b2ShapeId &amp;</type>
+          <declname>ID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="60" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="97" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1a903130e45dbe5679c2b6dd2b64c58923" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float AGE::Physics2D::GetRotationAngle</definition>
+        <argsstring>(const b2BodyId &amp;ID)</argsstring>
+        <name>GetRotationAngle</name>
+        <qualifiedname>AGE::Physics2D::GetRotationAngle</qualifiedname>
+        <param>
+          <type>const b2BodyId &amp;</type>
+          <declname>ID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="61" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="102" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1a5417d4ab9a1556f28a78aaa46f12b86d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Physics2D::QueryBoxOverlap</definition>
+        <argsstring>(const QueryParams &amp;Params)</argsstring>
+        <name>QueryBoxOverlap</name>
+        <qualifiedname>AGE::Physics2D::QueryBoxOverlap</qualifiedname>
+        <param>
+          <type>const <ref refid="struct_a_g_e_1_1_query_params" kindref="compound">QueryParams</ref> &amp;</type>
+          <declname>Params</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="63" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="107" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1a7be165cc6655cf354ae3dbb8f50aaf2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Physics2D::QueryCapsuleOverlap</definition>
+        <argsstring>(const QueryParams &amp;Params)</argsstring>
+        <name>QueryCapsuleOverlap</name>
+        <qualifiedname>AGE::Physics2D::QueryCapsuleOverlap</qualifiedname>
+        <param>
+          <type>const <ref refid="struct_a_g_e_1_1_query_params" kindref="compound">QueryParams</ref> &amp;</type>
+          <declname>Params</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="65" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="112" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1a26a1bc372105af780d3cf124cf5ae58b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Physics2D::QuerySegmentOverlap</definition>
+        <argsstring>(const QueryParams &amp;Params)</argsstring>
+        <name>QuerySegmentOverlap</name>
+        <qualifiedname>AGE::Physics2D::QuerySegmentOverlap</qualifiedname>
+        <param>
+          <type>const <ref refid="struct_a_g_e_1_1_query_params" kindref="compound">QueryParams</ref> &amp;</type>
+          <declname>Params</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="67" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="117" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1a31b2194fb719f3994818f6414ea3c697" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AGE::Physics2D::QueryHit</definition>
+        <argsstring>(const QueryParams &amp;Params)</argsstring>
+        <name>QueryHit</name>
+        <qualifiedname>AGE::Physics2D::QueryHit</qualifiedname>
+        <param>
+          <type>const <ref refid="struct_a_g_e_1_1_query_params" kindref="compound">QueryParams</ref> &amp;</type>
+          <declname>Params</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="69" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="121" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1a309277b959747e049a364822b0ed22ea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Ref&lt; <ref refid="class_a_g_e_1_1_world" kindref="compound">World</ref> &gt; &amp;</type>
+        <definition>Ref&lt; World &gt; &amp; AGE::Physics2D::GetWorld</definition>
+        <argsstring>()</argsstring>
+        <name>GetWorld</name>
+        <qualifiedname>AGE::Physics2D::GetWorld</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="71" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" bodystart="71" bodyend="71"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1a340743b747883612c682e15f3e7e15bc" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>static T AGE::Physics2D::GetShapeFromID</definition>
+        <argsstring>(b2ShapeId ID)</argsstring>
+        <name>GetShapeFromID</name>
+        <qualifiedname>AGE::Physics2D::GetShapeFromID</qualifiedname>
+        <param>
+          <type>b2ShapeId</type>
+          <declname>ID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="74" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" bodystart="74" bodyend="99"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="21" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" bodystart="22" bodyend="103"/>
+    <listofallmembers>
+      <member refid="class_a_g_e_1_1_physics2_d_1a7ca9eb4ef92b4f99aeb6dec5145d74c8" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>CreateBody</name></member>
+      <member refid="class_a_g_e_1_1_physics2_d_1aa7812f887b022c7109f39cb6663d5bfd" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>CreateBox</name></member>
+      <member refid="class_a_g_e_1_1_physics2_d_1a5ddbde137d8a60e89347371184146238" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>CreateCapsule</name></member>
+      <member refid="class_a_g_e_1_1_physics2_d_1a4d0008a402acfdd194fded0badb193f5" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>CreateCapsuleShape</name></member>
+      <member refid="class_a_g_e_1_1_physics2_d_1aa946f6a04682792de0513006b5ac48b2" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>CreateNewPhysicsWorld</name></member>
+      <member refid="class_a_g_e_1_1_physics2_d_1a09288cbc0be113f9d356d730e2b2348a" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>CreatePolygonShape</name></member>
+      <member refid="class_a_g_e_1_1_physics2_d_1af0a7c9f196572e4486910f42cedde798" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>CreateSegment</name></member>
+      <member refid="class_a_g_e_1_1_physics2_d_1a667aa9a767046869cd8e4e1cbbe2c153" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>CreateSegmentShape</name></member>
+      <member refid="class_a_g_e_1_1_physics2_d_1a1da615ee461b4a00fbfaa677ed7a4da9" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>DestroyWorld</name></member>
+      <member refid="class_a_g_e_1_1_physics2_d_1a01a3ed94bda0b004e73eeeee91877c8b" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>GetBody</name></member>
+      <member refid="class_a_g_e_1_1_physics2_d_1ac4a1b85b35458eacc61bd0a37e3c05ef" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>GetBodyPosition</name></member>
+      <member refid="class_a_g_e_1_1_physics2_d_1aea9cfd3b1e69cfe440b062e12bbcff46" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>GetCapsule</name></member>
+      <member refid="class_a_g_e_1_1_physics2_d_1a36327e8fe7645a27c5e238304125aba7" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>GetPolygon</name></member>
+      <member refid="class_a_g_e_1_1_physics2_d_1a903130e45dbe5679c2b6dd2b64c58923" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>GetRotationAngle</name></member>
+      <member refid="class_a_g_e_1_1_physics2_d_1a340743b747883612c682e15f3e7e15bc" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>GetShapeFromID</name></member>
+      <member refid="class_a_g_e_1_1_physics2_d_1a55bfb348e08983085fc747aa28499571" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>GetUserData</name></member>
+      <member refid="class_a_g_e_1_1_physics2_d_1a309277b959747e049a364822b0ed22ea" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>GetWorld</name></member>
+      <member refid="class_a_g_e_1_1_physics2_d_1ade19b33749a6d5453f8a4a3f1525dd6a" prot="private" virt="non-virtual"><scope>AGE::Physics2D</scope><name>m_World</name></member>
+      <member refid="class_a_g_e_1_1_physics2_d_1a0d3ea824190894f0351ce3e3d1bab6a6" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>MakeBodyDefinition</name></member>
+      <member refid="class_a_g_e_1_1_physics2_d_1a89852b176be5aded9168e8bb42c68b6a" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>MakeRotation</name></member>
+      <member refid="class_a_g_e_1_1_physics2_d_1a78ea4e0c6124d7e8dd37fbcfe611fd4a" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>MakeShapeDefinition</name></member>
+      <member refid="class_a_g_e_1_1_physics2_d_1ad37ce5f62d4c41b2e76449cb04908e6e" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>Physics2D</name></member>
+      <member refid="class_a_g_e_1_1_physics2_d_1a5417d4ab9a1556f28a78aaa46f12b86d" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>QueryBoxOverlap</name></member>
+      <member refid="class_a_g_e_1_1_physics2_d_1a7be165cc6655cf354ae3dbb8f50aaf2c" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>QueryCapsuleOverlap</name></member>
+      <member refid="class_a_g_e_1_1_physics2_d_1a31b2194fb719f3994818f6414ea3c697" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>QueryHit</name></member>
+      <member refid="class_a_g_e_1_1_physics2_d_1a26a1bc372105af780d3cf124cf5ae58b" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>QuerySegmentOverlap</name></member>
+      <member refid="class_a_g_e_1_1_physics2_d_1aab2e4d5046befe7a103abf19c1a00ae6" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>Step</name></member>
+      <member refid="class_a_g_e_1_1_physics2_d_1abc1e0715af2e0158acc97998f1ac9345" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>~Physics2D</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

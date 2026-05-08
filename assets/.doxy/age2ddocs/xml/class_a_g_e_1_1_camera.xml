@@ -1,0 +1,338 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_a_g_e_1_1_camera" kind="class" language="C++" prot="public">
+    <compoundname>AGE::Camera</compoundname>
+    <derivedcompoundref refid="class_a_g_e_1_1_editor_camera" prot="public" virt="non-virtual">AGE::EditorCamera</derivedcompoundref>
+    <derivedcompoundref refid="class_a_g_e_1_1_scene_camera" prot="public" virt="non-virtual">AGE::SceneCamera</derivedcompoundref>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_a_g_e_1_1_camera_1a03a93bc6e4ca35c67511f31932ce9f4b" prot="protected" static="no" mutable="no">
+        <type><ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref></type>
+        <definition>Matrix4D AGE::Camera::m_Projection</definition>
+        <argsstring></argsstring>
+        <name>m_Projection</name>
+        <qualifiedname>AGE::Camera::m_Projection</qualifiedname>
+        <initializer>{ 1.f }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Camera/Public/Camera.h" line="35" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Camera/Public/Camera.h" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_camera_1ade17b6d9846d5da155392d08ec0a7db2" prot="protected" static="no" mutable="no">
+        <type><ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref></type>
+        <definition>Matrix4D AGE::Camera::m_World</definition>
+        <argsstring></argsstring>
+        <name>m_World</name>
+        <qualifiedname>AGE::Camera::m_World</qualifiedname>
+        <initializer>{ 1.f }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Camera/Public/Camera.h" line="36" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Camera/Public/Camera.h" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_camera_1a575ade42efdaa4663e1183dd8782e26e" prot="protected" static="no" mutable="no">
+        <type><ref refid="struct_a_g_e_1_1__constant_buffer_struct" kindref="compound">ConstantBufferStruct</ref></type>
+        <definition>ConstantBufferStruct AGE::Camera::m_ConstantBuffer</definition>
+        <argsstring></argsstring>
+        <name>m_ConstantBuffer</name>
+        <qualifiedname>AGE::Camera::m_ConstantBuffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Camera/Public/Camera.h" line="37" column="22" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Camera/Public/Camera.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_camera_1a87746b677a12de3218134a536acf77e8" prot="protected" static="no" mutable="no">
+        <type>ProjectionType</type>
+        <definition>ProjectionType AGE::Camera::m_ProjectionType</definition>
+        <argsstring></argsstring>
+        <name>m_ProjectionType</name>
+        <qualifiedname>AGE::Camera::m_ProjectionType</qualifiedname>
+        <initializer>= ProjectionType::Orthographic</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Camera/Public/Camera.h" line="38" column="16" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Camera/Public/Camera.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_camera_1a904b9176ed6cc1e0199208fd3c712af2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AGE::Camera::Camera</definition>
+        <argsstring>()=default</argsstring>
+        <name>Camera</name>
+        <qualifiedname>AGE::Camera::Camera</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Camera/Public/Camera.h" line="17" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_camera_1ab45225a87d4aad01b111435ff866c89d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>AGE::Camera::Camera</definition>
+        <argsstring>(Matrix4D Projection)</argsstring>
+        <name>Camera</name>
+        <qualifiedname>AGE::Camera::Camera</qualifiedname>
+        <param>
+          <type><ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref></type>
+          <declname>Projection</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Camera/Public/Camera.h" line="18" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Camera/Public/Camera.h" bodystart="18" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_camera_1a8b76a5e82bd66d6dd9ce0698b364ebe2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>AGE::Camera::Camera</definition>
+        <argsstring>(Vector4 Eye, Vector4 At, Vector4 Up)</argsstring>
+        <name>Camera</name>
+        <qualifiedname>AGE::Camera::Camera</qualifiedname>
+        <param>
+          <type><ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref></type>
+          <declname>Eye</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref></type>
+          <declname>At</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref></type>
+          <declname>Up</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Camera/Public/Camera.h" line="20" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Camera/Public/Camera.h" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_camera_1aa47e4ff49678bfaa8c40566b56f14a27" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> &amp;</type>
+        <definition>const Matrix4D &amp; AGE::Camera::GetProjection</definition>
+        <argsstring>() const</argsstring>
+        <name>GetProjection</name>
+        <qualifiedname>AGE::Camera::GetProjection</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Camera/Public/Camera.h" line="22" column="16" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Camera/Public/Camera.h" bodystart="22" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_camera_1aca3ad9161160012257758bae54ec3bdb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> &amp;</type>
+        <definition>Matrix4D &amp; AGE::Camera::GetProjection</definition>
+        <argsstring>()</argsstring>
+        <name>GetProjection</name>
+        <qualifiedname>AGE::Camera::GetProjection</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Camera/Public/Camera.h" line="23" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Camera/Public/Camera.h" bodystart="23" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_camera_1af076d805edf3aaba46190c35f655d174" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref></type>
+        <definition>const Matrix4D AGE::Camera::GetWorldMatrix</definition>
+        <argsstring>() const</argsstring>
+        <name>GetWorldMatrix</name>
+        <qualifiedname>AGE::Camera::GetWorldMatrix</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Camera/Public/Camera.h" line="24" column="16" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Camera/Public/Camera.h" bodystart="24" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_camera_1a24e2d7c0a4a3a98c35b0838e295d0e17" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref></type>
+        <definition>Matrix4D AGE::Camera::GetWorldMatrix</definition>
+        <argsstring>()</argsstring>
+        <name>GetWorldMatrix</name>
+        <qualifiedname>AGE::Camera::GetWorldMatrix</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Camera/Public/Camera.h" line="25" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Camera/Public/Camera.h" bodystart="25" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_camera_1a1256707927f702d6618d1c9334b833ac" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="struct_a_g_e_1_1__constant_buffer_struct" kindref="compound">ConstantBufferStruct</ref></type>
+        <definition>const ConstantBufferStruct AGE::Camera::GetConstantBufferData</definition>
+        <argsstring>() const</argsstring>
+        <name>GetConstantBufferData</name>
+        <qualifiedname>AGE::Camera::GetConstantBufferData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Camera/Public/Camera.h" line="26" column="28" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Camera/Public/Camera.h" bodystart="26" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_camera_1a0388f16578b45882530e773e1571dd7d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_a_g_e_1_1__constant_buffer_struct" kindref="compound">ConstantBufferStruct</ref></type>
+        <definition>ConstantBufferStruct AGE::Camera::GetConstantBufferData</definition>
+        <argsstring>()</argsstring>
+        <name>GetConstantBufferData</name>
+        <qualifiedname>AGE::Camera::GetConstantBufferData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Camera/Public/Camera.h" line="27" column="22" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Camera/Public/Camera.h" bodystart="27" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_camera_1a972cb8593f2741f883a1faba14f122b6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>ProjectionType</type>
+        <definition>ProjectionType AGE::Camera::GetProjectionType</definition>
+        <argsstring>() const</argsstring>
+        <name>GetProjectionType</name>
+        <qualifiedname>AGE::Camera::GetProjectionType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Camera/Public/Camera.h" line="28" column="16" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Camera/Public/Camera.h" bodystart="28" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_camera_1a085bf7edd6d4595a210c9f982ac57af1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void AGE::Camera::SetProjectionType</definition>
+        <argsstring>(ProjectionType Type)</argsstring>
+        <name>SetProjectionType</name>
+        <qualifiedname>AGE::Camera::SetProjectionType</qualifiedname>
+        <reimplementedby refid="class_a_g_e_1_1_editor_camera_1a305852f1c271968ece1b945ce745f259">SetProjectionType</reimplementedby>
+        <reimplementedby refid="class_a_g_e_1_1_scene_camera_1a0465fbdcf741b10d0008ef0fdc26ab2e">SetProjectionType</reimplementedby>
+        <param>
+          <type>ProjectionType</type>
+          <declname>Type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Camera/Public/Camera.h" line="29" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Camera/Public/Camera.h" bodystart="29" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_camera_1a196799c35e8e9939ad748928fb998d25" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual AGE::Camera::~Camera</definition>
+        <argsstring>()</argsstring>
+        <name>~Camera</name>
+        <qualifiedname>AGE::Camera::~Camera</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Camera/Public/Camera.h" line="31" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Camera/Public/Camera.h" bodystart="31" bodyend="31"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>AGE::Camera</label>
+        <link refid="class_a_g_e_1_1_camera"/>
+      </node>
+      <node id="2">
+        <label>AGE::EditorCamera</label>
+        <link refid="class_a_g_e_1_1_editor_camera"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>AGE::SceneCamera</label>
+        <link refid="class_a_g_e_1_1_scene_camera"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>AGE::Camera</label>
+        <link refid="class_a_g_e_1_1_camera"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>m_Projection</edgelabel>
+          <edgelabel>m_World</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>m_ConstantBuffer</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>AGE::Matrix4D</label>
+        <link refid="struct_a_g_e_1_1_matrix4_d"/>
+      </node>
+      <node id="4">
+        <label>AGE::Vector4</label>
+        <link refid="struct_a_g_e_1_1_vector4"/>
+      </node>
+      <node id="3">
+        <label>AGE::_constantBufferStruct</label>
+        <link refid="struct_a_g_e_1_1__constant_buffer_struct"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>At</edgelabel>
+          <edgelabel>Eye</edgelabel>
+          <edgelabel>Up</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>Projection</edgelabel>
+          <edgelabel>View</edgelabel>
+          <edgelabel>ViewProjectionWorldMatrix</edgelabel>
+          <edgelabel>World</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Camera/Public/Camera.h" line="13" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Camera/Public/Camera.h" bodystart="14" bodyend="40"/>
+    <listofallmembers>
+      <member refid="class_a_g_e_1_1_camera_1a904b9176ed6cc1e0199208fd3c712af2" prot="public" virt="non-virtual"><scope>AGE::Camera</scope><name>Camera</name></member>
+      <member refid="class_a_g_e_1_1_camera_1ab45225a87d4aad01b111435ff866c89d" prot="public" virt="non-virtual"><scope>AGE::Camera</scope><name>Camera</name></member>
+      <member refid="class_a_g_e_1_1_camera_1a8b76a5e82bd66d6dd9ce0698b364ebe2" prot="public" virt="non-virtual"><scope>AGE::Camera</scope><name>Camera</name></member>
+      <member refid="class_a_g_e_1_1_camera_1a1256707927f702d6618d1c9334b833ac" prot="public" virt="non-virtual"><scope>AGE::Camera</scope><name>GetConstantBufferData</name></member>
+      <member refid="class_a_g_e_1_1_camera_1a0388f16578b45882530e773e1571dd7d" prot="public" virt="non-virtual"><scope>AGE::Camera</scope><name>GetConstantBufferData</name></member>
+      <member refid="class_a_g_e_1_1_camera_1aa47e4ff49678bfaa8c40566b56f14a27" prot="public" virt="non-virtual"><scope>AGE::Camera</scope><name>GetProjection</name></member>
+      <member refid="class_a_g_e_1_1_camera_1aca3ad9161160012257758bae54ec3bdb" prot="public" virt="non-virtual"><scope>AGE::Camera</scope><name>GetProjection</name></member>
+      <member refid="class_a_g_e_1_1_camera_1a972cb8593f2741f883a1faba14f122b6" prot="public" virt="non-virtual"><scope>AGE::Camera</scope><name>GetProjectionType</name></member>
+      <member refid="class_a_g_e_1_1_camera_1af076d805edf3aaba46190c35f655d174" prot="public" virt="non-virtual"><scope>AGE::Camera</scope><name>GetWorldMatrix</name></member>
+      <member refid="class_a_g_e_1_1_camera_1a24e2d7c0a4a3a98c35b0838e295d0e17" prot="public" virt="non-virtual"><scope>AGE::Camera</scope><name>GetWorldMatrix</name></member>
+      <member refid="class_a_g_e_1_1_camera_1a575ade42efdaa4663e1183dd8782e26e" prot="protected" virt="non-virtual"><scope>AGE::Camera</scope><name>m_ConstantBuffer</name></member>
+      <member refid="class_a_g_e_1_1_camera_1a03a93bc6e4ca35c67511f31932ce9f4b" prot="protected" virt="non-virtual"><scope>AGE::Camera</scope><name>m_Projection</name></member>
+      <member refid="class_a_g_e_1_1_camera_1a87746b677a12de3218134a536acf77e8" prot="protected" virt="non-virtual"><scope>AGE::Camera</scope><name>m_ProjectionType</name></member>
+      <member refid="class_a_g_e_1_1_camera_1ade17b6d9846d5da155392d08ec0a7db2" prot="protected" virt="non-virtual"><scope>AGE::Camera</scope><name>m_World</name></member>
+      <member refid="class_a_g_e_1_1_camera_1a085bf7edd6d4595a210c9f982ac57af1" prot="public" virt="virtual"><scope>AGE::Camera</scope><name>SetProjectionType</name></member>
+      <member refid="class_a_g_e_1_1_camera_1a196799c35e8e9939ad748928fb998d25" prot="public" virt="virtual"><scope>AGE::Camera</scope><name>~Camera</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

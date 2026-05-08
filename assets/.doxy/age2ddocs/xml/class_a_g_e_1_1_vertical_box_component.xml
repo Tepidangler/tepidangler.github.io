@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_a_g_e_1_1_vertical_box_component" kind="class" language="C++" prot="public">
+    <compoundname>AGE::VerticalBoxComponent</compoundname>
+    <basecompoundref refid="class_a_g_e_1_1_u_i_component" prot="public" virt="non-virtual">AGE::UIComponent</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_a_g_e_1_1_vertical_box_component_1a02210da0c2e37a8f951e31d73ee51549" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_a_g_e_1_1_u_i_component" kindref="compound">UIComponent</ref> &gt;</type>
+        <definition>std::vector&lt;UIComponent&gt; AGE::VerticalBoxComponent::m_Components</definition>
+        <argsstring></argsstring>
+        <name>m_Components</name>
+        <qualifiedname>AGE::VerticalBoxComponent::m_Components</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/VerticalBoxComponent.h" line="32" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/VerticalBoxComponent.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_vertical_box_component_1a6962b6cf14c7cef2d0fb5c152eff109b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AGE::VerticalBoxComponent::VerticalBoxComponent</definition>
+        <argsstring>(const std::string &amp;Name)</argsstring>
+        <name>VerticalBoxComponent</name>
+        <qualifiedname>AGE::VerticalBoxComponent::VerticalBoxComponent</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>Name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/VerticalBoxComponent.h" line="14" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/VerticalBoxComponent.cpp" bodystart="16" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_vertical_box_component_1a63ea52ac2c3394e9185608681439fda5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AGE::VerticalBoxComponent::OnUpdate</definition>
+        <argsstring>(TimeStep DeltaTime) override</argsstring>
+        <name>OnUpdate</name>
+        <qualifiedname>AGE::VerticalBoxComponent::OnUpdate</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_u_i_component_1ae4301442c1ffde16569eb25b55faf29a">OnUpdate</reimplements>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_time_step" kindref="compound">TimeStep</ref></type>
+          <declname>DeltaTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/VerticalBoxComponent.h" line="15" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/VerticalBoxComponent.cpp" bodystart="21" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_vertical_box_component_1a07ef0a7b422bc31725a022409baace31" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AGE::VerticalBoxComponent::OnEvent</definition>
+        <argsstring>(Event &amp;Event) override</argsstring>
+        <name>OnEvent</name>
+        <qualifiedname>AGE::VerticalBoxComponent::OnEvent</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_u_i_component_1af262f42df2803d3e99fc07d7de0cb76e">OnEvent</reimplements>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref> &amp;</type>
+          <declname>Event</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/VerticalBoxComponent.h" line="16" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/VerticalBoxComponent.cpp" bodystart="26" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_vertical_box_component_1a420612b19740aa5beaa7a24870b348c2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void AGE::VerticalBoxComponent::CallSerialize</definition>
+        <argsstring>(DataWriter *Serializer) override</argsstring>
+        <name>CallSerialize</name>
+        <qualifiedname>AGE::VerticalBoxComponent::CallSerialize</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_u_i_component_1ab980baa2a8dba2ec06867b6208e352ee">CallSerialize</reimplements>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref> *</type>
+          <declname>Serializer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/VerticalBoxComponent.h" line="18" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/VerticalBoxComponent.h" bodystart="18" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_vertical_box_component_1a0595b7cbcb0094e2740afc486bede4d8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void AGE::VerticalBoxComponent::CallDeserialize</definition>
+        <argsstring>(DataReader *Serializer) override</argsstring>
+        <name>CallDeserialize</name>
+        <qualifiedname>AGE::VerticalBoxComponent::CallDeserialize</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_u_i_component_1aadb5753077366d876badd0bc7919e7f2">CallDeserialize</reimplements>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref> *</type>
+          <declname>Serializer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/VerticalBoxComponent.h" line="22" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/VerticalBoxComponent.h" bodystart="22" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_vertical_box_component_1a9d414c55abb28cfa350adb6346bc2967" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AGE::VerticalBoxComponent::DrawContent</definition>
+        <argsstring>() override</argsstring>
+        <name>DrawContent</name>
+        <qualifiedname>AGE::VerticalBoxComponent::DrawContent</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_u_i_component_1ab7694d7df5410816a9fa16f17e4dbe42">DrawContent</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/VerticalBoxComponent.h" line="26" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/VerticalBoxComponent.cpp" bodystart="29" bodyend="30"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>AGE::UIComponent</label>
+        <link refid="class_a_g_e_1_1_u_i_component"/>
+      </node>
+      <node id="1">
+        <label>AGE::VerticalBoxComponent</label>
+        <link refid="class_a_g_e_1_1_vertical_box_component"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>AGE::UIComponent</label>
+        <link refid="class_a_g_e_1_1_u_i_component"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>m_CompProperties</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>m_Type</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>AGE::UIComponentType</label>
+        <link refid="struct_a_g_e_1_1_u_i_component_type"/>
+      </node>
+      <node id="3">
+        <label>AGE::UIProperties</label>
+        <link refid="struct_a_g_e_1_1_u_i_properties"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>Position</edgelabel>
+          <edgelabel>Rotation</edgelabel>
+          <edgelabel>Scale</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>AGE::Vector3</label>
+        <link refid="struct_a_g_e_1_1_vector3"/>
+      </node>
+      <node id="1">
+        <label>AGE::VerticalBoxComponent</label>
+        <link refid="class_a_g_e_1_1_vertical_box_component"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/VerticalBoxComponent.h" line="11" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/VerticalBoxComponent.h" bodystart="12" bodyend="33"/>
+    <listofallmembers>
+      <member refid="class_a_g_e_1_1_u_i_component_1a98e1aaddee431d6b3b7ff6f5e5536de4" prot="public" virt="non-virtual"><scope>AGE::VerticalBoxComponent</scope><name>As</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1a3dfa8952db40b83e29831b76352fa8e5" prot="public" virt="non-virtual"><scope>AGE::VerticalBoxComponent</scope><name>As</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1acf6c7eb7b2a777afa18e6493d3897dba" prot="public" virt="non-virtual"><scope>AGE::VerticalBoxComponent</scope><name>As</name></member>
+      <member refid="class_a_g_e_1_1_vertical_box_component_1a0595b7cbcb0094e2740afc486bede4d8" prot="public" virt="virtual"><scope>AGE::VerticalBoxComponent</scope><name>CallDeserialize</name></member>
+      <member refid="class_a_g_e_1_1_vertical_box_component_1a420612b19740aa5beaa7a24870b348c2" prot="public" virt="virtual"><scope>AGE::VerticalBoxComponent</scope><name>CallSerialize</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1a4088d9575b7ec2ee48863d8aa4b5e6a3" prot="public" virt="non-virtual"><scope>AGE::VerticalBoxComponent</scope><name>Create</name></member>
+      <member refid="class_a_g_e_1_1_vertical_box_component_1a9d414c55abb28cfa350adb6346bc2967" prot="public" virt="virtual"><scope>AGE::VerticalBoxComponent</scope><name>DrawContent</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1a889fdb1f193f054f459e23dd8e9ce4ea" prot="public" virt="virtual"><scope>AGE::VerticalBoxComponent</scope><name>DrawFontSelectionComboBox</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1af6baa3f8d5e27906bb0cf5505920323d" prot="public" virt="non-virtual"><scope>AGE::VerticalBoxComponent</scope><name>DrawVec3Control</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1a3df91ca59da478917bd7eb78d549db12" prot="public" virt="non-virtual"><scope>AGE::VerticalBoxComponent</scope><name>GetName</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1a4ef9f31a7abf44b81eaafc8b9833cc06" prot="public" virt="non-virtual"><scope>AGE::VerticalBoxComponent</scope><name>GetProperties</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1a2914f47755abcb3dbfcf0b569b820941" prot="public" virt="non-virtual"><scope>AGE::VerticalBoxComponent</scope><name>GetType</name></member>
+      <member refid="class_a_g_e_1_1_vertical_box_component_1a02210da0c2e37a8f951e31d73ee51549" prot="private" virt="non-virtual"><scope>AGE::VerticalBoxComponent</scope><name>m_Components</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1a8e74315a28174ed994140cee418bd474" prot="public" virt="non-virtual"><scope>AGE::VerticalBoxComponent</scope><name>m_CompProperties</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1ab4c43eed0f90da0db0f34d74bc674575" prot="public" virt="non-virtual"><scope>AGE::VerticalBoxComponent</scope><name>m_Name</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1aaa85c9e119337b1324a36e6a0789da17" prot="protected" virt="non-virtual"><scope>AGE::VerticalBoxComponent</scope><name>m_Type</name></member>
+      <member refid="class_a_g_e_1_1_vertical_box_component_1a07ef0a7b422bc31725a022409baace31" prot="public" virt="virtual"><scope>AGE::VerticalBoxComponent</scope><name>OnEvent</name></member>
+      <member refid="class_a_g_e_1_1_vertical_box_component_1a63ea52ac2c3394e9185608681439fda5" prot="public" virt="virtual"><scope>AGE::VerticalBoxComponent</scope><name>OnUpdate</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1a7955733141e63b2394ce979b66bc0c56" prot="public" virt="non-virtual"><scope>AGE::VerticalBoxComponent</scope><name>UIComponent</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1a29c332b5bd25803ae65891fb6c8714dd" prot="protected" virt="non-virtual"><scope>AGE::VerticalBoxComponent</scope><name>UIComponent</name></member>
+      <member refid="class_a_g_e_1_1_vertical_box_component_1a6962b6cf14c7cef2d0fb5c152eff109b" prot="public" virt="non-virtual"><scope>AGE::VerticalBoxComponent</scope><name>VerticalBoxComponent</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1a1285b3235baab89e21dec5dedc9644d8" prot="public" virt="virtual"><scope>AGE::VerticalBoxComponent</scope><name>~UIComponent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

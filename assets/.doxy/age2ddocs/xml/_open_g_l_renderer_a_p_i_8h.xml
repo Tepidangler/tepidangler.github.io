@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="_open_g_l_renderer_a_p_i_8h" kind="file" language="C++">
+    <compoundname>OpenGLRendererAPI.h</compoundname>
+    <includes refid="_render_a_p_i_8h" local="yes">Render/Public/RenderAPI.h</includes>
+    <includedby refid="_open_g_l_renderer_a_p_i_8cpp" local="yes">C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLRendererAPI.cpp</includedby>
+    <includedby refid="_render_a_p_i_8cpp" local="yes">C:/Programming/AGE2D/Engine/src/AGE/Render/Private/RenderAPI.cpp</includedby>
+    <includedby refid="_render_command_8cpp" local="yes">C:/Programming/AGE2D/Engine/src/AGE/Render/Private/RenderCommand.cpp</includedby>
+    <innerclass refid="class_a_g_e_1_1_open_g_l_renderer_a_p_i" prot="public">AGE::OpenGLRendererAPI</innerclass>
+    <innernamespace refid="namespace_a_g_e">AGE</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Render/Public/RenderAPI.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">AGE</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6" refid="class_a_g_e_1_1_open_g_l_renderer_a_p_i" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_a_g_e_1_1_open_g_l_renderer_a_p_i" kindref="compound">OpenGLRendererAPI</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_renderer_a_p_i" kindref="compound">RendererAPI</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="comment">//functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_a_g_e_1_1_open_g_l_renderer_a_p_i" kindref="compound">~OpenGLRendererAPI</ref>()<sp/>=</highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Init()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SetClearColor(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref><sp/>Color)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SetViewport(uint32_t<sp/>x,<sp/>uint32_t<sp/>y,<sp/>uint32_t<sp/>Width,<sp/>uint32_t<sp/>Height)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Clear()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Flush()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DrawIndexed(uint32_t<sp/>IndexCount,<sp/>uint32_t<sp/>IndexStart,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>VertexStart)</highlight><highlight class="keyword"><sp/>override<sp/></highlight><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DrawIndexed(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Ref&lt;VertexArray&gt;&amp;<sp/><ref refid="class_a_g_e_1_1_vertex_array" kindref="compound">VertexArray</ref>,<sp/>uint32_t<sp/>IndexCount)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DrawArrays(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Ref&lt;VertexArray&gt;&amp;<sp/><ref refid="class_a_g_e_1_1_vertex_array" kindref="compound">VertexArray</ref>,uint32_t<sp/>IndexCount)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DrawLines(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Ref&lt;VertexArray&gt;&amp;<sp/><ref refid="class_a_g_e_1_1_vertex_array" kindref="compound">VertexArray</ref>,<sp/>uint32_t<sp/>VertexCount)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DrawStrips(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Ref&lt;VertexArray&gt;&amp;<sp/><ref refid="class_a_g_e_1_1_vertex_array" kindref="compound">VertexArray</ref>,<sp/>uint32_t<sp/>IndexCount)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SetLineWidth(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Width)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_open_g_l_renderer_a_p_i_1a50a3a2e6ba1c04083cbdb0956933e27a" kindref="member">Submit</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_open_g_l_renderer_a_p_i_1ab5c2441a5f04e936a74c81b0458c22ea" kindref="member">Present</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLRendererAPI.h"/>
+  </compounddef>
+</doxygen>

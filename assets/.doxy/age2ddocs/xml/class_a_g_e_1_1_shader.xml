@@ -1,0 +1,397 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_a_g_e_1_1_shader" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>AGE::Shader</compoundname>
+    <derivedcompoundref refid="class_a_g_e_1_1_open_g_l_shader" prot="public" virt="non-virtual">AGE::OpenGLShader</derivedcompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_shader_1adeef8a34dfddd2f7d054e6a12e6b0449" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual AGE::Shader::~Shader</definition>
+        <argsstring>()</argsstring>
+        <name>~Shader</name>
+        <qualifiedname>AGE::Shader::~Shader</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Shader.h" line="15" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Shader.h" bodystart="15" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_shader_1a3ef78a4e4184937f699a55f8fb125846" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void AGE::Shader::Bind</definition>
+        <argsstring>() const =0</argsstring>
+        <name>Bind</name>
+        <qualifiedname>AGE::Shader::Bind</qualifiedname>
+        <reimplementedby refid="class_a_g_e_1_1_open_g_l_shader_1aff1aa85f0941852547e964ec51071a0a">Bind</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Shader.h" line="17" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_shader_1a6d1b6f97a2cb68484b7f9193733e99d7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void AGE::Shader::Unbind</definition>
+        <argsstring>() const =0</argsstring>
+        <name>Unbind</name>
+        <qualifiedname>AGE::Shader::Unbind</qualifiedname>
+        <reimplementedby refid="class_a_g_e_1_1_open_g_l_shader_1a29d0e49b8ad6ec8624a094653cd523f8">Unbind</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Shader.h" line="18" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_shader_1af4fc6bbabaa96c171a91a4a5ea5c7c49" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void AGE::Shader::SetFloat</definition>
+        <argsstring>(const char *Name, float Values, float *ValuePtr=nullptr, int Count=2) const =0</argsstring>
+        <name>SetFloat</name>
+        <qualifiedname>AGE::Shader::SetFloat</qualifiedname>
+        <reimplementedby refid="class_a_g_e_1_1_open_g_l_shader_1a6a99dcca672a594d95d6f29aac64fdfc">SetFloat</reimplementedby>
+        <param>
+          <type>const char *</type>
+          <declname>Name</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>Values</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>ValuePtr</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>Count</declname>
+          <defval>2</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Shader.h" line="21" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_shader_1a770fc5d04d514fd1c323c7d80694544b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void AGE::Shader::SetFloat2</definition>
+        <argsstring>(const char *Name, const Vector2 &amp;Values, const Vector2 *ValuePtr=nullptr, int Count=2) const =0</argsstring>
+        <name>SetFloat2</name>
+        <qualifiedname>AGE::Shader::SetFloat2</qualifiedname>
+        <reimplementedby refid="class_a_g_e_1_1_open_g_l_shader_1a29b8e908babdab23056a1172828131c0">SetFloat2</reimplementedby>
+        <param>
+          <type>const char *</type>
+          <declname>Name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> &amp;</type>
+          <declname>Values</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> *</type>
+          <declname>ValuePtr</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>Count</declname>
+          <defval>2</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Shader.h" line="22" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_shader_1a1bb27b5fbc9e85ce9a597aa944681803" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void AGE::Shader::SetFloat3</definition>
+        <argsstring>(const char *Name, const Vector3 &amp;Values, const Vector3 *ValuePtr=nullptr, int Count=2) const =0</argsstring>
+        <name>SetFloat3</name>
+        <qualifiedname>AGE::Shader::SetFloat3</qualifiedname>
+        <reimplementedby refid="class_a_g_e_1_1_open_g_l_shader_1a73349f695713a74a86981d4c17fcfd1f">SetFloat3</reimplementedby>
+        <param>
+          <type>const char *</type>
+          <declname>Name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> &amp;</type>
+          <declname>Values</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> *</type>
+          <declname>ValuePtr</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>Count</declname>
+          <defval>2</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Shader.h" line="23" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_shader_1a78fb6fd86cce4b4d42a21806b20a967d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void AGE::Shader::SetFloat4</definition>
+        <argsstring>(const char *Name, const Vector4 &amp;Value, const Vector4 *ValuePtr=nullptr, int Count=2) const =0</argsstring>
+        <name>SetFloat4</name>
+        <qualifiedname>AGE::Shader::SetFloat4</qualifiedname>
+        <reimplementedby refid="class_a_g_e_1_1_open_g_l_shader_1a014c0eb079509c74c6d25db090174f30">SetFloat4</reimplementedby>
+        <param>
+          <type>const char *</type>
+          <declname>Name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> &amp;</type>
+          <declname>Value</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> *</type>
+          <declname>ValuePtr</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>Count</declname>
+          <defval>2</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Shader.h" line="24" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_shader_1a47dceb19796424033aba2241cae42e3b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void AGE::Shader::SetMat3</definition>
+        <argsstring>(const char *Name, const Matrix3D &amp;Matrix) const =0</argsstring>
+        <name>SetMat3</name>
+        <qualifiedname>AGE::Shader::SetMat3</qualifiedname>
+        <reimplementedby refid="class_a_g_e_1_1_open_g_l_shader_1a2f7d9ee7caccf482346d7ab92be1b819">SetMat3</reimplementedby>
+        <param>
+          <type>const char *</type>
+          <declname>Name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref> &amp;</type>
+          <declname>Matrix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Shader.h" line="25" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_shader_1ad7e0badd8936c8e056f6df639d7c146b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void AGE::Shader::SetMat4</definition>
+        <argsstring>(const char *Name, const Matrix4D &amp;Matrix) const =0</argsstring>
+        <name>SetMat4</name>
+        <qualifiedname>AGE::Shader::SetMat4</qualifiedname>
+        <reimplementedby refid="class_a_g_e_1_1_open_g_l_shader_1affa41bc5d9d8fdd81092d2cf6c8c4660">SetMat4</reimplementedby>
+        <param>
+          <type>const char *</type>
+          <declname>Name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> &amp;</type>
+          <declname>Matrix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Shader.h" line="26" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_shader_1a79bfb747ac350fd781f6988d020e1c82" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void AGE::Shader::SetInt</definition>
+        <argsstring>(const char *Name, const int Texture=0, const int *TexturePtr=nullptr, const int Count=2) const =0</argsstring>
+        <name>SetInt</name>
+        <qualifiedname>AGE::Shader::SetInt</qualifiedname>
+        <reimplementedby refid="class_a_g_e_1_1_open_g_l_shader_1ac2294fd8f640fb6ebd395a0a608f4f29">SetInt</reimplementedby>
+        <param>
+          <type>const char *</type>
+          <declname>Name</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>Texture</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>const int *</type>
+          <declname>TexturePtr</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>Count</declname>
+          <defval>2</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Shader.h" line="27" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_shader_1ac4b0eac9cd891e569afff48f8d58a1b7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="pure-virtual">
+        <type>uint32_t</type>
+        <definition>virtual uint32_t AGE::Shader::GetRendererID</definition>
+        <argsstring>() const =0</argsstring>
+        <name>GetRendererID</name>
+        <qualifiedname>AGE::Shader::GetRendererID</qualifiedname>
+        <reimplementedby refid="class_a_g_e_1_1_open_g_l_shader_1a58e285cf6d18a1c97fa921aebe3264b7">GetRendererID</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Shader.h" line="29" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_shader_1a4d0077713225811ccbffac4945e51bbb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>const std::string &amp;</type>
+        <definition>virtual const std::string &amp; AGE::Shader::GetShaderName</definition>
+        <argsstring>() const =0</argsstring>
+        <name>GetShaderName</name>
+        <qualifiedname>AGE::Shader::GetShaderName</qualifiedname>
+        <reimplementedby refid="class_a_g_e_1_1_open_g_l_shader_1a1fc3fd48fb344bf5dda2f3d93345a861">GetShaderName</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Shader.h" line="30" column="27"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_shader_1a94b64f4addd47e02c1d64b83f2280fec" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Ref&lt; <ref refid="class_a_g_e_1_1_shader" kindref="compound">Shader</ref> &gt;</type>
+        <definition>Ref&lt; Shader &gt; AGE::Shader::Create</definition>
+        <argsstring>(const std::string &amp;VertexSrcPath, const std::string &amp;FragmentSrcPath)</argsstring>
+        <name>Create</name>
+        <qualifiedname>AGE::Shader::Create</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>VertexSrcPath</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>FragmentSrcPath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Shader.h" line="32" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Shader.cpp" bodystart="11" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_shader_1a91921c91d60998e1670b2af46d1a6730" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Ref&lt; <ref refid="class_a_g_e_1_1_shader" kindref="compound">Shader</ref> &gt;</type>
+        <definition>Ref&lt; Shader &gt; AGE::Shader::Create</definition>
+        <argsstring>(const std::string &amp;FilePath)</argsstring>
+        <name>Create</name>
+        <qualifiedname>AGE::Shader::Create</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>FilePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Shader.h" line="33" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Shader.cpp" bodystart="37" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_shader_1a05a2042805f5e8d249310042880b3299" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Ref&lt; <ref refid="class_a_g_e_1_1_shader" kindref="compound">Shader</ref> &gt;</type>
+        <definition>Ref&lt; Shader &gt; AGE::Shader::Create</definition>
+        <argsstring>(const std::string &amp;Name, const std::string &amp;VertexSrc, const std::string &amp;FragmentSrc)</argsstring>
+        <name>Create</name>
+        <qualifiedname>AGE::Shader::Create</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>Name</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>VertexSrc</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>FragmentSrc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Shader.h" line="34" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Shader.cpp" bodystart="63" bodyend="87"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>AGE::OpenGLShader</label>
+        <link refid="class_a_g_e_1_1_open_g_l_shader"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>AGE::Shader</label>
+        <link refid="class_a_g_e_1_1_shader"/>
+      </node>
+    </inheritancegraph>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Shader.h" line="12" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Shader.h" bodystart="13" bodyend="38"/>
+    <listofallmembers>
+      <member refid="class_a_g_e_1_1_shader_1a3ef78a4e4184937f699a55f8fb125846" prot="public" virt="pure-virtual"><scope>AGE::Shader</scope><name>Bind</name></member>
+      <member refid="class_a_g_e_1_1_shader_1a94b64f4addd47e02c1d64b83f2280fec" prot="public" virt="non-virtual"><scope>AGE::Shader</scope><name>Create</name></member>
+      <member refid="class_a_g_e_1_1_shader_1a91921c91d60998e1670b2af46d1a6730" prot="public" virt="non-virtual"><scope>AGE::Shader</scope><name>Create</name></member>
+      <member refid="class_a_g_e_1_1_shader_1a05a2042805f5e8d249310042880b3299" prot="public" virt="non-virtual"><scope>AGE::Shader</scope><name>Create</name></member>
+      <member refid="class_a_g_e_1_1_shader_1ac4b0eac9cd891e569afff48f8d58a1b7" prot="public" virt="pure-virtual"><scope>AGE::Shader</scope><name>GetRendererID</name></member>
+      <member refid="class_a_g_e_1_1_shader_1a4d0077713225811ccbffac4945e51bbb" prot="public" virt="pure-virtual"><scope>AGE::Shader</scope><name>GetShaderName</name></member>
+      <member refid="class_a_g_e_1_1_shader_1af4fc6bbabaa96c171a91a4a5ea5c7c49" prot="public" virt="pure-virtual"><scope>AGE::Shader</scope><name>SetFloat</name></member>
+      <member refid="class_a_g_e_1_1_shader_1a770fc5d04d514fd1c323c7d80694544b" prot="public" virt="pure-virtual"><scope>AGE::Shader</scope><name>SetFloat2</name></member>
+      <member refid="class_a_g_e_1_1_shader_1a1bb27b5fbc9e85ce9a597aa944681803" prot="public" virt="pure-virtual"><scope>AGE::Shader</scope><name>SetFloat3</name></member>
+      <member refid="class_a_g_e_1_1_shader_1a78fb6fd86cce4b4d42a21806b20a967d" prot="public" virt="pure-virtual"><scope>AGE::Shader</scope><name>SetFloat4</name></member>
+      <member refid="class_a_g_e_1_1_shader_1a79bfb747ac350fd781f6988d020e1c82" prot="public" virt="pure-virtual"><scope>AGE::Shader</scope><name>SetInt</name></member>
+      <member refid="class_a_g_e_1_1_shader_1a47dceb19796424033aba2241cae42e3b" prot="public" virt="pure-virtual"><scope>AGE::Shader</scope><name>SetMat3</name></member>
+      <member refid="class_a_g_e_1_1_shader_1ad7e0badd8936c8e056f6df639d7c146b" prot="public" virt="pure-virtual"><scope>AGE::Shader</scope><name>SetMat4</name></member>
+      <member refid="class_a_g_e_1_1_shader_1a6d1b6f97a2cb68484b7f9193733e99d7" prot="public" virt="pure-virtual"><scope>AGE::Shader</scope><name>Unbind</name></member>
+      <member refid="class_a_g_e_1_1_shader_1adeef8a34dfddd2f7d054e6a12e6b0449" prot="public" virt="virtual"><scope>AGE::Shader</scope><name>~Shader</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,184 @@
+
+
+# File App.h
+
+[**File List**](files.md) **>** [**AGE**](dir_c1649042ac9dcb65c6181568c305ecb0.md) **>** [**Core**](dir_40f28070a54f843eaf86230230ee6eb2.md) **>** [**Public**](dir_4d1ade32537ccbee8ff5d36b16abbd57.md) **>** [**App.h**](_app_8h.md)
+
+[Go to the documentation of this file](_app_8h.md)
+
+
+```C++
+#pragma once
+
+#include "Core.h"
+#include "DeltaTime.h"
+#include "Events/Public/Event.h"
+#include "Events/Public/ApplicationEvent.h"
+#include "Events/Public/GameEvent.h"
+#include "Events/Public/RendererEvent.h"
+#include "ImGui/Public/ImGuiLayer.h"
+#include "Scene/Public/ScriptableEntity.h"
+#include "Core/Public/ScriptableComponentStack.h"
+#include "Assets/Public/AssetManager.h"
+
+#include "LayerStack.h"
+#include "Project/Public/Project.h"
+#include "Render/Public/GraphicsContext.h"
+#include "DeviceManager.h"
+//#include "VisualScripting/Public/NodeEditorManager.h"
+
+
+namespace AGE
+{
+
+
+
+    enum TargetPlatform : uint8_t
+    {
+        Windows = 0,
+        Linux,
+        Mac,
+        Swtich,
+        PlayStation4,
+        PlayStation5
+    };
+
+    struct ApplicationCommandLineArgs
+    {
+        int Count = 0;
+        char** Args = nullptr;
+
+        const char* operator[](int index) const
+        {
+            CoreLogger::Info("Argument Count: {}", Count);
+            if (index > Count)
+            {
+                CoreLogger::Error("Array out of Index!");
+                return nullptr;
+            }
+
+            return Args[index];
+        }
+    };
+
+    struct AppConfig
+    {
+        std::filesystem::path ProjectBasePath;
+        std::filesystem::path CurrentProjectPath;
+        std::filesystem::path EditorAssetPath;
+        std::filesystem::path LogPath;
+        std::filesystem::path GameContentPath;
+        std::filesystem::path GameSourcePath;
+        std::filesystem::path GameShadersPath;
+        std::filesystem::path GameScenesPath;
+        std::filesystem::path DefaultFontPath;
+
+    };
+
+    class AGE_API App
+    {
+
+    public:
+        App(const std::string& name = "AGE App", ApplicationCommandLineArgs Args = ApplicationCommandLineArgs());
+        virtual ~App();
+
+        void Init();
+        void InitRenderer();
+        void InitLayers();
+        void LoadAssets();
+        void Shutdown();
+
+        void Run();
+
+        void Close();
+
+        void OnEvent(Event& E);
+
+        void PushLayer(Layer* Layer);
+        
+        void PushOverlay(Layer* Layer);
+
+        void PushScriptableComp(ScriptableEntity* Comp);
+
+
+        inline DeviceManager& GetDeviceManager() { return *m_DeviceManager; }
+
+        inline static App& Get() { return *s_Instance; }
+        
+        ApplicationCommandLineArgs GetCommandLineArgs() const { return m_CommandLineArgs; }
+
+        inline ImGuiLayer* GetImGuiLayer() { return m_ImGuiLayer; }
+
+        uint16_t GetTargetPlatform() { return m_Target; }
+        void SetTargetPlatform(uint16_t Target) { m_Target = (TargetPlatform)Target; }
+
+        AppConfig& GetAppConfig() {return m_AppConfig;}
+
+        Ref<Project>& GetProject() { return m_Project; }
+
+        const Vector2& GetFramebufferSize() {return m_FramebufferSize; }
+
+        void SetProject(Ref<Project> Proj) { m_Project = Proj; }
+
+        void GetDirectXErrorMessages();
+    private:
+        
+        bool OnWindowClose(WindowCloseEvent& E);
+        bool OnWindowResize(WindowResizeEvent& E);
+        bool OnFramebufferResize(FramebufferResizeEvent& E);
+        bool OnRendererChanged(RendererChangeEvent& E);
+        bool OnProjectCreated(ProjectCreatedEvent& E);
+        bool OnProjectLoaded(ProjectLoadedEvent& E);
+
+        void LoadScenes();
+        void LoadShaders();
+        void LoadTextures();
+        void LoadSoundBanks();
+        void LoadAsepriteFiles();
+
+    private:
+
+        Scope<DeviceManager> m_DeviceManager;
+        ImGuiLayer* m_ImGuiLayer;
+
+
+        bool m_Running = false;
+
+        bool m_Minimized = false;
+
+        LayerStack m_LayerStack;
+
+        GameFramework::ScriptableCompStack m_CompStack;
+
+        AppConfig m_AppConfig;
+
+        static App* s_Instance;
+
+        Vector2 m_FramebufferSize = {1280.f, 720.f};
+
+        float m_CurrentFrame;
+        TimeStep m_DeltaTime;
+        float m_LastFrame = 0.f;
+
+        bool bShowNewProjectMenu = true;
+        bool bBlockThisFrame = false;
+        //const uint64_t MAIN_MENU_GAME_OBJECT = 100;
+
+        std::vector<std::thread> m_Threads;
+
+        TargetPlatform m_Target = TargetPlatform::Windows;
+        Ref<Project> m_Project = nullptr;
+        ApplicationCommandLineArgs m_CommandLineArgs;
+
+        Scope<AssetManager> m_AssetManager = nullptr;
+        std::vector<std::thread> m_AssetLoadThreads;
+        std::mutex Mutex;
+    };
+    // Defined in CLIENT
+    App* CreateApp(ApplicationCommandLineArgs Args);
+}
+
+
+```
+
+

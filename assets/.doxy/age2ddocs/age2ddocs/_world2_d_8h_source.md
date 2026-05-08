@@ -1,0 +1,86 @@
+
+
+# File World2D.h
+
+[**File List**](files.md) **>** [**AGE**](dir_c1649042ac9dcb65c6181568c305ecb0.md) **>** [**Physics**](dir_0200296fe7041373e4c6a62f3844ed95.md) **>** [**Public**](dir_384ddce68b480931e8586b1cf8a80838.md) **>** [**World2D.h**](_world2_d_8h.md)
+
+[Go to the documentation of this file](_world2_d_8h.md)
+
+
+```C++
+#pragma once
+#include "Core/Public/Core.h"
+#include "Physics/Public/World.h"
+#include "Scene/Public/Components.h"
+
+
+namespace AGE
+{
+    class World2D final : public World
+    {
+    public:
+        World2D(Ref<Scene> scene);
+
+        virtual ~World2D();
+
+        void DestroyWorld() override;
+
+        void Step(TimeStep DeltaTime) override;
+
+        void MakeDefaultQueryFilter() override;
+
+        void QueryBoxOverlap(const QueryParams& Params) override;
+        void QueryCapsuleOverlap(const QueryParams& Params) override;
+        void QuerySegmentOverlap(const QueryParams& Params) override;
+        void QueryHit(const QueryParams& Params) override;
+
+        b2QueryFilter& GetQueryFilter() { return m_QueryFilter; }
+
+        b2BodyDef MakeBodyDefinition(const BodyType& Type, const Vector3& Translation, const Vector3& Rotation, bool IsRotationFixed, void* UserData);
+
+        b2ShapeDef MakeShapeDefinition(float Density, float Friction, float Restitution, bool ShouldGenerateEvents, void* UserData);
+
+        b2Rot MakeRotation(float Z);
+
+        b2Polygon CreateBox(float HeightX, float HeightY, const Vector3& Scale);
+        b2ShapeId CreatePolygonShape(const b2BodyId& ID, const b2ShapeDef& Fixture, const b2Polygon& Box);
+
+        b2Capsule CreateCapsule(const Vector2& Offset, const Vector3& Scale, const float Radius);
+        b2ShapeId CreateCapsuleShape(const b2BodyId& ID, const b2ShapeDef& Fixture, const b2Capsule& Capsule);
+
+        b2Segment CreateSegment();
+        b2ShapeId CreateSegmentShape(const b2BodyId& ID, const b2ShapeDef& Fixture, const b2Segment& Segment);
+
+
+
+        b2BodyId CreateBody(b2BodyDef& Def);
+
+        b2BodyId GetBody(const b2ShapeId& ID);
+
+        Vector2 GetBodyPosition(const b2BodyId& ID);
+
+        b2Polygon GetPolygon(const b2ShapeId& ID);
+
+        b2Capsule GetCapsule(const b2ShapeId& ID);
+
+
+        float GetRotationAngle(const b2BodyId& ID);
+
+        void* GetUserData(const b2ShapeId& ID);
+
+        b2WorldId& GetWorld();
+
+        Ref<Scene>& GetWorldScene();
+
+    private:
+
+        b2WorldId m_World = { 0,0 };
+
+        Ref<Scene> m_WorldScene = nullptr;
+
+        b2QueryFilter m_QueryFilter;
+    };
+}
+```
+
+

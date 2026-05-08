@@ -1,0 +1,561 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_a_g_e_1_1_scene_camera" kind="class" language="C++" prot="public">
+    <compoundname>AGE::SceneCamera</compoundname>
+    <basecompoundref refid="class_a_g_e_1_1_camera" prot="public" virt="non-virtual">AGE::Camera</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_a_g_e_1_1_scene_camera_1a102ffc025cb5e06160ff4d12112cdc67" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AGE::SceneCamera::m_PerspectiveFOV</definition>
+        <argsstring></argsstring>
+        <name>m_PerspectiveFOV</name>
+        <qualifiedname>AGE::SceneCamera::m_PerspectiveFOV</qualifiedname>
+        <initializer>= <ref refid="class_a_g_e_1_1_math_1a1a080eafe00a2900765845a35eaac11e" kindref="member">Math::Radians</ref>(45.f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" line="49" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_scene_camera_1a2b9efc77b43650809b405eb86114c83c" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AGE::SceneCamera::m_PerspectiveNear</definition>
+        <argsstring></argsstring>
+        <name>m_PerspectiveNear</name>
+        <qualifiedname>AGE::SceneCamera::m_PerspectiveNear</qualifiedname>
+        <initializer>= .01f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" line="50" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_scene_camera_1a1182766db9f7a322cd47166feecd5873" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AGE::SceneCamera::m_PerspectiveFar</definition>
+        <argsstring></argsstring>
+        <name>m_PerspectiveFar</name>
+        <qualifiedname>AGE::SceneCamera::m_PerspectiveFar</qualifiedname>
+        <initializer>= 1000.f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" line="50" column="26" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_scene_camera_1a1a18f71453055ef116b4a17d29d71579" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AGE::SceneCamera::m_OrthographicSize</definition>
+        <argsstring></argsstring>
+        <name>m_OrthographicSize</name>
+        <qualifiedname>AGE::SceneCamera::m_OrthographicSize</qualifiedname>
+        <initializer>= 10.f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" line="51" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_scene_camera_1a01755d88c996c429266d4fe2f60bd974" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AGE::SceneCamera::m_OrthographicNear</definition>
+        <argsstring></argsstring>
+        <name>m_OrthographicNear</name>
+        <qualifiedname>AGE::SceneCamera::m_OrthographicNear</qualifiedname>
+        <initializer>= -1.f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" line="52" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_scene_camera_1acc164f9e750087360cc86615b556ab56" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AGE::SceneCamera::m_OrthographicFar</definition>
+        <argsstring></argsstring>
+        <name>m_OrthographicFar</name>
+        <qualifiedname>AGE::SceneCamera::m_OrthographicFar</qualifiedname>
+        <initializer>= 1.f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" line="52" column="27" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_scene_camera_1ad3bfea4255ff927fe66ff4b35b9a9b26" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AGE::SceneCamera::m_AspectRatio</definition>
+        <argsstring></argsstring>
+        <name>m_AspectRatio</name>
+        <qualifiedname>AGE::SceneCamera::m_AspectRatio</qualifiedname>
+        <initializer>= 0.f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" line="54" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_scene_camera_1a2a435d32d5d87ae15155eacd799f8781" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AGE::SceneCamera::SceneCamera</definition>
+        <argsstring>()</argsstring>
+        <name>SceneCamera</name>
+        <qualifiedname>AGE::SceneCamera::SceneCamera</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" line="13" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/SceneCamera.cpp" bodystart="8" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_scene_camera_1a8bc513adec9f3b881e19f63ef0926b8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual AGE::SceneCamera::~SceneCamera</definition>
+        <argsstring>()=default</argsstring>
+        <name>~SceneCamera</name>
+        <qualifiedname>AGE::SceneCamera::~SceneCamera</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" line="14" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_scene_camera_1a713b0f89c7a2f82cbd1e5c8ee0db349a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::SceneCamera::SetOrthographic</definition>
+        <argsstring>(float Size, float NearClip, float FarClip)</argsstring>
+        <name>SetOrthographic</name>
+        <qualifiedname>AGE::SceneCamera::SetOrthographic</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>Size</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>NearClip</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>FarClip</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" line="16" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/SceneCamera.cpp" bodystart="12" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_scene_camera_1aaa8b34b8f9f000ccae719f065692572c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::SceneCamera::SetPerspective</definition>
+        <argsstring>(float VerticalFOV, float NearClip, float FarClip)</argsstring>
+        <name>SetPerspective</name>
+        <qualifiedname>AGE::SceneCamera::SetPerspective</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>VerticalFOV</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>NearClip</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>FarClip</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" line="17" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/SceneCamera.cpp" bodystart="20" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_scene_camera_1a9f6ce2257a5d68bf8a881cfd8e6ff763" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::SceneCamera::SetViewportSize</definition>
+        <argsstring>(uint32_t Width, uint32_t Height)</argsstring>
+        <name>SetViewportSize</name>
+        <qualifiedname>AGE::SceneCamera::SetViewportSize</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>Width</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>Height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" line="19" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/SceneCamera.cpp" bodystart="29" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_scene_camera_1ab5427f10589fea8244b815196cd7362f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float AGE::SceneCamera::GetPerspectiveVerticalFOV</definition>
+        <argsstring>() const</argsstring>
+        <name>GetPerspectiveVerticalFOV</name>
+        <qualifiedname>AGE::SceneCamera::GetPerspectiveVerticalFOV</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" line="21" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" bodystart="21" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_scene_camera_1a06d716e576c3ba52e90b0b5dcd540414" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::SceneCamera::SetPerspectiveVerticalFOV</definition>
+        <argsstring>(float VerticalFOV)</argsstring>
+        <name>SetPerspectiveVerticalFOV</name>
+        <qualifiedname>AGE::SceneCamera::SetPerspectiveVerticalFOV</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>VerticalFOV</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" line="22" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" bodystart="22" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_scene_camera_1aa2ce959b21eced323e8f9c6f99cacfee" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float AGE::SceneCamera::GetPerspectiveNearClip</definition>
+        <argsstring>() const</argsstring>
+        <name>GetPerspectiveNearClip</name>
+        <qualifiedname>AGE::SceneCamera::GetPerspectiveNearClip</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" line="24" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" bodystart="24" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_scene_camera_1aa5db7664dbe3f2a52bd0063bd26fdb31" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::SceneCamera::SetPerspectiveNearClip</definition>
+        <argsstring>(float NearClip)</argsstring>
+        <name>SetPerspectiveNearClip</name>
+        <qualifiedname>AGE::SceneCamera::SetPerspectiveNearClip</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>NearClip</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" line="25" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" bodystart="25" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_scene_camera_1ab3f9f248dc52c9a0dacc4d6ae3b40682" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float AGE::SceneCamera::GetPerspectiveFarClip</definition>
+        <argsstring>() const</argsstring>
+        <name>GetPerspectiveFarClip</name>
+        <qualifiedname>AGE::SceneCamera::GetPerspectiveFarClip</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" line="27" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" bodystart="27" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_scene_camera_1ae7f92c03df42cd1c66e5b7b16f32a366" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::SceneCamera::SetPerspectiveFarClip</definition>
+        <argsstring>(float FarClip)</argsstring>
+        <name>SetPerspectiveFarClip</name>
+        <qualifiedname>AGE::SceneCamera::SetPerspectiveFarClip</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>FarClip</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" line="28" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" bodystart="28" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_scene_camera_1a69f972e7faf0762fc2c63df56db98952" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float AGE::SceneCamera::GetOrthographicSize</definition>
+        <argsstring>() const</argsstring>
+        <name>GetOrthographicSize</name>
+        <qualifiedname>AGE::SceneCamera::GetOrthographicSize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" line="30" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_scene_camera_1a8ab02a21f2642840a3bb83f3829ba801" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::SceneCamera::SetOrthographicSize</definition>
+        <argsstring>(float Size)</argsstring>
+        <name>SetOrthographicSize</name>
+        <qualifiedname>AGE::SceneCamera::SetOrthographicSize</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>Size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" line="31" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" bodystart="31" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_scene_camera_1a2bdea75fa7527028952b66f2384edbc0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float AGE::SceneCamera::GetOrthographicNearClip</definition>
+        <argsstring>() const</argsstring>
+        <name>GetOrthographicNearClip</name>
+        <qualifiedname>AGE::SceneCamera::GetOrthographicNearClip</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" line="33" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_scene_camera_1ae181b50d97feed2f2afad8c2523cd9ae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::SceneCamera::SetOrthographicNearClip</definition>
+        <argsstring>(float NearClip)</argsstring>
+        <name>SetOrthographicNearClip</name>
+        <qualifiedname>AGE::SceneCamera::SetOrthographicNearClip</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>NearClip</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" line="34" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" bodystart="34" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_scene_camera_1aa68b35caa4806fe9908e25bf45afcabc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float AGE::SceneCamera::GetOrthographicFarClip</definition>
+        <argsstring>() const</argsstring>
+        <name>GetOrthographicFarClip</name>
+        <qualifiedname>AGE::SceneCamera::GetOrthographicFarClip</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" line="36" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_scene_camera_1a3eda16528e5161284b9ce89ff483d900" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::SceneCamera::SetOrthographicFarClip</definition>
+        <argsstring>(float FarClip)</argsstring>
+        <name>SetOrthographicFarClip</name>
+        <qualifiedname>AGE::SceneCamera::SetOrthographicFarClip</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>FarClip</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" line="37" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" bodystart="37" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_scene_camera_1aaceb4af15640f6f126e016762bd15e4d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>ProjectionType</type>
+        <definition>ProjectionType AGE::SceneCamera::GetProjectionType</definition>
+        <argsstring>() const</argsstring>
+        <name>GetProjectionType</name>
+        <qualifiedname>AGE::SceneCamera::GetProjectionType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" line="39" column="16" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_scene_camera_1a0465fbdcf741b10d0008ef0fdc26ab2e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void AGE::SceneCamera::SetProjectionType</definition>
+        <argsstring>(ProjectionType Type) override</argsstring>
+        <name>SetProjectionType</name>
+        <qualifiedname>AGE::SceneCamera::SetProjectionType</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_camera_1a085bf7edd6d4595a210c9f982ac57af1">SetProjectionType</reimplements>
+        <param>
+          <type>ProjectionType</type>
+          <declname>Type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" line="40" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" bodystart="40" bodyend="40"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_scene_camera_1a8c0ac7f36c2f4df7d5a9a91c6216dee9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::SceneCamera::RecalculateProjection</definition>
+        <argsstring>()</argsstring>
+        <name>RecalculateProjection</name>
+        <qualifiedname>AGE::SceneCamera::RecalculateProjection</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" line="44" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/SceneCamera.cpp" bodystart="35" bodyend="52"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>AGE::Camera</label>
+        <link refid="class_a_g_e_1_1_camera"/>
+      </node>
+      <node id="1">
+        <label>AGE::SceneCamera</label>
+        <link refid="class_a_g_e_1_1_scene_camera"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>AGE::Camera</label>
+        <link refid="class_a_g_e_1_1_camera"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>m_Projection</edgelabel>
+          <edgelabel>m_World</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>m_ConstantBuffer</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>AGE::Matrix4D</label>
+        <link refid="struct_a_g_e_1_1_matrix4_d"/>
+      </node>
+      <node id="1">
+        <label>AGE::SceneCamera</label>
+        <link refid="class_a_g_e_1_1_scene_camera"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>AGE::Vector4</label>
+        <link refid="struct_a_g_e_1_1_vector4"/>
+      </node>
+      <node id="4">
+        <label>AGE::_constantBufferStruct</label>
+        <link refid="struct_a_g_e_1_1__constant_buffer_struct"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>At</edgelabel>
+          <edgelabel>Eye</edgelabel>
+          <edgelabel>Up</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>Projection</edgelabel>
+          <edgelabel>View</edgelabel>
+          <edgelabel>ViewProjectionWorldMatrix</edgelabel>
+          <edgelabel>World</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" line="7" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/SceneCamera.h" bodystart="8" bodyend="55"/>
+    <listofallmembers>
+      <member refid="class_a_g_e_1_1_camera_1a904b9176ed6cc1e0199208fd3c712af2" prot="public" virt="non-virtual"><scope>AGE::SceneCamera</scope><name>Camera</name></member>
+      <member refid="class_a_g_e_1_1_camera_1ab45225a87d4aad01b111435ff866c89d" prot="public" virt="non-virtual"><scope>AGE::SceneCamera</scope><name>Camera</name></member>
+      <member refid="class_a_g_e_1_1_camera_1a8b76a5e82bd66d6dd9ce0698b364ebe2" prot="public" virt="non-virtual"><scope>AGE::SceneCamera</scope><name>Camera</name></member>
+      <member refid="class_a_g_e_1_1_camera_1a1256707927f702d6618d1c9334b833ac" prot="public" virt="non-virtual"><scope>AGE::SceneCamera</scope><name>GetConstantBufferData</name></member>
+      <member refid="class_a_g_e_1_1_camera_1a0388f16578b45882530e773e1571dd7d" prot="public" virt="non-virtual"><scope>AGE::SceneCamera</scope><name>GetConstantBufferData</name></member>
+      <member refid="class_a_g_e_1_1_scene_camera_1aa68b35caa4806fe9908e25bf45afcabc" prot="public" virt="non-virtual"><scope>AGE::SceneCamera</scope><name>GetOrthographicFarClip</name></member>
+      <member refid="class_a_g_e_1_1_scene_camera_1a2bdea75fa7527028952b66f2384edbc0" prot="public" virt="non-virtual"><scope>AGE::SceneCamera</scope><name>GetOrthographicNearClip</name></member>
+      <member refid="class_a_g_e_1_1_scene_camera_1a69f972e7faf0762fc2c63df56db98952" prot="public" virt="non-virtual"><scope>AGE::SceneCamera</scope><name>GetOrthographicSize</name></member>
+      <member refid="class_a_g_e_1_1_scene_camera_1ab3f9f248dc52c9a0dacc4d6ae3b40682" prot="public" virt="non-virtual"><scope>AGE::SceneCamera</scope><name>GetPerspectiveFarClip</name></member>
+      <member refid="class_a_g_e_1_1_scene_camera_1aa2ce959b21eced323e8f9c6f99cacfee" prot="public" virt="non-virtual"><scope>AGE::SceneCamera</scope><name>GetPerspectiveNearClip</name></member>
+      <member refid="class_a_g_e_1_1_scene_camera_1ab5427f10589fea8244b815196cd7362f" prot="public" virt="non-virtual"><scope>AGE::SceneCamera</scope><name>GetPerspectiveVerticalFOV</name></member>
+      <member refid="class_a_g_e_1_1_camera_1aa47e4ff49678bfaa8c40566b56f14a27" prot="public" virt="non-virtual"><scope>AGE::SceneCamera</scope><name>GetProjection</name></member>
+      <member refid="class_a_g_e_1_1_camera_1aca3ad9161160012257758bae54ec3bdb" prot="public" virt="non-virtual"><scope>AGE::SceneCamera</scope><name>GetProjection</name></member>
+      <member refid="class_a_g_e_1_1_scene_camera_1aaceb4af15640f6f126e016762bd15e4d" prot="public" virt="non-virtual"><scope>AGE::SceneCamera</scope><name>GetProjectionType</name></member>
+      <member refid="class_a_g_e_1_1_camera_1af076d805edf3aaba46190c35f655d174" prot="public" virt="non-virtual"><scope>AGE::SceneCamera</scope><name>GetWorldMatrix</name></member>
+      <member refid="class_a_g_e_1_1_camera_1a24e2d7c0a4a3a98c35b0838e295d0e17" prot="public" virt="non-virtual"><scope>AGE::SceneCamera</scope><name>GetWorldMatrix</name></member>
+      <member refid="class_a_g_e_1_1_scene_camera_1ad3bfea4255ff927fe66ff4b35b9a9b26" prot="private" virt="non-virtual"><scope>AGE::SceneCamera</scope><name>m_AspectRatio</name></member>
+      <member refid="class_a_g_e_1_1_camera_1a575ade42efdaa4663e1183dd8782e26e" prot="protected" virt="non-virtual"><scope>AGE::SceneCamera</scope><name>m_ConstantBuffer</name></member>
+      <member refid="class_a_g_e_1_1_scene_camera_1acc164f9e750087360cc86615b556ab56" prot="private" virt="non-virtual"><scope>AGE::SceneCamera</scope><name>m_OrthographicFar</name></member>
+      <member refid="class_a_g_e_1_1_scene_camera_1a01755d88c996c429266d4fe2f60bd974" prot="private" virt="non-virtual"><scope>AGE::SceneCamera</scope><name>m_OrthographicNear</name></member>
+      <member refid="class_a_g_e_1_1_scene_camera_1a1a18f71453055ef116b4a17d29d71579" prot="private" virt="non-virtual"><scope>AGE::SceneCamera</scope><name>m_OrthographicSize</name></member>
+      <member refid="class_a_g_e_1_1_scene_camera_1a1182766db9f7a322cd47166feecd5873" prot="private" virt="non-virtual"><scope>AGE::SceneCamera</scope><name>m_PerspectiveFar</name></member>
+      <member refid="class_a_g_e_1_1_scene_camera_1a102ffc025cb5e06160ff4d12112cdc67" prot="private" virt="non-virtual"><scope>AGE::SceneCamera</scope><name>m_PerspectiveFOV</name></member>
+      <member refid="class_a_g_e_1_1_scene_camera_1a2b9efc77b43650809b405eb86114c83c" prot="private" virt="non-virtual"><scope>AGE::SceneCamera</scope><name>m_PerspectiveNear</name></member>
+      <member refid="class_a_g_e_1_1_camera_1a03a93bc6e4ca35c67511f31932ce9f4b" prot="protected" virt="non-virtual"><scope>AGE::SceneCamera</scope><name>m_Projection</name></member>
+      <member refid="class_a_g_e_1_1_camera_1a87746b677a12de3218134a536acf77e8" prot="protected" virt="non-virtual"><scope>AGE::SceneCamera</scope><name>m_ProjectionType</name></member>
+      <member refid="class_a_g_e_1_1_camera_1ade17b6d9846d5da155392d08ec0a7db2" prot="protected" virt="non-virtual"><scope>AGE::SceneCamera</scope><name>m_World</name></member>
+      <member refid="class_a_g_e_1_1_scene_camera_1a8c0ac7f36c2f4df7d5a9a91c6216dee9" prot="private" virt="non-virtual"><scope>AGE::SceneCamera</scope><name>RecalculateProjection</name></member>
+      <member refid="class_a_g_e_1_1_scene_camera_1a2a435d32d5d87ae15155eacd799f8781" prot="public" virt="non-virtual"><scope>AGE::SceneCamera</scope><name>SceneCamera</name></member>
+      <member refid="class_a_g_e_1_1_scene_camera_1a713b0f89c7a2f82cbd1e5c8ee0db349a" prot="public" virt="non-virtual"><scope>AGE::SceneCamera</scope><name>SetOrthographic</name></member>
+      <member refid="class_a_g_e_1_1_scene_camera_1a3eda16528e5161284b9ce89ff483d900" prot="public" virt="non-virtual"><scope>AGE::SceneCamera</scope><name>SetOrthographicFarClip</name></member>
+      <member refid="class_a_g_e_1_1_scene_camera_1ae181b50d97feed2f2afad8c2523cd9ae" prot="public" virt="non-virtual"><scope>AGE::SceneCamera</scope><name>SetOrthographicNearClip</name></member>
+      <member refid="class_a_g_e_1_1_scene_camera_1a8ab02a21f2642840a3bb83f3829ba801" prot="public" virt="non-virtual"><scope>AGE::SceneCamera</scope><name>SetOrthographicSize</name></member>
+      <member refid="class_a_g_e_1_1_scene_camera_1aaa8b34b8f9f000ccae719f065692572c" prot="public" virt="non-virtual"><scope>AGE::SceneCamera</scope><name>SetPerspective</name></member>
+      <member refid="class_a_g_e_1_1_scene_camera_1ae7f92c03df42cd1c66e5b7b16f32a366" prot="public" virt="non-virtual"><scope>AGE::SceneCamera</scope><name>SetPerspectiveFarClip</name></member>
+      <member refid="class_a_g_e_1_1_scene_camera_1aa5db7664dbe3f2a52bd0063bd26fdb31" prot="public" virt="non-virtual"><scope>AGE::SceneCamera</scope><name>SetPerspectiveNearClip</name></member>
+      <member refid="class_a_g_e_1_1_scene_camera_1a06d716e576c3ba52e90b0b5dcd540414" prot="public" virt="non-virtual"><scope>AGE::SceneCamera</scope><name>SetPerspectiveVerticalFOV</name></member>
+      <member refid="class_a_g_e_1_1_scene_camera_1a0465fbdcf741b10d0008ef0fdc26ab2e" prot="public" virt="virtual"><scope>AGE::SceneCamera</scope><name>SetProjectionType</name></member>
+      <member refid="class_a_g_e_1_1_scene_camera_1a9f6ce2257a5d68bf8a881cfd8e6ff763" prot="public" virt="non-virtual"><scope>AGE::SceneCamera</scope><name>SetViewportSize</name></member>
+      <member refid="class_a_g_e_1_1_camera_1a196799c35e8e9939ad748928fb998d25" prot="public" virt="virtual"><scope>AGE::SceneCamera</scope><name>~Camera</name></member>
+      <member refid="class_a_g_e_1_1_scene_camera_1a8bc513adec9f3b881e19f63ef0926b8d" prot="public" virt="virtual"><scope>AGE::SceneCamera</scope><name>~SceneCamera</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

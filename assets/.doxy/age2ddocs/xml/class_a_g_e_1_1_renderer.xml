@@ -1,0 +1,231 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_a_g_e_1_1_renderer" kind="class" language="C++" prot="public">
+    <compoundname>AGE::Renderer</compoundname>
+    <innerclass refid="struct_a_g_e_1_1_renderer_1_1_scene_data" prot="private">AGE::Renderer::SceneData</innerclass>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_a_g_e_1_1_renderer_1aef1eb2da50bf41ba9d200e6fd8d737a8" prot="private" static="yes" mutable="no">
+        <type>SceneData *</type>
+        <definition>Renderer::SceneData * AGE::Renderer::m_SceneData</definition>
+        <argsstring></argsstring>
+        <name>m_SceneData</name>
+        <qualifiedname>AGE::Renderer::m_SceneData</qualifiedname>
+        <initializer>= new SceneData</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" line="35" column="18" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_renderer_1a619f0c2dcb4855abd3f371812edd8dab" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Renderer::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <qualifiedname>AGE::Renderer::Init</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" line="13" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer.cpp" bodystart="12" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_renderer_1a20d77570d1c5fc33e6de70a5cb31bec9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Renderer::BeginScene</definition>
+        <argsstring>(const Camera &amp;Camera, const Matrix4D &amp;Transform)</argsstring>
+        <name>BeginScene</name>
+        <qualifiedname>AGE::Renderer::BeginScene</qualifiedname>
+        <param>
+          <type>const <ref refid="class_a_g_e_1_1_camera" kindref="compound">Camera</ref> &amp;</type>
+          <declname>Camera</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> &amp;</type>
+          <declname>Transform</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" line="14" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer.cpp" bodystart="19" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_renderer_1a051ed5bbe7382a8c02d96cfb480a51ec" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Renderer::BeginScene</definition>
+        <argsstring>(const EditorCamera &amp;Camera)</argsstring>
+        <name>BeginScene</name>
+        <qualifiedname>AGE::Renderer::BeginScene</qualifiedname>
+        <param>
+          <type>const <ref refid="class_a_g_e_1_1_editor_camera" kindref="compound">EditorCamera</ref> &amp;</type>
+          <declname>Camera</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" line="15" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer.cpp" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_renderer_1ad81b53301165b0fd58a81c02ae6452e0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Renderer::OnWindowResize</definition>
+        <argsstring>(uint32_t Width, uint32_t Height)</argsstring>
+        <name>OnWindowResize</name>
+        <qualifiedname>AGE::Renderer::OnWindowResize</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>Width</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>Height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" line="16" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer.cpp" bodystart="29" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_renderer_1afa9d271aca73c6095aec27053cd5d2b0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Renderer::OnFramebufferResize</definition>
+        <argsstring>(uint32_t Width, uint32_t Height)</argsstring>
+        <name>OnFramebufferResize</name>
+        <qualifiedname>AGE::Renderer::OnFramebufferResize</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>Width</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>Height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" line="17" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer.cpp" bodystart="34" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_renderer_1a8f3ef65fed0bb9f32bf69ec4bf2776ee" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Renderer::EndScene</definition>
+        <argsstring>()</argsstring>
+        <name>EndScene</name>
+        <qualifiedname>AGE::Renderer::EndScene</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" line="18" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer.cpp" bodystart="39" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_renderer_1a1f6f19341385a169cd9d12286517b5c8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Renderer::Shutdown</definition>
+        <argsstring>()</argsstring>
+        <name>Shutdown</name>
+        <qualifiedname>AGE::Renderer::Shutdown</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" line="19" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer.cpp" bodystart="43" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_renderer_1a730cd2593e6872a71bc21771068457c6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Renderer::Submit</definition>
+        <argsstring>()</argsstring>
+        <name>Submit</name>
+        <qualifiedname>AGE::Renderer::Submit</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" line="21" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer.cpp" bodystart="48" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_renderer_1a7a66ea8b73bf5e9917bd9b83d34faae0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Renderer::Flush</definition>
+        <argsstring>()</argsstring>
+        <name>Flush</name>
+        <qualifiedname>AGE::Renderer::Flush</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" line="23" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer.cpp" bodystart="52" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_renderer_1ae89681d3feb143fabbf4159825aa84b2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>RendererAPI::API</type>
+        <definition>static RendererAPI::API AGE::Renderer::GetAPI</definition>
+        <argsstring>()</argsstring>
+        <name>GetAPI</name>
+        <qualifiedname>AGE::Renderer::GetAPI</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" line="25" column="32" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" bodystart="25" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_renderer_1a3bb0401c7269b12275578be105920d4e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AGE::Renderer::SetAPI</definition>
+        <argsstring>(RendererAPI::API Renderer)</argsstring>
+        <name>SetAPI</name>
+        <qualifiedname>AGE::Renderer::SetAPI</qualifiedname>
+        <param>
+          <type>RendererAPI::API</type>
+          <declname>Renderer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" line="26" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" bodystart="26" bodyend="26"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" line="9" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" bodystart="10" bodyend="39"/>
+    <listofallmembers>
+      <member refid="class_a_g_e_1_1_renderer_1a20d77570d1c5fc33e6de70a5cb31bec9" prot="public" virt="non-virtual"><scope>AGE::Renderer</scope><name>BeginScene</name></member>
+      <member refid="class_a_g_e_1_1_renderer_1a051ed5bbe7382a8c02d96cfb480a51ec" prot="public" virt="non-virtual"><scope>AGE::Renderer</scope><name>BeginScene</name></member>
+      <member refid="class_a_g_e_1_1_renderer_1a8f3ef65fed0bb9f32bf69ec4bf2776ee" prot="public" virt="non-virtual"><scope>AGE::Renderer</scope><name>EndScene</name></member>
+      <member refid="class_a_g_e_1_1_renderer_1a7a66ea8b73bf5e9917bd9b83d34faae0" prot="public" virt="non-virtual"><scope>AGE::Renderer</scope><name>Flush</name></member>
+      <member refid="class_a_g_e_1_1_renderer_1ae89681d3feb143fabbf4159825aa84b2" prot="public" virt="non-virtual"><scope>AGE::Renderer</scope><name>GetAPI</name></member>
+      <member refid="class_a_g_e_1_1_renderer_1a619f0c2dcb4855abd3f371812edd8dab" prot="public" virt="non-virtual"><scope>AGE::Renderer</scope><name>Init</name></member>
+      <member refid="class_a_g_e_1_1_renderer_1aef1eb2da50bf41ba9d200e6fd8d737a8" prot="private" virt="non-virtual"><scope>AGE::Renderer</scope><name>m_SceneData</name></member>
+      <member refid="class_a_g_e_1_1_renderer_1afa9d271aca73c6095aec27053cd5d2b0" prot="public" virt="non-virtual"><scope>AGE::Renderer</scope><name>OnFramebufferResize</name></member>
+      <member refid="class_a_g_e_1_1_renderer_1ad81b53301165b0fd58a81c02ae6452e0" prot="public" virt="non-virtual"><scope>AGE::Renderer</scope><name>OnWindowResize</name></member>
+      <member refid="class_a_g_e_1_1_renderer_1a3bb0401c7269b12275578be105920d4e" prot="public" virt="non-virtual"><scope>AGE::Renderer</scope><name>SetAPI</name></member>
+      <member refid="class_a_g_e_1_1_renderer_1a1f6f19341385a169cd9d12286517b5c8" prot="public" virt="non-virtual"><scope>AGE::Renderer</scope><name>Shutdown</name></member>
+      <member refid="class_a_g_e_1_1_renderer_1a730cd2593e6872a71bc21771068457c6" prot="public" virt="non-virtual"><scope>AGE::Renderer</scope><name>Submit</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

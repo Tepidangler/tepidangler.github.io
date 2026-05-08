@@ -1,0 +1,311 @@
+
+
+# File Log.h
+
+[**File List**](files.md) **>** [**AGE**](dir_c1649042ac9dcb65c6181568c305ecb0.md) **>** [**Core**](dir_40f28070a54f843eaf86230230ee6eb2.md) **>** [**Public**](dir_4d1ade32537ccbee8ff5d36b16abbd57.md) **>** [**Log.h**](_log_8h.md)
+
+[Go to the documentation of this file](_log_8h.md)
+
+
+```C++
+#pragma once
+#include "AGEpch.hpp"
+#include "Core/Public/Core.h"
+#include "Core/Public/Pointers.h"
+
+#ifdef __clang__
+#pragma clang diagnostic push
+//#pragma clang diagnostic ignored "-Werror"
+#include "spdlog/spdlog.h"
+#include "spdlog/fmt/ostr.h"
+#pragma clang diagnostic pop
+#elif defined(__GNUC__)
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Werror"
+#include "spdlog/spdlog.h"
+#include "spdlog/fmt/ostr.h"
+#pragma GCC diagnostic pop
+#elif defined(_MSC_VER)
+#pragma warning(push, 0)
+#include "spdlog/spdlog.h"
+#include "spdlog/fmt/ostr.h"
+#pragma warning(pop)
+#else
+#error "Compiler is not supported with AGE yet"
+#endif
+
+#include "spdlog/sinks/stdout_color_sinks.h"
+#include <string_view>
+#include <format>
+#ifdef AG_PLATFORM_WINDOWS
+#include <debugapi.h>
+#else
+#include <csignal>
+#endif
+
+
+namespace AGE 
+{
+    enum class LogType : uint8_t
+    {
+        Trace = 0,
+        Info = 1,
+        Warn = 2,
+        Error = 3,
+        Critical = 4
+
+    };
+    class Log
+    {
+    public:
+
+        static void Init();
+
+        inline static Ref<spdlog::logger>& GetCoreLogger() { return s_AGECoreLogger; }
+        inline static Ref<spdlog::logger>& GetGameLogger() { return s_AGEGameLogger; }
+        inline static std::vector<char>& GetLogs() { return s_Logs; }
+        inline static std::vector<size_t>& GetOffsets() { return s_Offsets; }
+        inline static std::vector<LogType>& GetTypes() { return s_Type; }
+
+
+    private:
+
+        static Ref<spdlog::logger> s_AGECoreLogger;
+        static Ref<spdlog::logger> s_AGEGameLogger;
+
+        static std::vector<char> s_Logs;
+        static std::vector<size_t> s_Offsets;
+        static std::vector<LogType> s_Type;
+
+    };
+
+    namespace CoreLogger
+    {
+        template<typename ... Args>
+        void Trace(std::string_view fmt, Args&& ... args)
+        {
+            std::string Line = "[AGECORE] " + std::vformat(fmt, std::make_format_args(args...)) + "\n";
+            size_t Size = Line.size();
+            Log::GetCoreLogger()->trace(Line);
+            for (auto& c : Line)
+            {
+                Log::GetLogs().push_back(c);
+            }
+            Log::GetOffsets().push_back(Log::GetOffsets().back() + Size);
+            Log::GetTypes().push_back(LogType::Trace);
+#ifdef AG_PLATFORM_WINDOWS
+            std::wstring wLine(Line.begin(), Line.end());
+            OutputDebugString(wLine.c_str());
+#elif defined(AG_PLATFORM_LINUX)
+            printf("%s", Line.c_str());
+#endif
+        }
+        template<typename ... Args>
+        void Info(std::string_view fmt, Args&& ... args)
+        {
+            std::string Line = "[AGECORE] " + std::vformat(fmt, std::make_format_args(args...)) + "\n";
+            size_t Size = Line.size();
+            Log::GetCoreLogger()->info(Line);
+            for (auto& c : Line)
+            {
+                Log::GetLogs().push_back(c);
+
+
+            }
+            Log::GetOffsets().push_back(Log::GetOffsets().back() + Size);
+            Log::GetTypes().push_back(LogType::Info);
+#ifdef AG_PLATFORM_WINDOWS
+            std::wstring wLine(Line.begin(), Line.end());
+            OutputDebugString(wLine.c_str());
+#elif defined(AG_PLATFORM_LINUX)
+            printf("%s", Line.c_str());
+#endif
+        }
+        template<typename ... Args>
+        void Warn(std::string_view fmt, Args&& ... args)
+        {
+            std::string Line = "[AGECORE] " + std::vformat(fmt, std::make_format_args(args...)) + "\n";
+            size_t Size = Line.size();
+            Log::GetCoreLogger()->warn(Line);
+            for (auto& c : Line)
+            {
+                Log::GetLogs().push_back(c);
+
+
+            }
+            Log::GetOffsets().push_back(Log::GetOffsets().back() + Size);
+            Log::GetTypes().push_back(LogType::Warn);
+#ifdef AG_PLATFORM_WINDOWS
+            std::wstring wLine(Line.begin(), Line.end());
+            OutputDebugString(wLine.c_str());
+#elif defined(AG_PLATFORM_LINUX)
+            printf("%s", Line.c_str());
+#endif
+        }
+        template<typename ... Args>
+        void Error(std::string_view fmt, Args&& ... args)
+        {
+            std::string Line = "[AGECORE] " + std::vformat(fmt, std::make_format_args(args...)) + "\n";
+            size_t Size = Line.size();
+            Log::GetCoreLogger()->error(Line);
+            for (auto& c : Line)
+            {
+                Log::GetLogs().push_back(c);
+
+
+            }
+            Log::GetOffsets().push_back(Log::GetOffsets().back() + Size);
+            Log::GetTypes().push_back(LogType::Error);
+#ifdef AG_PLATFORM_WINDOWS
+            std::wstring wLine(Line.begin(), Line.end());
+            OutputDebugString(wLine.c_str());
+#elif defined(AG_PLATFORM_LINUX)
+            printf("%s", Line.c_str());
+#endif
+        }
+        template<typename ... Args>
+        void Critical(std::string_view fmt, Args&& ... args)
+        {
+            std::string Line = "[AGECORE] " + std::vformat(fmt, std::make_format_args(args...)) + "\n";
+            size_t Size = Line.size();
+            Log::GetCoreLogger()->critical(Line);
+            for (auto& c : Line)
+            {
+                Log::GetLogs().push_back(c);
+
+
+            }
+            Log::GetOffsets().push_back(Log::GetOffsets().back() + Size);
+            Log::GetTypes().push_back(LogType::Critical);
+#ifdef AG_PLATFORM_WINDOWS
+            std::wstring wLine(Line.begin(), Line.end());
+            OutputDebugString(wLine.c_str());
+#elif defined(AG_PLATFORM_LINUX)
+            printf("%s", Line.c_str());
+#endif
+        }
+
+    }
+
+    namespace GameLogger
+    {
+        // GameLogger::Trace("This is a logged event {0}", 12);
+        template<typename ... Args>
+        void Trace(std::string_view fmt, Args&& ... args)
+        {
+            std::string Line = "[AGEGAME] " + std::vformat(fmt, std::make_format_args(args...)) + "\n";
+            size_t Size = Line.size();
+            Log::GetGameLogger()->trace(Line);
+            for (auto& c : Line)
+            {
+                Log::GetLogs().push_back(c);
+
+
+            }
+            Log::GetOffsets().push_back(Log::GetOffsets().back() + Size);
+            Log::GetTypes().push_back(LogType::Trace);
+#ifdef AG_PLATFORM_WINDOWS
+            std::wstring wLine(Line.begin(), Line.end());
+            OutputDebugString(wLine.c_str());
+#elif defined(AG_PLATFORM_LINUX)
+            printf("%s", Line.c_str());
+#endif
+        }
+        template<typename ... Args>
+        void Info(std::string_view fmt, Args&& ... args)
+        {
+            std::string Line = "[AGEGAME] " + std::vformat(fmt, std::make_format_args(args...)) + "\n";
+            size_t Size = Line.size();
+            Log::GetGameLogger()->info(Line);
+            for (auto& c : Line)
+            {
+                Log::GetLogs().push_back(c);
+
+
+            }
+            Log::GetOffsets().push_back(Log::GetOffsets().back() + Size);
+            Log::GetTypes().push_back(LogType::Info);
+#ifdef AG_PLATFORM_WINDOWS
+            std::wstring wLine(Line.begin(), Line.end());
+            OutputDebugString(wLine.c_str());
+#elif defined(AG_PLATFORM_LINUX)
+            printf("%s", Line.c_str());
+#endif
+        }
+        template<typename ... Args>
+        void Warn(std::string_view fmt, Args&& ... args)
+        {
+            std::string Line = "[AGEGAME] " + std::vformat(fmt, std::make_format_args(args...)) + "\n";
+            size_t Size = Line.size();
+            Log::GetGameLogger()->warn(Line);
+            for (auto& c : Line)
+            {
+                Log::GetLogs().push_back(c);
+
+
+            }
+            Log::GetOffsets().push_back(Log::GetOffsets().back() + Size);
+            Log::GetTypes().push_back(LogType::Warn);
+#ifdef AG_PLATFORM_WINDOWS
+            std::wstring wLine(Line.begin(), Line.end());
+            OutputDebugString(wLine.c_str());
+#elif defined(AG_PLATFORM_LINUX)
+            printf("%s", Line.c_str());
+#endif
+        }
+        template<typename ... Args>
+        void Error(std::string_view fmt, Args&& ... args)
+        {
+            std::string Line = "[AGEGAME] " + std::vformat(fmt, std::make_format_args(args...)) + "\n";
+            size_t Size = Line.size();
+            Log::GetGameLogger()->error(Line);
+            for (auto& c : Line)
+            {
+                Log::GetLogs().push_back(c);
+
+
+            }
+            Log::GetOffsets().push_back(Log::GetOffsets().back() + Size);
+            Log::GetTypes().push_back(LogType::Error);
+#ifdef AG_PLATFORM_WINDOWS
+            std::wstring wLine(Line.begin(), Line.end());
+            OutputDebugString(wLine.c_str());
+#elif defined(AG_PLATFORM_LINUX)
+            printf("%s", Line.c_str());
+#endif
+        }
+        template<typename ... Args>
+        void Critical(std::string_view fmt, Args&& ... args)
+        {
+            std::string Line = "[AGEGAME] " + std::vformat(fmt, std::make_format_args(args...)) + "\n";
+            size_t Size = Line.size();
+            Log::GetGameLogger()->critical(Line);
+            for (auto& c : Line)
+            {
+                Log::GetLogs().push_back(c);
+
+
+            }
+            Log::GetOffsets().push_back(Log::GetOffsets().back() + Size);
+            Log::GetTypes().push_back(LogType::Critical);
+#ifdef AG_PLATFORM_WINDOWS
+            std::wstring wLine(Line.begin(), Line.end());
+            OutputDebugString(wLine.c_str());
+#elif defined(AG_PLATFORM_LINUX)
+            printf("%s", Line.c_str());
+#endif
+        }
+    }
+
+}
+
+#ifdef AGE_ENABLE_ASSERTS
+#define AGE_GAME_ASSERT(x, ...) {if(!(x)) {AGE::GameLogger::Critical("[AGEGAMEASSERT] Assertion Failed: {0}", __VA_ARGS__); __debugbreak();}}
+#define AGE_CORE_ASSERT(x, ...) {if(!(x)) {AGE::CoreLogger::Critical("[AGECOREASSERT] Assertion Failed: {0}", __VA_ARGS__); __debugbreak();}}
+#else
+#define AGE_GAME_ASSERT(x, ...)
+#define AGE_CORE_ASSERT(x, ...)
+#endif
+```
+
+

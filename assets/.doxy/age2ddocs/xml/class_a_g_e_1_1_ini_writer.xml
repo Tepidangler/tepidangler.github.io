@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_a_g_e_1_1_ini_writer" kind="class" language="C++" prot="public">
+    <compoundname>AGE::IniWriter</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_a_g_e_1_1_ini_writer_1a6115610c0f9efafd19e035435f95c183" prot="private" static="no" mutable="no">
+        <type>std::filesystem::path</type>
+        <definition>std::filesystem::path AGE::IniWriter::m_IniPath</definition>
+        <argsstring></argsstring>
+        <name>m_IniPath</name>
+        <qualifiedname>AGE::IniWriter::m_IniPath</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/IniWriter.h" line="42" column="23" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/IniWriter.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_ini_writer_1a09454ba9986854b72538b207ddd07c54" prot="private" static="no" mutable="no">
+        <type>CSimpleIniA</type>
+        <definition>CSimpleIniA AGE::IniWriter::m_Ini</definition>
+        <argsstring></argsstring>
+        <name>m_Ini</name>
+        <qualifiedname>AGE::IniWriter::m_Ini</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/IniWriter.h" line="43" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/IniWriter.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_ini_writer_1a0fb8c1eba668d5804ef3a41bf5f87fbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AGE::IniWriter::IniWriter</definition>
+        <argsstring>(const std::filesystem::path &amp;Path)</argsstring>
+        <name>IniWriter</name>
+        <qualifiedname>AGE::IniWriter::IniWriter</qualifiedname>
+        <param>
+          <type>const std::filesystem::path &amp;</type>
+          <declname>Path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/IniWriter.h" line="32" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Private/IniWriter.cpp" bodystart="12" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_ini_writer_1a1f890a84437554ec93c3f84cf42e6f9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AGE::IniWriter::~IniWriter</definition>
+        <argsstring>()=default</argsstring>
+        <name>~IniWriter</name>
+        <qualifiedname>AGE::IniWriter::~IniWriter</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/IniWriter.h" line="33" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_ini_writer_1ab3c34be5fbbced8ea682d1a4599684f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AGE::IniWriter::Write</definition>
+        <argsstring>(const std::string &amp;Section, const std::string &amp;Key, const std::string &amp;Value)</argsstring>
+        <name>Write</name>
+        <qualifiedname>AGE::IniWriter::Write</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>Section</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>Key</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>Value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/IniWriter.h" line="35" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Private/IniWriter.cpp" bodystart="25" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_ini_writer_1a541f21019e8e155b8433cb9d6c0ef638" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AGE::IniWriter::SaveFile</definition>
+        <argsstring>()</argsstring>
+        <name>SaveFile</name>
+        <qualifiedname>AGE::IniWriter::SaveFile</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/IniWriter.h" line="37" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Private/IniWriter.cpp" bodystart="32" bodyend="38"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/IniWriter.h" line="29" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/IniWriter.h" bodystart="30" bodyend="44"/>
+    <listofallmembers>
+      <member refid="class_a_g_e_1_1_ini_writer_1a0fb8c1eba668d5804ef3a41bf5f87fbe" prot="public" virt="non-virtual"><scope>AGE::IniWriter</scope><name>IniWriter</name></member>
+      <member refid="class_a_g_e_1_1_ini_writer_1a09454ba9986854b72538b207ddd07c54" prot="private" virt="non-virtual"><scope>AGE::IniWriter</scope><name>m_Ini</name></member>
+      <member refid="class_a_g_e_1_1_ini_writer_1a6115610c0f9efafd19e035435f95c183" prot="private" virt="non-virtual"><scope>AGE::IniWriter</scope><name>m_IniPath</name></member>
+      <member refid="class_a_g_e_1_1_ini_writer_1a541f21019e8e155b8433cb9d6c0ef638" prot="public" virt="non-virtual"><scope>AGE::IniWriter</scope><name>SaveFile</name></member>
+      <member refid="class_a_g_e_1_1_ini_writer_1ab3c34be5fbbced8ea682d1a4599684f8" prot="public" virt="non-virtual"><scope>AGE::IniWriter</scope><name>Write</name></member>
+      <member refid="class_a_g_e_1_1_ini_writer_1a1f890a84437554ec93c3f84cf42e6f9e" prot="public" virt="non-virtual"><scope>AGE::IniWriter</scope><name>~IniWriter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

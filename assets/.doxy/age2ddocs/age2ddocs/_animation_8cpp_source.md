@@ -1,0 +1,95 @@
+
+
+# File Animation.cpp
+
+[**File List**](files.md) **>** [**AGE**](dir_c1649042ac9dcb65c6181568c305ecb0.md) **>** [**Animation**](dir_8e73e8c2cba434bb9bc4a7569a6e7a64.md) **>** [**Private**](dir_e7ed31bfebfd0e8384b3a8db9e279ec1.md) **>** [**Animation.cpp**](_animation_8cpp.md)
+
+[Go to the documentation of this file](_animation_8cpp.md)
+
+
+```C++
+#include "AGEpch.hpp"
+#include "Animation/Public/Animation.h"
+
+
+
+namespace AGE
+{
+    Animation::Animation()
+    {
+        m_CurrentFrame = 0;
+        m_MaxFrames = 0;
+        m_FrameInc = 1;
+
+        m_FrameRate = 100;
+        m_OldTime = 0;
+
+        bOscillate = false;
+
+        m_Timer = Timer();
+    }
+
+
+    void Animation::OnDestroy()
+    {
+    }
+    void Animation::OnAnimate(TimeStep DeltaTime)
+    {
+        
+        if (m_OldTime + (float)m_FrameRate > m_Timer.ElapsedMillis())
+        {
+            return;
+        }
+
+        m_OldTime = m_Timer.ElapsedMillis();
+
+        m_CurrentFrame += m_FrameInc;
+
+        if (bOscillate)
+        {
+            if (m_FrameInc > 0)
+            {
+                if (m_CurrentFrame >= m_MaxFrames)
+                {
+                    m_FrameInc = -m_FrameInc;
+                }
+                else if (m_CurrentFrame <= 0)
+                {
+                    m_FrameInc = -m_FrameInc;
+                }
+                else if (m_CurrentFrame >= m_MaxFrames)
+                {
+                    m_CurrentFrame = 0;
+                }
+            }
+
+        }
+    }
+    void Animation::SetCurrentFrame(int Frame)
+    {
+        if (Frame < 0 || Frame >= m_MaxFrames)
+        {
+            return;
+        }
+
+        m_CurrentFrame = Frame;
+    }
+    void Animation::LoadAnimation(const AnimationSpecification Anim)
+    {
+        m_AnimationTextures.emplace(std::make_pair(Anim.MovementStatus, Anim));
+    }
+    void Animation::LoadAnimations(const std::vector<AnimationSpecification>& Anims)
+    {
+        for (auto S : Anims)
+        {
+            m_AnimationTextures.emplace(std::make_pair(S.MovementStatus,  S));
+        }
+    }
+    void Animation::SetCurrentTexture(CharMovementStatus status)
+    {
+        m_CurrentTexture = AGE::SubTexture2D::CreateFromCoords(m_AnimationTextures[status].Texture, AGE::Vector2((float)m_CurrentFrame, 0.f), AGE::Vector2(m_AnimationTextures[status].Width / (float)m_AnimationTextures[status].NumberOfFrames, m_AnimationTextures[status].Height));
+    }
+}
+```
+
+

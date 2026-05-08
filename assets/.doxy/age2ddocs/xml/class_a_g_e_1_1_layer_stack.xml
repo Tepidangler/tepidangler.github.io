@@ -1,0 +1,233 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_a_g_e_1_1_layer_stack" kind="class" language="C++" prot="public">
+    <compoundname>AGE::LayerStack</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_a_g_e_1_1_layer_stack_1aa155b334fd3424cc222308388c3deeb4" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_a_g_e_1_1_layer" kindref="compound">Layer</ref> * &gt;</type>
+        <definition>std::vector&lt;Layer*&gt; AGE::LayerStack::m_Layers</definition>
+        <argsstring></argsstring>
+        <name>m_Layers</name>
+        <qualifiedname>AGE::LayerStack::m_Layers</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" line="35" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_layer_stack_1acf8b01a50a569ee81aa0e569c8d8b7c4" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int AGE::LayerStack::m_LayerInsertIndex</definition>
+        <argsstring></argsstring>
+        <name>m_LayerInsertIndex</name>
+        <qualifiedname>AGE::LayerStack::m_LayerInsertIndex</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" line="36" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_layer_stack_1a6e1a64a9b4f060af414bd25541074c77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AGE::LayerStack::LayerStack</definition>
+        <argsstring>()</argsstring>
+        <name>LayerStack</name>
+        <qualifiedname>AGE::LayerStack::LayerStack</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" line="12" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/LayerStack.cpp" bodystart="6" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_layer_stack_1afe024b5953520f058481e0e823175d60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AGE::LayerStack::~LayerStack</definition>
+        <argsstring>()</argsstring>
+        <name>~LayerStack</name>
+        <qualifiedname>AGE::LayerStack::~LayerStack</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" line="13" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/LayerStack.cpp" bodystart="10" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_layer_stack_1a775acea8be34393ea21c361297a6924b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::LayerStack::PushLayer</definition>
+        <argsstring>(Layer *Layer)</argsstring>
+        <name>PushLayer</name>
+        <qualifiedname>AGE::LayerStack::PushLayer</qualifiedname>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_layer" kindref="compound">Layer</ref> *</type>
+          <declname>Layer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" line="15" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/LayerStack.cpp" bodystart="20" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_layer_stack_1ada534989c8c78d6fbc78e4ab4b6e4657" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::LayerStack::PushOverlay</definition>
+        <argsstring>(Layer *Overlay)</argsstring>
+        <name>PushOverlay</name>
+        <qualifiedname>AGE::LayerStack::PushOverlay</qualifiedname>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_layer" kindref="compound">Layer</ref> *</type>
+          <declname>Overlay</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" line="17" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/LayerStack.cpp" bodystart="25" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_layer_stack_1a4ae9ac123b70c17f0f31e9aa511736bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::LayerStack::PopLayer</definition>
+        <argsstring>(Layer *Layer)</argsstring>
+        <name>PopLayer</name>
+        <qualifiedname>AGE::LayerStack::PopLayer</qualifiedname>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_layer" kindref="compound">Layer</ref> *</type>
+          <declname>Layer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" line="19" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/LayerStack.cpp" bodystart="29" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_layer_stack_1ae87c887c78b5b4aeb6e3fe9eec655a0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::LayerStack::PopOverlay</definition>
+        <argsstring>(Layer *Overlay)</argsstring>
+        <name>PopOverlay</name>
+        <qualifiedname>AGE::LayerStack::PopOverlay</qualifiedname>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_layer" kindref="compound">Layer</ref> *</type>
+          <declname>Overlay</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" line="21" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/LayerStack.cpp" bodystart="41" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_layer_stack_1a3da9342fc66a2bd4ecefa2bfacd7bdc0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_a_g_e_1_1_layer" kindref="compound">Layer</ref> *</type>
+        <definition>Layer * AGE::LayerStack::GetLayerByName</definition>
+        <argsstring>(const std::string &amp;LayerName)</argsstring>
+        <name>GetLayerByName</name>
+        <qualifiedname>AGE::LayerStack::GetLayerByName</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>LayerName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" line="23" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/LayerStack.cpp" bodystart="51" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_layer_stack_1aafa4ec50ce6b0decca45ce25b7e285bf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="class_a_g_e_1_1_layer" kindref="compound">Layer</ref> * &gt;::iterator</type>
+        <definition>std::vector&lt; Layer * &gt;::iterator AGE::LayerStack::begin</definition>
+        <argsstring>()</argsstring>
+        <name>begin</name>
+        <qualifiedname>AGE::LayerStack::begin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" line="26" column="24" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" bodystart="26" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_layer_stack_1ab78f8f7bf719ad1dc2bcec8ad893a8ac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="class_a_g_e_1_1_layer" kindref="compound">Layer</ref> * &gt;::iterator</type>
+        <definition>std::vector&lt; Layer * &gt;::iterator AGE::LayerStack::end</definition>
+        <argsstring>()</argsstring>
+        <name>end</name>
+        <qualifiedname>AGE::LayerStack::end</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" line="28" column="24" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" bodystart="28" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_layer_stack_1a64701fe086a1c4bf64f280664351e9df" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="class_a_g_e_1_1_layer" kindref="compound">Layer</ref> * &gt;::const_iterator</type>
+        <definition>std::vector&lt; Layer * &gt;::const_iterator AGE::LayerStack::begin</definition>
+        <argsstring>() const</argsstring>
+        <name>begin</name>
+        <qualifiedname>AGE::LayerStack::begin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" line="30" column="30" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_layer_stack_1a47adcffde9623b2f0b8dbcb07700e0cf" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="class_a_g_e_1_1_layer" kindref="compound">Layer</ref> * &gt;::const_iterator</type>
+        <definition>std::vector&lt; Layer * &gt;::const_iterator AGE::LayerStack::end</definition>
+        <argsstring>() const</argsstring>
+        <name>end</name>
+        <qualifiedname>AGE::LayerStack::end</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" line="32" column="30" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" bodystart="32" bodyend="32"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" line="9" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" bodystart="10" bodyend="37"/>
+    <listofallmembers>
+      <member refid="class_a_g_e_1_1_layer_stack_1aafa4ec50ce6b0decca45ce25b7e285bf" prot="public" virt="non-virtual"><scope>AGE::LayerStack</scope><name>begin</name></member>
+      <member refid="class_a_g_e_1_1_layer_stack_1a64701fe086a1c4bf64f280664351e9df" prot="public" virt="non-virtual"><scope>AGE::LayerStack</scope><name>begin</name></member>
+      <member refid="class_a_g_e_1_1_layer_stack_1ab78f8f7bf719ad1dc2bcec8ad893a8ac" prot="public" virt="non-virtual"><scope>AGE::LayerStack</scope><name>end</name></member>
+      <member refid="class_a_g_e_1_1_layer_stack_1a47adcffde9623b2f0b8dbcb07700e0cf" prot="public" virt="non-virtual"><scope>AGE::LayerStack</scope><name>end</name></member>
+      <member refid="class_a_g_e_1_1_layer_stack_1a3da9342fc66a2bd4ecefa2bfacd7bdc0" prot="public" virt="non-virtual"><scope>AGE::LayerStack</scope><name>GetLayerByName</name></member>
+      <member refid="class_a_g_e_1_1_layer_stack_1a6e1a64a9b4f060af414bd25541074c77" prot="public" virt="non-virtual"><scope>AGE::LayerStack</scope><name>LayerStack</name></member>
+      <member refid="class_a_g_e_1_1_layer_stack_1acf8b01a50a569ee81aa0e569c8d8b7c4" prot="private" virt="non-virtual"><scope>AGE::LayerStack</scope><name>m_LayerInsertIndex</name></member>
+      <member refid="class_a_g_e_1_1_layer_stack_1aa155b334fd3424cc222308388c3deeb4" prot="private" virt="non-virtual"><scope>AGE::LayerStack</scope><name>m_Layers</name></member>
+      <member refid="class_a_g_e_1_1_layer_stack_1a4ae9ac123b70c17f0f31e9aa511736bf" prot="public" virt="non-virtual"><scope>AGE::LayerStack</scope><name>PopLayer</name></member>
+      <member refid="class_a_g_e_1_1_layer_stack_1ae87c887c78b5b4aeb6e3fe9eec655a0e" prot="public" virt="non-virtual"><scope>AGE::LayerStack</scope><name>PopOverlay</name></member>
+      <member refid="class_a_g_e_1_1_layer_stack_1a775acea8be34393ea21c361297a6924b" prot="public" virt="non-virtual"><scope>AGE::LayerStack</scope><name>PushLayer</name></member>
+      <member refid="class_a_g_e_1_1_layer_stack_1ada534989c8c78d6fbc78e4ab4b6e4657" prot="public" virt="non-virtual"><scope>AGE::LayerStack</scope><name>PushOverlay</name></member>
+      <member refid="class_a_g_e_1_1_layer_stack_1afe024b5953520f058481e0e823175d60" prot="public" virt="non-virtual"><scope>AGE::LayerStack</scope><name>~LayerStack</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

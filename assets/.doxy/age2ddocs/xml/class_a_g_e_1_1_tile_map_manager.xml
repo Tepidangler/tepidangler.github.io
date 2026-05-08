@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_a_g_e_1_1_tile_map_manager" kind="class" language="C++" prot="public">
+    <compoundname>AGE::TileMapManager</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_a_g_e_1_1_tile_map_manager_1a31485e0b5268cfb7cbf4470a385d363a" prot="private" static="no" mutable="no">
+        <type>Ref&lt; <ref refid="class_a_g_e_1_1_tile_map_importer" kindref="compound">TileMapImporter</ref> &gt;</type>
+        <definition>Ref&lt;TileMapImporter&gt; AGE::TileMapManager::m_Importer</definition>
+        <argsstring></argsstring>
+        <name>m_Importer</name>
+        <qualifiedname>AGE::TileMapManager::m_Importer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/TileMapManager.h" line="36" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/TileMapManager.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_tile_map_manager_1a37a90619fc0b32bfac77f2d5671c6f81" prot="private" static="no" mutable="no">
+        <type>tmx_resource_manager *</type>
+        <definition>tmx_resource_manager* AGE::TileMapManager::m_Manager</definition>
+        <argsstring></argsstring>
+        <name>m_Manager</name>
+        <qualifiedname>AGE::TileMapManager::m_Manager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/TileMapManager.h" line="37" column="22" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/TileMapManager.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_tile_map_manager_1ad909e707cb25b3c1ac04ff6126f3bad8" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; Ref&lt; <ref refid="class_a_g_e_1_1_tilemap" kindref="compound">Tilemap</ref> &gt; &gt;</type>
+        <definition>std::vector&lt;Ref&lt;Tilemap&gt; &gt; AGE::TileMapManager::m_TileMaps</definition>
+        <argsstring></argsstring>
+        <name>m_TileMaps</name>
+        <qualifiedname>AGE::TileMapManager::m_TileMaps</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/TileMapManager.h" line="38" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/TileMapManager.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_tile_map_manager_1af1eaccec21e8bc682837085be095ff15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AGE::TileMapManager::TileMapManager</definition>
+        <argsstring>()</argsstring>
+        <name>TileMapManager</name>
+        <qualifiedname>AGE::TileMapManager::TileMapManager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/TileMapManager.h" line="16" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Private/TileMapManager.cpp" bodystart="10" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_tile_map_manager_1addacacc69abde1786f94cdfa041e045a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AGE::TileMapManager::~TileMapManager</definition>
+        <argsstring>()=default</argsstring>
+        <name>~TileMapManager</name>
+        <qualifiedname>AGE::TileMapManager::~TileMapManager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/TileMapManager.h" line="17" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_tile_map_manager_1a200b3a5c616c84de56f7abe7d505bb93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Ref&lt; <ref refid="class_a_g_e_1_1_tilemap" kindref="compound">Tilemap</ref> &gt;</type>
+        <definition>Ref&lt; Tilemap &gt; AGE::TileMapManager::LoadTileMap</definition>
+        <argsstring>(const std::filesystem::path &amp;Path)</argsstring>
+        <name>LoadTileMap</name>
+        <qualifiedname>AGE::TileMapManager::LoadTileMap</qualifiedname>
+        <param>
+          <type>const std::filesystem::path &amp;</type>
+          <declname>Path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/TileMapManager.h" line="28" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Private/TileMapManager.cpp" bodystart="19" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_tile_map_manager_1a8e95afdc04b9e04d4d84b537d4921f3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::TileMapManager::LoadTileMaps</definition>
+        <argsstring>(const std::vector&lt; std::filesystem::path &gt; &amp;Paths)</argsstring>
+        <name>LoadTileMaps</name>
+        <qualifiedname>AGE::TileMapManager::LoadTileMaps</qualifiedname>
+        <param>
+          <type>const std::vector&lt; std::filesystem::path &gt; &amp;</type>
+          <declname>Paths</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/TileMapManager.h" line="29" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Private/TileMapManager.cpp" bodystart="28" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_tile_map_manager_1a2a413e998678e579ecf354a8ba8f8f12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::TileMapManager::LoadTileMaps</definition>
+        <argsstring>(void *Addr)</argsstring>
+        <name>LoadTileMaps</name>
+        <qualifiedname>AGE::TileMapManager::LoadTileMaps</qualifiedname>
+        <param>
+          <type>void *</type>
+          <declname>Addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/TileMapManager.h" line="30" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Private/TileMapManager.cpp" bodystart="38" bodyend="40"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_tile_map_manager_1a45ab80518ff28ac62649830aaa55baac" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_a_g_e_1_1_tile_map_manager" kindref="compound">TileMapManager</ref> &amp;</type>
+        <definition>static TileMapManager &amp; AGE::TileMapManager::Get</definition>
+        <argsstring>()</argsstring>
+        <name>Get</name>
+        <qualifiedname>AGE::TileMapManager::Get</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/TileMapManager.h" line="19" column="23" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/TileMapManager.h" bodystart="19" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_tile_map_manager_1a702b58fe63c8292df2d99d0d4aaae695" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void * AGE::TileMapManager::ImageLoad</definition>
+        <argsstring>(const char *Path)</argsstring>
+        <name>ImageLoad</name>
+        <qualifiedname>AGE::TileMapManager::ImageLoad</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>Path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/TileMapManager.h" line="32" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Private/TileMapManager.cpp" bodystart="42" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_tile_map_manager_1ac84c8dd5b9932b3fdeb210a3da7b5760" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::TileMapManager::ImageFree</definition>
+        <argsstring>(void *Address)</argsstring>
+        <name>ImageFree</name>
+        <qualifiedname>AGE::TileMapManager::ImageFree</qualifiedname>
+        <param>
+          <type>void *</type>
+          <declname>Address</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/TileMapManager.h" line="33" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Private/TileMapManager.cpp" bodystart="47" bodyend="52"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/TileMapManager.h" line="12" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/TileMapManager.h" bodystart="13" bodyend="41"/>
+    <listofallmembers>
+      <member refid="class_a_g_e_1_1_tile_map_manager_1a45ab80518ff28ac62649830aaa55baac" prot="public" virt="non-virtual"><scope>AGE::TileMapManager</scope><name>Get</name></member>
+      <member refid="class_a_g_e_1_1_tile_map_manager_1ac84c8dd5b9932b3fdeb210a3da7b5760" prot="public" virt="non-virtual"><scope>AGE::TileMapManager</scope><name>ImageFree</name></member>
+      <member refid="class_a_g_e_1_1_tile_map_manager_1a702b58fe63c8292df2d99d0d4aaae695" prot="public" virt="non-virtual"><scope>AGE::TileMapManager</scope><name>ImageLoad</name></member>
+      <member refid="class_a_g_e_1_1_tile_map_manager_1a200b3a5c616c84de56f7abe7d505bb93" prot="public" virt="non-virtual"><scope>AGE::TileMapManager</scope><name>LoadTileMap</name></member>
+      <member refid="class_a_g_e_1_1_tile_map_manager_1a8e95afdc04b9e04d4d84b537d4921f3b" prot="public" virt="non-virtual"><scope>AGE::TileMapManager</scope><name>LoadTileMaps</name></member>
+      <member refid="class_a_g_e_1_1_tile_map_manager_1a2a413e998678e579ecf354a8ba8f8f12" prot="public" virt="non-virtual"><scope>AGE::TileMapManager</scope><name>LoadTileMaps</name></member>
+      <member refid="class_a_g_e_1_1_tile_map_manager_1a31485e0b5268cfb7cbf4470a385d363a" prot="private" virt="non-virtual"><scope>AGE::TileMapManager</scope><name>m_Importer</name></member>
+      <member refid="class_a_g_e_1_1_tile_map_manager_1a37a90619fc0b32bfac77f2d5671c6f81" prot="private" virt="non-virtual"><scope>AGE::TileMapManager</scope><name>m_Manager</name></member>
+      <member refid="class_a_g_e_1_1_tile_map_manager_1ad909e707cb25b3c1ac04ff6126f3bad8" prot="private" virt="non-virtual"><scope>AGE::TileMapManager</scope><name>m_TileMaps</name></member>
+      <member refid="class_a_g_e_1_1_tile_map_manager_1af1eaccec21e8bc682837085be095ff15" prot="public" virt="non-virtual"><scope>AGE::TileMapManager</scope><name>TileMapManager</name></member>
+      <member refid="class_a_g_e_1_1_tile_map_manager_1addacacc69abde1786f94cdfa041e045a" prot="public" virt="non-virtual"><scope>AGE::TileMapManager</scope><name>~TileMapManager</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

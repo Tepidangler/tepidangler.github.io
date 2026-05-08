@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_a_g_e_1_1_graphics_context" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>AGE::GraphicsContext</compoundname>
+    <derivedcompoundref refid="class_a_g_e_1_1_open_g_l_context" prot="public" virt="non-virtual">AGE::OpenGLContext</derivedcompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_graphics_context_1a7691e44b7eb8a6e51d474d03dc39dd39" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual AGE::GraphicsContext::~GraphicsContext</definition>
+        <argsstring>()</argsstring>
+        <name>~GraphicsContext</name>
+        <qualifiedname>AGE::GraphicsContext::~GraphicsContext</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/GraphicsContext.h" line="13" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/GraphicsContext.h" bodystart="13" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_graphics_context_1a689088cae6269a64d5b67c5cca819944" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void AGE::GraphicsContext::Init</definition>
+        <argsstring>()=0</argsstring>
+        <name>Init</name>
+        <qualifiedname>AGE::GraphicsContext::Init</qualifiedname>
+        <reimplementedby refid="class_a_g_e_1_1_open_g_l_context_1a7fe573f1fcd98984f7a686b077856c47">Init</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/GraphicsContext.h" line="14" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_graphics_context_1aa5c747044fc475a9bdc0e1e789985aa2" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void AGE::GraphicsContext::SwapBuffers</definition>
+        <argsstring>()=0</argsstring>
+        <name>SwapBuffers</name>
+        <qualifiedname>AGE::GraphicsContext::SwapBuffers</qualifiedname>
+        <reimplementedby refid="class_a_g_e_1_1_open_g_l_context_1afe8b0381db6bd327e037aa7760b6d2e5">SwapBuffers</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/GraphicsContext.h" line="16" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_graphics_context_1ac590188247ab154d722e874e0e8e5479" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T *</type>
+        <definition>T * AGE::GraphicsContext::As</definition>
+        <argsstring>()</argsstring>
+        <name>As</name>
+        <qualifiedname>AGE::GraphicsContext::As</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/GraphicsContext.h" line="21" column="3" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/GraphicsContext.cpp" bodystart="31" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_graphics_context_1a3208c4785281d9eb6044dd4278f586ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type><ref refid="class_a_g_e_1_1_open_g_l_context" kindref="compound">OpenGLContext</ref> *</type>
+        <definition>OpenGLContext * AGE::GraphicsContext::As</definition>
+        <argsstring>()</argsstring>
+        <name>As</name>
+        <qualifiedname>AGE::GraphicsContext::As</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGlContext.cpp" line="78" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGlContext.cpp" bodystart="78" bodyend="81"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_graphics_context_1aa466644e8c1f2a40440f6bc0b2f778c4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Scope&lt; <ref refid="class_a_g_e_1_1_graphics_context" kindref="compound">GraphicsContext</ref> &gt;</type>
+        <definition>Scope&lt; GraphicsContext &gt; AGE::GraphicsContext::Create</definition>
+        <argsstring>(void *Window)</argsstring>
+        <name>Create</name>
+        <qualifiedname>AGE::GraphicsContext::Create</qualifiedname>
+        <param>
+          <type>void *</type>
+          <declname>Window</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/GraphicsContext.h" line="18" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/GraphicsContext.cpp" bodystart="9" bodyend="28"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>AGE::GraphicsContext</label>
+        <link refid="class_a_g_e_1_1_graphics_context"/>
+      </node>
+      <node id="2">
+        <label>AGE::OpenGLContext</label>
+        <link refid="class_a_g_e_1_1_open_g_l_context"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/GraphicsContext.h" line="9" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/GraphicsContext.h" bodystart="10" bodyend="22"/>
+    <listofallmembers>
+      <member refid="class_a_g_e_1_1_graphics_context_1ac590188247ab154d722e874e0e8e5479" prot="public" virt="non-virtual"><scope>AGE::GraphicsContext</scope><name>As</name></member>
+      <member refid="class_a_g_e_1_1_graphics_context_1a3208c4785281d9eb6044dd4278f586ed" prot="public" virt="non-virtual"><scope>AGE::GraphicsContext</scope><name>As</name></member>
+      <member refid="class_a_g_e_1_1_graphics_context_1aa466644e8c1f2a40440f6bc0b2f778c4" prot="public" virt="non-virtual"><scope>AGE::GraphicsContext</scope><name>Create</name></member>
+      <member refid="class_a_g_e_1_1_graphics_context_1a689088cae6269a64d5b67c5cca819944" prot="public" virt="pure-virtual"><scope>AGE::GraphicsContext</scope><name>Init</name></member>
+      <member refid="class_a_g_e_1_1_graphics_context_1aa5c747044fc475a9bdc0e1e789985aa2" prot="public" virt="pure-virtual"><scope>AGE::GraphicsContext</scope><name>SwapBuffers</name></member>
+      <member refid="class_a_g_e_1_1_graphics_context_1a7691e44b7eb8a6e51d474d03dc39dd39" prot="public" virt="virtual"><scope>AGE::GraphicsContext</scope><name>~GraphicsContext</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="_renderer_8h" kind="file" language="C++">
+    <compoundname>Renderer.h</compoundname>
+    <includes refid="_render_a_p_i_8h" local="yes">Render/Public/RenderAPI.h</includes>
+    <includes refid="_camera_8h" local="yes">Camera/Public/Camera.h</includes>
+    <includes refid="_editor_camera_8h" local="yes">Camera/Public/EditorCamera.h</includes>
+    <includes refid="_widget_stack_8h" local="yes">UI/Public/WidgetStack.h</includes>
+    <includedby refid="_app_8cpp" local="yes">C:/Programming/AGE2D/Engine/src/AGE/Core/Private/App.cpp</includedby>
+    <includedby refid="_device_manager_8cpp" local="yes">C:/Programming/AGE2D/Engine/src/AGE/Core/Private/DeviceManager.cpp</includedby>
+    <includedby refid="_im_gui_layer_8h" local="yes">C:/Programming/AGE2D/Engine/src/AGE/ImGui/Public/ImGuiLayer.h</includedby>
+    <includedby refid="_open_g_l_texture_8cpp" local="yes">C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLTexture.cpp</includedby>
+    <includedby refid="_frame_buffer_8cpp" local="yes">C:/Programming/AGE2D/Engine/src/AGE/Render/Private/FrameBuffer.cpp</includedby>
+    <includedby refid="_graphics_context_8cpp" local="yes">C:/Programming/AGE2D/Engine/src/AGE/Render/Private/GraphicsContext.cpp</includedby>
+    <includedby refid="_render_buffer_8cpp" local="yes">C:/Programming/AGE2D/Engine/src/AGE/Render/Private/RenderBuffer.cpp</includedby>
+    <includedby refid="_renderer_8cpp" local="yes">C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer.cpp</includedby>
+    <includedby refid="_shader_8cpp" local="yes">C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Shader.cpp</includedby>
+    <includedby refid="_vertex_array_8cpp" local="yes">C:/Programming/AGE2D/Engine/src/AGE/Render/Private/VertexArray.cpp</includedby>
+    <includedby refid="_scene_8cpp" local="yes">C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/Scene.cpp</includedby>
+    <includedby refid="_texture_8cpp" local="yes">C:/Programming/AGE2D/Engine/src/AGE/Texture/Private/Texture.cpp</includedby>
+    <innerclass refid="class_a_g_e_1_1_renderer" prot="public">AGE::Renderer</innerclass>
+    <innerclass refid="struct_a_g_e_1_1_renderer_1_1_scene_data" prot="private">AGE::Renderer::SceneData</innerclass>
+    <innernamespace refid="namespace_a_g_e">AGE</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Render/Public/RenderAPI.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Camera/Public/Camera.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Camera/Public/EditorCamera.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;UI/Public/WidgetStack.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">AGE</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9" refid="class_a_g_e_1_1_renderer" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_a_g_e_1_1_renderer" kindref="compound">Renderer</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Init();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>BeginScene(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_camera" kindref="compound">Camera</ref>&amp;<sp/><sp/><ref refid="class_a_g_e_1_1_camera" kindref="compound">Camera</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref>&amp;<sp/>Transform);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>BeginScene(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_editor_camera" kindref="compound">EditorCamera</ref>&amp;<sp/><sp/><ref refid="class_a_g_e_1_1_camera" kindref="compound">Camera</ref>);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>OnWindowResize(uint32_t<sp/>Width,<sp/>uint32_t<sp/>Height);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>OnFramebufferResize(uint32_t<sp/>Width,<sp/>uint32_t<sp/>Height);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>EndScene();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Shutdown();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Submit();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Flush();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>RendererAPI::API<sp/>GetAPI()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>RendererAPI::GetAPI();<sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SetAPI(RendererAPI::API<sp/><ref refid="class_a_g_e_1_1_renderer" kindref="compound">Renderer</ref>)<sp/>{<sp/>RendererAPI::SetAPI(<ref refid="class_a_g_e_1_1_renderer" kindref="compound">Renderer</ref>);<sp/>}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">SceneData</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref><sp/>ViewProjectionMatrix;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref><sp/>ViewProjectionModelMatrix;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>SceneData*<sp/>m_SceneData;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h"/>
+  </compounddef>
+</doxygen>

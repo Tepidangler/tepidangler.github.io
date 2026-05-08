@@ -1,0 +1,453 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_a_g_e_1_1_project" kind="class" language="C++" prot="public">
+    <compoundname>AGE::Project</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_a_g_e_1_1_project_1a925ecc296e8ee450c5c2f19435f0a23a" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_a_g_e_1_1_project_config" kindref="compound">ProjectConfig</ref></type>
+        <definition>ProjectConfig AGE::Project::m_Config</definition>
+        <argsstring></argsstring>
+        <name>m_Config</name>
+        <qualifiedname>AGE::Project::m_Config</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" line="105" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_project_1a74e2300914fe4606f9831226fd88671c" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_a_g_e_1_1_project_info" kindref="compound">ProjectInfo</ref></type>
+        <definition>ProjectInfo AGE::Project::m_Info</definition>
+        <argsstring></argsstring>
+        <name>m_Info</name>
+        <qualifiedname>AGE::Project::m_Info</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" line="106" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_project_1a02f982949e2831541e86061463d81e66" prot="private" static="no" mutable="no">
+        <type>std::filesystem::path</type>
+        <definition>std::filesystem::path AGE::Project::m_ProjectDirectory</definition>
+        <argsstring></argsstring>
+        <name>m_ProjectDirectory</name>
+        <qualifiedname>AGE::Project::m_ProjectDirectory</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" line="107" column="23" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_a_g_e_1_1_project_1a8ba357898dbf143bd2a90c20d7a1608d" prot="private" static="yes" mutable="no">
+        <type>std::array&lt; std::string, 14 &gt;</type>
+        <definition>std::array&lt; std::string, 14 &gt; AGE::Project::m_DirectoryNames</definition>
+        <argsstring></argsstring>
+        <name>m_DirectoryNames</name>
+        <qualifiedname>AGE::Project::m_DirectoryNames</qualifiedname>
+        <initializer>= { &quot;/Assets&quot;, &quot;/Assets/Quests&quot;, &quot;/Assets/InventoryDatabase&quot;, &quot;/Assets/VisualScripting&quot;, &quot;/Scenes&quot;, &quot;/Shaders&quot;, &quot;/Saves&quot;,&quot;/Config&quot;, &quot;/src&quot;,&quot;/src/Base&quot;,&quot;/src/Base/Private&quot;,&quot;/src/Base/Public&quot;,&quot;/src/UI/Private&quot;,&quot;/src/UI/Public&quot;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" line="108" column="19" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_project_1ae288be944f749cd239a8e0dbf8853286" prot="private" static="yes" mutable="no">
+        <type>std::array&lt; std::string, 6 &gt;</type>
+        <definition>std::array&lt; std::string, 6 &gt; AGE::Project::m_GameContDirNames</definition>
+        <argsstring></argsstring>
+        <name>m_GameContDirNames</name>
+        <qualifiedname>AGE::Project::m_GameContDirNames</qualifiedname>
+        <initializer>= { &quot;/Textures&quot;, &quot;Sounds/Banks&quot;, &quot;/Aesprite&quot;, &quot;/Shaders&quot;, &quot;/UI&quot;, &quot;/Fonts&quot;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" line="109" column="19" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_project_1a1a91b4ade3f343b487488c2f9c169eba" prot="private" static="yes" mutable="no">
+        <type>Ref&lt; <ref refid="class_a_g_e_1_1_project" kindref="compound">Project</ref> &gt;</type>
+        <definition>Ref&lt;Project&gt; AGE::Project::s_ActiveProject</definition>
+        <argsstring></argsstring>
+        <name>s_ActiveProject</name>
+        <qualifiedname>AGE::Project::s_ActiveProject</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" line="110" column="19" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_project_1a86ce25c42d2edfbba76b1f934e78ee3c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::filesystem::path &amp;</type>
+        <definition>static const std::filesystem::path &amp; AGE::Project::GetProjectDirectory</definition>
+        <argsstring>()</argsstring>
+        <name>GetProjectDirectory</name>
+        <qualifiedname>AGE::Project::GetProjectDirectory</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" line="47" column="36" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" bodystart="47" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_project_1adec76587ab667c9f293a3555aa7f3617" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::filesystem::path</type>
+        <definition>static std::filesystem::path AGE::Project::GetAssetDirectory</definition>
+        <argsstring>()</argsstring>
+        <name>GetAssetDirectory</name>
+        <qualifiedname>AGE::Project::GetAssetDirectory</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" line="54" column="30" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" bodystart="54" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_project_1ab344e517069cabe4168b9f0582b3b3ca" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::filesystem::path</type>
+        <definition>static std::filesystem::path AGE::Project::GetQuestDirectory</definition>
+        <argsstring>()</argsstring>
+        <name>GetQuestDirectory</name>
+        <qualifiedname>AGE::Project::GetQuestDirectory</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" line="61" column="30" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" bodystart="61" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_project_1a63412a90dbd55df482625e098ac2cf20" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::filesystem::path</type>
+        <definition>static std::filesystem::path AGE::Project::GetConfigDirectory</definition>
+        <argsstring>()</argsstring>
+        <name>GetConfigDirectory</name>
+        <qualifiedname>AGE::Project::GetConfigDirectory</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" line="68" column="30" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" bodystart="68" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_project_1ade8005cba9422dc69ba5b7b6f8eea20f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::filesystem::path</type>
+        <definition>static std::filesystem::path AGE::Project::GetAssetFileSystemPath</definition>
+        <argsstring>(const std::filesystem::path &amp;Path)</argsstring>
+        <name>GetAssetFileSystemPath</name>
+        <qualifiedname>AGE::Project::GetAssetFileSystemPath</qualifiedname>
+        <param>
+          <type>const std::filesystem::path &amp;</type>
+          <declname>Path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" line="75" column="30" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" bodystart="75" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_project_1a070b82a55a21b93a63df8b6bddddc873" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Project::WriteProjectConfig</definition>
+        <argsstring>(const std::filesystem::path &amp;Path, const std::string &amp;ProjectName)</argsstring>
+        <name>WriteProjectConfig</name>
+        <qualifiedname>AGE::Project::WriteProjectConfig</qualifiedname>
+        <param>
+          <type>const std::filesystem::path &amp;</type>
+          <declname>Path</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>ProjectName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" line="84" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Project/Private/Project.cpp" bodystart="13" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_project_1abad6d724acb08282b9d3512e1fba411c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Project::WriteEditorConfig</definition>
+        <argsstring>(const std::filesystem::path &amp;Path, const std::string &amp;ProjectName)</argsstring>
+        <name>WriteEditorConfig</name>
+        <qualifiedname>AGE::Project::WriteEditorConfig</qualifiedname>
+        <param>
+          <type>const std::filesystem::path &amp;</type>
+          <declname>Path</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>ProjectName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" line="85" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Project/Private/Project.cpp" bodystart="24" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_project_1a2c060aa6b4ec4abc8d8855147c7b72a3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Project::ReadProjectConfig</definition>
+        <argsstring>(const std::filesystem::path &amp;Path)</argsstring>
+        <name>ReadProjectConfig</name>
+        <qualifiedname>AGE::Project::ReadProjectConfig</qualifiedname>
+        <param>
+          <type>const std::filesystem::path &amp;</type>
+          <declname>Path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" line="86" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Project/Private/Project.cpp" bodystart="34" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_project_1ae4e3677f5749374a5bab8273ba6fec6b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Project::ReadEditorConfig</definition>
+        <argsstring>(const std::filesystem::path &amp;Path)</argsstring>
+        <name>ReadEditorConfig</name>
+        <qualifiedname>AGE::Project::ReadEditorConfig</qualifiedname>
+        <param>
+          <type>const std::filesystem::path &amp;</type>
+          <declname>Path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" line="87" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Project/Private/Project.cpp" bodystart="81" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_project_1a1fd15afe1f002806340db0d57d938dbb" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Ref&lt; <ref refid="class_a_g_e_1_1_project" kindref="compound">Project</ref> &gt;</type>
+        <definition>static Ref&lt; Project &gt; AGE::Project::GetActive</definition>
+        <argsstring>()</argsstring>
+        <name>GetActive</name>
+        <qualifiedname>AGE::Project::GetActive</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" line="92" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" bodystart="92" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_project_1a9ec4fb2f31a152a1d003bd7a064cfad6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Ref&lt; <ref refid="class_a_g_e_1_1_project" kindref="compound">Project</ref> &gt;</type>
+        <definition>Ref&lt; Project &gt; AGE::Project::New</definition>
+        <argsstring>(const std::string &amp;ProjectName)</argsstring>
+        <name>New</name>
+        <qualifiedname>AGE::Project::New</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>ProjectName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" line="94" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Project/Private/Project.cpp" bodystart="154" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_project_1a75eb0ea6b80c669e45b9771b0b9e0b00" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Ref&lt; <ref refid="class_a_g_e_1_1_project" kindref="compound">Project</ref> &gt;</type>
+        <definition>Ref&lt; Project &gt; AGE::Project::Load</definition>
+        <argsstring>(const std::filesystem::path &amp;Path)</argsstring>
+        <name>Load</name>
+        <qualifiedname>AGE::Project::Load</qualifiedname>
+        <param>
+          <type>const std::filesystem::path &amp;</type>
+          <declname>Path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" line="96" column="11" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Project/Private/Project.cpp" bodystart="187" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_project_1a9e7c2f512e9a3379e07da618f927dfe4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AGE::Project::SaveActive</definition>
+        <argsstring>(const std::filesystem::path &amp;Path, uint16_t AudioEngine, int Renderer, const std::filesystem::path &amp;ScenePath, const std::filesystem::path &amp;QuestPath=std::filesystem::path(), const std::filesystem::path &amp;ConfigPath=std::filesystem::path())</argsstring>
+        <name>SaveActive</name>
+        <qualifiedname>AGE::Project::SaveActive</qualifiedname>
+        <param>
+          <type>const std::filesystem::path &amp;</type>
+          <declname>Path</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>AudioEngine</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>Renderer</declname>
+        </param>
+        <param>
+          <type>const std::filesystem::path &amp;</type>
+          <declname>ScenePath</declname>
+        </param>
+        <param>
+          <type>const std::filesystem::path &amp;</type>
+          <declname>QuestPath</declname>
+          <defval>std::filesystem::path()</defval>
+        </param>
+        <param>
+          <type>const std::filesystem::path &amp;</type>
+          <declname>ConfigPath</declname>
+          <defval>std::filesystem::path()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" line="97" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Project/Private/Project.cpp" bodystart="209" bodyend="233"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_project_1a5408a7f606fda1c321fdf03f4407ab3d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AGE::Project::Package</definition>
+        <argsstring>(const std::filesystem::path &amp;Path, int TargetPlatform)</argsstring>
+        <name>Package</name>
+        <qualifiedname>AGE::Project::Package</qualifiedname>
+        <param>
+          <type>const std::filesystem::path &amp;</type>
+          <declname>Path</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>TargetPlatform</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" line="99" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Project/Private/Project.cpp" bodystart="234" bodyend="286"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_project_1a8754e0dce66e2620915670b06cac517a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Project::CompileProject</definition>
+        <argsstring>()</argsstring>
+        <name>CompileProject</name>
+        <qualifiedname>AGE::Project::CompileProject</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" line="101" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Project/Private/Project.cpp" bodystart="287" bodyend="352"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_project_1a53a3be3c1b8a71944cebf5dc59880a48" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_a_g_e_1_1_project_config" kindref="compound">ProjectConfig</ref> &amp;</type>
+        <definition>ProjectConfig &amp; AGE::Project::GetConfig</definition>
+        <argsstring>()</argsstring>
+        <name>GetConfig</name>
+        <qualifiedname>AGE::Project::GetConfig</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" line="81" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" bodystart="81" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_project_1a10eb77deda7c7f64643936350dfa3a69" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_a_g_e_1_1_project_info" kindref="compound">ProjectInfo</ref> &amp;</type>
+        <definition>ProjectInfo &amp; AGE::Project::GetInfo</definition>
+        <argsstring>()</argsstring>
+        <name>GetInfo</name>
+        <qualifiedname>AGE::Project::GetInfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" line="82" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" bodystart="82" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_project_1a8cae3a7932b7a30aab502d0f278151ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Project::AddBuiltScenes</definition>
+        <argsstring>()</argsstring>
+        <name>AddBuiltScenes</name>
+        <qualifiedname>AGE::Project::AddBuiltScenes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" line="90" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Project/Private/Project.cpp" bodystart="110" bodyend="152"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" line="44" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" bodystart="45" bodyend="112"/>
+    <listofallmembers>
+      <member refid="class_a_g_e_1_1_project_1a8cae3a7932b7a30aab502d0f278151ac" prot="public" virt="non-virtual"><scope>AGE::Project</scope><name>AddBuiltScenes</name></member>
+      <member refid="class_a_g_e_1_1_project_1a8754e0dce66e2620915670b06cac517a" prot="public" virt="non-virtual"><scope>AGE::Project</scope><name>CompileProject</name></member>
+      <member refid="class_a_g_e_1_1_project_1a1fd15afe1f002806340db0d57d938dbb" prot="public" virt="non-virtual"><scope>AGE::Project</scope><name>GetActive</name></member>
+      <member refid="class_a_g_e_1_1_project_1adec76587ab667c9f293a3555aa7f3617" prot="public" virt="non-virtual"><scope>AGE::Project</scope><name>GetAssetDirectory</name></member>
+      <member refid="class_a_g_e_1_1_project_1ade8005cba9422dc69ba5b7b6f8eea20f" prot="public" virt="non-virtual"><scope>AGE::Project</scope><name>GetAssetFileSystemPath</name></member>
+      <member refid="class_a_g_e_1_1_project_1a53a3be3c1b8a71944cebf5dc59880a48" prot="public" virt="non-virtual"><scope>AGE::Project</scope><name>GetConfig</name></member>
+      <member refid="class_a_g_e_1_1_project_1a63412a90dbd55df482625e098ac2cf20" prot="public" virt="non-virtual"><scope>AGE::Project</scope><name>GetConfigDirectory</name></member>
+      <member refid="class_a_g_e_1_1_project_1a10eb77deda7c7f64643936350dfa3a69" prot="public" virt="non-virtual"><scope>AGE::Project</scope><name>GetInfo</name></member>
+      <member refid="class_a_g_e_1_1_project_1a86ce25c42d2edfbba76b1f934e78ee3c" prot="public" virt="non-virtual"><scope>AGE::Project</scope><name>GetProjectDirectory</name></member>
+      <member refid="class_a_g_e_1_1_project_1ab344e517069cabe4168b9f0582b3b3ca" prot="public" virt="non-virtual"><scope>AGE::Project</scope><name>GetQuestDirectory</name></member>
+      <member refid="class_a_g_e_1_1_project_1a75eb0ea6b80c669e45b9771b0b9e0b00" prot="public" virt="non-virtual"><scope>AGE::Project</scope><name>Load</name></member>
+      <member refid="class_a_g_e_1_1_project_1a925ecc296e8ee450c5c2f19435f0a23a" prot="private" virt="non-virtual"><scope>AGE::Project</scope><name>m_Config</name></member>
+      <member refid="class_a_g_e_1_1_project_1a8ba357898dbf143bd2a90c20d7a1608d" prot="private" virt="non-virtual"><scope>AGE::Project</scope><name>m_DirectoryNames</name></member>
+      <member refid="class_a_g_e_1_1_project_1ae288be944f749cd239a8e0dbf8853286" prot="private" virt="non-virtual"><scope>AGE::Project</scope><name>m_GameContDirNames</name></member>
+      <member refid="class_a_g_e_1_1_project_1a74e2300914fe4606f9831226fd88671c" prot="private" virt="non-virtual"><scope>AGE::Project</scope><name>m_Info</name></member>
+      <member refid="class_a_g_e_1_1_project_1a02f982949e2831541e86061463d81e66" prot="private" virt="non-virtual"><scope>AGE::Project</scope><name>m_ProjectDirectory</name></member>
+      <member refid="class_a_g_e_1_1_project_1a9ec4fb2f31a152a1d003bd7a064cfad6" prot="public" virt="non-virtual"><scope>AGE::Project</scope><name>New</name></member>
+      <member refid="class_a_g_e_1_1_project_1a5408a7f606fda1c321fdf03f4407ab3d" prot="public" virt="non-virtual"><scope>AGE::Project</scope><name>Package</name></member>
+      <member refid="class_a_g_e_1_1_project_1ae4e3677f5749374a5bab8273ba6fec6b" prot="public" virt="non-virtual"><scope>AGE::Project</scope><name>ReadEditorConfig</name></member>
+      <member refid="class_a_g_e_1_1_project_1a2c060aa6b4ec4abc8d8855147c7b72a3" prot="public" virt="non-virtual"><scope>AGE::Project</scope><name>ReadProjectConfig</name></member>
+      <member refid="class_a_g_e_1_1_project_1a1a91b4ade3f343b487488c2f9c169eba" prot="private" virt="non-virtual"><scope>AGE::Project</scope><name>s_ActiveProject</name></member>
+      <member refid="class_a_g_e_1_1_project_1a9e7c2f512e9a3379e07da618f927dfe4" prot="public" virt="non-virtual"><scope>AGE::Project</scope><name>SaveActive</name></member>
+      <member refid="class_a_g_e_1_1_project_1abad6d724acb08282b9d3512e1fba411c" prot="public" virt="non-virtual"><scope>AGE::Project</scope><name>WriteEditorConfig</name></member>
+      <member refid="class_a_g_e_1_1_project_1a070b82a55a21b93a63df8b6bddddc873" prot="public" virt="non-virtual"><scope>AGE::Project</scope><name>WriteProjectConfig</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

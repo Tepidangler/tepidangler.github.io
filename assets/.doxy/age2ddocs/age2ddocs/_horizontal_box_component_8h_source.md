@@ -1,0 +1,50 @@
+
+
+# File HorizontalBoxComponent.h
+
+[**File List**](files.md) **>** [**AGE**](dir_c1649042ac9dcb65c6181568c305ecb0.md) **>** [**UI**](dir_c71f946845db44b77b26d47f3af3494b.md) **>** [**Components**](dir_e8b8bc6c8f57f68d4cd177cc71b48fb4.md) **>** [**Public**](dir_5c113c7ed6e7034142773ced1bfb6a62.md) **>** [**HorizontalBoxComponent.h**](_horizontal_box_component_8h.md)
+
+[Go to the documentation of this file](_horizontal_box_component_8h.md)
+
+
+```C++
+//
+// Created by gdmgp on 2/1/2026.
+//
+
+#ifndef AGE2D_HORIZONTALBOXCOMPONENT_H
+#define AGE2D_HORIZONTALBOXCOMPONENT_H
+#include "UI/Public/UiComponent.h"
+
+namespace AGE
+{
+    class HorizontalBoxComponent : public UIComponent
+    {
+    public:
+        HorizontalBoxComponent(const std::string& Name);
+        void OnUpdate(TimeStep DeltaTime) override;
+        void OnEvent(Event& Event) override;
+
+        void CallSerialize(DataWriter* Serializer) override
+        {
+            //Serializer->WriteObject<VerticalBoxComponent>(*this);
+        }
+        void CallDeserialize(DataReader* Serializer) override
+        {
+            //Serializer->ReadObject<VerticalBoxComponent>(*this);
+        }
+        void DrawContent() override;
+
+        RTTR_ENABLE(UIComponent)
+        RTTR_REGISTRATION_FRIEND
+
+    private:
+
+        std::vector<UIComponent> m_Components;
+    };
+} // AGE
+
+#endif //AGE2D_HORIZONTALBOXCOMPONENT_H
+```
+
+

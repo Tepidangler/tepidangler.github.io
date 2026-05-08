@@ -1,0 +1,509 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_a_g_e_1_1_u_i_component" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>AGE::UIComponent</compoundname>
+    <derivedcompoundref refid="class_a_g_e_1_1_button_component" prot="public" virt="non-virtual">AGE::ButtonComponent</derivedcompoundref>
+    <derivedcompoundref refid="class_a_g_e_1_1_horizontal_box_component" prot="public" virt="non-virtual">AGE::HorizontalBoxComponent</derivedcompoundref>
+    <derivedcompoundref refid="class_a_g_e_1_1_text_box_component" prot="public" virt="non-virtual">AGE::TextBoxComponent</derivedcompoundref>
+    <derivedcompoundref refid="class_a_g_e_1_1_text_component" prot="public" virt="non-virtual">AGE::TextComponent</derivedcompoundref>
+    <derivedcompoundref refid="class_a_g_e_1_1_u_i_image_component" prot="public" virt="non-virtual">AGE::UIImageComponent</derivedcompoundref>
+    <derivedcompoundref refid="class_a_g_e_1_1_vertical_box_component" prot="public" virt="non-virtual">AGE::VerticalBoxComponent</derivedcompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_a_g_e_1_1_u_i_component_1a8e74315a28174ed994140cee418bd474" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_a_g_e_1_1_u_i_properties" kindref="compound">UIProperties</ref></type>
+        <definition>&amp;AGE::UIComponent::OnUpdate &amp; AGE::UIComponent::m_CompProperties</definition>
+        <argsstring></argsstring>
+        <name>m_CompProperties</name>
+        <qualifiedname>AGE::UIComponent::m_CompProperties</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/UiComponent.h" line="69" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/UiComponent.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_u_i_component_1ab4c43eed0f90da0db0f34d74bc674575" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string AGE::UIComponent::m_Name</definition>
+        <argsstring></argsstring>
+        <name>m_Name</name>
+        <qualifiedname>AGE::UIComponent::m_Name</qualifiedname>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/UiComponent.h" line="70" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/UiComponent.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_a_g_e_1_1_u_i_component_1aaa85c9e119337b1324a36e6a0789da17" prot="protected" static="no" mutable="no">
+        <type><ref refid="struct_a_g_e_1_1_u_i_component_type" kindref="compound">UIComponentType</ref></type>
+        <definition>UIComponentType AGE::UIComponent::m_Type</definition>
+        <argsstring></argsstring>
+        <name>m_Type</name>
+        <qualifiedname>AGE::UIComponent::m_Type</qualifiedname>
+        <initializer>= UIComponentType::TextComponent</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/UiComponent.h" line="83" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/UiComponent.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_a_g_e_1_1_u_i_component_1a7d9579f93f51bae016c9e00c4599ba2c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct</type>
+        <definition>friend struct Widget</definition>
+        <argsstring></argsstring>
+        <name>Widget</name>
+        <qualifiedname>AGE::UIComponent::Widget</qualifiedname>
+        <param>
+          <type><ref refid="struct_a_g_e_1_1_widget" kindref="compound">Widget</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/UiComponent.h" line="88" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/UiComponent.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_u_i_component_1a7955733141e63b2394ce979b66bc0c56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AGE::UIComponent::UIComponent</definition>
+        <argsstring>(const std::string &amp;Name)</argsstring>
+        <name>UIComponent</name>
+        <qualifiedname>AGE::UIComponent::UIComponent</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>Name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/UiComponent.h" line="57" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Private/UiComponent.cpp" bodystart="123" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_u_i_component_1a1285b3235baab89e21dec5dedc9644d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual AGE::UIComponent::~UIComponent</definition>
+        <argsstring>()=default</argsstring>
+        <name>~UIComponent</name>
+        <qualifiedname>AGE::UIComponent::~UIComponent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/UiComponent.h" line="58" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_u_i_component_1ae4301442c1ffde16569eb25b55faf29a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void AGE::UIComponent::OnUpdate</definition>
+        <argsstring>(TimeStep DeltaTime)</argsstring>
+        <name>OnUpdate</name>
+        <qualifiedname>AGE::UIComponent::OnUpdate</qualifiedname>
+        <reimplementedby refid="class_a_g_e_1_1_button_component_1a2abd07eb02072e41ced466ef9bcc0355">OnUpdate</reimplementedby>
+        <reimplementedby refid="class_a_g_e_1_1_horizontal_box_component_1a04b636fa78e1fe481b82111a9b7f6816">OnUpdate</reimplementedby>
+        <reimplementedby refid="class_a_g_e_1_1_text_box_component_1ae522adc72da5a4c8b0f2b42e6965519a">OnUpdate</reimplementedby>
+        <reimplementedby refid="class_a_g_e_1_1_text_component_1a17617c050d72258e2d4677331b059848">OnUpdate</reimplementedby>
+        <reimplementedby refid="class_a_g_e_1_1_u_i_image_component_1a2e3bceb18a1ebe818ab5b7fcbfe25e20">OnUpdate</reimplementedby>
+        <reimplementedby refid="class_a_g_e_1_1_vertical_box_component_1a63ea52ac2c3394e9185608681439fda5">OnUpdate</reimplementedby>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_time_step" kindref="compound">TimeStep</ref></type>
+          <declname>DeltaTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/UiComponent.h" line="60" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/UiComponent.h" bodystart="60" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_u_i_component_1af262f42df2803d3e99fc07d7de0cb76e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>void AGE::UIComponent::OnEvent</definition>
+        <argsstring>(Event &amp;Event)=0</argsstring>
+        <name>OnEvent</name>
+        <qualifiedname>AGE::UIComponent::OnEvent</qualifiedname>
+        <reimplementedby refid="class_a_g_e_1_1_button_component_1af83679edef87b696c95bd38768b3529d">OnEvent</reimplementedby>
+        <reimplementedby refid="class_a_g_e_1_1_horizontal_box_component_1a6f5fbc2dfc060256ec4ebff4adbc7089">OnEvent</reimplementedby>
+        <reimplementedby refid="class_a_g_e_1_1_text_box_component_1a08b701ac341679f0efa94ad2e8296ce6">OnEvent</reimplementedby>
+        <reimplementedby refid="class_a_g_e_1_1_text_component_1aac703e6c05e273d524d7bc2f2cfccee4">OnEvent</reimplementedby>
+        <reimplementedby refid="class_a_g_e_1_1_u_i_image_component_1a86066db7c0a2e4494bbd9d1ddea3fcf4">OnEvent</reimplementedby>
+        <reimplementedby refid="class_a_g_e_1_1_vertical_box_component_1a07ef0a7b422bc31725a022409baace31">OnEvent</reimplementedby>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref> &amp;</type>
+          <declname>Event</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/UiComponent.h" line="62" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Private/UiComponent.cpp" bodystart="128" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_u_i_component_1ab980baa2a8dba2ec06867b6208e352ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void AGE::UIComponent::CallSerialize</definition>
+        <argsstring>(DataWriter *Serializer)=0</argsstring>
+        <name>CallSerialize</name>
+        <qualifiedname>AGE::UIComponent::CallSerialize</qualifiedname>
+        <reimplementedby refid="class_a_g_e_1_1_button_component_1acf9558a828a3274d9843291b8fd287c6">CallSerialize</reimplementedby>
+        <reimplementedby refid="class_a_g_e_1_1_horizontal_box_component_1a23d7205b283c0d74eb03b11759316803">CallSerialize</reimplementedby>
+        <reimplementedby refid="class_a_g_e_1_1_text_box_component_1a0ecbc8aa51df3331ae5f868224dffbe1">CallSerialize</reimplementedby>
+        <reimplementedby refid="class_a_g_e_1_1_text_component_1a5f31330a64ca5bc5dc7f0fbf86f7452f">CallSerialize</reimplementedby>
+        <reimplementedby refid="class_a_g_e_1_1_u_i_image_component_1a39479ecfe67f93656679fcddc18f20b7">CallSerialize</reimplementedby>
+        <reimplementedby refid="class_a_g_e_1_1_vertical_box_component_1a420612b19740aa5beaa7a24870b348c2">CallSerialize</reimplementedby>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref> *</type>
+          <declname>Serializer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/UiComponent.h" line="64" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_u_i_component_1aadb5753077366d876badd0bc7919e7f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void AGE::UIComponent::CallDeserialize</definition>
+        <argsstring>(DataReader *Serializer)=0</argsstring>
+        <name>CallDeserialize</name>
+        <qualifiedname>AGE::UIComponent::CallDeserialize</qualifiedname>
+        <reimplementedby refid="class_a_g_e_1_1_button_component_1aae2c06d51774e4c4a843edca8f8f0337">CallDeserialize</reimplementedby>
+        <reimplementedby refid="class_a_g_e_1_1_horizontal_box_component_1a88671daa5308d843c74ab54571714909">CallDeserialize</reimplementedby>
+        <reimplementedby refid="class_a_g_e_1_1_text_box_component_1a2daea9f0be0030f55e3531a353298da5">CallDeserialize</reimplementedby>
+        <reimplementedby refid="class_a_g_e_1_1_text_component_1ac1c8ce9817d1711214467d0fc2aa108b">CallDeserialize</reimplementedby>
+        <reimplementedby refid="class_a_g_e_1_1_u_i_image_component_1aac2bf6a1ba80286dc7a1a69a0068268a">CallDeserialize</reimplementedby>
+        <reimplementedby refid="class_a_g_e_1_1_vertical_box_component_1a0595b7cbcb0094e2740afc486bede4d8">CallDeserialize</reimplementedby>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref> *</type>
+          <declname>Serializer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/UiComponent.h" line="65" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_u_i_component_1a3df91ca59da478917bd7eb78d549db12" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string &amp;</type>
+        <definition>std::string &amp; AGE::UIComponent::GetName</definition>
+        <argsstring>()</argsstring>
+        <name>GetName</name>
+        <qualifiedname>AGE::UIComponent::GetName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/UiComponent.h" line="66" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/UiComponent.h" bodystart="66" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_u_i_component_1a4ef9f31a7abf44b81eaafc8b9833cc06" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_a_g_e_1_1_u_i_properties" kindref="compound">UIProperties</ref> &amp;</type>
+        <definition>UIProperties &amp; AGE::UIComponent::GetProperties</definition>
+        <argsstring>()</argsstring>
+        <name>GetProperties</name>
+        <qualifiedname>AGE::UIComponent::GetProperties</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/UiComponent.h" line="67" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/UiComponent.h" bodystart="67" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_u_i_component_1a2914f47755abcb3dbfcf0b569b820941" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>UIComponentType::Value</type>
+        <definition>UIComponentType::Value AGE::UIComponent::GetType</definition>
+        <argsstring>()</argsstring>
+        <name>GetType</name>
+        <qualifiedname>AGE::UIComponent::GetType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/UiComponent.h" line="68" column="24" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/UiComponent.h" bodystart="68" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_u_i_component_1a889fdb1f193f054f459e23dd8e9ce4ea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void AGE::UIComponent::DrawFontSelectionComboBox</definition>
+        <argsstring>()</argsstring>
+        <name>DrawFontSelectionComboBox</name>
+        <qualifiedname>AGE::UIComponent::DrawFontSelectionComboBox</qualifiedname>
+        <reimplementedby refid="class_a_g_e_1_1_text_box_component_1a4dac8bd00ca9dd8bd5fa76fb9ac47127">DrawFontSelectionComboBox</reimplementedby>
+        <reimplementedby refid="class_a_g_e_1_1_text_component_1ae643b1461033aba542b55e5c2c09f04e">DrawFontSelectionComboBox</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/UiComponent.h" line="75" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/UiComponent.h" bodystart="75" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_u_i_component_1ab7694d7df5410816a9fa16f17e4dbe42" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void AGE::UIComponent::DrawContent</definition>
+        <argsstring>()=0</argsstring>
+        <name>DrawContent</name>
+        <qualifiedname>AGE::UIComponent::DrawContent</qualifiedname>
+        <reimplementedby refid="class_a_g_e_1_1_button_component_1ae3d6bf628ce87f47af1103aaa9198156">DrawContent</reimplementedby>
+        <reimplementedby refid="class_a_g_e_1_1_horizontal_box_component_1a6d181969d71880ed1d0116750ad6e367">DrawContent</reimplementedby>
+        <reimplementedby refid="class_a_g_e_1_1_text_box_component_1a7f1226499e5cec0d78d517d6b06b01b7">DrawContent</reimplementedby>
+        <reimplementedby refid="class_a_g_e_1_1_text_component_1a16c61f098a898c98223a06c8376a1d98">DrawContent</reimplementedby>
+        <reimplementedby refid="class_a_g_e_1_1_u_i_image_component_1a9fd2087e0ec06c4f47675a6684e0176f">DrawContent</reimplementedby>
+        <reimplementedby refid="class_a_g_e_1_1_vertical_box_component_1a9d414c55abb28cfa350adb6346bc2967">DrawContent</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/UiComponent.h" line="76" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_u_i_component_1a98e1aaddee431d6b3b7ff6f5e5536de4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T *</type>
+        <definition>T * AGE::UIComponent::As</definition>
+        <argsstring>()</argsstring>
+        <name>As</name>
+        <qualifiedname>AGE::UIComponent::As</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/UiComponent.h" line="79" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_u_i_component_1a3dfa8952db40b83e29831b76352fa8e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type><ref refid="class_a_g_e_1_1_text_box_component" kindref="compound">TextBoxComponent</ref> *</type>
+        <definition>TextBoxComponent * AGE::UIComponent::As</definition>
+        <argsstring>()</argsstring>
+        <name>As</name>
+        <qualifiedname>AGE::UIComponent::As</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/TextBoxComponent.cpp" line="95" column="18" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/TextBoxComponent.cpp" bodystart="95" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_u_i_component_1acf6c7eb7b2a777afa18e6493d3897dba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type><ref refid="class_a_g_e_1_1_text_component" kindref="compound">TextComponent</ref> *</type>
+        <definition>TextComponent * AGE::UIComponent::As</definition>
+        <argsstring>()</argsstring>
+        <name>As</name>
+        <qualifiedname>AGE::UIComponent::As</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/TextComponent.cpp" line="81" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/TextComponent.cpp" bodystart="81" bodyend="84"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_u_i_component_1a4088d9575b7ec2ee48863d8aa4b5e6a3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Ref&lt; <ref refid="class_a_g_e_1_1_u_i_component" kindref="compound">UIComponent</ref> &gt;</type>
+        <definition>Ref&lt; UIComponent &gt; AGE::UIComponent::Create</definition>
+        <argsstring>(const std::string &amp;Name, UIComponentType Type)</argsstring>
+        <name>Create</name>
+        <qualifiedname>AGE::UIComponent::Create</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>Name</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_a_g_e_1_1_u_i_component_type" kindref="compound">UIComponentType</ref></type>
+          <declname>Type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/UiComponent.h" line="72" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Private/UiComponent.cpp" bodystart="18" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_u_i_component_1af6baa3f8d5e27906bb0cf5505920323d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::UIComponent::DrawVec3Control</definition>
+        <argsstring>(const std::string &amp;Label, Vector3 &amp;Values, float ResetValue=0.f, float ColumnWidth=100.f)</argsstring>
+        <name>DrawVec3Control</name>
+        <qualifiedname>AGE::UIComponent::DrawVec3Control</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>Label</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> &amp;</type>
+          <declname>Values</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ResetValue</declname>
+          <defval>0.f</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ColumnWidth</declname>
+          <defval>100.f</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/UiComponent.h" line="73" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Private/UiComponent.cpp" bodystart="59" bodyend="120"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_u_i_component_1a29c332b5bd25803ae65891fb6c8714dd" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AGE::UIComponent::UIComponent</definition>
+        <argsstring>()=default</argsstring>
+        <name>UIComponent</name>
+        <qualifiedname>AGE::UIComponent::UIComponent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/UiComponent.h" line="85" column="1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>AGE::ButtonComponent</label>
+        <link refid="class_a_g_e_1_1_button_component"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>AGE::HorizontalBoxComponent</label>
+        <link refid="class_a_g_e_1_1_horizontal_box_component"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>AGE::TextBoxComponent</label>
+        <link refid="class_a_g_e_1_1_text_box_component"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>AGE::TextComponent</label>
+        <link refid="class_a_g_e_1_1_text_component"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>AGE::UIComponent</label>
+        <link refid="class_a_g_e_1_1_u_i_component"/>
+      </node>
+      <node id="6">
+        <label>AGE::UIImageComponent</label>
+        <link refid="class_a_g_e_1_1_u_i_image_component"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>AGE::VerticalBoxComponent</label>
+        <link refid="class_a_g_e_1_1_vertical_box_component"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>AGE::UIComponent</label>
+        <link refid="class_a_g_e_1_1_u_i_component"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>m_CompProperties</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>m_Type</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>AGE::UIComponentType</label>
+        <link refid="struct_a_g_e_1_1_u_i_component_type"/>
+      </node>
+      <node id="2">
+        <label>AGE::UIProperties</label>
+        <link refid="struct_a_g_e_1_1_u_i_properties"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>Position</edgelabel>
+          <edgelabel>Rotation</edgelabel>
+          <edgelabel>Scale</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>AGE::Vector3</label>
+        <link refid="struct_a_g_e_1_1_vector3"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/UiComponent.h" line="54" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/UiComponent.h" bodystart="55" bodyend="91"/>
+    <listofallmembers>
+      <member refid="class_a_g_e_1_1_u_i_component_1a98e1aaddee431d6b3b7ff6f5e5536de4" prot="public" virt="non-virtual"><scope>AGE::UIComponent</scope><name>As</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1a3dfa8952db40b83e29831b76352fa8e5" prot="public" virt="non-virtual"><scope>AGE::UIComponent</scope><name>As</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1acf6c7eb7b2a777afa18e6493d3897dba" prot="public" virt="non-virtual"><scope>AGE::UIComponent</scope><name>As</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1aadb5753077366d876badd0bc7919e7f2" prot="public" virt="pure-virtual"><scope>AGE::UIComponent</scope><name>CallDeserialize</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1ab980baa2a8dba2ec06867b6208e352ee" prot="public" virt="pure-virtual"><scope>AGE::UIComponent</scope><name>CallSerialize</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1a4088d9575b7ec2ee48863d8aa4b5e6a3" prot="public" virt="non-virtual"><scope>AGE::UIComponent</scope><name>Create</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1ab7694d7df5410816a9fa16f17e4dbe42" prot="public" virt="pure-virtual"><scope>AGE::UIComponent</scope><name>DrawContent</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1a889fdb1f193f054f459e23dd8e9ce4ea" prot="public" virt="virtual"><scope>AGE::UIComponent</scope><name>DrawFontSelectionComboBox</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1af6baa3f8d5e27906bb0cf5505920323d" prot="public" virt="non-virtual"><scope>AGE::UIComponent</scope><name>DrawVec3Control</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1a3df91ca59da478917bd7eb78d549db12" prot="public" virt="non-virtual"><scope>AGE::UIComponent</scope><name>GetName</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1a4ef9f31a7abf44b81eaafc8b9833cc06" prot="public" virt="non-virtual"><scope>AGE::UIComponent</scope><name>GetProperties</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1a2914f47755abcb3dbfcf0b569b820941" prot="public" virt="non-virtual"><scope>AGE::UIComponent</scope><name>GetType</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1a8e74315a28174ed994140cee418bd474" prot="public" virt="non-virtual"><scope>AGE::UIComponent</scope><name>m_CompProperties</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1ab4c43eed0f90da0db0f34d74bc674575" prot="public" virt="non-virtual"><scope>AGE::UIComponent</scope><name>m_Name</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1aaa85c9e119337b1324a36e6a0789da17" prot="protected" virt="non-virtual"><scope>AGE::UIComponent</scope><name>m_Type</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1af262f42df2803d3e99fc07d7de0cb76e" prot="public" virt="pure-virtual"><scope>AGE::UIComponent</scope><name>OnEvent</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1ae4301442c1ffde16569eb25b55faf29a" prot="public" virt="virtual"><scope>AGE::UIComponent</scope><name>OnUpdate</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1a7955733141e63b2394ce979b66bc0c56" prot="public" virt="non-virtual"><scope>AGE::UIComponent</scope><name>UIComponent</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1a29c332b5bd25803ae65891fb6c8714dd" prot="protected" virt="non-virtual"><scope>AGE::UIComponent</scope><name>UIComponent</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1a7d9579f93f51bae016c9e00c4599ba2c" prot="protected" virt="non-virtual"><scope>AGE::UIComponent</scope><name>Widget</name></member>
+      <member refid="class_a_g_e_1_1_u_i_component_1a1285b3235baab89e21dec5dedc9644d8" prot="public" virt="virtual"><scope>AGE::UIComponent</scope><name>~UIComponent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

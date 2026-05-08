@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_a_g_e_1_1_render_u_i_event" kind="class" language="C++" prot="public">
+    <compoundname>AGE::RenderUIEvent</compoundname>
+    <basecompoundref refid="class_a_g_e_1_1_event" prot="public" virt="non-virtual">AGE::Event</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_a_g_e_1_1_render_u_i_event_1a64a8cc97e182d14007df78b5ea2df85b" prot="public" static="no" mutable="no">
+        <type><ref refid="class_a_g_e_1_1_time_step" kindref="compound">TimeStep</ref></type>
+        <definition>TimeStep AGE::RenderUIEvent::m_DeltaTime</definition>
+        <argsstring></argsstring>
+        <name>m_DeltaTime</name>
+        <qualifiedname>AGE::RenderUIEvent::m_DeltaTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/RendererEvent.h" line="38" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/RendererEvent.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_render_u_i_event_1a9e985721c26628050d15ae2cd147a01f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>AGE::RenderUIEvent::RenderUIEvent</definition>
+        <argsstring>(TimeStep DeltaTime)</argsstring>
+        <name>RenderUIEvent</name>
+        <qualifiedname>AGE::RenderUIEvent::RenderUIEvent</qualifiedname>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_time_step" kindref="compound">TimeStep</ref></type>
+          <declname>DeltaTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/RendererEvent.h" line="34" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/RendererEvent.h" bodystart="34" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_render_u_i_event_1a309b411731aa4f2d960f4c22ea96f3c1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_a_g_e_1_1_time_step" kindref="compound">TimeStep</ref></type>
+        <definition>TimeStep AGE::RenderUIEvent::GetDeltaTime</definition>
+        <argsstring>() const</argsstring>
+        <name>GetDeltaTime</name>
+        <qualifiedname>AGE::RenderUIEvent::GetDeltaTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/RendererEvent.h" line="37" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/RendererEvent.h" bodystart="37" bodyend="37"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>AGE::Event</label>
+        <link refid="class_a_g_e_1_1_event"/>
+      </node>
+      <node id="1">
+        <label>AGE::RenderUIEvent</label>
+        <link refid="class_a_g_e_1_1_render_u_i_event"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>AGE::Event</label>
+        <link refid="class_a_g_e_1_1_event"/>
+      </node>
+      <node id="1">
+        <label>AGE::RenderUIEvent</label>
+        <link refid="class_a_g_e_1_1_render_u_i_event"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>m_DeltaTime</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>AGE::TimeStep</label>
+        <link refid="class_a_g_e_1_1_time_step"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/RendererEvent.h" line="31" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/RendererEvent.h" bodystart="32" bodyend="41"/>
+    <listofallmembers>
+      <member refid="class_a_g_e_1_1_event_1ae76fb834a0ee69601539da677f1333fa" prot="public" virt="pure-virtual"><scope>AGE::RenderUIEvent</scope><name>GetCategoryFlags</name></member>
+      <member refid="class_a_g_e_1_1_render_u_i_event_1a309b411731aa4f2d960f4c22ea96f3c1" prot="public" virt="non-virtual"><scope>AGE::RenderUIEvent</scope><name>GetDeltaTime</name></member>
+      <member refid="class_a_g_e_1_1_event_1a4cfb95332801a921e9449a03a34b87b0" prot="public" virt="pure-virtual"><scope>AGE::RenderUIEvent</scope><name>GetEventType</name></member>
+      <member refid="class_a_g_e_1_1_event_1a007332c35050a5561feaf2c40c917290" prot="public" virt="pure-virtual"><scope>AGE::RenderUIEvent</scope><name>GetName</name></member>
+      <member refid="class_a_g_e_1_1_event_1a552035a536a86cc331bfa8dd5da80197" prot="public" virt="non-virtual"><scope>AGE::RenderUIEvent</scope><name>Handled</name></member>
+      <member refid="class_a_g_e_1_1_event_1afb010977c2bb1113d2af91d95c70ecab" prot="public" virt="non-virtual"><scope>AGE::RenderUIEvent</scope><name>IsInCategory</name></member>
+      <member refid="class_a_g_e_1_1_render_u_i_event_1a64a8cc97e182d14007df78b5ea2df85b" prot="public" virt="non-virtual"><scope>AGE::RenderUIEvent</scope><name>m_DeltaTime</name></member>
+      <member refid="class_a_g_e_1_1_render_u_i_event_1a9e985721c26628050d15ae2cd147a01f" prot="public" virt="non-virtual"><scope>AGE::RenderUIEvent</scope><name>RenderUIEvent</name></member>
+      <member refid="class_a_g_e_1_1_event_1abb5a1a933883fb8fb99999523e8805a8" prot="public" virt="virtual"><scope>AGE::RenderUIEvent</scope><name>ToString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

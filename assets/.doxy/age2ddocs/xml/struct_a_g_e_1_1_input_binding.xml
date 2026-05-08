@@ -1,0 +1,619 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="struct_a_g_e_1_1_input_binding" kind="struct" language="C++" prot="public" abstract="yes">
+    <compoundname>AGE::InputBinding</compoundname>
+    <derivedcompoundref refid="struct_a_g_e_1_1_gamepad_input_binding" prot="public" virt="non-virtual">AGE::GamepadInputBinding</derivedcompoundref>
+    <derivedcompoundref refid="struct_a_g_e_1_1_invalid_input_binding__t" prot="public" virt="non-virtual">AGE::InvalidInputBinding_t</derivedcompoundref>
+    <derivedcompoundref refid="struct_a_g_e_1_1_k_b_m_input_binding" prot="public" virt="non-virtual">AGE::KBMInputBinding</derivedcompoundref>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="struct_a_g_e_1_1_input_binding_1a56278a58dd39b9414406b303ae044c7a" prot="public" static="no">
+        <type>std::function&lt; void()&gt;</type>
+        <definition>using AGE::InputBinding::ActionCallbackFn =  std::function&lt;void()&gt;</definition>
+        <argsstring></argsstring>
+        <name>ActionCallbackFn</name>
+        <qualifiedname>AGE::InputBinding::ActionCallbackFn</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="37" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="struct_a_g_e_1_1_input_binding_1a2608f75cc1def15d4ffa6a373c1e3eca" prot="public" static="no">
+        <type>std::function&lt; void(float)&gt;</type>
+        <definition>using AGE::InputBinding::AxisCallbackFn =  std::function&lt;void(float)&gt;</definition>
+        <argsstring></argsstring>
+        <name>AxisCallbackFn</name>
+        <qualifiedname>AGE::InputBinding::AxisCallbackFn</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="38" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_a_g_e_1_1_input_binding_1a4d18e733e701520be216a8cf740289fa" prot="public" static="no" mutable="no">
+        <type>KeyState::State</type>
+        <definition>KeyState::State AGE::InputBinding::m_State</definition>
+        <argsstring></argsstring>
+        <name>m_State</name>
+        <qualifiedname>AGE::InputBinding::m_State</qualifiedname>
+        <initializer>= KeyState::Pressed</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="85" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_input_binding_1aa80c56c372b49029948c8a0cd405df0c" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string AGE::InputBinding::m_BindingName</definition>
+        <argsstring></argsstring>
+        <name>m_BindingName</name>
+        <qualifiedname>AGE::InputBinding::m_BindingName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="86" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="struct_a_g_e_1_1_input_binding_1a204228207cd81ec203ff9b6cc85bc8a6" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string AGE::InputBinding::m_InputType</definition>
+        <argsstring></argsstring>
+        <name>m_InputType</name>
+        <qualifiedname>AGE::InputBinding::m_InputType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="89" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_input_binding_1aed0b9372bef64ac5945e84271195ce10" prot="protected" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t AGE::InputBinding::bPaired</definition>
+        <argsstring></argsstring>
+        <name>bPaired</name>
+        <qualifiedname>AGE::InputBinding::bPaired</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="90" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_input_binding_1a2e29f8d592205aa2685b7ecac8a20b7e" prot="protected" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t AGE::InputBinding::bConsumeInput</definition>
+        <argsstring></argsstring>
+        <name>bConsumeInput</name>
+        <qualifiedname>AGE::InputBinding::bConsumeInput</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="91" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_input_binding_1acfb45ce1022dfc8f1ed803b8f203b546" prot="protected" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t AGE::InputBinding::bExecuteWhenPaused</definition>
+        <argsstring></argsstring>
+        <name>bExecuteWhenPaused</name>
+        <qualifiedname>AGE::InputBinding::bExecuteWhenPaused</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="92" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_input_binding_1a3fba6f5c418f7b7e754b30452007ae07" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AGE::InputBinding::m_AxisValue</definition>
+        <argsstring></argsstring>
+        <name>m_AxisValue</name>
+        <qualifiedname>AGE::InputBinding::m_AxisValue</qualifiedname>
+        <initializer>=0.f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="93" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_input_binding_1ac1e90f0003179e2d3b7d6d4de5b57fe5" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AGE::InputBinding::m_Handle</definition>
+        <argsstring></argsstring>
+        <name>m_Handle</name>
+        <qualifiedname>AGE::InputBinding::m_Handle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="94" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_input_binding_1aea5070a3b9cdfdd4ba1dfbc8fc86e016" prot="protected" static="no" mutable="no">
+        <type>ActionCallbackFn</type>
+        <definition>ActionCallbackFn AGE::InputBinding::BindedActionFunction</definition>
+        <argsstring></argsstring>
+        <name>BindedActionFunction</name>
+        <qualifiedname>AGE::InputBinding::BindedActionFunction</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="95" column="18" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_input_binding_1a637452ca4ce2392f835bfea55c9f97ae" prot="protected" static="no" mutable="no">
+        <type>AxisCallbackFn</type>
+        <definition>AxisCallbackFn AGE::InputBinding::BindedAxisFunction</definition>
+        <argsstring></argsstring>
+        <name>BindedAxisFunction</name>
+        <qualifiedname>AGE::InputBinding::BindedAxisFunction</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="96" column="16" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_a_g_e_1_1_input_binding_1aeef52914d113d3a4a2a9ebe08732f582" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual AGE::InputBinding::~InputBinding</definition>
+        <argsstring>()=default</argsstring>
+        <name>~InputBinding</name>
+        <qualifiedname>AGE::InputBinding::~InputBinding</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="40" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_a_g_e_1_1_input_binding_1acba8d88323efd0529a23da403f34e2b2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::InputBinding::BindAxisFunction</definition>
+        <argsstring>(AxisCallbackFn Func)</argsstring>
+        <name>BindAxisFunction</name>
+        <qualifiedname>AGE::InputBinding::BindAxisFunction</qualifiedname>
+        <param>
+          <type>AxisCallbackFn</type>
+          <declname>Func</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="46" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="46" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_a_g_e_1_1_input_binding_1afac19d8eeb0057765d67f1db9e9c18f9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::InputBinding::BindActionFunction</definition>
+        <argsstring>(ActionCallbackFn Func)</argsstring>
+        <name>BindActionFunction</name>
+        <qualifiedname>AGE::InputBinding::BindActionFunction</qualifiedname>
+        <param>
+          <type>ActionCallbackFn</type>
+          <declname>Func</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="50" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="50" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_a_g_e_1_1_input_binding_1a5f0b234a7b0ebb772d215394602d78ff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::InputBinding::ActionExecute</definition>
+        <argsstring>()</argsstring>
+        <name>ActionExecute</name>
+        <qualifiedname>AGE::InputBinding::ActionExecute</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="55" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="55" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_a_g_e_1_1_input_binding_1a74156fe3c4481f7b815635e41ff960c2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::InputBinding::AxisExecute</definition>
+        <argsstring>()</argsstring>
+        <name>AxisExecute</name>
+        <qualifiedname>AGE::InputBinding::AxisExecute</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="59" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="59" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_a_g_e_1_1_input_binding_1abc4c7f83099bcd471cc58d18f511d38c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>uint16_t</type>
+        <definition>virtual uint16_t AGE::InputBinding::GetKey</definition>
+        <argsstring>() const =0</argsstring>
+        <name>GetKey</name>
+        <qualifiedname>AGE::InputBinding::GetKey</qualifiedname>
+        <reimplementedby refid="struct_a_g_e_1_1_gamepad_input_binding_1ac64f1f74bf920a51999728f3c6686470">GetKey</reimplementedby>
+        <reimplementedby refid="struct_a_g_e_1_1_invalid_input_binding__t_1a0658855ce3fbe9fec218e9e44e35d2f1">GetKey</reimplementedby>
+        <reimplementedby refid="struct_a_g_e_1_1_k_b_m_input_binding_1a0947537d5f8caca5f2b28f60b86e4272">GetKey</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="63" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_a_g_e_1_1_input_binding_1acfe2967b3019f90e52dd1aa2a3838426" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string AGE::InputBinding::GetName</definition>
+        <argsstring>() const</argsstring>
+        <name>GetName</name>
+        <qualifiedname>AGE::InputBinding::GetName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="64" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="64" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_a_g_e_1_1_input_binding_1a55b746eeee7bb23d94109dc55619dcb0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string AGE::InputBinding::GetInputType</definition>
+        <argsstring>() const</argsstring>
+        <name>GetInputType</name>
+        <qualifiedname>AGE::InputBinding::GetInputType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="65" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="65" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_a_g_e_1_1_input_binding_1abf03f3693600322209fb0bdf3a756fd8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::InputBinding::SetInputType</definition>
+        <argsstring>(const std::string_view &amp;type)</argsstring>
+        <name>SetInputType</name>
+        <qualifiedname>AGE::InputBinding::SetInputType</qualifiedname>
+        <param>
+          <type>const std::string_view &amp;</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="66" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="66" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_a_g_e_1_1_input_binding_1a4dd55118b31229a4e5be8d8eab7511b5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AGE::InputBinding::IsPaired</definition>
+        <argsstring>() const</argsstring>
+        <name>IsPaired</name>
+        <qualifiedname>AGE::InputBinding::IsPaired</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="67" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="67" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_a_g_e_1_1_input_binding_1a79da95368ed8d8cef9b15447bc3c882b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::InputBinding::SetPaired</definition>
+        <argsstring>(bool value)</argsstring>
+        <name>SetPaired</name>
+        <qualifiedname>AGE::InputBinding::SetPaired</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="68" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="68" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_a_g_e_1_1_input_binding_1aac121bcd2baedc51f9533d9261d21e3c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>int32_t AGE::InputBinding::GetHandle</definition>
+        <argsstring>() const</argsstring>
+        <name>GetHandle</name>
+        <qualifiedname>AGE::InputBinding::GetHandle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="69" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="69" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_a_g_e_1_1_input_binding_1a082ac5e8d33428a160fc51965d2bbcd2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float AGE::InputBinding::GetAxisValue</definition>
+        <argsstring>() const</argsstring>
+        <name>GetAxisValue</name>
+        <qualifiedname>AGE::InputBinding::GetAxisValue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="70" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="70" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_a_g_e_1_1_input_binding_1ad0202aadfca27a99f3f444db646e6206" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::InputBinding::SetAxisValue</definition>
+        <argsstring>(float value)</argsstring>
+        <name>SetAxisValue</name>
+        <qualifiedname>AGE::InputBinding::SetAxisValue</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="71" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="71" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_a_g_e_1_1_input_binding_1abb72b24b973c268d2e69e8c16316c2db" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::InputBinding::GenerateNewHandle</definition>
+        <argsstring>()</argsstring>
+        <name>GenerateNewHandle</name>
+        <qualifiedname>AGE::InputBinding::GenerateNewHandle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="73" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="73" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_a_g_e_1_1_input_binding_1a40f7de113349869582d46d3d22280b7e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AGE::InputBinding::IsValid</definition>
+        <argsstring>()</argsstring>
+        <name>IsValid</name>
+        <qualifiedname>AGE::InputBinding::IsValid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="79" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="79" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_a_g_e_1_1_input_binding_1abafa1bce301ec53007530db6ec1e0897" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AGE::InputBinding::operator==</definition>
+        <argsstring>(const InputBinding &amp;rhs)</argsstring>
+        <name>operator==</name>
+        <qualifiedname>AGE::InputBinding::operator==</qualifiedname>
+        <param>
+          <type>const <ref refid="struct_a_g_e_1_1_input_binding" kindref="compound">InputBinding</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="81" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="81" bodyend="84"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="struct_a_g_e_1_1_input_binding_1a5ba51434b391f18521a006a4df89c6ae" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Ref&lt; <ref refid="struct_a_g_e_1_1_input_binding" kindref="compound">InputBinding</ref> &gt;</type>
+        <definition>Ref&lt; InputBinding &gt; AGE::InputBinding::CreateGamepadBinding</definition>
+        <argsstring>(const std::string_view &amp;Name, GamePad::Buttons button=GamePad::Buttons::INVALID, Binding::Type bindingtype=Binding::Type::INVALID)</argsstring>
+        <name>CreateGamepadBinding</name>
+        <qualifiedname>AGE::InputBinding::CreateGamepadBinding</qualifiedname>
+        <param>
+          <type>const std::string_view &amp;</type>
+          <declname>Name</declname>
+        </param>
+        <param>
+          <type>GamePad::Buttons</type>
+          <declname>button</declname>
+          <defval>GamePad::Buttons::INVALID</defval>
+        </param>
+        <param>
+          <type>Binding::Type</type>
+          <declname>bindingtype</declname>
+          <defval>Binding::Type::INVALID</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="42" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/InputBinding.cpp" bodystart="9" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_a_g_e_1_1_input_binding_1a9cfef77a01912b89d74988bb0becc4a3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Ref&lt; <ref refid="struct_a_g_e_1_1_input_binding" kindref="compound">InputBinding</ref> &gt;</type>
+        <definition>Ref&lt; InputBinding &gt; AGE::InputBinding::CreateGamepadBinding</definition>
+        <argsstring>(const std::string_view &amp;Name, GamePad::Axes axes=GamePad::Axes::INVALIDAXES, Binding::Type bindingtype=Binding::Type::Axis)</argsstring>
+        <name>CreateGamepadBinding</name>
+        <qualifiedname>AGE::InputBinding::CreateGamepadBinding</qualifiedname>
+        <param>
+          <type>const std::string_view &amp;</type>
+          <declname>Name</declname>
+        </param>
+        <param>
+          <type>GamePad::Axes</type>
+          <declname>axes</declname>
+          <defval>GamePad::Axes::INVALIDAXES</defval>
+        </param>
+        <param>
+          <type>Binding::Type</type>
+          <declname>bindingtype</declname>
+          <defval>Binding::Type::Axis</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="43" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/InputBinding.cpp" bodystart="18" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_a_g_e_1_1_input_binding_1af89fca5d2148a80e554fc1b46f94a576" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Ref&lt; <ref refid="struct_a_g_e_1_1_input_binding" kindref="compound">InputBinding</ref> &gt;</type>
+        <definition>Ref&lt; InputBinding &gt; AGE::InputBinding::CreateKBMBinding</definition>
+        <argsstring>(const std::string_view &amp;Name, Key::Keys keycode=Key::INVALID, Binding::Type bindingtype=Binding::INVALID)</argsstring>
+        <name>CreateKBMBinding</name>
+        <qualifiedname>AGE::InputBinding::CreateKBMBinding</qualifiedname>
+        <param>
+          <type>const std::string_view &amp;</type>
+          <declname>Name</declname>
+        </param>
+        <param>
+          <type>Key::Keys</type>
+          <declname>keycode</declname>
+          <defval>Key::INVALID</defval>
+        </param>
+        <param>
+          <type>Binding::Type</type>
+          <declname>bindingtype</declname>
+          <defval>Binding::INVALID</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="44" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/InputBinding.cpp" bodystart="28" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_a_g_e_1_1_input_binding_1abd0ced02fdc1be9a45f4ef19d37b7db2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Ref&lt; <ref refid="struct_a_g_e_1_1_input_binding" kindref="compound">InputBinding</ref> &gt;</type>
+        <definition>Ref&lt; InputBinding &gt; AGE::InputBinding::CreateInvalid</definition>
+        <argsstring>()</argsstring>
+        <name>CreateInvalid</name>
+        <qualifiedname>AGE::InputBinding::CreateInvalid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="45" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/InputBinding.cpp" bodystart="37" bodyend="40"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>AGE::GamepadInputBinding</label>
+        <link refid="struct_a_g_e_1_1_gamepad_input_binding"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>AGE::InputBinding</label>
+        <link refid="struct_a_g_e_1_1_input_binding"/>
+      </node>
+      <node id="3">
+        <label>AGE::InvalidInputBinding_t</label>
+        <link refid="struct_a_g_e_1_1_invalid_input_binding__t"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>AGE::KBMInputBinding</label>
+        <link refid="struct_a_g_e_1_1_k_b_m_input_binding"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="35" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="36" bodyend="97"/>
+    <listofallmembers>
+      <member refid="struct_a_g_e_1_1_input_binding_1a56278a58dd39b9414406b303ae044c7a" prot="public" virt="non-virtual"><scope>AGE::InputBinding</scope><name>ActionCallbackFn</name></member>
+      <member refid="struct_a_g_e_1_1_input_binding_1a5f0b234a7b0ebb772d215394602d78ff" prot="public" virt="non-virtual"><scope>AGE::InputBinding</scope><name>ActionExecute</name></member>
+      <member refid="struct_a_g_e_1_1_input_binding_1a2608f75cc1def15d4ffa6a373c1e3eca" prot="public" virt="non-virtual"><scope>AGE::InputBinding</scope><name>AxisCallbackFn</name></member>
+      <member refid="struct_a_g_e_1_1_input_binding_1a74156fe3c4481f7b815635e41ff960c2" prot="public" virt="non-virtual"><scope>AGE::InputBinding</scope><name>AxisExecute</name></member>
+      <member refid="struct_a_g_e_1_1_input_binding_1a2e29f8d592205aa2685b7ecac8a20b7e" prot="protected" virt="non-virtual"><scope>AGE::InputBinding</scope><name>bConsumeInput</name></member>
+      <member refid="struct_a_g_e_1_1_input_binding_1acfb45ce1022dfc8f1ed803b8f203b546" prot="protected" virt="non-virtual"><scope>AGE::InputBinding</scope><name>bExecuteWhenPaused</name></member>
+      <member refid="struct_a_g_e_1_1_input_binding_1afac19d8eeb0057765d67f1db9e9c18f9" prot="public" virt="non-virtual"><scope>AGE::InputBinding</scope><name>BindActionFunction</name></member>
+      <member refid="struct_a_g_e_1_1_input_binding_1acba8d88323efd0529a23da403f34e2b2" prot="public" virt="non-virtual"><scope>AGE::InputBinding</scope><name>BindAxisFunction</name></member>
+      <member refid="struct_a_g_e_1_1_input_binding_1aea5070a3b9cdfdd4ba1dfbc8fc86e016" prot="protected" virt="non-virtual"><scope>AGE::InputBinding</scope><name>BindedActionFunction</name></member>
+      <member refid="struct_a_g_e_1_1_input_binding_1a637452ca4ce2392f835bfea55c9f97ae" prot="protected" virt="non-virtual"><scope>AGE::InputBinding</scope><name>BindedAxisFunction</name></member>
+      <member refid="struct_a_g_e_1_1_input_binding_1aed0b9372bef64ac5945e84271195ce10" prot="protected" virt="non-virtual"><scope>AGE::InputBinding</scope><name>bPaired</name></member>
+      <member refid="struct_a_g_e_1_1_input_binding_1a5ba51434b391f18521a006a4df89c6ae" prot="public" virt="non-virtual"><scope>AGE::InputBinding</scope><name>CreateGamepadBinding</name></member>
+      <member refid="struct_a_g_e_1_1_input_binding_1a9cfef77a01912b89d74988bb0becc4a3" prot="public" virt="non-virtual"><scope>AGE::InputBinding</scope><name>CreateGamepadBinding</name></member>
+      <member refid="struct_a_g_e_1_1_input_binding_1abd0ced02fdc1be9a45f4ef19d37b7db2" prot="public" virt="non-virtual"><scope>AGE::InputBinding</scope><name>CreateInvalid</name></member>
+      <member refid="struct_a_g_e_1_1_input_binding_1af89fca5d2148a80e554fc1b46f94a576" prot="public" virt="non-virtual"><scope>AGE::InputBinding</scope><name>CreateKBMBinding</name></member>
+      <member refid="struct_a_g_e_1_1_input_binding_1abb72b24b973c268d2e69e8c16316c2db" prot="public" virt="non-virtual"><scope>AGE::InputBinding</scope><name>GenerateNewHandle</name></member>
+      <member refid="struct_a_g_e_1_1_input_binding_1a082ac5e8d33428a160fc51965d2bbcd2" prot="public" virt="non-virtual"><scope>AGE::InputBinding</scope><name>GetAxisValue</name></member>
+      <member refid="struct_a_g_e_1_1_input_binding_1aac121bcd2baedc51f9533d9261d21e3c" prot="public" virt="non-virtual"><scope>AGE::InputBinding</scope><name>GetHandle</name></member>
+      <member refid="struct_a_g_e_1_1_input_binding_1a55b746eeee7bb23d94109dc55619dcb0" prot="public" virt="non-virtual"><scope>AGE::InputBinding</scope><name>GetInputType</name></member>
+      <member refid="struct_a_g_e_1_1_input_binding_1abc4c7f83099bcd471cc58d18f511d38c" prot="public" virt="pure-virtual"><scope>AGE::InputBinding</scope><name>GetKey</name></member>
+      <member refid="struct_a_g_e_1_1_input_binding_1acfe2967b3019f90e52dd1aa2a3838426" prot="public" virt="non-virtual"><scope>AGE::InputBinding</scope><name>GetName</name></member>
+      <member refid="struct_a_g_e_1_1_input_binding_1a4dd55118b31229a4e5be8d8eab7511b5" prot="public" virt="non-virtual"><scope>AGE::InputBinding</scope><name>IsPaired</name></member>
+      <member refid="struct_a_g_e_1_1_input_binding_1a40f7de113349869582d46d3d22280b7e" prot="public" virt="non-virtual"><scope>AGE::InputBinding</scope><name>IsValid</name></member>
+      <member refid="struct_a_g_e_1_1_input_binding_1a3fba6f5c418f7b7e754b30452007ae07" prot="protected" virt="non-virtual"><scope>AGE::InputBinding</scope><name>m_AxisValue</name></member>
+      <member refid="struct_a_g_e_1_1_input_binding_1aa80c56c372b49029948c8a0cd405df0c" prot="public" virt="non-virtual"><scope>AGE::InputBinding</scope><name>m_BindingName</name></member>
+      <member refid="struct_a_g_e_1_1_input_binding_1ac1e90f0003179e2d3b7d6d4de5b57fe5" prot="protected" virt="non-virtual"><scope>AGE::InputBinding</scope><name>m_Handle</name></member>
+      <member refid="struct_a_g_e_1_1_input_binding_1a204228207cd81ec203ff9b6cc85bc8a6" prot="protected" virt="non-virtual"><scope>AGE::InputBinding</scope><name>m_InputType</name></member>
+      <member refid="struct_a_g_e_1_1_input_binding_1a4d18e733e701520be216a8cf740289fa" prot="public" virt="non-virtual"><scope>AGE::InputBinding</scope><name>m_State</name></member>
+      <member refid="struct_a_g_e_1_1_input_binding_1abafa1bce301ec53007530db6ec1e0897" prot="public" virt="non-virtual"><scope>AGE::InputBinding</scope><name>operator==</name></member>
+      <member refid="struct_a_g_e_1_1_input_binding_1ad0202aadfca27a99f3f444db646e6206" prot="public" virt="non-virtual"><scope>AGE::InputBinding</scope><name>SetAxisValue</name></member>
+      <member refid="struct_a_g_e_1_1_input_binding_1abf03f3693600322209fb0bdf3a756fd8" prot="public" virt="non-virtual"><scope>AGE::InputBinding</scope><name>SetInputType</name></member>
+      <member refid="struct_a_g_e_1_1_input_binding_1a79da95368ed8d8cef9b15447bc3c882b" prot="public" virt="non-virtual"><scope>AGE::InputBinding</scope><name>SetPaired</name></member>
+      <member refid="struct_a_g_e_1_1_input_binding_1aeef52914d113d3a4a2a9ebe08732f582" prot="public" virt="virtual"><scope>AGE::InputBinding</scope><name>~InputBinding</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

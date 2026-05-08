@@ -1,0 +1,712 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_a_g_e_1_1_open_g_l_shader" kind="class" language="C++" prot="public">
+    <compoundname>AGE::OpenGLShader</compoundname>
+    <basecompoundref refid="class_a_g_e_1_1_shader" prot="public" virt="non-virtual">AGE::Shader</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_a_g_e_1_1_open_g_l_shader_1a63328532f810d5e70dcc3827f9d7fa6f" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t AGE::OpenGLShader::m_RendererID</definition>
+        <argsstring></argsstring>
+        <name>m_RendererID</name>
+        <qualifiedname>AGE::OpenGLShader::m_RendererID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="50" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_open_g_l_shader_1a0096d42f5fc22108d55d5fe9eab65ce5" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string AGE::OpenGLShader::m_ShaderName</definition>
+        <argsstring></argsstring>
+        <name>m_ShaderName</name>
+        <qualifiedname>AGE::OpenGLShader::m_ShaderName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="51" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1ac71aeeb660e2c6d845a25aa20737b4ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AGE::OpenGLShader::OpenGLShader</definition>
+        <argsstring>(const std::string &amp;FilePath)</argsstring>
+        <name>OpenGLShader</name>
+        <qualifiedname>AGE::OpenGLShader::OpenGLShader</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>FilePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="13" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="30" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1ac14dbe38c049032cd80246d7a41a4c01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AGE::OpenGLShader::OpenGLShader</definition>
+        <argsstring>(const std::string &amp;VertexSrcPath, const std::string &amp;FragmentSrcPath)</argsstring>
+        <name>OpenGLShader</name>
+        <qualifiedname>AGE::OpenGLShader::OpenGLShader</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>VertexSrcPath</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>FragmentSrcPath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="14" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="46" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1a865ffbd35489f1c7db14e6dfcc1eda15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AGE::OpenGLShader::OpenGLShader</definition>
+        <argsstring>(const std::string &amp;Name, const std::string &amp;VertexSrc, const std::string &amp;FragmentSrc)</argsstring>
+        <name>OpenGLShader</name>
+        <qualifiedname>AGE::OpenGLShader::OpenGLShader</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>Name</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>VertexSrc</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>FragmentSrc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="15" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="62" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1a41e3e5c6616a0bbf290f324a30d66981" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>AGE::OpenGLShader::~OpenGLShader</definition>
+        <argsstring>()</argsstring>
+        <name>~OpenGLShader</name>
+        <qualifiedname>AGE::OpenGLShader::~OpenGLShader</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="17" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="72" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1aff1aa85f0941852547e964ec51071a0a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AGE::OpenGLShader::Bind</definition>
+        <argsstring>() const override</argsstring>
+        <name>Bind</name>
+        <qualifiedname>AGE::OpenGLShader::Bind</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_shader_1a3ef78a4e4184937f699a55f8fb125846">Bind</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="19" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="77" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1a29d0e49b8ad6ec8624a094653cd523f8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AGE::OpenGLShader::Unbind</definition>
+        <argsstring>() const override</argsstring>
+        <name>Unbind</name>
+        <qualifiedname>AGE::OpenGLShader::Unbind</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_shader_1a6d1b6f97a2cb68484b7f9193733e99d7">Unbind</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="20" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="82" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1a6a99dcca672a594d95d6f29aac64fdfc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AGE::OpenGLShader::SetFloat</definition>
+        <argsstring>(const char *Name, float Values, float *ValuePtr=nullptr, int Count=2) const override</argsstring>
+        <name>SetFloat</name>
+        <qualifiedname>AGE::OpenGLShader::SetFloat</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_shader_1af4fc6bbabaa96c171a91a4a5ea5c7c49">SetFloat</reimplements>
+        <param>
+          <type>const char *</type>
+          <declname>Name</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>Values</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>ValuePtr</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>Count</declname>
+          <defval>2</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="22" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="87" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1a29b8e908babdab23056a1172828131c0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AGE::OpenGLShader::SetFloat2</definition>
+        <argsstring>(const char *Name, const Vector2 &amp;Values, const Vector2 *ValuePtr=nullptr, int Count=2) const override</argsstring>
+        <name>SetFloat2</name>
+        <qualifiedname>AGE::OpenGLShader::SetFloat2</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_shader_1a770fc5d04d514fd1c323c7d80694544b">SetFloat2</reimplements>
+        <param>
+          <type>const char *</type>
+          <declname>Name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> &amp;</type>
+          <declname>Values</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> *</type>
+          <declname>ValuePtr</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>Count</declname>
+          <defval>2</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="23" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="93" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1a73349f695713a74a86981d4c17fcfd1f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AGE::OpenGLShader::SetFloat3</definition>
+        <argsstring>(const char *Name, const Vector3 &amp;Values, const Vector3 *ValuePtr=nullptr, int Count=2) const override</argsstring>
+        <name>SetFloat3</name>
+        <qualifiedname>AGE::OpenGLShader::SetFloat3</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_shader_1a1bb27b5fbc9e85ce9a597aa944681803">SetFloat3</reimplements>
+        <param>
+          <type>const char *</type>
+          <declname>Name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> &amp;</type>
+          <declname>Values</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> *</type>
+          <declname>ValuePtr</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>Count</declname>
+          <defval>2</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="24" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="99" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1a014c0eb079509c74c6d25db090174f30" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AGE::OpenGLShader::SetFloat4</definition>
+        <argsstring>(const char *Name, const Vector4 &amp;Value, const Vector4 *ValuePtr=nullptr, int Count=2) const override</argsstring>
+        <name>SetFloat4</name>
+        <qualifiedname>AGE::OpenGLShader::SetFloat4</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_shader_1a78fb6fd86cce4b4d42a21806b20a967d">SetFloat4</reimplements>
+        <param>
+          <type>const char *</type>
+          <declname>Name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> &amp;</type>
+          <declname>Value</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> *</type>
+          <declname>ValuePtr</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>Count</declname>
+          <defval>2</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="25" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="105" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1a2f7d9ee7caccf482346d7ab92be1b819" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AGE::OpenGLShader::SetMat3</definition>
+        <argsstring>(const char *Name, const Matrix3D &amp;Matrix) const override</argsstring>
+        <name>SetMat3</name>
+        <qualifiedname>AGE::OpenGLShader::SetMat3</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_shader_1a47dceb19796424033aba2241cae42e3b">SetMat3</reimplements>
+        <param>
+          <type>const char *</type>
+          <declname>Name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref> &amp;</type>
+          <declname>Matrix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="26" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="116" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1affa41bc5d9d8fdd81092d2cf6c8c4660" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AGE::OpenGLShader::SetMat4</definition>
+        <argsstring>(const char *Name, const Matrix4D &amp;Matrix) const override</argsstring>
+        <name>SetMat4</name>
+        <qualifiedname>AGE::OpenGLShader::SetMat4</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_shader_1ad7e0badd8936c8e056f6df639d7c146b">SetMat4</reimplements>
+        <param>
+          <type>const char *</type>
+          <declname>Name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> &amp;</type>
+          <declname>Matrix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="27" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="111" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1ac2294fd8f640fb6ebd395a0a608f4f29" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AGE::OpenGLShader::SetInt</definition>
+        <argsstring>(const char *Name, const int Texture=0, const int *TexturePtr=nullptr, const int Count=2) const override</argsstring>
+        <name>SetInt</name>
+        <qualifiedname>AGE::OpenGLShader::SetInt</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_shader_1a79bfb747ac350fd781f6988d020e1c82">SetInt</reimplements>
+        <param>
+          <type>const char *</type>
+          <declname>Name</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>Texture</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>const int *</type>
+          <declname>TexturePtr</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>Count</declname>
+          <defval>2</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="28" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="121" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1a1fc3fd48fb344bf5dda2f3d93345a861" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string &amp; AGE::OpenGLShader::GetShaderName</definition>
+        <argsstring>() const override</argsstring>
+        <name>GetShaderName</name>
+        <qualifiedname>AGE::OpenGLShader::GetShaderName</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_shader_1a4d0077713225811ccbffac4945e51bbb">GetShaderName</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="30" column="19" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1ac56fa9bc272ca73c1c471a4dbf429e8e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::OpenGLShader::UploadFloat</definition>
+        <argsstring>(const char *Name, float Values, float *ValuePtr=nullptr, int Count=2) const</argsstring>
+        <name>UploadFloat</name>
+        <qualifiedname>AGE::OpenGLShader::UploadFloat</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>Name</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>Values</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>ValuePtr</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>Count</declname>
+          <defval>2</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="32" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="127" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1ad6abf900f2f67dea0f60597ceda1376e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::OpenGLShader::UploadFloat2</definition>
+        <argsstring>(const char *Name, const Vector2 &amp;Values, const Vector2 *ValuePtr=nullptr, int Count=2) const</argsstring>
+        <name>UploadFloat2</name>
+        <qualifiedname>AGE::OpenGLShader::UploadFloat2</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>Name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> &amp;</type>
+          <declname>Values</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> *</type>
+          <declname>ValuePtr</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>Count</declname>
+          <defval>2</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="33" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="137" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1aba0453d8e3a7a8d4e00711fcbbd9f2de" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::OpenGLShader::UploadFloat3</definition>
+        <argsstring>(const char *Name, const Vector3 &amp;Values, const Vector3 *ValuePtr=nullptr, int Count=2) const</argsstring>
+        <name>UploadFloat3</name>
+        <qualifiedname>AGE::OpenGLShader::UploadFloat3</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>Name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> &amp;</type>
+          <declname>Values</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> *</type>
+          <declname>ValuePtr</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>Count</declname>
+          <defval>2</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="34" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="147" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1ab7f8ddf177069314b5071336f5dded8c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::OpenGLShader::UploadFloat4</definition>
+        <argsstring>(const char *Name, const Vector4 &amp;Value, const Vector4 *ValuePtr=nullptr, int Count=2) const</argsstring>
+        <name>UploadFloat4</name>
+        <qualifiedname>AGE::OpenGLShader::UploadFloat4</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>Name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> &amp;</type>
+          <declname>Value</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> *</type>
+          <declname>ValuePtr</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>Count</declname>
+          <defval>2</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="35" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="157" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1aa316d39c9742ae3fd0d489e29ec2f96e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::OpenGLShader::UploadMat3</definition>
+        <argsstring>(const char *Name, const Matrix3D &amp;Matrix) const</argsstring>
+        <name>UploadMat3</name>
+        <qualifiedname>AGE::OpenGLShader::UploadMat3</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>Name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref> &amp;</type>
+          <declname>Matrix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="36" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="166" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1a27b5a67cdcf00aa06961c0bfdfca5e82" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::OpenGLShader::UploadMat4</definition>
+        <argsstring>(const char *Name, const Matrix4D &amp;Matrix) const</argsstring>
+        <name>UploadMat4</name>
+        <qualifiedname>AGE::OpenGLShader::UploadMat4</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>Name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> &amp;</type>
+          <declname>Matrix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="37" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="171" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1abf88867619db1095d4436b2e22d81c01" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::OpenGLShader::UploadInt</definition>
+        <argsstring>(const char *Name, const int Texture=0, const int *TexturePtr=nullptr, const int Count=2) const</argsstring>
+        <name>UploadInt</name>
+        <qualifiedname>AGE::OpenGLShader::UploadInt</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>Name</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>Texture</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>const int *</type>
+          <declname>TexturePtr</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>Count</declname>
+          <defval>2</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="38" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="190" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1aa14f0741247841eedd616e970cd67788" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string AGE::OpenGLShader::ReadFile</definition>
+        <argsstring>(const std::string FilePath)</argsstring>
+        <name>ReadFile</name>
+        <qualifiedname>AGE::OpenGLShader::ReadFile</qualifiedname>
+        <param>
+          <type>const std::string</type>
+          <declname>FilePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="40" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="200" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1a5e8d3741f88ec6c5b64d6239a4ad258e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::unordered_map&lt; GLenum, std::string &gt;</type>
+        <definition>std::unordered_map&lt; GLenum, std::string &gt; AGE::OpenGLShader::PreProcess</definition>
+        <argsstring>(const std::string &amp;Source)</argsstring>
+        <name>PreProcess</name>
+        <qualifiedname>AGE::OpenGLShader::PreProcess</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>Source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="42" column="21" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="222" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1ae9cb26e65074c0cc4e8da4462ec0d98c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::OpenGLShader::Compile</definition>
+        <argsstring>(const std::unordered_map&lt; GLenum, std::string &gt; &amp;ShaderSources)</argsstring>
+        <name>Compile</name>
+        <qualifiedname>AGE::OpenGLShader::Compile</qualifiedname>
+        <param>
+          <type>const std::unordered_map&lt; GLenum, std::string &gt; &amp;</type>
+          <declname>ShaderSources</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="44" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="246" bodyend="339"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1a58e285cf6d18a1c97fa921aebe3264b7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>uint32_t</type>
+        <definition>virtual uint32_t AGE::OpenGLShader::GetRendererID</definition>
+        <argsstring>() const override</argsstring>
+        <name>GetRendererID</name>
+        <qualifiedname>AGE::OpenGLShader::GetRendererID</qualifiedname>
+        <reimplements refid="class_a_g_e_1_1_shader_1ac4b0eac9cd891e569afff48f8d58a1b7">GetRendererID</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="46" column="25" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" bodystart="46" bodyend="46"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>AGE::OpenGLShader</label>
+        <link refid="class_a_g_e_1_1_open_g_l_shader"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>AGE::Shader</label>
+        <link refid="class_a_g_e_1_1_shader"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>AGE::OpenGLShader</label>
+        <link refid="class_a_g_e_1_1_open_g_l_shader"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>AGE::Shader</label>
+        <link refid="class_a_g_e_1_1_shader"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="10" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" bodystart="11" bodyend="52"/>
+    <listofallmembers>
+      <member refid="class_a_g_e_1_1_open_g_l_shader_1aff1aa85f0941852547e964ec51071a0a" prot="public" virt="virtual"><scope>AGE::OpenGLShader</scope><name>Bind</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_shader_1ae9cb26e65074c0cc4e8da4462ec0d98c" prot="public" virt="non-virtual"><scope>AGE::OpenGLShader</scope><name>Compile</name></member>
+      <member refid="class_a_g_e_1_1_shader_1a94b64f4addd47e02c1d64b83f2280fec" prot="public" virt="non-virtual"><scope>AGE::OpenGLShader</scope><name>Create</name></member>
+      <member refid="class_a_g_e_1_1_shader_1a91921c91d60998e1670b2af46d1a6730" prot="public" virt="non-virtual"><scope>AGE::OpenGLShader</scope><name>Create</name></member>
+      <member refid="class_a_g_e_1_1_shader_1a05a2042805f5e8d249310042880b3299" prot="public" virt="non-virtual"><scope>AGE::OpenGLShader</scope><name>Create</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_shader_1a58e285cf6d18a1c97fa921aebe3264b7" prot="public" virt="virtual"><scope>AGE::OpenGLShader</scope><name>GetRendererID</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_shader_1a1fc3fd48fb344bf5dda2f3d93345a861" prot="public" virt="virtual"><scope>AGE::OpenGLShader</scope><name>GetShaderName</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_shader_1a63328532f810d5e70dcc3827f9d7fa6f" prot="private" virt="non-virtual"><scope>AGE::OpenGLShader</scope><name>m_RendererID</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_shader_1a0096d42f5fc22108d55d5fe9eab65ce5" prot="private" virt="non-virtual"><scope>AGE::OpenGLShader</scope><name>m_ShaderName</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_shader_1ac71aeeb660e2c6d845a25aa20737b4ba" prot="public" virt="non-virtual"><scope>AGE::OpenGLShader</scope><name>OpenGLShader</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_shader_1ac14dbe38c049032cd80246d7a41a4c01" prot="public" virt="non-virtual"><scope>AGE::OpenGLShader</scope><name>OpenGLShader</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_shader_1a865ffbd35489f1c7db14e6dfcc1eda15" prot="public" virt="non-virtual"><scope>AGE::OpenGLShader</scope><name>OpenGLShader</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_shader_1a5e8d3741f88ec6c5b64d6239a4ad258e" prot="public" virt="non-virtual"><scope>AGE::OpenGLShader</scope><name>PreProcess</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_shader_1aa14f0741247841eedd616e970cd67788" prot="public" virt="non-virtual"><scope>AGE::OpenGLShader</scope><name>ReadFile</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_shader_1a6a99dcca672a594d95d6f29aac64fdfc" prot="public" virt="virtual"><scope>AGE::OpenGLShader</scope><name>SetFloat</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_shader_1a29b8e908babdab23056a1172828131c0" prot="public" virt="virtual"><scope>AGE::OpenGLShader</scope><name>SetFloat2</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_shader_1a73349f695713a74a86981d4c17fcfd1f" prot="public" virt="virtual"><scope>AGE::OpenGLShader</scope><name>SetFloat3</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_shader_1a014c0eb079509c74c6d25db090174f30" prot="public" virt="virtual"><scope>AGE::OpenGLShader</scope><name>SetFloat4</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_shader_1ac2294fd8f640fb6ebd395a0a608f4f29" prot="public" virt="virtual"><scope>AGE::OpenGLShader</scope><name>SetInt</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_shader_1a2f7d9ee7caccf482346d7ab92be1b819" prot="public" virt="virtual"><scope>AGE::OpenGLShader</scope><name>SetMat3</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_shader_1affa41bc5d9d8fdd81092d2cf6c8c4660" prot="public" virt="virtual"><scope>AGE::OpenGLShader</scope><name>SetMat4</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_shader_1a29d0e49b8ad6ec8624a094653cd523f8" prot="public" virt="virtual"><scope>AGE::OpenGLShader</scope><name>Unbind</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_shader_1ac56fa9bc272ca73c1c471a4dbf429e8e" prot="public" virt="non-virtual"><scope>AGE::OpenGLShader</scope><name>UploadFloat</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_shader_1ad6abf900f2f67dea0f60597ceda1376e" prot="public" virt="non-virtual"><scope>AGE::OpenGLShader</scope><name>UploadFloat2</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_shader_1aba0453d8e3a7a8d4e00711fcbbd9f2de" prot="public" virt="non-virtual"><scope>AGE::OpenGLShader</scope><name>UploadFloat3</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_shader_1ab7f8ddf177069314b5071336f5dded8c" prot="public" virt="non-virtual"><scope>AGE::OpenGLShader</scope><name>UploadFloat4</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_shader_1abf88867619db1095d4436b2e22d81c01" prot="public" virt="non-virtual"><scope>AGE::OpenGLShader</scope><name>UploadInt</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_shader_1aa316d39c9742ae3fd0d489e29ec2f96e" prot="public" virt="non-virtual"><scope>AGE::OpenGLShader</scope><name>UploadMat3</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_shader_1a27b5a67cdcf00aa06961c0bfdfca5e82" prot="public" virt="non-virtual"><scope>AGE::OpenGLShader</scope><name>UploadMat4</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_shader_1a41e3e5c6616a0bbf290f324a30d66981" prot="public" virt="virtual"><scope>AGE::OpenGLShader</scope><name>~OpenGLShader</name></member>
+      <member refid="class_a_g_e_1_1_shader_1adeef8a34dfddd2f7d054e6a12e6b0449" prot="public" virt="virtual"><scope>AGE::OpenGLShader</scope><name>~Shader</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

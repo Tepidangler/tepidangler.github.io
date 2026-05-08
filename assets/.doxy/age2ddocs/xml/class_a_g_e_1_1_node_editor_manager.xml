@@ -1,0 +1,298 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_a_g_e_1_1_node_editor_manager" kind="class" language="C++" prot="public">
+    <compoundname>AGE::NodeEditorManager</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_a_g_e_1_1_node_editor_manager_1aad75ce9af625f354596bb4f27a32e009" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::pair&lt; Ref&lt; <ref refid="class_a_g_e_1_1_node_editor_window" kindref="compound">NodeEditorWindow</ref> &gt;, ax::NodeEditor::EditorContext * &gt; &gt;</type>
+        <definition>std::vector&lt;std::pair&lt;Ref&lt;NodeEditorWindow&gt;, ax::NodeEditor::EditorContext* &gt; &gt; AGE::NodeEditorManager::m_ActiveWindows</definition>
+        <argsstring></argsstring>
+        <name>m_ActiveWindows</name>
+        <qualifiedname>AGE::NodeEditorManager::m_ActiveWindows</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/NodeEditorManager.h" line="37" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/NodeEditorManager.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_node_editor_manager_1a40d70a965478b90e2a7dfab481476c39" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; ax::NodeEditor::Config &gt;</type>
+        <definition>std::vector&lt;ax::NodeEditor::Config&gt; AGE::NodeEditorManager::m_Configs</definition>
+        <argsstring></argsstring>
+        <name>m_Configs</name>
+        <qualifiedname>AGE::NodeEditorManager::m_Configs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/NodeEditorManager.h" line="39" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/NodeEditorManager.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_a_g_e_1_1_node_editor_manager_1ae5cf92869454e41e54c6c17c8398f23c" prot="private" static="yes" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t AGE::NodeEditorManager::NodeID</definition>
+        <argsstring></argsstring>
+        <name>NodeID</name>
+        <qualifiedname>AGE::NodeEditorManager::NodeID</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/NodeEditorManager.h" line="41" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/NodeEditorManager.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_node_editor_manager_1a8f80dc67025d1ae938df4e4285c12cc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AGE::NodeEditorManager::NodeEditorManager</definition>
+        <argsstring>()</argsstring>
+        <name>NodeEditorManager</name>
+        <qualifiedname>AGE::NodeEditorManager::NodeEditorManager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/NodeEditorManager.h" line="14" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Private/NodeEditorManager.cpp" bodystart="11" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_node_editor_manager_1abc0c2a7d7585f8d85c94eb299f3d0237" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AGE::NodeEditorManager::NodeEditorManager</definition>
+        <argsstring>(const NodeEditorManager &amp;)=delete</argsstring>
+        <name>NodeEditorManager</name>
+        <qualifiedname>AGE::NodeEditorManager::NodeEditorManager</qualifiedname>
+        <param>
+          <type>const <ref refid="class_a_g_e_1_1_node_editor_manager" kindref="compound">NodeEditorManager</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/NodeEditorManager.h" line="15" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_node_editor_manager_1ac50d1e8b6b7fbe3838539af60dabdaad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AGE::NodeEditorManager::NodeEditorManager</definition>
+        <argsstring>(NodeEditorManager &amp;&amp;)=delete</argsstring>
+        <name>NodeEditorManager</name>
+        <qualifiedname>AGE::NodeEditorManager::NodeEditorManager</qualifiedname>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_node_editor_manager" kindref="compound">NodeEditorManager</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/NodeEditorManager.h" line="16" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_node_editor_manager_1a7015fc8b3877513f1c04a5bdd5a3588c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>AGE::NodeEditorManager::~NodeEditorManager</definition>
+        <argsstring>()</argsstring>
+        <name>~NodeEditorManager</name>
+        <qualifiedname>AGE::NodeEditorManager::~NodeEditorManager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/NodeEditorManager.h" line="17" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Private/NodeEditorManager.cpp" bodystart="142" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_node_editor_manager_1af66038f7aba0db6cd6bb2a9918f1373f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::NodeEditorManager::RegisterFunctions</definition>
+        <argsstring>()</argsstring>
+        <name>RegisterFunctions</name>
+        <qualifiedname>AGE::NodeEditorManager::RegisterFunctions</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/NodeEditorManager.h" line="19" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Private/NodeEditorManager.cpp" bodystart="150" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_node_editor_manager_1a27a5b649b3f744fc2c92feabffa85d1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::NodeEditorManager::DeregisterFunctions</definition>
+        <argsstring>()</argsstring>
+        <name>DeregisterFunctions</name>
+        <qualifiedname>AGE::NodeEditorManager::DeregisterFunctions</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/NodeEditorManager.h" line="21" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Private/NodeEditorManager.cpp" bodystart="157" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_node_editor_manager_1a19c325299ace04f0b4e71396fdf2aef3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::NodeEditorManager::CreateContextAndWindow</definition>
+        <argsstring>(const std::filesystem::path &amp;Filepath, const std::string &amp;WindowName, void *Target=nullptr)</argsstring>
+        <name>CreateContextAndWindow</name>
+        <qualifiedname>AGE::NodeEditorManager::CreateContextAndWindow</qualifiedname>
+        <param>
+          <type>const std::filesystem::path &amp;</type>
+          <declname>Filepath</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>WindowName</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>Target</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/NodeEditorManager.h" line="22" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Private/NodeEditorManager.cpp" bodystart="15" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_node_editor_manager_1af0c31a35d2f07fcfff2944c2bead498e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::NodeEditorManager::RenderWindows</definition>
+        <argsstring>(TimeStep DeltaTime)</argsstring>
+        <name>RenderWindows</name>
+        <qualifiedname>AGE::NodeEditorManager::RenderWindows</qualifiedname>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_time_step" kindref="compound">TimeStep</ref></type>
+          <declname>DeltaTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/NodeEditorManager.h" line="23" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Private/NodeEditorManager.cpp" bodystart="133" bodyend="140"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_node_editor_manager_1ad61f43ab405caf67b207dd0182197dc9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t AGE::NodeEditorManager::GetNewNodeID</definition>
+        <argsstring>()</argsstring>
+        <name>GetNewNodeID</name>
+        <qualifiedname>AGE::NodeEditorManager::GetNewNodeID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/NodeEditorManager.h" line="25" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/NodeEditorManager.h" bodystart="25" bodyend="25"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_node_editor_manager_1a7dd0861b7a7db8fe5337db1868c97da0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::NodeEditorManager::CreateNewWindow</definition>
+        <argsstring>(const std::string &amp;WindowName, ax::NodeEditor::EditorContext *Context, void *Target=nullptr, bool LoadingExisting=false)</argsstring>
+        <name>CreateNewWindow</name>
+        <qualifiedname>AGE::NodeEditorManager::CreateNewWindow</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>WindowName</declname>
+        </param>
+        <param>
+          <type>ax::NodeEditor::EditorContext *</type>
+          <declname>Context</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>Target</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>LoadingExisting</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/NodeEditorManager.h" line="28" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Private/NodeEditorManager.cpp" bodystart="105" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_node_editor_manager_1a761bf7fed6c02aaac63a5db816f3b117" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::NodeEditorManager::RebuildWindow</definition>
+        <argsstring>(const std::string &amp;WindowName)</argsstring>
+        <name>RebuildWindow</name>
+        <qualifiedname>AGE::NodeEditorManager::RebuildWindow</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>WindowName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/NodeEditorManager.h" line="30" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Private/NodeEditorManager.cpp" bodystart="111" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_node_editor_manager_1af99163552b333b0ce94d89fba42b2f68" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AGE::NodeEditorManager::IsConfigFileStored</definition>
+        <argsstring>(ax::NodeEditor::Config Config)</argsstring>
+        <name>IsConfigFileStored</name>
+        <qualifiedname>AGE::NodeEditorManager::IsConfigFileStored</qualifiedname>
+        <param>
+          <type>ax::NodeEditor::Config</type>
+          <declname>Config</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/NodeEditorManager.h" line="32" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Private/NodeEditorManager.cpp" bodystart="122" bodyend="132"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/NodeEditorManager.h" line="11" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/NodeEditorManager.h" bodystart="12" bodyend="42"/>
+    <listofallmembers>
+      <member refid="class_a_g_e_1_1_node_editor_manager_1a19c325299ace04f0b4e71396fdf2aef3" prot="public" virt="non-virtual"><scope>AGE::NodeEditorManager</scope><name>CreateContextAndWindow</name></member>
+      <member refid="class_a_g_e_1_1_node_editor_manager_1a7dd0861b7a7db8fe5337db1868c97da0" prot="private" virt="non-virtual"><scope>AGE::NodeEditorManager</scope><name>CreateNewWindow</name></member>
+      <member refid="class_a_g_e_1_1_node_editor_manager_1a27a5b649b3f744fc2c92feabffa85d1f" prot="public" virt="non-virtual"><scope>AGE::NodeEditorManager</scope><name>DeregisterFunctions</name></member>
+      <member refid="class_a_g_e_1_1_node_editor_manager_1ad61f43ab405caf67b207dd0182197dc9" prot="public" virt="non-virtual"><scope>AGE::NodeEditorManager</scope><name>GetNewNodeID</name></member>
+      <member refid="class_a_g_e_1_1_node_editor_manager_1af99163552b333b0ce94d89fba42b2f68" prot="private" virt="non-virtual"><scope>AGE::NodeEditorManager</scope><name>IsConfigFileStored</name></member>
+      <member refid="class_a_g_e_1_1_node_editor_manager_1aad75ce9af625f354596bb4f27a32e009" prot="private" virt="non-virtual"><scope>AGE::NodeEditorManager</scope><name>m_ActiveWindows</name></member>
+      <member refid="class_a_g_e_1_1_node_editor_manager_1a40d70a965478b90e2a7dfab481476c39" prot="private" virt="non-virtual"><scope>AGE::NodeEditorManager</scope><name>m_Configs</name></member>
+      <member refid="class_a_g_e_1_1_node_editor_manager_1a8f80dc67025d1ae938df4e4285c12cc3" prot="public" virt="non-virtual"><scope>AGE::NodeEditorManager</scope><name>NodeEditorManager</name></member>
+      <member refid="class_a_g_e_1_1_node_editor_manager_1abc0c2a7d7585f8d85c94eb299f3d0237" prot="public" virt="non-virtual"><scope>AGE::NodeEditorManager</scope><name>NodeEditorManager</name></member>
+      <member refid="class_a_g_e_1_1_node_editor_manager_1ac50d1e8b6b7fbe3838539af60dabdaad" prot="public" virt="non-virtual"><scope>AGE::NodeEditorManager</scope><name>NodeEditorManager</name></member>
+      <member refid="class_a_g_e_1_1_node_editor_manager_1ae5cf92869454e41e54c6c17c8398f23c" prot="private" virt="non-virtual"><scope>AGE::NodeEditorManager</scope><name>NodeID</name></member>
+      <member refid="class_a_g_e_1_1_node_editor_manager_1a761bf7fed6c02aaac63a5db816f3b117" prot="private" virt="non-virtual"><scope>AGE::NodeEditorManager</scope><name>RebuildWindow</name></member>
+      <member refid="class_a_g_e_1_1_node_editor_manager_1af66038f7aba0db6cd6bb2a9918f1373f" prot="public" virt="non-virtual"><scope>AGE::NodeEditorManager</scope><name>RegisterFunctions</name></member>
+      <member refid="class_a_g_e_1_1_node_editor_manager_1af0c31a35d2f07fcfff2944c2bead498e" prot="public" virt="non-virtual"><scope>AGE::NodeEditorManager</scope><name>RenderWindows</name></member>
+      <member refid="class_a_g_e_1_1_node_editor_manager_1a7015fc8b3877513f1c04a5bdd5a3588c" prot="public" virt="virtual"><scope>AGE::NodeEditorManager</scope><name>~NodeEditorManager</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

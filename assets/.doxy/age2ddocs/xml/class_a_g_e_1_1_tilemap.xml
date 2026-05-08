@@ -1,0 +1,455 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_a_g_e_1_1_tilemap" kind="class" language="C++" prot="public">
+    <compoundname>AGE::Tilemap</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::enable_shared_from_this&lt; Tilemap &gt;</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_a_g_e_1_1_tilemap_1a35786201a5bc27aa16f3c30be3916141" prot="private" static="no" mutable="no">
+        <type>Ref&lt; <ref refid="class_a_g_e_1_1_scene" kindref="compound">Scene</ref> &gt;</type>
+        <definition>Ref&lt;Scene&gt; AGE::Tilemap::m_Scene</definition>
+        <argsstring></argsstring>
+        <name>m_Scene</name>
+        <qualifiedname>AGE::Tilemap::m_Scene</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/Tilemap.h" line="46" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/Tilemap.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_tilemap_1a6c284beb2133cd0143c2a9eb7bc73b2a" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="struct_a_g_e_1_1_tileset_data" kindref="compound">TilesetData</ref> &gt;</type>
+        <definition>std::vector&lt;TilesetData&gt; AGE::Tilemap::m_Data</definition>
+        <argsstring></argsstring>
+        <name>m_Data</name>
+        <qualifiedname>AGE::Tilemap::m_Data</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/Tilemap.h" line="47" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/Tilemap.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_tilemap_1a4fc49f2c324fe7c655aed217f86d64f3" prot="private" static="no" mutable="no">
+        <type>std::filesystem::path</type>
+        <definition>std::filesystem::path AGE::Tilemap::m_Path</definition>
+        <argsstring></argsstring>
+        <name>m_Path</name>
+        <qualifiedname>AGE::Tilemap::m_Path</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/Tilemap.h" line="48" column="23" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/Tilemap.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_tilemap_1a43d36ded0719ba4ef7cd168179e6b88b" prot="private" static="no" mutable="no">
+        <type>tmx_map *</type>
+        <definition>tmx_map* AGE::Tilemap::m_Map</definition>
+        <argsstring></argsstring>
+        <name>m_Map</name>
+        <qualifiedname>AGE::Tilemap::m_Map</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/Tilemap.h" line="49" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/Tilemap.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_tilemap_1ab76ff211c4bfe37e9e8f90ef58331180" prot="private" static="no" mutable="no">
+        <type><ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref></type>
+        <definition>UUID AGE::Tilemap::m_AssetID</definition>
+        <argsstring></argsstring>
+        <name>m_AssetID</name>
+        <qualifiedname>AGE::Tilemap::m_AssetID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/Tilemap.h" line="50" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/Tilemap.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_tilemap_1a9acdf5e48e32b2af029db53d85dfdd00" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t AGE::Tilemap::m_MapWidth</definition>
+        <argsstring></argsstring>
+        <name>m_MapWidth</name>
+        <qualifiedname>AGE::Tilemap::m_MapWidth</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/Tilemap.h" line="51" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/Tilemap.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_tilemap_1a8bfe0585acb073878af877ca474f7eb7" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t AGE::Tilemap::m_MapHeight</definition>
+        <argsstring></argsstring>
+        <name>m_MapHeight</name>
+        <qualifiedname>AGE::Tilemap::m_MapHeight</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/Tilemap.h" line="51" column="22" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/Tilemap.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_tilemap_1a6c1af4fa614f597a05f712041578b664" prot="private" static="no" mutable="no">
+        <type>std::map&lt; uint32_t, std::vector&lt; <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> * &gt; &gt;</type>
+        <definition>std::map&lt;uint32_t, std::vector&lt;Vector2*&gt; &gt; AGE::Tilemap::m_UVs</definition>
+        <argsstring></argsstring>
+        <name>m_UVs</name>
+        <qualifiedname>AGE::Tilemap::m_UVs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/Tilemap.h" line="52" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/Tilemap.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_tilemap_1ad4667538cd166a376026ea8e4e0b30c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AGE::Tilemap::Tilemap</definition>
+        <argsstring>(tmx_map *Map)</argsstring>
+        <name>Tilemap</name>
+        <qualifiedname>AGE::Tilemap::Tilemap</qualifiedname>
+        <param>
+          <type>tmx_map *</type>
+          <declname>Map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/Tilemap.h" line="28" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Private/Tilemap.cpp" bodystart="14" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_tilemap_1a885743bf37c678cfff1bc0d9fabcf28f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AGE::Tilemap::~Tilemap</definition>
+        <argsstring>()</argsstring>
+        <name>~Tilemap</name>
+        <qualifiedname>AGE::Tilemap::~Tilemap</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/Tilemap.h" line="29" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Private/Tilemap.cpp" bodystart="20" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_tilemap_1abb3329cc37ae573a4f15cbfe349281d4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Ref&lt; <ref refid="class_a_g_e_1_1_scene" kindref="compound">Scene</ref> &gt;</type>
+        <definition>Ref&lt; Scene &gt; AGE::Tilemap::GetScene</definition>
+        <argsstring>()</argsstring>
+        <name>GetScene</name>
+        <qualifiedname>AGE::Tilemap::GetScene</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/Tilemap.h" line="31" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/Tilemap.h" bodystart="31" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_tilemap_1a7dcb48a7e3465100d358fb561d9a4a7d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="struct_a_g_e_1_1_tileset_data" kindref="compound">TilesetData</ref> &gt; &amp;</type>
+        <definition>std::vector&lt; TilesetData &gt; &amp; AGE::Tilemap::GetData</definition>
+        <argsstring>()</argsstring>
+        <name>GetData</name>
+        <qualifiedname>AGE::Tilemap::GetData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/Tilemap.h" line="32" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/Tilemap.h" bodystart="32" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_tilemap_1a9a3e00a58f580045e4db70be8b60fb14" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::filesystem::path</type>
+        <definition>std::filesystem::path AGE::Tilemap::GetPath</definition>
+        <argsstring>() const</argsstring>
+        <name>GetPath</name>
+        <qualifiedname>AGE::Tilemap::GetPath</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/Tilemap.h" line="33" column="24" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/Tilemap.h" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_tilemap_1a4faaf319d188d02096579b6515154c05" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::pair&lt; uint32_t, uint32_t &gt;</type>
+        <definition>std::pair&lt; uint32_t, uint32_t &gt; AGE::Tilemap::GetMapDimensions</definition>
+        <argsstring>()</argsstring>
+        <name>GetMapDimensions</name>
+        <qualifiedname>AGE::Tilemap::GetMapDimensions</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/Tilemap.h" line="34" column="11" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/Tilemap.h" bodystart="34" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_tilemap_1a14cb429a22d56be3ff1daa9d2bb69c75" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::map&lt; uint32_t, std::vector&lt; <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> * &gt; &gt; &amp;</type>
+        <definition>std::map&lt; uint32_t, std::vector&lt; Vector2 * &gt; &gt; &amp; AGE::Tilemap::GetUVs</definition>
+        <argsstring>()</argsstring>
+        <name>GetUVs</name>
+        <qualifiedname>AGE::Tilemap::GetUVs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/Tilemap.h" line="35" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/Tilemap.h" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_tilemap_1a47fe2cae5c50792c5bcb50a8b9b64a3a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref></type>
+        <definition>UUID AGE::Tilemap::GetAssetID</definition>
+        <argsstring>()</argsstring>
+        <name>GetAssetID</name>
+        <qualifiedname>AGE::Tilemap::GetAssetID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/Tilemap.h" line="36" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/Tilemap.h" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_tilemap_1a2b8a878c1df291b23da9d9e4925cca77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Tilemap::SetScene</definition>
+        <argsstring>(Ref&lt; Scene &gt; &amp;scene)</argsstring>
+        <name>SetScene</name>
+        <qualifiedname>AGE::Tilemap::SetScene</qualifiedname>
+        <param>
+          <type>Ref&lt; <ref refid="class_a_g_e_1_1_scene" kindref="compound">Scene</ref> &gt; &amp;</type>
+          <declname>scene</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/Tilemap.h" line="37" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Private/Tilemap.cpp" bodystart="31" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_tilemap_1a38ad5625d3d74edc6a97c60c0df8636c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Tilemap::SetPath</definition>
+        <argsstring>(const std::filesystem::path &amp;Path)</argsstring>
+        <name>SetPath</name>
+        <qualifiedname>AGE::Tilemap::SetPath</qualifiedname>
+        <param>
+          <type>const std::filesystem::path &amp;</type>
+          <declname>Path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/Tilemap.h" line="38" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/Tilemap.h" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_tilemap_1a74da19be9269299eb4f787ab4fde3299" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Tilemap::SetShaderData</definition>
+        <argsstring>()</argsstring>
+        <name>SetShaderData</name>
+        <qualifiedname>AGE::Tilemap::SetShaderData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/Tilemap.h" line="39" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Private/Tilemap.cpp" bodystart="36" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_tilemap_1a9df3a9bdf00ee466338ce46eff0d8e7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Tilemap::SetTileLocations</definition>
+        <argsstring>()</argsstring>
+        <name>SetTileLocations</name>
+        <qualifiedname>AGE::Tilemap::SetTileLocations</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/Tilemap.h" line="40" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Private/Tilemap.cpp" bodystart="105" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_tilemap_1a8772da2d3c5748e06dd7a38f6887e8bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Tilemap::BuildTilemapData</definition>
+        <argsstring>()</argsstring>
+        <name>BuildTilemapData</name>
+        <qualifiedname>AGE::Tilemap::BuildTilemapData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/Tilemap.h" line="41" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Private/Tilemap.cpp" bodystart="40" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_tilemap_1ae018a4e45f1b776f89ad56f78cb3b1f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Tilemap::BindData</definition>
+        <argsstring>()</argsstring>
+        <name>BindData</name>
+        <qualifiedname>AGE::Tilemap::BindData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/Tilemap.h" line="42" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Private/Tilemap.cpp" bodystart="47" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_tilemap_1ada7c9fd8245c814c4cc2ea3fc1ff7cc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const uint32_t</type>
+        <definition>const uint32_t AGE::Tilemap::GetNumberOfLayers</definition>
+        <argsstring>()</argsstring>
+        <name>GetNumberOfLayers</name>
+        <qualifiedname>AGE::Tilemap::GetNumberOfLayers</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/Tilemap.h" line="43" column="16" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Private/Tilemap.cpp" bodystart="64" bodyend="67"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_tilemap_1a4fb154d397dd9fc5935352f08697773f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int AGE::Tilemap::ProcessLayers</definition>
+        <argsstring>(tmx_layer *Head)</argsstring>
+        <name>ProcessLayers</name>
+        <qualifiedname>AGE::Tilemap::ProcessLayers</qualifiedname>
+        <param>
+          <type>tmx_layer *</type>
+          <declname>Head</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/Tilemap.h" line="53" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Private/Tilemap.cpp" bodystart="69" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_tilemap_1a7e360e0bbeb7045a0d952fedd3c798f0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Tilemap::ProcessTilesets</definition>
+        <argsstring>(tmx_tileset_list *Head)</argsstring>
+        <name>ProcessTilesets</name>
+        <qualifiedname>AGE::Tilemap::ProcessTilesets</qualifiedname>
+        <param>
+          <type>tmx_tileset_list *</type>
+          <declname>Head</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/Tilemap.h" line="54" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Private/Tilemap.cpp" bodystart="82" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_tilemap_1a06faebd0bb521395b3341e5790938b9a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Tilemap::SetTileData</definition>
+        <argsstring>()</argsstring>
+        <name>SetTileData</name>
+        <qualifiedname>AGE::Tilemap::SetTileData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/Tilemap.h" line="55" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Private/Tilemap.cpp" bodystart="134" bodyend="181"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>AGE::Tilemap</label>
+        <link refid="class_a_g_e_1_1_tilemap"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::enable_shared_from_this&lt; Tilemap &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>AGE::Tilemap</label>
+        <link refid="class_a_g_e_1_1_tilemap"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::enable_shared_from_this&lt; Tilemap &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/Tilemap.h" line="25" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/Tilemap.h" bodystart="26" bodyend="56"/>
+    <listofallmembers>
+      <member refid="class_a_g_e_1_1_tilemap_1ae018a4e45f1b776f89ad56f78cb3b1f7" prot="public" virt="non-virtual"><scope>AGE::Tilemap</scope><name>BindData</name></member>
+      <member refid="class_a_g_e_1_1_tilemap_1a8772da2d3c5748e06dd7a38f6887e8bc" prot="public" virt="non-virtual"><scope>AGE::Tilemap</scope><name>BuildTilemapData</name></member>
+      <member refid="class_a_g_e_1_1_tilemap_1a47fe2cae5c50792c5bcb50a8b9b64a3a" prot="public" virt="non-virtual"><scope>AGE::Tilemap</scope><name>GetAssetID</name></member>
+      <member refid="class_a_g_e_1_1_tilemap_1a7dcb48a7e3465100d358fb561d9a4a7d" prot="public" virt="non-virtual"><scope>AGE::Tilemap</scope><name>GetData</name></member>
+      <member refid="class_a_g_e_1_1_tilemap_1a4faaf319d188d02096579b6515154c05" prot="public" virt="non-virtual"><scope>AGE::Tilemap</scope><name>GetMapDimensions</name></member>
+      <member refid="class_a_g_e_1_1_tilemap_1ada7c9fd8245c814c4cc2ea3fc1ff7cc3" prot="public" virt="non-virtual"><scope>AGE::Tilemap</scope><name>GetNumberOfLayers</name></member>
+      <member refid="class_a_g_e_1_1_tilemap_1a9a3e00a58f580045e4db70be8b60fb14" prot="public" virt="non-virtual"><scope>AGE::Tilemap</scope><name>GetPath</name></member>
+      <member refid="class_a_g_e_1_1_tilemap_1abb3329cc37ae573a4f15cbfe349281d4" prot="public" virt="non-virtual"><scope>AGE::Tilemap</scope><name>GetScene</name></member>
+      <member refid="class_a_g_e_1_1_tilemap_1a14cb429a22d56be3ff1daa9d2bb69c75" prot="public" virt="non-virtual"><scope>AGE::Tilemap</scope><name>GetUVs</name></member>
+      <member refid="class_a_g_e_1_1_tilemap_1ab76ff211c4bfe37e9e8f90ef58331180" prot="private" virt="non-virtual"><scope>AGE::Tilemap</scope><name>m_AssetID</name></member>
+      <member refid="class_a_g_e_1_1_tilemap_1a6c284beb2133cd0143c2a9eb7bc73b2a" prot="private" virt="non-virtual"><scope>AGE::Tilemap</scope><name>m_Data</name></member>
+      <member refid="class_a_g_e_1_1_tilemap_1a43d36ded0719ba4ef7cd168179e6b88b" prot="private" virt="non-virtual"><scope>AGE::Tilemap</scope><name>m_Map</name></member>
+      <member refid="class_a_g_e_1_1_tilemap_1a8bfe0585acb073878af877ca474f7eb7" prot="private" virt="non-virtual"><scope>AGE::Tilemap</scope><name>m_MapHeight</name></member>
+      <member refid="class_a_g_e_1_1_tilemap_1a9acdf5e48e32b2af029db53d85dfdd00" prot="private" virt="non-virtual"><scope>AGE::Tilemap</scope><name>m_MapWidth</name></member>
+      <member refid="class_a_g_e_1_1_tilemap_1a4fc49f2c324fe7c655aed217f86d64f3" prot="private" virt="non-virtual"><scope>AGE::Tilemap</scope><name>m_Path</name></member>
+      <member refid="class_a_g_e_1_1_tilemap_1a35786201a5bc27aa16f3c30be3916141" prot="private" virt="non-virtual"><scope>AGE::Tilemap</scope><name>m_Scene</name></member>
+      <member refid="class_a_g_e_1_1_tilemap_1a6c1af4fa614f597a05f712041578b664" prot="private" virt="non-virtual"><scope>AGE::Tilemap</scope><name>m_UVs</name></member>
+      <member refid="class_a_g_e_1_1_tilemap_1a4fb154d397dd9fc5935352f08697773f" prot="private" virt="non-virtual"><scope>AGE::Tilemap</scope><name>ProcessLayers</name></member>
+      <member refid="class_a_g_e_1_1_tilemap_1a7e360e0bbeb7045a0d952fedd3c798f0" prot="private" virt="non-virtual"><scope>AGE::Tilemap</scope><name>ProcessTilesets</name></member>
+      <member refid="class_a_g_e_1_1_tilemap_1a38ad5625d3d74edc6a97c60c0df8636c" prot="public" virt="non-virtual"><scope>AGE::Tilemap</scope><name>SetPath</name></member>
+      <member refid="class_a_g_e_1_1_tilemap_1a2b8a878c1df291b23da9d9e4925cca77" prot="public" virt="non-virtual"><scope>AGE::Tilemap</scope><name>SetScene</name></member>
+      <member refid="class_a_g_e_1_1_tilemap_1a74da19be9269299eb4f787ab4fde3299" prot="public" virt="non-virtual"><scope>AGE::Tilemap</scope><name>SetShaderData</name></member>
+      <member refid="class_a_g_e_1_1_tilemap_1a06faebd0bb521395b3341e5790938b9a" prot="private" virt="non-virtual"><scope>AGE::Tilemap</scope><name>SetTileData</name></member>
+      <member refid="class_a_g_e_1_1_tilemap_1a9df3a9bdf00ee466338ce46eff0d8e7a" prot="public" virt="non-virtual"><scope>AGE::Tilemap</scope><name>SetTileLocations</name></member>
+      <member refid="class_a_g_e_1_1_tilemap_1ad4667538cd166a376026ea8e4e0b30c3" prot="public" virt="non-virtual"><scope>AGE::Tilemap</scope><name>Tilemap</name></member>
+      <member refid="class_a_g_e_1_1_tilemap_1a885743bf37c678cfff1bc0d9fabcf28f" prot="public" virt="non-virtual"><scope>AGE::Tilemap</scope><name>~Tilemap</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

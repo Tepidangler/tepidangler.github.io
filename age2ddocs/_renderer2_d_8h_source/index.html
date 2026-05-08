@@ -1,0 +1,1813 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>File Renderer2D.h - AGE2D Docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "File Renderer2D.h";
+        var mkdocs_page_input_path = "age2ddocs\\_renderer2_d_8h_source.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> AGE2D Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Age2ddocs</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../_a_g_e_audio_8cpp/">File AGEAudio.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_a_g_e_audio_8cpp_source/">File AGEAudio.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_a_g_e_audio_8h/">File AGEAudio.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_a_g_e_audio_8h_source/">File AGEAudio.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_a_g_e_video_8cpp/">File AGEVideo.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_a_g_e_video_8cpp_source/">File AGEVideo.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_a_g_e_video_8h/">File AGEVideo.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_a_g_e_video_8h_source/">File AGEVideo.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_a_g_epch_8cpp/">File AGEpch.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_a_g_epch_8cpp_source/">File AGEpch.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_a_g_epch_8hpp/">File AGEpch.hpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_a_g_epch_8hpp_source/">File AGEpch.hpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_animation_8cpp/">File Animation.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_animation_8cpp_source/">File Animation.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_animation_8h/">File Animation.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_animation_8h_source/">File Animation.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_app_8cpp/">File App.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_app_8cpp_source/">File App.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_app_8h/">File App.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_app_8h_source/">File App.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_application_event_8h/">File ApplicationEvent.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_application_event_8h_source/">File ApplicationEvent.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_aseprite_8cpp/">File Aseprite.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_aseprite_8cpp_source/">File Aseprite.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_aseprite_8h/">File Aseprite.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_aseprite_8h_source/">File Aseprite.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_asset_manager_8cpp/">File AssetManager.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_asset_manager_8cpp_source/">File AssetManager.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_asset_manager_8h/">File AssetManager.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_asset_manager_8h_source/">File AssetManager.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_audio_engine_8cpp/">File AudioEngine.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_audio_engine_8cpp_source/">File AudioEngine.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_audio_engine_8h/">File AudioEngine.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_audio_engine_8h_source/">File AudioEngine.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_buffer_8h/">File Buffer.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_buffer_8h_source/">File Buffer.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_button_component_8cpp/">File ButtonComponent.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_button_component_8cpp_source/">File ButtonComponent.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_button_component_8h/">File ButtonComponent.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_button_component_8h_source/">File ButtonComponent.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_camera_8h/">File Camera.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_camera_8h_source/">File Camera.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_colors_8h/">File Colors.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_colors_8h_source/">File Colors.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_components_8h/">File Components.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_components_8h_source/">File Components.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_core_8h/">File Core.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_core_8h_source/">File Core.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_csv_parser_8cpp/">File CsvParser.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_csv_parser_8cpp_source/">File CsvParser.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_csv_parser_8h/">File CsvParser.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_csv_parser_8h_source/">File CsvParser.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_data_reader_8cpp/">File DataReader.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_data_reader_8cpp_source/">File DataReader.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_data_reader_8h/">File DataReader.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_data_reader_8h_source/">File DataReader.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_data_structures_8h/">File DataStructures.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_data_structures_8h_source/">File DataStructures.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_data_writer_8cpp/">File DataWriter.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_data_writer_8cpp_source/">File DataWriter.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_data_writer_8h/">File DataWriter.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_data_writer_8h_source/">File DataWriter.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_delta_time_8h/">File DeltaTime.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_delta_time_8h_source/">File DeltaTime.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_device_manager_8cpp/">File DeviceManager.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_device_manager_8cpp_source/">File DeviceManager.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_device_manager_8h/">File DeviceManager.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_device_manager_8h_source/">File DeviceManager.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_editor_camera_8cpp/">File EditorCamera.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_editor_camera_8cpp_source/">File EditorCamera.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_editor_camera_8h/">File EditorCamera.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_editor_camera_8h_source/">File EditorCamera.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_entity_8cpp/">File Entity.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_entity_8cpp_source/">File Entity.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_entity_8h/">File Entity.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_entity_8h_source/">File Entity.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_entry_point_8h/">File EntryPoint.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_entry_point_8h_source/">File EntryPoint.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_event_8h/">File Event.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_event_8h_source/">File Event.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_fbx_parser_8cpp/">File FbxParser.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_fbx_parser_8cpp_source/">File FbxParser.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_fbx_parser_8h/">File FbxParser.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_fbx_parser_8h_source/">File FbxParser.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_fmod_engine_8cpp/">File FmodEngine.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_fmod_engine_8cpp_source/">File FmodEngine.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_fmod_engine_8h/">File FmodEngine.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_fmod_engine_8h_source/">File FmodEngine.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_font_8cpp/">File Font.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_font_8cpp_source/">File Font.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_font_8h/">File Font.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_font_8h_source/">File Font.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_frame_buffer_8cpp/">File FrameBuffer.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_frame_buffer_8cpp_source/">File FrameBuffer.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_frame_buffer_8h/">File FrameBuffer.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_frame_buffer_8h_source/">File FrameBuffer.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_functions_8h/">File Functions.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_functions_8h_source/">File Functions.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_game_event_8h/">File GameEvent.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_game_event_8h_source/">File GameEvent.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_gamepad_codes_8h/">File GamepadCodes.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_gamepad_codes_8h_source/">File GamepadCodes.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_graphics_context_8cpp/">File GraphicsContext.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_graphics_context_8cpp_source/">File GraphicsContext.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_graphics_context_8h/">File GraphicsContext.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_graphics_context_8h_source/">File GraphicsContext.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_horizontal_box_component_8cpp/">File HorizontalBoxComponent.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_horizontal_box_component_8cpp_source/">File HorizontalBoxComponent.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_horizontal_box_component_8h/">File HorizontalBoxComponent.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_horizontal_box_component_8h_source/">File HorizontalBoxComponent.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_im_gui_layer_8cpp/">File ImGuiLayer.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_im_gui_layer_8cpp_source/">File ImGuiLayer.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_im_gui_layer_8h/">File ImGuiLayer.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_im_gui_layer_8h_source/">File ImGuiLayer.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_image_8cpp/">File Image.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_image_8cpp_source/">File Image.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_image_8h/">File Image.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_image_8h_source/">File Image.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_ini_reader_8cpp/">File IniReader.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_ini_reader_8cpp_source/">File IniReader.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_ini_reader_8h/">File IniReader.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_ini_reader_8h_source/">File IniReader.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_ini_writer_8cpp/">File IniWriter.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_ini_writer_8cpp_source/">File IniWriter.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_ini_writer_8h/">File IniWriter.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_ini_writer_8h_source/">File IniWriter.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_input_8h/">File Input.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_input_8h_source/">File Input.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_input_binding_8cpp/">File InputBinding.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_input_binding_8cpp_source/">File InputBinding.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_input_binding_8h/">File InputBinding.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_input_binding_8h_source/">File InputBinding.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_instrumentor_8h/">File Instrumentor.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_instrumentor_8h_source/">File Instrumentor.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_json_parser_8cpp/">File JsonParser.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_json_parser_8cpp_source/">File JsonParser.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_json_parser_8h/">File JsonParser.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_json_parser_8h_source/">File JsonParser.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_key_event_8h/">File KeyEvent.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_key_event_8h_source/">File KeyEvent.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_keycodes_8h/">File Keycodes.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_keycodes_8h_source/">File Keycodes.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_layer_8cpp/">File Layer.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_layer_8cpp_source/">File Layer.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_layer_8h/">File Layer.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_layer_8h_source/">File Layer.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_layer_stack_8cpp/">File LayerStack.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_layer_stack_8cpp_source/">File LayerStack.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_layer_stack_8h/">File LayerStack.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_layer_stack_8h_source/">File LayerStack.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_linux_input_8cpp/">File LinuxInput.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_linux_input_8cpp_source/">File LinuxInput.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_linux_window_8cpp/">File LinuxWindow.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_linux_window_8cpp_source/">File LinuxWindow.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_linux_window_8h/">File LinuxWindow.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_linux_window_8h_source/">File LinuxWindow.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_log_8cpp/">File Log.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_log_8cpp_source/">File Log.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_log_8h/">File Log.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_log_8h_source/">File Log.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_m_s_d_f_data_8h/">File MSDFData.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_m_s_d_f_data_8h_source/">File MSDFData.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_math_8cpp/">File Math.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_math_8cpp_source/">File Math.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_math_8h/">File Math.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_math_8h_source/">File Math.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_math_structures_8h/">File MathStructures.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_math_structures_8h_source/">File MathStructures.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_mouse_button_codes_8h/">File MouseButtonCodes.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_mouse_button_codes_8h_source/">File MouseButtonCodes.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_mouse_event_8h/">File MouseEvent.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_mouse_event_8h_source/">File MouseEvent.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_node_editor_manager_8cpp/">File NodeEditorManager.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_node_editor_manager_8cpp_source/">File NodeEditorManager.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_node_editor_manager_8h/">File NodeEditorManager.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_node_editor_manager_8h_source/">File NodeEditorManager.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_node_editor_window_8cpp/">File NodeEditorWindow.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_node_editor_window_8cpp_source/">File NodeEditorWindow.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_node_editor_window_8h/">File NodeEditorWindow.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_node_editor_window_8h_source/">File NodeEditorWindow.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_open_g_l_buffer_8cpp/">File OpenGLBuffer.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_open_g_l_buffer_8cpp_source/">File OpenGLBuffer.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_open_g_l_buffer_8h/">File OpenGLBuffer.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_open_g_l_buffer_8h_source/">File OpenGLBuffer.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_open_g_l_frame_buffer_8cpp/">File OpenGLFrameBuffer.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_open_g_l_frame_buffer_8cpp_source/">File OpenGLFrameBuffer.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_open_g_l_frame_buffer_8h/">File OpenGLFrameBuffer.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_open_g_l_frame_buffer_8h_source/">File OpenGLFrameBuffer.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_open_g_l_pipeline_8cpp/">File OpenGLPipeline.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_open_g_l_pipeline_8cpp_source/">File OpenGLPipeline.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_open_g_l_pipeline_8h/">File OpenGLPipeline.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_open_g_l_pipeline_8h_source/">File OpenGLPipeline.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_open_g_l_renderer_a_p_i_8cpp/">File OpenGLRendererAPI.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_open_g_l_renderer_a_p_i_8cpp_source/">File OpenGLRendererAPI.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_open_g_l_renderer_a_p_i_8h/">File OpenGLRendererAPI.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_open_g_l_renderer_a_p_i_8h_source/">File OpenGLRendererAPI.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_open_g_l_shader_8cpp/">File OpenGLShader.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_open_g_l_shader_8cpp_source/">File OpenGLShader.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_open_g_l_shader_8h/">File OpenGLShader.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_open_g_l_shader_8h_source/">File OpenGLShader.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_open_g_l_texture_8cpp/">File OpenGLTexture.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_open_g_l_texture_8cpp_source/">File OpenGLTexture.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_open_g_l_texture_8h/">File OpenGLTexture.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_open_g_l_texture_8h_source/">File OpenGLTexture.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_open_g_l_vertex_array_8cpp/">File OpenGLVertexArray.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_open_g_l_vertex_array_8cpp_source/">File OpenGLVertexArray.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_open_g_l_vertex_array_8h/">File OpenGLVertexArray.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_open_g_l_vertex_array_8h_source/">File OpenGLVertexArray.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_open_gl_context_8cpp/">File OpenGlContext.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_open_gl_context_8cpp_source/">File OpenGlContext.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_open_gl_context_8h/">File OpenGlContext.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_open_gl_context_8h_source/">File OpenGlContext.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_particle_system_8cpp/">File ParticleSystem.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_particle_system_8cpp_source/">File ParticleSystem.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_particle_system_8h/">File ParticleSystem.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_particle_system_8h_source/">File ParticleSystem.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_physics2_d_8cpp/">File Physics2D.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_physics2_d_8cpp_source/">File Physics2D.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_physics2_d_8h/">File Physics2D.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_physics2_d_8h_source/">File Physics2D.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_pipeline_8cpp/">File Pipeline.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_pipeline_8cpp_source/">File Pipeline.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_pipeline_8h/">File Pipeline.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_pipeline_8h_source/">File Pipeline.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_pointers_8h/">File Pointers.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_pointers_8h_source/">File Pointers.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_project_8cpp/">File Project.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_project_8cpp_source/">File Project.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_project_8h/">File Project.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_project_8h_source/">File Project.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_r_n_g_8cpp/">File RNG.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_r_n_g_8cpp_source/">File RNG.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_r_n_g_8h/">File RNG.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_r_n_g_8h_source/">File RNG.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_render_a_p_i_8cpp/">File RenderAPI.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_render_a_p_i_8cpp_source/">File RenderAPI.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_render_a_p_i_8h/">File RenderAPI.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_render_a_p_i_8h_source/">File RenderAPI.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_render_buffer_8cpp/">File RenderBuffer.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_render_buffer_8cpp_source/">File RenderBuffer.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_render_buffer_8h/">File RenderBuffer.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_render_buffer_8h_source/">File RenderBuffer.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_render_command_8cpp/">File RenderCommand.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_render_command_8cpp_source/">File RenderCommand.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_render_command_8h/">File RenderCommand.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_render_command_8h_source/">File RenderCommand.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_renderer2_d_8cpp/">File Renderer2D.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_renderer2_d_8cpp_source/">File Renderer2D.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_renderer2_d_8h/">File Renderer2D.h</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">File Renderer2D.h</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_renderer_8cpp/">File Renderer.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_renderer_8cpp_source/">File Renderer.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_renderer_8h/">File Renderer.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_renderer_8h_source/">File Renderer.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_renderer_event_8h/">File RendererEvent.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_renderer_event_8h_source/">File RendererEvent.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_scene_8cpp/">File Scene.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_scene_8cpp_source/">File Scene.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_scene_8h/">File Scene.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_scene_8h_source/">File Scene.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_scene_camera_8cpp/">File SceneCamera.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_scene_camera_8cpp_source/">File SceneCamera.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_scene_camera_8h/">File SceneCamera.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_scene_camera_8h_source/">File SceneCamera.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_scriptable_component_stack_8cpp/">File ScriptableComponentStack.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_scriptable_component_stack_8cpp_source/">File ScriptableComponentStack.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_scriptable_component_stack_8h/">File ScriptableComponentStack.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_scriptable_component_stack_8h_source/">File ScriptableComponentStack.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_scriptable_entity_8cpp/">File ScriptableEntity.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_scriptable_entity_8cpp_source/">File ScriptableEntity.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_scriptable_entity_8h/">File ScriptableEntity.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_scriptable_entity_8h_source/">File ScriptableEntity.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_scriptable_widget_8cpp/">File ScriptableWidget.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_scriptable_widget_8cpp_source/">File ScriptableWidget.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_scriptable_widget_8h/">File ScriptableWidget.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_scriptable_widget_8h_source/">File ScriptableWidget.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_serializers_8cpp/">File Serializers.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_serializers_8cpp_source/">File Serializers.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_serializers_8h/">File Serializers.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_serializers_8h_source/">File Serializers.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_shader_8cpp/">File Shader.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_shader_8cpp_source/">File Shader.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_shader_8h/">File Shader.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_shader_8h_source/">File Shader.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_sound_8cpp/">File Sound.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_sound_8cpp_source/">File Sound.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_sound_8h/">File Sound.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_sound_8h_source/">File Sound.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_soundbank_8cpp/">File Soundbank.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_soundbank_8cpp_source/">File Soundbank.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_soundbank_8h/">File Soundbank.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_soundbank_8h_source/">File Soundbank.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_sprite_a_p_i_8cpp/">File SpriteAPI.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_sprite_a_p_i_8cpp_source/">File SpriteAPI.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_sprite_a_p_i_8h/">File SpriteAPI.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_sprite_a_p_i_8h_source/">File SpriteAPI.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_statics_8h/">File Statics.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_statics_8h_source/">File Statics.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_sub_texture_8cpp/">File SubTexture.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_sub_texture_8cpp_source/">File SubTexture.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_sub_texture_8h/">File SubTexture.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_sub_texture_8h_source/">File SubTexture.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_text_box_component_8cpp/">File TextBoxComponent.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_text_box_component_8cpp_source/">File TextBoxComponent.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_text_box_component_8h/">File TextBoxComponent.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_text_box_component_8h_source/">File TextBoxComponent.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_text_component_8cpp/">File TextComponent.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_text_component_8cpp_source/">File TextComponent.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_text_component_8h/">File TextComponent.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_text_component_8h_source/">File TextComponent.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_texture_8cpp/">File Texture.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_texture_8cpp_source/">File Texture.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_texture_8h/">File Texture.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_texture_8h_source/">File Texture.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_tile_map_importer_8cpp/">File TileMapImporter.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_tile_map_importer_8cpp_source/">File TileMapImporter.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_tile_map_importer_8h/">File TileMapImporter.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_tile_map_importer_8h_source/">File TileMapImporter.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_tile_map_manager_8cpp/">File TileMapManager.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_tile_map_manager_8cpp_source/">File TileMapManager.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_tile_map_manager_8h/">File TileMapManager.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_tile_map_manager_8h_source/">File TileMapManager.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_tilemap_8cpp/">File Tilemap.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_tilemap_8cpp_source/">File Tilemap.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_tilemap_8h/">File Tilemap.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_tilemap_8h_source/">File Tilemap.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_timer_8h/">File Timer.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_timer_8h_source/">File Timer.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_types_8h/">File Types.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_types_8h_source/">File Types.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_u_i_event_8h/">File UIEvent.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_u_i_event_8h_source/">File UIEvent.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_u_i_structs_8h/">File UIStructs.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_u_i_structs_8h_source/">File UIStructs.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_u_u_i_d_8cpp/">File UUID.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_u_u_i_d_8cpp_source/">File UUID.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_u_u_i_d_8h/">File UUID.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_u_u_i_d_8h_source/">File UUID.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_ui_component_8cpp/">File UiComponent.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_ui_component_8cpp_source/">File UiComponent.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_ui_component_8h/">File UiComponent.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_ui_component_8h_source/">File UiComponent.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_ui_image_component_8cpp/">File UiImageComponent.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_ui_image_component_8cpp_source/">File UiImageComponent.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_ui_image_component_8h/">File UiImageComponent.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_ui_image_component_8h_source/">File UiImageComponent.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_utility_functions_8cpp/">File UtilityFunctions.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_utility_functions_8cpp_source/">File UtilityFunctions.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_utility_functions_8h/">File UtilityFunctions.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_utility_functions_8h_source/">File UtilityFunctions.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_vector2_8cpp/">File Vector2.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_vector2_8cpp_source/">File Vector2.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_vector2_8h/">File Vector2.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_vector2_8h_source/">File Vector2.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_vector3_8cpp/">File Vector3.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_vector3_8cpp_source/">File Vector3.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_vector3_8h/">File Vector3.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_vector3_8h_source/">File Vector3.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_vector4_8cpp/">File Vector4.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_vector4_8cpp_source/">File Vector4.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_vector4_8h/">File Vector4.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_vector4_8h_source/">File Vector4.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_vertex_array_8cpp/">File VertexArray.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_vertex_array_8cpp_source/">File VertexArray.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_vertex_array_8h/">File VertexArray.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_vertex_array_8h_source/">File VertexArray.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_vertical_box_component_8cpp/">File VerticalBoxComponent.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_vertical_box_component_8cpp_source/">File VerticalBoxComponent.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_vertical_box_component_8h/">File VerticalBoxComponent.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_vertical_box_component_8h_source/">File VerticalBoxComponent.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_video_source_8cpp/">File VideoSource.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_video_source_8cpp_source/">File VideoSource.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_video_source_8h/">File VideoSource.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_video_source_8h_source/">File VideoSource.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_visual_scripting_structs_8h/">File VisualScriptingStructs.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_visual_scripting_structs_8h_source/">File VisualScriptingStructs.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_w_wise_engine_8h/">File WWiseEngine.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_w_wise_engine_8h_source/">File WWiseEngine.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_widget_8h/">File Widget.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_widget_8h_source/">File Widget.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_widget_stack_8cpp/">File WidgetStack.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_widget_stack_8cpp_source/">File WidgetStack.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_widget_stack_8h/">File WidgetStack.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_widget_stack_8h_source/">File WidgetStack.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_window_8h/">File Window.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_window_8h_source/">File Window.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_windows_input_8cpp/">File WindowsInput.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_windows_input_8cpp_source/">File WindowsInput.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_windows_utils_8cpp/">File WindowsUtils.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_windows_utils_8cpp_source/">File WindowsUtils.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_windows_utils_8h/">File WindowsUtils.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_windows_utils_8h_source/">File WindowsUtils.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_windows_window_8cpp/">File WindowsWindow.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_windows_window_8cpp_source/">File WindowsWindow.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_windows_window_8h/">File WindowsWindow.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_windows_window_8h_source/">File WindowsWindow.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_world2_d_8cpp/">File World2D.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_world2_d_8cpp_source/">File World2D.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_world2_d_8h/">File World2D.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_world2_d_8h_source/">File World2D.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_world_8cpp/">File World.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_world_8cpp_source/">File World.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_world_8h/">File World.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_world_8h_source/">File World.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_wwise___i_ds_8h/">File Wwise_IDs.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_wwise___i_ds_8h_source/">File Wwise_IDs.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_wwise_engine_8cpp/">File WwiseEngine.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_wwise_engine_8cpp_source/">File WwiseEngine.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_x_input_8cpp/">File XInput.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_x_input_8cpp_source/">File XInput.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_x_input_8h/">File XInput.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../_x_input_8h_source/">File XInput.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../annotated/">Class List</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_a_g_e_font/">Class AGE::AGEFont</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_a_g_e_sound/">Class AGE::AGESound</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_a_g_e_window/">Class AGE::AGEWindow</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_animation/">Class AGE::Animation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_app/">Class AGE::App</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_app_render_event/">Class AGE::AppRenderEvent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_app_tick_event/">Class AGE::AppTickEvent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_app_update_event/">Class AGE::AppUpdateEvent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_aseprite/">Class AGE::Aseprite</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_asset_manager/">Class AGE::AssetManager</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_asset_pak/">Class AGE::AssetPak</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_audio_engine/">Class AGE::AudioEngine</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_audio_manager/">Class AGE::AudioManager</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_audio_source/">Class AGE::AudioSource</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_axis_event/">Class AGE::AxisEvent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_buffer_layout/">Class AGE::BufferLayout</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_button_component/">Class AGE::ButtonComponent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_c_s_v_parser/">Class AGE::CSVParser</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_camera/">Class AGE::Camera</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_convert/">Class AGE::Convert</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_data_reader/">Class AGE::DataReader</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_data_writer/">Class AGE::DataWriter</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_device_manager/">Class AGE::DeviceManager</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_editor_camera/">Class AGE::EditorCamera</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_entity/">Class AGE::Entity</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_event/">Class AGE::Event</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_event_dispatcher/">Class AGE::EventDispatcher</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_f_b_x_parser/">Class AGE::FBXParser</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_file_dialogs/">Class AGE::FileDialogs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_file_stream_reader/">Class AGE::FileStreamReader</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_file_stream_writer/">Class AGE::FileStreamWriter</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_frame_buffer/">Class AGE::FrameBuffer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_framebuffer_resize_event/">Class AGE::FramebufferResizeEvent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_gamepad_button_pressed_event/">Class AGE::GamepadButtonPressedEvent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_gamepad_button_released_event/">Class AGE::GamepadButtonReleasedEvent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_graphics_context/">Class AGE::GraphicsContext</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_horizontal_box_component/">Class AGE::HorizontalBoxComponent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_im_gui_layer/">Class AGE::ImGuiLayer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_image/">Class AGE::Image</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_index_buffer/">Class AGE::IndexBuffer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_ini_reader/">Class AGE::IniReader</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_ini_writer/">Class AGE::IniWriter</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_input/">Class AGE::Input</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_input_event/">Class AGE::InputEvent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_instrumentation_timer/">Class AGE::InstrumentationTimer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_instrumentor/">Class AGE::Instrumentor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_json_parser/">Class AGE::JsonParser</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_key_event/">Class AGE::KeyEvent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_key_pressed_event/">Class AGE::KeyPressedEvent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_key_released_event/">Class AGE::KeyReleasedEvent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_key_typed_event/">Class AGE::KeyTypedEvent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_layer/">Class AGE::Layer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_layer_stack/">Class AGE::LayerStack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_log/">Class AGE::Log</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_math/">Class AGE::Math</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_memory_stream_reader/">Class AGE::MemoryStreamReader</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_memory_stream_writer/">Class AGE::MemoryStreamWriter</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_mouse_button_pressed_event/">Class AGE::MouseButtonPressedEvent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_mouse_button_released_event/">Class AGE::MouseButtonReleasedEvent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_mouse_event/">Class AGE::MouseEvent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_mouse_moved_event/">Class AGE::MouseMovedEvent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_mouse_scrolled_event/">Class AGE::MouseScrolledEvent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_node_editor_manager/">Class AGE::NodeEditorManager</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_node_editor_window/">Class AGE::NodeEditorWindow</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_open_g_l_context/">Class AGE::OpenGLContext</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_open_g_l_frame_buffer/">Class AGE::OpenGLFrameBuffer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_open_g_l_index_buffer/">Class AGE::OpenGLIndexBuffer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_open_g_l_pipeline/">Class AGE::OpenGLPipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_open_g_l_renderer_a_p_i/">Class AGE::OpenGLRendererAPI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_open_g_l_shader/">Class AGE::OpenGLShader</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_open_g_l_texture2_d/">Class AGE::OpenGLTexture2D</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_open_g_l_uniform_buffer/">Class AGE::OpenGLUniformBuffer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_open_g_l_vertex_array/">Class AGE::OpenGLVertexArray</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_open_g_l_vertex_buffer/">Class AGE::OpenGLVertexBuffer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_particle_system/">Class AGE::ParticleSystem</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_physics2_d/">Class AGE::Physics2D</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_pipeline/">Class AGE::Pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_project/">Class AGE::Project</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_project_created_event/">Class AGE::ProjectCreatedEvent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_project_loaded_event/">Class AGE::ProjectLoadedEvent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_project_serializer/">Class AGE::ProjectSerializer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_render_command/">Class AGE::RenderCommand</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_render_u_i_event/">Class AGE::RenderUIEvent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_renderer/">Class AGE::Renderer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_renderer2_d/">Class AGE::Renderer2D</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_renderer_a_p_i/">Class AGE::RendererAPI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_renderer_change_event/">Class AGE::RendererChangeEvent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_reverse/">Class AGE::Reverse</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_scene/">Class AGE::Scene</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_scene_camera/">Class AGE::SceneCamera</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_scene_changed_event/">Class AGE::SceneChangedEvent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_scene_event/">Class AGE::SceneEvent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_scene_serializer/">Class AGE::SceneSerializer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_scriptable_entity/">Class AGE::ScriptableEntity</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_scriptable_widget/">Class AGE::ScriptableWidget</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_shader/">Class AGE::Shader</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_shader_library/">Class AGE::ShaderLibrary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_sound_bank/">Class AGE::SoundBank</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_sprite_sheet_utils/">Class AGE::SpriteSheetUtils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_squirrel_noise/">Class AGE::SquirrelNoise</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_squirrel_r_n_g/">Class AGE::SquirrelRNG</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_string_copy_event/">Class AGE::StringCopyEvent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_string_paste_event/">Class AGE::StringPasteEvent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_sub_texture2_d/">Class AGE::SubTexture2D</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_text_box_component/">Class AGE::TextBoxComponent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_text_component/">Class AGE::TextComponent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_texture/">Class AGE::Texture</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_texture2_d/">Class AGE::Texture2D</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_tile_map_importer/">Class AGE::TileMapImporter</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_tile_map_manager/">Class AGE::TileMapManager</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_tilemap/">Class AGE::Tilemap</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_time_step/">Class AGE::TimeStep</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_timer/">Class AGE::Timer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_u_i_component/">Class AGE::UIComponent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_u_i_image_component/">Class AGE::UIImageComponent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_u_u_i_d/">Class AGE::UUID</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_uniform_buffer/">Class AGE::UniformBuffer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_utils_1_1_engine_statics/">Class AGE::Utils::EngineStatics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_vertex_array/">Class AGE::VertexArray</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_vertex_buffer/">Class AGE::VertexBuffer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_vertical_box_component/">Class AGE::VerticalBoxComponent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_widget_activated_event/">Class AGE::WidgetActivatedEvent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_widget_constructed_event/">Class AGE::WidgetConstructedEvent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_widget_deactivated_event/">Class AGE::WidgetDeactivatedEvent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_widget_stack/">Class AGE::WidgetStack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_window_close_event/">Class AGE::WindowCloseEvent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_window_focus_event/">Class AGE::WindowFocusEvent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_window_lost_focus_event/">Class AGE::WindowLostFocusEvent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_window_moved_event/">Class AGE::WindowMovedEvent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_window_resize_event/">Class AGE::WindowResizeEvent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_world/">Class AGE::World</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_a_g_e_1_1_world2_d/">Class AGE::World2D</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_game_framework_1_1_scriptable_comp_stack/">Class GameFramework::ScriptableCompStack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_member_enums/">Class Member Enums</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_member_functions/">Class Member Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_member_typedefs/">Class Member Typedefs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_member_variables/">Class Member Variables</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_members/">Class Members</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../classes/">Class Index</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_004ba52baf3cfab84cfd4a68d034b9b5/">Dir C:/Programming/AGE2D/Engine/src/AGE/Sprite/Public</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_016fed4b0a3cb950c530bbf3738fb926/">Dir C:/Programming/AGE2D/Engine/src/AGE/Platform</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_0200296fe7041373e4c6a62f3844ed95/">Dir C:/Programming/AGE2D/Engine/src/AGE/Physics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_04be1217ec25868465434d487b7b5a77/">Dir C:/Programming/AGE2D/Engine/src/AGE/Project</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_08becb66af5b906f2f524932aed5ff03/">Dir C:/Programming/AGE2D/Engine/src/AGE/Assets/Public</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_0e7d7552020383c89e3ca069b8b7352b/">Dir C:/Programming/AGE2D/Engine/src/AGE/Serializers</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_0ee4e07c8389fb9e068d205bcc0e985a/">Dir C:/Programming/AGE2D/Engine/src/AGE/TileMap/Private</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_0fa6eda6df836021701dcb73c6bbb5aa/">Dir C:/Programming/AGE2D/Engine/src/AGE/Audio/Wwise/Private</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_1203d8b56ae061d1573ea9addf7cd415/">Dir C:/Programming/AGE2D/Engine/src/AGE/UI/Private</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_1690ff486038883855bf20cfd8701efd/">Dir C:/Programming/AGE2D/Engine/src/AGE/Platform/Microsoft/XInput/Private</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_195ca6e0ece592faf3368ed4c1417872/">Dir C:/Programming/AGE2D/Engine/src/AGE/ImGui</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_1a0a2758c948b853064feab5aefe3feb/">Dir C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_1a2ee474f8e9f02a28d524d805dd06ff/">Dir C:/Programming/AGE2D/Engine/src/AGE/Statics/Public</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_1cbb136cab301e6e794b9ffbc12fda9b/">Dir C:/Programming/AGE2D/Engine/src/AGE/Utils/Private</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_2169a406ec11cf5f5db2240313483342/">Dir C:/Programming/AGE2D/Engine/src/AGE/Scene</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_216f82d5b17620f9b31f90beae0ddaa2/">Dir C:/Programming/AGE2D/Engine/src/AGE/Animation/Public</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_21852d4169316cf73f8334582985555d/">Dir C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Private</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_22621ac137e3b40d7111b7a349592295/">Dir C:/Programming/AGE2D/Engine/src/AGE/UI/Public</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_2439a47f158afef875997ffa88190c34/">Dir C:/Programming/AGE2D/Engine/src/AGE/Platform/Linux/Private</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_2593ff35d59f997c5ff64f0f197c6542/">Dir C:/Programming/AGE2D/Engine/src/AGE/Parser/Private</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_260ae2ab9053cdcc0f2fccf79cf91829/">Dir C:/Programming/AGE2D/Engine/src/AGE/Particles/Private</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_26b1c48ab039ca56dd2605bba0caa957/">Dir C:/Programming/AGE2D/Engine/src/AGE/Statics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_28e0ec82502603882947f6402a430cbe/">Dir C:/Programming/AGE2D/Engine/src/AGE/RNG/Public</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_29cf55498d836108c28434a30f1caa57/">Dir C:/Programming/AGE2D/Engine/src/AGE/Platform/Windows</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_2ea46939f511f6144e40e8e7d32aa78e/">Dir C:/Programming/AGE2D/Engine/src/AGE/Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_2f62b3bc7dffdf2f507dbc4d4468bbca/">Dir C:/Programming/AGE2D/Engine/src/AGE/Project/Private</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_3081eed5e59a0ca6b3457ce3023529be/">Dir C:/Programming/AGE2D/Engine/src/AGE/Camera</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_3194396490e5a71e19ad7a016853cc4f/">Dir C:/Programming/AGE2D/Engine/src/AGE/Texture</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_3322a6c7c8fa5303912ba19015d19cce/">Dir C:/Programming/AGE2D/Engine/src/AGE/Scene/Private</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_35bb773506be3ac06655ba85521041b9/">Dir C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_384ddce68b480931e8586b1cf8a80838/">Dir C:/Programming/AGE2D/Engine/src/AGE/Physics/Public</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_40f28070a54f843eaf86230230ee6eb2/">Dir C:/Programming/AGE2D/Engine/src/AGE/Core</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_41f220f6fd01a65275d06c86df5c79b1/">Dir C:/Programming/AGE2D/Engine/src/AGE/RNG/Private</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_4591091c161a59a7c245ad7688ad7744/">Dir C:/Programming/AGE2D/Engine/src/AGE/Math/Private</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_45de20072fa93eb64e7a3a710a6dbdd5/">Dir C:/Programming/AGE2D/Engine/src/AGE/Structs/Public</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_4ad238dfa0f53f1724a782194781035c/">Dir C:/Programming/AGE2D/Engine/src/AGE/Platform/Microsoft</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_4b8400f802eae9b048f7995495b525ca/">Dir C:/Programming/AGE2D/Engine/src/AGE/Events/Public</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_4d1ade32537ccbee8ff5d36b16abbd57/">Dir C:/Programming/AGE2D/Engine/src/AGE/Core/Public</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_4ecec0d92462001f72ac67a8f4bc7a6d/">Dir C:/Programming/AGE2D/Engine/src/AGE/Audio/Wwise/Public</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_578bc13a0cdd58dd59c0b94f1f46155f/">Dir C:/Programming/AGE2D/Engine/src/AGE/Video</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_5b9993be36110f29e6abf37e5784a4f8/">Dir C:/Programming/AGE2D/Engine/src/AGE/Math</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_5c113c7ed6e7034142773ced1bfb6a62/">Dir C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_5fd6adde202bfce222fbe02ea3ca8deb/">Dir C:/Programming/AGE2D/Engine/src/AGE/VisualScripting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_6335cfaf72d882e73c2d8bad4a0f9ec8/">Dir C:/Programming/AGE2D/Engine/src/AGE/Camera/Private</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_6835e5d20dff99344f151a9056e5ca16/">Dir C:/Programming/AGE2D/Engine/src/AGE/Math/Public</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_68ba7e1260de504efb39109a85960357/">Dir C:/Programming/AGE2D/Engine/src/AGE/Render/Public</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_6a98f83a49b4a8e48cceea88fbb59588/">Dir C:/Programming/AGE2D/Engine/src/AGE/Utils/Public</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_70227f149653e1f1d3b9a02604511f36/">Dir C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_74e7b55d8738892ae451b103e367b12d/">Dir C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_791287e181c442a825a539b1df7902c0/">Dir C:/Programming/AGE2D/Engine/src/AGE/Platform/Windows/Public</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_7be2cb086a2ba2e6c4584564048c7469/">Dir C:/Programming/AGE2D/Engine/src/AGE/Audio/Wwise</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_81cf08f2167dee3e048cb83678f5ea45/">Dir C:/Programming/AGE2D/Engine/src/AGE/Project/Public</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_81d36680c9a9035d38dcc36084da83fe/">Dir C:/Programming/AGE2D/Engine/src/AGE/Parser</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_842c434ff407c74a15cf46e820448801/">Dir C:/Programming/AGE2D/Engine/src/AGE/Render/Private</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_86f3fe4200d15146df07e0c3e4229d53/">Dir C:/Programming/AGE2D/Engine/src/AGE/Audio/Fmod/Private</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_8788912a1eaa1e9bef09b35395a9d577/">Dir C:/Programming/AGE2D/Engine/src</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_8d73477d24d99e8c06d17168314de5e1/">Dir C:/Programming/AGE2D/Engine/src/AGE/Platform/Linux/Public</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_8e73e8c2cba434bb9bc4a7569a6e7a64/">Dir C:/Programming/AGE2D/Engine/src/AGE/Animation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_910dbe77797081a1ec62d5e5934a1ea3/">Dir C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_933cf9cfa8f6f567c0c937ed7947c49a/">Dir C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Private</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_9538c177d856a6b0b9437f7654347dcb/">Dir C:/Programming/AGE2D/Engine/src/AGE/Debug/Public</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_9576cf7c9b0a5dda772cf319e85b06c8/">Dir C:/Programming/AGE2D/Engine/src/AGE/Platform/Windows/Private</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_96a63935d9c02bd5b354fceca833f378/">Dir C:/Programming/AGE2D</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_98f921a13af52dba16d3bd4307347abb/">Dir C:/Programming/AGE2D/Engine/src/AGE/Sprite</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_9ab3bcaf0d7053ec28a49e38e0ade647/">Dir C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_9eeb78397e8c811af21fbedd96e00b13/">Dir C:/Programming/AGE2D/Engine/src/AGE/ImGui/Private</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_a31ff9fc92a36f7595d0df93b3c5b403/">Dir C:/Programming/AGE2D/Engine/src/AGE/Assets/Private</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_a438aafc2e27dbbe3fd36f356828f8b2/">Dir C:/Programming/AGE2D/Engine/src/AGE/Audio/Fmod/Public</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_a6a7e1bcefbf82083808690bf10dad71/">Dir C:/Programming/AGE2D/Engine/src/AGE/Events</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_a866405b558aa1010ea9be3d43cddbd1/">Dir C:/Programming/AGE2D/Engine/src/AGE/Assets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_aa1a9f4b85cc4e4a5149e0c99c6c45ae/">Dir C:/Programming/AGE2D/Engine/src/AGE/Physics/Private</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_ab58b75a9fdf1f9c9e88a8aeb7e0f54d/">Dir C:/Programming/AGE2D/Engine/src/AGE/Platform/Microsoft/XInput/Public</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_b2379784e2c191aed75bb712ef5fa396/">Dir C:/Programming/AGE2D/Engine/src/AGE/Video/Public</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_b6d36cbe7cece00bba2ed07d91688c2d/">Dir C:/Programming/AGE2D/Engine/src/AGE/Platform/Microsoft/XInput</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_b9d50061ecaa34aafe5e7c2ebce34886/">Dir C:/Programming/AGE2D/Engine/src/AGE/Parser/Public</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_bbcaccd2ebf854d946ef48cf893462c8/">Dir C:/Programming/AGE2D/Engine</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_be586839b90880a6e3d62d2138e7c26d/">Dir C:/Programming/AGE2D/Engine/src/AGE/TileMap</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_beb370da822bf0b51577351bd056b4ca/">Dir C:/Programming/AGE2D/Engine/src/AGE/Texture/Private</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_bf2ed8d341b54e9ac186cdc667978d77/">Dir C:/Programming/AGE2D/Engine/src/AGE/Render</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_bf6a2ae4f421b3e627c8671719c9dbdd/">Dir C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_c1649042ac9dcb65c6181568c305ecb0/">Dir C:/Programming/AGE2D/Engine/src/AGE</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_c71f946845db44b77b26d47f3af3494b/">Dir C:/Programming/AGE2D/Engine/src/AGE/UI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_cfd00de794dd1ed8222abd394c7815b4/">Dir C:/Programming/AGE2D/Engine/src/AGE/Audio/Fmod</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_d4dd9819148636cc4517517cf4fc8cc8/">Dir C:/Programming/AGE2D/Engine/src/AGE/ImGui/Public</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_d528b01f70691c7616a4a405aea46335/">Dir C:/Programming/AGE2D/Engine/src/AGE/Camera/Public</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_d5e6827e04ca3e5dc26c1a2d53d43bf9/">Dir C:/Programming/AGE2D/Engine/src/AGE/Particles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_d65e1b3fe96e0227a21781a1e5bc67b7/">Dir C:/Programming/AGE2D/Engine/src/AGE/Core/Private</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_da409af63540810d65578dc2200e9eaa/">Dir C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_db6938f1ff25f5ebd4fcc50cd8804f79/">Dir C:/Programming/AGE2D/Engine/src/AGE/Audio</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_dbe9016e27a2d1b5638df2a26c03642e/">Dir C:/Programming/AGE2D/Engine/src/AGE/RNG</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_de24c6887d7bea99649d1ef2e929b7b9/">Dir C:/Programming/AGE2D/Engine/src/AGE/Particles/Public</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_de3a4886f3cd637e1fda08fe9ad79a10/">Dir C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_e7ed31bfebfd0e8384b3a8db9e279ec1/">Dir C:/Programming/AGE2D/Engine/src/AGE/Animation/Private</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_e8b69b5737a5bdbffd9e44518451477a/">Dir C:/Programming/AGE2D/Engine/src/AGE/Video/Private</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_e8b8bc6c8f57f68d4cd177cc71b48fb4/">Dir C:/Programming/AGE2D/Engine/src/AGE/UI/Components</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_ea32d5a6b44ca038dc6c67f0bb71548f/">Dir C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_ebb7378fee88e7e575044fff67f59924/">Dir C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_ec26f5e2e3b4d07fbb894a640522da88/">Dir C:/Programming/AGE2D/Engine/src/AGE/Serializers/Private</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_f02d8c73f2f37e5e80bb760b434406e3/">Dir C:/Programming/AGE2D/Engine/src/AGE/Texture/Public</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_f319587f04f95a4a2d227b307381fcad/">Dir C:/Programming/AGE2D/Engine/src/AGE/Debug</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_f497c0b3423baf2d47b224513c34c3e7/">Dir C:/Programming/AGE2D/Engine/src/AGE/Platform/Linux</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_f59ccc9a72ae3438d04a374096905b1a/">Dir C:/Programming/AGE2D/Engine/src/AGE/Structs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_fa5d7c06fd339e78ef99ea94da2e8bec/">Dir C:/Programming/AGE2D/Engine/src/AGE/Sprite/Private</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_fb54e21640a292d6294e6bc8d6d36acc/">Dir C:/Programming/AGE2D/Engine/src/AGE/Scene/Public</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_ff4d5bef13384759f34d48716f323261/">Dir C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../files/">File List</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../functions/">Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../hierarchy/">Class Hierarchy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../imgui__impl__opengl3__loader_8h/">File imgui_impl_opengl3_loader.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../imgui__impl__opengl3__loader_8h_source/">File imgui_impl_opengl3_loader.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../links/">Links</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../macros/">Macros</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../modules/">Modules</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../namespace_a_g_e/">Namespace AGE</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../namespace_a_g_e_1_1_binding/">Namespace AGE::Binding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../namespace_a_g_e_1_1_colors/">Namespace AGE::Colors</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../namespace_a_g_e_1_1_core_logger/">Namespace AGE::CoreLogger</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../namespace_a_g_e_1_1_game_logger/">Namespace AGE::GameLogger</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../namespace_a_g_e_1_1_game_pad/">Namespace AGE::GamePad</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../namespace_a_g_e_1_1_instrumentor_utils/">Namespace AGE::InstrumentorUtils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../namespace_a_g_e_1_1_key/">Namespace AGE::Key</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../namespace_a_g_e_1_1_key_state/">Namespace AGE::KeyState</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../namespace_a_g_e_1_1_mouse/">Namespace AGE::Mouse</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../namespace_a_g_e_1_1_utils/">Namespace AGE::Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../namespace_a_k/">Namespace AK</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../namespace_a_k_1_1_a_u_d_i_o___d_e_v_i_c_e_s/">Namespace AK::AUDIO_DEVICES</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../namespace_a_k_1_1_b_a_n_k_s/">Namespace AK::BANKS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../namespace_a_k_1_1_b_u_s_s_e_s/">Namespace AK::BUSSES</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../namespace_a_k_1_1_e_v_e_n_t_s/">Namespace AK::EVENTS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../namespace_a_k_1_1_g_a_m_e___p_a_r_a_m_e_t_e_r_s/">Namespace AK::GAME_PARAMETERS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../namespace_game_framework/">Namespace GameFramework</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../namespace_member_enums/">Namespace Member Enums</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../namespace_member_functions/">Namespace Member Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../namespace_member_typedefs/">Namespace Member Typedefs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../namespace_member_variables/">Namespace Member Variables</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../namespace_members/">Namespace Members</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../namespace_y_a_m_l/">Namespace YAML</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../namespaces/">Namespace List</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../namespacestd/">Namespace std</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pages/">Related Pages</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stb__image_8cpp/">File stb_image.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stb__image_8cpp_source/">File stb_image.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1__constant_buffer_struct/">Struct AGE::_constantBufferStruct</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1__constant_buffer_struct2_d/">Struct AGE::_constantBufferStruct2D</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1__vertex_position_color/">Struct AGE::_vertexPositionColor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1__vertex_position_color_tangent/">Struct AGE::_vertexPositionColorTangent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_a_g_e_function/">Struct AGE::AGEFunction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_a_g_e_node/">Struct AGE::AGENode</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_a_g_e_node_link/">Struct AGE::AGENodeLink</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_a_g_e_pin/">Struct AGE::AGEPin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_a_g_e_pixel/">Struct AGE::AGEPixel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_a_g_e_point/">Struct AGE::AGEPoint</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_a_g_e_rect/">Struct AGE::AGERect</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_a_g_e_size/">Struct AGE::AGESize</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_animation_specification/">Struct AGE::AnimationSpecification</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_app_config/">Struct AGE::AppConfig</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_application_command_line_args/">Struct AGE::ApplicationCommandLineArgs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_aseprite_cel_chunk/">Struct AGE::AsepriteCelChunk</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_aseprite_chunk/">Struct AGE::AsepriteChunk</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_aseprite_color_profile_chunk/">Struct AGE::AsepriteColorProfileChunk</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_aseprite_external_file_entry/">Struct AGE::AsepriteExternalFileEntry</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_aseprite_external_files_chunk/">Struct AGE::AsepriteExternalFilesChunk</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_aseprite_file_data/">Struct AGE::AsepriteFileData</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_aseprite_frame_data/">Struct AGE::AsepriteFrameData</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_aseprite_header/">Struct AGE::AsepriteHeader</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_aseprite_layer/">Struct AGE::AsepriteLayer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_aseprite_mask_chunk/">Struct AGE::AsepriteMaskChunk</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_aseprite_old_palette_chunk/">Struct AGE::AsepriteOldPaletteChunk</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_aseprite_palette_chunk/">Struct AGE::AsepritePaletteChunk</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_aseprite_pixel_data/">Struct AGE::AsepritePixelData</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_aseprite_property_data/">Struct AGE::AsepritePropertyData</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_aseprite_slice_chunk/">Struct AGE::AsepriteSliceChunk</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_aseprite_slice_key/">Struct AGE::AsepriteSliceKey</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_aseprite_tag/">Struct AGE::AsepriteTag</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_aseprite_tags_chunk/">Struct AGE::AsepriteTagsChunk</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_aseprite_user_data/">Struct AGE::AsepriteUserData</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_aseprite_user_props/">Struct AGE::AsepriteUserProps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_aseprite_variant/">Struct AGE::AsepriteVariant</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_asset_registry/">Struct AGE::AssetRegistry</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_audio_component/">Struct AGE::AudioComponent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_box2_d_query_context/">Struct AGE::Box2DQueryContext</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_box_collider2_d_component/">Struct AGE::BoxCollider2DComponent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_box_component/">Struct AGE::BoxComponent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_box_properties/">Struct AGE::BoxProperties</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_buffer/">Struct AGE::Buffer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_buffer_element/">Struct AGE::BufferElement</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_camera_component/">Struct AGE::CameraComponent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_capsule_collider2_d_component/">Struct AGE::CapsuleCollider2DComponent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_circle_properties/">Struct AGE::CircleProperties</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_circle_renderer_component/">Struct AGE::CircleRendererComponent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_circle_vertex/">Struct AGE::CircleVertex</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_colors_1_1_color/">Struct AGE::Colors::Color</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_frame_buffer_specification/">Struct AGE::FrameBufferSpecification</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_framebuffer_attachment_specification/">Struct AGE::FramebufferAttachmentSpecification</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_framebuffer_texture_specification/">Struct AGE::FramebufferTextureSpecification</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_gamepad_input_binding/">Struct AGE::GamepadInputBinding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_i_d_component/">Struct AGE::IDComponent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_image_specification/">Struct AGE::ImageSpecification</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_input_binding/">Struct AGE::InputBinding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_instrumentation_session/">Struct AGE::InstrumentationSession</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_instrumentor_utils_1_1_change_result/">Struct AGE::InstrumentorUtils::ChangeResult</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_invalid_input_binding__t/">Struct AGE::InvalidInputBinding_t</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_k_b_m_input_binding/">Struct AGE::KBMInputBinding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_line/">Struct AGE::Line</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_line_properties/">Struct AGE::LineProperties</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_line_vertex/">Struct AGE::LineVertex</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_m_s_d_f_data/">Struct AGE::MSDFData</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_matrix2_d/">Struct AGE::Matrix2D</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_matrix3_d/">Struct AGE::Matrix3D</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_matrix4_d/">Struct AGE::Matrix4D</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_movement_component/">Struct AGE::MovementComponent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_native_script_component/">Struct AGE::NativeScriptComponent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_node_arguments/">Struct AGE::NodeArguments</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_node_id_less/">Struct AGE::NodeIdLess</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_particle_props/">Struct AGE::ParticleProps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_particle_system_1_1_particle/">Struct AGE::ParticleSystem::Particle</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_plane/">Struct AGE::Plane</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_point3_d/">Struct AGE::Point3D</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_profile_result/">Struct AGE::ProfileResult</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_project_config/">Struct AGE::ProjectConfig</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_project_info/">Struct AGE::ProjectInfo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_quad_properties/">Struct AGE::QuadProperties</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_quaternion/">Struct AGE::Quaternion</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_query_params/">Struct AGE::QueryParams</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_renderer2_d_data/">Struct AGE::Renderer2DData</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_renderer2_d_data_1_1_camera_data/">Struct AGE::Renderer2DData::CameraData</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_renderer2_d_data_1_1_tex_coord_data/">Struct AGE::Renderer2DData::TexCoordData</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_renderer_1_1_scene_data/">Struct AGE::Renderer::SceneData</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_rigid_body2_d_component/">Struct AGE::RigidBody2DComponent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_scene_info/">Struct AGE::SceneInfo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_screen_resolution/">Struct AGE::ScreenResolution</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_segment_collider2_d_component/">Struct AGE::SegmentCollider2DComponent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_sprite_renderer_component/">Struct AGE::SpriteRendererComponent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_statistics/">Struct AGE::Statistics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_string_properties/">Struct AGE::StringProperties</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_tag_component/">Struct AGE::TagComponent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_text_vertex/">Struct AGE::TextVertex</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_texture_specification/">Struct AGE::TextureSpecification</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_tile_map_renderer_component/">Struct AGE::TileMapRendererComponent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_tilemap_properties/">Struct AGE::TilemapProperties</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_tilemap_vertex/">Struct AGE::TilemapVertex</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_tileset_data/">Struct AGE::TilesetData</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_transform4_d/">Struct AGE::Transform4D</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_transform_component/">Struct AGE::TransformComponent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_u_i_component_type/">Struct AGE::UIComponentType</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_u_i_properties/">Struct AGE::UIProperties</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_u_i_visitor/">Struct AGE::UIVisitor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_uniform_buffer_obj/">Struct AGE::UniformBufferObj</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_vector2/">Struct AGE::Vector2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_vector3/">Struct AGE::Vector3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_vector4/">Struct AGE::Vector4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_vertex/">Struct AGE::Vertex</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_widget/">Struct AGE::Widget</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1_window_props/">Struct AGE::WindowProps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_a_g_e_1_1float16/">Struct AGE::float16</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_y_a_m_l_1_1convert_3_01_a_g_e_1_1_animation_specification_01_4/">Struct YAML::convert&lt; AGE::AnimationSpecification &gt;</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_y_a_m_l_1_1convert_3_01_a_g_e_1_1_ref_3_01_a_g_e_1_1_audio_source_01_4_01_4/">Struct YAML::convert&lt; AGE::Ref&lt; AGE::AudioSource &gt; &gt;</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_y_a_m_l_1_1convert_3_01_a_g_e_1_1_ref_3_01_a_g_e_1_1_texture2_d_01_4_01_4/">Struct YAML::convert&lt; AGE::Ref&lt; AGE::Texture2D &gt; &gt;</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_y_a_m_l_1_1convert_3_01_a_g_e_1_1_vector2_01_4/">Struct YAML::convert&lt; AGE::Vector2 &gt;</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_y_a_m_l_1_1convert_3_01_a_g_e_1_1_vector3_01_4/">Struct YAML::convert&lt; AGE::Vector3 &gt;</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_y_a_m_l_1_1convert_3_01_a_g_e_1_1_vector4_01_4/">Struct YAML::convert&lt; AGE::Vector4 &gt;</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_y_a_m_l_1_1convert_3_01std_1_1vector_3_01std_1_1pair_3_01std_1_1string_00_01std_1_1vector45b2d12052d054c4e49c457374d38f08/">Struct YAML::convert&lt; std::vector&lt; std::pair&lt; std::string, std::vector&lt; uint8_t &gt; &gt; &gt; &gt;</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../struct_y_a_m_l_1_1convert_3_01std_1_1vector_3_01uint8__t_01_4_01_4/">Struct YAML::convert&lt; std::vector&lt; uint8_t &gt; &gt;</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../structstd_1_1hash_3_01_a_g_e_1_1_u_u_i_d_01_4/">Struct std::hash&lt; AGE::UUID &gt;</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../union_im_g_l3_w_procs/">Union ImGL3WProcs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../variables/">Variables</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">AGE2D Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Age2ddocs</li>
+      <li class="breadcrumb-item active">File Renderer2D.h</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="file-renderer2dh">File Renderer2D.h</h1>
+<p><a href="../files/"><strong>File List</strong></a> <strong>&gt;</strong> <a href="../dir_c1649042ac9dcb65c6181568c305ecb0/"><strong>AGE</strong></a> <strong>&gt;</strong> <a href="../dir_bf2ed8d341b54e9ac186cdc667978d77/"><strong>Render</strong></a> <strong>&gt;</strong> <a href="../dir_68ba7e1260de504efb39109a85960357/"><strong>Public</strong></a> <strong>&gt;</strong> <a href="../_renderer2_d_8h/"><strong>Renderer2D.h</strong></a></p>
+<p><a href="../_renderer2_d_8h/">Go to the documentation of this file</a></p>
+<pre><code class="language-C++">#pragma once
+#include &quot;Camera/Public/Camera.h&quot;
+#include &quot;Camera/Public/EditorCamera.h&quot;
+#include &quot;Render/Public/RenderAPI.h&quot;
+#include &quot;Scene//Public/Components.h&quot;
+#include &quot;Texture/Public/Texture.h&quot;
+#include &quot;Texture/Public/SubTexture.h&quot;
+#include &quot;Render/Public/Font.h&quot;
+
+
+namespace AGE
+{
+    class Renderer2D
+    {
+    public:
+
+        static void Init();
+
+        static void Shutdown();
+
+        static void BeginScene(const Camera&amp; Camera,  const Matrix4D&amp; Transform);
+        static void BeginScene(const EditorCamera&amp; Camera);
+
+        static void EndScene();
+
+        static void Flush();
+
+        //Primitives
+
+        //Quads
+        static void DrawQuad(const QuadProperties&amp; Props);
+        static void DrawQuad(const Ref&lt;Texture2D&gt;&amp; Texture, const QuadProperties&amp; Props);
+        static void DrawQuad(const Ref&lt;SubTexture2D&gt;&amp; Subtexture, const QuadProperties&amp; Props);
+
+        //Circles
+        static void DrawCircle(const Matrix4D&amp; Transform, const Vector4&amp; Color, float Thickness = 1.f, float Fade = .005f, int EntityID = -1);
+
+        static void DrawLine(const Vector3&amp; Pos0, const Vector3&amp; Pos1, const Vector4&amp; Color, int EntityID = -1);
+        static void DrawRect(const Vector3&amp; Position, const Vector2&amp; Size, const Vector4&amp; Color, int EntityID = -1);
+        static void DrawRect(const Matrix4D&amp; Transform, const Vector4&amp; Color, int EntityID = -1);
+
+        static void DrawSprite(SpriteRendererComponent&amp; SRC);
+        static void DrawString(const StringProperties&amp; Props);
+
+        static void DrawTileMap(const Ref&lt;Tilemap&gt;&amp; Map, const TilemapProperties&amp; Props);
+
+        static Statistics GetStats();
+
+        static float GetLineWidth();
+        static void SetLineWidth(float Width);
+
+    private:
+        friend class AGEVideo;
+    };
+}
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../_renderer2_d_8h/" class="btn btn-neutral float-left" title="File Renderer2D.h"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../_renderer_8cpp/" class="btn btn-neutral float-right" title="File Renderer.cpp">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../_renderer2_d_8h/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../_renderer_8cpp/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

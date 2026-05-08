@@ -1,0 +1,102 @@
+
+
+# File TextComponent.h
+
+[**File List**](files.md) **>** [**AGE**](dir_c1649042ac9dcb65c6181568c305ecb0.md) **>** [**UI**](dir_c71f946845db44b77b26d47f3af3494b.md) **>** [**Components**](dir_e8b8bc6c8f57f68d4cd177cc71b48fb4.md) **>** [**Public**](dir_5c113c7ed6e7034142773ced1bfb6a62.md) **>** [**TextComponent.h**](_text_component_8h.md)
+
+[Go to the documentation of this file](_text_component_8h.md)
+
+
+```C++
+//
+// Created by gdmgp on 12/5/2025.
+//
+
+#ifndef AGE2D_TEXTCOMPONENT_H
+#define AGE2D_TEXTCOMPONENT_H
+#pragma once
+#include "Core/Public/Core.h"
+#include "Render/Public/Font.h"
+#include "Serializers/Public/DataWriter.h"
+#include "Serializers/Public/DataReader.h"
+#ifdef __clang__
+#pragma clang diagnostic push
+#ifdef AG_PLATFORM_LINUX
+#pragma clang diagnostic ignored "-Wnontrivial-memcall"
+#endif
+#include <imgui.h>
+#pragma clang diagnostic pop
+#endif
+
+#include "UI/Public/UiComponent.h"
+
+
+namespace AGE
+{
+    class TextComponent : public UIComponent
+    {
+    public:
+        TextComponent(const std::string& Name);
+        StringProperties m_StringProperties;
+        void OnUpdate(TimeStep DeltaTime) override;
+        void OnEvent(Event& Event) override;
+        void CallSerialize(DataWriter* Serializer) override
+        {
+            Serializer->WriteObject<TextComponent>(*this);
+        }
+        void CallDeserialize(DataReader* Serializer) override
+        {
+            Serializer->ReadObject<TextComponent>(*this);
+        }
+        void DrawFontSelectionComboBox() override;
+        void DrawContent() override;
+
+        static void Serialize(DataWriter* Serializer, const TextComponent& Instance)
+        {
+            Serializer->WriteString(Instance.m_Name);
+            Serializer->WriteRaw<uint16_t>(Instance.m_Type);
+            Serializer->WriteString(Instance.m_StringProperties.Text);
+            Serializer->WriteString(Instance.m_StringProperties.FontName);
+            Serializer->WriteRaw<float>(Instance.m_StringProperties.Color.x);
+            Serializer->WriteRaw<float>(Instance.m_StringProperties.Color.y);
+            Serializer->WriteRaw<float>(Instance.m_StringProperties.Color.z);
+            Serializer->WriteRaw<float>(Instance.m_StringProperties.Color.w);
+            Serializer->WriteRaw<double>(Instance.m_StringProperties.FontSize);
+            Serializer->WriteRaw<float>(Instance.m_StringProperties.Position.x);
+            Serializer->WriteRaw<float>(Instance.m_StringProperties.Position.y);
+            Serializer->WriteRaw<float>(Instance.m_StringProperties.Position.z);
+            Serializer->WriteRaw<float>(Instance.m_StringProperties.Rotation.x);
+            Serializer->WriteRaw<float>(Instance.m_StringProperties.Rotation.y);
+            Serializer->WriteRaw<float>(Instance.m_StringProperties.Rotation.z);
+        }
+
+        static void Deserialize(DataReader* Serializer, TextComponent& Instance)
+        {
+            Serializer->ReadString(Instance.m_Name);
+            uint16_t Type;
+            Serializer->ReadRaw<uint16_t>(Type);
+            Instance.m_Type = (UIComponentType::Value)Type;
+            Serializer->ReadString(Instance.m_StringProperties.Text);
+            Serializer->ReadString(Instance.m_StringProperties.FontName);
+            Serializer->ReadRaw<float>(Instance.m_StringProperties.Color.x);
+            Serializer->ReadRaw<float>(Instance.m_StringProperties.Color.y);
+            Serializer->ReadRaw<float>(Instance.m_StringProperties.Color.z);
+            Serializer->ReadRaw<float>(Instance.m_StringProperties.Color.w);
+            Serializer->ReadRaw<double>(Instance.m_StringProperties.FontSize);
+            Serializer->ReadRaw<float>(Instance.m_StringProperties.Position.x);
+            Serializer->ReadRaw<float>(Instance.m_StringProperties.Position.y);
+            Serializer->ReadRaw<float>(Instance.m_StringProperties.Position.z);
+            Serializer->ReadRaw<float>(Instance.m_StringProperties.Rotation.x);
+            Serializer->ReadRaw<float>(Instance.m_StringProperties.Rotation.y);
+            Serializer->ReadRaw<float>(Instance.m_StringProperties.Rotation.z);
+        }
+
+        RTTR_ENABLE(UIComponent)
+        RTTR_REGISTRATION_FRIEND
+    };
+} // AGE
+
+#endif //AGE2D_TEXTCOMPONENT_H
+```
+
+

@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_a_g_e_1_1_f_b_x_parser" kind="class" language="C++" prot="public">
+    <compoundname>AGE::FBXParser</compoundname>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_a_g_e_1_1_f_b_x_parser_1a5261a4a9715c4371af51fcc831977e6e" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_a_g_e_1_1_f_b_x_parser" kindref="compound">FBXParser</ref> *</type>
+        <definition>FBXParser * AGE::FBXParser::s_Instance</definition>
+        <argsstring></argsstring>
+        <name>s_Instance</name>
+        <qualifiedname>AGE::FBXParser::s_Instance</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/FbxParser.h" line="28" column="18" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/FbxParser.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_f_b_x_parser_1a9664b62f9d0173d0da02b07d58b15a4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AGE::FBXParser::FBXParser</definition>
+        <argsstring>()=default</argsstring>
+        <name>FBXParser</name>
+        <qualifiedname>AGE::FBXParser::FBXParser</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/FbxParser.h" line="12" column="1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_f_b_x_parser_1ac7457381bc88fc04d06b00750e59ddb4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_a_g_e_1_1_f_b_x_parser" kindref="compound">FBXParser</ref> &amp;</type>
+        <definition>static FBXParser &amp; AGE::FBXParser::Get</definition>
+        <argsstring>()</argsstring>
+        <name>Get</name>
+        <qualifiedname>AGE::FBXParser::Get</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/FbxParser.h" line="14" column="18" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/FbxParser.h" bodystart="14" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_f_b_x_parser_1a245478494ad2b6cb1042d4d1a7a5580b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ufbx_scene *</type>
+        <definition>ufbx_scene * AGE::FBXParser::LoadFile</definition>
+        <argsstring>(const std::filesystem::path &amp;Path)</argsstring>
+        <name>LoadFile</name>
+        <qualifiedname>AGE::FBXParser::LoadFile</qualifiedname>
+        <param>
+          <type>const std::filesystem::path &amp;</type>
+          <declname>Path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/FbxParser.h" line="23" column="19" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Parser/Private/FbxParser.cpp" bodystart="12" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_f_b_x_parser_1a5db8dae3e66ba599968e7ae10f5bb961" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::FBXParser::FreeScene</definition>
+        <argsstring>(ufbx_scene *scene)</argsstring>
+        <name>FreeScene</name>
+        <qualifiedname>AGE::FBXParser::FreeScene</qualifiedname>
+        <param>
+          <type>ufbx_scene *</type>
+          <declname>scene</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/FbxParser.h" line="25" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Parser/Private/FbxParser.cpp" bodystart="32" bodyend="35"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/FbxParser.h" line="9" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/FbxParser.h" bodystart="10" bodyend="29"/>
+    <listofallmembers>
+      <member refid="class_a_g_e_1_1_f_b_x_parser_1a9664b62f9d0173d0da02b07d58b15a4f" prot="public" virt="non-virtual"><scope>AGE::FBXParser</scope><name>FBXParser</name></member>
+      <member refid="class_a_g_e_1_1_f_b_x_parser_1a5db8dae3e66ba599968e7ae10f5bb961" prot="public" virt="non-virtual"><scope>AGE::FBXParser</scope><name>FreeScene</name></member>
+      <member refid="class_a_g_e_1_1_f_b_x_parser_1ac7457381bc88fc04d06b00750e59ddb4" prot="public" virt="non-virtual"><scope>AGE::FBXParser</scope><name>Get</name></member>
+      <member refid="class_a_g_e_1_1_f_b_x_parser_1a245478494ad2b6cb1042d4d1a7a5580b" prot="public" virt="non-virtual"><scope>AGE::FBXParser</scope><name>LoadFile</name></member>
+      <member refid="class_a_g_e_1_1_f_b_x_parser_1a5261a4a9715c4371af51fcc831977e6e" prot="private" virt="non-virtual"><scope>AGE::FBXParser</scope><name>s_Instance</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,370 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_a_g_e_1_1_event" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>AGE::Event</compoundname>
+    <derivedcompoundref refid="class_a_g_e_1_1_app_render_event" prot="public" virt="non-virtual">AGE::AppRenderEvent</derivedcompoundref>
+    <derivedcompoundref refid="class_a_g_e_1_1_app_tick_event" prot="public" virt="non-virtual">AGE::AppTickEvent</derivedcompoundref>
+    <derivedcompoundref refid="class_a_g_e_1_1_app_update_event" prot="public" virt="non-virtual">AGE::AppUpdateEvent</derivedcompoundref>
+    <derivedcompoundref refid="class_a_g_e_1_1_framebuffer_resize_event" prot="public" virt="non-virtual">AGE::FramebufferResizeEvent</derivedcompoundref>
+    <derivedcompoundref refid="class_a_g_e_1_1_input_event" prot="public" virt="non-virtual">AGE::InputEvent</derivedcompoundref>
+    <derivedcompoundref refid="class_a_g_e_1_1_key_event" prot="public" virt="non-virtual">AGE::KeyEvent</derivedcompoundref>
+    <derivedcompoundref refid="class_a_g_e_1_1_mouse_event" prot="public" virt="non-virtual">AGE::MouseEvent</derivedcompoundref>
+    <derivedcompoundref refid="class_a_g_e_1_1_project_created_event" prot="public" virt="non-virtual">AGE::ProjectCreatedEvent</derivedcompoundref>
+    <derivedcompoundref refid="class_a_g_e_1_1_project_loaded_event" prot="public" virt="non-virtual">AGE::ProjectLoadedEvent</derivedcompoundref>
+    <derivedcompoundref refid="class_a_g_e_1_1_render_u_i_event" prot="public" virt="non-virtual">AGE::RenderUIEvent</derivedcompoundref>
+    <derivedcompoundref refid="class_a_g_e_1_1_renderer_change_event" prot="public" virt="non-virtual">AGE::RendererChangeEvent</derivedcompoundref>
+    <derivedcompoundref refid="class_a_g_e_1_1_scene_event" prot="public" virt="non-virtual">AGE::SceneEvent</derivedcompoundref>
+    <derivedcompoundref refid="class_a_g_e_1_1_string_copy_event" prot="public" virt="non-virtual">AGE::StringCopyEvent</derivedcompoundref>
+    <derivedcompoundref refid="class_a_g_e_1_1_string_paste_event" prot="public" virt="non-virtual">AGE::StringPasteEvent</derivedcompoundref>
+    <derivedcompoundref refid="class_a_g_e_1_1_widget_activated_event" prot="public" virt="non-virtual">AGE::WidgetActivatedEvent</derivedcompoundref>
+    <derivedcompoundref refid="class_a_g_e_1_1_widget_constructed_event" prot="public" virt="non-virtual">AGE::WidgetConstructedEvent</derivedcompoundref>
+    <derivedcompoundref refid="class_a_g_e_1_1_widget_deactivated_event" prot="public" virt="non-virtual">AGE::WidgetDeactivatedEvent</derivedcompoundref>
+    <derivedcompoundref refid="class_a_g_e_1_1_window_close_event" prot="public" virt="non-virtual">AGE::WindowCloseEvent</derivedcompoundref>
+    <derivedcompoundref refid="class_a_g_e_1_1_window_focus_event" prot="public" virt="non-virtual">AGE::WindowFocusEvent</derivedcompoundref>
+    <derivedcompoundref refid="class_a_g_e_1_1_window_lost_focus_event" prot="public" virt="non-virtual">AGE::WindowLostFocusEvent</derivedcompoundref>
+    <derivedcompoundref refid="class_a_g_e_1_1_window_moved_event" prot="public" virt="non-virtual">AGE::WindowMovedEvent</derivedcompoundref>
+    <derivedcompoundref refid="class_a_g_e_1_1_window_resize_event" prot="public" virt="non-virtual">AGE::WindowResizeEvent</derivedcompoundref>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_a_g_e_1_1_event_1aad5f38ccd490ea17008460423f52325a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class EventDispatcher</definition>
+        <argsstring></argsstring>
+        <name>EventDispatcher</name>
+        <qualifiedname>AGE::Event::EventDispatcher</qualifiedname>
+        <param>
+          <type><ref refid="class_a_g_e_1_1_event_dispatcher" kindref="compound">EventDispatcher</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" line="53" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_a_g_e_1_1_event_1a552035a536a86cc331bfa8dd5da80197" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool AGE::Event::Handled</definition>
+        <argsstring></argsstring>
+        <name>Handled</name>
+        <qualifiedname>AGE::Event::Handled</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" line="66" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_event_1a4cfb95332801a921e9449a03a34b87b0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>EventType</type>
+        <definition>virtual EventType AGE::Event::GetEventType</definition>
+        <argsstring>() const =0</argsstring>
+        <name>GetEventType</name>
+        <qualifiedname>AGE::Event::GetEventType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" line="55" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_event_1a007332c35050a5561feaf2c40c917290" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>const char *</type>
+        <definition>virtual const char * AGE::Event::GetName</definition>
+        <argsstring>() const =0</argsstring>
+        <name>GetName</name>
+        <qualifiedname>AGE::Event::GetName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" line="56" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_event_1ae76fb834a0ee69601539da677f1333fa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int AGE::Event::GetCategoryFlags</definition>
+        <argsstring>() const =0</argsstring>
+        <name>GetCategoryFlags</name>
+        <qualifiedname>AGE::Event::GetCategoryFlags</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" line="57" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_event_1abb5a1a933883fb8fb99999523e8805a8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::string</type>
+        <definition>virtual std::string AGE::Event::ToString</definition>
+        <argsstring>() const</argsstring>
+        <name>ToString</name>
+        <qualifiedname>AGE::Event::ToString</qualifiedname>
+        <reimplementedby refid="class_a_g_e_1_1_framebuffer_resize_event_1a3d12cebeaa44d726711813c90983c663">ToString</reimplementedby>
+        <reimplementedby refid="class_a_g_e_1_1_key_pressed_event_1a9dad6f758de6048aaa587c1bbedca5d5">ToString</reimplementedby>
+        <reimplementedby refid="class_a_g_e_1_1_key_released_event_1a36e8528ecca94de1cc09c34367705c7f">ToString</reimplementedby>
+        <reimplementedby refid="class_a_g_e_1_1_key_typed_event_1a54a808dbe8ff99bcae1a92df92649e98">ToString</reimplementedby>
+        <reimplementedby refid="class_a_g_e_1_1_mouse_button_pressed_event_1a1cd66b5286754d6e1d871d0737bc8044">ToString</reimplementedby>
+        <reimplementedby refid="class_a_g_e_1_1_mouse_button_released_event_1ae7e7d5909e8ef69560a24ab7018e8410">ToString</reimplementedby>
+        <reimplementedby refid="class_a_g_e_1_1_mouse_moved_event_1a235b79cc3aedde4038eb28c646ad24af">ToString</reimplementedby>
+        <reimplementedby refid="class_a_g_e_1_1_mouse_scrolled_event_1a077e9d497c299cdfc18b62d668f48530">ToString</reimplementedby>
+        <reimplementedby refid="class_a_g_e_1_1_renderer_change_event_1a5074e28ef2e61c9e8c8b3f23435213eb">ToString</reimplementedby>
+        <reimplementedby refid="class_a_g_e_1_1_string_copy_event_1a7c90aafe37b12f977e723c7dbd8e6886">ToString</reimplementedby>
+        <reimplementedby refid="class_a_g_e_1_1_string_paste_event_1a7fab025e6572b4e213dbfeabe29bc64c">ToString</reimplementedby>
+        <reimplementedby refid="class_a_g_e_1_1_window_resize_event_1a3b28b1c4e34e5b6b41ffce7d5f8e87cd">ToString</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" line="58" column="21" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" bodystart="58" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_event_1afb010977c2bb1113d2af91d95c70ecab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AGE::Event::IsInCategory</definition>
+        <argsstring>(EventCategory Category)</argsstring>
+        <name>IsInCategory</name>
+        <qualifiedname>AGE::Event::IsInCategory</qualifiedname>
+        <param>
+          <type>EventCategory</type>
+          <declname>Category</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" line="60" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" bodystart="60" bodyend="63"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>AGE::AppRenderEvent</label>
+        <link refid="class_a_g_e_1_1_app_render_event"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>AGE::AppTickEvent</label>
+        <link refid="class_a_g_e_1_1_app_tick_event"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>AGE::AppUpdateEvent</label>
+        <link refid="class_a_g_e_1_1_app_update_event"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>AGE::AxisEvent</label>
+        <link refid="class_a_g_e_1_1_axis_event"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>AGE::Event</label>
+        <link refid="class_a_g_e_1_1_event"/>
+      </node>
+      <node id="5">
+        <label>AGE::FramebufferResizeEvent</label>
+        <link refid="class_a_g_e_1_1_framebuffer_resize_event"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>AGE::GamepadButtonPressedEvent</label>
+        <link refid="class_a_g_e_1_1_gamepad_button_pressed_event"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>AGE::GamepadButtonReleasedEvent</label>
+        <link refid="class_a_g_e_1_1_gamepad_button_released_event"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>AGE::InputEvent</label>
+        <link refid="class_a_g_e_1_1_input_event"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>AGE::KeyEvent</label>
+        <link refid="class_a_g_e_1_1_key_event"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>AGE::KeyPressedEvent</label>
+        <link refid="class_a_g_e_1_1_key_pressed_event"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>AGE::KeyReleasedEvent</label>
+        <link refid="class_a_g_e_1_1_key_released_event"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>AGE::KeyTypedEvent</label>
+        <link refid="class_a_g_e_1_1_key_typed_event"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>AGE::MouseButtonPressedEvent</label>
+        <link refid="class_a_g_e_1_1_mouse_button_pressed_event"/>
+        <childnode refid="14" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>AGE::MouseButtonReleasedEvent</label>
+        <link refid="class_a_g_e_1_1_mouse_button_released_event"/>
+        <childnode refid="14" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>AGE::MouseEvent</label>
+        <link refid="class_a_g_e_1_1_mouse_event"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>AGE::MouseMovedEvent</label>
+        <link refid="class_a_g_e_1_1_mouse_moved_event"/>
+        <childnode refid="14" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>AGE::MouseScrolledEvent</label>
+        <link refid="class_a_g_e_1_1_mouse_scrolled_event"/>
+        <childnode refid="14" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>AGE::ProjectCreatedEvent</label>
+        <link refid="class_a_g_e_1_1_project_created_event"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>AGE::ProjectLoadedEvent</label>
+        <link refid="class_a_g_e_1_1_project_loaded_event"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>AGE::RenderUIEvent</label>
+        <link refid="class_a_g_e_1_1_render_u_i_event"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>AGE::RendererChangeEvent</label>
+        <link refid="class_a_g_e_1_1_renderer_change_event"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>AGE::SceneChangedEvent</label>
+        <link refid="class_a_g_e_1_1_scene_changed_event"/>
+        <childnode refid="23" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>AGE::SceneEvent</label>
+        <link refid="class_a_g_e_1_1_scene_event"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>AGE::StringCopyEvent</label>
+        <link refid="class_a_g_e_1_1_string_copy_event"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>AGE::StringPasteEvent</label>
+        <link refid="class_a_g_e_1_1_string_paste_event"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>AGE::WidgetActivatedEvent</label>
+        <link refid="class_a_g_e_1_1_widget_activated_event"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>AGE::WidgetConstructedEvent</label>
+        <link refid="class_a_g_e_1_1_widget_constructed_event"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>AGE::WidgetDeactivatedEvent</label>
+        <link refid="class_a_g_e_1_1_widget_deactivated_event"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>AGE::WindowCloseEvent</label>
+        <link refid="class_a_g_e_1_1_window_close_event"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>AGE::WindowFocusEvent</label>
+        <link refid="class_a_g_e_1_1_window_focus_event"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>AGE::WindowLostFocusEvent</label>
+        <link refid="class_a_g_e_1_1_window_lost_focus_event"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>AGE::WindowMovedEvent</label>
+        <link refid="class_a_g_e_1_1_window_moved_event"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>AGE::WindowResizeEvent</label>
+        <link refid="class_a_g_e_1_1_window_resize_event"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" line="51" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" bodystart="52" bodyend="67"/>
+    <listofallmembers>
+      <member refid="class_a_g_e_1_1_event_1aad5f38ccd490ea17008460423f52325a" prot="private" virt="non-virtual"><scope>AGE::Event</scope><name>EventDispatcher</name></member>
+      <member refid="class_a_g_e_1_1_event_1ae76fb834a0ee69601539da677f1333fa" prot="public" virt="pure-virtual"><scope>AGE::Event</scope><name>GetCategoryFlags</name></member>
+      <member refid="class_a_g_e_1_1_event_1a4cfb95332801a921e9449a03a34b87b0" prot="public" virt="pure-virtual"><scope>AGE::Event</scope><name>GetEventType</name></member>
+      <member refid="class_a_g_e_1_1_event_1a007332c35050a5561feaf2c40c917290" prot="public" virt="pure-virtual"><scope>AGE::Event</scope><name>GetName</name></member>
+      <member refid="class_a_g_e_1_1_event_1a552035a536a86cc331bfa8dd5da80197" prot="public" virt="non-virtual"><scope>AGE::Event</scope><name>Handled</name></member>
+      <member refid="class_a_g_e_1_1_event_1afb010977c2bb1113d2af91d95c70ecab" prot="public" virt="non-virtual"><scope>AGE::Event</scope><name>IsInCategory</name></member>
+      <member refid="class_a_g_e_1_1_event_1abb5a1a933883fb8fb99999523e8805a8" prot="public" virt="virtual"><scope>AGE::Event</scope><name>ToString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
