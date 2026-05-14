@@ -21,7 +21,7 @@ namespace AGE {
     using Scope = std::unique_ptr<T>;
 
     template<typename T, typename ... Args>
-    constexpr Scope<T> CreateScope(Args&& ... args)
+constexpr Scope<T> CreateScope(Args&& ... args)
     {
         return std::make_unique<T>(std::forward<Args>(args)...);
     }
@@ -29,13 +29,13 @@ namespace AGE {
     using Ref = std::shared_ptr<T>;
 
     template<typename T, typename ... Args>
-    constexpr Ref<T> CreateRef(Args&& ... args)
+constexpr Ref<T> CreateRef(Args&& ... args)
     {
         return std::make_shared<T>(std::forward<Args>(args)...);
     };
 
     template<typename To, typename From, typename Deleter>
-    std::unique_ptr<To, Deleter> dynamic_unique_cast(std::unique_ptr<From, Deleter>&& p)
+std::unique_ptr<To, Deleter> dynamic_unique_cast(std::unique_ptr<From, Deleter>&& p)
     {
         if (To* cast = dynamic_cast<To*>(p.get()))
         {
@@ -48,7 +48,7 @@ namespace AGE {
     }
 
     template<typename T>
-    inline void SafeRelease(T& ptr)
+inline void SafeRelease(T& ptr)
     {
         if (ptr != NULL)
         {

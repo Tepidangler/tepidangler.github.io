@@ -18,6 +18,7 @@
 
 extern AGE::App* AGE::CreateApp(ApplicationCommandLineArgs args);
 
+
 int main(int argc, char** argv)
 {
     AGE::Log::Init();
@@ -27,7 +28,6 @@ int main(int argc, char** argv)
     auto app = AGE::CreateApp({argc, argv});
     AGE_PROFILE_END_SESSION();
     AGE_PROFILE_BEGIN_SESSION("Runtime", "./AGEProfile-Runtime.json");
-#if AG_DEBUG
     try
     {
         app->Run();
@@ -36,9 +36,6 @@ int main(int argc, char** argv)
     {
         AGE::CoreLogger::Error(e.what());
     }
-#else
-    app->Run();
-#endif
     AGE_PROFILE_END_SESSION();
     AGE_PROFILE_BEGIN_SESSION("Shutdown", "./AGEProfile-Shutdown.json");
     delete app;

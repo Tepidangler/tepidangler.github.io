@@ -14,7 +14,7 @@
 
 namespace AGE
 {
-    void SpriteSheetUtils ::SetTexCoords(const Ref<SubTexture2D> SubTex, QuadProperties& Properties, bool Reverse)
+void SpriteSheetUtils ::SetTexCoords(const Ref<SubTexture2D> SubTex, QuadProperties& Properties, bool Reverse)
     {
         if (!Reverse)
         {

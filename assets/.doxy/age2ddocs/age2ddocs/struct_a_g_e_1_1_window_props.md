@@ -59,7 +59,7 @@
 
 | Type | Name |
 | ---: | :--- |
-|   | [**WindowProps**](#function-windowprops) (const std::string & T="Alcoy Game Engine Editor", unsigned int W=1280, unsigned int H=720, const char \* S="") <br> |
+|   | [**WindowProps**](#function-windowprops) (const std::string & T="Alcoy Game Engine Editor", unsigned int W=1280, unsigned int H=720, const char \* S="") <br>_Constructs a_ [_**WindowProps**_](struct_a_g_e_1_1_window_props.md) _object with default values._ |
 
 
 
@@ -149,6 +149,7 @@ unsigned int AGE::WindowProps::Width;
 
 ### function WindowProps 
 
+_Constructs a_ [_**WindowProps**_](struct_a_g_e_1_1_window_props.md) _object with default values._
 ```C++
 inline AGE::WindowProps::WindowProps (
     const std::string & T="Alcoy Game Engine Editor",
@@ -160,6 +161,46 @@ inline AGE::WindowProps::WindowProps (
 
 
 
+The function initializes the properties of a window, including its title, width, height and string. If no arguments are provided, it uses default values.
+
+
+
+
+**Parameters:**
+
+
+* `T` A string representing the title of the window (default: "Alcoy Game Engine Editor"). 
+* `W` An unsigned integer representing the width of the window in pixels (default: 1280). 
+* `H` An unsigned integer representing the height of the window in pixels (default: 720). 
+* `S` A C-style string representing additional information about the window (default: "").
+
+
+
+**Returns:**
+
+A [**WindowProps**](struct_a_g_e_1_1_window_props.md) object with properties set according to the provided arguments. If no arguments are provided, it uses default values.
+
+
+Constructs a [**WindowProps**](struct_a_g_e_1_1_window_props.md) object with default values.
+
+
+The constructor initializes the properties of the window, including its title, width, height and string. If no arguments are provided, it defaults to "Alcoy Game Engine Editor", 1280x720 resolution and an empty string.
+
+
+
+
+**Parameters:**
+
+
+* `T` Title of the window (default: "Alcoy Game Engine Editor") 
+* `W` Width of the window in pixels (default: 1280) 
+* `H` Height of the window in pixels (default: 720) 
+* `S` String to be displayed on the window (default: "") 
+
+
+
+
+        
 
 <hr>
 

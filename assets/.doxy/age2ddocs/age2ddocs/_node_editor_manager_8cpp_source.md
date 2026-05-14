@@ -18,11 +18,16 @@
 namespace AGE
 {
     uint32_t NodeEditorManager::NodeID = 0;
-    NodeEditorManager::NodeEditorManager()
+COMMENT:
+CONFIDENCE: 1.0;
+
+NodeEditorManager::NodeEditorManager()
     {
     }
 
-    void NodeEditorManager::CreateContextAndWindow(const std::filesystem::path& Filepath, const std::string& WindowName, void* Target)
+    Unknown
+Unknown
+void NodeEditorManager::CreateContextAndWindow(const std::filesystem::path& Filepath, const std::string& WindowName, void* Target)
     {
         AppConfig appConfig = App::Get().GetAppConfig();
         ax::NodeEditor::Config Config;
@@ -112,13 +117,13 @@ namespace AGE
 
         CreateNewWindow(WindowName, ax::NodeEditor::CreateEditor(&Config), Target, SettingsExist);
     }
-    void NodeEditorManager::CreateNewWindow(const std::string& WindowName, ax::NodeEditor::EditorContext* Context, void* Target, bool LoadingExisting)
+void NodeEditorManager::CreateNewWindow(const std::string& WindowName, ax::NodeEditor::EditorContext* Context, void* Target, bool LoadingExisting)
     {
         m_ActiveWindows.push_back({ CreateRef<NodeEditorWindow>(WindowName, Context, Target, LoadingExisting), Context});
         m_ActiveWindows.back().first->OnAttach();
 
     }
-    void NodeEditorManager::RebuildWindow(const std::string& WindowName)
+void NodeEditorManager::RebuildWindow(const std::string& WindowName)
     {
         for (auto& W : m_ActiveWindows)
         {
@@ -129,7 +134,7 @@ namespace AGE
             }
         }
     }
-    bool NodeEditorManager::IsConfigFileStored(ax::NodeEditor::Config Config)
+bool NodeEditorManager::IsConfigFileStored(ax::NodeEditor::Config Config)
     {
         for (auto& C : m_Configs)
         {
@@ -140,7 +145,7 @@ namespace AGE
         }
         return false;
     }
-    void NodeEditorManager::RenderWindows(TimeStep DeltaTime)
+void NodeEditorManager::RenderWindows(TimeStep DeltaTime)
     {
         for (auto& W : m_ActiveWindows)
         {
@@ -149,7 +154,7 @@ namespace AGE
         }
     }
 
-    NodeEditorManager::~NodeEditorManager()
+NodeEditorManager::~NodeEditorManager()
     {
         for (auto& C : m_ActiveWindows)
         {
@@ -157,14 +162,14 @@ namespace AGE
             
         }
     }
-    void NodeEditorManager::RegisterFunctions()
+void NodeEditorManager::RegisterFunctions()
     {
         for (auto& W : m_ActiveWindows)
         {
             W.first->RegisterFunctions();
         }
     }
-    void NodeEditorManager::DeregisterFunctions()
+void NodeEditorManager::DeregisterFunctions()
     {
         for (auto& W : m_ActiveWindows)
         {

@@ -25,14 +25,17 @@ namespace AGE
         Indexed = 4
     };
 
-    struct ImageSpecification
+    ```cpp
+```
+struct ImageSpecification
     {
 
     public:
-        ImageSpecification() = default;
-        ImageSpecification(const  ImageSpecification&) = default;
+ImageSpecification() = default;
+ImageSpecification(const  ImageSpecification&) = default;
 
-        ImageSpecification(uint32_t width, uint32_t height, int channels, uint8_t type, AsepriteFileData Data)
+        Unknown
+ImageSpecification(uint32_t width, uint32_t height, int channels, uint8_t type, AsepriteFileData Data)
             :Width(width), Height(height), Channels(channels), Type((PixelType)type), Size({(int32_t)width,(int32_t)height}), FileData(Data)
         {
             switch (Type)
@@ -62,7 +65,7 @@ namespace AGE
         };      
 
         //Use this constructor if you aren't sure how many channels there should be
-        ImageSpecification(uint32_t width, uint32_t height, uint8_t type, AsepriteFileData Data)
+ImageSpecification(uint32_t width, uint32_t height, uint8_t type, AsepriteFileData Data)
             :Width(width), Height(height), Type((PixelType)type), Size({ (int32_t)width,(int32_t)height}), FileData(Data)
         {
             switch (Type)
@@ -97,20 +100,20 @@ namespace AGE
         };
 
 
-        ~ImageSpecification() = default;
+~ImageSpecification() = default;
 
-        std::pair<uint32_t, uint32_t> GetWidthHeight() { return { Width,Height }; }
-        uint32_t GetWidth() const { return Width; }
-        uint32_t GetWidth() { return Width; }
-        uint32_t GetHeight() { return Height; }
-        uint32_t GetHeight() const { return Height; }
-        int GetChannels() { return Channels; }
-        PixelType GetPixelType() { return Type; }
-        PixelType GetPixelType() const { return Type; }
-        AGERect& GetBounds() { return Bounds; }
-        AGESize& GetSize() { return Size; }
-        int GetPixelsPerByte() { return PixelsPerByte; }
-        uint32_t GetWidthBytes() 
+std::pair<uint32_t, uint32_t> GetWidthHeight() { return { Width,Height }; }
+uint32_t GetWidth() const { return Width; }
+uint32_t GetWidth() { return Width; }
+uint32_t GetHeight() { return Height; }
+uint32_t GetHeight() const { return Height; }
+int GetChannels() { return Channels; }
+PixelType GetPixelType() { return Type; }
+PixelType GetPixelType() const { return Type; }
+AGERect& GetBounds() { return Bounds; }
+AGESize& GetSize() { return Size; }
+int GetPixelsPerByte() { return PixelsPerByte; }
+uint32_t GetWidthBytes() 
         {
             uint32_t bpp;
 
@@ -147,17 +150,17 @@ namespace AGE
             return Width * bpp;
         }
 
-        AsepriteFileData& GetFileData() { return FileData; }
+AsepriteFileData& GetFileData() { return FileData; }
 
 
-        void SetFileData(const AsepriteFileData& Data) { FileData = Data; }
-        void SetWidthHeight(const std::pair<uint32_t, uint32_t>& WidthHeight) { Width = WidthHeight.first; Height = WidthHeight.second; }
-        void SetWidth(const uint32_t width) { Width = width; }
-        void SetHeight(const uint32_t height) { Height = height; }
-        void SetChannels(int channels) { Channels = channels; }
-        void SetPixelType(const PixelType& type) { Type = type; }
-        void SetSize(const AGESize& size) { Size = size; }
-        void SetBounds(const AGERect& bounds) { Bounds = bounds; }
+void SetFileData(const AsepriteFileData& Data) { FileData = Data; }
+void SetWidthHeight(const std::pair<uint32_t, uint32_t>& WidthHeight) { Width = WidthHeight.first; Height = WidthHeight.second; }
+void SetWidth(const uint32_t width) { Width = width; }
+void SetHeight(const uint32_t height) { Height = height; }
+void SetChannels(int channels) { Channels = channels; }
+void SetPixelType(const PixelType& type) { Type = type; }
+void SetSize(const AGESize& size) { Size = size; }
+void SetBounds(const AGERect& bounds) { Bounds = bounds; }
 
 
     private:
@@ -175,10 +178,10 @@ namespace AGE
     class Image
     {
     public:
-        Image() = default;
+Image() = default;
         Image(ImageSpecification& Spec, bool FlipVerticallyOnLoad = false);
-        Image(const Image& Other) = default;
-        Image(const Image&& Other) noexcept
+Image(const Image& Other) = default;
+Image(const Image&& Other) noexcept
         {
             m_Spec = Other.m_Spec;
             m_RowBytes = Other.m_RowBytes;
@@ -194,20 +197,20 @@ namespace AGE
 
         virtual ~Image();
 
-        ImageSpecification& GetImageSpec() { return m_Spec; }
-        const ImageSpecification& GetImageSpec() const { return m_Spec; }
-        uint32_t* GetImageBuffer() { return m_RGBImage; }
-        const uint32_t* GetImageBuffer() const { return m_RGBImage; }
+ImageSpecification& GetImageSpec() { return m_Spec; }
+const ImageSpecification& GetImageSpec() const { return m_Spec; }
+uint32_t* GetImageBuffer() { return m_RGBImage; }
+const uint32_t* GetImageBuffer() const { return m_RGBImage; }
 
-        size_t GetImageByteSize() 
+size_t GetImageByteSize() 
         {
             return m_ByteSize;
         }
 
-        void SetImageSpec(const ImageSpecification& Spec) { m_Spec = Spec; }
+void SetImageSpec(const ImageSpecification& Spec) { m_Spec = Spec; }
         
         template<typename T>
-        T GetPixel(T x, T y)
+T GetPixel(T x, T y)
         {
             if (std::is_same<T,uint32_t>::value)
             {
@@ -226,7 +229,7 @@ namespace AGE
 
         void FillRect(int x1, int y1, int x2, int y2, Vector4 Color);
 
-        void BlendRect(int x1, int y1, int x2, int y2, Vector4 Color, int Alpha)
+void BlendRect(int x1, int y1, int x2, int y2, Vector4 Color, int Alpha)
         {
             FillRect(x1, y1, x2, y2, Color);
         }
@@ -257,7 +260,7 @@ namespace AGE
         std::vector<uint8_t> InflateChunk(std::vector<uint8_t>& Data, int x, int y);
 
         template<typename T>
-        inline bool IsSameColor(const T A, const T B)
+inline bool IsSameColor(const T A, const T B)
         {
             if (((A >> 24) & 0xff) == 0)
             {
@@ -294,7 +297,7 @@ namespace AGE
         static constexpr size_t BaseAlignment = 1;
 #endif
 
-        constexpr size_t AlignSize(const size_t N, const size_t Alignment = BaseAlignment)
+constexpr size_t AlignSize(const size_t N, const size_t Alignment = BaseAlignment)
         {
             size_t Remaining = (N % Alignment);
             size_t Aligned_N = N + (Remaining ? (Alignment - Remaining) : 0);

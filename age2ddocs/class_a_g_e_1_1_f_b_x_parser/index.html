@@ -88,7 +88,7 @@
 <tbody>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-fbxparser"><strong>FBXParser</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-fbxparser"><strong>FBXParser</strong></a> () = default<br><em>Default constructor for the</em> <a href="./"><em><strong>FBXParser</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
@@ -103,41 +103,76 @@
 <tbody>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-freescene"><strong>FreeScene</strong></a> (ufbx_scene * scene) <br></td>
+<td style="text-align: left;"><a href="#function-freescene"><strong>FreeScene</strong></a> (ufbx_scene * scene) <br><em>This function frees an allocated ufbx_scene.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"><a href="./"><strong>FBXParser</strong></a> &amp;</td>
-<td style="text-align: left;"><a href="#function-get"><strong>Get</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-get"><strong>Get</strong></a> () <br><em>This function returns a reference to the singleton instance of the</em> <a href="./"><em><strong>FBXParser</strong></em></a> <em>class. If an instance does not already exist, it will be created.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">ufbx_scene *</td>
-<td style="text-align: left;"><a href="#function-loadfile"><strong>LoadFile</strong></a> (const std::filesystem::path &amp; Path) <br></td>
+<td style="text-align: left;"><a href="#function-loadfile"><strong>LoadFile</strong></a> (const std::filesystem::path &amp; Path) <br><em>Loads a FBX file into memory and returns the loaded scene.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-fbxparser">function FBXParser</h3>
+<p><em>Default constructor for the</em> <a href="./"><em><strong>FBXParser</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::FBXParser::FBXParser () = default
 </code></pre>
+<p>This function initializes an instance of the <a href="./"><strong>FBXParser</strong></a> class with default values. It does not perform any specific operations or require any parameters to be set.</p>
+<p><strong>Returns:</strong></p>
+<p>A new instance of the <a href="./"><strong>FBXParser</strong></a> class with all fields initialized to their default values.</p>
+<p>Default constructor for the <a href="./"><strong>FBXParser</strong></a> class. </p>
 <hr>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
 <h3 id="function-freescene">function FreeScene</h3>
+<p><em>This function frees an allocated ufbx_scene.</em> </p>
 <pre><code class="language-C++">static void AGE::FBXParser::FreeScene (
     ufbx_scene * scene
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>scene</code> Pointer to the ufbx_scene that needs to be freed.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>None</p>
+<p>This function frees an allocated ufbx_scene. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>scene</code> Pointer to the ufbx_scene that needs to be freed. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>None </p>
 <hr>
 
 <h3 id="function-get">function Get</h3>
+<p><em>This function returns a reference to the singleton instance of the</em> <a href="./"><em><strong>FBXParser</strong></em></a> <em>class. If an instance does not already exist, it will be created.</em></p>
 <pre><code class="language-C++">static inline FBXParser &amp; AGE::FBXParser::Get () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A reference to the single instance of the <a href="./"><strong>FBXParser</strong></a> class.</p>
+<p>This function returns a reference to the singleton instance of the <a href="./"><strong>FBXParser</strong></a> class. If an instance does not already exist, it will be created. </p>
+<p><strong>Returns:</strong></p>
+<p>A reference to the <a href="./"><strong>FBXParser</strong></a> instance. </p>
 <hr>
 
 <h3 id="function-loadfile">function LoadFile</h3>
+<p><em>Loads a FBX file into memory and returns the loaded scene.</em> </p>
 <pre><code class="language-C++">static ufbx_scene * AGE::FBXParser::LoadFile (
     const std::filesystem::path &amp; Path
 ) 
 </code></pre>
+<p>This function loads an FBX file from the specified path, adjusting transforms if necessary. The target axes are left-handed with Y as up, and the target unit is set to be 0.01 meters. If the loading fails for any reason, it logs an error message and returns nullptr.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Path</code> The file system path of the FBX file to load. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A pointer to the loaded ufbx_scene if successful, otherwise nullptr.</p>
+<p>Loads an FBX file into a ufbx_scene object.</p>
+<p>If the file cannot be loaded for any reason (e.g., it does not exist or is corrupt), an error message will be logged and nullptr will be returned. </p>
 <hr>
 
 <hr />

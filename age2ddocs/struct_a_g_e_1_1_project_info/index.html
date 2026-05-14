@@ -127,15 +127,15 @@
 <tbody>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setquestfilepath"><strong>SetQuestFilepath</strong></a> (const std::filesystem::path &amp; Filepath) <br></td>
+<td style="text-align: left;"><a href="#function-setquestfilepath"><strong>SetQuestFilepath</strong></a> (const std::filesystem::path &amp; Filepath) <br><em>Sets the quest file path.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-updateactionbindings"><strong>UpdateActionBindings</strong></a> (const std::vector&lt; Ref&lt; <a href="../struct_a_g_e_1_1_input_binding/"><strong>InputBinding</strong></a> &gt; &gt; &amp; Bindings) <br></td>
+<td style="text-align: left;"><a href="#function-updateactionbindings"><strong>UpdateActionBindings</strong></a> (const std::vector&lt; Ref&lt; <a href="../struct_a_g_e_1_1_input_binding/"><strong>InputBinding</strong></a> &gt; &gt; &amp; Bindings) <br><em>Updates the action bindings with new input bindings.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-updateaxisbindings"><strong>UpdateAxisBindings</strong></a> (const std::vector&lt; Ref&lt; <a href="../struct_a_g_e_1_1_input_binding/"><strong>InputBinding</strong></a> &gt; &gt; &amp; Bindings) <br></td>
+<td style="text-align: left;"><a href="#function-updateaxisbindings"><strong>UpdateAxisBindings</strong></a> (const std::vector&lt; Ref&lt; <a href="../struct_a_g_e_1_1_input_binding/"><strong>InputBinding</strong></a> &gt; &gt; &amp; Bindings) <br><em>Updates the Axis bindings with new input bindings.</em></td>
 </tr>
 </tbody>
 </table>
@@ -176,24 +176,46 @@
 <hr>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-setquestfilepath">function SetQuestFilepath</h3>
+<p><em>Sets the quest file path.</em> </p>
 <pre><code class="language-C++">inline void AGE::ProjectInfo::SetQuestFilepath (
     const std::filesystem::path &amp; Filepath
 ) 
 </code></pre>
+<p>This function sets the QuestFilepath member variable to a new value, which represents the path of the quest file. The parameter 'Filepath' is used as input for setting this member variable.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Filepath</code> A const reference to std::filesystem::path representing the new quest file path. </li>
+</ul>
 <hr>
 
 <h3 id="function-updateactionbindings">function UpdateActionBindings</h3>
+<p><em>Updates the action bindings with new input bindings.</em> </p>
 <pre><code class="language-C++">inline void AGE::ProjectInfo::UpdateActionBindings (
     const std::vector&lt; Ref&lt; InputBinding &gt; &gt; &amp; Bindings
 ) 
 </code></pre>
+<p>This function takes a vector of references to <a href="../struct_a_g_e_1_1_input_binding/"><strong>InputBinding</strong></a> objects and appends them to the existing ActionBindings list. The purpose is to update or extend the current set of actions that can be performed by the user.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Bindings</code> A constant reference to a vector of <a href="../struct_a_g_e_1_1_input_binding/"><strong>InputBinding</strong></a> objects, which represent new bindings to add. Each element in this vector represents an action and its associated input binding.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void No return value is expected as all changes are made directly on the ActionBindings list. </p>
 <hr>
 
 <h3 id="function-updateaxisbindings">function UpdateAxisBindings</h3>
+<p><em>Updates the Axis bindings with new input bindings.</em> </p>
 <pre><code class="language-C++">inline void AGE::ProjectInfo::UpdateAxisBindings (
     const std::vector&lt; Ref&lt; InputBinding &gt; &gt; &amp; Bindings
 ) 
 </code></pre>
+<p>This function takes a vector of <a href="../struct_a_g_e_1_1_input_binding/"><strong>InputBinding</strong></a> references and adds them to the existing Axis Bindings. The new bindings are appended at the end of the current list.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Bindings</code> - A const reference to a std::vector of <a href="../struct_a_g_e_1_1_input_binding/"><strong>InputBinding</strong></a> references. Each element in this vector represents an input binding that will be added to the existing set of axis bindings.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <hr />

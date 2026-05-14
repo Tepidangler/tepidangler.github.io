@@ -3,6 +3,7 @@
   <compounddef id="class_a_g_e_1_1_framebuffer_resize_event" kind="class" language="C++" prot="public">
     <compoundname>AGE::FramebufferResizeEvent</compoundname>
     <basecompoundref refid="class_a_g_e_1_1_event" prot="public" virt="non-virtual">AGE::Event</basecompoundref>
+    <includes local="no">ApplicationEvent.h</includes>
     <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="class_a_g_e_1_1_framebuffer_resize_event_1a67335d191fe26b9255581d89ac1ec052" prot="private" static="no" mutable="no">
         <type>unsigned int</type>
@@ -16,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" line="51" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" bodystart="51" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" line="141" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" bodystart="141" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_framebuffer_resize_event_1ab7ab4e22ad97b6d9825a4e4cd9b774bd" prot="private" static="no" mutable="no">
         <type>unsigned int</type>
@@ -30,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" line="52" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" bodystart="52" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" line="142" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" bodystart="142" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -54,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" line="34" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" bodystart="34" bodyend="35"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" line="88" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" bodystart="88" bodyend="89"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_framebuffer_resize_event_1a41d28a4936cf09f57847add05c852569" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>unsigned int</type>
@@ -63,12 +64,18 @@
         <name>GetWidth</name>
         <qualifiedname>AGE::FramebufferResizeEvent::GetWidth</qualifiedname>
         <briefdescription>
+<para>Returns the width of the object. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>The width as an unsigned integer.</para>
+</simplesect>
+Returns the width of the object. <simplesect kind="return"><para>The width as an unsigned integer. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" line="38" column="21" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" bodystart="38" bodyend="38"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" line="100" column="21" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" bodystart="100" bodyend="100"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_framebuffer_resize_event_1ab06f7ffad681e176d207d156cd37154a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>unsigned int</type>
@@ -77,12 +84,21 @@
         <name>GetHeight</name>
         <qualifiedname>AGE::FramebufferResizeEvent::GetHeight</qualifiedname>
         <briefdescription>
+<para>Returns the height of an object. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is used to get the current height value of an object. It returns an unsigned integer representing the height.</para>
+<para><simplesect kind="return"><para>The current height of the object as an unsigned int.</para>
+</simplesect>
+Returns the height of an object.</para>
+<para>This function returns the current value of the member variable &apos;m_Height&apos;. It is a getter method for this variable.</para>
+<para><simplesect kind="return"><para>The current height as an unsigned integer. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" line="39" column="21" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" bodystart="39" bodyend="39"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" line="115" column="21" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" bodystart="115" bodyend="115"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_framebuffer_resize_event_1a3d12cebeaa44d726711813c90983c663" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type>std::string</type>
@@ -92,17 +108,27 @@
         <qualifiedname>AGE::FramebufferResizeEvent::ToString</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_event_1abb5a1a933883fb8fb99999523e8805a8">ToString</reimplements>
         <briefdescription>
+<para>Converts the <ref refid="class_a_g_e_1_1_framebuffer_resize_event" kindref="compound">FramebufferResizeEvent</ref> into a string format. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function converts the <ref refid="class_a_g_e_1_1_framebuffer_resize_event" kindref="compound">FramebufferResizeEvent</ref> object into a string representation, which includes the width and height of the framebuffer that was resized.</para>
+<para><simplesect kind="return"><para>A string containing the details about the event.</para>
+</simplesect>
+This function returns a string representation of the <ref refid="class_a_g_e_1_1_framebuffer_resize_event" kindref="compound">FramebufferResizeEvent</ref> object. The returned string includes the width and height of the framebuffer that was resized.</para>
+<para><simplesect kind="return"><para>A string containing the details about the event, in the format &quot;FramebufferResizeEvent: &lt;width&gt;, &lt;height&gt;&quot;. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" line="41" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" bodystart="41" bodyend="46"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" line="131" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" bodystart="131" bodyend="136"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>Represents a framebuffer resize event. </para>
     </briefdescription>
     <detaileddescription>
+<para>This class is used to represent a framebuffer resize event, which occurs when the size of the framebuffer changes. It contains two parameters - width and height that specify the new dimensions of the framebuffer. </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="2">
@@ -128,7 +154,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" line="31" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" bodystart="32" bodyend="53"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" line="85" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" bodystart="86" bodyend="143"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_framebuffer_resize_event_1ad7fa70ee4ddfeeba4c158d30d7250d89" prot="public" virt="non-virtual"><scope>AGE::FramebufferResizeEvent</scope><name>FramebufferResizeEvent</name></member>
       <member refid="class_a_g_e_1_1_event_1ae76fb834a0ee69601539da677f1333fa" prot="public" virt="pure-virtual"><scope>AGE::FramebufferResizeEvent</scope><name>GetCategoryFlags</name></member>

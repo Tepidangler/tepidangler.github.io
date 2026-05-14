@@ -17,7 +17,7 @@ namespace AGE
     class DataReader
     {
     public:
-        virtual ~DataReader() = default;
+virtual ~DataReader() = default;
 
         virtual bool IsStreamGood() const = 0;
         virtual uint64_t GetStreamPosition() = 0;
@@ -27,29 +27,29 @@ namespace AGE
         virtual bool ReadBytes(uint8_t* Data, size_t Size) =0;
         virtual bool ReadJson(std::string& String) = 0;
 
-        operator bool() const { return IsStreamGood(); }
+operator bool() const { return IsStreamGood(); }
 
         void ReadBuffer(char* Data, size_t Size);
         void ReadString(std::string& String);
 
 
         template<typename T>
-        void ReadRaw(T& Type)
+void ReadRaw(T& Type)
         {
             bool success = ReadData((char*)&Type, sizeof(T));
-            AGE_GAME_ASSERT(success, "Failed to Read Data");
+            GameLogger::Assert(success, "Failed to Read Data");
 
         }
 
         template<typename T>
-        void ReadObject(T& Obj)
+void ReadObject(T& Obj)
         {
             T::Deserialize(this, Obj);
         }
 
 
         template<typename Key, typename Value>
-        void ReadMap(std::map<Key, Value>& Map, uint32_t Size = 0)
+void ReadMap(std::map<Key, Value>& Map, uint32_t Size = 0)
         {
             if (Size == 0)
             {
@@ -80,7 +80,7 @@ namespace AGE
         }
 
         template<typename Key, typename Value>
-        void ReadMap(std::unordered_map<Key, Value>& Map, uint32_t Size = 0)
+void ReadMap(std::unordered_map<Key, Value>& Map, uint32_t Size = 0)
         {
             if (Size == 0)
             {
@@ -111,7 +111,7 @@ namespace AGE
         }
 
         template<typename Key, typename Value>
-        void ReadMap(std::unordered_map<std::string, Value>& Map, uint32_t Size = 0)
+void ReadMap(std::unordered_map<std::string, Value>& Map, uint32_t Size = 0)
         {
             if (Size == 0)
             {
@@ -142,7 +142,7 @@ namespace AGE
         }
 
         template<typename T>
-        void ReadArray(std::vector<T>& Array, uint32_t Size = 0)
+void ReadArray(std::vector<T>& Array, uint32_t Size = 0)
         {
             if (Size == 0)
             {
@@ -174,17 +174,17 @@ namespace AGE
     class FileStreamReader : public DataReader
     {
     public:
-        FileStreamReader() = default;
+FileStreamReader() = default;
         FileStreamReader(const std::filesystem::path& Path);
-        FileStreamReader(const FileStreamReader&) = delete;
+FileStreamReader(const FileStreamReader&) = delete;
 
         virtual ~FileStreamReader();
 
-        bool IsStreamGood() const final { return m_Stream.good(); }
+bool IsStreamGood() const final { return m_Stream.good(); }
         /*
          * On clang we return UINT64_MAX to indicate a failure, so if compiling with clang be sure to check for that
          */
-        uint64_t GetStreamPosition() final
+uint64_t GetStreamPosition() final
         {
 #if __clang__
             long pos = m_Stream.tellg();
@@ -197,7 +197,7 @@ namespace AGE
             return m_Stream.tellg();
 #endif
         }
-        void SetStreamPosition(uint64_t Pos) final { m_Stream.seekg((long)Pos); }
+void SetStreamPosition(uint64_t Pos) final { m_Stream.seekg((long)Pos); }
         bool ReadData(char* Data, size_t Size) final;
         bool ReadBytes(std::vector<std::byte>& Data, size_t Size) final;
         bool ReadBytes(uint8_t* Data, size_t Size) final;
@@ -216,15 +216,15 @@ namespace AGE
     public:
 
         MemoryStreamReader(void* Addr, size_t Size);
-        MemoryStreamReader(const MemoryStreamReader&) = delete;
+MemoryStreamReader(const MemoryStreamReader&) = delete;
 
         virtual ~MemoryStreamReader()
         ;
 
-        bool IsStreamGood() const final { return m_Stream.good(); }
+bool IsStreamGood() const final { return m_Stream.good(); }
 
 //On clang we return UINT64_MAX to indicate a failure, so if compiling with clang be sure to check for that
-        uint64_t GetStreamPosition() final
+uint64_t GetStreamPosition() final
         {
 #if __clang__
             long pos = m_Stream.tellg();
@@ -237,7 +237,7 @@ namespace AGE
             return m_Stream.tellg();
 #endif
         }
-        void SetStreamPosition(uint64_t Pos) final { m_Stream.seekg((long)Pos); }
+void SetStreamPosition(uint64_t Pos) final { m_Stream.seekg((long)Pos); }
         bool ReadData(char* Data, size_t Size) final;
         bool ReadBytes(std::vector<std::byte>& Data, size_t Size) final;
         bool ReadBytes(uint8_t* Data, size_t Size) final;

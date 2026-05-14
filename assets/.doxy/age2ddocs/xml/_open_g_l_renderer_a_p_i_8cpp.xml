@@ -30,79 +30,70 @@
 <codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Debug/Public/Instrumentor.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">AGE</highlight></codeline>
 <codeline lineno="7"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>OpenGLRendererAPI::Init()</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AGE_PROFILE_FUNCTION();</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glEnable(GL_BLEND);</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glBlendEquation(GL_FUNC_ADD);</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glBlendFunc(GL_SRC_ALPHA,<sp/>GL_ONE_MINUS_SRC_ALPHA);</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glEnable(GL_DEPTH_TEST);</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//glDepthFunc(GL_LEQUAL);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//glClearDepth(1.0f);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glEnable(GL_LINE_SMOOTH);</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glFrontFace(GL_CW);</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>OpenGLRendererAPI::SetClearColor(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref><sp/>Color)</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glClearColor(Color[0],<sp/>Color[1],<sp/>Color[2],<sp/>Color[3]);</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glBlendColor(1.f,<sp/>1.f,<sp/>1.f,<sp/>1.f);</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>OpenGLRendererAPI::SetViewport(uint32_t<sp/>x,<sp/>uint32_t<sp/>y,<sp/>uint32_t<sp/>Width,<sp/>uint32_t<sp/>Height)</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glViewport(-1,<sp/>-1,<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)Width,<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)Height);</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>OpenGLRendererAPI::Clear()</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glClear(GL_COLOR_BUFFER_BIT<sp/>|<sp/>GL_DEPTH_BUFFER_BIT);</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>OpenGLRendererAPI::Flush()</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glFlush();</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>OpenGLRendererAPI::DrawIndexed(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Ref&lt;VertexArray&gt;&amp;<sp/><ref refid="class_a_g_e_1_1_vertex_array" kindref="compound">VertexArray</ref>,<sp/>uint32_t<sp/>IndexCount)</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VertexArray-&gt;Bind();</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>Count<sp/>=<sp/>IndexCount<sp/>?<sp/>IndexCount<sp/>:<sp/>VertexArray-&gt;GetIndexBuffer()-&gt;GetCount();</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDrawElements(GL_TRIANGLES,<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)Count,<sp/>GL_UNSIGNED_INT,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glBindTexture(GL_TEXTURE_2D,<sp/>0);</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>OpenGLRendererAPI::DrawArrays(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Ref&lt;VertexArray&gt;<sp/>&amp;<ref refid="class_a_g_e_1_1_vertex_array" kindref="compound">VertexArray</ref>,<sp/>uint32_t<sp/>IndexCount)</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VertexArray-&gt;Bind();</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDrawArrays(GL_TRIANGLES,<sp/>0,<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)IndexCount);</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>OpenGLRendererAPI::DrawLines(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Ref&lt;VertexArray&gt;&amp;<sp/><ref refid="class_a_g_e_1_1_vertex_array" kindref="compound">VertexArray</ref>,<sp/>uint32_t<sp/>VertexCount)</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VertexArray-&gt;Bind();</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDrawArrays(GL_LINES,<sp/>0,<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)VertexCount);</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>OpenGLRendererAPI::DrawStrips(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Ref&lt;VertexArray&gt;&amp;<sp/><ref refid="class_a_g_e_1_1_vertex_array" kindref="compound">VertexArray</ref>,<sp/>uint32_t<sp/>IndexCount)</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VertexArray-&gt;Bind();</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>Count<sp/>=<sp/>IndexCount<sp/>?<sp/>IndexCount<sp/>:<sp/>VertexArray-&gt;GetIndexBuffer()-&gt;GetCount();</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDrawElements(GL_TRIANGLE_STRIP,<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)Count,<sp/>GL_UNSIGNED_INT,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glBindTexture(GL_TEXTURE_2D,<sp/>0);</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>OpenGLRendererAPI::SetLineWidth(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Width)</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glLineWidth(Width);</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_open_g_l_renderer_a_p_i_1a50a3a2e6ba1c04083cbdb0956933e27a" kindref="member">OpenGLRendererAPI::Submit</ref>()</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_open_g_l_renderer_a_p_i_1ab5c2441a5f04e936a74c81b0458c22ea" kindref="member">OpenGLRendererAPI::Present</ref>()</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="80"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_open_g_l_renderer_a_p_i_1afadc2092708434fcfd6365ca27a17a59" kindref="member">OpenGLRendererAPI::Init</ref>()</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AGE_PROFILE_FUNCTION();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glEnable(GL_BLEND);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//glBlendEquation(GL_FUNC_ADD);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glBlendFunc(GL_SRC_ALPHA,<sp/>GL_ONE_MINUS_SRC_ALPHA);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glEnable(GL_DEPTH_TEST);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDepthFunc(GL_LEQUAL);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glClearDepth(1.0f);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glEnable(GL_LINE_SMOOTH);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glFrontFace(GL_CW);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_open_g_l_renderer_a_p_i_1aadc11ef3fe1668c66302564d7eefad5f" kindref="member">OpenGLRendererAPI::SetClearColor</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref><sp/>Color)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glClearColor(Color[0],<sp/>Color[1],<sp/>Color[2],<sp/>Color[3]);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glBlendColor(1.f,<sp/>1.f,<sp/>1.f,<sp/>1.f);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_open_g_l_renderer_a_p_i_1a727546a63daa627f217258c80b446b0e" kindref="member">OpenGLRendererAPI::SetViewport</ref>(uint32_t<sp/>x,<sp/>uint32_t<sp/>y,<sp/>uint32_t<sp/>Width,<sp/>uint32_t<sp/>Height)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glViewport(-1,<sp/>-1,<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)Width,<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)Height);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_open_g_l_renderer_a_p_i_1ad055aceaba418dca6a639607185296b0" kindref="member">OpenGLRendererAPI::Clear</ref>()</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glClear(GL_COLOR_BUFFER_BIT<sp/>|<sp/>GL_DEPTH_BUFFER_BIT);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_open_g_l_renderer_a_p_i_1a0f0b151375e2e382e503d0ec15d227c3" kindref="member">OpenGLRendererAPI::Flush</ref>()</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glFlush();</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_open_g_l_renderer_a_p_i_1a469d1eda3042b1e1822aee1a6c1bda2f" kindref="member">OpenGLRendererAPI::DrawIndexed</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Ref&lt;VertexArray&gt;&amp;<sp/><ref refid="class_a_g_e_1_1_vertex_array" kindref="compound">VertexArray</ref>,<sp/>uint32_t<sp/>IndexCount)</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VertexArray-&gt;Bind();</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>Count<sp/>=<sp/>IndexCount<sp/>?<sp/>IndexCount<sp/>:<sp/>VertexArray-&gt;GetIndexBuffer()-&gt;GetCount();</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDrawElements(GL_TRIANGLES,<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)Count,<sp/>GL_UNSIGNED_INT,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glBindTexture(GL_TEXTURE_2D,<sp/>0);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_open_g_l_renderer_a_p_i_1ab66404252d2a73fffdf8e65eff9a13f1" kindref="member">OpenGLRendererAPI::DrawLines</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Ref&lt;VertexArray&gt;&amp;<sp/><ref refid="class_a_g_e_1_1_vertex_array" kindref="compound">VertexArray</ref>,<sp/>uint32_t<sp/>VertexCount)</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VertexArray-&gt;Bind();</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDrawArrays(GL_LINES,<sp/>0,<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)VertexCount);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_open_g_l_renderer_a_p_i_1a207ae9f3970044c4043742dee75e8b59" kindref="member">OpenGLRendererAPI::DrawStrips</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Ref&lt;VertexArray&gt;&amp;<sp/><ref refid="class_a_g_e_1_1_vertex_array" kindref="compound">VertexArray</ref>,<sp/>uint32_t<sp/>IndexCount)</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VertexArray-&gt;Bind();</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>Count<sp/>=<sp/>IndexCount<sp/>?<sp/>IndexCount<sp/>:<sp/>VertexArray-&gt;GetIndexBuffer()-&gt;GetCount();</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDrawElements(GL_TRIANGLE_STRIP,<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)Count,<sp/>GL_UNSIGNED_INT,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glBindTexture(GL_TEXTURE_2D,<sp/>0);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_open_g_l_renderer_a_p_i_1a27e5a3d35a5ff8cb4c0dc1e89f8eba6d" kindref="member">OpenGLRendererAPI::SetLineWidth</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Width)</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glLineWidth(Width);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_open_g_l_renderer_a_p_i_1a50a3a2e6ba1c04083cbdb0956933e27a" kindref="member">OpenGLRendererAPI::Submit</ref>()</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_open_g_l_renderer_a_p_i_1ab5c2441a5f04e936a74c81b0458c22ea" kindref="member">OpenGLRendererAPI::Present</ref>()</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="235"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLRendererAPI.cpp"/>
   </compounddef>

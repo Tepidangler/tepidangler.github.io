@@ -25,12 +25,12 @@ namespace AGE
 
         XInput();
 
-        ~XInput() = default;
+~XInput() = default;
 
-        XInput(const XInput&) = delete;
-        XInput(XInput&&) = delete;
+XInput(const XInput&) = delete;
+XInput(XInput&&) = delete;
 
-        std::array<std::pair<XINPUT_GAMEPAD, XInputControllerInfo>, XUSER_MAX_COUNT>& GetControllers() { return m_Controllers; }
+std::array<std::pair<XINPUT_GAMEPAD, XInputControllerInfo>, XUSER_MAX_COUNT>& GetControllers() { return m_Controllers; }
 
         void RegisterControllers();
 
@@ -55,7 +55,7 @@ namespace AGE
 
         void PollControllers();
 
-        inline void SetEventCallback(const EventCallbackFn& Callback)
+inline void SetEventCallback(const EventCallbackFn& Callback)
         {
             for (auto& C : m_Controllers)
             {

@@ -88,11 +88,11 @@
 <tbody>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-jsonparser-12"><strong>JsonParser</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-jsonparser-12"><strong>JsonParser</strong></a> () = default<br><em>Default constructor for</em> <a href="./"><em><strong>JsonParser</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-jsonparser-22"><strong>JsonParser</strong></a> (const std::string &amp; FilePath) <br></td>
+<td style="text-align: left;"><a href="#function-jsonparser-22"><strong>JsonParser</strong></a> (const std::string &amp; FilePath) <br><em>Constructor for</em> <a href="./"><em><strong>JsonParser</strong></em></a> <em>class. Initializes the object with a JSON file path to parse.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">bool</td>
@@ -111,29 +111,42 @@
 <tbody>
 <tr>
 <td style="text-align: right;">nlohmann::json</td>
-<td style="text-align: left;"><a href="#function-loadjsonfile"><strong>LoadJsonFile</strong></a> (const std::filesystem::path &amp; Filepath) <br></td>
+<td style="text-align: left;"><a href="#function-loadjsonfile"><strong>LoadJsonFile</strong></a> (const std::filesystem::path &amp; Filepath) <br><em>Loads a JSON file from the given path.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">std::string</td>
-<td style="text-align: left;"><a href="#function-parse"><strong>Parse</strong></a> (const std::string &amp; FilePath) <br></td>
+<td style="text-align: left;"><a href="#function-parse"><strong>Parse</strong></a> (const std::string &amp; FilePath) <br><em>Parses a JSON file and returns its content as a string.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">std::string</td>
-<td style="text-align: left;"><a href="#function-parsestring"><strong>ParseString</strong></a> (const std::string &amp; String) <br></td>
+<td style="text-align: left;"><a href="#function-parsestring"><strong>ParseString</strong></a> (const std::string &amp; String) <br><em>Parses a JSON string and returns its array representation.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-jsonparser-12">function JsonParser [1/2]</h3>
+<p><em>Default constructor for</em> <a href="./"><em><strong>JsonParser</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::JsonParser::JsonParser () = default
 </code></pre>
+<p>Default constructor for <a href="./"><strong>JsonParser</strong></a> class. </p>
 <hr>
 
 <h3 id="function-jsonparser-22">function JsonParser [2/2]</h3>
+<p><em>Constructor for</em> <a href="./"><em><strong>JsonParser</strong></em></a> <em>class. Initializes the object with a JSON file path to parse.</em></p>
 <pre><code class="language-C++">AGE::JsonParser::JsonParser (
     const std::string &amp; FilePath
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>FilePath</code> The path of the JSON file to be parsed.</li>
+</ul>
+<p>Constructs a <a href="./"><strong>JsonParser</strong></a> object with the given file path.</p>
+<p>This function initializes a new instance of the <a href="./"><strong>JsonParser</strong></a> class, which is used to parse JSON files. The file path provided should point to a valid JSON file.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>FilePath</code> A string representing the path to the JSON file that will be parsed by this object. </li>
+</ul>
 <hr>
 
 <h3 id="function-savejsonfile">function SaveJsonFile</h3>
@@ -146,24 +159,70 @@ bool AGE::JsonParser::SaveJsonFile (
 <hr>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
 <h3 id="function-loadjsonfile">function LoadJsonFile</h3>
+<p><em>Loads a JSON file from the given path.</em> </p>
 <pre><code class="language-C++">static nlohmann::json AGE::JsonParser::LoadJsonFile (
     const std::filesystem::path &amp; Filepath
 ) 
 </code></pre>
+<p>This function attempts to load a JSON file at the provided path and returns its content as a nlohmann::json object. If the file does not exist, it logs an error message and returns an empty json object. If the file is empty or corrupted, it also logs a warning message and returns an empty json object.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Filepath</code> The path to the JSON file to load. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>nlohmann::json An object containing the content of the loaded JSON file. Returns an empty json object if the file does not exist or is empty/corrupted.</p>
+<p>Loads a JSON file from the given path.</p>
+<p>This function attempts to load a JSON file at the specified location and parse it into a nlohmann::json object. If the file does not exist, an empty json object is returned with a warning message. If the file exists but is empty or corrupted, another warning message is returned.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Filepath</code> The path to the JSON file to load. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A nlohmann::json object containing the data from the loaded file, or an empty json object if the file does not exist or is empty/corrupted. </p>
 <hr>
 
 <h3 id="function-parse">function Parse</h3>
+<p><em>Parses a JSON file and returns its content as a string.</em> </p>
 <pre><code class="language-C++">static std::string AGE::JsonParser::Parse (
     const std::string &amp; FilePath
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>FilePath</code> The path to the JSON file that should be parsed. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A string containing the contents of the JSON file, or an empty string if the file could not be opened or parsed.</p>
+<p>Parses a JSON file and returns its content as a string. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>FilePath</code> The path to the JSON file that should be parsed. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A string containing the contents of the JSON file, or an empty string if the file could not be opened or parsed. </p>
 <hr>
 
 <h3 id="function-parsestring">function ParseString</h3>
+<p><em>Parses a JSON string and returns its array representation.</em> </p>
 <pre><code class="language-C++">static std::string AGE::JsonParser::ParseString (
     const std::string &amp; String
 ) 
 </code></pre>
+<p>This function takes in a JSON string, parses it using the nlohmann::json library, converts it to an array (if possible), and then returns this array as a string.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>String</code> The input JSON string to be parsed. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A string representation of the parsed JSON data's array. If the JSON data is not an array, "Unknown" will be returned.</p>
+<p>Parses a JSON string and returns its array representation.</p>
+<p>This function takes in a JSON string, parses it using the nlohmann::json library, converts it to an array (if possible), and then returns this array as a string.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>String</code> The input JSON string that needs to be parsed. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A string representation of the parsed JSON data's array part. If the JSON data is not an array, or if it cannot be converted into a string, "Unknown" will be returned. </p>
 <hr>
 
 <hr />

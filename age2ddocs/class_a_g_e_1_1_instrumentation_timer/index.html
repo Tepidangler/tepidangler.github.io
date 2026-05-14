@@ -88,34 +88,56 @@
 <tbody>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-instrumentationtimer"><strong>InstrumentationTimer</strong></a> (const char * name) <br></td>
+<td style="text-align: left;"><a href="#function-instrumentationtimer"><strong>InstrumentationTimer</strong></a> (const char * name) <br><em>Constructs an</em> <a href="./"><em><strong>InstrumentationTimer</strong></em></a> <em>object with a given name.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-stop"><strong>Stop</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-stop"><strong>Stop</strong></a> () <br><em>Stops the timer and writes a profile to the instrumentor.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-instrumentationtimer"><strong>~InstrumentationTimer</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-instrumentationtimer"><strong>~InstrumentationTimer</strong></a> () <br><em>Destructor for the</em> <a href="./"><em><strong>InstrumentationTimer</strong></em></a> <em>class. Stops the timer if it has not been stopped already.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-instrumentationtimer">function InstrumentationTimer</h3>
+<p><em>Constructs an</em> <a href="./"><em><strong>InstrumentationTimer</strong></em></a> <em>object with a given name.</em></p>
 <pre><code class="language-C++">inline AGE::InstrumentationTimer::InstrumentationTimer (
     const char * name
 ) 
 </code></pre>
+<p>The constructor initializes the timer with the provided name and sets m_Stopped to false. It also records the current time point using std::chrono::steady_clock::now() and stores it in m_StartTimepoint. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>name</code> A string representing the name of the instrumentation timer.</li>
+</ul>
+<p>Constructs an <a href="./"><strong>InstrumentationTimer</strong></a> object with a given name. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>name</code> The name to be associated with the timer.</li>
+</ul>
+<p>This constructor initializes the timer with the provided name and sets m_Stopped to false, indicating that the timer is not stopped yet. It also records the current time point using std::chrono::steady_clock::now() and stores it in m_StartTimepoint. </p>
 <hr>
 
 <h3 id="function-stop">function Stop</h3>
+<p><em>Stops the timer and writes a profile to the instrumentor.</em> </p>
 <pre><code class="language-C++">inline void AGE::InstrumentationTimer::Stop () 
 </code></pre>
+<p>This function stops the timer by capturing the current time point using <code>std::chrono::steady_clock::now()</code>, calculates the elapsed time since the start timepoint was set in microseconds, then writes this information along with other details such as the name of the timer and the ID of the thread to the instrumentor.</p>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Stops the timer and writes a profile to the instrumentor.</p>
+<p>This function measures the time elapsed since the start of the timer, writes this information to the <a href="../class_a_g_e_1_1_instrumentor/"><strong>Instrumentor</strong></a>, and then resets the timer. The profile includes the name of the timer, the start time, the elapsed time, and the ID of the thread that executed the code.</p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-instrumentationtimer_1">function ~InstrumentationTimer</h3>
+<p><em>Destructor for the</em> <a href="./"><em><strong>InstrumentationTimer</strong></em></a> <em>class. Stops the timer if it has not been stopped already.</em></p>
 <pre><code class="language-C++">inline AGE::InstrumentationTimer::~InstrumentationTimer () 
 </code></pre>
+<p>Destructor for the <a href="./"><strong>InstrumentationTimer</strong></a> class. Stops the timer if it hasn't been stopped already. </p>
 <hr>
 
 <hr />

@@ -58,7 +58,6 @@ Inherited by the following classes: [AGE::OpenGLRendererAPI](class_a_g_e_1_1_ope
 | Type | Name |
 | ---: | :--- |
 | virtual void | [**Clear**](#function-clear) () = 0<br> |
-| virtual void | [**DrawArrays**](#function-drawarrays) (const Ref&lt; [**VertexArray**](class_a_g_e_1_1_vertex_array.md) &gt; & VertexArray, uint32\_t IndexCount) = 0<br> |
 | virtual void | [**DrawIndexed**](#function-drawindexed-12) (uint32\_t IndexCount, uint32\_t IndexStart, int VertexStart) = 0<br> |
 | virtual void | [**DrawIndexed**](#function-drawindexed-22) (const Ref&lt; [**VertexArray**](class_a_g_e_1_1_vertex_array.md) &gt; & VertexArray, uint32\_t IndexCount) = 0<br> |
 | virtual void | [**DrawLines**](#function-drawlines) (const Ref&lt; [**VertexArray**](class_a_g_e_1_1_vertex_array.md) &gt; & VertexArray, uint32\_t VertexCount) = 0<br> |
@@ -70,16 +69,16 @@ Inherited by the following classes: [AGE::OpenGLRendererAPI](class_a_g_e_1_1_ope
 | virtual void | [**SetLineWidth**](#function-setlinewidth) (float Width) = 0<br> |
 | virtual void | [**SetViewport**](#function-setviewport) (uint32\_t x, uint32\_t y, uint32\_t Width, uint32\_t Height) = 0<br> |
 | virtual void | [**Submit**](#function-submit) () = 0<br> |
-| virtual  | [**~RendererAPI**](#function-rendererapi) () = default<br> |
+| virtual  | [**~RendererAPI**](#function-rendererapi) () = default<br>_Virtual destructor for_ [_**RendererAPI**_](class_a_g_e_1_1_renderer_a_p_i.md) _class._ |
 
 
 ## Public Static Functions
 
 | Type | Name |
 | ---: | :--- |
-|  Scope&lt; [**RendererAPI**](class_a_g_e_1_1_renderer_a_p_i.md) &gt; | [**Create**](#function-create) () <br> |
-|  API | [**GetAPI**](#function-getapi) () <br> |
-|  void | [**SetAPI**](#function-setapi) (RendererAPI::API Type) <br> |
+|  Scope&lt; [**RendererAPI**](class_a_g_e_1_1_renderer_a_p_i.md) &gt; | [**Create**](#function-create) () <br>_Creates a new instance of the_ [_**RendererAPI**_](class_a_g_e_1_1_renderer_a_p_i.md) _based on the current setting._ |
+|  API | [**GetAPI**](#function-getapi) () <br>_This function returns the current API object used by the application._  |
+|  void | [**SetAPI**](#function-setapi) (RendererAPI::API Type) <br>_This function sets the API type for the_ [_**RendererAPI**_](class_a_g_e_1_1_renderer_a_p_i.md) _class._ |
 
 
 
@@ -133,22 +132,6 @@ enum AGE::RendererAPI::API {
 
 ```C++
 virtual void AGE::RendererAPI::Clear () = 0
-```
-
-
-
-
-<hr>
-
-
-
-### function DrawArrays 
-
-```C++
-virtual void AGE::RendererAPI::DrawArrays (
-    const Ref< VertexArray > & VertexArray,
-    uint32_t IndexCount
-) = 0
 ```
 
 
@@ -325,12 +308,17 @@ virtual void AGE::RendererAPI::Submit () = 0
 
 ### function ~RendererAPI 
 
+_Virtual destructor for_ [_**RendererAPI**_](class_a_g_e_1_1_renderer_a_p_i.md) _class._
 ```C++
 virtual AGE::RendererAPI::~RendererAPI () = default
 ```
 
 
 
+This function is responsible for freeing any resources that the [**RendererAPI**](class_a_g_e_1_1_renderer_a_p_i.md) object may have acquired during its lifetime, such as memory or graphics resources. It does not return a value and has no parameters. 
+
+
+        
 
 <hr>
 ## Public Static Functions Documentation
@@ -340,12 +328,40 @@ virtual AGE::RendererAPI::~RendererAPI () = default
 
 ### function Create 
 
+_Creates a new instance of the_ [_**RendererAPI**_](class_a_g_e_1_1_renderer_a_p_i.md) _based on the current setting._
 ```C++
 static Scope< RendererAPI > AGE::RendererAPI::Create () 
 ```
 
 
 
+This function creates and returns an instance of the appropriate [**RendererAPI**](class_a_g_e_1_1_renderer_a_p_i.md) class, depending on the currently set API. If no API is set (i.e., s\_API is None), it asserts false with a message "RendererAPI::API::None is currently not supported!". For OpenGL, it returns a new instance of [**OpenGLRendererAPI**](class_a_g_e_1_1_open_g_l_renderer_a_p_i.md). In all other cases, it asserts false with the message "Unknown Renderer API!" and returns nullptr.
+
+
+
+
+**Returns:**
+
+Scope&lt;RendererAPI&gt; - The newly created [**RendererAPI**](class_a_g_e_1_1_renderer_a_p_i.md) instance or nullptr if an invalid API is set.
+
+
+Creates a new instance of the [**RendererAPI**](class_a_g_e_1_1_renderer_a_p_i.md) based on the current setting.
+
+
+This function creates and returns an instance of either [**OpenGLRendererAPI**](class_a_g_e_1_1_open_g_l_renderer_a_p_i.md) or another type of [**RendererAPI**](class_a_g_e_1_1_renderer_a_p_i.md), depending on what is currently set as the API. If no valid API is set (i.e., s\_API is None), it asserts false with a message indicating that this case is not supported.
+
+
+
+
+**Returns:**
+
+Scope&lt;RendererAPI&gt; A new instance of the [**RendererAPI**](class_a_g_e_1_1_renderer_a_p_i.md), or nullptr if an invalid API is detected. 
+
+
+
+
+
+        
 
 <hr>
 
@@ -353,6 +369,7 @@ static Scope< RendererAPI > AGE::RendererAPI::Create ()
 
 ### function GetAPI 
 
+_This function returns the current API object used by the application._ 
 ```C++
 static inline API AGE::RendererAPI::GetAPI () 
 ```
@@ -360,12 +377,24 @@ static inline API AGE::RendererAPI::GetAPI ()
 
 
 
+
+**Returns:**
+
+The currently active API object, or "Unknown" if no API is set. 
+
+
+
+
+
+        
+
 <hr>
 
 
 
 ### function SetAPI 
 
+_This function sets the API type for the_ [_**RendererAPI**_](class_a_g_e_1_1_renderer_a_p_i.md) _class._
 ```C++
 static inline void AGE::RendererAPI::SetAPI (
     RendererAPI::API Type
@@ -374,6 +403,24 @@ static inline void AGE::RendererAPI::SetAPI (
 
 
 
+
+
+**Parameters:**
+
+
+* `Type` The API type to be set, which can be one of the values defined in the RendererAPI::API enum. 
+
+
+
+**Returns:**
+
+void 
+
+
+
+
+
+        
 
 <hr>
 

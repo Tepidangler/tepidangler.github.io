@@ -26,12 +26,14 @@
         <name>SquirrelNoise</name>
         <qualifiedname>AGE::SquirrelNoise::SquirrelNoise</qualifiedname>
         <briefdescription>
+<para>Constructor for <ref refid="class_a_g_e_1_1_squirrel_noise" kindref="compound">SquirrelNoise</ref> class. Initializes the position member variable to 0. </para>
         </briefdescription>
         <detaileddescription>
+<para>Constructor for <ref refid="class_a_g_e_1_1_squirrel_noise" kindref="compound">SquirrelNoise</ref> class. Initializes the position to 0. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="13" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="79" bodyend="82"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="13" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="261" bodyend="264"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_squirrel_noise_1a60949c6c2dd7572b8e861fa4bb52fe6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint32_t</type>
@@ -40,12 +42,21 @@
         <name>Rand</name>
         <qualifiedname>AGE::SquirrelNoise::Rand</qualifiedname>
         <briefdescription>
+<para>Generates a pseudorandom 32-bit unsigned integer. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function uses the <ref refid="class_a_g_e_1_1_squirrel_noise" kindref="compound">SquirrelNoise</ref> algorithm to generate a pseudorandom number. The generated value is based on the current position in the noise field, which is then incremented for the next call.</para>
+<para><simplesect kind="return"><para>A pseudorandom 32-bit unsigned integer.</para>
+</simplesect>
+Generates a pseudorandom number using the squirrel noise algorithm.</para>
+<para>This function generates a pseudorandom number based on the current position in the noise field, and then increments that position by one for subsequent calls. The returned value is an unsigned 32-bit integer.</para>
+<para><simplesect kind="return"><para>A pseudorandom number generated using squirrel noise algorithm. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="16" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="85" bodyend="88"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="16" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="281" bodyend="284"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_squirrel_noise_1a4c12cf4a2fe266d47602df2df8da9117" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint32_t</type>
@@ -63,12 +74,55 @@
           <defval>0</defval>
         </param>
         <briefdescription>
+<para>Generates a one-dimensional noise value. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function generates a pseudorandom number for the given position and seed using a combination of bitwise operations. The result is then returned as an unsigned 32-bit integer.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input position for which to generate the noise. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Seed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A random value used to initialize the noise generation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An unsigned 32-bit integer representing the one-dimensional noise at the given position and seed.</para>
+</simplesect>
+Generates a one-dimensional noise value.</para>
+<para>This function generates a pseudorandom number based on the input position and seed using various bitwise operations. The result is then returned as an unsigned 32-bit integer.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input position for generating the noise. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Seed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A seed value to initialize the random generator. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An unsigned 32-bit integer representing the generated noise value. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="18" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="90" bodyend="106"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="18" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="305" bodyend="321"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_squirrel_noise_1a800fef91b84b02b4e1266e0f141074bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint32_t</type>
@@ -90,12 +144,71 @@
           <defval>0</defval>
         </param>
         <briefdescription>
+<para>Computes a two-dimensional noise value. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function generates a pseudo-random number based on the input parameters using a prime number (198491317) to create an offset for the x position in combination with the y position. The result is then passed through <ref refid="class_a_g_e_1_1_squirrel_noise_1a4c12cf4a2fe266d47602df2df8da9117" kindref="member">Get1dNoiseUint()</ref> to generate the noise value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>PositionX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x-coordinate of the point for which to compute the noise. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PositionY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y-coordinate of the point for which to compute the noise. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Seed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A seed value used to initialize the pseudo-random number generator.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pseudo-random integer between 0 and UINT32_MAX, representing a two-dimensional noise value.</para>
+</simplesect>
+Computes a two-dimensional noise value.</para>
+<para>This function generates a pseudo-random number based on the input coordinates and seed, using a prime number (198491317) to scramble the position data. The scrambled xy-coordinate is then passed into the <ref refid="class_a_g_e_1_1_squirrel_noise_1a4c12cf4a2fe266d47602df2df8da9117" kindref="member">Get1dNoiseUint()</ref> function for further processing.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>PositionX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x-coordinate in the noise field. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PositionY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y-coordinate in the noise field. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Seed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A seed value to initialize the random number generator.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pseudo-random uint32_t value based on the input coordinates and seed. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="19" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="107" bodyend="111"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="19" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="344" bodyend="348"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_squirrel_noise_1a0b1992d4f4f608157f808778441ab247" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint32_t</type>
@@ -121,12 +234,87 @@
           <defval>0</defval>
         </param>
         <briefdescription>
+<para>This function generates a 3D noise value using the <ref refid="class_a_g_e_1_1_squirrel_noise" kindref="compound">SquirrelNoise</ref> algorithm. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function takes in three positions (PositionX, PositionY, and PositionZ) and a seed for randomness. It uses these inputs to generate a unique hash which is then passed into the <ref refid="class_a_g_e_1_1_squirrel_noise_1a4c12cf4a2fe266d47602df2df8da9117" kindref="member">Get1dNoiseUint()</ref> function. This function returns a uint32_t value representing the noise at the given position.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>PositionX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x-coordinate of the position in the noise field. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PositionY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y-coordinate of the position in the noise field. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PositionZ</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The z-coordinate of the position in the noise field. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Seed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A seed for randomness, used to generate a unique hash.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns a uint32_t value representing the noise at the given position.</para>
+</simplesect>
+This function generates a 3D noise value using the <ref refid="class_a_g_e_1_1_squirrel_noise" kindref="compound">SquirrelNoise</ref> algorithm.</para>
+<para>The function takes in three positions (PositionX, PositionY, and PositionZ) and a seed to generate a unique noise value. It uses two prime numbers (PRIME_NUMBER1 and PRIME_NUMBER2) to create an offset for the position values which enhances the randomness of the noise generation.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>PositionX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x-coordinate of the position in the 3D space. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PositionY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y-coordinate of the position in the 3D space. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PositionZ</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The z-coordinate of the position in the 3D space. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Seed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A seed value to generate a unique noise value.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns a uint32_t noise value generated using <ref refid="class_a_g_e_1_1_squirrel_noise" kindref="compound">SquirrelNoise</ref> algorithm. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="20" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="112" bodyend="117"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="20" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="373" bodyend="378"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_squirrel_noise_1aab2d1963ce6e20a78f06c60d1b1b072d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint32_t</type>
@@ -156,12 +344,103 @@
           <defval>0</defval>
         </param>
         <briefdescription>
+<para>Computes a four-dimensional noise value. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function computes the noise value for a given position in space (x, y, z, w) and with a specific seed. The computation is based on the <ref refid="class_a_g_e_1_1_squirrel_noise_1a4c12cf4a2fe266d47602df2df8da9117" kindref="member">Get1dNoiseUint()</ref> function, which internally uses a prime number to generate pseudo-random values.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>PositionX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x coordinate of the position for which to compute the noise value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PositionY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y coordinate of the position for which to compute the noise value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PositionZ</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The z coordinate of the position for which to compute the noise value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PositionW</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The w coordinate of the position for which to compute the noise value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Seed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A seed used to initialize the pseudo-random number generator.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A 32-bit unsigned integer representing the computed noise value.</para>
+</simplesect>
+Computes a four-dimensional noise value.</para>
+<para>This function calculates a noise value based on the input parameters and a provided seed. The calculation involves a prime number multiplication, which is used to disperse the values evenly across the noise space.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>PositionX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x position for the noise calculation. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PositionY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y position for the noise calculation. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PositionZ</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The z position for the noise calculation. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PositionW</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The w position for the noise calculation. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Seed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A seed value used to initialize the random number generator.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns a uint32_t representing the calculated noise value. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="21" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="118" bodyend="124"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="21" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="405" bodyend="411"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_squirrel_noise_1ad8618489a0b9a0288b4de7c6032e833e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -179,12 +458,54 @@
           <defval>0</defval>
         </param>
         <briefdescription>
+<para>Computes a one-dimensional noise value in the range [0, 1] for a given position and seed. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function uses a hash function to generate a pseudorandom number based on the input parameters. The result is then scaled to the range [0, 1]. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The integer position for which to compute the noise value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Seed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A unique identifier used to seed the random number generator. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A floating-point value representing the computed noise in the range [0, 1].</para>
+</simplesect>
+Computes a one-dimensional noise value in the range [0, 1] for a given position and seed.</para>
+<para>This function uses a hashing algorithm to generate a pseudorandom number based on the input parameters. The result is then scaled to fall within the range [0, 1].</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The integer position in the noise field. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Seed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A seed value for the random number generation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A floating-point value representing the one-dimensional noise at the given position and with the given seed. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="24" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="126" bodyend="142"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="24" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="430" bodyend="446"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_squirrel_noise_1ac8120528b251d8d46c19982eecacd76c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -206,12 +527,71 @@
           <defval>0</defval>
         </param>
         <briefdescription>
+<para>This function returns a two-dimensional noise value between 0 and 1. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function takes three parameters - the x and y positions for which to generate the noise, and a seed used in the random number generation. It uses the <ref refid="class_a_g_e_1_1_squirrel_noise_1a800fef91b84b02b4e1266e0f141074bc" kindref="member">Get2dNoiseUint()</ref> function internally to get an unsigned integer noise value, then scales this by ONE_OVER_MAX_UINT to return a float between 0 and 1.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>PositionX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x position for which to generate the noise. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PositionY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y position for which to generate the noise. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Seed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A seed used in the random number generation.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A floating-point value between 0 and 1 representing the two-dimensional noise at the given positions with the provided seed.</para>
+</simplesect>
+This function generates a two-dimensional noise value between 0 and 1.</para>
+<para>The function takes in three parameters - the x and y positions for which to generate the noise, as well as a seed for random number generation. It uses the <ref refid="class_a_g_e_1_1_squirrel_noise_1a800fef91b84b02b4e1266e0f141074bc" kindref="member">Get2dNoiseUint()</ref> function internally to get an unsigned integer noise value, then converts this to a float between 0 and 1 by multiplying with ONE_OVER_MAX_UINT (a constant defined in <ref refid="class_a_g_e_1_1_squirrel_noise" kindref="compound">SquirrelNoise</ref> class).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>PositionX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x position for which to generate the noise. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PositionY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y position for which to generate the noise. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Seed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A seed value for random number generation.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns a float between 0 and 1 representing the two-dimensional noise at the given positions with the provided seed. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="25" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="144" bodyend="148"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="25" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="470" bodyend="474"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_squirrel_noise_1aae86f33318f9a9bbebdf9f33d59fb04f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -237,12 +617,87 @@
           <defval>0</defval>
         </param>
         <briefdescription>
+<para>This function generates a 3D noise value between 0 and 1. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function takes in the x, y, z coordinates of the position for which to generate the noise, as well as a seed for random number generation. It uses this information along with some pre-defined constants (like ONE_OVER_MAX_UINT) to calculate and return a noise value between 0 and 1.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>PositionX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x coordinate of the position for which to generate the noise. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PositionY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y coordinate of the position for which to generate the noise. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PositionZ</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The z coordinate of the position for which to generate the noise. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Seed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A seed value used in random number generation.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A float representing a 3D noise value between 0 and 1.</para>
+</simplesect>
+This function generates a 3D noise value between 0 and 1.</para>
+<para>The function takes in the x, y, z coordinates of the position for which to generate the noise, as well as a seed for random number generation. It uses this information along with some predefined constants (like ONE_OVER_MAX_UINT) to calculate and return a float value between 0 and 1 representing the noise at that location.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>PositionX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x-coordinate of the position for which to generate noise. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PositionY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y-coordinate of the position for which to generate noise. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PositionZ</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The z-coordinate of the position for which to generate noise. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Seed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A seed value used in random number generation.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A float value between 0 and 1 representing the noise at the given position. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="26" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="150" bodyend="155"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="26" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="500" bodyend="505"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_squirrel_noise_1a77011d1af901b9c57387791250b930af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -272,12 +727,103 @@
           <defval>0</defval>
         </param>
         <briefdescription>
+<para>This function generates a four-dimensional noise value between 0 and 1. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function uses the <ref refid="class_a_g_e_1_1_squirrel_noise_1aab2d1963ce6e20a78f06c60d1b1b072d" kindref="member">Get4dNoiseUint()</ref> method to generate an unsigned integer noise value. It then converts this value into a float between 0 and 1 by multiplying it with ONE_OVER_MAX_UINT (a constant defined in <ref refid="class_a_g_e_1_1_squirrel_noise" kindref="compound">SquirrelNoise</ref> class).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>PositionX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x-coordinate of the position for which to generate noise. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PositionY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y-coordinate of the position for which to generate noise. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PositionZ</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The z-coordinate of the position for which to generate noise. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PositionW</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The w-coordinate of the position for which to generate noise. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Seed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A seed value used to initialize the random number generator.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A float representing a four-dimensional noise value between 0 and 1.</para>
+</simplesect>
+This function generates a four-dimensional noise value between 0 and 1.</para>
+<para>The function uses the <ref refid="class_a_g_e_1_1_squirrel_noise_1aab2d1963ce6e20a78f06c60d1b1b072d" kindref="member">Get4dNoiseUint()</ref> method to generate an unsigned integer noise value. It then converts this value into a float between 0 and 1 by multiplying it with ONE_OVER_MAX_UINT (a constant defined as 1.0/UINT32_MAX).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>PositionX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x-coordinate of the position for which to generate noise. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PositionY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y-coordinate of the position for which to generate noise. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PositionZ</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The z-coordinate of the position for which to generate noise. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PositionW</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The w-coordinate of the position for which to generate noise. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Seed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A seed value used to initialize the random number generator.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A float between 0 and 1 representing the four-dimensional noise at the specified position. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="27" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="157" bodyend="163"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="27" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="533" bodyend="539"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_squirrel_noise_1ad02025ff5f1c5a59bfbbdc5093ccb18a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -298,10 +844,53 @@
 <para>Same Functions, mapped to floats in [-1,1]. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function generates a one-dimensional noise value between -1 and 1.</para>
+<para>The function takes an integer position and a seed as input parameters. It uses the provided position and seed to generate a pseudo-random number using bitwise operations, which is then scaled to fall within the range of -1 to 1.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An integer representing the position for which to generate noise. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Seed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A 32-bit unsigned integer used as a seed for the random number generation.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A floating-point value between -1 and 1, representing the generated noise value.</para>
+</simplesect>
+Computes a noise value in the range -1 to 1.</para>
+<para>This function generates a pseudo-random float value using a hash function on an input position and seed. The output is then scaled to fall within the range of -1 to 1.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The integer position for which to generate noise. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Seed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A unique identifier used to initialize the random number generator. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A float value in the range -1 to 1 representing the computed noise. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="31" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="165" bodyend="181"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="31" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="560" bodyend="576"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_squirrel_noise_1abfbb4175a466f989d90c120ffb203285" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -323,12 +912,71 @@
           <defval>0</defval>
         </param>
         <briefdescription>
+<para>This function generates a 2D noise value between -1 and 1. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function takes in two positions (x and y) and a seed for the random number generation. It uses the <ref refid="class_a_g_e_1_1_squirrel_noise_1a800fef91b84b02b4e1266e0f141074bc" kindref="member">Get2dNoiseUint()</ref> function to generate an integer noise value, which is then scaled to be between -1 and 1 by multiplying with ONE_OVER_MAX_INT.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>PositionX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x position in the noise field. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PositionY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y position in the noise field. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Seed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A seed for the random number generation.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A float value representing the 2D noise at the given positions and with the provided seed, between -1 and 1.</para>
+</simplesect>
+This function generates a 2D noise value between -1 and 1.</para>
+<para>The function takes in two positions (x and y) and a seed for the random number generation. It uses the <ref refid="class_a_g_e_1_1_squirrel_noise_1a800fef91b84b02b4e1266e0f141074bc" kindref="member">Get2dNoiseUint()</ref> function to generate an integer noise value, then scales it by ONE_OVER_MAX_INT to get a float between -1 and 1.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>PositionX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x position in the noise field. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PositionY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y position in the noise field. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Seed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A seed for the random number generation.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A floating-point value representing the 2D noise at the given positions and with the provided seed, between -1 and 1. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="32" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="183" bodyend="187"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="32" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="600" bodyend="604"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_squirrel_noise_1a91b8ba95f6b91a9ba0d3d7cc3a6b4ea8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -354,12 +1002,87 @@
           <defval>0</defval>
         </param>
         <briefdescription>
+<para>This function generates a 3D noise value between -1 and 1. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function takes in the x, y, z coordinates of the position for which we want to generate noise, as well as a seed for the random number generator. It uses this information along with some pre-defined constants (like ONE_OVER_MAX_INT) to calculate and return a 3D noise value between -1 and 1.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>PositionX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x coordinate of the position for which we want to generate noise. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PositionY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y coordinate of the position for which we want to generate noise. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PositionZ</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The z coordinate of the position for which we want to generate noise. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Seed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A seed for the random number generator used in generating the noise value.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns a float between -1 and 1 representing the calculated 3D noise value.</para>
+</simplesect>
+This function generates a 3D noise value between -1 and 1.</para>
+<para>The function takes in the x, y, z coordinates of the position to generate the noise for, as well as a seed for the random number generation. It uses the <ref refid="class_a_g_e_1_1_squirrel_noise_1a0b1992d4f4f608157f808778441ab247" kindref="member">Get3dNoiseUint()</ref> function internally to get an unsigned integer noise value, which it then scales down by ONE_OVER_MAX_INT and converts to float before returning.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>PositionX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x coordinate of the position to generate the noise for. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PositionY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y coordinate of the position to generate the noise for. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PositionZ</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The z coordinate of the position to generate the noise for. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Seed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A seed for the random number generation.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A float representing a 3D noise value between -1 and 1. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="33" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="189" bodyend="194"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="33" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="630" bodyend="635"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_squirrel_noise_1a14277531037360451ac27f2b128e10c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -389,12 +1112,103 @@
           <defval>0</defval>
         </param>
         <briefdescription>
+<para>This function generates a four-dimensional noise value between -1 and 1. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function uses the <ref refid="class_a_g_e_1_1_squirrel_noise_1aab2d1963ce6e20a78f06c60d1b1b072d" kindref="member">Get4dNoiseUint()</ref> method to generate an integer noise value, then scales it by ONE_OVER_MAX_INT to get a float value in the range [0, 1]. This is then scaled by 2 and subtracted from 3 to get a value in the range [-1, 1].</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>PositionX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x-coordinate of the position for which to generate noise. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PositionY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y-coordinate of the position for which to generate noise. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PositionZ</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The z-coordinate of the position for which to generate noise. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PositionW</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The w-coordinate of the position for which to generate noise. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Seed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A seed value used to initialize the random number generator.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A float value representing the four-dimensional noise at the given position and with the given seed. This will be in the range [-1, 1].</para>
+</simplesect>
+This function generates a four-dimensional noise value between -1 and 1.</para>
+<para>The function takes in the positions (x, y, z, w) and a seed to generate a pseudorandom number. It then scales this number by one over the maximum integer value to get a floating point number between 0 and 1. This is then multiplied by -1 and 1 to get a noise value between -1 and 1.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>PositionX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x position in the noise space. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PositionY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y position in the noise space. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PositionZ</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The z position in the noise space. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PositionW</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The w position in the noise space. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Seed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A seed for the pseudorandom number generator.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A floating point value between -1 and 1 representing a four-dimensional noise value. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="34" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="196" bodyend="202"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="34" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="663" bodyend="669"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_squirrel_noise_1a28cebb86e9f4a5824459891b05804285" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -415,10 +1229,32 @@
 <para>Same Functions, mapped to floats in [-180,180]. </para>
         </briefdescription>
         <detaileddescription>
+<para>Computes a one-dimensional noise value for a given rotation and seed.</para>
+<para>This function uses a combination of bitwise operations to generate a pseudorandom number based on the input parameters. The result is then clamped between 1 and ONE_OVER_MAX_UINT, which are constants defined in the <ref refid="class_a_g_e_1_1_squirrel_noise" kindref="compound">SquirrelNoise</ref> class.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Rotation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rotation value used as an input for the noise generation. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Seed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A seed value to initialize the random number generator. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A float value representing a one-dimensional noise value. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="37" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="205" bodyend="221"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="37" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="682" bodyend="698"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

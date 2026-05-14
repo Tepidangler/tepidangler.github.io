@@ -78,6 +78,21 @@
                 <h1 id="class-ageopenglframebuffer">Class AGE::OpenGLFrameBuffer</h1>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespace_a_g_e/"><strong>AGE</strong></a> <strong>&gt;</strong> <a href="./"><strong>OpenGLFrameBuffer</strong></a></p>
 <p>Inherits the following classes: <a href="../class_a_g_e_1_1_frame_buffer/">AGE::FrameBuffer</a></p>
+<h2 id="public-attributes">Public Attributes</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">COMMENT</td>
+<td style="text-align: left;"><a href="#variable-__pad0__"><strong>__pad0__</strong></a>  <br></td>
+</tr>
+</tbody>
+</table>
 <h2 id="public-functions">Public Functions</h2>
 <table>
 <thead>
@@ -89,31 +104,31 @@
 <tbody>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-bind"><strong>Bind</strong></a> () override<br></td>
+<td style="text-align: left;"><a href="#function-bind"><strong>Bind</strong></a> () override<br><em>This function binds the OpenGL framebuffer to be used for rendering operations.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-clearattachment"><strong>ClearAttachment</strong></a> (uint32_t Index, int Value) override<br></td>
+<td style="text-align: left;"><a href="#function-clearattachment"><strong>ClearAttachment</strong></a> (uint32_t Index, int Value) override<br><em>Clears a specific color attachment at the given index with a specified value.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual uint32_t</td>
-<td style="text-align: left;"><a href="#function-getcolorattachmentrendererid"><strong>GetColorAttachmentRendererID</strong></a> (uint32_t Index=0) override const<br></td>
+<td style="text-align: left;"><a href="#function-getcolorattachmentrendererid"><strong>GetColorAttachmentRendererID</strong></a> (uint32_t Index=0) override const<br><em>Get the</em> <a href="../class_a_g_e_1_1_renderer/"><em><strong>Renderer</strong></em></a> <em>ID for a specific Color Attachment.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual uint32_t</td>
-<td style="text-align: left;"><a href="#function-getdepthattachmentrendererid"><strong>GetDepthAttachmentRendererID</strong></a> () override const<br></td>
+<td style="text-align: left;"><a href="#function-getdepthattachmentrendererid"><strong>GetDepthAttachmentRendererID</strong></a> () override const<br><em>This function returns the ID of the depth attachment renderer.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual <a href="../struct_a_g_e_1_1_frame_buffer_specification/"><strong>FrameBufferSpecification</strong></a> &amp;</td>
-<td style="text-align: left;"><a href="#function-getspecification-12"><strong>GetSpecification</strong></a> () override<br></td>
+<td style="text-align: left;"><a href="#function-getspecification-12"><strong>GetSpecification</strong></a> () override<br><em>Gets the specification of the frame buffer.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual const <a href="../struct_a_g_e_1_1_frame_buffer_specification/"><strong>FrameBufferSpecification</strong></a> &amp;</td>
-<td style="text-align: left;"><a href="#function-getspecification-22"><strong>GetSpecification</strong></a> () override const<br></td>
+<td style="text-align: left;"><a href="#function-getspecification-22"><strong>GetSpecification</strong></a> () override const<br><em>Returns the specification of the frame buffer.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual const <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a></td>
-<td style="text-align: left;"><a href="#function-getwidthheight"><strong>GetWidthHeight</strong></a> () override const<br></td>
+<td style="text-align: left;"><a href="#function-getwidthheight"><strong>GetWidthHeight</strong></a> () override const<br><em>Returns the width and height of an object as a</em> <a href="../struct_a_g_e_1_1_vector2/"><em><strong>Vector2</strong></em></a> <em>.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
@@ -121,31 +136,31 @@
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-onevent"><strong>OnEvent</strong></a> (<a href="../class_a_g_e_1_1_event/"><strong>Event</strong></a> &amp; E) override<br></td>
+<td style="text-align: left;"><a href="#function-onevent"><strong>OnEvent</strong></a> (<a href="../class_a_g_e_1_1_event/"><strong>Event</strong></a> &amp; E) override<br><em>Handles events for the</em> <a href="./"><em><strong>OpenGLFrameBuffer</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-openglframebuffer"><strong>OpenGLFrameBuffer</strong></a> (const <a href="../struct_a_g_e_1_1_frame_buffer_specification/"><strong>FrameBufferSpecification</strong></a> &amp; Spec) <br></td>
+<td style="text-align: left;"><a href="#function-openglframebuffer"><strong>OpenGLFrameBuffer</strong></a> (const <a href="../struct_a_g_e_1_1_frame_buffer_specification/"><strong>FrameBufferSpecification</strong></a> &amp; Spec) <br><em>Constructor for</em> <a href="./"><em><strong>OpenGLFrameBuffer</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-present"><strong>Present</strong></a> () override<br></td>
+<td style="text-align: left;"><a href="#function-present"><strong>Present</strong></a> () override<br><em>This function is used for presenting some content or data.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual int</td>
-<td style="text-align: left;"><a href="#function-readpixel"><strong>ReadPixel</strong></a> (uint32_t AttachmentIndex, int x, int y) override<br></td>
+<td style="text-align: left;"><a href="#function-readpixel"><strong>ReadPixel</strong></a> (uint32_t AttachmentIndex, int x, int y) override<br><em>Reads a single pixel from the OpenGL framebuffer.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-resize"><strong>Resize</strong></a> (const uint32_t Width, const uint32_t Height) override<br></td>
+<td style="text-align: left;"><a href="#function-resize"><strong>Resize</strong></a> (const uint32_t Width, const uint32_t Height) override<br><em>Resizes the OpenGL</em> <a href="../class_a_g_e_1_1_frame_buffer/"><em><strong>FrameBuffer</strong></em></a> <em>to a new size.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-unbind"><strong>Unbind</strong></a> () override<br></td>
+<td style="text-align: left;"><a href="#function-unbind"><strong>Unbind</strong></a> () override<br><em>Unbinds the current frame buffer.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-openglframebuffer"><strong>~OpenGLFrameBuffer</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-openglframebuffer"><strong>~OpenGLFrameBuffer</strong></a> () <br><em>Destructor for the</em> <a href="./"><em><strong>OpenGLFrameBuffer</strong></em></a> <em>class. This function deletes both color and depth attachments associated with the frame buffer object.</em></td>
 </tr>
 </tbody>
 </table>
@@ -161,7 +176,7 @@
 <tbody>
 <tr>
 <td style="text-align: right;">T *</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_frame_buffer/#function-as"><strong>As</strong></a> () <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_frame_buffer/#function-as"><strong>As</strong></a> () <br><em>This function is currently not implemented and will always throw an assertion. It returns a null pointer of type T*. The purpose of this function is unknown.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
@@ -213,7 +228,7 @@
 </tr>
 <tr>
 <td style="text-align: right;">virtual</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_frame_buffer/#function-framebuffer"><strong>~FrameBuffer</strong></a> () <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_frame_buffer/#function-framebuffer"><strong>~FrameBuffer</strong></a> () <br><em>Virtual destructor for the</em> <a href="../class_a_g_e_1_1_frame_buffer/"><em><strong>FrameBuffer</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
@@ -229,55 +244,122 @@
 <tbody>
 <tr>
 <td style="text-align: right;">Ref&lt; <a href="../class_a_g_e_1_1_frame_buffer/"><strong>FrameBuffer</strong></a> &gt;</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_frame_buffer/#function-create"><strong>Create</strong></a> (const <a href="../struct_a_g_e_1_1_frame_buffer_specification/"><strong>FrameBufferSpecification</strong></a> &amp; Spec) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_frame_buffer/#function-create"><strong>Create</strong></a> (const <a href="../struct_a_g_e_1_1_frame_buffer_specification/"><strong>FrameBufferSpecification</strong></a> &amp; Spec) <br><em>Creates a new</em> <a href="../class_a_g_e_1_1_frame_buffer/"><em><strong>FrameBuffer</strong></em></a> <em>based on the specified specification. The type of</em><a href="../class_a_g_e_1_1_frame_buffer/"><em><strong>FrameBuffer</strong></em></a> <em>to create is determined by the current</em><a href="../class_a_g_e_1_1_renderer_a_p_i/"><em><strong>RendererAPI</strong></em></a> <em>in use.</em></td>
 </tr>
 </tbody>
 </table>
+<h2 id="public-attributes-documentation">Public Attributes Documentation</h2>
+<h3 id="variable-__pad0__">variable __pad0__</h3>
+<pre><code class="language-C++">COMMENT AGE::OpenGLFrameBuffer::__pad0__;
+</code></pre>
+<hr>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-bind">function Bind</h3>
+<p><em>This function binds the OpenGL framebuffer to be used for rendering operations.</em> </p>
 <pre><code class="language-C++">virtual void AGE::OpenGLFrameBuffer::Bind () override
 </code></pre>
+<p>The function first calls glBindFramebuffer with GL_FRAMEBUFFER and m_RendererID as arguments, which binds the framebuffer object with the given ID. Then it sets the viewport using glViewport with (0, 0) and (m_Specification.Width, m_Specification.Height) as arguments, setting the dimensions of the rendering area to match the size of the framebuffer's client area.</p>
+<p>Binds the OpenGL framebuffer object for rendering.</p>
+<p>This function binds the framebuffer object associated with this instance of <code>OpenGLFrameBuffer</code> to the GL_FRAMEBUFFER target, and sets the viewport dimensions according to the specification provided when the framebuffer was created.</p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <p>Implements <a href="../class_a_g_e_1_1_frame_buffer/#function-bind"><em>AGE::FrameBuffer::Bind</em></a></p>
 <hr>
 
 <h3 id="function-clearattachment">function ClearAttachment</h3>
+<p><em>Clears a specific color attachment at the given index with a specified value.</em> </p>
 <pre><code class="language-C++">virtual void AGE::OpenGLFrameBuffer::ClearAttachment (
     uint32_t Index,
     int Value
 ) override
 </code></pre>
+<p>This function clears the color attachment at the provided index to the specified value using OpenGL's glClearTexImage function. It first checks if the provided index is within the valid range of color attachments, and then retrieves the corresponding specification for that attachment. The texture format from the specification is used in the call to glClearTexImage. If the index is out of bounds or there are no color attachments at all, it will assert with an error message.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Index</code> The zero-based index of the color attachment to clear. </li>
+<li><code>Value</code> The value to which to clear the specified color attachment.</li>
+</ul>
+<p>Clears a specific color attachment at the given index with a specified value.</p>
+<p>This function clears a color attachment at the provided index to a specified value using OpenGL's glClearTexImage function. The function first checks if the provided index is within the valid range of color attachments, and throws an assertion error if it isn't. Then, it retrieves the specification for the corresponding color attachment and uses this information to clear the texture with the specified value.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Index</code> The index of the color attachment to be cleared. </li>
+<li><code>Value</code> The value to which the color attachment should be cleared. </li>
+</ul>
 <p>Implements <a href="../class_a_g_e_1_1_frame_buffer/#function-clearattachment"><em>AGE::FrameBuffer::ClearAttachment</em></a></p>
 <hr>
 
 <h3 id="function-getcolorattachmentrendererid">function GetColorAttachmentRendererID</h3>
+<p><em>Get the</em> <a href="../class_a_g_e_1_1_renderer/"><em><strong>Renderer</strong></em></a> <em>ID for a specific Color Attachment.</em></p>
 <pre><code class="language-C++">inline virtual uint32_t AGE::OpenGLFrameBuffer::GetColorAttachmentRendererID (
     uint32_t Index=0
 ) override const
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Index</code> The index of the color attachment to get the renderer ID from. Default is 0. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>The <a href="../class_a_g_e_1_1_renderer/"><strong>Renderer</strong></a> ID of the specified color attachment, or 0 if the index is out of range.</p>
+<p>Get the ID of a color attachment at a given index.</p>
+<p>This function retrieves the ID of a color attachment at a specified index in the framebuffer object. The default index is 0, which corresponds to the first color attachment. If an invalid index is provided (i.e., it's greater than or equal to the number of available color attachments), the program will assert and terminate.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Index</code> The zero-based index of the color attachment to retrieve. Default is 0. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>The ID of the color attachment at the specified index. </p>
 <p>Implements <a href="../class_a_g_e_1_1_frame_buffer/#function-getcolorattachmentrendererid"><em>AGE::FrameBuffer::GetColorAttachmentRendererID</em></a></p>
 <hr>
 
 <h3 id="function-getdepthattachmentrendererid">function GetDepthAttachmentRendererID</h3>
+<p><em>This function returns the ID of the depth attachment renderer.</em> </p>
 <pre><code class="language-C++">inline virtual uint32_t AGE::OpenGLFrameBuffer::GetDepthAttachmentRendererID () override const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>The ID of the depth attachment renderer as a uint32_t value.</p>
+<p>Returns the ID of the depth attachment renderer.</p>
+<p>This function returns the unique identifier for the depth attachment renderer, which is used to reference and manipulate it in various rendering operations.</p>
+<p><strong>Returns:</strong></p>
+<p>The ID of the depth attachment renderer as a uint32_t value. </p>
 <p>Implements <a href="../class_a_g_e_1_1_frame_buffer/#function-getdepthattachmentrendererid"><em>AGE::FrameBuffer::GetDepthAttachmentRendererID</em></a></p>
 <hr>
 
 <h3 id="function-getspecification-12">function GetSpecification [1/2]</h3>
+<p><em>Gets the specification of the frame buffer.</em> </p>
 <pre><code class="language-C++">inline virtual FrameBufferSpecification &amp; AGE::OpenGLFrameBuffer::GetSpecification () override
 </code></pre>
+<p>This function returns a reference to the current specification of the frame buffer. The caller can use this information to determine how the frame buffer is configured and what it supports.</p>
+<p><strong>Returns:</strong></p>
+<p>A reference to the current <a href="../struct_a_g_e_1_1_frame_buffer_specification/"><strong>FrameBufferSpecification</strong></a> object representing the specification of the frame buffer.</p>
+<p>Gets the specification of the frame buffer.</p>
+<p>This function returns a reference to the current specification of the frame buffer. The caller can modify this specification as needed, and these changes will be reflected in any views that are using the frame buffer.</p>
+<p><strong>Returns:</strong></p>
+<p>A reference to the current <a href="../struct_a_g_e_1_1_frame_buffer_specification/"><strong>FrameBufferSpecification</strong></a> object. </p>
 <p>Implements <a href="../class_a_g_e_1_1_frame_buffer/#function-getspecification-12"><em>AGE::FrameBuffer::GetSpecification</em></a></p>
 <hr>
 
 <h3 id="function-getspecification-22">function GetSpecification [2/2]</h3>
+<p><em>Returns the specification of the frame buffer.</em> </p>
 <pre><code class="language-C++">inline virtual const FrameBufferSpecification &amp; AGE::OpenGLFrameBuffer::GetSpecification () override const
 </code></pre>
+<p>This function returns a reference to the specification object that holds details about the current state of the frame buffer. The returned value is constant and should not be modified by the caller.</p>
+<p><strong>Returns:</strong></p>
+<p>A const reference to the <a href="../struct_a_g_e_1_1_frame_buffer_specification/"><strong>FrameBufferSpecification</strong></a> object representing the current state of the frame buffer.</p>
+<p>Returns the specification of the frame buffer.</p>
+<p>This function returns a constant reference to the specification object that holds details about the current state of the frame buffer. The returned value is immutable and can be used for reading, but not for modification.</p>
+<p><strong>Returns:</strong></p>
+<p>A const reference to the <a href="../struct_a_g_e_1_1_frame_buffer_specification/"><strong>FrameBufferSpecification</strong></a> object representing the current state of the frame buffer. </p>
 <p>Implements <a href="../class_a_g_e_1_1_frame_buffer/#function-getspecification-22"><em>AGE::FrameBuffer::GetSpecification</em></a></p>
 <hr>
 
 <h3 id="function-getwidthheight">function GetWidthHeight</h3>
+<p><em>Returns the width and height of an object as a</em> <a href="../struct_a_g_e_1_1_vector2/"><em><strong>Vector2</strong></em></a> <em>.</em></p>
 <pre><code class="language-C++">inline virtual const Vector2 AGE::OpenGLFrameBuffer::GetWidthHeight () override const
 </code></pre>
+<p>This function retrieves the width and height from the m_Specification member variable and returns them in a <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> format. The width is cast to float before being returned.</p>
+<p><strong>Returns:</strong></p>
+<p>A <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> containing the width and height of the object. </p>
 <p>Implements <a href="../class_a_g_e_1_1_frame_buffer/#function-getwidthheight"><em>AGE::FrameBuffer::GetWidthHeight</em></a></p>
 <hr>
 
@@ -287,54 +369,128 @@
 <hr>
 
 <h3 id="function-onevent">function OnEvent</h3>
+<p><em>Handles events for the</em> <a href="./"><em><strong>OpenGLFrameBuffer</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">virtual void AGE::OpenGLFrameBuffer::OnEvent (
     Event &amp; E
 ) override
 </code></pre>
+<p>This function takes an event as input and processes it based on its type. The exact behavior of this function depends on the specifics of the <a href="../class_a_g_e_1_1_event/"><strong>Event</strong></a> class, which is not defined in this file.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>E</code> Reference to the <a href="../class_a_g_e_1_1_event/"><strong>Event</strong></a> object that needs processing.</li>
+</ul>
+<p>Handles events for the <a href="./"><strong>OpenGLFrameBuffer</strong></a> class.</p>
+<p>This function takes an <a href="../class_a_g_e_1_1_event/"><strong>Event</strong></a> object as input and handles it according to its type. The exact behavior of this function depends on the specific implementation of the <a href="../class_a_g_e_1_1_event/"><strong>Event</strong></a> class, which is not specified here.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>E</code> An instance of the <a href="../class_a_g_e_1_1_event/"><strong>Event</strong></a> class that needs to be handled. </li>
+</ul>
 <p>Implements <a href="../class_a_g_e_1_1_frame_buffer/#function-onevent"><em>AGE::FrameBuffer::OnEvent</em></a></p>
 <hr>
 
 <h3 id="function-openglframebuffer">function OpenGLFrameBuffer</h3>
+<p><em>Constructor for</em> <a href="./"><em><strong>OpenGLFrameBuffer</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::OpenGLFrameBuffer::OpenGLFrameBuffer (
     const FrameBufferSpecification &amp; Spec
 ) 
 </code></pre>
+<p>This constructor takes a <a href="../struct_a_g_e_1_1_frame_buffer_specification/"><strong>FrameBufferSpecification</strong></a> object as input, which contains the specifications of the frame buffer to be created. It iterates over the Attachments in the specification and separates them into color attachments (those that are not depth formats) and depth attachment (the one that is). Finally, it calls Invalidate() function to create the actual frame buffer object with OpenGL.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Spec</code> The <a href="../struct_a_g_e_1_1_frame_buffer_specification/"><strong>FrameBufferSpecification</strong></a> object containing specifications for the frame buffer.</li>
+</ul>
+<p>Constructor for <a href="./"><strong>OpenGLFrameBuffer</strong></a> class.</p>
+<p>This constructor initializes an instance of the <a href="./"><strong>OpenGLFrameBuffer</strong></a> class with a <a href="../struct_a_g_e_1_1_frame_buffer_specification/"><strong>FrameBufferSpecification</strong></a> object. It processes the attachments in the specification and separates them into color and depth attachments, based on their format. The Invalidate() function is then called to generate the frame buffer object (FBO) and its associated textures.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Spec</code> A const reference to a <a href="../struct_a_g_e_1_1_frame_buffer_specification/"><strong>FrameBufferSpecification</strong></a> object containing information about the attachments for this frame buffer. </li>
+</ul>
 <hr>
 
 <h3 id="function-present">function Present</h3>
+<p><em>This function is used for presenting some content or data.</em> </p>
 <pre><code class="language-C++">inline virtual void AGE::OpenGLFrameBuffer::Present () override
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>Nothing is returned as this function is a pure virtual function in the base class. It does not return any value.</p>
+<p>This function is used for presenting something in the system.</p>
+<p><strong>Returns:</strong></p>
+<p>Nothing is returned as this function is a pure virtual one and does not provide any meaningful return value. </p>
 <p>Implements <a href="../class_a_g_e_1_1_frame_buffer/#function-present"><em>AGE::FrameBuffer::Present</em></a></p>
 <hr>
 
 <h3 id="function-readpixel">function ReadPixel</h3>
+<p><em>Reads a single pixel from the OpenGL framebuffer.</em> </p>
 <pre><code class="language-C++">virtual int AGE::OpenGLFrameBuffer::ReadPixel (
     uint32_t AttachmentIndex,
     int x,
     int y
 ) override
 </code></pre>
+<p>This function reads a single pixel at the specified (x, y) coordinates in the color attachment of the framebuffer. The pixel data is returned as an integer value.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>AttachmentIndex</code> Index of the color attachment to read from. It should be less than the number of elements in m_ColorAttachments array. </li>
+<li><code>x</code> X-coordinate of the pixel to read. </li>
+<li><code>y</code> Y-coordinate of the pixel to read.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>The integer value of the pixel at (x, y) coordinates in the specified color attachment.</p>
+<p>Reads a single pixel from the OpenGL framebuffer.</p>
+<p>This function reads a single pixel at the specified (x, y) coordinates in the color attachment of the OpenGL framebuffer. The pixel data is returned as an integer value.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>AttachmentIndex</code> Index of the color attachment to read from. Must be less than the number of elements in m_ColorAttachments array. </li>
+<li><code>x</code> Horizontal position of the pixel to read, starting at 0 for leftmost column. </li>
+<li><code>y</code> Vertical position of the pixel to read, starting at 0 for top row.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>The integer value of the pixel data at (x, y). </p>
 <p>Implements <a href="../class_a_g_e_1_1_frame_buffer/#function-readpixel"><em>AGE::FrameBuffer::ReadPixel</em></a></p>
 <hr>
 
 <h3 id="function-resize">function Resize</h3>
+<p><em>Resizes the OpenGL</em> <a href="../class_a_g_e_1_1_frame_buffer/"><em><strong>FrameBuffer</strong></em></a> <em>to a new size.</em></p>
 <pre><code class="language-C++">virtual void AGE::OpenGLFrameBuffer::Resize (
     const uint32_t Width,
     const uint32_t Height
 ) override
 </code></pre>
+<p>This function resizes the framebuffer to the specified width and height, provided they are within the maximum allowed size (s_MaxFramebufferSize). If the dimensions are invalid or exceed the maximum size, it logs a warning message and returns without changing anything.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Width</code> The new width for the <a href="../class_a_g_e_1_1_frame_buffer/"><strong>FrameBuffer</strong></a>. </li>
+<li><code>Height</code> The new height for the <a href="../class_a_g_e_1_1_frame_buffer/"><strong>FrameBuffer</strong></a>.</li>
+</ul>
+<p>Resizes the OpenGL <a href="../class_a_g_e_1_1_frame_buffer/"><strong>FrameBuffer</strong></a> to a specified width and height.</p>
+<p>The function checks if the provided dimensions are within the maximum framebuffer size limit (s_MaxFramebufferSize). If they are, it updates the m_Specification object with the new dimensions and calls Invalidate() to regenerate the framebuffer. If the dimensions are not valid, a warning is logged and no action is taken.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Width</code> The desired width for the <a href="../class_a_g_e_1_1_frame_buffer/"><strong>FrameBuffer</strong></a>. Must be greater than zero and less or equal to s_MaxFramebufferSize. </li>
+<li><code>Height</code> The desired height for the <a href="../class_a_g_e_1_1_frame_buffer/"><strong>FrameBuffer</strong></a>. Must be greater than zero and less or equal to s&lt;｜begin▁of▁sentence｜&gt;MaxFramebufferSize. </li>
+</ul>
 <p>Implements <a href="../class_a_g_e_1_1_frame_buffer/#function-resize"><em>AGE::FrameBuffer::Resize</em></a></p>
 <hr>
 
 <h3 id="function-unbind">function Unbind</h3>
+<p><em>Unbinds the current frame buffer.</em> </p>
 <pre><code class="language-C++">virtual void AGE::OpenGLFrameBuffer::Unbind () override
 </code></pre>
+<p>This function binds the default frame buffer to the OpenGL context using glBindFramebuffer(). The GL_FRAMEBUFFER target is used, and 0 is passed as argument to unbind the currently bound frame buffer.</p>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Unbinds the current frame buffer.</p>
+<p>This function binds the default frame buffer to the OpenGL context using glBindFramebuffer(). The GL_FRAMEBUFFER target is used, and 0 is passed as argument to unbind the currently bound frame buffer.</p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <p>Implements <a href="../class_a_g_e_1_1_frame_buffer/#function-unbind"><em>AGE::FrameBuffer::Unbind</em></a></p>
 <hr>
 
 <h3 id="function-openglframebuffer_1">function ~OpenGLFrameBuffer</h3>
+<p><em>Destructor for the</em> <a href="./"><em><strong>OpenGLFrameBuffer</strong></em></a> <em>class. This function deletes both color and depth attachments associated with the frame buffer object.</em></p>
 <pre><code class="language-C++">AGE::OpenGLFrameBuffer::~OpenGLFrameBuffer () 
 </code></pre>
+<p>Destructor for the <a href="./"><strong>OpenGLFrameBuffer</strong></a> class. This function deletes the framebuffer and its associated color and depth attachments from GPU memory. </p>
 <hr>
 
 <hr />

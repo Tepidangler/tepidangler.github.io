@@ -92,15 +92,15 @@
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-uuid-23"><strong>UUID</strong></a> (uint64_t uuid) <br></td>
+<td style="text-align: left;"><a href="#function-uuid-23"><strong>UUID</strong></a> (uint64_t uuid) <br><em>Constructs a</em> <a href="./"><em><strong>UUID</strong></em></a> <em>object with the given uint64_t value.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-uuid-33"><strong>UUID</strong></a> (const <a href="./"><strong>UUID</strong></a> &amp;) = default<br></td>
+<td style="text-align: left;"><a href="#function-uuid-33"><strong>UUID</strong></a> (const <a href="./"><strong>UUID</strong></a> &amp;) = default<br><em>Default copy constructor for the</em> <a href="./"><em><strong>UUID</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-operator-uint64_t"><strong>operator uint64_t</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-operator-uint64_t"><strong>operator uint64_t</strong></a> () const<br><em>Converts the</em> <a href="./"><em><strong>UUID</strong></em></a> <em>object to a uint64_t value.</em></td>
 </tr>
 </tbody>
 </table>
@@ -111,22 +111,53 @@
 <hr>
 
 <h3 id="function-uuid-23">function UUID [2/3]</h3>
+<p><em>Constructs a</em> <a href="./"><em><strong>UUID</strong></em></a> <em>object with the given uint64_t value.</em></p>
 <pre><code class="language-C++">AGE::UUID::UUID (
     uint64_t uuid
 ) 
 </code></pre>
+<p>This constructor takes an unsigned 64-bit integer and assigns it to the member variable m_UUID.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>uuid</code> The uint64_t value to be assigned to m_UUID.</li>
+</ul>
+<p>Constructs a <a href="./"><strong>UUID</strong></a> object with the given uint64_t value.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>uuid</code> The uint64_t value to be used as the <a href="./"><strong>UUID</strong></a>. </li>
+</ul>
 <hr>
 
 <h3 id="function-uuid-33">function UUID [3/3]</h3>
+<p><em>Default copy constructor for the</em> <a href="./"><em><strong>UUID</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::UUID::UUID (
     const UUID &amp;
 ) = default
 </code></pre>
+<p>This function is used to create a new instance of the <a href="./"><strong>UUID</strong></a> class by copying an existing one. It uses the '= default' syntax, which instructs the compiler to generate a default implementation for this function.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>uuid</code> The <a href="./"><strong>UUID</strong></a> object to be copied.</li>
+</ul>
+<p>Copy constructor for the <a href="./"><strong>UUID</strong></a> class.</p>
+<p>This function creates a new instance of the <a href="./"><strong>UUID</strong></a> class by copying an existing one. It uses the '= default' syntax, which instructs the compiler to generate a default implementation for this function using the default copy semantics provided by the language.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>uuid</code> The <a href="./"><strong>UUID</strong></a> object to be copied. </li>
+</ul>
 <hr>
 
 <h3 id="function-operator-uint64_t">function operator uint64_t</h3>
+<p><em>Converts the</em> <a href="./"><em><strong>UUID</strong></em></a> <em>object to a uint64_t value.</em></p>
 <pre><code class="language-C++">inline AGE::UUID::operator uint64_t () const
 </code></pre>
+<p>This function returns the underlying uint64_t representation of the <a href="./"><strong>UUID</strong></a> object, which is its unique identifier.</p>
+<p><strong>Returns:</strong></p>
+<p>The 64-bit unsigned integer representation of the <a href="./"><strong>UUID</strong></a> object.</p>
+<p>Converts the <a href="./"><strong>UUID</strong></a> to a uint64_t value.</p>
+<p>This function returns the internal representation of the <a href="./"><strong>UUID</strong></a> as a uint64_t value. The conversion is done by simply returning the stored m_UUID member variable.</p>
+<p><strong>Returns:</strong></p>
+<p>A uint64_t representation of the <a href="./"><strong>UUID</strong></a>. </p>
 <hr>
 
 <hr />

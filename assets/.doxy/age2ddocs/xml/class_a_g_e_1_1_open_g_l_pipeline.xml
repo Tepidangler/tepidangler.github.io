@@ -27,12 +27,13 @@
         <name>OpenGLPipeline</name>
         <qualifiedname>AGE::OpenGLPipeline::OpenGLPipeline</qualifiedname>
         <briefdescription>
+<para><ref refid="class_a_g_e_1_1_open_g_l_pipeline" kindref="compound">OpenGLPipeline</ref> is a class that represents an OpenGL pipeline. It provides methods for setting up and managing the rendering process in an OpenGL context. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLPipeline.h" line="11" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLPipeline.cpp" bodystart="13" bodyend="15"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLPipeline.h" line="11" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLPipeline.cpp" bodystart="23" bodyend="25"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_pipeline_1a1354bc5216f72165d090342d804a368f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -41,12 +42,18 @@
         <name>~OpenGLPipeline</name>
         <qualifiedname>AGE::OpenGLPipeline::~OpenGLPipeline</qualifiedname>
         <briefdescription>
+<para>Destructor for the <ref refid="class_a_g_e_1_1_open_g_l_pipeline" kindref="compound">OpenGLPipeline</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is responsible for cleaning up memory that was dynamically allocated during the lifetime of an instance of this class. It deletes four arrays (QuadVertexBufferBase, CircleVertexBufferBase, LineVertexBufferBase, TextVertexBufferBase) and clears a vector (TileVertexBufferBases).</para>
+<para><simplesect kind="return"><para>void</para>
+</simplesect>
+Destructor for the <ref refid="class_a_g_e_1_1_open_g_l_pipeline" kindref="compound">OpenGLPipeline</ref> class. It is responsible for freeing up memory that was allocated dynamically during its lifetime.</para>
+<para>This destructor deletes four arrays (QuadVertexBufferBase, CircleVertexBufferBase, LineVertexBufferBase and TextVertexBufferBase) which were previously allocated using new[]. Additionally, it clears the TileVertexBufferBases vector to free up memory. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLPipeline.h" line="12" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLPipeline.cpp" bodystart="16" bodyend="24"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLPipeline.h" line="12" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLPipeline.cpp" bodystart="38" bodyend="47"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_pipeline_1a55dc8b6a394711e8528648060b99886b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -61,7 +68,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLPipeline.h" line="14" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLPipeline.cpp" bodystart="25" bodyend="179"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLPipeline.h" line="14" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLPipeline.cpp" bodystart="50" bodyend="178"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_pipeline_1ada235ed4edc8b3a5956ec60ea6d71d27" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -71,12 +78,24 @@
         <qualifiedname>AGE::OpenGLPipeline::StartBatch2D</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_pipeline_1af5fedc59898181f7d4490cdf2abd60f8">StartBatch2D</reimplements>
         <briefdescription>
+<para>Resets the buffers for rendering operations in the <ref refid="class_a_g_e_1_1_open_g_l_pipeline" kindref="compound">OpenGLPipeline</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>None </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLPipeline.h" line="15" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLPipeline.cpp" bodystart="180" bodyend="201"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLPipeline.h" line="15" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLPipeline.cpp" bodystart="187" bodyend="212"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_pipeline_1a1150f23aa3d9c2bd9262352b9283ff6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -86,12 +105,19 @@
         <qualifiedname>AGE::OpenGLPipeline::NextBatch2D</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_pipeline_1aeb61ac62f2c5e451d83db1912e62a9bd">NextBatch2D</reimplements>
         <briefdescription>
+<para>This function is used to start the next batch of 2D rendering. It first flushes any existing 2D data by calling Flush2D(), and then starts a new batch with <ref refid="class_a_g_e_1_1_open_g_l_pipeline_1ada235ed4edc8b3a5956ec60ea6d71d27" kindref="member">StartBatch2D()</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>void</para>
+</simplesect>
+This function is used to prepare for the next batch of 2D rendering. It first flushes any existing 2D data by calling Flush2D(), and then starts a new batch with <ref refid="class_a_g_e_1_1_open_g_l_pipeline_1ada235ed4edc8b3a5956ec60ea6d71d27" kindref="member">StartBatch2D()</ref>.</para>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLPipeline.h" line="16" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLPipeline.cpp" bodystart="202" bodyend="206"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLPipeline.h" line="16" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLPipeline.cpp" bodystart="223" bodyend="227"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_pipeline_1aa013b075439e369200071c853073e32d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -106,7 +132,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLPipeline.h" line="17" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLPipeline.cpp" bodystart="207" bodyend="289"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLPipeline.h" line="17" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLPipeline.cpp" bodystart="230" bodyend="315"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_pipeline_1afb311a377326c2ec0aac6d41e4479d0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="struct_a_g_e_1_1_renderer2_d_data" kindref="compound">Renderer2DData</ref> &amp;</type>
@@ -121,7 +147,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLPipeline.h" line="19" column="16" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLPipeline.cpp" bodystart="291" bodyend="294"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLPipeline.h" line="19" column="16" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLPipeline.cpp" bodystart="331" bodyend="334"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_pipeline_1aa49542b069e3a69064e312ea7e88f986" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -131,12 +157,21 @@
         <qualifiedname>AGE::OpenGLPipeline::ResetStats</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_pipeline_1a30f5fdd14396dc67be4e0035da4aba9e">ResetStats</reimplements>
         <briefdescription>
+<para>Resets the statistics of the OpenGL pipeline. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function sets all fields in the <ref refid="struct_a_g_e_1_1_statistics" kindref="compound">Statistics</ref> structure to zero using memset(). It effectively resets the counters for various statistics tracked by the OpenGL pipeline.</para>
+<para><simplesect kind="return"><para>void</para>
+</simplesect>
+Resets the statistics of the OpenGL pipeline.</para>
+<para>This function sets all fields in the <ref refid="struct_a_g_e_1_1_statistics" kindref="compound">Statistics</ref> structure to zero using memset(). It effectively resets the counters and other statistics that track performance over time.</para>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLPipeline.h" line="20" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLPipeline.cpp" bodystart="295" bodyend="298"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLPipeline.h" line="20" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLPipeline.cpp" bodystart="350" bodyend="353"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_pipeline_1adfcae178473572f09740d1e5cad61714" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="struct_a_g_e_1_1_statistics" kindref="compound">Statistics</ref> &amp;</type>
@@ -146,12 +181,21 @@
         <qualifiedname>AGE::OpenGLPipeline::GetStats</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_pipeline_1a3d5f725750be3fe1ee830105bce00ef5">GetStats</reimplements>
         <briefdescription>
+<para>Get the statistics of the OpenGL <ref refid="class_a_g_e_1_1_pipeline" kindref="compound">Pipeline</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function returns a reference to the statistics object that holds information about the performance and usage of the OpenGL <ref refid="class_a_g_e_1_1_pipeline" kindref="compound">Pipeline</ref>. The returned <ref refid="struct_a_g_e_1_1_statistics" kindref="compound">Statistics</ref> object can be used for various purposes such as profiling, debugging or optimizing the rendering process.</para>
+<para><simplesect kind="return"><para>A reference to the <ref refid="struct_a_g_e_1_1_statistics" kindref="compound">Statistics</ref> object.</para>
+</simplesect>
+Get the statistics of the OpenGL <ref refid="class_a_g_e_1_1_pipeline" kindref="compound">Pipeline</ref>.</para>
+<para>This function returns a reference to the statistics object that holds information about the performance and usage of the OpenGL pipeline.</para>
+<para><simplesect kind="return"><para>A reference to the <ref refid="struct_a_g_e_1_1_statistics" kindref="compound">Statistics</ref> object. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLPipeline.h" line="21" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLPipeline.cpp" bodystart="299" bodyend="302"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLPipeline.h" line="21" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLPipeline.cpp" bodystart="369" bodyend="372"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_pipeline_1ac458e94c045896b199990effb5c31614" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -160,12 +204,21 @@
         <name>GenerateDefaultTextures</name>
         <qualifiedname>AGE::OpenGLPipeline::GenerateDefaultTextures</qualifiedname>
         <briefdescription>
+<para>GenerateDefaultTextures is a function that creates and initializes default textures for the <ref refid="class_a_g_e_1_1_open_g_l_pipeline" kindref="compound">OpenGLPipeline</ref> object. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function generates a white texture with full alpha channel (0xffffffff) and sets it as the WhiteTexture member of the m_Data struct. The <ref refid="class_a_g_e_1_1_texture2_d_1ad2e1593e7f5b0382d34900899928c031" kindref="member">Texture2D::Create()</ref> function is used to create the texture, and the SetData() method is called on the created texture to initialize its data.</para>
+<para><simplesect kind="return"><para>void No return value.</para>
+</simplesect>
+GenerateDefaultTextures is a function that generates default textures for the <ref refid="class_a_g_e_1_1_open_g_l_pipeline" kindref="compound">OpenGLPipeline</ref> class.</para>
+<para>This function creates a white texture and sets it as the default texture data member of the <ref refid="class_a_g_e_1_1_open_g_l_pipeline" kindref="compound">OpenGLPipeline</ref> object. The white texture is represented by a 32-bit unsigned integer with all its bits set to 1, which corresponds to color (255, 255, 255, 255) in RGBA format.</para>
+<para><simplesect kind="return"><para>void No return value. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLPipeline.h" line="22" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLPipeline.cpp" bodystart="304" bodyend="309"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLPipeline.h" line="22" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLPipeline.cpp" bodystart="388" bodyend="393"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

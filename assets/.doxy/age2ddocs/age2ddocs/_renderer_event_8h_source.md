@@ -19,13 +19,13 @@ namespace AGE
     class RendererChangeEvent : public Event
     {
     public:
-        RendererChangeEvent(AGEWindow* Window)
+RendererChangeEvent(AGEWindow* Window)
             : m_Window(Window) {}
 
 
-        inline AGEWindow* GetWindow() const { return m_Window; }
+inline AGEWindow* GetWindow() const { return m_Window; }
 
-        std::string ToString() const override
+std::string ToString() const override
         {
             std::stringstream ss;
             ss << "Renderer Changed: " << Utils::ConvertAPIToString();
@@ -41,10 +41,10 @@ namespace AGE
     class RenderUIEvent : public Event
     {
     public:
-        RenderUIEvent(TimeStep DeltaTime)
+RenderUIEvent(TimeStep DeltaTime)
             :m_DeltaTime(DeltaTime){}
 
-        inline TimeStep GetDeltaTime() const { return m_DeltaTime; }
+inline TimeStep GetDeltaTime() const { return m_DeltaTime; }
         TimeStep m_DeltaTime;
         EVENT_CLASS_TYPE(RenderUI)
         EVENT_CLASS_CATEGORY(EventCategoryApplication)

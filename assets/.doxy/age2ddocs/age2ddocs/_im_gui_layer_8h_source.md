@@ -23,7 +23,8 @@
 
 namespace AGE
 {
-    class AGE_API ImGuiLayer : public Layer
+    
+class AGE_API ImGuiLayer : public Layer
     {
     
     public:
@@ -42,7 +43,7 @@ namespace AGE
 
         virtual void OnEvent(Event& E) override;
 
-        inline void BlockEvents(bool block) { m_BlockEvents = block; }
+inline void BlockEvents(bool block) { m_BlockEvents = block; }
 
         virtual void End();
 

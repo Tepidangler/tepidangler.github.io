@@ -151,16 +151,16 @@ namespace AGE
 
         Ref<ScriptableEntity> ObjPtr= nullptr;
 
-        AGEPin() = default;
-        AGEPin(UUID id, const char* name, AGEPinType type)
+AGEPin() = default;
+AGEPin(UUID id, const char* name, AGEPinType type)
             : ID(id), Node(nullptr), Name(name), Type(type), Kind(ax::NodeEditor::PinKind::Input)
         {
 
         }
 
-        virtual ~AGEPin() = default;
+virtual ~AGEPin() = default;
 
-        rttr::variant GetValue(AGEPinType Type)
+rttr::variant GetValue(AGEPinType Type)
         {
             switch ((int)Type)
             {
@@ -184,7 +184,7 @@ namespace AGE
             }
         }
 
-        static void Serialize(DataWriter* Serializer, const AGEPin& Data)
+static void Serialize(DataWriter* Serializer, const AGEPin& Data)
         {
             Serializer->WriteRaw<uint64_t>((uint64_t)Data.ID);
             Serializer->WriteRaw<uint64_t>((uint64_t)Data.NextNodeID);
@@ -215,7 +215,7 @@ namespace AGE
             }
         }
 
-        static void Deserialize(DataReader* Serializer, AGEPin& Data)
+static void Deserialize(DataReader* Serializer, AGEPin& Data)
         {
             uint64_t ID;
             uint64_t NextNodeID;
@@ -251,10 +251,10 @@ namespace AGE
 
     struct NodeArguments
     {
-        NodeArguments() = default;
+NodeArguments() = default;
         std::vector<rttr::variant> Args;
 
-        static void Serialize(DataWriter* Serializer, const NodeArguments& Data)
+static void Serialize(DataWriter* Serializer, const NodeArguments& Data)
         {
             Serializer->WriteRaw<uint64_t>(Data.Args.size());
             for (auto& Arg : Data.Args)
@@ -384,7 +384,9 @@ namespace AGE
             }
         }
 
-        static void Deserialize(DataReader* Serializer, NodeArguments& Data)
+        "Deserialize function for NodeArguments."
+
+static void Deserialize(DataReader* Serializer, NodeArguments& Data)
         {
             uint64_t Size;
             Serializer->ReadRaw<uint64_t>(Size);
@@ -546,22 +548,23 @@ namespace AGE
         AGEFunction<AGENode, ScriptableEntity> Func;
 
 
-        AGENode() = default;
+AGENode() = default;
 
-        AGENode(ax::NodeEditor::NodeId id, const char* name, ImColor color = ImColor(255, 255, 255))
+AGENode(ax::NodeEditor::NodeId id, const char* name, ImColor color = ImColor(255, 255, 255))
             :ID(id), Name(name), Color(color), Type(AGENodeType::Blueprint), Size(0.f)
         {
 
         }
 
-        bool operator<(const AGENode& Other) const
+bool operator<(const AGENode& Other) const
         {
             return (ID.Get() < Other.ID.Get());
         }
 
-        virtual ~AGENode() = default;
+virtual ~AGENode() = default;
 
-        void SetNodeFuncArguments()
+        
+void SetNodeFuncArguments()
         {
             bool bCanSkip = false;
             Func.Args.clear();
@@ -597,7 +600,9 @@ namespace AGE
 
 
         }
-        bool CompileOutputPins()
+        
+
+bool CompileOutputPins()
         {
             bool success = true;
             for (auto O : Outputs)
@@ -765,7 +770,8 @@ namespace AGE
 
             return success;
         }
-        static void Serialize(DataWriter* Serializer, const AGENode& Data)
+        
+static void Serialize(DataWriter* Serializer, const AGENode& Data)
         {
             std::vector<AGEPin> Inputs(Data.Inputs.size());
             std::vector<AGEPin> Outputs(Data.Outputs.size());
@@ -803,7 +809,7 @@ namespace AGE
             Serializer->WriteObject<AGEFunction< AGENode, ScriptableEntity>>(Data.Func);
         }
 
-        static void Deserialize(DataReader* Serializer, AGENode& Data)
+static void Deserialize(DataReader* Serializer, AGENode& Data)
         {
             uint64_t ID;
             uint32_t Color;
@@ -855,17 +861,17 @@ namespace AGE
 
         ImColor Color;
 
-        AGENodeLink() = default;
+AGENodeLink() = default;
 
-        AGENodeLink(ax::NodeEditor::LinkId LID, ax::NodeEditor::PinId SPID, ax::NodeEditor::PinId EPID)
+AGENodeLink(ax::NodeEditor::LinkId LID, ax::NodeEditor::PinId SPID, ax::NodeEditor::PinId EPID)
             : ID(LID), StartPinID(SPID), EndPinID(EPID), Color(255, 255, 255)
         {
 
         }
 
-        virtual ~AGENodeLink() = default;
+virtual ~AGENodeLink() = default;
 
-        static void Serialize(DataWriter* Serializer, const AGENodeLink& Data)
+static void Serialize(DataWriter* Serializer, const AGENodeLink& Data)
         {
             Serializer->WriteRaw<uint64_t>((uint64_t)Data.ID);
             Serializer->WriteRaw<uint64_t>((uint64_t)Data.StartPinID);
@@ -874,7 +880,7 @@ namespace AGE
 
         }
 
-        static void Deserialize(DataReader* Serializer, AGENodeLink& Data)
+static void Deserialize(DataReader* Serializer, AGENodeLink& Data)
         {
             uint64_t Id;
             uint32_t color;
@@ -891,7 +897,7 @@ namespace AGE
 
     struct NodeIdLess
     {
-        bool operator()(const ax::NodeEditor::NodeId& lhs, const ax::NodeEditor::NodeId rhs) const
+bool operator()(const ax::NodeEditor::NodeId& lhs, const ax::NodeEditor::NodeId rhs) const
         {
             return lhs.AsPointer() < rhs.AsPointer();
         }

@@ -142,10 +142,6 @@
 <td style="text-align: left;"><a href="#variable-coordbuffer"><strong>CoordBuffer</strong></a>  <br></td>
 </tr>
 <tr>
-<td style="text-align: right;">Ref&lt; class <a href="../class_a_g_e_1_1_tilemap/"><strong>Tilemap</strong></a> &gt;</td>
-<td style="text-align: left;"><a href="#variable-currenttilemap"><strong>CurrentTilemap</strong></a>  <br></td>
-</tr>
-<tr>
 <td style="text-align: right;">std::array&lt; Ref&lt; <a href="../class_a_g_e_1_1_texture2_d/"><strong>Texture2D</strong></a> &gt;, MaxTextureSlots &gt;</td>
 <td style="text-align: left;"><a href="#variable-fontatlastextures"><strong>FontAtlasTextures</strong></a>  <br></td>
 </tr>
@@ -238,40 +234,28 @@
 <td style="text-align: left;"><a href="#variable-textureslots"><strong>TextureSlots</strong></a>  <br></td>
 </tr>
 <tr>
-<td style="text-align: right;">uint32_t</td>
-<td style="text-align: left;"><a href="#variable-tileindexcount"><strong>TileIndexCount</strong></a>   = <code>0</code><br></td>
-</tr>
-<tr>
-<td style="text-align: right;">std::array&lt; Ref&lt; <a href="../class_a_g_e_1_1_texture2_d/"><strong>Texture2D</strong></a> &gt;, MaxTextureSlots &gt;</td>
-<td style="text-align: left;"><a href="#variable-tilesettextures"><strong>TileSetTextures</strong></a>  <br></td>
+<td style="text-align: right;">std::vector&lt; uint32_t &gt;</td>
+<td style="text-align: left;"><a href="#variable-tileindexcounts"><strong>TileIndexCounts</strong></a>  <br></td>
 </tr>
 <tr>
 <td style="text-align: right;">Ref&lt; <a href="../class_a_g_e_1_1_shader/"><strong>Shader</strong></a> &gt;</td>
 <td style="text-align: left;"><a href="#variable-tileshader"><strong>TileShader</strong></a>  <br></td>
 </tr>
 <tr>
-<td style="text-align: right;">Ref&lt; <a href="../class_a_g_e_1_1_vertex_array/"><strong>VertexArray</strong></a> &gt;</td>
-<td style="text-align: left;"><a href="#variable-tilevertexarray"><strong>TileVertexArray</strong></a>  <br></td>
+<td style="text-align: right;">std::vector&lt; Ref&lt; <a href="../class_a_g_e_1_1_vertex_array/"><strong>VertexArray</strong></a> &gt; &gt;</td>
+<td style="text-align: left;"><a href="#variable-tilevertexarrays"><strong>TileVertexArrays</strong></a>  <br></td>
 </tr>
 <tr>
-<td style="text-align: right;"><a href="../struct_a_g_e_1_1_tilemap_vertex/"><strong>TilemapVertex</strong></a> *</td>
-<td style="text-align: left;"><a href="#variable-tilevertexbufferbase"><strong>TileVertexBufferBase</strong></a>  <br></td>
+<td style="text-align: right;">std::vector&lt; <a href="../struct_a_g_e_1_1_tile_vertex/"><strong>TileVertex</strong></a> * &gt;</td>
+<td style="text-align: left;"><a href="#variable-tilevertexbufferbases"><strong>TileVertexBufferBases</strong></a>  <br></td>
 </tr>
 <tr>
-<td style="text-align: right;"><a href="../struct_a_g_e_1_1_tilemap_vertex/"><strong>TilemapVertex</strong></a> *</td>
-<td style="text-align: left;"><a href="#variable-tilevertexbufferptr"><strong>TileVertexBufferPtr</strong></a>  <br></td>
+<td style="text-align: right;">std::vector&lt; <a href="../struct_a_g_e_1_1_tile_vertex/"><strong>TileVertex</strong></a> * &gt;</td>
+<td style="text-align: left;"><a href="#variable-tilevertexbufferptrs"><strong>TileVertexBufferPtrs</strong></a>  <br></td>
 </tr>
 <tr>
-<td style="text-align: right;">uint32_t</td>
-<td style="text-align: left;"><a href="#variable-tilevertexcount"><strong>TileVertexCount</strong></a>   = <code>0</code><br></td>
-</tr>
-<tr>
-<td style="text-align: right;"><a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a></td>
-<td style="text-align: left;"><a href="#variable-tilevertexpositions"><strong>TileVertexPositions</strong></a>  <br></td>
-</tr>
-<tr>
-<td style="text-align: right;">uint32_t</td>
-<td style="text-align: left;"><a href="#variable-tilesetslotindex"><strong>TilesetSlotIndex</strong></a>   = <code>1</code><br></td>
+<td style="text-align: right;">std::vector&lt; Ref&lt; <a href="../class_a_g_e_1_1_vertex_buffer/"><strong>VertexBuffer</strong></a> &gt; &gt;</td>
+<td style="text-align: left;"><a href="#variable-tilevertexbuffers"><strong>TileVertexBuffers</strong></a>  <br></td>
 </tr>
 <tr>
 <td style="text-align: right;">std::unordered_map&lt; std::string, Ref&lt; <a href="../class_a_g_e_1_1_vertex_buffer/"><strong>VertexBuffer</strong></a> &gt; &gt;</td>
@@ -321,7 +305,7 @@
 <tbody>
 <tr>
 <td style="text-align: right;">Ref&lt; <a href="../class_a_g_e_1_1_vertex_buffer/"><strong>VertexBuffer</strong></a> &gt;</td>
-<td style="text-align: left;"><a href="#function-getvertexbuffer"><strong>GetVertexBuffer</strong></a> (const std::string &amp; Name) <br></td>
+<td style="text-align: left;"><a href="#function-getvertexbuffer"><strong>GetVertexBuffer</strong></a> (const std::string &amp; Name) <br><em>Retrieves a vertex buffer by its name.</em></td>
 </tr>
 </tbody>
 </table>
@@ -368,11 +352,6 @@
 
 <h3 id="variable-coordbuffer">variable CoordBuffer</h3>
 <pre><code class="language-C++">TexCoordData AGE::Renderer2DData::CoordBuffer;
-</code></pre>
-<hr>
-
-<h3 id="variable-currenttilemap">variable CurrentTilemap</h3>
-<pre><code class="language-C++">Ref&lt;class Tilemap&gt; AGE::Renderer2DData::CurrentTilemap;
 </code></pre>
 <hr>
 
@@ -491,13 +470,8 @@
 </code></pre>
 <hr>
 
-<h3 id="variable-tileindexcount">variable TileIndexCount</h3>
-<pre><code class="language-C++">uint32_t AGE::Renderer2DData::TileIndexCount;
-</code></pre>
-<hr>
-
-<h3 id="variable-tilesettextures">variable TileSetTextures</h3>
-<pre><code class="language-C++">std::array&lt;Ref&lt;Texture2D&gt;, MaxTextureSlots&gt; AGE::Renderer2DData::TileSetTextures;
+<h3 id="variable-tileindexcounts">variable TileIndexCounts</h3>
+<pre><code class="language-C++">std::vector&lt;uint32_t&gt; AGE::Renderer2DData::TileIndexCounts;
 </code></pre>
 <hr>
 
@@ -506,33 +480,23 @@
 </code></pre>
 <hr>
 
-<h3 id="variable-tilevertexarray">variable TileVertexArray</h3>
-<pre><code class="language-C++">Ref&lt;VertexArray&gt; AGE::Renderer2DData::TileVertexArray;
+<h3 id="variable-tilevertexarrays">variable TileVertexArrays</h3>
+<pre><code class="language-C++">std::vector&lt;Ref&lt;VertexArray&gt; &gt; AGE::Renderer2DData::TileVertexArrays;
 </code></pre>
 <hr>
 
-<h3 id="variable-tilevertexbufferbase">variable TileVertexBufferBase</h3>
-<pre><code class="language-C++">TilemapVertex* AGE::Renderer2DData::TileVertexBufferBase;
+<h3 id="variable-tilevertexbufferbases">variable TileVertexBufferBases</h3>
+<pre><code class="language-C++">std::vector&lt;TileVertex*&gt; AGE::Renderer2DData::TileVertexBufferBases;
 </code></pre>
 <hr>
 
-<h3 id="variable-tilevertexbufferptr">variable TileVertexBufferPtr</h3>
-<pre><code class="language-C++">TilemapVertex* AGE::Renderer2DData::TileVertexBufferPtr;
+<h3 id="variable-tilevertexbufferptrs">variable TileVertexBufferPtrs</h3>
+<pre><code class="language-C++">std::vector&lt;TileVertex*&gt; AGE::Renderer2DData::TileVertexBufferPtrs;
 </code></pre>
 <hr>
 
-<h3 id="variable-tilevertexcount">variable TileVertexCount</h3>
-<pre><code class="language-C++">uint32_t AGE::Renderer2DData::TileVertexCount;
-</code></pre>
-<hr>
-
-<h3 id="variable-tilevertexpositions">variable TileVertexPositions</h3>
-<pre><code class="language-C++">Vector4 AGE::Renderer2DData::TileVertexPositions[6];
-</code></pre>
-<hr>
-
-<h3 id="variable-tilesetslotindex">variable TilesetSlotIndex</h3>
-<pre><code class="language-C++">uint32_t AGE::Renderer2DData::TilesetSlotIndex;
+<h3 id="variable-tilevertexbuffers">variable TileVertexBuffers</h3>
+<pre><code class="language-C++">std::vector&lt;Ref&lt;VertexBuffer&gt; &gt; AGE::Renderer2DData::TileVertexBuffers;
 </code></pre>
 <hr>
 
@@ -567,10 +531,26 @@
 <hr>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-getvertexbuffer">function GetVertexBuffer</h3>
+<p><em>Retrieves a vertex buffer by its name.</em> </p>
 <pre><code class="language-C++">inline Ref&lt; VertexBuffer &gt; AGE::Renderer2DData::GetVertexBuffer (
     const std::string &amp; Name
 ) 
 </code></pre>
+<p>This function takes in the name of a vertex buffer and returns it if it exists. If no such buffer exists, an empty reference is returned.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Name</code> The name of the vertex buffer to retrieve. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A reference to the requested vertex buffer or an empty reference if no such buffer exists.</p>
+<p>Retrieves a reference to the vertex buffer with the given name.</p>
+<p>This function takes in a string parameter 'Name' which is used as an identifier for the desired vertex buffer. It then returns a Ref&lt;VertexBuffer&gt; object, which can be utilized to access and manipulate the vertex buffer data. If no vertex buffer exists with the provided name, this function will return an empty reference.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Name</code> The name of the vertex buffer to retrieve. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A reference to the desired vertex buffer or an empty reference if no such buffer exists. </p>
 <hr>
 
 <hr />

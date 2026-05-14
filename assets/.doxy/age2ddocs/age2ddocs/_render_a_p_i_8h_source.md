@@ -27,7 +27,7 @@ namespace AGE
         };
     public: //functions
 
-        virtual ~RendererAPI() =default;
+virtual ~RendererAPI() =default;
         static Scope<RendererAPI> Create();
         virtual void Init() = 0;
         virtual void SetViewport(uint32_t x, uint32_t y, uint32_t Width, uint32_t Height) = 0;
@@ -36,7 +36,6 @@ namespace AGE
     
         virtual void DrawIndexed(uint32_t IndexCount, uint32_t IndexStart, int VertexStart) = 0;
         virtual void DrawIndexed(const Ref<VertexArray>& VertexArray, uint32_t IndexCount) = 0;
-        virtual void DrawArrays(const Ref<VertexArray>& VertexArray,uint32_t IndexCount) =0;
         virtual void DrawLines(const Ref<VertexArray>& VertexArray, uint32_t VertexCount) = 0;
         virtual void DrawStrips(const Ref<VertexArray>& VertexArray, uint32_t IndexCount) = 0;
         virtual void SetLineWidth(float Width) = 0;
@@ -47,9 +46,9 @@ namespace AGE
 
         virtual void Present() = 0;
 
-        static inline API GetAPI() { return s_API; }
+static inline API GetAPI() { return s_API; }
 
-        static inline void SetAPI(RendererAPI::API Type) { s_API = Type; }
+static inline void SetAPI(RendererAPI::API Type) { s_API = Type; }
 
     private:
         static API s_API;
@@ -59,7 +58,7 @@ namespace AGE
 
     namespace Utils
     {
-        [[maybe_unused]]static std::string ConvertAPIToString()
+[[maybe_unused]]static std::string ConvertAPIToString()
         {
             switch ((int)RendererAPI::GetAPI())
             {

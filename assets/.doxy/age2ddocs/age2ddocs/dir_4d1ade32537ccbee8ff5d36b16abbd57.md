@@ -40,7 +40,6 @@
 | file | [**Pointers.h**](_pointers_8h.md) <br> |
 | file | [**ScriptableComponentStack.h**](_scriptable_component_stack_8h.md) <br> |
 | file | [**Timer.h**](_timer_8h.md) <br> |
-| file | [**Types.h**](_types_8h.md) <br> |
 | file | [**UUID.h**](_u_u_i_d_8h.md) <br> |
 | file | [**Window.h**](_window_8h.md) <br> |
 | file | [**Wwise\_IDs.h**](_wwise___i_ds_8h.md) <br> |

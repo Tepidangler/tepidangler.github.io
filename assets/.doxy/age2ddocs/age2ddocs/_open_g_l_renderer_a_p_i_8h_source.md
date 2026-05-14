@@ -17,16 +17,15 @@ namespace AGE
     {
     public: //functions
 
-        ~OpenGLRendererAPI() =default;
+~OpenGLRendererAPI() =default;
         void Init() override;
         void SetClearColor(const Vector4 Color) override;
         void SetViewport(uint32_t x, uint32_t y, uint32_t Width, uint32_t Height) override;
         void Clear() override;
 
         void Flush() override;
-        void DrawIndexed(uint32_t IndexCount, uint32_t IndexStart, int VertexStart) override {}
+void DrawIndexed(uint32_t IndexCount, uint32_t IndexStart, int VertexStart) override {}
         void DrawIndexed(const Ref<VertexArray>& VertexArray, uint32_t IndexCount) override;
-        void DrawArrays(const Ref<VertexArray>& VertexArray,uint32_t IndexCount) override;
         void DrawLines(const Ref<VertexArray>& VertexArray, uint32_t VertexCount) override;
         void DrawStrips(const Ref<VertexArray>& VertexArray, uint32_t IndexCount) override;
         void SetLineWidth(float Width) override;

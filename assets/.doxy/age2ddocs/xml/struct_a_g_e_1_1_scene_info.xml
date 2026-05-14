@@ -64,12 +64,50 @@
           <declname>Data</declname>
         </param>
         <briefdescription>
+<para>Serializes the <ref refid="struct_a_g_e_1_1_scene_info" kindref="compound">SceneInfo</ref> data into a <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref> object. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function serializes various parts of the <ref refid="struct_a_g_e_1_1_scene_info" kindref="compound">SceneInfo</ref> data structure, including the size of AssetMap and the Flags string. It also writes the raw pointer to AssetMap.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Serializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref> object where the serialized data will be written into. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">Data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_scene_info" kindref="compound">SceneInfo</ref> instance that contains the data to be serialized.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This function serializes the <ref refid="struct_a_g_e_1_1_scene_info" kindref="compound">SceneInfo</ref> object into a <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Serializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref> that will be used for serialization. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_scene_info" kindref="compound">SceneInfo</ref> object that is being serialized. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Scene.h" line="23" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/Scene.cpp" bodystart="764" bodyend="769"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Scene.h" line="23" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/Scene.cpp" bodystart="1233" bodyend="1238"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_scene_info_1aa35cdfa530a8789d45f8579e26fa76bb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -86,12 +124,51 @@
           <declname>Data</declname>
         </param>
         <briefdescription>
+<para>Deserialize function for <ref refid="struct_a_g_e_1_1_scene_info" kindref="compound">SceneInfo</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function reads raw data from a <ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref> object and populates the provided <ref refid="struct_a_g_e_1_1_scene_info" kindref="compound">SceneInfo</ref> object with it.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Deserializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the <ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref> object that provides the serialized data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to the <ref refid="struct_a_g_e_1_1_scene_info" kindref="compound">SceneInfo</ref> object where the deserialized data will be stored.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Deserialize function for <ref refid="struct_a_g_e_1_1_scene_info" kindref="compound">SceneInfo</ref> class.</para>
+<para>This function reads raw data from a <ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref> object and populates the provided <ref refid="struct_a_g_e_1_1_scene_info" kindref="compound">SceneInfo</ref> object with it.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Deserializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the <ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref> object that provides the serialized data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to the <ref refid="struct_a_g_e_1_1_scene_info" kindref="compound">SceneInfo</ref> object where the deserialized data will be stored. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Scene.h" line="25" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/Scene.cpp" bodystart="771" bodyend="776"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Scene.h" line="25" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/Scene.cpp" bodystart="1256" bodyend="1261"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

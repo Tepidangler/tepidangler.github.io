@@ -89,28 +89,38 @@
 <tbody>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="#function-decode"><strong>decode</strong></a> (const Node &amp; node, <a href="../struct_a_g_e_1_1_vector4/"><strong>AGE::Vector4</strong></a> &amp; rhs) <br></td>
+<td style="text-align: left;"><a href="#function-decode"><strong>decode</strong></a> (const Node &amp; node, <a href="../struct_a_g_e_1_1_vector4/"><strong>AGE::Vector4</strong></a> &amp; rhs) <br><em>Decodes a Node object into an</em> <a href="../struct_a_g_e_1_1_vector4/"><em><strong>AGE::Vector4</strong></em></a> <em>.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">Node</td>
-<td style="text-align: left;"><a href="#function-encode"><strong>encode</strong></a> (const <a href="../struct_a_g_e_1_1_vector4/"><strong>AGE::Vector4</strong></a> &amp; rhs) <br></td>
+<td style="text-align: left;"><a href="#function-encode"><strong>encode</strong></a> (const <a href="../struct_a_g_e_1_1_vector4/"><strong>AGE::Vector4</strong></a> &amp; rhs) <br><em>Encodes a Vector4 into a Node object.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
 <h3 id="function-decode">function decode</h3>
+<p><em>Decodes a Node object into an</em> <a href="../struct_a_g_e_1_1_vector4/"><em><strong>AGE::Vector4</strong></em></a> <em>.</em></p>
 <pre><code class="language-C++">static inline bool YAML::convert&lt; AGE::Vector4 &gt;::decode (
     const Node &amp; node,
     AGE::Vector4 &amp; rhs
 ) 
 </code></pre>
+<p>This function takes in a const reference to a Node object and a reference to an <a href="../struct_a_g_e_1_1_vector4/"><strong>AGE::Vector4</strong></a>. It checks if the node is a sequence and has exactly four elements. If it does, it assigns the first three elements of the node (interpreted as floats) to x, y, and z properties of the Vector4 respectively, and the fourth element to w property. The function returns true if the decoding was successful, false otherwise. </p>
 <hr>
 
 <h3 id="function-encode">function encode</h3>
+<p><em>Encodes a Vector4 into a Node object.</em> </p>
 <pre><code class="language-C++">static inline Node YAML::convert&lt; AGE::Vector4 &gt;::encode (
     const AGE::Vector4 &amp; rhs
 ) 
 </code></pre>
+<p>This function takes in a const reference to an <a href="../struct_a_g_e_1_1_vector4/"><strong>AGE::Vector4</strong></a> and encodes it into a Node object by pushing the x, y, z, and w values of the vector onto the node.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>rhs</code> The input Vector4 to be encoded. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Returns a Node object containing the encoded data from the input Vector4. </p>
 <hr>
 
 <hr />

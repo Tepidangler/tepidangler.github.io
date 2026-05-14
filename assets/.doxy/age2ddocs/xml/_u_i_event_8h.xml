@@ -22,56 +22,56 @@
 <codeline lineno="8"><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">AGE</highlight></codeline>
 <codeline lineno="10"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="11" refid="class_a_g_e_1_1_widget_constructed_event" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">WidgetConstructedEvent<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref></highlight></codeline>
+<codeline lineno="11" refid="class_a_g_e_1_1_widget_constructed_event" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_a_g_e_1_1_widget_constructed_event_1abfbeb6ea8f4603ca863b4e750ff9b609" kindref="member">WidgetConstructedEvent</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref></highlight></codeline>
 <codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WidgetConstructedEvent(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Ref&lt;ScriptableWidget&gt;<sp/>UIWidget,<sp/>uint8_t<sp/>Stack)</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:m_Stack(Stack),<sp/>m_ScriptableWidget(UIWidget)<sp/>{}</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>GetStack()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_Stack;<sp/>}</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Ref&lt;ScriptableWidget&gt;<sp/>GetWidget()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_ScriptableWidget;<sp/>}</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"></highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVENT_CLASS_TYPE(WidgetConstructed)</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVENT_CLASS_CATEGORY(EventCategoryUI)</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>m_Stack;</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Ref&lt;ScriptableWidget&gt;<sp/>m_ScriptableWidget;</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27" refid="class_a_g_e_1_1_widget_activated_event" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">WidgetActivatedEvent<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WidgetActivatedEvent(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Ref&lt;ScriptableWidget&gt;<sp/>UIWidget,<sp/>uint8_t<sp/>Stack)</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:m_Stack(Stack),<sp/>m_ScriptableWidget(UIWidget)<sp/>{}</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>GetStack()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_Stack;<sp/>}</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Ref&lt;ScriptableWidget&gt;<sp/>GetWidget()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_ScriptableWidget;<sp/>}</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVENT_CLASS_TYPE(WidgetActivated)</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVENT_CLASS_CATEGORY(EventCategoryUI)</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>m_Stack;</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Ref&lt;ScriptableWidget&gt;<sp/>m_ScriptableWidget;</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43" refid="class_a_g_e_1_1_widget_deactivated_event" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">WidgetDeactivatedEvent<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WidgetDeactivatedEvent(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Ref&lt;ScriptableWidget&gt;<sp/>UIWidget,<sp/>uint8_t<sp/>Stack)</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:m_Stack(Stack),<sp/>m_ScriptableWidget(UIWidget)<sp/>{}</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>GetStack()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_Stack;<sp/>}</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Ref&lt;ScriptableWidget&gt;<sp/>GetWidget()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_ScriptableWidget;<sp/>}</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVENT_CLASS_TYPE(WidgetDeactivated)</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVENT_CLASS_CATEGORY(EventCategoryUI)</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>m_Stack;</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Ref&lt;ScriptableWidget&gt;<sp/>m_ScriptableWidget;</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//AGE2D_UIEVENT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><ref refid="class_a_g_e_1_1_widget_constructed_event_1abfbeb6ea8f4603ca863b4e750ff9b609" kindref="member">WidgetConstructedEvent</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Ref&lt;ScriptableWidget&gt;<sp/>UIWidget,<sp/>uint8_t<sp/>Stack)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:m_Stack(Stack),<sp/>m_ScriptableWidget(UIWidget)<sp/>{}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">uint8_t<sp/><ref refid="class_a_g_e_1_1_widget_constructed_event_1a43a5feffb4b3388c52bc6c4324275410" kindref="member">GetStack</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_Stack;<sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">Ref&lt;ScriptableWidget&gt;<sp/><ref refid="class_a_g_e_1_1_widget_constructed_event_1a570154da8fef56f7010fa42ed72aec8c" kindref="member">GetWidget</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_ScriptableWidget;<sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVENT_CLASS_TYPE(WidgetConstructed)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVENT_CLASS_CATEGORY(EventCategoryUI)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>m_Stack;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Ref&lt;ScriptableWidget&gt;<sp/>m_ScriptableWidget;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="class_a_g_e_1_1_widget_activated_event" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_a_g_e_1_1_widget_activated_event_1ab27cf0ae543e6e49bc4a0ed83d4310b9" kindref="member">WidgetActivatedEvent</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><ref refid="class_a_g_e_1_1_widget_activated_event_1ab27cf0ae543e6e49bc4a0ed83d4310b9" kindref="member">WidgetActivatedEvent</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Ref&lt;ScriptableWidget&gt;<sp/>UIWidget,<sp/>uint8_t<sp/>Stack)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:m_Stack(Stack),<sp/>m_ScriptableWidget(UIWidget)<sp/>{}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal">uint8_t<sp/><ref refid="class_a_g_e_1_1_widget_activated_event_1ab566a7863717c7ca9456e4258558c939" kindref="member">GetStack</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_Stack;<sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">Ref&lt;ScriptableWidget&gt;<sp/><ref refid="class_a_g_e_1_1_widget_activated_event_1abb0c18c2598e6e083cbd2cbfaa4b23fb" kindref="member">GetWidget</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_ScriptableWidget;<sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVENT_CLASS_TYPE(WidgetActivated)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVENT_CLASS_CATEGORY(EventCategoryUI)</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>m_Stack;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Ref&lt;ScriptableWidget&gt;<sp/>m_ScriptableWidget;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="class_a_g_e_1_1_widget_deactivated_event" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_a_g_e_1_1_widget_deactivated_event_1ae209b2a563fc15b862a8cf51b9469cf9" kindref="member">WidgetDeactivatedEvent</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><ref refid="class_a_g_e_1_1_widget_deactivated_event_1ae209b2a563fc15b862a8cf51b9469cf9" kindref="member">WidgetDeactivatedEvent</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Ref&lt;ScriptableWidget&gt;<sp/>UIWidget,<sp/>uint8_t<sp/>Stack)</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:m_Stack(Stack),<sp/>m_ScriptableWidget(UIWidget)<sp/>{}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal">uint8_t<sp/><ref refid="class_a_g_e_1_1_widget_deactivated_event_1a96a6f660160b7a24d1cb8e157dcba0b7" kindref="member">GetStack</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_Stack;<sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal">Ref&lt;ScriptableWidget&gt;<sp/><ref refid="class_a_g_e_1_1_widget_deactivated_event_1ad0f68aa1932c96a3c5c27d371da1ca5d" kindref="member">GetWidget</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_ScriptableWidget;<sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVENT_CLASS_TYPE(WidgetDeactivated)</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVENT_CLASS_CATEGORY(EventCategoryUI)</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>m_Stack;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Ref&lt;ScriptableWidget&gt;<sp/>m_ScriptableWidget;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//AGE2D_UIEVENT_H</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/UIEvent.h"/>
   </compounddef>

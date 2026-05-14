@@ -45,12 +45,34 @@
           <declname>Name</declname>
         </param>
         <briefdescription>
+<para>Constructs a <ref refid="class_a_g_e_1_1_text_box_component" kindref="compound">TextBoxComponent</ref> with the given name and sets default properties. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the <ref refid="class_a_g_e_1_1_text_box_component" kindref="compound">TextBoxComponent</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>None</para>
+</simplesect>
+Constructs a <ref refid="class_a_g_e_1_1_text_box_component" kindref="compound">TextBoxComponent</ref> with the given name and sets default properties. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the <ref refid="class_a_g_e_1_1_text_box_component" kindref="compound">TextBoxComponent</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/TextBoxComponent.h" line="22" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/TextBoxComponent.cpp" bodystart="20" bodyend="25"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/TextBoxComponent.h" line="22" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/TextBoxComponent.cpp" bodystart="29" bodyend="34"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_text_box_component_1ae522adc72da5a4c8b0f2b42e6965519a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -64,12 +86,35 @@
           <declname>DeltaTime</declname>
         </param>
         <briefdescription>
+<para>Updates the <ref refid="class_a_g_e_1_1_text_box_component" kindref="compound">TextBoxComponent</ref> based on a time step. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function updates the <ref refid="class_a_g_e_1_1_text_box_component" kindref="compound">TextBoxComponent</ref> by checking if it is visible. If it is, it sets up properties for a quad and string to be drawn. The quad&apos;s transform, color, and other properties are set according to the component&apos;s box properties. Then, it calls <ref refid="class_a_g_e_1_1_renderer2_d_1a012305ca47d628775a684d8bf730415f" kindref="member">Renderer2D::DrawQuad</ref> with these properties and Renderer2D::DrawString with the string properties of the <ref refid="class_a_g_e_1_1_text_box_component" kindref="compound">TextBoxComponent</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>DeltaTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time step for updating the component.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Updates the <ref refid="class_a_g_e_1_1_text_box_component" kindref="compound">TextBoxComponent</ref> based on the provided <ref refid="class_a_g_e_1_1_time_step" kindref="compound">TimeStep</ref>.</para>
+<para>This function updates the <ref refid="class_a_g_e_1_1_text_box_component" kindref="compound">TextBoxComponent</ref> by checking if it is visible. If it is, it creates a <ref refid="struct_a_g_e_1_1_quad_properties" kindref="compound">QuadProperties</ref> object and sets its properties such as Transform, Color etc., then calls <ref refid="class_a_g_e_1_1_renderer2_d_1a012305ca47d628775a684d8bf730415f" kindref="member">Renderer2D::DrawQuad()</ref> with this <ref refid="struct_a_g_e_1_1_quad_properties" kindref="compound">QuadProperties</ref> to render the quad. It also renders a string using Renderer2D::DrawString().</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>DeltaTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time step for the update operation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/TextBoxComponent.h" line="25" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/TextBoxComponent.cpp" bodystart="27" bodyend="37"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/TextBoxComponent.h" line="25" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/TextBoxComponent.cpp" bodystart="50" bodyend="60"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_text_box_component_1a08b701ac341679f0efa94ad2e8296ce6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -83,12 +128,35 @@
           <declname>Event</declname>
         </param>
         <briefdescription>
+<para>Handles an event of type <ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes in a reference to an <ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref> object and processes it according to its type. The exact behavior depends on the specific implementation of this class.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in"><ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- A reference to the <ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref> that needs to be processed.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Handles an event of type <ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref>.</para>
+<para>This function takes in a reference to an <ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref> object and processes it according to its type. The exact behavior depends on the specific implementation of this class, which is not specified here.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in"><ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to the <ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref> that needs to be processed. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/TextBoxComponent.h" line="26" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/TextBoxComponent.cpp" bodystart="39" bodyend="41"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/TextBoxComponent.h" line="26" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/TextBoxComponent.cpp" bodystart="76" bodyend="78"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_text_box_component_1a4dac8bd00ca9dd8bd5fa76fb9ac47127" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -98,12 +166,17 @@
         <qualifiedname>AGE::TextBoxComponent::DrawFontSelectionComboBox</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_u_i_component_1a889fdb1f193f054f459e23dd8e9ce4ea">DrawFontSelectionComboBox</reimplements>
         <briefdescription>
+<para>This function is responsible for drawing the font selection combo box on the screen. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>None</para>
+</simplesect>
+This function is responsible for drawing the font selection combo box on the screen.</para>
+<para>The function does not take any parameters and returns no value. It directly interacts with the UI to display the font selection combo box. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/TextBoxComponent.h" line="28" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/TextBoxComponent.cpp" bodystart="43" bodyend="71"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/TextBoxComponent.h" line="28" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/TextBoxComponent.cpp" bodystart="82" bodyend="110"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_text_box_component_1a7f1226499e5cec0d78d517d6b06b01b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -113,12 +186,17 @@
         <qualifiedname>AGE::TextBoxComponent::DrawContent</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_u_i_component_1ab7694d7df5410816a9fa16f17e4dbe42">DrawContent</reimplements>
         <briefdescription>
+<para>Draws the content of the <ref refid="class_a_g_e_1_1_text_box_component" kindref="compound">TextBoxComponent</ref>, including text properties, font selection, color editing, and positioning controls. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function uses ImGui to draw a series of UI elements for configuring the text properties of the <ref refid="class_a_g_e_1_1_text_box_component" kindref="compound">TextBoxComponent</ref>. It includes inputs for text string, font selection, color editing, and positioning controls. The function updates the m_StringProperties member variable accordingly based on user input.</para>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/TextBoxComponent.h" line="29" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/TextBoxComponent.cpp" bodystart="73" bodyend="92"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/TextBoxComponent.h" line="29" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/TextBoxComponent.cpp" bodystart="120" bodyend="139"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_text_box_component_1a0ecbc8aa51df3331ae5f868224dffbe1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -132,12 +210,33 @@
           <declname>Serializer</declname>
         </param>
         <briefdescription>
+<para>This function serializes the <ref refid="class_a_g_e_1_1_text_box_component" kindref="compound">TextBoxComponent</ref> object using a <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Serializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to an instance of <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref> that is used for writing data.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This function serializes the <ref refid="class_a_g_e_1_1_text_box_component" kindref="compound">TextBoxComponent</ref> object into a <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Serializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref> instance where the object will be written. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/TextBoxComponent.h" line="30" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/TextBoxComponent.h" bodystart="30" bodyend="33"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/TextBoxComponent.h" line="40" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/TextBoxComponent.h" bodystart="40" bodyend="43"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_text_box_component_1a2daea9f0be0030f55e3531a353298da5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -151,12 +250,36 @@
           <declname>Serializer</declname>
         </param>
         <briefdescription>
+<para>Deserializes the <ref refid="class_a_g_e_1_1_text_box_component" kindref="compound">TextBoxComponent</ref> from a <ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function reads an instance of <ref refid="class_a_g_e_1_1_text_box_component" kindref="compound">TextBoxComponent</ref> from the provided <ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref> and assigns it to this object. The exact format in which the data is read depends on how the <ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref>&apos;s ReadObject method is implemented.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Serializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to a <ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref> that provides the serialized data.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This function is used to deserialize a <ref refid="class_a_g_e_1_1_text_box_component" kindref="compound">TextBoxComponent</ref> from the provided <ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Serializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to an instance of <ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref>, which provides the serialized data. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void No return value as it directly modifies the state of the current object (<ref refid="class_a_g_e_1_1_text_box_component" kindref="compound">TextBoxComponent</ref>). </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/TextBoxComponent.h" line="34" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/TextBoxComponent.h" bodystart="34" bodyend="37"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/TextBoxComponent.h" line="58" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/TextBoxComponent.h" bodystart="58" bodyend="61"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -175,12 +298,55 @@
           <declname>Instance</declname>
         </param>
         <briefdescription>
+<para>Serializes the <ref refid="class_a_g_e_1_1_text_box_component" kindref="compound">TextBoxComponent</ref> instance into a <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref> object. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function writes various properties of the <ref refid="class_a_g_e_1_1_text_box_component" kindref="compound">TextBoxComponent</ref> to the provided <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref>, including its name, type, string properties (text, font name, color and size), and position and rotation data.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Serializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref> instance where serialization will be performed. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Instance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_a_g_e_1_1_text_box_component" kindref="compound">TextBoxComponent</ref> instance that needs to be serialized.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void</para>
+</simplesect>
+This function serializes the <ref refid="class_a_g_e_1_1_text_box_component" kindref="compound">TextBoxComponent</ref> instance into a <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref> object.</para>
+<para>The function writes various properties of the <ref refid="class_a_g_e_1_1_text_box_component" kindref="compound">TextBoxComponent</ref>, such as its name, type, string properties (text, font name, color and size), and position and rotation data.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Serializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref> object where serialized data will be written into. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Instance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_a_g_e_1_1_text_box_component" kindref="compound">TextBoxComponent</ref> instance that needs to be serialized.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/TextBoxComponent.h" line="39" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/TextBoxComponent.h" bodystart="39" bodyend="56"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/TextBoxComponent.h" line="83" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/TextBoxComponent.h" bodystart="83" bodyend="100"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_text_box_component_1abe1f773eb44ef415fdcc34a6e7cc296c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -197,12 +363,32 @@
           <declname>Instance</declname>
         </param>
         <briefdescription>
+<para>Deserializes the <ref refid="class_a_g_e_1_1_text_box_component" kindref="compound">TextBoxComponent</ref> instance from a <ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref> object. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function reads various properties of the <ref refid="class_a_g_e_1_1_text_box_component" kindref="compound">TextBoxComponent</ref> instance, including its name, type, string properties (text, font name, color and size), and position and rotation data. It uses the provided Serializer to read these values.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Serializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to a <ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref> object that provides the serialized data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">Instance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_a_g_e_1_1_text_box_component" kindref="compound">TextBoxComponent</ref> instance to be deserialized. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/TextBoxComponent.h" line="58" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/TextBoxComponent.h" bodystart="58" bodyend="77"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/TextBoxComponent.h" line="111" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/TextBoxComponent.h" bodystart="111" bodyend="130"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -289,7 +475,7 @@
         <link refid="struct_a_g_e_1_1_vector4"/>
       </node>
     </collaborationgraph>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/TextBoxComponent.h" line="17" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/TextBoxComponent.h" bodystart="18" bodyend="79"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/TextBoxComponent.h" line="17" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/TextBoxComponent.h" bodystart="18" bodyend="132"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_u_i_component_1a98e1aaddee431d6b3b7ff6f5e5536de4" prot="public" virt="non-virtual"><scope>AGE::TextBoxComponent</scope><name>As</name></member>
       <member refid="class_a_g_e_1_1_u_i_component_1a3dfa8952db40b83e29831b76352fa8e5" prot="public" virt="non-virtual"><scope>AGE::TextBoxComponent</scope><name>As</name></member>

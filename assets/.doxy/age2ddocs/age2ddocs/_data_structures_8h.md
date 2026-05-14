@@ -81,8 +81,7 @@
 | struct | [**ScreenResolution**](struct_a_g_e_1_1_screen_resolution.md) <br> |
 | struct | [**StringProperties**](struct_a_g_e_1_1_string_properties.md) <br> |
 | struct | [**TextVertex**](struct_a_g_e_1_1_text_vertex.md) <br> |
-| struct | [**TilemapProperties**](struct_a_g_e_1_1_tilemap_properties.md) <br> |
-| struct | [**TilemapVertex**](struct_a_g_e_1_1_tilemap_vertex.md) <br> |
+| struct | [**TileVertex**](struct_a_g_e_1_1_tile_vertex.md) <br> |
 | struct | [**UniformBufferObj**](struct_a_g_e_1_1_uniform_buffer_obj.md) <br> |
 | struct | [**Vertex**](struct_a_g_e_1_1_vertex.md) <br> |
 | struct | [**\_constantBufferStruct**](struct_a_g_e_1_1__constant_buffer_struct.md) <br> |

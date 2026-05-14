@@ -21,33 +21,33 @@ namespace AGE
     public:
 
         SceneCamera();
-        virtual ~SceneCamera() = default;
+virtual ~SceneCamera() = default;
 
         void SetOrthographic(float Size, float NearClip, float FarClip);
         void SetPerspective(float VerticalFOV, float NearClip, float FarClip);
 
         void SetViewportSize(uint32_t Width, uint32_t Height);
 
-        float GetPerspectiveVerticalFOV() const { return m_PerspectiveFOV; }
-        void SetPerspectiveVerticalFOV(float VerticalFOV) { m_PerspectiveFOV = VerticalFOV; RecalculateProjection();}
+float GetPerspectiveVerticalFOV() const { return m_PerspectiveFOV; }
+void SetPerspectiveVerticalFOV(float VerticalFOV) { m_PerspectiveFOV = VerticalFOV; RecalculateProjection();}
 
-        float GetPerspectiveNearClip() const { return m_PerspectiveNear; }
-        void SetPerspectiveNearClip(float NearClip) { m_PerspectiveNear = NearClip; RecalculateProjection(); }
+float GetPerspectiveNearClip() const { return m_PerspectiveNear; }
+void SetPerspectiveNearClip(float NearClip) { m_PerspectiveNear = NearClip; RecalculateProjection(); }
 
-        float GetPerspectiveFarClip() const { return m_PerspectiveFar; }
-        void SetPerspectiveFarClip(float FarClip) { m_PerspectiveFar = FarClip; RecalculateProjection(); }
+float GetPerspectiveFarClip() const { return m_PerspectiveFar; }
+void SetPerspectiveFarClip(float FarClip) { m_PerspectiveFar = FarClip; RecalculateProjection(); }
 
-        float GetOrthographicSize() const { return m_OrthographicSize; }
-        void  SetOrthographicSize(float Size) { m_OrthographicSize = Size; RecalculateProjection(); }
+float GetOrthographicSize() const { return m_OrthographicSize; }
+void  SetOrthographicSize(float Size) { m_OrthographicSize = Size; RecalculateProjection(); }
 
-        float GetOrthographicNearClip() const { return m_OrthographicNear; }
-        void  SetOrthographicNearClip(float NearClip) { m_OrthographicNear = NearClip; RecalculateProjection(); }
+float GetOrthographicNearClip() const { return m_OrthographicNear; }
+void  SetOrthographicNearClip(float NearClip) { m_OrthographicNear = NearClip; RecalculateProjection(); }
 
-        float GetOrthographicFarClip() const { return m_OrthographicFar; }
-        void  SetOrthographicFarClip(float FarClip) { m_OrthographicFar = FarClip; RecalculateProjection(); }
+float GetOrthographicFarClip() const { return m_OrthographicFar; }
+void  SetOrthographicFarClip(float FarClip) { m_OrthographicFar = FarClip; RecalculateProjection(); }
 
-        ProjectionType GetProjectionType() const { return m_ProjectionType; }
-        virtual void SetProjectionType(ProjectionType Type) override { m_ProjectionType = Type; if ((int)Type == 0) { SetPerspective(m_PerspectiveFOV, m_PerspectiveNear, m_PerspectiveFar); } else { SetOrthographic(m_OrthographicSize, m_OrthographicNear, m_OrthographicFar); } }
+ProjectionType GetProjectionType() const { return m_ProjectionType; }
+virtual void SetProjectionType(ProjectionType Type) override { m_ProjectionType = Type; if ((int)Type == 0) { SetPerspective(m_PerspectiveFOV, m_PerspectiveNear, m_PerspectiveFar); } else { SetOrthographic(m_OrthographicSize, m_OrthographicNear, m_OrthographicFar); } }
 
     private:
 

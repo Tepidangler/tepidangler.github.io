@@ -77,6 +77,10 @@
               
                 <h1 id="class-agekeypressedevent">Class AGE::KeyPressedEvent</h1>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespace_a_g_e/"><strong>AGE</strong></a> <strong>&gt;</strong> <a href="./"><strong>KeyPressedEvent</strong></a></p>
+<p><em>Returns the repeat count of a certain process or operation.</em> <a href="#detailed-description">More...</a></p>
+<ul>
+<li><code>#include &lt;KeyEvent.h&gt;</code></li>
+</ul>
 <p>Inherits the following classes: <a href="../class_a_g_e_1_1_key_event/">AGE::KeyEvent</a></p>
 <h2 id="public-attributes-inherited-from-ageevent">Public Attributes inherited from AGE::Event</h2>
 <p>See <a href="../class_a_g_e_1_1_event/">AGE::Event</a></p>
@@ -105,7 +109,7 @@
 <tbody>
 <tr>
 <td style="text-align: right;">int</td>
-<td style="text-align: left;"><a href="#function-getrepeatcount"><strong>GetRepeatCount</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-getrepeatcount"><strong>GetRepeatCount</strong></a> () const<br><em>Returns the repeat count of a certain process or operation.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
@@ -113,7 +117,7 @@
 </tr>
 <tr>
 <td style="text-align: right;">virtual std::string</td>
-<td style="text-align: left;"><a href="#function-tostring"><strong>ToString</strong></a> () override const<br></td>
+<td style="text-align: left;"><a href="#function-tostring"><strong>ToString</strong></a> () override const<br><em>Converts the event into a string representation.</em></td>
 </tr>
 </tbody>
 </table>
@@ -157,11 +161,11 @@
 </tr>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-isincategory"><strong>IsInCategory</strong></a> (EventCategory Category) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-isincategory"><strong>IsInCategory</strong></a> (EventCategory Category) <br><em>Checks if an event is in a specific category.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual std::string</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-tostring"><strong>ToString</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-tostring"><strong>ToString</strong></a> () const<br><em>Returns a string representation of the object.</em></td>
 </tr>
 </tbody>
 </table>
@@ -197,10 +201,21 @@
 </tr>
 </tbody>
 </table>
+<h2 id="detailed-description">Detailed Description</h2>
+<p>This function returns the number of times a specific process or operation is repeated, as an integer value. If it fails to retrieve the data, it will return -1.</p>
+<p><strong>Returns:</strong></p>
+<p>The repeat count as an integer. </p>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-getrepeatcount">function GetRepeatCount</h3>
+<p><em>Returns the repeat count of a certain process or operation.</em> </p>
 <pre><code class="language-C++">inline int AGE::KeyPressedEvent::GetRepeatCount () const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>The number of times the process or operation is repeated, as an integer value. If the function fails to retrieve the data, it returns -1.</p>
+<p>Returns the repeat count of a sequence.</p>
+<p>This function retrieves the current value of the member variable <code>m_RepeatCount</code>, which represents the number of times a sequence should be repeated.</p>
+<p><strong>Returns:</strong></p>
+<p>The current repeat count as an integer. If no sequence is set or if the sequence has not been processed yet, this will return 0. </p>
 <hr>
 
 <h3 id="function-keypressedevent">function KeyPressedEvent</h3>
@@ -212,8 +227,16 @@
 <hr>
 
 <h3 id="function-tostring">function ToString</h3>
+<p><em>Converts the event into a string representation.</em> </p>
 <pre><code class="language-C++">inline virtual std::string AGE::KeyPressedEvent::ToString () override const
 </code></pre>
+<p>This function converts the <a href="./"><strong>KeyPressedEvent</strong></a> object into a string format that includes the key code and repeat count of the event. The resulting string is returned by this method.</p>
+<p><strong>Returns:</strong></p>
+<p>A string in the format "KeyPressedEvent: [keycode] ([repeatcount] repeats)".</p>
+<p>Converts the event into a string representation.</p>
+<p>This function converts the <a href="./"><strong>KeyPressedEvent</strong></a> object into a human-readable string format. It includes details about the key code and repeat count of the event.</p>
+<p><strong>Returns:</strong></p>
+<p>A string containing the details of the event in a readable format. </p>
 <p>Implements <a href="../class_a_g_e_1_1_event/#function-tostring"><em>AGE::Event::ToString</em></a></p>
 <hr>
 

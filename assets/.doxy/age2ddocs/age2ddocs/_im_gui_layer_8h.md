@@ -42,7 +42,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**ImGuiLayer**](class_a_g_e_1_1_im_gui_layer.md) <br> |
+| class | [**ImGuiLayer**](class_a_g_e_1_1_im_gui_layer.md) <br>_This class represents the ImGui layer in a system. It is responsible for rendering and handling user interface events._  |
 
 
 

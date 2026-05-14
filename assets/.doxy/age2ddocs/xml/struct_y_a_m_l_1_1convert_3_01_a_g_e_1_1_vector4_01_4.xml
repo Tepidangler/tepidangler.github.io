@@ -16,12 +16,26 @@
           <declname>rhs</declname>
         </param>
         <briefdescription>
+<para>Encodes a Vector4 into a Node object. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes in a const reference to an <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">AGE::Vector4</ref> and encodes it into a Node object by pushing the x, y, z, and w values of the vector onto the node.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input Vector4 to be encoded. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns a Node object containing the encoded data from the input Vector4. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" line="79" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" bodystart="79" bodyend="89"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" line="121" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" bodystart="121" bodyend="131"/>
       </memberdef>
       <memberdef kind="function" id="struct_y_a_m_l_1_1convert_3_01_a_g_e_1_1_vector4_01_4_1a39ac82da155dad33558be5818cbd9527" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -38,19 +52,21 @@
           <declname>rhs</declname>
         </param>
         <briefdescription>
+<para>Decodes a Node object into an <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">AGE::Vector4</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes in a const reference to a Node object and a reference to an <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">AGE::Vector4</ref>. It checks if the node is a sequence and has exactly four elements. If it does, it assigns the first three elements of the node (interpreted as floats) to x, y, and z properties of the Vector4 respectively, and the fourth element to w property. The function returns true if the decoding was successful, false otherwise. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" line="91" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" bodystart="91" bodyend="103"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" line="140" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" bodystart="140" bodyend="152"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" line="77" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" bodystart="78" bodyend="104"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" line="111" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" bodystart="112" bodyend="153"/>
     <listofallmembers>
       <member refid="struct_y_a_m_l_1_1convert_3_01_a_g_e_1_1_vector4_01_4_1a39ac82da155dad33558be5818cbd9527" prot="public" virt="non-virtual"><scope>YAML::convert&lt; AGE::Vector4 &gt;</scope><name>decode</name></member>
       <member refid="struct_y_a_m_l_1_1convert_3_01_a_g_e_1_1_vector4_01_4_1ac8a7f8a6197fa2280dd16b7bf0f19bcf" prot="public" virt="non-virtual"><scope>YAML::convert&lt; AGE::Vector4 &gt;</scope><name>encode</name></member>

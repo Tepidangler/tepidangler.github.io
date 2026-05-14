@@ -77,6 +77,25 @@
               
                 <h1 id="class-agelayerstack">Class AGE::LayerStack</h1>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespace_a_g_e/"><strong>AGE</strong></a> <strong>&gt;</strong> <a href="./"><strong>LayerStack</strong></a></p>
+<p><em>A class for managing layers in a stack-like structure.</em> <a href="#detailed-description">More...</a></p>
+<ul>
+<li><code>#include &lt;LayerStack.h&gt;</code></li>
+</ul>
+<h2 id="public-attributes">Public Attributes</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">COMMENT</td>
+<td style="text-align: left;"><a href="#variable-__pad0__"><strong>__pad0__</strong></a>  <br><em>Returns an iterator pointing to the beginning of the Layers vector.</em></td>
+</tr>
+</tbody>
+</table>
 <h2 id="public-functions">Public Functions</h2>
 <table>
 <thead>
@@ -88,27 +107,27 @@
 <tbody>
 <tr>
 <td style="text-align: right;"><a href="../class_a_g_e_1_1_layer/"><strong>Layer</strong></a> *</td>
-<td style="text-align: left;"><a href="#function-getlayerbyname"><strong>GetLayerByName</strong></a> (const std::string &amp; LayerName) <br></td>
+<td style="text-align: left;"><a href="#function-getlayerbyname"><strong>GetLayerByName</strong></a> (const std::string &amp; LayerName) <br><em>This function is used to get a layer by its name.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-layerstack"><strong>LayerStack</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-layerstack"><strong>LayerStack</strong></a> () <br><a href="./"><em><strong>LayerStack</strong></em></a> <em>is a class that manages layers in a stack-like structure. It provides methods for pushing, popping and managing the layers.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-poplayer"><strong>PopLayer</strong></a> (<a href="../class_a_g_e_1_1_layer/"><strong>Layer</strong></a> * Layer) <br></td>
+<td style="text-align: left;"><a href="#function-poplayer"><strong>PopLayer</strong></a> (<a href="../class_a_g_e_1_1_layer/"><strong>Layer</strong></a> * Layer) <br><em>This function is used to remove a layer from the</em> <a href="./"><em><strong>LayerStack</strong></em></a> <em>. It calls the OnDetach() method of the provided layer, then it searches for that layer in the m_Layers vector and removes it if found. The index where this layer was inserted into the stack is also decremented by one.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-popoverlay"><strong>PopOverlay</strong></a> (<a href="../class_a_g_e_1_1_layer/"><strong>Layer</strong></a> * Overlay) <br></td>
+<td style="text-align: left;"><a href="#function-popoverlay"><strong>PopOverlay</strong></a> (<a href="../class_a_g_e_1_1_layer/"><strong>Layer</strong></a> * Overlay) <br><em>This function is used to remove an overlay from the layer stack.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-pushlayer"><strong>PushLayer</strong></a> (<a href="../class_a_g_e_1_1_layer/"><strong>Layer</strong></a> * Layer) <br></td>
+<td style="text-align: left;"><a href="#function-pushlayer"><strong>PushLayer</strong></a> (<a href="../class_a_g_e_1_1_layer/"><strong>Layer</strong></a> * Layer) <br><em>Pushes a layer onto the stack at the specified position.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-pushoverlay"><strong>PushOverlay</strong></a> (<a href="../class_a_g_e_1_1_layer/"><strong>Layer</strong></a> * Overlay) <br></td>
+<td style="text-align: left;"><a href="#function-pushoverlay"><strong>PushOverlay</strong></a> (<a href="../class_a_g_e_1_1_layer/"><strong>Layer</strong></a> * Overlay) <br><em>Pushes an overlay layer onto the stack.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">std::vector&lt; <a href="../class_a_g_e_1_1_layer/"><strong>Layer</strong></a> * &gt;::iterator</td>
@@ -116,61 +135,143 @@
 </tr>
 <tr>
 <td style="text-align: right;">std::vector&lt; <a href="../class_a_g_e_1_1_layer/"><strong>Layer</strong></a> * &gt;::const_iterator</td>
-<td style="text-align: left;"><a href="#function-begin-22"><strong>begin</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-begin-22"><strong>begin</strong></a> () const<br><em>Returns a constant iterator pointing to the beginning of the layers vector.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">std::vector&lt; <a href="../class_a_g_e_1_1_layer/"><strong>Layer</strong></a> * &gt;::iterator</td>
-<td style="text-align: left;"><a href="#function-end-12"><strong>end</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-end-12"><strong>end</strong></a> () <br><em>Returns an iterator pointing to the theoretical element that follows the last element of the vector.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">std::vector&lt; <a href="../class_a_g_e_1_1_layer/"><strong>Layer</strong></a> * &gt;::const_iterator</td>
-<td style="text-align: left;"><a href="#function-end-22"><strong>end</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-end-22"><strong>end</strong></a> () const<br><em>Returns a constant iterator pointing to the past-the-end element of the layer vector.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-layerstack"><strong>~LayerStack</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-layerstack"><strong>~LayerStack</strong></a> () <br><em>Destructor for the</em> <a href="./"><em><strong>LayerStack</strong></em></a> <em>class. This function is responsible for deleting all layers in the stack, freeing up memory that was previously allocated to them. It uses a range-based for loop to iterate over each layer and deletes it using the delete keyword.</em></td>
 </tr>
 </tbody>
 </table>
+<h2 id="detailed-description">Detailed Description</h2>
+<p>The <a href="./"><strong>LayerStack</strong></a> class provides methods to push, pop and get layers by name. It also supports iteration over the layers using iterators. </p>
+<h2 id="public-attributes-documentation">Public Attributes Documentation</h2>
+<h3 id="variable-__pad0__">variable __pad0__</h3>
+<p><em>Returns an iterator pointing to the beginning of the Layers vector.</em> </p>
+<pre><code class="language-C++">COMMENT AGE::LayerStack::__pad0__;
+</code></pre>
+<p><strong>Returns:</strong></p>
+<p>An iterator pointing to the start of the Layers vector. If no layers exist, returns an iterator equal to <a href="./#function-end-12"><strong>end()</strong></a>. </p>
+<hr>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-getlayerbyname">function GetLayerByName</h3>
+<p><em>This function is used to get a layer by its name.</em> </p>
 <pre><code class="language-C++">Layer * AGE::LayerStack::GetLayerByName (
     const std::string &amp; LayerName
 ) 
 </code></pre>
+<p>The function iterates over the layers in the stack and returns the first one whose name matches the input string. If no such layer exists, it returns nullptr.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>LayerName</code> A const reference to a std::string representing the name of the layer we are looking for. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Pointer to <a href="../class_a_g_e_1_1_layer/"><strong>Layer</strong></a> if found, otherwise nullptr.</p>
+<p>This function is used to get a layer by its name. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>LayerName</code> The name of the layer that we want to find. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Returns a pointer to the found layer if it exists, otherwise returns nullptr. </p>
 <hr>
 
 <h3 id="function-layerstack">function LayerStack</h3>
+<p><a href="./"><em><strong>LayerStack</strong></em></a> <em>is a class that manages layers in a stack-like structure. It provides methods for pushing, popping and managing the layers.</em></p>
 <pre><code class="language-C++">AGE::LayerStack::LayerStack () 
 </code></pre>
+<p><a href="./"><strong>LayerStack</strong></a> is a class that manages layers in a stack-like structure. It provides methods for pushing, popping and managing layers. </p>
 <hr>
 
 <h3 id="function-poplayer">function PopLayer</h3>
+<p><em>This function is used to remove a layer from the</em> <a href="./"><em><strong>LayerStack</strong></em></a> <em>. It calls the OnDetach() method of the provided layer, then it searches for that layer in the m_Layers vector and removes it if found. The index where this layer was inserted into the stack is also decremented by one.</em></p>
 <pre><code class="language-C++">void AGE::LayerStack::PopLayer (
     Layer * Layer
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><a href="../class_a_g_e_1_1_layer/"><strong>Layer</strong></a> Pointer to the layer that needs to be removed from the stack.</li>
+</ul>
+<p>Pop a layer from the stack and detach it.</p>
+<p>This function removes a specified <a href="../class_a_g_e_1_1_layer/"><strong>Layer</strong></a> object from the <a href="./"><strong>LayerStack</strong></a> by calling its OnDetach() method, then erases it from the m_Layers vector. The index of insertion is also decremented to reflect this removal. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><a href="../class_a_g_e_1_1_layer/"><strong>Layer</strong></a> Pointer to the layer that needs to be removed. </li>
+</ul>
 <hr>
 
 <h3 id="function-popoverlay">function PopOverlay</h3>
+<p><em>This function is used to remove an overlay from the layer stack.</em> </p>
 <pre><code class="language-C++">void AGE::LayerStack::PopOverlay (
     Layer * Overlay
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Overlay</code> Pointer to the <a href="../class_a_g_e_1_1_layer/"><strong>Layer</strong></a> object that needs to be removed.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>This function is used to remove an overlay from the layer stack.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Overlay</code> Pointer to the <a href="../class_a_g_e_1_1_layer/"><strong>Layer</strong></a> object that needs to be removed.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void No return value. </p>
 <hr>
 
 <h3 id="function-pushlayer">function PushLayer</h3>
+<p><em>Pushes a layer onto the stack at the specified position.</em> </p>
 <pre><code class="language-C++">void AGE::LayerStack::PushLayer (
     Layer * Layer
 ) 
 </code></pre>
+<p>This function inserts a new layer into the <a href="./"><strong>LayerStack</strong></a> at the specified index, effectively pushing it to the top of the rendering order. The layer is inserted before all existing layers. If no index is provided, it defaults to the end of the stack (top).</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><a href="../class_a_g_e_1_1_layer/"><strong>Layer</strong></a> Pointer to the layer that should be pushed onto the stack.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void No return value.</p>
+<p>Pushes a layer onto the stack at the specified index.</p>
+<p>This function inserts a new layer into the <a href="./"><strong>LayerStack</strong></a> at the position indicated by m_LayerInsertIndex. The layer is inserted before all existing layers with lower indices, and its index in the stack increases by one.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><a href="../class_a_g_e_1_1_layer/"><strong>Layer</strong></a> Pointer to the layer that will be pushed onto the stack. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void No return value. </p>
 <hr>
 
 <h3 id="function-pushoverlay">function PushOverlay</h3>
+<p><em>Pushes an overlay layer onto the stack.</em> </p>
 <pre><code class="language-C++">void AGE::LayerStack::PushOverlay (
     Layer * Overlay
 ) 
 </code></pre>
+<p>This function adds a new layer to the top of the <a href="./"><strong>LayerStack</strong></a>, making it visible and interactive. The layer is added at the end of the m_Layers vector, so it will be rendered on top of all other layers.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Overlay</code> Pointer to the overlay layer that should be pushed onto the stack. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void No return value.</p>
+<p>Pushes an overlay layer onto the stack.</p>
+<p>This function adds a new layer to the top of the <a href="./"><strong>LayerStack</strong></a>, making it visible and interactive. The layer is added at the end of the m_Layers vector, so it will be rendered on top of all other layers.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Overlay</code> Pointer to the overlay layer that should be pushed onto the stack. </li>
+</ul>
 <hr>
 
 <h3 id="function-begin-12">function begin [1/2]</h3>
@@ -179,23 +280,44 @@
 <hr>
 
 <h3 id="function-begin-22">function begin [2/2]</h3>
+<p><em>Returns a constant iterator pointing to the beginning of the layers vector.</em> </p>
 <pre><code class="language-C++">inline std::vector&lt; Layer * &gt;::const_iterator AGE::LayerStack::begin () const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A constant iterator to the start of the layers vector.</p>
+<p>Returns a constant iterator pointing to the beginning of the layers vector. </p>
+<p><strong>Returns:</strong></p>
+<p>A constant iterator pointing to the first element in the layers vector, or end if the layers vector is empty. </p>
 <hr>
 
 <h3 id="function-end-12">function end [1/2]</h3>
+<p><em>Returns an iterator pointing to the theoretical element that follows the last element of the vector.</em> </p>
 <pre><code class="language-C++">inline std::vector&lt; Layer * &gt;::iterator AGE::LayerStack::end () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>An iterator to the theoretical element following the last element of the vector.</p>
+<p>Returns an iterator pointing to the theoretical element past the last element of the container. </p>
+<p><strong>Returns:</strong></p>
+<p>An iterator to the theoretical element past the end of the sequence of elements in the container. </p>
 <hr>
 
 <h3 id="function-end-22">function end [2/2]</h3>
+<p><em>Returns a constant iterator pointing to the past-the-end element of the layer vector.</em> </p>
 <pre><code class="language-C++">inline std::vector&lt; Layer * &gt;::const_iterator AGE::LayerStack::end () const
 </code></pre>
+<p>This function returns a constant iterator that points to one position past the last element in the layer vector. It is used to indicate the end of the sequence of elements in the container, similar to how std::vector's member functions cend() return an iterator pointing to the past-the-end element.</p>
+<p><strong>Returns:</strong></p>
+<p>A constant iterator pointing to the past-the-end element.</p>
+<p>Returns a constant iterator pointing to the past-the-end element of the layers vector. </p>
+<p><strong>Returns:</strong></p>
+<p>A constant iterator pointing to the past-the-end element in the layers vector. </p>
 <hr>
 
 <h3 id="function-layerstack_1">function ~LayerStack</h3>
+<p><em>Destructor for the</em> <a href="./"><em><strong>LayerStack</strong></em></a> <em>class. This function is responsible for deleting all layers in the stack, freeing up memory that was previously allocated to them. It uses a range-based for loop to iterate over each layer and deletes it using the delete keyword.</em></p>
 <pre><code class="language-C++">AGE::LayerStack::~LayerStack () 
 </code></pre>
+<p>Destructor for the <a href="./"><strong>LayerStack</strong></a> class. This function is responsible for deleting all layers in the stack when an instance of the class is destroyed. It uses a range-based for loop to iterate over each layer and deletes it using 'delete'. </p>
 <hr>
 
 <hr />

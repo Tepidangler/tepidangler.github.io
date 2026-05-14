@@ -17,7 +17,7 @@
 
 namespace AGE
 {
-    static GLenum ShaderTypeFromString(const std::string& Type)
+static GLenum ShaderTypeFromString(const std::string& Type)
     {
         if (Type == "Vertex" || Type == "vertex")
         {
@@ -37,7 +37,7 @@ namespace AGE
         return GL_DEBUG_TYPE_UNDEFINED_BEHAVIOR;
     }
 
-    OpenGLShader::OpenGLShader(const std::string& FilePath)
+OpenGLShader::OpenGLShader(const std::string& FilePath)
     {
         AGE_PROFILE_FUNCTION();
         std::string ShaderSource  = ReadFile(FilePath);
@@ -53,7 +53,7 @@ namespace AGE
         m_ShaderName = FilePath.substr(LastSlash, Count);
     }
 
-    OpenGLShader::OpenGLShader(const std::string& VertexSrcPath, const std::string& FragmentSrcPath)
+OpenGLShader::OpenGLShader(const std::string& VertexSrcPath, const std::string& FragmentSrcPath)
     {
         AGE_PROFILE_FUNCTION();
         std::unordered_map<GLenum, std::string> Sources;
@@ -69,7 +69,7 @@ namespace AGE
         m_ShaderName = VertexSrcPath.substr(LastSlash, Count);
     
     }
-    OpenGLShader::OpenGLShader(const std::string& Name, const std::string& VertexSrc, const std::string& FragmentSrc)
+OpenGLShader::OpenGLShader(const std::string& Name, const std::string& VertexSrc, const std::string& FragmentSrc)
         :m_ShaderName(Name)
     {
         AGE_PROFILE_FUNCTION();
@@ -79,106 +79,80 @@ namespace AGE
         Compile(Sources);
     }
 
-    OpenGLShader::~OpenGLShader()
+OpenGLShader::~OpenGLShader()
     {
         AGE_PROFILE_FUNCTION();
         glDeleteProgram(m_RendererID);
     }
-    void OpenGLShader::Bind() const
+void OpenGLShader::Bind() const
     {
         AGE_PROFILE_FUNCTION();
         glUseProgram(m_RendererID);
+        //CoreLogger::Info("{0}", glGetError());
+
     }
-    void OpenGLShader::Unbind() const
+void OpenGLShader::Unbind() const
     {
         glUseProgram(0);
     }
-
-    void OpenGLShader::SetFloat(const char *Name, float Values, float *ValuePtr, int Count) const
+void OpenGLShader::SetFloat(const char* Name, float Values) const
     {
         AGE_PROFILE_FUNCTION();
-        UploadFloat(Name, Values,ValuePtr, Count);
+        UploadFloat(Name, Values);
     }
-
-    void OpenGLShader::SetFloat2(const char *Name, const Vector2 &Values, const Vector2 *ValuePtr, int Count) const
+void OpenGLShader::SetFloat2(const char* Name, const Vector2& Values) const
     {
         AGE_PROFILE_FUNCTION();
-        UploadFloat2(Name, Values,ValuePtr, Count);
+        UploadFloat2(Name, Values);
     }
-
-    void OpenGLShader::SetFloat3(const char *Name, const Vector3 &Values, const Vector3 *ValuePtr, int Count) const
+void OpenGLShader::SetFloat3(const char* Name, const Vector3& Values) const
     {
         AGE_PROFILE_FUNCTION();
-        UploadFloat3(Name, Values,ValuePtr, Count);
+        UploadFloat3(Name, Values);
     }
-
-    void OpenGLShader::SetFloat4(const char *Name, const Vector4 &Value, const Vector4 *ValuePtr, int Count) const
+void OpenGLShader::SetFloat4(const char* Name, const Vector4 Value) const
     {
         AGE_PROFILE_FUNCTION();
-        UploadFloat4(Name, Value,ValuePtr, Count);
+        UploadFloat4(Name, Value);
     }
-
-    void OpenGLShader::SetMat4(const char *Name, const Matrix4D &Matrix) const
-    {
-        AGE_PROFILE_FUNCTION();
-        UploadMat4(Name, Matrix);
-    }
-    void OpenGLShader::SetMat3(const char* Name, const Matrix3D& Matrix) const
+void OpenGLShader::SetMat3(const char* Name, const Matrix3D& Matrix) const
     {
         AGE_PROFILE_FUNCTION();
         UploadMat3(Name, Matrix);
     }
-    void OpenGLShader::SetInt(const char* Name, const int Texture, const int* TexturePtr, const int Count) const
+void OpenGLShader::SetMat4(const char* Name, const Matrix4D Matrix) const
+    {
+        AGE_PROFILE_FUNCTION();
+        UploadMat4(Name, Matrix);
+    }
+void OpenGLShader::SetInt(const char* Name, const int Texture, const int* TexturePtr, const int Count) const
     {
         AGE_PROFILE_FUNCTION();
         UploadInt(Name, Texture, TexturePtr, Count);
     }
-
-    void OpenGLShader::UploadFloat(const char *Name, float Values, float *ValuePtr, int Count) const
+void OpenGLShader::UploadFloat(const char* Name, float Values) const
     {
-        if (ValuePtr)
-        {
-            glUniform1fv(glGetUniformLocation(m_RendererID, Name), Count, ValuePtr);
-            return;
-        }
         glUniform1f(glGetUniformLocation(m_RendererID, Name), Values);
     }
-
-    void OpenGLShader::UploadFloat2(const char *Name, const Vector2 &Values, const Vector2 *ValuePtr, int Count) const
+void OpenGLShader::UploadFloat2(const char* Name, const Vector2& Values) const
     {
-        if (ValuePtr)
-        {
-            glUniform2fv(glGetUniformLocation(m_RendererID, Name), Count, glm::value_ptr((glm::vec2)*ValuePtr));
-            return;
-        }
         glUniform2f(glGetUniformLocation(m_RendererID, Name), Values[0], Values[1]);
     }
-
-    void OpenGLShader::UploadFloat3(const char *Name, const Vector3 &Values, const Vector3 *ValuePtr, int Count) const
+void OpenGLShader::UploadFloat3(const char* Name, const Vector3& Values) const
     {
-        if (ValuePtr)
-        {
-            glUniform3fv(glGetUniformLocation(m_RendererID, Name), Count, &ValuePtr[0].x);
-            return;
-        }
         glUniform3f(glGetUniformLocation(m_RendererID, Name), Values[0], Values[1], Values[2]);
     }
-
-    void OpenGLShader::UploadFloat4(const char *Name, const Vector4 &Value, const Vector4 *ValuePtr, int Count) const
+void OpenGLShader::UploadFloat4(const char* Name, const Vector4& Values) const
     {
-        if (ValuePtr)
-        {
-            glUniform4fv(glGetUniformLocation(m_RendererID, Name), Count, &ValuePtr[0].x);
-            return;
-        }
-        glUniform4f(glGetUniformLocation(m_RendererID, Name), Value[0], Value[1], Value[2], Value[3]);
+        glUniform4f(glGetUniformLocation(m_RendererID, Name), Values[0], Values[1], Values[2], Values[3]);
+        
     }
-    void OpenGLShader::UploadMat3(const char* Name, const Matrix3D& Matrix) const
+void OpenGLShader::UploadMat3(const char* Name, const Matrix3D& Matrix) const
     {
         glUniformMatrix3fv(glGetUniformLocation(m_RendererID, Name), 1, GL_FALSE, glm::value_ptr(Matrix.ToGLM()));
         
     }
-    void OpenGLShader::UploadMat4(const char* Name, const Matrix4D& Matrix) const
+void OpenGLShader::UploadMat4(const char* Name, const Matrix4D& Matrix) const
     {
         //Figure out why this is taking 15mss
         int location = 0;
@@ -197,17 +171,17 @@ namespace AGE
         }
     }
 
-    void OpenGLShader::UploadInt(const char* Name, const int Texture, const int* TexturePtr, const int Count) const
+void OpenGLShader::UploadInt(const char* Name, const int Texture, const int* TexturePtr, const int Count) const
     {
         if (TexturePtr)
         {
             glUniform1iv(glGetUniformLocation(m_RendererID, Name), Count, TexturePtr);
-            return;
+
         }
         glUniform1i(glGetUniformLocation(m_RendererID, Name),Texture);
     }
 
-    std::string OpenGLShader::ReadFile(const std::string FilePath)
+std::string OpenGLShader::ReadFile(const std::string FilePath)
     {
         AGE_PROFILE_FUNCTION();
         std::string Result;
@@ -229,7 +203,7 @@ namespace AGE
 
     }
 
-    std::unordered_map<GLenum, std::string> OpenGLShader::PreProcess(const std::string& Source)
+std::unordered_map<GLenum, std::string> OpenGLShader::PreProcess(const std::string& Source)
     {
         AGE_PROFILE_FUNCTION();
         std::unordered_map<GLenum, std::string> ShaderSources;
@@ -240,10 +214,10 @@ namespace AGE
         while (Pos != std::string::npos)
         {
             size_t EOL = Source.find_first_of("\r\n", Pos);
-            AGE_CORE_ASSERT(EOL != std::string::npos, "Syntax Error");
+            CoreLogger::Assert(EOL != std::string::npos, "Syntax Error");
             size_t begin = Pos + TypeTokenLength + 1;
             std::string Type = Source.substr(begin, EOL - begin);
-            AGE_CORE_ASSERT(ShaderTypeFromString(Type) , "Invalid Shader Type Specifier");
+            CoreLogger::Assert(ShaderTypeFromString(Type) , "Invalid Shader Type Specifier");
 
             size_t NextLinePos = Source.find_first_not_of("\r\n", EOL);
             Pos = Source.find(TypeToken, NextLinePos);
@@ -253,11 +227,12 @@ namespace AGE
         return ShaderSources;
     }
 
-    void OpenGLShader::Compile(const std::unordered_map<GLenum, std::string>& ShaderSources)
+
+void OpenGLShader::Compile(const std::unordered_map<GLenum, std::string>& ShaderSources)
     {
         AGE_PROFILE_FUNCTION();
         GLuint program = glCreateProgram();
-        AGE_CORE_ASSERT(ShaderSources.size() <= 4, "Using Too Many Shaders! Only 4 Shaders Supported");
+        CoreLogger::Assert(ShaderSources.size() <= 4, "Using Too Many Shaders! Only 4 Shaders Supported");
         std::array<GLenum,4> GLShaderIDs;
 
         int GlShaderIDIndex = 0;
@@ -288,7 +263,7 @@ namespace AGE
 
 
                 CoreLogger::Error("Shader Error: {0}", infoLog.data());
-                AGE_CORE_ASSERT(false, "Shader Compilation Failure!");
+                CoreLogger::Assert(false, "Shader Compilation Failure!");
 
                 break;
             }
@@ -329,7 +304,7 @@ namespace AGE
 
                     CoreLogger::Error("Shader Link Error: {0}", infoLog.data());
 
-                    AGE_CORE_ASSERT(false, "Shader Link Failure!");
+                    CoreLogger::Assert(false, "Shader Link Failure!");
 
                 }
             }

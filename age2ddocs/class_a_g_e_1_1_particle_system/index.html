@@ -88,7 +88,7 @@
 <tbody>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-emit"><strong>Emit</strong></a> (const <a href="../struct_a_g_e_1_1_particle_props/"><strong>ParticleProps</strong></a> &amp; Properties) <br></td>
+<td style="text-align: left;"><a href="#function-emit"><strong>Emit</strong></a> (const <a href="../struct_a_g_e_1_1_particle_props/"><strong>ParticleProps</strong></a> &amp; Properties) <br><em>Emit a new particle with the given properties.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
@@ -96,20 +96,32 @@
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-onupdate"><strong>OnUpdate</strong></a> (<a href="../class_a_g_e_1_1_time_step/"><strong>TimeStep</strong></a> DeltaTime) <br></td>
+<td style="text-align: left;"><a href="#function-onupdate"><strong>OnUpdate</strong></a> (<a href="../class_a_g_e_1_1_time_step/"><strong>TimeStep</strong></a> DeltaTime) <br><em>This function updates the state of each particle in the system over a given time step.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-particlesystem"><strong>ParticleSystem</strong></a> (uint32_t MaxParticles=100000) <br></td>
+<td style="text-align: left;"><a href="#function-particlesystem"><strong>ParticleSystem</strong></a> (uint32_t MaxParticles=100000) <br><em>Constructs a</em> <a href="./"><em><strong>ParticleSystem</strong></em></a> <em>object with the specified maximum number of particles.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-emit">function Emit</h3>
+<p><em>Emit a new particle with the given properties.</em> </p>
 <pre><code class="language-C++">void AGE::ParticleSystem::Emit (
     const ParticleProps &amp; Properties
 ) 
 </code></pre>
+<p>This function creates a new particle and initializes its properties based on the provided <a href="../struct_a_g_e_1_1_particle_props/"><strong>ParticleProps</strong></a> object. The position, rotation, velocity, color, lifetime, size of the particle are set according to the values in the <a href="../struct_a_g_e_1_1_particle_props/"><strong>ParticleProps</strong></a> object.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>particleProps</code> Properties for the new particle.</li>
+</ul>
+<p>Emits a new particle with given properties.</p>
+<p>This function creates a new particle and initializes its properties based on the provided <a href="../struct_a_g_e_1_1_particle_props/"><strong>ParticleProps</strong></a> object. The position, rotation, velocity, color, lifetime, size of the particle are set according to the values in the <a href="../struct_a_g_e_1_1_particle_props/"><strong>ParticleProps</strong></a> object. The particle is then added to the pool of particles.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>particleProps</code> Properties for the new particle. </li>
+</ul>
 <hr>
 
 <h3 id="function-onrender">function OnRender</h3>
@@ -121,17 +133,41 @@
 <hr>
 
 <h3 id="function-onupdate">function OnUpdate</h3>
+<p><em>This function updates the state of each particle in the system over a given time step.</em> </p>
 <pre><code class="language-C++">void AGE::ParticleSystem::OnUpdate (
     TimeStep DeltaTime
 ) 
 </code></pre>
+<p>The function iterates through all particles in the system and performs several operations on them based on their current state. If a particle is not active, it will be skipped. For active particles, if their life remaining is less than or equal to zero, they are deactivated. Otherwise, their lifespan is reduced by the time step and their position is updated by adding their velocity times the time step. The rotation of the particle remains unaffected in this case.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>ts</code> The time step over which to update the particles.</li>
+</ul>
+<p>This function updates the state of each particle in the system over a given time step.</p>
+<p>The function iterates through all particles in the pool and performs several operations on them based on their current status. If a particle is not active, it is skipped. For active particles, if their life remaining is less than or equal to zero, they are deactivated. Otherwise, their lifespan is reduced by the time step size, and their position is updated by adding their velocity times the time step size. The rotation of each particle also increases over time.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>ts</code> The duration of the time step for which the particles should be updated. </li>
+</ul>
 <hr>
 
 <h3 id="function-particlesystem">function ParticleSystem</h3>
+<p><em>Constructs a</em> <a href="./"><em><strong>ParticleSystem</strong></em></a> <em>object with the specified maximum number of particles.</em></p>
 <pre><code class="language-C++">AGE::ParticleSystem::ParticleSystem (
     uint32_t MaxParticles=100000
 ) 
 </code></pre>
+<p>This constructor initializes the particle pool to the given size and sets up the random number generator for the indices. The m_PoolIndex is initialized as MaxParticles - 1, ensuring that the first call to GetNextFreeParticle() will return 0. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>MaxParticles</code> The maximum number of particles that can be stored in the particle pool.</li>
+</ul>
+<p>Constructs a <a href="./"><strong>ParticleSystem</strong></a> object with the specified maximum number of particles.</p>
+<p>Initializes the particle pool to the given size and sets up the random number generator for the indices.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>MaxParticles</code> The maximum number of particles that can be in the system at any one time. </li>
+</ul>
 <hr>
 
 <hr />

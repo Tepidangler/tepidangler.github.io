@@ -77,6 +77,10 @@
               
                 <h1 id="class-agewindowresizeevent">Class AGE::WindowResizeEvent</h1>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespace_a_g_e/"><strong>AGE</strong></a> <strong>&gt;</strong> <a href="./"><strong>WindowResizeEvent</strong></a></p>
+<p><em>Represents a window resize event.</em> <a href="#detailed-description">More...</a></p>
+<ul>
+<li><code>#include &lt;ApplicationEvent.h&gt;</code></li>
+</ul>
 <p>Inherits the following classes: <a href="../class_a_g_e_1_1_event/">AGE::Event</a></p>
 <h2 id="public-attributes-inherited-from-ageevent">Public Attributes inherited from AGE::Event</h2>
 <p>See <a href="../class_a_g_e_1_1_event/">AGE::Event</a></p>
@@ -105,15 +109,15 @@
 <tbody>
 <tr>
 <td style="text-align: right;">unsigned int</td>
-<td style="text-align: left;"><a href="#function-getheight"><strong>GetHeight</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-getheight"><strong>GetHeight</strong></a> () const<br><em>Returns the height of an object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">unsigned int</td>
-<td style="text-align: left;"><a href="#function-getwidth"><strong>GetWidth</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-getwidth"><strong>GetWidth</strong></a> () const<br><em>Returns the width of the object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual std::string</td>
-<td style="text-align: left;"><a href="#function-tostring"><strong>ToString</strong></a> () override const<br></td>
+<td style="text-align: left;"><a href="#function-tostring"><strong>ToString</strong></a> () override const<br><em>This function returns a string representation of the</em> <a href="./"><em><strong>WindowResizeEvent</strong></em></a> <em>object. The returned string includes the width and height of the window that was resized.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
@@ -145,28 +149,53 @@
 </tr>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-isincategory"><strong>IsInCategory</strong></a> (EventCategory Category) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-isincategory"><strong>IsInCategory</strong></a> (EventCategory Category) <br><em>Checks if an event is in a specific category.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual std::string</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-tostring"><strong>ToString</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-tostring"><strong>ToString</strong></a> () const<br><em>Returns a string representation of the object.</em></td>
 </tr>
 </tbody>
 </table>
+<h2 id="detailed-description">Detailed Description</h2>
+<p>This class is used to represent a window resize event, which includes the width and height of the resized window.</p>
+<p>This class represents a window resize event. It is triggered when the size of an application's window changes. </p>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-getheight">function GetHeight</h3>
+<p><em>Returns the height of an object.</em> </p>
 <pre><code class="language-C++">inline unsigned int AGE::WindowResizeEvent::GetHeight () const
 </code></pre>
+<p>This function is used to get the current height value of an object. It returns an unsigned integer representing the height.</p>
+<p><strong>Returns:</strong></p>
+<p>The current height of the object as an unsigned int. If no height has been set, it will return 0.</p>
+<p>Returns the height of an object.</p>
+<p>This function returns the current value of the member variable 'm_Height'. It is a getter method for this variable.</p>
+<p><strong>Returns:</strong></p>
+<p>The current height as an unsigned integer. </p>
 <hr>
 
 <h3 id="function-getwidth">function GetWidth</h3>
+<p><em>Returns the width of the object.</em> </p>
 <pre><code class="language-C++">inline unsigned int AGE::WindowResizeEvent::GetWidth () const
 </code></pre>
+<p>This function returns the current value of the private member variable 'm_Width'. It provides a way to access and retrieve the width of an object.</p>
+<p><strong>Returns:</strong></p>
+<p>unsigned int The current width of the object. If no width is set, it will return 0.</p>
+<p>Returns the width of the object. </p>
+<p><strong>Returns:</strong></p>
+<p>The width as an unsigned integer value. </p>
 <hr>
 
 <h3 id="function-tostring">function ToString</h3>
+<p><em>This function returns a string representation of the</em> <a href="./"><em><strong>WindowResizeEvent</strong></em></a> <em>object. The returned string includes the width and height of the window that was resized.</em></p>
 <pre><code class="language-C++">inline virtual std::string AGE::WindowResizeEvent::ToString () override const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A string containing the details about the event, such as the new width and height of the window.</p>
+<p>Converts the <a href="./"><strong>WindowResizeEvent</strong></a> object into a string format.</p>
+<p>The function constructs and returns a string that represents the current state of the <a href="./"><strong>WindowResizeEvent</strong></a> object. This includes details about the width and height of the window.</p>
+<p><strong>Returns:</strong></p>
+<p>A string representation of the <a href="./"><strong>WindowResizeEvent</strong></a> object, including its width and height. </p>
 <p>Implements <a href="../class_a_g_e_1_1_event/#function-tostring"><em>AGE::Event::ToString</em></a></p>
 <hr>
 

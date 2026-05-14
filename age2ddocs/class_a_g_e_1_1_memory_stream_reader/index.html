@@ -89,43 +89,43 @@
 <tbody>
 <tr>
 <td style="text-align: right;">virtual uint64_t</td>
-<td style="text-align: left;"><a href="#function-getstreamposition"><strong>GetStreamPosition</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getstreamposition"><strong>GetStreamPosition</strong></a> () <br><em>Get the current position of the stream.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual bool</td>
-<td style="text-align: left;"><a href="#function-isstreamgood"><strong>IsStreamGood</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-isstreamgood"><strong>IsStreamGood</strong></a> () const<br><em>Checks the state of the stream.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-memorystreamreader-12"><strong>MemoryStreamReader</strong></a> (void * Addr, size_t Size) <br></td>
+<td style="text-align: left;"><a href="#function-memorystreamreader-12"><strong>MemoryStreamReader</strong></a> (void * Addr, size_t Size) <br><em>Constructor for</em> <a href="./"><em><strong>MemoryStreamReader</strong></em></a> <em>class. Initializes a memory stream reader with the given address and size.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-memorystreamreader-22"><strong>MemoryStreamReader</strong></a> (const <a href="./"><strong>MemoryStreamReader</strong></a> &amp;) = delete<br></td>
+<td style="text-align: left;"><a href="#function-memorystreamreader-22"><strong>MemoryStreamReader</strong></a> (const <a href="./"><strong>MemoryStreamReader</strong></a> &amp;) = delete<br><em>Constructs a new instance of the</em> <a href="./"><em><strong>MemoryStreamReader</strong></em></a> <em>class using an existing memory stream.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual bool</td>
-<td style="text-align: left;"><a href="#function-readbytes-12"><strong>ReadBytes</strong></a> (std::vector&lt; std::byte &gt; &amp; Data, size_t Size) <br></td>
+<td style="text-align: left;"><a href="#function-readbytes-12"><strong>ReadBytes</strong></a> (std::vector&lt; std::byte &gt; &amp; Data, size_t Size) <br><em>Reads a specified number of bytes from the stream into a vector.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual bool</td>
-<td style="text-align: left;"><a href="#function-readbytes-22"><strong>ReadBytes</strong></a> (uint8_t * Data, size_t Size) <br></td>
+<td style="text-align: left;"><a href="#function-readbytes-22"><strong>ReadBytes</strong></a> (uint8_t * Data, size_t Size) <br><em>Reads a specified number of bytes from the stream into a buffer.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual bool</td>
-<td style="text-align: left;"><a href="#function-readdata"><strong>ReadData</strong></a> (char * Data, size_t Size) <br></td>
+<td style="text-align: left;"><a href="#function-readdata"><strong>ReadData</strong></a> (char * Data, size_t Size) <br><em>Reads data from the stream into a buffer.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual bool</td>
-<td style="text-align: left;"><a href="#function-readjson"><strong>ReadJson</strong></a> (std::string &amp; String) <br></td>
+<td style="text-align: left;"><a href="#function-readjson"><strong>ReadJson</strong></a> (std::string &amp; String) <br><em>Reads a JSON string from the memory stream.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-setstreamposition"><strong>SetStreamPosition</strong></a> (uint64_t Pos) <br></td>
+<td style="text-align: left;"><a href="#function-setstreamposition"><strong>SetStreamPosition</strong></a> (uint64_t Pos) <br><em>This function sets the stream position to a specified value.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual</td>
-<td style="text-align: left;"><a href="#function-memorystreamreader"><strong>~MemoryStreamReader</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-memorystreamreader"><strong>~MemoryStreamReader</strong></a> () <br><em>Destructor for</em> <a href="./"><em><strong>MemoryStreamReader</strong></em></a> <em>class. Clears the stream of any error flags.</em></td>
 </tr>
 </tbody>
 </table>
@@ -149,11 +149,11 @@
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_data_reader/#function-readarray"><strong>ReadArray</strong></a> (std::vector&lt; T &gt; &amp; Array, uint32_t Size=0) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_data_reader/#function-readarray"><strong>ReadArray</strong></a> (std::vector&lt; T &gt; &amp; Array, uint32_t Size=0) <br><em>Reads an array of elements from the input stream. If the size is not provided, it reads the size first and then the array. The function uses C++14's std::is_trivial to determine whether T is a trivial type or not. For trivial types, it directly reads into the array element using ReadRaw. For non-trivial types, it uses ReadObject.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_data_reader/#function-readbuffer"><strong>ReadBuffer</strong></a> (char * Data, size_t Size) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_data_reader/#function-readbuffer"><strong>ReadBuffer</strong></a> (char * Data, size_t Size) <br><em>Reads data from the buffer. If size is zero, it reads a uint32_t to determine the size of the data to read next.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual bool</td>
@@ -173,27 +173,27 @@
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_data_reader/#function-readmap-13"><strong>ReadMap</strong></a> (std::map&lt; Key, Value &gt; &amp; Map, uint32_t Size=0) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_data_reader/#function-readmap-13"><strong>ReadMap</strong></a> (std::map&lt; Key, Value &gt; &amp; Map, uint32_t Size=0) <br><em>Reads a map from the input stream.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_data_reader/#function-readmap-23"><strong>ReadMap</strong></a> (std::unordered_map&lt; Key, Value &gt; &amp; Map, uint32_t Size=0) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_data_reader/#function-readmap-23"><strong>ReadMap</strong></a> (std::unordered_map&lt; Key, Value &gt; &amp; Map, uint32_t Size=0) <br><em>Reads a map from the input stream.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_data_reader/#function-readmap-33"><strong>ReadMap</strong></a> (std::unordered_map&lt; std::string, Value &gt; &amp; Map, uint32_t Size=0) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_data_reader/#function-readmap-33"><strong>ReadMap</strong></a> (std::unordered_map&lt; std::string, Value &gt; &amp; Map, uint32_t Size=0) <br><em>Reads a map from the input stream. The size of the map is read if not provided as an argument. If the key and value types are trivial, raw data is read directly; otherwise, objects are read.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_data_reader/#function-readobject"><strong>ReadObject</strong></a> (T &amp; Obj) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_data_reader/#function-readobject"><strong>ReadObject</strong></a> (T &amp; Obj) <br><em>This function reads an object of type T from the stream using Deserialize method.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_data_reader/#function-readraw"><strong>ReadRaw</strong></a> (T &amp; Type) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_data_reader/#function-readraw"><strong>ReadRaw</strong></a> (T &amp; Type) <br><em>This function reads raw data into a specified type.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_data_reader/#function-readstring"><strong>ReadString</strong></a> (std::string &amp; String) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_data_reader/#function-readstring"><strong>ReadString</strong></a> (std::string &amp; String) <br><em>Reads a string from the data source.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
@@ -201,88 +201,210 @@
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_data_reader/#function-operator-bool"><strong>operator bool</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_data_reader/#function-operator-bool"><strong>operator bool</strong></a> () const<br><em>Checks the state of the stream.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_data_reader/#function-datareader"><strong>~DataReader</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_data_reader/#function-datareader"><strong>~DataReader</strong></a> () = default<br><em>Virtual destructor for the</em> <a href="../class_a_g_e_1_1_data_reader/"><em><strong>DataReader</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-getstreamposition">function GetStreamPosition</h3>
+<p><em>Get the current position of the stream.</em> </p>
 <pre><code class="language-C++">inline virtual uint64_t AGE::MemoryStreamReader::GetStreamPosition () 
 </code></pre>
+<p>This function returns the current position in the stream. If an error occurs while trying to get the position, it will return UINT64_MAX. The behavior is platform-dependent and depends on whether <strong>clang</strong> is defined or not. For Clang, if tellg() fails (returns -1), this function returns UINT64_MAX. Otherwise, it converts the result to uint64_t and returns it. For other platforms, it simply calls tellg(). This means that the return value is always a valid position in the stream.</p>
+<p><strong>Returns:</strong></p>
+<p>The current position of the stream as an unsigned 64-bit integer. If an error occurs while trying to get the position, UINT64_MAX is returned.</p>
+<p>Get the current position of the stream</p>
+<p>This function retrieves the current position in the stream. It uses a platform-specific method to do so, and handles any errors that may occur. On platforms where <code>tellg()</code> returns -1 on failure (such as Clang), it instead returns UINT64_MAX to indicate an error state.</p>
+<p><strong>Returns:</strong></p>
+<p>uint64_t The current position in the stream, or UINT64_MAX if there was an error getting the position </p>
 <p>Implements <a href="../class_a_g_e_1_1_data_reader/#function-getstreamposition"><em>AGE::DataReader::GetStreamPosition</em></a></p>
 <hr>
 
 <h3 id="function-isstreamgood">function IsStreamGood</h3>
+<p><em>Checks the state of the stream.</em> </p>
 <pre><code class="language-C++">inline virtual bool AGE::MemoryStreamReader::IsStreamGood () const
 </code></pre>
+<p>This function checks whether the underlying input/output stream is in a good state, i.e., it has no errors or failures that would prevent further operations on it.</p>
+<p><strong>Returns:</strong></p>
+<p>A boolean value indicating if the stream is in a good state (true) or not (false).</p>
+<p>Checks the state of the stream.</p>
+<p>This function checks whether the underlying input-output operations on the stream are good or not. It returns true if the stream is in a good state, false otherwise.</p>
+<p><strong>Returns:</strong></p>
+<p>True if the stream is in a good state, false otherwise. </p>
 <p>Implements <a href="../class_a_g_e_1_1_data_reader/#function-isstreamgood"><em>AGE::DataReader::IsStreamGood</em></a></p>
 <hr>
 
 <h3 id="function-memorystreamreader-12">function MemoryStreamReader [1/2]</h3>
+<p><em>Constructor for</em> <a href="./"><em><strong>MemoryStreamReader</strong></em></a> <em>class. Initializes a memory stream reader with the given address and size.</em></p>
 <pre><code class="language-C++">AGE::MemoryStreamReader::MemoryStreamReader (
     void * Addr,
     size_t Size
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Addr</code> Pointer to the start of the data buffer. </li>
+<li><code>Size</code> The size of the data in bytes.</li>
+</ul>
+<p>Constructor for <a href="./"><strong>MemoryStreamReader</strong></a>. Initializes the object with a given memory address and size. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Addr</code> Pointer to the memory location to be read from. </li>
+<li><code>Size</code> The size of the data in bytes at the provided memory location. </li>
+</ul>
 <hr>
 
 <h3 id="function-memorystreamreader-22">function MemoryStreamReader [2/2]</h3>
+<p><em>Constructs a new instance of the</em> <a href="./"><em><strong>MemoryStreamReader</strong></em></a> <em>class using an existing memory stream.</em></p>
 <pre><code class="language-C++">AGE::MemoryStreamReader::MemoryStreamReader (
     const MemoryStreamReader &amp;
 ) = delete
 </code></pre>
+<p>The constructor takes in a reference to an existing memory stream and sets it as the source for reading data. It also initializes the read position to zero.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>mem_stream</code> A reference to an existing memory stream that will be used as the source of data.</li>
+</ul>
+<p>Constructor for the <a href="./"><strong>MemoryStreamReader</strong></a> class. It is deleted to prevent copying of objects.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>other</code> The object to be copied. This parameter is not used in this function as it's a copy constructor and does nothing. </li>
+</ul>
 <hr>
 
 <h3 id="function-readbytes-12">function ReadBytes [1/2]</h3>
+<p><em>Reads a specified number of bytes from the stream into a vector.</em> </p>
 <pre><code class="language-C++">virtual bool AGE::MemoryStreamReader::ReadBytes (
     std::vector&lt; std::byte &gt; &amp; Data,
     size_t Size
 ) 
 </code></pre>
+<p>This function reads a specified number of bytes from the underlying stream and stores them in a provided vector. The data is read as raw byte values, so it can be used with any type that supports std::byte.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Data</code> A reference to a vector where the read bytes will be stored. </li>
+<li><code>Size</code> The number of bytes to read from the stream. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Always returns true. In future this may change if we decide to add error handling for when not enough data is available in the stream.</p>
+<p>Reads a specified number of bytes from the stream into a vector.</p>
+<p>This function reads 'Size' bytes from the underlying stream and stores them in the provided vector, 'Data'. The data is read as raw byte values (std::byte), so it can be used with any type that supports these operations.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Data</code> A reference to a std::vector of std::bytes where the read data will be stored. </li>
+<li><code>Size</code> The number of bytes to read from the stream. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Returns true if the operation was successful, false otherwise (e.g., if there is an error in reading or EOF has been reached). </p>
 <p>Implements <a href="../class_a_g_e_1_1_data_reader/#function-readbytes-12"><em>AGE::DataReader::ReadBytes</em></a></p>
 <hr>
 
 <h3 id="function-readbytes-22">function ReadBytes [2/2]</h3>
+<p><em>Reads a specified number of bytes from the stream into a buffer.</em> </p>
 <pre><code class="language-C++">virtual bool AGE::MemoryStreamReader::ReadBytes (
     uint8_t * Data,
     size_t Size
 ) 
 </code></pre>
+<p>This function reads a specified number of bytes from the underlying input stream, storing them in a provided buffer. The size of the data read is determined by the 'Size' parameter.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Data</code> Pointer to the buffer where the read data will be stored. </li>
+<li><code>Size</code> Number of bytes to read from the stream. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Returns true if the operation was successful, false otherwise (e.g., end of file).</p>
+<p>Reads a specified number of bytes from the stream into a buffer.</p>
+<p>This function reads a specified number of bytes from the underlying input stream into a provided buffer. The size of the data read is determined by the 'Size' parameter.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Data</code> A pointer to the buffer where the read data will be stored. </li>
+<li><code>Size</code> The number of bytes to read from the stream. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Returns true if the operation was successful, false otherwise. In this case, it always returns true as there are no failure conditions for reading from the stream. </p>
 <p>Implements <a href="../class_a_g_e_1_1_data_reader/#function-readbytes-22"><em>AGE::DataReader::ReadBytes</em></a></p>
 <hr>
 
 <h3 id="function-readdata">function ReadData</h3>
+<p><em>Reads data from the stream into a buffer.</em> </p>
 <pre><code class="language-C++">virtual bool AGE::MemoryStreamReader::ReadData (
     char * Data,
     size_t Size
 ) 
 </code></pre>
+<p>This function reads 'Size' bytes of data from the stream and stores it in the buffer pointed to by 'Data'. The function returns true if successful, false otherwise.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Data</code> Pointer to the buffer where the read data will be stored. </li>
+<li><code>Size</code> Number of bytes to read from the stream. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>True if successful, false otherwise.</p>
+<p>Reads data from the stream into a buffer.</p>
+<p>This function reads 'Size' bytes of data from the stream and stores it in the buffer pointed to by 'Data'. The function returns true if successful, false otherwise.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Data</code> Pointer to the buffer where the read data will be stored. </li>
+<li><code>Size</code> Number of bytes to read from the stream. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>True if the operation was successful, false otherwise. </p>
 <p>Implements <a href="../class_a_g_e_1_1_data_reader/#function-readdata"><em>AGE::DataReader::ReadData</em></a></p>
 <hr>
 
 <h3 id="function-readjson">function ReadJson</h3>
+<p><em>Reads a JSON string from the memory stream.</em> </p>
 <pre><code class="language-C++">virtual bool AGE::MemoryStreamReader::ReadJson (
     std::string &amp; String
 ) 
 </code></pre>
+<p>This function attempts to read a JSON string from the memory stream and stores it in the provided string reference parameter. If successful, the function returns true; otherwise, false is returned.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>String</code> A reference to a std::string object where the JSON string will be stored. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>bool Returns true if the operation was successful, and false otherwise.</p>
+<p>Reads a JSON string from the memory stream.</p>
+<p>This function attempts to read a JSON string from the memory stream and stores it in the provided string reference. If successful, it returns true, otherwise it returns false.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>String</code> A reference to a std::string where the JSON string will be stored. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>bool Returns true if the operation was successful, false otherwise. </p>
 <p>Implements <a href="../class_a_g_e_1_1_data_reader/#function-readjson"><em>AGE::DataReader::ReadJson</em></a></p>
 <hr>
 
 <h3 id="function-setstreamposition">function SetStreamPosition</h3>
+<p><em>This function sets the stream position to a specified value.</em> </p>
 <pre><code class="language-C++">inline virtual void AGE::MemoryStreamReader::SetStreamPosition (
     uint64_t Pos
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Pos</code> The new position in bytes from the beginning of the stream.</li>
+</ul>
+<p>Sets the stream position to a specified value.</p>
+<p>This function sets the current read/write position in the stream to a specific byte offset from the beginning of the file. The new position is determined by the input parameter 'Pos'.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Pos</code> The desired position within the stream, measured in bytes from the start of the file. </li>
+</ul>
 <p>Implements <a href="../class_a_g_e_1_1_data_reader/#function-setstreamposition"><em>AGE::DataReader::SetStreamPosition</em></a></p>
 <hr>
 
 <h3 id="function-memorystreamreader">function ~MemoryStreamReader</h3>
+<p><em>Destructor for</em> <a href="./"><em><strong>MemoryStreamReader</strong></em></a> <em>class. Clears the stream of any error flags.</em></p>
 <pre><code class="language-C++">virtual AGE::MemoryStreamReader::~MemoryStreamReader () 
 </code></pre>
+<p>Destructor for <a href="./"><strong>MemoryStreamReader</strong></a> class. Clears the stream of any error flags. </p>
 <hr>
 
 <hr />

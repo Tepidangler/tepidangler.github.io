@@ -11,12 +11,19 @@
         <name>Point3D</name>
         <qualifiedname>AGE::Point3D::Point3D</qualifiedname>
         <briefdescription>
+<para>Default constructor for the <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref> class. This function initializes a new instance of the <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref> class with all coordinates set to zero. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>A new instance of the <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref> class with x, y and z coordinates set to 0.</para>
+</simplesect>
+Default constructor for the <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref> class. Initializes a new instance of the <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref> class with x, y and z coordinates set to zero.</para>
+<para><simplesect kind="return"><para>A new instance of the <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref> class with all coordinates initialized to 0. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="17" column="1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="29" column="1"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_point3_d_1abb107e4cfadce051f5f2a91fa4084a33" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -37,12 +44,66 @@
           <declname>c</declname>
         </param>
         <briefdescription>
+<para>Constructs a <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref> object with the given coordinates. </para>
         </briefdescription>
         <detaileddescription>
+<para>This constructor creates a <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref> object by initializing its x, y and z coordinates using the provided arguments. It inherits from <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> class.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x-coordinate of the point. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y-coordinate of the point. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The z-coordinate of the point.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Constructs a <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref> object by initializing its coordinates with the given values.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x-coordinate of the point. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y-coordinate of the point. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The z-coordinate of the point. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="19" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="19" bodyend="19"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="47" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="47" bodyend="47"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_point3_d_1ad0f2498aeb0537d97aded4e9eaac296d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref></type>
@@ -55,12 +116,39 @@
           <declname>v</declname>
         </param>
         <briefdescription>
+<para>Assigns a <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> to a <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para>This operator overload allows for the assignment of a <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> to a <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref>. It takes in a const reference to a <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> and returns a new <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref> with the same x, y, and z values as the input <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> to be assigned. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref> with the same x, y, and z coordinates as the input <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref>.</para>
+</simplesect>
+Assigns a <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> to a <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref>.</para>
+<para>This operator overload allows for the assignment of a <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> to a <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref> object. The x, y and z coordinates of the <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> are used to initialize the corresponding members in the <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref> object.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A const reference to the <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> that is being assigned. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref> object with the same values as the input <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref>. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="21" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="21" bodyend="24"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="67" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="67" bodyend="70"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_point3_d_1ae2a8a642cfe2147e26bf26e3ccf8e1c4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref></type>
@@ -73,12 +161,37 @@
           <declname>v</declname>
         </param>
         <briefdescription>
+<para>This function takes a <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> as input and returns a <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref> object. The returned <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref> is constructed from the x, y, z components of the input vector. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object representing the coordinates in space. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref> object with the same coordinates as the input vector.</para>
+</simplesect>
+This function takes a <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> as input and returns a <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref> object. The returned <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref> is constructed from the x, y, z components of the input <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object representing the coordinates in space. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref> object with the same coordinates as the input <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref>. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="26" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="26" bodyend="29"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="86" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="86" bodyend="89"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -109,7 +222,7 @@
         <link refid="struct_a_g_e_1_1_vector3"/>
       </node>
     </collaborationgraph>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="15" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="16" bodyend="33"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="15" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="16" bodyend="93"/>
     <listofallmembers>
       <member refid="struct_a_g_e_1_1_vector3_1a3e6747840947cf6c5f022af5d9bced2f" prot="public" virt="non-virtual"><scope>AGE::Point3D</scope><name>cross</name></member>
       <member refid="struct_a_g_e_1_1_vector3_1a2f682a2ddf8ed91b666cd4141bcd803e" prot="public" virt="non-virtual"><scope>AGE::Point3D</scope><name>dot</name></member>

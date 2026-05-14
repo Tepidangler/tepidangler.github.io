@@ -88,117 +88,207 @@
 <tbody>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-activatewidget"><strong>ActivateWidget</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-activatewidget"><strong>ActivateWidget</strong></a> () <br><em>Activates the widget at the front of the stack by setting its visibility to true.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-deactivatewidget"><strong>DeactivateWidget</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-deactivatewidget"><strong>DeactivateWidget</strong></a> () <br><em>Deactivates the widget at the front of the stack by setting its visibility to false.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">Ref&lt; <a href="../class_a_g_e_1_1_scriptable_widget/"><strong>ScriptableWidget</strong></a> &gt;</td>
-<td style="text-align: left;"><a href="#function-getactivewidget"><strong>GetActiveWidget</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getactivewidget"><strong>GetActiveWidget</strong></a> () <br><em>This function returns the active widget from the list of widgets.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-ontopupdate"><strong>OnTopUpdate</strong></a> (<a href="../class_a_g_e_1_1_time_step/"><strong>TimeStep</strong></a> DeltaTime) <br></td>
+<td style="text-align: left;"><a href="#function-ontopupdate"><strong>OnTopUpdate</strong></a> (<a href="../class_a_g_e_1_1_time_step/"><strong>TimeStep</strong></a> DeltaTime) <br><em>This function updates the topmost widget in the stack based on a given time step.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-popwidgetfromstack"><strong>PopWidgetFromStack</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-popwidgetfromstack"><strong>PopWidgetFromStack</strong></a> () <br><em>Removes the first widget from the stack.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-pushwidgettostack"><strong>PushWidgetToStack</strong></a> (Ref&lt; <a href="../class_a_g_e_1_1_scriptable_widget/"><strong>ScriptableWidget</strong></a> &gt; Widget) <br></td>
+<td style="text-align: left;"><a href="#function-pushwidgettostack"><strong>PushWidgetToStack</strong></a> (Ref&lt; <a href="../class_a_g_e_1_1_scriptable_widget/"><strong>ScriptableWidget</strong></a> &gt; Widget) <br><em>Pushes a</em> <a href="../class_a_g_e_1_1_scriptable_widget/"><em><strong>ScriptableWidget</strong></em></a> <em>to the front of the stack.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-widgetstack"><strong>WidgetStack</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-widgetstack"><strong>WidgetStack</strong></a> () = default<br><em>Default constructor for the</em> <a href="./"><em><strong>WidgetStack</strong></em></a> <em>class. This function initializes an instance of the</em><a href="./"><em><strong>WidgetStack</strong></em></a> <em>class with its members set to their default values.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">std::deque&lt; Ref&lt; <a href="../class_a_g_e_1_1_scriptable_widget/"><strong>ScriptableWidget</strong></a> &gt; &gt;::iterator</td>
-<td style="text-align: left;"><a href="#function-begin-12"><strong>begin</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-begin-12"><strong>begin</strong></a> () <br><em>Returns an iterator pointing to the beginning of the deque container storing</em> <a href="../class_a_g_e_1_1_scriptable_widget/"><em><strong>ScriptableWidget</strong></em></a> <em>objects.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">std::deque&lt; Ref&lt; <a href="../class_a_g_e_1_1_scriptable_widget/"><strong>ScriptableWidget</strong></a> &gt; &gt;::const_iterator</td>
-<td style="text-align: left;"><a href="#function-begin-22"><strong>begin</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-begin-22"><strong>begin</strong></a> () const<br><em>Returns a constant iterator pointing to the beginning of the deque of</em> <a href="../class_a_g_e_1_1_scriptable_widget/"><em><strong>ScriptableWidget</strong></em></a> <em>objects.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">std::deque&lt; Ref&lt; <a href="../class_a_g_e_1_1_scriptable_widget/"><strong>ScriptableWidget</strong></a> &gt; &gt;::iterator</td>
-<td style="text-align: left;"><a href="#function-end-12"><strong>end</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-end-12"><strong>end</strong></a> () <br><em>Returns an iterator pointing to the past-the-end element in the deque container.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">std::deque&lt; Ref&lt; <a href="../class_a_g_e_1_1_scriptable_widget/"><strong>ScriptableWidget</strong></a> &gt; &gt;::const_iterator</td>
-<td style="text-align: left;"><a href="#function-end-22"><strong>end</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-end-22"><strong>end</strong></a> () const<br><em>Returns a constant iterator pointing to the past-the-end element of the deque container.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-widgetstack"><strong>~WidgetStack</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-widgetstack"><strong>~WidgetStack</strong></a> () = default<br><em>Destructor for the</em> <a href="./"><em><strong>WidgetStack</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-activatewidget">function ActivateWidget</h3>
+<p><em>Activates the widget at the front of the stack by setting its visibility to true.</em> </p>
 <pre><code class="language-C++">void AGE::WidgetStack::ActivateWidget () 
 </code></pre>
+<p>This function uses a member variable <code>m_Widgets</code>, which is assumed to be a container storing pointers to <a href="../struct_a_g_e_1_1_widget/"><strong>Widget</strong></a> objects. The front element of this container (i.e., the first added widget) is activated by calling the SetVisibility method on it with an argument of true.</p>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Activates the widget at the front of the stack by setting its visibility to true.</p>
+<p>This function uses a member variable <code>m_Widgets</code>, which is assumed to be a container storing pointers to <a href="../struct_a_g_e_1_1_widget/"><strong>Widget</strong></a> objects. The front element of this container (i.e., the first added widget) will have its visibility set to true using the <code>SetVisibility(true)</code> method.</p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-deactivatewidget">function DeactivateWidget</h3>
+<p><em>Deactivates the widget at the front of the stack by setting its visibility to false.</em> </p>
 <pre><code class="language-C++">void AGE::WidgetStack::DeactivateWidget () 
 </code></pre>
+<p>This function removes the first element from the m_Widgets vector and sets its visibility to false, effectively deactivating it. If the stack is empty, this function does nothing.</p>
+<p>Deactivates the widget at the front of the stack by setting its visibility to false.</p>
+<p>This function removes the first widget from the stack and sets its visibility to false, effectively deactivating it. If there are no widgets in the stack, this function does nothing. </p>
 <hr>
 
 <h3 id="function-getactivewidget">function GetActiveWidget</h3>
+<p><em>This function returns the active widget from the list of widgets.</em> </p>
 <pre><code class="language-C++">inline Ref&lt; ScriptableWidget &gt; AGE::WidgetStack::GetActiveWidget () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A reference to the first element in the m_Widgets vector, which is the active widget. If the vector is empty, it will return a default-constructed Ref&lt;ScriptableWidget&gt; object.</p>
+<p>Retrieves the active widget from the list of widgets. </p>
+<p><strong>Returns:</strong></p>
+<p>A reference to the frontmost widget in the list. If there are no widgets, a default-constructed Ref&lt;ScriptableWidget&gt; is returned. </p>
 <hr>
 
 <h3 id="function-ontopupdate">function OnTopUpdate</h3>
+<p><em>This function updates the topmost widget in the stack based on a given time step.</em> </p>
 <pre><code class="language-C++">void AGE::WidgetStack::OnTopUpdate (
     TimeStep DeltaTime
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>DeltaTime</code> The amount of time that has passed since the last update.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>This function updates the top widget in the stack based on a given time step.</p>
+<p>The function checks if there are any widgets in the stack (i.e., m_Widgets size is greater than 0). If so, it calls the OnUpdate() method for the frontmost widget with the provided DeltaTime. This allows the top widget to be updated based on time elapsed since the last frame.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>DeltaTime</code> The time step representing the amount of time that has passed since the last update.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-popwidgetfromstack">function PopWidgetFromStack</h3>
+<p><em>Removes the first widget from the stack.</em> </p>
 <pre><code class="language-C++">void AGE::WidgetStack::PopWidgetFromStack () 
 </code></pre>
+<p>This function removes the front element of the m_Widgets list, effectively popping the topmost widget off the stack. If there are no widgets in the stack, this function does nothing and has no effect.</p>
+<p>Removes the first widget from the stack.</p>
+<p>This function removes the frontmost element of the m_Widgets list, effectively "popping" the top-most widget off the stack. If the stack is empty, this operation has no effect. </p>
 <hr>
 
 <h3 id="function-pushwidgettostack">function PushWidgetToStack</h3>
+<p><em>Pushes a</em> <a href="../class_a_g_e_1_1_scriptable_widget/"><em><strong>ScriptableWidget</strong></em></a> <em>to the front of the stack.</em></p>
 <pre><code class="language-C++">void AGE::WidgetStack::PushWidgetToStack (
     Ref&lt; ScriptableWidget &gt; Widget
 ) 
 </code></pre>
+<p>This function takes a reference to a <a href="../class_a_g_e_1_1_scriptable_widget/"><strong>ScriptableWidget</strong></a> and pushes it onto the front of the m_Widgets list. The widget is added at the beginning of the list, so it will be the next one to be popped off the stack. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><a href="../struct_a_g_e_1_1_widget/"><strong>Widget</strong></a> A reference to the <a href="../class_a_g_e_1_1_scriptable_widget/"><strong>ScriptableWidget</strong></a> that should be pushed onto the stack.</li>
+</ul>
+<p>Pushes a <a href="../class_a_g_e_1_1_scriptable_widget/"><strong>ScriptableWidget</strong></a> to the front of the stack.</p>
+<p>This function takes in a reference to a <a href="../class_a_g_e_1_1_scriptable_widget/"><strong>ScriptableWidget</strong></a> and pushes it to the front of the m_Widgets list. The widget is added at the beginning of the list, so it will be the next one to be popped off the stack if PopNextWidgetFromStack() is called.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><a href="../struct_a_g_e_1_1_widget/"><strong>Widget</strong></a> A reference to a <a href="../class_a_g_e_1_1_scriptable_widget/"><strong>ScriptableWidget</strong></a> that you want to push onto the stack. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void No return value. </p>
 <hr>
 
 <h3 id="function-widgetstack">function WidgetStack</h3>
+<p><em>Default constructor for the</em> <a href="./"><em><strong>WidgetStack</strong></em></a> <em>class. This function initializes an instance of the</em><a href="./"><em><strong>WidgetStack</strong></em></a> <em>class with its members set to their default values.</em></p>
 <pre><code class="language-C++">AGE::WidgetStack::WidgetStack () = default
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>An instance of the <a href="./"><strong>WidgetStack</strong></a> class with all member variables initialized to their default values.</p>
+<p>Default constructor for the <a href="./"><strong>WidgetStack</strong></a> class. This function initializes a new instance of the <a href="./"><strong>WidgetStack</strong></a> class with an empty stack.</p>
+<p><strong>Returns:</strong></p>
+<p>A new instance of the <a href="./"><strong>WidgetStack</strong></a> class. </p>
 <hr>
 
 <h3 id="function-begin-12">function begin [1/2]</h3>
+<p><em>Returns an iterator pointing to the beginning of the deque container storing</em> <a href="../class_a_g_e_1_1_scriptable_widget/"><em><strong>ScriptableWidget</strong></em></a> <em>objects.</em></p>
 <pre><code class="language-C++">inline std::deque&lt; Ref&lt; ScriptableWidget &gt; &gt;::iterator AGE::WidgetStack::begin () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>An iterator that points to the start of the deque.</p>
+<p>Returns an iterator pointing to the beginning of the deque container storing <a href="../class_a_g_e_1_1_scriptable_widget/"><strong>ScriptableWidget</strong></a> objects. </p>
+<p><strong>Returns:</strong></p>
+<p>An iterator pointing to the first element in the deque. If the deque is empty, the returned iterator will be equal to <a href="./#function-end-12"><strong>end()</strong></a>. </p>
 <hr>
 
 <h3 id="function-begin-22">function begin [2/2]</h3>
+<p><em>Returns a constant iterator pointing to the beginning of the deque of</em> <a href="../class_a_g_e_1_1_scriptable_widget/"><em><strong>ScriptableWidget</strong></em></a> <em>objects.</em></p>
 <pre><code class="language-C++">inline std::deque&lt; Ref&lt; ScriptableWidget &gt; &gt;::const_iterator AGE::WidgetStack::begin () const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A constant iterator pointing to the first element in the deque, or <a href="./#function-end-12"><strong>end()</strong></a> if the deque is empty.</p>
+<p>Returns a constant iterator pointing to the beginning of the deque.</p>
+<p>This function returns a constant iterator that points to the first element in the deque 'm_Widgets'. The returned iterator can be used to access and traverse all elements from the start of the deque. </p>
+<p><strong>Returns:</strong></p>
+<p>A constant iterator pointing to the beginning of the deque. </p>
 <hr>
 
 <h3 id="function-end-12">function end [1/2]</h3>
+<p><em>Returns an iterator pointing to the past-the-end element in the deque container.</em> </p>
 <pre><code class="language-C++">inline std::deque&lt; Ref&lt; ScriptableWidget &gt; &gt;::iterator AGE::WidgetStack::end () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>An iterator pointing to the past-the-end element of the sequence controlled by the deque object.</p>
+<p>Returns an iterator pointing to the past-the-end element in the deque container. </p>
+<p><strong>Returns:</strong></p>
+<p>An iterator to the past-the-end of the sequence controlled by the deque object. </p>
 <hr>
 
 <h3 id="function-end-22">function end [2/2]</h3>
+<p><em>Returns a constant iterator pointing to the past-the-end element of the deque container.</em> </p>
 <pre><code class="language-C++">inline std::deque&lt; Ref&lt; ScriptableWidget &gt; &gt;::const_iterator AGE::WidgetStack::end () const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A constant iterator pointing to the past-the-end element in the container.</p>
+<p>Returns a constant iterator pointing to the past-the-end element of the deque container. </p>
+<p><strong>Returns:</strong></p>
+<p>A constant iterator pointing to the past-the-end element in the container. </p>
 <hr>
 
 <h3 id="function-widgetstack_1">function ~WidgetStack</h3>
+<p><em>Destructor for the</em> <a href="./"><em><strong>WidgetStack</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::WidgetStack::~WidgetStack () = default
 </code></pre>
+<p>This destructor is used to clean up any resources that were allocated during the lifetime of an object of this class. It does not perform any specific actions related to the <a href="./"><strong>WidgetStack</strong></a> class, but serves as a standard way to define and document such a destructor in Doxygen.</p>
+<p><strong>Returns:</strong></p>
+<p>Nothing is returned as it's a destructor.</p>
+<p>Destructor for the <a href="./"><strong>WidgetStack</strong></a> class.</p>
+<p>This destructor is used to clean up any resources that were allocated during the lifetime of an object of this class. It does not perform any specific operations related to the <a href="./"><strong>WidgetStack</strong></a> class itself, but serves as a standard way to define and document such a destructor in Doxygen.</p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <hr />

@@ -14,7 +14,7 @@
         <initializer>{
 	rttr::registration::class_&lt;<ref refid="class_a_g_e_1_1_u_i_image_component" kindref="compound">AGE::UIImageComponent</ref>&gt;(&quot;ImageComponent&quot;)
 	.constructor&lt;const std::string&amp;&gt;()
-	.method(&quot;OnUpdate&quot;, &amp;AGE::UIImageComponent::OnUpdate)
+	.method(&quot;OnUpdate&quot;, &amp;<ref refid="class_a_g_e_1_1_u_i_image_component_1a2e3bceb18a1ebe818ab5b7fcbfe25e20" kindref="member">AGE::UIImageComponent::OnUpdate</ref>)
 	.property(&quot;Image&quot;, &amp;AGE::UIImageComponent::m_Image)(rttr::metadata(&quot;Description&quot;, &quot;Properties related to box surrounding the text&quot;))</initializer>
         <briefdescription>
         </briefdescription>
@@ -41,63 +41,65 @@
 <codeline lineno="9"><highlight class="normal">RTTR_REGISTRATION{</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>rttr::registration::class_&lt;AGE::UIImageComponent&gt;(</highlight><highlight class="stringliteral">&quot;ImageComponent&quot;</highlight><highlight class="normal">)</highlight></codeline>
 <codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>.constructor&lt;</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;&gt;()</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>.method(</highlight><highlight class="stringliteral">&quot;OnUpdate&quot;</highlight><highlight class="normal">,<sp/>&amp;AGE::UIImageComponent::OnUpdate)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>.method(</highlight><highlight class="stringliteral">&quot;OnUpdate&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="class_a_g_e_1_1_u_i_image_component_1a2e3bceb18a1ebe818ab5b7fcbfe25e20" kindref="member">AGE::UIImageComponent::OnUpdate</ref>)</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>.property(</highlight><highlight class="stringliteral">&quot;Image&quot;</highlight><highlight class="normal">,<sp/>&amp;AGE::UIImageComponent::m_Image)(rttr::metadata(</highlight><highlight class="stringliteral">&quot;Description&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Properties<sp/>related<sp/>to<sp/>box<sp/>surrounding<sp/>the<sp/>text&quot;</highlight><highlight class="normal">));</highlight></codeline>
 <codeline lineno="14"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">AGE</highlight></codeline>
 <codeline lineno="16"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>UIImageComponent::UIImageComponent(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;Name)</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_Name<sp/>=<sp/>Name;</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_Type<sp/>=<sp/>UIComponentType::ImageComponent;</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::unordered_map&lt;UUID,<sp/>Ref&lt;Texture2D&gt;&gt;<sp/>TextureMap<sp/>=<sp/>AssetManager::Get().GetAssetRegistry()-&gt;GetTextures();</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::for_each(TextureMap.begin(),<sp/>TextureMap.end(),[&amp;](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::pair&lt;UUID,<sp/>Ref&lt;Texture2D&gt;&gt;&amp;<sp/>pair)</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_TextureNames.push_back(pair.second-&gt;GetName());</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_Image<sp/>=<sp/>Texture2D::Create(TextureSpecification());</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>UIImageComponent::OnUpdate(<ref refid="class_a_g_e_1_1_time_step" kindref="compound">TimeStep</ref><sp/>DeltaTime)</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Renderer2D::DrawQuad(m_Image,<sp/>m_Properties);</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>UIImageComponent::OnEvent(<ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref><sp/>&amp;<ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref>)</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>UIImageComponent::DrawContent()</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Combo<sp/>Box</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><ref refid="class_a_g_e_1_1_u_i_image_component_1af0dd5a04fbe32b4a61ff6e8d2a257ad8" kindref="member">UIImageComponent::UIImageComponent</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;Name)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_Name<sp/>=<sp/>Name;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_Type<sp/>=<sp/>UIComponentType::ImageComponent;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::unordered_map&lt;UUID,<sp/>Ref&lt;Texture2D&gt;&gt;<sp/>TextureMap<sp/>=<sp/><ref refid="class_a_g_e_1_1_asset_manager_1a79db3b3174c2af8149ad2ac205a77620" kindref="member">AssetManager::Get</ref>().<ref refid="class_a_g_e_1_1_asset_manager_1a7c0ab2f5b3dd228bdacb6efe64f1bfe4" kindref="member">GetAssetRegistry</ref>()-&gt;GetTextures();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::for_each(TextureMap.begin(),<sp/>TextureMap.end(),[&amp;](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::pair&lt;UUID,<sp/>Ref&lt;Texture2D&gt;&gt;&amp;<sp/>pair)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_TextureNames.push_back(pair.second-&gt;GetName());</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Button<sp/>with<sp/>drag<sp/>and<sp/>drop<sp/>ability</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>TextureID<sp/>=<sp/>m_Image-&gt;GetTextureID();</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ImGui::ImageButton(</highlight><highlight class="stringliteral">&quot;##Image&quot;</highlight><highlight class="normal">,<sp/>(ImTextureID)&amp;TextureID,<sp/>ImVec2(32.f,32.f));</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ImGui::BeginDragDropTarget())</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ImGuiPayload*<sp/>Payload<sp/>=<sp/>ImGui::AcceptDragDropPayload(</highlight><highlight class="stringliteral">&quot;CONTENT_BROWSER_ITEM&quot;</highlight><highlight class="normal">))</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">wchar_t</highlight><highlight class="normal">*<sp/>Path<sp/>=<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">wchar_t</highlight><highlight class="normal">*)Payload-&gt;Data;</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::filesystem::path<sp/>TexturePath<sp/>=<sp/>Path;</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>FileName<sp/>=<sp/>TexturePath.filename().replace_extension(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">).string();</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(AssetManager::Get().IsTextureLoaded(TexturePath))</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_Image<sp/>=<sp/>AssetManager::Get().GetTexture(FileName);</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_Image<sp/>=<sp/>AssetManager::Get().LoadTexture(TexturePath);</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"></highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ImGui::EndDragDropTarget();</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"></highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="68"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>AGE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_Image<sp/>=<sp/><ref refid="class_a_g_e_1_1_texture2_d_1ad2e1593e7f5b0382d34900899928c031" kindref="member">Texture2D::Create</ref>(TextureSpecification());</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_u_i_image_component_1a2e3bceb18a1ebe818ab5b7fcbfe25e20" kindref="member">UIImageComponent::OnUpdate</ref>(<ref refid="class_a_g_e_1_1_time_step" kindref="compound">TimeStep</ref><sp/>DeltaTime)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_a_g_e_1_1_renderer2_d_1a012305ca47d628775a684d8bf730415f" kindref="member">Renderer2D::DrawQuad</ref>(m_Image,<sp/>m_Properties);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_u_i_image_component_1a86066db7c0a2e4494bbd9d1ddea3fcf4" kindref="member">UIImageComponent::OnEvent</ref>(<ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref><sp/>&amp;<ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref>)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>UIImageComponent::DrawContent()</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Combo<sp/>Box</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Button<sp/>with<sp/>drag<sp/>and<sp/>drop<sp/>ability</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>TextureID<sp/>=<sp/>m_Image-&gt;GetTextureID();</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ImGui::ImageButton(</highlight><highlight class="stringliteral">&quot;##Image&quot;</highlight><highlight class="normal">,<sp/>(ImTextureID)&amp;TextureID,<sp/>ImVec2(32.f,32.f));</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ImGui::BeginDragDropTarget())</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ImGuiPayload*<sp/>Payload<sp/>=<sp/>ImGui::AcceptDragDropPayload(</highlight><highlight class="stringliteral">&quot;CONTENT_BROWSER_ITEM&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">wchar_t</highlight><highlight class="normal">*<sp/>Path<sp/>=<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">wchar_t</highlight><highlight class="normal">*)Payload-&gt;Data;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::filesystem::path<sp/>TexturePath<sp/>=<sp/>Path;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>FileName<sp/>=<sp/>TexturePath.filename().replace_extension(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">).string();</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_a_g_e_1_1_asset_manager_1a79db3b3174c2af8149ad2ac205a77620" kindref="member">AssetManager::Get</ref>().IsTextureLoaded(TexturePath))</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_Image<sp/>=<sp/><ref refid="class_a_g_e_1_1_asset_manager_1a79db3b3174c2af8149ad2ac205a77620" kindref="member">AssetManager::Get</ref>().<ref refid="class_a_g_e_1_1_asset_manager_1a413c7d0c9b38ba7fb6a6d69f81972ff4" kindref="member">GetTexture</ref>(FileName);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_Image<sp/>=<sp/><ref refid="class_a_g_e_1_1_asset_manager_1a79db3b3174c2af8149ad2ac205a77620" kindref="member">AssetManager::Get</ref>().<ref refid="class_a_g_e_1_1_asset_manager_1a07739fc43cb47c4a51722bd2c2e6969a" kindref="member">LoadTexture</ref>(TexturePath);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ImGui::EndDragDropTarget();</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>AGE</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/UiImageComponent.cpp"/>
   </compounddef>

@@ -24,16 +24,16 @@ namespace AGE
 
     struct Point3D : Vector3
     {
-        Point3D() = default;
+Point3D() = default;
 
-        Point3D(float a, float b, float c) : Vector3(a, b, c) {}
+Point3D(float a, float b, float c) : Vector3(a, b, c) {}
 
-        const Point3D operator =(Vector3 v) const
+const Point3D operator =(Vector3 v) const
         {
             return Point3D(v[0], v[1], v[2]);
         }
 
-        const Point3D operator()(Vector3 v) const
+const Point3D operator()(Vector3 v) const
         {
             return Point3D(v[0], v[1], v[2]);
         }
@@ -50,9 +50,10 @@ namespace AGE
         float n[2][2];
 
     public:
-        Matrix2D() = default;
+Matrix2D() = default;
 
-        Matrix2D(float n00, float n01,
+
+Matrix2D(float n00, float n01,
             float n10, float n11)
         {
             n[0][0] = n00; n[0][1] = n01;
@@ -60,29 +61,29 @@ namespace AGE
         }
 
 
-        Matrix2D(const Vector2& a, const Vector2& b)
+Matrix2D(const Vector2& a, const Vector2& b)
         {
             n[0][0] = a[0]; n[0][1] = a[1];
             n[1][0] = b[0]; n[1][1] = b[1];
         }
 
-        float& operator ()(int i, int j)
+float& operator ()(int i, int j)
         {
             return(n[j][i]);
         }
 
-        const float& operator ()(int i, int j) const
+const float& operator ()(int i, int j) const
         {
             return(n[j][i]);
         }
 
 
-        Vector2& operator [](int j)
+Vector2& operator [](int j)
         {
             return (*reinterpret_cast<Vector2*>(n[j]));
         }
 
-        const Vector2& operator[](int j) const
+const Vector2& operator[](int j) const
         {
             return (*reinterpret_cast<const Vector2*>(n[j]));
         }
@@ -98,9 +99,12 @@ namespace AGE
 
     public:
 
-        Matrix3D() = default;
+Matrix3D() = default;
 
-        Matrix3D(float n00, float n01, float n02,
+        COMMENT:
+CONFIDENCE: 1.0;
+
+Matrix3D(float n00, float n01, float n02,
             float n10, float n11, float n12,
             float n20, float n21, float n22)
         {
@@ -109,14 +113,14 @@ namespace AGE
             n[2][0] = n02; n[2][1] = n12; n[2][2] = n22;
         }
 
-        Matrix3D(const Vector3& a, const Vector3& b, const Vector3& c)
+Matrix3D(const Vector3& a, const Vector3& b, const Vector3& c)
         {
             n[0][0] = a.x; n[0][1] = a.y; n[0][2] = a.z;
             n[1][0] = b.x; n[1][1] = b.y; n[1][2] = b.z;
             n[2][0] = c.x; n[2][1] = c.y; n[2][2] = c.z;
         }
 
-        Matrix3D(void* Ptr)
+Matrix3D(void* Ptr)
         {
             Matrix3D Mat = *(Matrix3D*)Ptr;
 
@@ -126,34 +130,34 @@ namespace AGE
             }
         }
 
-        float& operator ()(int i, int j)
+float& operator ()(int i, int j)
         {
             return (n[j][i]);
         }
 
-        const float& operator ()(int i, int j) const
+const float& operator ()(int i, int j) const
         {
             return (n[j][i]);
         }
 
-        Vector3& operator [](int j)
+Vector3& operator [](int j)
         {
             return (*reinterpret_cast<Vector3*>(n[j]));
         }
 
-        const Vector3& operator [](int j) const
+const Vector3& operator [](int j) const
         {
             return (*reinterpret_cast<const Vector3*>(n[j]));
         }
 
-        inline glm::mat3 ToGLM()
+inline glm::mat3 ToGLM()
         {
             return glm::mat3(
                 n[0][0], n[0][1], n[0][2],
                 n[1][0], n[1][1], n[1][2],
                 n[2][0], n[2][1], n[2][2]);
         }
-        inline glm::mat3 ToGLM() const
+inline glm::mat3 ToGLM() const
         {
             return glm::mat3(
                 n[0][0], n[0][1], n[0][2],
@@ -171,9 +175,11 @@ namespace AGE
 
     public:
 
-        Matrix4D() = default;
+Matrix4D() = default;
 
-        Matrix4D(float n00, float n01, float n02, float n03,
+        
+
+Matrix4D(float n00, float n01, float n02, float n03,
             float n10, float n11, float n12, float n13,
             float n20, float n21, float n22, float n23,
             float n30, float n31, float n32, float n33)
@@ -184,7 +190,7 @@ namespace AGE
             n[3][0] = n03; n[3][1] = n13; n[3][2] = n23; n[3][3] = n33;
         }
 
-        Matrix4D(float f)
+Matrix4D(float f)
         {
             n[0][0] = f; n[0][1] = 0.f; n[0][2] = 0.f; n[0][3] = 0.f;
             n[1][0] = 0.f; n[1][1] = f; n[1][2] = 0.f; n[1][3] = 0.f;
@@ -192,7 +198,13 @@ namespace AGE
             n[3][0] = 0.f; n[3][1] = 0.f; n[3][2] = 0.f; n[3][3] = 1.f;
         }
 
-        Matrix4D(glm::mat4 M)
+        COMMENT:
+CONFIDENCE: 1.0;
+
+COMMENT:
+CONFIDENCE: 1.0;
+
+Matrix4D(glm::mat4 M)
         {
             n[0][0] = M[0][0]; n[0][1] = M[0][1]; n[0][2] = M[0][2]; n[0][3] = M[0][3];
             n[1][0] = M[1][0]; n[1][1] = M[1][1]; n[1][2] = M[1][2]; n[1][3] = M[1][3];
@@ -200,7 +212,13 @@ namespace AGE
             n[3][0] = M[3][0]; n[3][1] = M[3][1]; n[3][2] = M[3][2]; n[3][3] = M[3][3];
         }
 #ifdef AG_PLATFORM_WINDOWS
-        Matrix4D(DirectX::XMMATRIX M)
+        COMMENT:
+CONFIDENCE: 1.0;
+
+COMMENT:
+CONFIDENCE: 1.0;
+
+Matrix4D(DirectX::XMMATRIX M)
         {
             DirectX::XMVECTOR a, b, c, p;
             a = M.r[0];
@@ -214,7 +232,7 @@ namespace AGE
             n[3][0] = DirectX::XMVectorGetX(p); n[3][1] = DirectX::XMVectorGetY(p); n[3][2] = DirectX::XMVectorGetZ(p); n[3][3] = DirectX::XMVectorGetW(p);
         }
 
-        Matrix4D(DirectX::XMVECTOR a, DirectX::XMVECTOR b, DirectX::XMVECTOR c, DirectX::XMVECTOR p)
+Matrix4D(DirectX::XMVECTOR a, DirectX::XMVECTOR b, DirectX::XMVECTOR c, DirectX::XMVECTOR p)
         {
             n[0][0] = DirectX::XMVectorGetX(a); n[0][1] = DirectX::XMVectorGetY(a); n[0][2] = DirectX::XMVectorGetZ(a); n[0][3] = DirectX::XMVectorGetW(a);
             n[1][0] = DirectX::XMVectorGetX(b); n[1][1] = DirectX::XMVectorGetY(b); n[1][2] = DirectX::XMVectorGetZ(b); n[1][3] = DirectX::XMVectorGetW(b);
@@ -222,7 +240,7 @@ namespace AGE
             n[3][0] = DirectX::XMVectorGetX(p); n[3][1] = DirectX::XMVectorGetY(p); n[3][2] = DirectX::XMVectorGetZ(p); n[3][3] = DirectX::XMVectorGetW(p);
         }
 #endif
-        Matrix4D(const Vector4& a, const Vector4& b, const Vector4& c, const Vector4& d)
+Matrix4D(const Vector4& a, const Vector4& b, const Vector4& c, const Vector4& d)
         {
             n[0][0] = a.x; n[0][1] = a.y; n[0][2] = a.z; n[0][3] = a.w;
             n[1][0] = b.x; n[1][1] = b.y; n[1][2] = b.z; n[1][3] = b.w;
@@ -230,7 +248,7 @@ namespace AGE
             n[3][0] = d.x; n[3][1] = d.y; n[3][2] = d.z; n[3][3] = d.w;
         }
 
-        Matrix4D(void* Ptr)
+Matrix4D(void* Ptr)
         {
             Matrix4D Mat = *(Matrix4D*)Ptr;
 
@@ -240,29 +258,30 @@ namespace AGE
             }
         }
 
-        Matrix4D(const Matrix4D& other) = default;
+Matrix4D(const Matrix4D& other) = default;
 
-        float& operator ()(int i, int j)
+float& operator ()(int i, int j)
         {
             return (n[j][i]);
         }
 
-        const float& operator ()(int i, int j) const
+const float& operator ()(int i, int j) const
         {
             return (n[j][i]);
         }
 
-        Vector4& operator [](int j)
+Vector4& operator [](int j)
         {
             return (*reinterpret_cast<Vector4*>(n[j]));
         }
 
-        const Vector4& operator [](int j) const
+const Vector4& operator [](int j) const
         {
             return (*reinterpret_cast<const Vector4*>(n[j]));
         }
 #ifdef AG_PLATFORM_WINDOWS
-        inline DirectX::XMFLOAT4X4 ToXMFloat4X4()
+
+inline DirectX::XMFLOAT4X4 ToXMFloat4X4()
         {
             return DirectX::XMFLOAT4X4(
                 n[0][0], n[0][1], n[0][2], n[0][3],
@@ -270,7 +289,7 @@ namespace AGE
                 n[2][0], n[2][1], n[2][2], n[2][3],
                 n[3][0], n[3][1], n[3][2], n[3][3]);
         }
-        inline DirectX::XMMATRIX ToXMMat()
+inline DirectX::XMMATRIX ToXMMat()
         {
             return DirectX::XMMATRIX(
                 n[0][0], n[0][1], n[0][2], n[0][3],
@@ -279,7 +298,7 @@ namespace AGE
                 n[3][0], n[3][1], n[3][2], n[3][3]);
         };
 #endif
-        inline glm::mat4 ToGLM()
+inline glm::mat4 ToGLM()
         {
             return glm::mat4(
                 n[0][0], n[0][1], n[0][2], n[0][3],
@@ -287,7 +306,7 @@ namespace AGE
                 n[2][0], n[2][1], n[2][2], n[2][3],
                 n[3][0], n[3][1], n[3][2], n[3][3]);
         }
-        inline glm::mat4 ToGLM() const
+inline glm::mat4 ToGLM() const
         {
             return glm::mat4(
                 n[0][0], n[0][1], n[0][2], n[0][3],
@@ -299,9 +318,10 @@ namespace AGE
 
     struct Transform4D : Matrix4D
     {
-        Transform4D() = default;
+Transform4D() = default;
 
-        Transform4D(float n00, float n01, float n02, float n03,
+
+Transform4D(float n00, float n01, float n02, float n03,
             float n10, float n11, float n12, float n13,
             float n20, float n21, float n22, float n23)
         {
@@ -314,7 +334,13 @@ namespace AGE
             n[3][3] = 1.0F;
         }
 
-        Transform4D(const Vector3& a, const Vector3& b,
+        COMMENT:
+CONFIDENCE: 1.0;
+
+COMMENT:
+CONFIDENCE: 1.0;
+
+Transform4D(const Vector3& a, const Vector3& b,
             const Vector3& c, const Point3D& p)
         {
             n[0][0] = a.x; n[0][1] = a.y; n[0][2] = a.z;
@@ -326,22 +352,22 @@ namespace AGE
             n[3][3] = 1.0F;
         }
 
-        Vector3& operator [](int j)
+Vector3& operator [](int j)
         {
             return (*reinterpret_cast<Vector3*>(n[j]));
         }
 
-        const Vector3& operator [](int j) const
+const Vector3& operator [](int j) const
         {
             return (*reinterpret_cast<const Vector3*>(n[j]));
         }
 
-        const Point3D& GetTranslation(void) const
+const Point3D& GetTranslation(void) const
         {
             return (*reinterpret_cast<const Point3D*>(n[3]));
         }
 
-        void SetTranslation(const Point3D& p)
+void SetTranslation(const Point3D& p)
         {
             n[3][0] = p.x;
             n[3][1] = p.y;
@@ -353,26 +379,26 @@ namespace AGE
     {
         float       x, y, z, w;
 
-        Quaternion() = default;
+Quaternion() = default;
 
-        Quaternion(float a, float b, float c, float s)
+Quaternion(float a, float b, float c, float s)
         {
             x = a; y = b; z = c;
             w = s;
         }
 
-        Quaternion(const Vector3& v, float s)
+Quaternion(const Vector3& v, float s)
         {
             x = v.x; y = v.y; z = v.z;
             w = s;
         }
 
-        Vector3& GetVectorPart(void)
+Vector3& GetVectorPart(void)
         {
             return (reinterpret_cast<Vector3&>(x));
         }
 
-        const Vector3& GetVectorPart(void) const
+const Vector3& GetVectorPart(void) const
         {
             return (reinterpret_cast<const Vector3&>(x));
         }
@@ -385,9 +411,9 @@ namespace AGE
     {
         float       x, y, z, w;
 
-        Plane() = default;
+Plane() = default;
 
-        Plane(float nx, float ny, float nz, float d)
+Plane(float nx, float ny, float nz, float d)
         {
             x = nx;
             y = ny;
@@ -395,7 +421,7 @@ namespace AGE
             w = d;
         }
 
-        Plane(const Vector3& n, float d)
+Plane(const Vector3& n, float d)
         {
             x = n.x;
             y = n.y;
@@ -403,7 +429,7 @@ namespace AGE
             w = d;
         }
 
-        const Vector3& GetNormal(void) const
+const Vector3& GetNormal(void) const
         {
             return (reinterpret_cast<const Vector3&>(x));
         }
@@ -415,13 +441,13 @@ namespace AGE
         Vector3 Direction;
         Vector3 Moment;
 
-        Line() = default;
+Line() = default;
 
-        Line(float vx, float vy, float vz, float mx, float my, float mz) : Direction(vx, vy, vz), Moment(mx, my, mz)
+Line(float vx, float vy, float vz, float mx, float my, float mz) : Direction(vx, vy, vz), Moment(mx, my, mz)
         {
         }
 
-        Line(const Vector3& v, const Vector3& m)
+Line(const Vector3& v, const Vector3& m)
         {
             Direction = v;
             Moment = m;
@@ -429,7 +455,7 @@ namespace AGE
 
     };
 
-    inline Matrix4D operator *(const Vector4& V, const Matrix4D& M)
+inline Matrix4D operator *(const Vector4& V, const Matrix4D& M)
     {
         float vx = V.x;
         float vy = V.y;
@@ -443,7 +469,7 @@ namespace AGE
             M(3, 0) * vx, M(3, 1) * vy, M(3, 2) * vz, M(3, 3) * vw);
     }
 
-    inline Matrix4D operator +(const Matrix4D& M1, const Matrix4D& M2)
+inline Matrix4D operator +(const Matrix4D& M1, const Matrix4D& M2)
     {
         Vector4 Src1A = M1[0];
         Vector4 Src1B = M1[1];
@@ -462,7 +488,8 @@ namespace AGE
         return  Matrix4D(New1, New2, New3, New4);
     }
 
-    inline Vector3 operator *(const Matrix4D& M, const Vector4& V)
+    
+inline Vector3 operator *(const Matrix4D& M, const Vector4& V)
     {
         Vector4 const Temp0(V[0]);
         Vector4 const Temp1(V[1]);
@@ -490,7 +517,10 @@ namespace AGE
         //return {New.x, New.y, New.z};
     }
 
-    inline Matrix3D operator *(const Matrix3D& A, const Matrix3D& B)
+    COMMENT:
+CONFIDENCE: 1.0;
+
+inline Matrix3D operator *(const Matrix3D& A, const Matrix3D& B)
     {
         return (Matrix3D(A(0, 0) * B(0, 0) + A(0, 1) * B(1, 0) + A(0, 2) * B(2, 0),
             A(0, 0) * B(0, 1) + A(0, 1) * B(1, 1) + A(0, 2) * B(2, 1),
@@ -503,7 +533,10 @@ namespace AGE
             A(2, 0) * B(0, 2) + A(2, 1) * B(1, 2) + A(2, 2) * B(2, 2)));
     }
 
-    inline Matrix4D operator *(const Matrix4D& A, const Matrix4D& B)
+    COMMENT:
+CONFIDENCE: 1.0;
+
+inline Matrix4D operator *(const Matrix4D& A, const Matrix4D& B)
     {
         return (Matrix4D(
             A(0, 0) * B(0, 0) + A(0, 1) * B(1, 0) + A(0, 2) * B(2, 0) + A(0, 3) * B(3, 0), //M00
@@ -525,34 +558,37 @@ namespace AGE
         ));
     }
 
-    inline Vector3 operator *(const Matrix3D& M, const Vector3& v)
+inline Vector3 operator *(const Matrix3D& M, const Vector3& v)
     {
         return (Vector3(M(0, 0) * v.x + M(0, 1) * v.y + M(0, 2) * v.z,
             M(1, 0) * v.x + M(1, 1) * v.y + M(1, 2) * v.z,
             M(2, 0) * v.x + M(2, 1) * v.y + M(2, 2) * v.z));
     }
-    inline Vector3 operator *(const Vector3& v, const Matrix4D& M)
+inline Vector3 operator *(const Vector3& v, const Matrix4D& M)
     {
         return (Vector3(M(0, 0) * v.x + M(0, 1) * v.y + M(0, 2) * v.z,
             M(1, 0) * v.x + M(1, 1) * v.y + M(1, 2) * v.z,
             M(2, 0) * v.x + M(2, 1) * v.y + M(2, 2) * v.z));
     }
-    inline Point3D operator +(const Point3D& a, const Vector3& b)
+inline Point3D operator +(const Point3D& a, const Vector3& b)
     {
         return (Point3D(a.x + b.x, a.y + b.y, a.z + b.z));
     }
 
-    inline Point3D operator -(const Point3D& a, const Vector3& b)
+inline Point3D operator -(const Point3D& a, const Vector3& b)
     {
         return (Point3D(a.x - b.x, a.y - b.y, a.z - b.z));
     }
 
-    inline Vector3 operator -(const Point3D& a, const Point3D& b)
+inline Vector3 operator -(const Point3D& a, const Point3D& b)
     {
         return (Vector3(a.x - b.x, a.y - b.y, a.z - b.z));
     }
 
-    inline Transform4D operator *(const Transform4D& A, const Transform4D& B)
+    COMMENT:
+CONFIDENCE: 1.0;
+
+inline Transform4D operator *(const Transform4D& A, const Transform4D& B)
     {
         return (Transform4D(
             A(0, 0) * B(0, 0) + A(0, 1) * B(1, 0) + A(0, 2) * B(2, 0),
@@ -568,27 +604,27 @@ namespace AGE
             A(2, 0) * B(0, 2) + A(2, 1) * B(1, 2) + A(2, 2) * B(2, 2),
             A(2, 0) * B(0, 3) + A(2, 1) * B(1, 3) + A(2, 2) * B(2, 3) + A(2, 3)));
     }
-    inline Vector3 operator *(const Transform4D& H, const Vector3& v)
+inline Vector3 operator *(const Transform4D& H, const Vector3& v)
     {
         return (Vector3(H(0, 0) * v.x + H(0, 1) * v.y + H(0, 2) * v.z,
             H(1, 0) * v.x + H(1, 1) * v.y + H(1, 2) * v.z,
             H(2, 0) * v.x + H(2, 1) * v.y + H(2, 2) * v.z));
     }
 
-    inline Point3D operator *(const Transform4D& H, const Point3D& p)
+inline Point3D operator *(const Transform4D& H, const Point3D& p)
     {
         return (Point3D(H(0, 0) * p.x + H(0, 1) * p.y + H(0, 2) * p.z + H(0, 3),
             H(1, 0) * p.x + H(1, 1) * p.y + H(1, 2) * p.z + H(1, 3),
             H(2, 0) * p.x + H(2, 1) * p.y + H(2, 2) * p.z + H(2, 3)));
     }
-    inline Vector3 operator *(const Vector3& n, const Transform4D& H)
+inline Vector3 operator *(const Vector3& n, const Transform4D& H)
     {
         return (Vector3(n.x * H(0, 0) + n.y * H(1, 0) + n.z * H(2, 0),
             n.x * H(0, 1) + n.y * H(1, 1) + n.z * H(2, 1),
             n.x * H(0, 2) + n.y * H(1, 2) + n.z * H(2, 2)));
     }
 
-    inline Plane operator *(const Plane& f, const Transform4D& H)
+inline Plane operator *(const Plane& f, const Transform4D& H)
     {
         return (Plane(f.x * H(0, 0) + f.y * H(1, 0) + f.z * H(2, 0),
             f.x * H(0, 1) + f.y * H(1, 1) + f.z * H(2, 1),
@@ -596,13 +632,13 @@ namespace AGE
             f.x * H(0, 3) + f.y * H(1, 3) + f.z * H(2, 3) + f.w));
     }
 
-    inline Line operator ^(const Point3D& p, const Point3D& q)
+inline Line operator ^(const Point3D& p, const Point3D& q)
     {
         return (Line(q.x - p.x, q.y - p.y, q.z - p.z,
             p.y * q.z - p.z * q.y, p.z * q.x - p.x * q.z, p.x * q.y - p.y * q.x));
     }
 
-    inline Line operator ^(const Plane& f, const Plane& g)
+inline Line operator ^(const Plane& f, const Plane& g)
     {
         return (Line(f.z * g.y - f.y * g.z,
             f.x * g.z - f.z * g.x,
@@ -612,18 +648,18 @@ namespace AGE
             f.z * g.w - f.w * g.z));
     }
 
-    inline Plane operator ^(const Line& L, const Point3D& p)
+inline Plane operator ^(const Line& L, const Point3D& p)
     {
         return (Plane(L.Direction.y * p.z - L.Direction.z * p.y + L.Moment.x,
             L.Direction.z * p.x - L.Direction.x * p.z + L.Moment.y,
             L.Direction.x * p.y - L.Direction.y * p.x + L.Moment.z,
             -L.Moment.x * p.x - L.Moment.y * p.y - L.Moment.z * p.z));
     }
-    inline Plane operator ^(const Point3D& p, const Line& L)
+inline Plane operator ^(const Point3D& p, const Line& L)
     {
         return (L ^ p);
     }
-    inline Vector4 operator ^(const Line& L, const Plane& f)
+inline Vector4 operator ^(const Line& L, const Plane& f)
     {
         return (Vector4(
             L.Moment.y * f.z - L.Moment.z * f.y + L.Direction.x * f.w,
@@ -631,17 +667,17 @@ namespace AGE
             L.Moment.x * f.y - L.Moment.y * f.x + L.Direction.z * f.w,
             -L.Direction.x * f.x - L.Direction.y * f.y - L.Direction.z * f.z));
     }
-    inline Vector4 operator ^(const Plane& f, const Line& L)
+inline Vector4 operator ^(const Plane& f, const Line& L)
     {
         return (L ^ f);
     }
 
-    inline float operator ^(const Point3D& p, const Plane& f)
+inline float operator ^(const Point3D& p, const Plane& f)
     {
         return (p.x * f.x + p.y * f.y + p.z * f.z + f.w);
     }
 
-    inline float operator ^(const Plane& f, const Point3D& p)
+inline float operator ^(const Plane& f, const Point3D& p)
     {
         return (-(p ^ f));
     }
@@ -655,10 +691,25 @@ namespace AGE
         uint32_t TextCount = 0;
         uint32_t TileCount = 0;
 
-        uint32_t GetTotalQuadVertexCount() { return QuadCount * 4; }
-        uint32_t GetTotalQuadIndexCount() { return QuadCount * 6; }
-        uint32_t GetTotalTileVertexCount() { return TileCount * 6; }
-        uint32_t GetTotalTileIndexCount() { return TileCount * 6; }
+        uint32_t CubeCount = 0;
+        uint32_t SphereCount = 0;
+        uint32_t CylinderCount = 0;
+        uint32_t PyramidCount = 0;
+        uint32_t ModelCount = 0;
+
+
+uint32_t GetTotalQuadVertexCount() { return QuadCount * 4; }
+uint32_t GetTotalQuadIndexCount() { return QuadCount * 6; }
+uint32_t GetTotalTileVertexCount() { return TileCount * 4; }
+uint32_t GetTotalTileIndexCount() { return TileCount * 6; }
+uint32_t GetTotalCubeVertexCount() { return CubeCount * 8; }
+uint32_t GetTotalCubeIndexCount() { return CubeCount * 36; }
+uint32_t GetTotalSphereVertexCount() { return SphereCount * 8; }
+uint32_t GetTotalSphereIndexCount() { return SphereCount * 36; }
+uint32_t GetTotalCylinderVertexCount() { return CylinderCount * 8; }
+uint32_t GetTotalCylinderIndexCount() { return CylinderCount * 18; }
+uint32_t GetTotalPyramidVertexCount() { return PyramidCount * 5; }
+uint32_t GetTotalPyramidIndexCount() { return CubeCount * 6; }
         //uint32_t GetTotalVertexCount() {return}
         //uint32_t GetTotalIndexCount()  {return}
     };

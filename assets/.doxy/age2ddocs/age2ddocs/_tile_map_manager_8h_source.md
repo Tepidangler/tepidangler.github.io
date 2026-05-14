@@ -17,16 +17,22 @@
 
 namespace AGE
 {
-    class Tilemap;
+    class Texture;
+
+    struct TileMapData
+    {
+        Ref<Texture> m_AtlasTexture;
+        std::filesystem::path m_Path;
+    };
 
     class TileMapManager
     {
     public:
 
         TileMapManager();
-        ~TileMapManager() = default;
+~TileMapManager() = default;
 
-        static TileMapManager& Get()
+static TileMapManager& Get()
         {
             static TileMapManager* instance;
             if (!instance)
@@ -35,7 +41,7 @@ namespace AGE
             }
             return *instance;
         }
-        Ref<Tilemap> LoadTileMap(const std::filesystem::path& Path);
+        void LoadTileMap(const std::filesystem::path& Path);
         void LoadTileMaps(const std::vector<std::filesystem::path>& Paths);
         void LoadTileMaps(void* Addr);
 
@@ -45,7 +51,8 @@ namespace AGE
 
         Ref<TileMapImporter> m_Importer;
         tmx_resource_manager* m_Manager;
-        std::vector<Ref<Tilemap>> m_TileMaps;
+        TileMapData m_CurrentTileMap; // Represents the map currently being loaded
+        std::vector<class Tilemap> m_TileMaps;
 
 
     };

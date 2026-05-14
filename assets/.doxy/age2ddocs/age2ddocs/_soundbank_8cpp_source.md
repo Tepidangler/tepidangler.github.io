@@ -16,7 +16,7 @@
 
 namespace AGE
 {
-    SoundBank::SoundBank(const std::filesystem::path& FilePath, UUID ID)
+SoundBank::SoundBank(const std::filesystem::path& FilePath, UUID ID)
         :m_FilePath(FilePath), m_AssetID(ID)
     {
         m_Name = m_FilePath.filename().string();

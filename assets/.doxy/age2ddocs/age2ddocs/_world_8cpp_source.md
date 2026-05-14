@@ -16,15 +16,17 @@
 
 namespace AGE
 {
-    Ref<World> World::Create(Ref<Scene> scene)
+    Re
+f<World> World::Create(Ref<Scene> scene)
     {
         return CreateRef<World2D>(scene);
     }
 
     template<typename T>
-    T* World::As()
+    T*
+ World::As()
     {
-        AGE_CORE_ASSERT(false, "As() Failed!");
+        CoreLogger::Assert(false, "As() Failed!");
         return nullptr;
     }
 }

@@ -88,41 +88,48 @@
 <tbody>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-matrix2d-13"><strong>Matrix2D</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-matrix2d-13"><strong>Matrix2D</strong></a> () = default<br><em>Default constructor for the</em> <a href="./"><em><strong>Matrix2D</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-matrix2d-23"><strong>Matrix2D</strong></a> (float n00, float n01, float n10, float n11) <br></td>
+<td style="text-align: left;"><a href="#function-matrix2d-23"><strong>Matrix2D</strong></a> (float n00, float n01, float n10, float n11) <br><em>Constructs a 2x2 matrix with the given values.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-matrix2d-33"><strong>Matrix2D</strong></a> (const <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> &amp; a, const <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> &amp; b) <br></td>
+<td style="text-align: left;"><a href="#function-matrix2d-33"><strong>Matrix2D</strong></a> (const <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> &amp; a, const <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> &amp; b) <br><em>Constructs a 2D Matrix from two</em> <a href="../struct_a_g_e_1_1_vector2/"><em><strong>Vector2</strong></em></a> <em>objects.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">float &amp;</td>
-<td style="text-align: left;"><a href="#function-operator"><strong>operator()</strong></a> (int i, int j) <br></td>
+<td style="text-align: left;"><a href="#function-operator"><strong>operator()</strong></a> (int i, int j) <br><em>Accesses an element in the matrix using two indices.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">const float &amp;</td>
-<td style="text-align: left;"><a href="#function-operator_1"><strong>operator()</strong></a> (int i, int j) const<br></td>
+<td style="text-align: left;"><a href="#function-operator_1"><strong>operator()</strong></a> (int i, int j) const<br><em>Accesses the element at position (i, j) in a two-dimensional array.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"><a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> &amp;</td>
-<td style="text-align: left;"><a href="#function-operator_2"><strong>operator[]</strong></a> (int j) <br></td>
+<td style="text-align: left;"><a href="#function-operator_2"><strong>operator[]</strong></a> (int j) <br><em>This function is an overloaded operator that allows for accessing</em> <a href="../struct_a_g_e_1_1_vector2/"><em><strong>Vector2</strong></em></a> <em>objects as if they were arrays. It returns a reference to the jth element of the vector.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">const <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> &amp;</td>
-<td style="text-align: left;"><a href="#function-operator_3"><strong>operator[]</strong></a> (int j) const<br></td>
+<td style="text-align: left;"><a href="#function-operator_3"><strong>operator[]</strong></a> (int j) const<br><em>Returns a constant reference to the element at index 'j' in the vector.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-matrix2d-13">function Matrix2D [1/3]</h3>
+<p><em>Default constructor for the</em> <a href="./"><em><strong>Matrix2D</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::Matrix2D::Matrix2D () = default
 </code></pre>
+<p>Initializes a new instance of the <a href="./"><strong>Matrix2D</strong></a> class with default values.</p>
+<p>Default constructor for the <a href="./"><strong>Matrix2D</strong></a> class.</p>
+<p>This function initializes a new instance of the <a href="./"><strong>Matrix2D</strong></a> class with default values. It uses the '= default' syntax to delegate construction to the compiler-generated default constructor.</p>
+<p><strong>Returns:</strong></p>
+<p>A newly constructed <a href="./"><strong>Matrix2D</strong></a> object. </p>
 <hr>
 
 <h3 id="function-matrix2d-23">function Matrix2D [2/3]</h3>
+<p><em>Constructs a 2x2 matrix with the given values.</em> </p>
 <pre><code class="language-C++">inline AGE::Matrix2D::Matrix2D (
     float n00,
     float n01,
@@ -131,45 +138,138 @@
 ) 
 </code></pre>
 <p>| n00, n01 | | n10, n11 | </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>n00</code> The value to be assigned to the element at row 0, column 0. </li>
+<li><code>n01</code> The value to be assigned to the element at row 0, column 1. </li>
+<li><code>n10</code> The value to be assigned to the element at row 1, column 0. </li>
+<li><code>n11</code> The value to be assigned to the element at row 1, column 1.</li>
+</ul>
+<p>Constructs a 2x2 matrix with the given values.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>n00</code> The value to be assigned to the element at row 0, column 0 of the matrix. </li>
+<li><code>n01</code> The value to be assigned to the element at row 0, column 1 of the matrix. </li>
+<li><code>n10</code> The value to be assigned to the element at row 1, column 0 of the matrix. </li>
+<li><code>n11</code> The value to be assigned to the element at row 1, column 1 of the matrix. </li>
+</ul>
 <hr>
 
 <h3 id="function-matrix2d-33">function Matrix2D [3/3]</h3>
+<p><em>Constructs a 2D Matrix from two</em> <a href="../struct_a_g_e_1_1_vector2/"><em><strong>Vector2</strong></em></a> <em>objects.</em></p>
 <pre><code class="language-C++">inline AGE::Matrix2D::Matrix2D (
     const Vector2 &amp; a,
     const Vector2 &amp; b
 ) 
 </code></pre>
 <p>| a[0], a[1]| | b[0], b[1]| </p>
+<p>The constructor initializes the matrix with values from two vectors, <code>a</code> and <code>b</code>. Each vector is represented as an (x, y) pair where x and y are the coordinates of the vector. The first row of the matrix gets the values from vector a and the second row from vector b.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>a</code> A <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> object representing the first row of the matrix. </li>
+<li><code>b</code> A <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> object representing the second row of the matrix.</li>
+</ul>
+<p>Constructs a 2x2 matrix from two <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> objects. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>a</code> The first vector to use for the construction of the matrix. </li>
+<li><code>b</code> The second vector to use for the construction of the matrix. </li>
+</ul>
 <hr>
 
 <h3 id="function-operator">function operator()</h3>
+<p><em>Accesses an element in the matrix using two indices.</em> </p>
 <pre><code class="language-C++">inline float &amp; AGE::Matrix2D::operator() (
     int i,
     int j
 ) 
 </code></pre>
+<p>This function allows access to a single element in the matrix through its two-dimensional coordinates (i, j). It returns a reference to the requested element which can be used for read or write operations.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>i</code> The first index of the element to access. </li>
+<li><code>j</code> The second index of the element to access. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A reference to the accessed element.</p>
+<p>Accesses an element in the matrix using two indices.</p>
+<p>This function allows access to a single element in the matrix by providing two indices, i and j. It returns a reference to the element at position (i,j) in the matrix. The indices are zero-based.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>i</code> The first index of the element to be accessed. </li>
+<li><code>j</code> The second index of the element to be accessed. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A reference to the element at position (i,j). </p>
 <hr>
 
 <h3 id="function-operator_1">function operator()</h3>
+<p><em>Accesses the element at position (i, j) in a two-dimensional array.</em> </p>
 <pre><code class="language-C++">inline const float &amp; AGE::Matrix2D::operator() (
     int i,
     int j
 ) const
 </code></pre>
+<p>This function allows you to access an element at a specific location in a 2D array using the subscript operator syntax. The indices i and j specify the position of the desired element.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>i</code> The index along the first dimension (row). </li>
+<li><code>j</code> The index along the second dimension (column).</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A constant reference to the element at position (i, j) in the array.</p>
+<p>Access the element at a given position in constant time.</p>
+<p>This function allows for constant-time access to elements in the matrix. It takes two parameters, i and j, which represent the row and column indices of the desired element respectively. The function returns a reference to the requested element.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>i</code> The index of the row (starting from 0). </li>
+<li><code>j</code> The index of the column (starting from 0). </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A constant reference to the element at position (i,j) in the matrix. </p>
 <hr>
 
 <h3 id="function-operator_2">function operator[]</h3>
+<p><em>This function is an overloaded operator that allows for accessing</em> <a href="../struct_a_g_e_1_1_vector2/"><em><strong>Vector2</strong></em></a> <em>objects as if they were arrays. It returns a reference to the jth element of the vector.</em></p>
 <pre><code class="language-C++">inline Vector2 &amp; AGE::Matrix2D::operator[] (
     int j
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>j</code> The index of the element to access. Must be in the range [0, size-1]. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A reference to the jth element of the vector.</p>
+<p>This function is an overloaded operator [] that returns a reference to the <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> object at index 'j' in the array. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>j</code> The index of the element to be accessed in the array. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A reference to the <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> object at index 'j'. </p>
 <hr>
 
 <h3 id="function-operator_3">function operator[]</h3>
+<p><em>Returns a constant reference to the element at index 'j' in the vector.</em> </p>
 <pre><code class="language-C++">inline const Vector2 &amp; AGE::Matrix2D::operator[] (
     int j
 ) const
 </code></pre>
+<p>This function returns a constant reference to the element at index 'j'. It is used for accessing elements of the vector without modifying them. The returned value should not be modified as it may lead to undefined behavior if the original data is changed elsewhere.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>j</code> Index of the element to return. Must be a valid index within the range of the vector. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A constant reference to the element at index 'j'.</p>
+<p>This function returns a reference to the <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> object at index 'j' in an array of <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> objects.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>j</code> The index of the <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> object in the array. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A const reference to the <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> object at index 'j'. </p>
 <hr>
 
 <hr />

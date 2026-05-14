@@ -8,23 +8,23 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
     * **class** [**AGE::AGESound**](class_a_g_e_1_1_a_g_e_sound.md) 
 * **class** [**AGE::AGEWindow**](class_a_g_e_1_1_a_g_e_window.md) 
 * **class** [**AGE::Animation**](class_a_g_e_1_1_animation.md) 
-* **class** [**AGE::App**](class_a_g_e_1_1_app.md) 
-* **class** [**AGE::Event**](class_a_g_e_1_1_event.md)     
+* **class** [**AGE::App**](class_a_g_e_1_1_app.md) _The main application class._ 
+* **class** [**AGE::Event**](class_a_g_e_1_1_event.md) _Abstract base class for an event._     
     * **class** [**AGE::AppRenderEvent**](class_a_g_e_1_1_app_render_event.md) 
     * **class** [**AGE::AppTickEvent**](class_a_g_e_1_1_app_tick_event.md) 
     * **class** [**AGE::AppUpdateEvent**](class_a_g_e_1_1_app_update_event.md) 
-    * **class** [**AGE::FramebufferResizeEvent**](class_a_g_e_1_1_framebuffer_resize_event.md) 
+    * **class** [**AGE::FramebufferResizeEvent**](class_a_g_e_1_1_framebuffer_resize_event.md) _Represents a framebuffer resize event._ 
     * **class** [**AGE::InputEvent**](class_a_g_e_1_1_input_event.md)     
         * **class** [**AGE::AxisEvent**](class_a_g_e_1_1_axis_event.md) 
         * **class** [**AGE::GamepadButtonPressedEvent**](class_a_g_e_1_1_gamepad_button_pressed_event.md) 
         * **class** [**AGE::GamepadButtonReleasedEvent**](class_a_g_e_1_1_gamepad_button_released_event.md) 
-    * **class** [**AGE::KeyEvent**](class_a_g_e_1_1_key_event.md)     
-        * **class** [**AGE::KeyPressedEvent**](class_a_g_e_1_1_key_pressed_event.md) 
+    * **class** [**AGE::KeyEvent**](class_a_g_e_1_1_key_event.md) _Represents a keyboard event._     
+        * **class** [**AGE::KeyPressedEvent**](class_a_g_e_1_1_key_pressed_event.md) _Returns the repeat count of a certain process or operation._ 
         * **class** [**AGE::KeyReleasedEvent**](class_a_g_e_1_1_key_released_event.md) 
-        * **class** [**AGE::KeyTypedEvent**](class_a_g_e_1_1_key_typed_event.md) 
-    * **class** [**AGE::MouseEvent**](class_a_g_e_1_1_mouse_event.md)     
+        * **class** [**AGE::KeyTypedEvent**](class_a_g_e_1_1_key_typed_event.md) _Represents a Key Typed_ [_**Event**_](class_a_g_e_1_1_event.md) _in the system._
+    * **class** [**AGE::MouseEvent**](class_a_g_e_1_1_mouse_event.md) _Represents a mouse event._     
         * **class** [**AGE::MouseButtonPressedEvent**](class_a_g_e_1_1_mouse_button_pressed_event.md) 
-        * **class** [**AGE::MouseButtonReleasedEvent**](class_a_g_e_1_1_mouse_button_released_event.md) 
+        * **class** [**AGE::MouseButtonReleasedEvent**](class_a_g_e_1_1_mouse_button_released_event.md) _Represents a mouse button released event._ 
         * **class** [**AGE::MouseMovedEvent**](class_a_g_e_1_1_mouse_moved_event.md) 
         * **class** [**AGE::MouseScrolledEvent**](class_a_g_e_1_1_mouse_scrolled_event.md) 
     * **class** [**AGE::ProjectCreatedEvent**](class_a_g_e_1_1_project_created_event.md) 
@@ -33,8 +33,8 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
     * **class** [**AGE::RendererChangeEvent**](class_a_g_e_1_1_renderer_change_event.md) 
     * **class** [**AGE::SceneEvent**](class_a_g_e_1_1_scene_event.md)     
         * **class** [**AGE::SceneChangedEvent**](class_a_g_e_1_1_scene_changed_event.md) 
-    * **class** [**AGE::StringCopyEvent**](class_a_g_e_1_1_string_copy_event.md) 
-    * **class** [**AGE::StringPasteEvent**](class_a_g_e_1_1_string_paste_event.md) 
+    * **class** [**AGE::StringCopyEvent**](class_a_g_e_1_1_string_copy_event.md) _Represents a string copy event. This event is triggered when a string is copied to the clipboard._ 
+    * **class** [**AGE::StringPasteEvent**](class_a_g_e_1_1_string_paste_event.md) _Represents a string paste event. This event is triggered when a string is pasted from the clipboard._ 
     * **class** [**AGE::WidgetActivatedEvent**](class_a_g_e_1_1_widget_activated_event.md) 
     * **class** [**AGE::WidgetConstructedEvent**](class_a_g_e_1_1_widget_constructed_event.md) 
     * **class** [**AGE::WidgetDeactivatedEvent**](class_a_g_e_1_1_widget_deactivated_event.md) 
@@ -42,7 +42,7 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
     * **class** [**AGE::WindowFocusEvent**](class_a_g_e_1_1_window_focus_event.md) 
     * **class** [**AGE::WindowLostFocusEvent**](class_a_g_e_1_1_window_lost_focus_event.md) 
     * **class** [**AGE::WindowMovedEvent**](class_a_g_e_1_1_window_moved_event.md) 
-    * **class** [**AGE::WindowResizeEvent**](class_a_g_e_1_1_window_resize_event.md) 
+    * **class** [**AGE::WindowResizeEvent**](class_a_g_e_1_1_window_resize_event.md) _Represents a window resize event._ 
 * **class** [**AGE::Aseprite**](class_a_g_e_1_1_aseprite.md) 
 * **class** [**AGE::AssetManager**](class_a_g_e_1_1_asset_manager.md) 
 * **class** [**AGE::AssetPak**](class_a_g_e_1_1_asset_pak.md) 
@@ -75,20 +75,20 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
 * **class** [**AGE::FrameBuffer**](class_a_g_e_1_1_frame_buffer.md)     
     * **class** [**AGE::OpenGLFrameBuffer**](class_a_g_e_1_1_open_g_l_frame_buffer.md) 
 * **class** [**AGE::GraphicsContext**](class_a_g_e_1_1_graphics_context.md)     
-    * **class** [**AGE::OpenGLContext**](class_a_g_e_1_1_open_g_l_context.md) 
+    * **class** [**AGE::OpenGLContext**](class_a_g_e_1_1_open_g_l_context.md) _Constructor for_ [_**OpenGLContext**_](class_a_g_e_1_1_open_g_l_context.md) _. Initializes the context with a GLFW window handle._
 * **class** [**AGE::Layer**](class_a_g_e_1_1_layer.md)     
-    * **class** [**AGE::ImGuiLayer**](class_a_g_e_1_1_im_gui_layer.md) 
+    * **class** [**AGE::ImGuiLayer**](class_a_g_e_1_1_im_gui_layer.md) _This class represents the ImGui layer in a system. It is responsible for rendering and handling user interface events._ 
     * **class** [**AGE::NodeEditorWindow**](class_a_g_e_1_1_node_editor_window.md) 
 * **class** [**AGE::Image**](class_a_g_e_1_1_image.md) 
 * **class** [**AGE::IndexBuffer**](class_a_g_e_1_1_index_buffer.md)     
     * **class** [**AGE::OpenGLIndexBuffer**](class_a_g_e_1_1_open_g_l_index_buffer.md) 
 * **class** [**AGE::IniReader**](class_a_g_e_1_1_ini_reader.md) 
 * **class** [**AGE::IniWriter**](class_a_g_e_1_1_ini_writer.md) 
-* **class** [**AGE::Input**](class_a_g_e_1_1_input.md) 
+* **class** [**AGE::Input**](class_a_g_e_1_1_input.md) _This class provides methods for checking the state of input devices._ 
 * **class** [**AGE::InstrumentationTimer**](class_a_g_e_1_1_instrumentation_timer.md) 
 * **class** [**AGE::Instrumentor**](class_a_g_e_1_1_instrumentor.md) 
 * **class** [**AGE::JsonParser**](class_a_g_e_1_1_json_parser.md) 
-* **class** [**AGE::LayerStack**](class_a_g_e_1_1_layer_stack.md) 
+* **class** [**AGE::LayerStack**](class_a_g_e_1_1_layer_stack.md) _A class for managing layers in a stack-like structure._ 
 * **class** [**AGE::Log**](class_a_g_e_1_1_log.md) 
 * **class** [**AGE::Math**](class_a_g_e_1_1_math.md) 
 * **class** [**AGE::NodeEditorManager**](class_a_g_e_1_1_node_editor_manager.md) 
@@ -124,6 +124,7 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
 * **class** [**AGE::SubTexture2D**](class_a_g_e_1_1_sub_texture2_d.md) 
 * **class** [**AGE::TileMapImporter**](class_a_g_e_1_1_tile_map_importer.md) 
 * **class** [**AGE::TileMapManager**](class_a_g_e_1_1_tile_map_manager.md) 
+* **class** [**AGE::Tilemap**](class_a_g_e_1_1_tilemap.md) 
 * **class** [**AGE::TimeStep**](class_a_g_e_1_1_time_step.md) 
 * **class** [**AGE::Timer**](class_a_g_e_1_1_timer.md) 
 * **class** [**AGE::UUID**](class_a_g_e_1_1_u_u_i_d.md) 
@@ -184,7 +185,7 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
     * **struct** [**AGE::InvalidInputBinding\_t**](struct_a_g_e_1_1_invalid_input_binding__t.md) 
     * **struct** [**AGE::KBMInputBinding**](struct_a_g_e_1_1_k_b_m_input_binding.md) 
 * **struct** [**AGE::IDComponent**](struct_a_g_e_1_1_i_d_component.md) 
-* **struct** [**AGE::ImageSpecification**](struct_a_g_e_1_1_image_specification.md) 
+* **struct** [**AGE::ImageSpecification**](struct_a_g_e_1_1_image_specification.md) _Constructor for_ [_**ImageSpecification**_](struct_a_g_e_1_1_image_specification.md) _class._
 * **struct** [**AGE::InstrumentationSession**](struct_a_g_e_1_1_instrumentation_session.md) 
 * **struct** [**AGE::InstrumentorUtils::ChangeResult**](struct_a_g_e_1_1_instrumentor_utils_1_1_change_result.md) 
 * **struct** [**AGE::Line**](struct_a_g_e_1_1_line.md) 
@@ -219,13 +220,13 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
 * **struct** [**AGE::SpriteRendererComponent**](struct_a_g_e_1_1_sprite_renderer_component.md) 
 * **struct** [**AGE::Statistics**](struct_a_g_e_1_1_statistics.md) 
 * **struct** [**AGE::StringProperties**](struct_a_g_e_1_1_string_properties.md) 
+* **struct** [**AGE::TMXData**](struct_a_g_e_1_1_t_m_x_data.md) 
 * **struct** [**AGE::TagComponent**](struct_a_g_e_1_1_tag_component.md) 
 * **struct** [**AGE::TextVertex**](struct_a_g_e_1_1_text_vertex.md) 
 * **struct** [**AGE::TextureSpecification**](struct_a_g_e_1_1_texture_specification.md) 
+* **struct** [**AGE::TileMapData**](struct_a_g_e_1_1_tile_map_data.md) 
 * **struct** [**AGE::TileMapRendererComponent**](struct_a_g_e_1_1_tile_map_renderer_component.md) 
-* **struct** [**AGE::TilemapProperties**](struct_a_g_e_1_1_tilemap_properties.md) 
-* **struct** [**AGE::TilemapVertex**](struct_a_g_e_1_1_tilemap_vertex.md) 
-* **struct** [**AGE::TilesetData**](struct_a_g_e_1_1_tileset_data.md) 
+* **struct** [**AGE::TileVertex**](struct_a_g_e_1_1_tile_vertex.md) 
 * **struct** [**AGE::TransformComponent**](struct_a_g_e_1_1_transform_component.md) 
 * **struct** [**AGE::UIComponentType**](struct_a_g_e_1_1_u_i_component_type.md) 
 * **struct** [**AGE::UIProperties**](struct_a_g_e_1_1_u_i_properties.md) 
@@ -239,7 +240,6 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
 * **struct** [**AGE::\_constantBufferStruct2D**](struct_a_g_e_1_1__constant_buffer_struct2_d.md) 
 * **struct** [**AGE::\_vertexPositionColor**](struct_a_g_e_1_1__vertex_position_color.md) 
 * **struct** [**AGE::\_vertexPositionColorTangent**](struct_a_g_e_1_1__vertex_position_color_tangent.md) 
-* **struct** [**AGE::float16**](struct_a_g_e_1_1float16.md) 
 * **struct** [**AGE::Renderer::SceneData**](struct_a_g_e_1_1_renderer_1_1_scene_data.md) 
 * **struct** [**YAML::convert&lt; AGE::AnimationSpecification &gt;**](struct_y_a_m_l_1_1convert_3_01_a_g_e_1_1_animation_specification_01_4.md) 
 * **struct** [**YAML::convert&lt; AGE::Ref&lt; AGE::AudioSource &gt; &gt;**](struct_y_a_m_l_1_1convert_3_01_a_g_e_1_1_ref_3_01_a_g_e_1_1_audio_source_01_4_01_4.md) 
@@ -258,8 +258,6 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
     * **class** [**AGE::ScriptableEntity**](class_a_g_e_1_1_scriptable_entity.md) 
 * **class** **std::enable_shared_from_this< ScriptableWidget >**    
     * **class** [**AGE::ScriptableWidget**](class_a_g_e_1_1_scriptable_widget.md) 
-* **class** **std::enable_shared_from_this< Tilemap >**    
-    * **class** [**AGE::Tilemap**](class_a_g_e_1_1_tilemap.md) 
 * **class** **std::enable_shared_from_this< AGENode >**    
     * **struct** [**AGE::AGENode**](struct_a_g_e_1_1_a_g_e_node.md) 
 * **class** **VariantBase**    

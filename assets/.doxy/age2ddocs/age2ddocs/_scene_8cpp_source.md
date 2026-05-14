@@ -30,12 +30,12 @@
 
 #include <box2d/types.h>
 
-#include "Render/Public/RenderCommand.h"
-
 namespace AGE
 {
     template<typename Component>
-    static void CopyComponent(entt::registry& dst, entt::registry& src, const std::unordered_map<UUID, entt::entity>& enttMap)
+    "Copies a Component from one entt::registry to another based on UUID mapping."
+
+static void CopyComponent(entt::registry& dst, entt::registry& src, const std::unordered_map<UUID, entt::entity>& enttMap)
     {
         auto View = src.view<Component>();
 
@@ -44,7 +44,7 @@ namespace AGE
         {
             UUID uuid = src.get<IDComponent>(E).ID;
 
-            AGE_CORE_ASSERT(enttMap.find(uuid) != enttMap.end(), "UUID not found!");
+            CoreLogger::Assert(enttMap.find(uuid) != enttMap.end(), "UUID not found!");
             entt::entity dstEnttID = enttMap.at(uuid);
 
 
@@ -59,7 +59,7 @@ namespace AGE
     }
 
     template<typename Component>
-    static void CopyComponentIfExists(Entity dst, Entity src)
+static void CopyComponentIfExists(Entity dst, Entity src)
     {
         if (src.HasComponent<Component>())
         {
@@ -67,20 +67,23 @@ namespace AGE
         }
     }
 
-    Scene::Scene()
+COMMENT:
+CONFIDENCE: 1.0;
+
+Scene::Scene()
     {
         m_Physics = CreateRef<Physics2D>();
     }
-    Scene::~Scene()
+Scene::~Scene()
     {
 
     }
-    Entity Scene::CreateEntity(const std::string Name)
+Entity Scene::CreateEntity(const std::string Name)
     {
         return CreateEntityWithUUID(UUID(), Name);
     }
 
-    Entity Scene::CreateEntityWithUUID(UUID uuid, const std::string& Name)
+Entity Scene::CreateEntityWithUUID(UUID uuid, const std::string& Name)
     {
         Entity ent = { m_Registry.create(), this };
         ent.AddComponent<IDComponent>();
@@ -91,7 +94,7 @@ namespace AGE
         return ent;
     }
 
-    Entity Scene::GetEntityFromUUID(const uint64_t uuid)
+Entity Scene::GetEntityFromUUID(const uint64_t uuid)
     {
         AGE_PROFILE_FUNCTION();
         
@@ -109,7 +112,8 @@ namespace AGE
         return {};
     }
 
-    Ref<Scene> Scene::Copy(Ref<Scene> Other)
+"Copies a scene from another, creating a new one while preserving entity UUIDs."
+Ref<Scene> Scene::Copy(Ref<Scene> Other)
     {
         Ref<Scene> NewScene = CreateRef<Scene>();
 
@@ -149,7 +153,7 @@ namespace AGE
 
     }
 
-    void Scene::DuplicateEntity(Entity entity)
+void Scene::DuplicateEntity(Entity entity)
     {
         std::string Name = entity.GetName();
         Entity NewEntity = CreateEntity(Name);
@@ -167,7 +171,7 @@ namespace AGE
         CopyComponentIfExists<CapsuleCollider2DComponent>(NewEntity, entity);
     }
     
-    Entity Scene::GetPrimaryCameraEntity()
+Entity Scene::GetPrimaryCameraEntity()
     {
         auto View = m_Registry.view<CameraComponent>();
         for (auto E : View)
@@ -181,7 +185,9 @@ namespace AGE
         return {};
     }
 
-    void Scene::OnRuntimeStart()
+    
+
+void Scene::OnRuntimeStart()
     {
 
         m_Physics->CreateNewPhysicsWorld(shared_from_this());
@@ -245,7 +251,7 @@ namespace AGE
 
     }
 
-    void Scene::OnRuntimeStop()
+void Scene::OnRuntimeStop()
     {
         //TODO: UnloadSounds
         //b2DestroyWorld(Physics2D::GetWorldID());
@@ -266,7 +272,9 @@ namespace AGE
 
     }
 
-    void Scene::OnRuntimeUpdate(TimeStep DeltaTime)
+    
+
+void Scene::OnRuntimeUpdate(TimeStep DeltaTime)
     {
         m_Physics->Step(DeltaTime);
         {
@@ -412,7 +420,6 @@ namespace AGE
 
                         if (Map.TileMap)
                         {
-
                         }
                     }
 
@@ -455,6 +462,13 @@ namespace AGE
                             Renderer2D::DrawSprite(Sprite);
                             Sprite.AnimInstance.OnAnimate(DeltaTime);
 
+                        }
+
+                        if (Sprite.SubTexture.get() != nullptr && !Sprite.bTile)
+                        {
+                            Sprite.QuadProps.TintColor = Sprite.Color;
+                            Sprite.QuadProps.EntityID = (int)E;
+                            Renderer2D::DrawSprite(Sprite);
                         }
                     }
 
@@ -499,7 +513,9 @@ namespace AGE
         }
     }
 
-    void Scene::OnEditorUpdate(TimeStep DeltaTime, EditorCamera& Camera)
+    
+
+void Scene::OnEditorUpdate(TimeStep DeltaTime, EditorCamera& Camera)
     {
         AGE_PROFILE_FUNCTION();
         Renderer2D::BeginScene(Camera);
@@ -530,19 +546,6 @@ namespace AGE
                 auto [Map, Transform] = View.get<TileMapRendererComponent, TransformComponent>(E);
                 if (Map.TileMap)
                 {
-                    if (!Map.IsShaderDataSet)
-                    {
-                        Map.TileMap->SetShaderData();
-                        RenderCommand::s_GraphicsPipeline->GetData().CurrentTilemap = Map.TileMap;
-                        Map.IsShaderDataSet = true;
-                    }
-                    TilemapProperties Props{};
-                    Props.Transform = Transform.GetTransform();
-                    Props.NumofLayers = Map.TileMap->GetNumberOfLayers();
-                    Props.UV = Map.TileMap->GetUVs();
-                    Props.EntityID = (int)E;
-
-                    Renderer2D::DrawTileMap(Map.TileMap, Props);
 
                 }
             }
@@ -571,6 +574,13 @@ namespace AGE
                     Sprite.QuadProps.EntityID = (int)E;
                     Renderer2D::DrawSprite(Sprite);
                 }
+
+                if (Sprite.SubTexture.get() != nullptr && !Sprite.bTile)
+                {
+                    Sprite.QuadProps.TintColor = Sprite.Color;
+                    Sprite.QuadProps.EntityID = (int)E;
+                    Renderer2D::DrawSprite(Sprite);
+                }
             }
         }
 
@@ -592,7 +602,7 @@ namespace AGE
         //RenderCommand::Flush();
     }
 
-    void Scene::OnViewportResize(uint32_t Width, uint32_t Height)
+void Scene::OnViewportResize(uint32_t Width, uint32_t Height)
     {
         m_ViewportWidth = Width;
         m_ViewportHeight = Height;
@@ -610,12 +620,12 @@ namespace AGE
         }
         
     }
-    void Scene::DestoryEntity(Entity E)
+void Scene::DestoryEntity(Entity E)
     {
         m_Registry.destroy(E);
     }
 
-    void Scene::BuildScene(const std::filesystem::path& ProjectPath)
+void Scene::BuildScene(const std::filesystem::path& ProjectPath)
     {
         if (std::filesystem::is_directory(ProjectPath.parent_path().string() + "/BuiltScenes/"))
         {
@@ -639,7 +649,7 @@ namespace AGE
 
     }
 
-    Ref<Scene> Scene::LoadScene(const std::filesystem::path& Path)
+Ref<Scene> Scene::LoadScene(const std::filesystem::path& Path)
     {
         Ref<Scene> File = CreateRef<Scene>();
         SceneSerializer Serializer(File);
@@ -649,7 +659,9 @@ namespace AGE
         return File;
     }
 
-    void Scene::BuildAllScenes()
+    
+
+void Scene::BuildAllScenes()
     {
         AppConfig Config = App::Get().GetAppConfig();
         std::string ProjectName = Project::GetActive()->GetConfig().Name;
@@ -673,88 +685,88 @@ namespace AGE
     }
 
     template<typename T>
-    void Scene::OnComponentAdded(Entity E, T& Component)
+void Scene::OnComponentAdded(Entity E, T& Component)
     {
         //static_assert(false);
     }
 
     template<>
-    void Scene::OnComponentAdded<TagComponent>(Entity E, TagComponent& Component)
+void Scene::OnComponentAdded<TagComponent>(Entity E, TagComponent& Component)
     {
 
     }
     template<>
-    void Scene::OnComponentAdded<TransformComponent>(Entity E, TransformComponent& Component)
+void Scene::OnComponentAdded<TransformComponent>(Entity E, TransformComponent& Component)
     {
 
     }   
     template<>
-    void Scene::OnComponentAdded<CameraComponent>(Entity E, CameraComponent& Component)
+void Scene::OnComponentAdded<CameraComponent>(Entity E, CameraComponent& Component)
     {
         Component.Cam.SetViewportSize(m_ViewportWidth, m_ViewportHeight);
     }   
     template<>
-    void Scene::OnComponentAdded<SpriteRendererComponent>(Entity E, SpriteRendererComponent& Component)
+void Scene::OnComponentAdded<SpriteRendererComponent>(Entity E, SpriteRendererComponent& Component)
     {
 
     }   
     template<>
-    void Scene::OnComponentAdded<TileMapRendererComponent>(Entity E, TileMapRendererComponent& Component)
+void Scene::OnComponentAdded<TileMapRendererComponent>(Entity E, TileMapRendererComponent& Component)
     {
 
     }
     template<>
-    void Scene::OnComponentAdded<CircleRendererComponent>(Entity E, CircleRendererComponent& Component)
+void Scene::OnComponentAdded<CircleRendererComponent>(Entity E, CircleRendererComponent& Component)
     {
 
     }
     template<>
-    void Scene::OnComponentAdded<NativeScriptComponent>(Entity E, NativeScriptComponent& Component)
+void Scene::OnComponentAdded<NativeScriptComponent>(Entity E, NativeScriptComponent& Component)
     {
 
     }
     template<>
-    void Scene::OnComponentAdded<BoxComponent>(Entity E, BoxComponent& Component)
+void Scene::OnComponentAdded<BoxComponent>(Entity E, BoxComponent& Component)
     {
 
     }
     template<>
-    void Scene::OnComponentAdded<AudioComponent>(Entity E, AudioComponent& Component)
+void Scene::OnComponentAdded<AudioComponent>(Entity E, AudioComponent& Component)
     {
 
     }
     template<>
-    void Scene::OnComponentAdded<RigidBody2DComponent>(Entity E, RigidBody2DComponent& Component)
+void Scene::OnComponentAdded<RigidBody2DComponent>(Entity E, RigidBody2DComponent& Component)
     {
 
     }
     template<>
-    void Scene::OnComponentAdded<BoxCollider2DComponent>(Entity E, BoxCollider2DComponent& Component)
+void Scene::OnComponentAdded<BoxCollider2DComponent>(Entity E, BoxCollider2DComponent& Component)
     {
 
     }
     template<>
-    void Scene::OnComponentAdded<CapsuleCollider2DComponent>(Entity E, CapsuleCollider2DComponent& Component)
+void Scene::OnComponentAdded<CapsuleCollider2DComponent>(Entity E, CapsuleCollider2DComponent& Component)
     {
 
     }
     template<>
-    void Scene::OnComponentAdded<SegmentCollider2DComponent>(Entity E, SegmentCollider2DComponent& Component)
+void Scene::OnComponentAdded<SegmentCollider2DComponent>(Entity E, SegmentCollider2DComponent& Component)
     {
 
     }
     template<>
-    void Scene::OnComponentAdded<IDComponent>(Entity E, IDComponent& Component)
+void Scene::OnComponentAdded<IDComponent>(Entity E, IDComponent& Component)
     {
 
     }
     template<>
-    void Scene::OnComponentAdded<MovementComponent>(Entity E, MovementComponent& Component)
+void Scene::OnComponentAdded<MovementComponent>(Entity E, MovementComponent& Component)
     {
 
     }
 
-    void Scene::Serialize(DataWriter* Serializer, const Scene& Data)
+void Scene::Serialize(DataWriter* Serializer, const Scene& Data)
     {
         Serializer->WriteRaw<size_t>(Data.m_Name.size());
         Serializer->WriteString(Data.m_Name);
@@ -763,7 +775,7 @@ namespace AGE
         Serializer->WriteObject<SceneInfo>(Data.m_SceneInfo);
     }
 
-    void Scene::Deserialize(DataReader* Deserializer, Scene& Data)
+void Scene::Deserialize(DataReader* Deserializer, Scene& Data)
     {
         Deserializer->ReadString(Data.m_Name);
         Deserializer->ReadRaw<uint32_t>(Data.m_ViewportWidth);
@@ -771,14 +783,14 @@ namespace AGE
         Deserializer->ReadObject<SceneInfo>(Data.m_SceneInfo);
     }
 
-    void SceneInfo::Serialize(DataWriter* Serializer, const SceneInfo& Data)
+void SceneInfo::Serialize(DataWriter* Serializer, const SceneInfo& Data)
     {
         Serializer->WriteRaw<size_t>(sizeof(*Data.AssetMap));
         Serializer->WriteString(Data.Flags);
         Serializer->WriteRaw<const char*>(Data.AssetMap);
     }
 
-    void SceneInfo::Deserialize(DataReader* Deserializer, SceneInfo& Data)
+void SceneInfo::Deserialize(DataReader* Deserializer, SceneInfo& Data)
     {
         Deserializer->ReadRaw<size_t>(Data.Size);
         Deserializer->ReadString(Data.Flags);

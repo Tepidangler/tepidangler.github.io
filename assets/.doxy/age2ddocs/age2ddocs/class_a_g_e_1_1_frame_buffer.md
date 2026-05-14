@@ -52,7 +52,7 @@ Inherited by the following classes: [AGE::OpenGLFrameBuffer](class_a_g_e_1_1_ope
 
 | Type | Name |
 | ---: | :--- |
-|  T \* | [**As**](#function-as) () <br> |
+|  T \* | [**As**](#function-as) () <br>_This function is currently not implemented and will always throw an assertion. It returns a null pointer of type T\*. The purpose of this function is unknown._  |
 | virtual void | [**Bind**](#function-bind) () = 0<br> |
 | virtual void | [**ClearAttachment**](#function-clearattachment) (uint32\_t Index, int Value) = 0<br> |
 | virtual uint32\_t | [**GetColorAttachmentRendererID**](#function-getcolorattachmentrendererid) (uint32\_t Index=0) const = 0<br> |
@@ -65,14 +65,14 @@ Inherited by the following classes: [AGE::OpenGLFrameBuffer](class_a_g_e_1_1_ope
 | virtual int | [**ReadPixel**](#function-readpixel) (uint32\_t AttachmentIndex, int x, int y) = 0<br> |
 | virtual void | [**Resize**](#function-resize) (const uint32\_t Width, const uint32\_t Height) = 0<br> |
 | virtual void | [**Unbind**](#function-unbind) () = 0<br> |
-| virtual  | [**~FrameBuffer**](#function-framebuffer) () <br> |
+| virtual  | [**~FrameBuffer**](#function-framebuffer) () <br>_Virtual destructor for the_ [_**FrameBuffer**_](class_a_g_e_1_1_frame_buffer.md) _class._ |
 
 
 ## Public Static Functions
 
 | Type | Name |
 | ---: | :--- |
-|  Ref&lt; [**FrameBuffer**](class_a_g_e_1_1_frame_buffer.md) &gt; | [**Create**](#function-create) (const [**FrameBufferSpecification**](struct_a_g_e_1_1_frame_buffer_specification.md) & Spec) <br> |
+|  Ref&lt; [**FrameBuffer**](class_a_g_e_1_1_frame_buffer.md) &gt; | [**Create**](#function-create) (const [**FrameBufferSpecification**](struct_a_g_e_1_1_frame_buffer_specification.md) & Spec) <br>_Creates a new_ [_**FrameBuffer**_](class_a_g_e_1_1_frame_buffer.md) _based on the specified specification. The type of_[_**FrameBuffer**_](class_a_g_e_1_1_frame_buffer.md) _to create is determined by the current_[_**RendererAPI**_](class_a_g_e_1_1_renderer_a_p_i.md) _in use._ |
 
 
 
@@ -106,6 +106,7 @@ Inherited by the following classes: [AGE::OpenGLFrameBuffer](class_a_g_e_1_1_ope
 
 ### function As 
 
+_This function is currently not implemented and will always throw an assertion. It returns a null pointer of type T\*. The purpose of this function is unknown._ 
 ```C++
 template<typename T>
 T * AGE::FrameBuffer::As () 
@@ -113,6 +114,27 @@ T * AGE::FrameBuffer::As ()
 
 
 
+
+
+**Returns:**
+
+A null pointer of type T\*
+
+
+This function is currently not implemented and will always throw an assertion error. It returns a null pointer of type T\*. The purpose of this function is unknown.
+
+
+
+
+**Returns:**
+
+A null pointer of type T\* 
+
+
+
+
+
+        
 
 <hr>
 
@@ -290,12 +312,23 @@ virtual void AGE::FrameBuffer::Unbind () = 0
 
 ### function ~FrameBuffer 
 
+_Virtual destructor for the_ [_**FrameBuffer**_](class_a_g_e_1_1_frame_buffer.md) _class._
 ```C++
 inline virtual AGE::FrameBuffer::~FrameBuffer () 
 ```
 
 
 
+This function is responsible for releasing any resources that were acquired by the [**FrameBuffer**](class_a_g_e_1_1_frame_buffer.md) object, such as memory or file handles. It does not return anything (void) and thus it doesn't need a Doxygen comment to document its return value.
+
+
+Virtual destructor for the [**FrameBuffer**](class_a_g_e_1_1_frame_buffer.md) class.
+
+
+This function is responsible for releasing any resources that were acquired by the object during its lifetime, such as memory or file handles. It does not return anything and thus has an empty return type (void). 
+
+
+        
 
 <hr>
 ## Public Static Functions Documentation
@@ -305,6 +338,7 @@ inline virtual AGE::FrameBuffer::~FrameBuffer ()
 
 ### function Create 
 
+_Creates a new_ [_**FrameBuffer**_](class_a_g_e_1_1_frame_buffer.md) _based on the specified specification. The type of_[_**FrameBuffer**_](class_a_g_e_1_1_frame_buffer.md) _to create is determined by the current_[_**RendererAPI**_](class_a_g_e_1_1_renderer_a_p_i.md) _in use._
 ```C++
 static Ref< FrameBuffer > AGE::FrameBuffer::Create (
     const FrameBufferSpecification & Spec
@@ -313,6 +347,41 @@ static Ref< FrameBuffer > AGE::FrameBuffer::Create (
 
 
 
+
+
+**Parameters:**
+
+
+* `Spec` The specification for the [**FrameBuffer**](class_a_g_e_1_1_frame_buffer.md) to be created. This includes things like width, height and color attachments. 
+
+
+
+**Returns:**
+
+A reference to the newly created [**FrameBuffer**](class_a_g_e_1_1_frame_buffer.md). If the [**RendererAPI**](class_a_g_e_1_1_renderer_a_p_i.md) in use does not support a [**FrameBuffer**](class_a_g_e_1_1_frame_buffer.md) of that type, nullptr is returned instead.
+
+
+Creates a new frame buffer based on the given specification. The type of [**FrameBuffer**](class_a_g_e_1_1_frame_buffer.md) to create is determined by the current [**RendererAPI**](class_a_g_e_1_1_renderer_a_p_i.md) in use.
+
+
+
+
+**Parameters:**
+
+
+* `Spec` The specification for the new frame buffer. This includes things like width, height and color attachments. 
+
+
+
+**Returns:**
+
+A reference to the newly created [**FrameBuffer**](class_a_g_e_1_1_frame_buffer.md). If no suitable [**FrameBuffer**](class_a_g_e_1_1_frame_buffer.md) could be created (e.g., due to unsupported [**RendererAPI**](class_a_g_e_1_1_renderer_a_p_i.md)), nullptr is returned instead. 
+
+
+
+
+
+        
 
 <hr>
 

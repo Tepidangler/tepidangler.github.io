@@ -25,7 +25,7 @@ namespace AGE
     {
     public:
 
-        static inline float Magnitude(const Vector3& v)
+static inline float Magnitude(const Vector3& v)
         {
             return (std::sqrt(v[0] * v[0] + v[1] * v[1] + v[2] * v[2]));
         }
@@ -51,22 +51,22 @@ namespace AGE
         static Matrix4D Inverse(const Matrix4D& M);
         //Implementation of Dot Product in 2D
 
-        static inline float DotProduct2D(const Vector2& a, const Vector2& b)
+static inline float DotProduct2D(const Vector2& a, const Vector2& b)
         {
             return (a[0] * b[0] + a[1] * b[1]);
         }
         //Implementation of Dot Product in 3D
-        static inline float DotProduct3D(const Vector3& a, const Vector3& b)
+static inline float DotProduct3D(const Vector3& a, const Vector3& b)
         {
             return (a[0] * b[0] + a[1] * b[1] + a[2] * b[2]);
         }
 
-        static float DotProductPlaneVector(const Plane& f, const Vector3& v)
+static float DotProductPlaneVector(const Plane& f, const Vector3& v)
         {
             return (f.x * v[0] + f.y * v[1] + f.z * v[2]);
         }
 
-        static float DotProductPlanePoint(const Plane& f, const Point3D& p)
+static float DotProductPlanePoint(const Plane& f, const Point3D& p)
         {
             return (f.x * p[0] + f.y * p[1] + f.z * p[2] + f.w);
         }
@@ -75,7 +75,7 @@ namespace AGE
 
         //Implementation of Cross Product in 2D 
 
-        static inline float CrossProduct2D(const Vector2& a, const Vector2& b)
+static inline float CrossProduct2D(const Vector2& a, const Vector2& b)
         {
             return (a[0] * b[1] - b[0] * a[1]); // Since there really isn't anyway to do a 2D Cross product what 
             //we've opted to do is return a scalar when I guess would be applied along the x and y axes respectively
@@ -83,7 +83,7 @@ namespace AGE
 
         //Implementation of Cross Product in 3D
 
-        static inline Vector3 CrossProduct(const Vector3& a, const Vector3& b)
+static inline Vector3 CrossProduct(const Vector3& a, const Vector3& b)
         {
             return (Vector3(
 
@@ -94,27 +94,27 @@ namespace AGE
 
         //Implementation of Projection on 2D plane
 
-        static inline Vector2 Project2D(const Vector2& a, const Vector2& b)
+static inline Vector2 Project2D(const Vector2& a, const Vector2& b)
         {
             return (b * (DotProduct2D(a, b) / DotProduct2D(b, b)));
         }
 
         // Implementation of Rejection in 2D
-        static inline Vector2 Reject2D(const Vector2& a, const Vector2& b)
+static inline Vector2 Reject2D(const Vector2& a, const Vector2& b)
         {
             return (a - b * (DotProduct2D(a, b) / DotProduct2D(b, b)));
         }
 
         // Implementation of Projection in 3D
 
-        static inline Vector3 Project3D(const Vector3& a, Vector3& b)
+static inline Vector3 Project3D(const Vector3& a, Vector3& b)
         {
             return (b * (DotProduct3D(a, b) / DotProduct3D(b, b)));
         }
 
         // Implementation of Rejection in 3D
 
-        static inline Vector3 Reject3D(const Vector3& a, Vector3& b)
+static inline Vector3 Reject3D(const Vector3& a, Vector3& b)
         {
             return (a - b * (DotProduct3D(a, b) / DotProduct3D(b, b)));
         }
@@ -157,7 +157,7 @@ namespace AGE
         static Matrix4D MakeTransform(const Vector3& Position, const Vector3& Rotation, const Vector3& Scale);
 
         // Transforms a Line struct with a Transform3D struct
-        static Line Transform(const Line& line, const Transform4D& H)
+static Line Transform(const Line& line, const Transform4D& H)
         {
             Matrix3D adj(CrossProduct(H[1], H[2]), CrossProduct(H[2], H[0]), CrossProduct(H[0], H[1])); // Calculate the transpose of the adjugate of the upper-left 3x3 portion of H
             const Point3D& t = H.GetTranslation();
@@ -167,7 +167,7 @@ namespace AGE
             return(Line(v, m));
         }
 
-        static float Radians(const float Deg)
+static float Radians(const float Deg)
         {
             float Radians = (Deg * std::numbers::pi_v<float>) / 180.f;
 
@@ -176,14 +176,14 @@ namespace AGE
 
         }
 
-        static Vector3 Radians(const Vector3 Vec)
+static Vector3 Radians(const Vector3 Vec)
         {
 
             return { ((Vec.x * std::numbers::pi_v<float>) / 180.f),((Vec.y * std::numbers::pi_v<float>) / 180.f),((Vec.z * std::numbers::pi_v<float>) / 180.f) };
 
 
         }
-        static float Degrees(const float Rad)
+static float Degrees(const float Rad)
         {
             //Convert - (3pi / 4) radians to degrees
             //
@@ -202,7 +202,7 @@ namespace AGE
             return Deg;
         }
 
-        static Vector3 Degrees(const Vector3 Vec)
+static Vector3 Degrees(const Vector3 Vec)
         {
             //Convert - (3pi / 4) radians to degrees
             //
@@ -219,7 +219,7 @@ namespace AGE
             return { ((Vec.x / std::numbers::pi_v<float>) * 180.f),((Vec.y / std::numbers::pi_v<float>) * 180.f),((Vec.x / std::numbers::pi_v<float>) * 180.f   ) };
         }
 
-        static float DegreeToRadians(float Deg)
+static float DegreeToRadians(float Deg)
         {
             return std::acosf(Deg) /180.f;
         }
@@ -227,64 +227,64 @@ namespace AGE
         static bool DecomposeTransform(const Matrix4D& Transform, Vector3& Translation, Vector3& Rotation, Vector3& Scale);
 
 
-        static float Cos(float a)
+static float Cos(float a)
         {
             return std::cos(a);
         }
 
-        static float Sin(float a)
+static float Sin(float a)
         {
             return std::sin(a);
         }
 
-        static float ACos(float a)
+static float ACos(float a)
         {
             return std::acos(a);
         }
-        static float Sqrt(float a)
+static float Sqrt(float a)
         {
             return std::sqrtf(a);
         }
 
         template<typename T>
-        static T Add(T a, T b)
+static T Add(T a, T b)
         {
             return a + b;
         }
         template<typename T>
-        static T Subtract(T a, T b)
+static T Subtract(T a, T b)
         {
             return a - b;
         }
         template<typename T>
-        static T Multiply(T a, T b)
+static T Multiply(T a, T b)
         {
             return a * b;
         }
         template<typename T>
-        static T Divide(T a, T b)
+static T Divide(T a, T b)
         {
             return a / b;
         }
 
-        static double Modulo(double a, double b)
+static double Modulo(double a, double b)
         {
             return std::fmod(a,b);
         }
 
-        static float Pow(float a, float b = 2.f)
+static float Pow(float a, float b = 2.f)
         {
             return std::powf(a, b);
         }
 
-        static float CubeRoot(float a)
+static float CubeRoot(float a)
         {
             return std::cbrtf(a);
         }
 
     };
 
-    inline float operator ^(const Line& L1, const Line& L2)
+inline float operator ^(const Line& L1, const Line& L2)
     {
         return (-(Math::DotProduct3D(L1.Direction, L2.Moment) + Math::DotProduct3D(L2.Direction, L1.Moment)));
     }

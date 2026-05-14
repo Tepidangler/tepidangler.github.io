@@ -291,12 +291,15 @@
         <name>AGEPin</name>
         <qualifiedname>AGE::AGEPin::AGEPin</qualifiedname>
         <briefdescription>
+<para>Default constructor for the <ref refid="struct_a_g_e_1_1_a_g_e_pin" kindref="compound">AGEPin</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function initializes an instance of the <ref refid="struct_a_g_e_1_1_a_g_e_pin" kindref="compound">AGEPin</ref> class with its default values. It does not take any parameters and returns nothing.</para>
+<para>Default constructor for the <ref refid="struct_a_g_e_1_1_a_g_e_pin" kindref="compound">AGEPin</ref> class. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" line="144" column="1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" line="152" column="1"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_a_g_e_pin_1a1ad08bd973ee1351a83ddfb9e4e3c1d0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -317,12 +320,68 @@
           <declname>type</declname>
         </param>
         <briefdescription>
+<para>Constructs an instance of <ref refid="struct_a_g_e_1_1_a_g_e_pin" kindref="compound">AGEPin</ref> with the given parameters. </para>
         </briefdescription>
         <detaileddescription>
+<para>This constructor initializes a new instance of <ref refid="struct_a_g_e_1_1_a_g_e_pin" kindref="compound">AGEPin</ref> with the provided <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref>, name, and type. The Node pointer is initialized to nullptr, Kind is set to <ref refid="class_a_g_e_1_1_input" kindref="compound">Input</ref>, and other members are assigned their respective values. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unique identifier for this pin. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name or label associated with this pin. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specifies the kind of data that this pin can handle.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="struct_a_g_e_1_1_a_g_e_pin" kindref="compound">AGEPin</ref></para>
+</simplesect>
+Constructs an instance of <ref refid="struct_a_g_e_1_1_a_g_e_pin" kindref="compound">AGEPin</ref> with the given parameters.</para>
+<para>This constructor initializes a new instance of <ref refid="struct_a_g_e_1_1_a_g_e_pin" kindref="compound">AGEPin</ref> with the provided <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref>, name, and type. The Node pointer is set to nullptr, Kind is initialized as <ref refid="class_a_g_e_1_1_input" kindref="compound">Input</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unique identifier for this pin. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name or label associated with this pin. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specifies the type of the pin (<ref refid="class_a_g_e_1_1_input" kindref="compound">Input</ref>, Output, etc.). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" line="145" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" bodystart="145" bodyend="149"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" line="172" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" bodystart="172" bodyend="176"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_a_g_e_pin_1a8f73cd42de61ad90ed6a8b3a593d0419" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -331,12 +390,21 @@
         <name>~AGEPin</name>
         <qualifiedname>AGE::AGEPin::~AGEPin</qualifiedname>
         <briefdescription>
+<para>Virtual destructor for the <ref refid="struct_a_g_e_1_1_a_g_e_pin" kindref="compound">AGEPin</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is responsible for freeing any resources that were allocated by the object, such as memory or file handles. It&apos;s a virtual function because it can be overridden in derived classes to provide specific cleanup behavior.</para>
+<para><simplesect kind="return"><para>void</para>
+</simplesect>
+Virtual destructor for the <ref refid="struct_a_g_e_1_1_a_g_e_pin" kindref="compound">AGEPin</ref> class.</para>
+<para>This function is responsible for releasing any resources that were acquired by the object during its lifetime, such as memory or file handles. It does not perform any specific actions related to the AGEPIN object itself.</para>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" line="151" column="9"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" line="192" column="9"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_a_g_e_pin_1ad6a10625d0ca2e17350316c7b5d00461" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>rttr::variant</type>
@@ -349,12 +417,38 @@
           <declname>Type</declname>
         </param>
         <briefdescription>
+<para>GetValue is a function that returns an rttr::variant based on the input AGEPinType. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function takes one parameter, Type of type AGEPinType and returns an rttr::variant. It uses a switch statement to determine which variant to return based on the integer value of Type.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An enumeration that specifies the type of variant to be returned. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The function returns an rttr::variant corresponding to the input AGEPinType. If no matching case is found, it returns nullptr.</para>
+</simplesect>
+GetValue is a function that returns an rttr::variant based on the input AGEPinType.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of pin to get the value for. This can be one of several types defined in AGEPinType, including Boolean, Integer, Integer16, etc. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>rttr::variant The variant corresponding to the input type. If the type is not recognized, nullptr is returned. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" line="153" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" bodystart="153" bodyend="175"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" line="208" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" bodystart="208" bodyend="230"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -373,12 +467,52 @@
           <declname>Data</declname>
         </param>
         <briefdescription>
+<para>This function serializes an <ref refid="struct_a_g_e_1_1_a_g_e_pin" kindref="compound">AGEPin</ref> object into a <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function writes various properties of the <ref refid="struct_a_g_e_1_1_a_g_e_pin" kindref="compound">AGEPin</ref>, including its ID, NextNodeID, Name, Type, Kind, String, Boolean, Integer, Integer16, Integer64, UInteger16, UInteger32, UInteger64, Value, Vector2D, Vector3D, and Vector4D. It also handles the case where an object pointer is present in the <ref refid="struct_a_g_e_1_1_a_g_e_pin" kindref="compound">AGEPin</ref>. If it exists, a boolean value of true is written to indicate that an object is being serialized, followed by its <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref>. Otherwise, a boolean value of false is written.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Serializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref> instance which will be used for serialization. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Const reference to the <ref refid="struct_a_g_e_1_1_a_g_e_pin" kindref="compound">AGEPin</ref> object that needs to be serialized.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This function serializes an <ref refid="struct_a_g_e_1_1_a_g_e_pin" kindref="compound">AGEPin</ref> object into a <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref>.</para>
+<para>The function writes various properties of the <ref refid="struct_a_g_e_1_1_a_g_e_pin" kindref="compound">AGEPin</ref> to the provided <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref>, including its ID, NextNodeID, Name, Type, Kind, String, Boolean, Integer, Integer16, Integer64, UInteger16, UInteger32, UInteger64, Value, Vector2D, Vector3D, and Vector4D.</para>
+<para>It also checks if the <ref refid="struct_a_g_e_1_1_a_g_e_pin" kindref="compound">AGEPin</ref> has an associated <ref refid="class_a_g_e_1_1_scriptable_entity" kindref="compound">ScriptableEntity</ref> object (ObjPtr). If it does, it writes a true flag followed by the <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref> of the associated entity; otherwise, it writes a false flag.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Serializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref> where the serialized data will be written. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_a_g_e_pin" kindref="compound">AGEPin</ref> object that needs to be serialized. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" line="177" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" bodystart="177" bodyend="206"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" line="251" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" bodystart="251" bodyend="280"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_a_g_e_pin_1ae7d5089029ee0a4ffa2e83c25db3a51f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -395,12 +529,50 @@
           <declname>Data</declname>
         </param>
         <briefdescription>
+<para>Deserialize function for the <ref refid="struct_a_g_e_1_1_a_g_e_pin" kindref="compound">AGEPin</ref> structure. This function reads data from a <ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref> object and populates an <ref refid="struct_a_g_e_1_1_a_g_e_pin" kindref="compound">AGEPin</ref> object with it. The function assumes that the <ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref> is correctly initialized and ready to read data. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Serializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the <ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref> object which provides the serialized data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to the <ref refid="struct_a_g_e_1_1_a_g_e_pin" kindref="compound">AGEPin</ref> object where the deserialized data will be stored.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Deserialize function for <ref refid="struct_a_g_e_1_1_a_g_e_pin" kindref="compound">AGEPin</ref> data.</para>
+<para>This function reads various types of data from a <ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref> object and assigns them to an <ref refid="struct_a_g_e_1_1_a_g_e_pin" kindref="compound">AGEPin</ref> object. It handles different types such as uint64_t, <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref>, bool, int, int16_t, int64_t, uint16_t, uint32_t, uint64_t, float, <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref>, <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref>, and <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Serializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the <ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref> object that provides serialized data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to the <ref refid="struct_a_g_e_1_1_a_g_e_pin" kindref="compound">AGEPin</ref> object where the deserialized data will be stored. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" line="208" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" bodystart="208" bodyend="239"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" line="298" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" bodystart="298" bodyend="329"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -434,7 +606,7 @@
         <link refid="struct_a_g_e_1_1_vector4"/>
       </node>
     </collaborationgraph>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" line="120" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" bodystart="121" bodyend="240"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" line="120" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" bodystart="121" bodyend="330"/>
     <listofallmembers>
       <member refid="struct_a_g_e_1_1_a_g_e_pin_1a623029842d83113acf669c6ee394b2bf" prot="public" virt="non-virtual"><scope>AGE::AGEPin</scope><name>AGEPin</name></member>
       <member refid="struct_a_g_e_1_1_a_g_e_pin_1a1ad08bd973ee1351a83ddfb9e4e3c1d0" prot="public" virt="non-virtual"><scope>AGE::AGEPin</scope><name>AGEPin</name></member>

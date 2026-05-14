@@ -99,9 +99,9 @@ See [AGE::Event](class_a_g_e_1_1_event.md)
 
 | Type | Name |
 | ---: | :--- |
-|   | [**AxisEvent**](#function-axisevent) (int Axis, float Position) <br> |
-|  int | [**GetAxis**](#function-getaxis) () <br> |
-|  float | [**GetPosition**](#function-getposition) () <br> |
+|   | [**AxisEvent**](#function-axisevent) (int Axis, float Position) <br>_Constructs an instance of the_ [_**AxisEvent**_](class_a_g_e_1_1_axis_event.md) _class with specified axis and position._ |
+|  int | [**GetAxis**](#function-getaxis) () <br>_This function returns the value of the member variable 'm\_Axis'._  |
+|  float | [**GetPosition**](#function-getposition) () <br>_This function returns the current position value._  |
 
 
 
@@ -115,8 +115,8 @@ See [AGE::Event](class_a_g_e_1_1_event.md)
 | virtual int | [**GetCategoryFlags**](class_a_g_e_1_1_event.md#function-getcategoryflags) () const = 0<br> |
 | virtual EventType | [**GetEventType**](class_a_g_e_1_1_event.md#function-geteventtype) () const = 0<br> |
 | virtual const char \* | [**GetName**](class_a_g_e_1_1_event.md#function-getname) () const = 0<br> |
-|  bool | [**IsInCategory**](class_a_g_e_1_1_event.md#function-isincategory) (EventCategory Category) <br> |
-| virtual std::string | [**ToString**](class_a_g_e_1_1_event.md#function-tostring) () const<br> |
+|  bool | [**IsInCategory**](class_a_g_e_1_1_event.md#function-isincategory) (EventCategory Category) <br>_Checks if an event is in a specific category._  |
+| virtual std::string | [**ToString**](class_a_g_e_1_1_event.md#function-tostring) () const<br>_Returns a string representation of the object._  |
 
 
 
@@ -203,8 +203,8 @@ See [AGE::InputEvent](class_a_g_e_1_1_input_event.md)
 | Type | Name |
 | ---: | :--- |
 |   | [**InputEvent**](class_a_g_e_1_1_input_event.md#function-inputevent-13) () <br> |
-|   | [**InputEvent**](class_a_g_e_1_1_input_event.md#function-inputevent-23) (int Axis, float Position) <br> |
-|   | [**InputEvent**](class_a_g_e_1_1_input_event.md#function-inputevent-33) (int Button) <br> |
+|   | [**InputEvent**](class_a_g_e_1_1_input_event.md#function-inputevent-23) (int Axis, float Position) <br>_Constructs an_ [_**InputEvent**_](class_a_g_e_1_1_input_event.md) _object with the specified axis and position._ |
+|   | [**InputEvent**](class_a_g_e_1_1_input_event.md#function-inputevent-33) (int Button) <br>_Constructor for the_ [_**InputEvent**_](class_a_g_e_1_1_input_event.md) _class._ |
 
 
 
@@ -222,6 +222,7 @@ See [AGE::InputEvent](class_a_g_e_1_1_input_event.md)
 
 ### function AxisEvent 
 
+_Constructs an instance of the_ [_**AxisEvent**_](class_a_g_e_1_1_axis_event.md) _class with specified axis and position._
 ```C++
 inline AGE::AxisEvent::AxisEvent (
     int Axis,
@@ -231,6 +232,42 @@ inline AGE::AxisEvent::AxisEvent (
 
 
 
+This constructor creates a new instance of the [**AxisEvent**](class_a_g_e_1_1_axis_event.md) class by initializing its base class ([**InputEvent**](class_a_g_e_1_1_input_event.md)) with the provided axis and position values.
+
+
+
+
+**Parameters:**
+
+
+* `Axis` The identifier for the input event's associated physical axis. 
+* `Position` The current position of the physical axis in relation to its origin point.
+
+Constructs an instance of the [**AxisEvent**](class_a_g_e_1_1_axis_event.md) class with specified axis and position.
+
+
+This constructor creates a new instance of the [**AxisEvent**](class_a_g_e_1_1_axis_event.md) class by initializing its base class ([**InputEvent**](class_a_g_e_1_1_input_event.md)) with the provided axis and position values.
+
+
+
+
+**Parameters:**
+
+
+* `Axis` The identifier for the input event's associated physical axis, such as an x-axis or y-axis. 
+* `Position` The current position on the specified axis. This could be a value between -1.0 and 1.0, representing full left to right movement.
+
+
+
+**Returns:**
+
+An instance of [**AxisEvent**](class_a_g_e_1_1_axis_event.md) with the provided axis and position values. 
+
+
+
+
+
+        
 
 <hr>
 
@@ -238,6 +275,7 @@ inline AGE::AxisEvent::AxisEvent (
 
 ### function GetAxis 
 
+_This function returns the value of the member variable 'm\_Axis'._ 
 ```C++
 inline int AGE::AxisEvent::GetAxis () 
 ```
@@ -245,18 +283,64 @@ inline int AGE::AxisEvent::GetAxis ()
 
 
 
+
+**Returns:**
+
+The integer value stored in 'm\_Axis'
+
+
+This function returns the current axis value.
+
+
+
+
+**Returns:**
+
+The integer value of the current axis. 
+
+
+
+
+
+        
+
 <hr>
 
 
 
 ### function GetPosition 
 
+_This function returns the current position value._ 
 ```C++
 inline float AGE::AxisEvent::GetPosition () 
 ```
 
 
 
+
+
+**Returns:**
+
+A floating-point number representing the current position.
+
+
+Returns the current position value.
+
+
+This function retrieves and returns the current position value stored in the member variable 'm\_Position'. The returned value represents a float representing the position of an object or entity.
+
+
+
+
+**Returns:**
+
+A floating-point number representing the current position. 
+
+
+
+
+
+        
 
 <hr>
 

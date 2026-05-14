@@ -104,8 +104,8 @@
 | ---: | :--- |
 | define  | [**AGE\_FUNC\_SIG**](_instrumentor_8h.md#define-age_func_sig)  `"AGE\_FUNC\_SIG unknown!"`<br> |
 | define  | [**AGE\_PROFILE**](_instrumentor_8h.md#define-age_profile)  `1`<br> |
-| define  | [**AGE\_PROFILE\_BEGIN\_SESSION**](_instrumentor_8h.md#define-age_profile_begin_session) (name, filepath) `::AGE::Instrumentor::Get().BeginSession(name, filepath)`<br> |
-| define  | [**AGE\_PROFILE\_END\_SESSION**](_instrumentor_8h.md#define-age_profile_end_session) () `::AGE::Instrumentor::Get().EndSession()`<br> |
+| define  | [**AGE\_PROFILE\_BEGIN\_SESSION**](_instrumentor_8h.md#define-age_profile_begin_session) (name, filepath) `[**::AGE::Instrumentor::Get**](class_a_g_e_1_1_instrumentor.md#function-get)().BeginSession(name, filepath)`<br> |
+| define  | [**AGE\_PROFILE\_END\_SESSION**](_instrumentor_8h.md#define-age_profile_end_session) () `[**::AGE::Instrumentor::Get**](class_a_g_e_1_1_instrumentor.md#function-get)().EndSession()`<br> |
 | define  | [**AGE\_PROFILE\_FUNCTION**](_instrumentor_8h.md#define-age_profile_function) () `AGE\_PROFILE\_SCOPE(AGE\_FUNC\_SIG)`<br> |
 | define  | [**AGE\_PROFILE\_SCOPE**](_instrumentor_8h.md#define-age_profile_scope) (name) `AGE\_PROFILE\_SCOPE\_LINE(name, \_\_LINE\_\_)`<br> |
 | define  | [**AGE\_PROFILE\_SCOPE\_LINE**](_instrumentor_8h.md#define-age_profile_scope_line) (name, line) `AGE\_PROFILE\_SCOPE\_LINE2(name, line)`<br> |
@@ -149,7 +149,7 @@
 #define AGE_PROFILE_BEGIN_SESSION (
     name,
     filepath
-) `::AGE::Instrumentor::Get().BeginSession(name, filepath)`
+) `::AGE::Instrumentor::Get ().BeginSession(name, filepath)`
 ```
 
 
@@ -164,7 +164,7 @@
 ```C++
 #define AGE_PROFILE_END_SESSION (
     
-) `::AGE::Instrumentor::Get().EndSession()`
+) `::AGE::Instrumentor::Get ().EndSession()`
 ```
 
 

@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="413" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="413" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="1239" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="1239" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_a_g_e_1_1_line_1aa02584d2c99da0f2cc7e53848db6db65" prot="public" static="no" mutable="no">
         <type><ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref></type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="414" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="414" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="1240" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="1240" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -40,12 +40,15 @@
         <name>Line</name>
         <qualifiedname>AGE::Line::Line</qualifiedname>
         <briefdescription>
+<para>Default constructor for the <ref refid="struct_a_g_e_1_1_line" kindref="compound">Line</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function initializes a new instance of the <ref refid="struct_a_g_e_1_1_line" kindref="compound">Line</ref> class with default values. It does not take any parameters and returns no value.</para>
+<para>Default constructor for the <ref refid="struct_a_g_e_1_1_line" kindref="compound">Line</ref> class. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="416" column="1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="1251" column="1"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_line_1aba06c761ef2e660e96df4a442cbf80f2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -78,12 +81,113 @@
           <declname>mz</declname>
         </param>
         <briefdescription>
+<para>Constructs a <ref refid="struct_a_g_e_1_1_line" kindref="compound">Line</ref> object with given direction and moment vectors. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x component of the direction vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y component of the direction vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The z component of the direction vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x component of the moment vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>my</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y component of the moment vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The z component of the moment vector.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Constructs a <ref refid="struct_a_g_e_1_1_line" kindref="compound">Line</ref> object with given direction and moment vectors.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x component of the direction vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y component of the direction vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The z component of the direction vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x component of the moment vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>my</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y component of the moment vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The z component of the moment vector. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="418" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="418" bodyend="420"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="1273" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="1273" bodyend="1275"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_line_1a76095ea62f69fca5e878c25ee50cfd29" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -100,12 +204,49 @@
           <declname>m</declname>
         </param>
         <briefdescription>
+<para>Constructs a <ref refid="struct_a_g_e_1_1_line" kindref="compound">Line</ref> object with given direction and moment vectors. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The direction vector of the line. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The moment vector of the line.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Constructs a <ref refid="struct_a_g_e_1_1_line" kindref="compound">Line</ref> object with given direction and moment vectors.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The direction vector of the line. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The moment vector of the line. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="422" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="422" bodyend="426"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="1289" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="1289" bodyend="1293"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -126,7 +267,7 @@
         <link refid="struct_a_g_e_1_1_vector3"/>
       </node>
     </collaborationgraph>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="411" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="412" bodyend="428"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="1237" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="1238" bodyend="1295"/>
     <listofallmembers>
       <member refid="struct_a_g_e_1_1_line_1aa7627b3ab200684bb616306027659930" prot="public" virt="non-virtual"><scope>AGE::Line</scope><name>Direction</name></member>
       <member refid="struct_a_g_e_1_1_line_1afedbdbc959cf0ae18149bb02f6f40054" prot="public" virt="non-virtual"><scope>AGE::Line</scope><name>Line</name></member>

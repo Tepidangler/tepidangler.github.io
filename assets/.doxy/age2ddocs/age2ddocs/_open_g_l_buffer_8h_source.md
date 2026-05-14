@@ -35,9 +35,9 @@ namespace AGE
 
         void InvalidateBuffer() const override;
 
-        void SetLayout(const BufferLayout& Layout) override { m_Layout = Layout; }
+void SetLayout(const BufferLayout& Layout) override { m_Layout = Layout; }
 
-        static uint32_t GetRendererID() { return s_RendererID; }
+static uint32_t GetRendererID() { return s_RendererID; }
 
         void AddDataToBuffer(float* Verticies, uint32_t Size) override;
 
@@ -47,9 +47,9 @@ namespace AGE
         CircleVertex* CreateCircle(CircleVertex* Target, Matrix4D Transform, Vector4* Position, Vector4 Color, float Thickness, float Fade, int EntID) override;
         LineVertex* CreateLine(LineVertex* Target, Vector4 Color, Vector3 Position0, Vector3 Position1, int EntID) override;
         TextVertex* CreateText(TextVertex* Target, Matrix4D Transform, Vector4* Position, Vector4 Color, Vector2* TexCoords, float TexID,int EntID) override;
-        TilemapVertex* CreateTile(TilemapVertex* Target, Vector4 Color, Vector4* Position, Matrix4D Transform, const Vector2* UV,  uint32_t TSID, int EnttID) override;
+        TileVertex* CreateTile(TileVertex* Target, Vector4 Color, Vector4* Position, Vector2 Size, Matrix4D Transform, const Vector2* TexCoords, float TilingFactor, float ID, int EnttID) override;
 
-        const BufferLayout& GetLayout() const override { return m_Layout; }
+const BufferLayout& GetLayout() const override { return m_Layout; }
     
     private:
 
@@ -75,7 +75,7 @@ namespace AGE
 
         void InvalidateBuffer() const override;
 
-        uint32_t GetCount() override { return m_Count; }
+uint32_t GetCount() override { return m_Count; }
 
     private:
 

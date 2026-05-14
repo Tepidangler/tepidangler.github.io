@@ -65,9 +65,9 @@
 
 | Type | Name |
 | ---: | :--- |
-|   | [**AsepriteCelChunk**](#function-asepritecelchunk) () = default<br> |
-|  int | [**order**](#function-order) () const<br> |
-|   | [**~AsepriteCelChunk**](#function-asepritecelchunk) () = default<br> |
+|   | [**AsepriteCelChunk**](#function-asepritecelchunk) () = default<br>_Default constructor for_ [_**AsepriteCelChunk**_](struct_a_g_e_1_1_aseprite_cel_chunk.md) _class._ |
+|  int | [**order**](#function-order) () const<br>_This function returns the sum of the 'LayerIndex' and 'zIndex'._  |
+|   | [**~AsepriteCelChunk**](#function-asepritecelchunk) () = default<br>_Default destructor for the_ [_**AsepriteCelChunk**_](struct_a_g_e_1_1_aseprite_cel_chunk.md) _class._ |
 
 
 
@@ -235,6 +235,7 @@ int16_t AGE::AsepriteCelChunk::zIndex;
 
 ### function AsepriteCelChunk 
 
+_Default constructor for_ [_**AsepriteCelChunk**_](struct_a_g_e_1_1_aseprite_cel_chunk.md) _class._
 ```C++
 AGE::AsepriteCelChunk::AsepriteCelChunk () = default
 ```
@@ -248,6 +249,7 @@ AGE::AsepriteCelChunk::AsepriteCelChunk () = default
 
 ### function order 
 
+_This function returns the sum of the 'LayerIndex' and 'zIndex'._ 
 ```C++
 inline int AGE::AsepriteCelChunk::order () const
 ```
@@ -255,18 +257,34 @@ inline int AGE::AsepriteCelChunk::order () const
 
 
 
+
+**Returns:**
+
+The sum of 'LayerIndex' and 'zIndex', as an integer. If either index is not set, it will return 0. 
+
+
+
+
+
+        
+
 <hr>
 
 
 
 ### function ~AsepriteCelChunk 
 
+_Default destructor for the_ [_**AsepriteCelChunk**_](struct_a_g_e_1_1_aseprite_cel_chunk.md) _class._
 ```C++
 AGE::AsepriteCelChunk::~AsepriteCelChunk () = default
 ```
 
 
 
+This function is responsible for releasing any resources that were acquired by the object during its lifetime, such as memory or file handles. It does not perform any operations on the actual data stored in the chunk. 
+
+
+        
 
 <hr>
 

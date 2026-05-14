@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="210" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" bodystart="210" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="444" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" bodystart="444" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_memory_stream_writer_1a36ed57284e6e48f84d31f539df14ef7b" prot="private" static="no" mutable="no">
         <type>std::stringstream</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="211" column="19" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" bodystart="211" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="445" column="19" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" bodystart="445" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -45,12 +45,35 @@
           <declname>Addr</declname>
         </param>
         <briefdescription>
+<para>Constructs a <ref refid="class_a_g_e_1_1_memory_stream_writer" kindref="compound">MemoryStreamWriter</ref> object with the given address. </para>
         </briefdescription>
         <detaileddescription>
+<para>This constructor initializes the memory stream writer with an address to write data into. The mode of the stream is set to binary and out for writing operations.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A void pointer representing the starting address in memory where data will be written.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Constructs a <ref refid="class_a_g_e_1_1_memory_stream_writer" kindref="compound">MemoryStreamWriter</ref> object with the given address.</para>
+<para>This constructor initializes the memory stream writer with an address to write data into. The stream is initialized as binary and outgoing.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A void pointer representing the address where data will be written. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="185" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Private/DataWriter.cpp" bodystart="49" bodyend="53"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="365" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Private/DataWriter.cpp" bodystart="142" bodyend="146"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_memory_stream_writer_1a815da04dcf8444b60a217d27e7492902" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -62,12 +85,32 @@
           <type>const <ref refid="class_a_g_e_1_1_memory_stream_writer" kindref="compound">MemoryStreamWriter</ref> &amp;</type>
         </param>
         <briefdescription>
+<para>This is a copy constructor for the <ref refid="class_a_g_e_1_1_memory_stream_writer" kindref="compound">MemoryStreamWriter</ref> class. It&apos;s marked as deleted to prevent copying of objects. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The object to be copied.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This is a copy constructor for the <ref refid="class_a_g_e_1_1_memory_stream_writer" kindref="compound">MemoryStreamWriter</ref> class. It&apos;s marked as deleted to prevent copying of objects. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The object to be copied. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="186" column="1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="375" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_memory_stream_writer_1afd193708ab1a3aef1e7c826882cab11d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -76,12 +119,14 @@
         <name>~MemoryStreamWriter</name>
         <qualifiedname>AGE::MemoryStreamWriter::~MemoryStreamWriter</qualifiedname>
         <briefdescription>
+<para>Destructor for <ref refid="class_a_g_e_1_1_memory_stream_writer" kindref="compound">MemoryStreamWriter</ref> class. Clears the stream associated with this object. </para>
         </briefdescription>
         <detaileddescription>
+<para>Destructor for <ref refid="class_a_g_e_1_1_memory_stream_writer" kindref="compound">MemoryStreamWriter</ref> class. Clears the stream associated with this instance. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="188" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Private/DataWriter.cpp" bodystart="54" bodyend="57"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="377" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Private/DataWriter.cpp" bodystart="153" bodyend="156"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_memory_stream_writer_1a27d49d51f0b7a62ee1157664a00fe728" prot="public" static="no" const="yes" explicit="no" inline="yes" final="yes" virt="virtual">
         <type>bool</type>
@@ -91,12 +136,21 @@
         <qualifiedname>AGE::MemoryStreamWriter::IsStreamGood</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_data_writer_1ab2adde183d93b4ebd8f692512584dc72">IsStreamGood</reimplements>
         <briefdescription>
+<para>Checks the state of the stream object. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function checks whether the underlying input/output operations on the stream are good or not. It returns true if the stream is in a good state, false otherwise.</para>
+<para><simplesect kind="return"><para>True if the stream is in a good state, false otherwise.</para>
+</simplesect>
+Checks the state of the stream.</para>
+<para>This function checks whether the underlying stream is in a good state, i.e., it has no errors or failures that would prevent further operations on it.</para>
+<para><simplesect kind="return"><para>True if the stream is in a good state, false otherwise. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="190" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" bodystart="190" bodyend="190"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="394" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" bodystart="394" bodyend="394"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_memory_stream_writer_1a30d6ed960f71caf17f2825ec3a597954" prot="public" static="no" const="no" explicit="no" inline="yes" final="yes" virt="virtual">
         <type>uint64_t</type>
@@ -106,12 +160,21 @@
         <qualifiedname>AGE::MemoryStreamWriter::GetStreamPosition</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_data_writer_1a4bff8ad0e0762dc50d0ba96e66498f1b">GetStreamPosition</reimplements>
         <briefdescription>
+<para>Get the current position of the stream in bytes. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function retrieves the current position within a stream object, which is useful for determining how much data has been written to the stream so far. The return value is always non-negative and represents the number of characters successfully read from the stream buffer. If an error occurs during reading (e.g., end of file), it returns UINT64_MAX indicating failure.</para>
+<para><simplesect kind="return"><para>uint64_t Current position in bytes, or UINT64_MAX if there was an error.</para>
+</simplesect>
+Get the current position in the stream</para>
+<para>This function retrieves the current position within a stream. It returns this as an unsigned 64-bit integer. If the tellp() call fails, it will return UINT64_MAX to indicate failure.</para>
+<para><simplesect kind="return"><para>uint64_t The current position in the stream </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="192" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" bodystart="192" bodyend="204"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="410" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" bodystart="410" bodyend="422"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_memory_stream_writer_1a4cc0780e8096a0166dea3009dd3d554a" prot="public" static="no" const="no" explicit="no" inline="yes" final="yes" virt="virtual">
         <type>void</type>
@@ -125,12 +188,35 @@
           <declname>Pos</declname>
         </param>
         <briefdescription>
+<para>Sets the stream position to a specified value. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function sets the current read/write position in the stream to the provided position. The new position is calculated as an offset from the beginning of the file, which is given by the parameter &apos;Pos&apos;.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new position to set in the stream.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Sets the stream position to a specified value.</para>
+<para>This function sets the current read/write position in the stream to the provided position. The new position is calculated as an offset from the beginning of the file, measured in bytes.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired position in the stream, measured in bytes. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="205" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" bodystart="205" bodyend="205"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="439" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" bodystart="439" bodyend="439"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_memory_stream_writer_1a5d8584eb04ce18aaa54daa6910190b6d" prot="public" static="no" const="no" explicit="no" inline="no" final="yes" virt="virtual">
         <type>bool</type>
@@ -148,12 +234,55 @@
           <declname>Size</declname>
         </param>
         <briefdescription>
+<para>Writes data to the memory stream. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function writes a block of data of specified size into the memory stream. It takes in a pointer to the data and its size, then writes that data into the stream. The function returns true if the write operation is successful, false otherwise.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the data to be written. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the data to be written.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the write operation was successful, false otherwise.</para>
+</simplesect>
+Writes data to the memory stream.</para>
+<para>This function writes a block of data of a specified size into the memory stream. It takes in a pointer to the data and its size, then writes this data into the stream. The function returns true if the write operation is successful, false otherwise.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the data that needs to be written into the stream. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the data block in bytes.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the data was successfully written into the memory stream, false otherwise. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="206" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Private/DataWriter.cpp" bodystart="58" bodyend="67"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="440" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Private/DataWriter.cpp" bodystart="181" bodyend="190"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -184,7 +313,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="181" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" bodystart="182" bodyend="212"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="361" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" bodystart="362" bodyend="446"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_memory_stream_writer_1a30d6ed960f71caf17f2825ec3a597954" prot="public" virt="virtual"><scope>AGE::MemoryStreamWriter</scope><name>GetStreamPosition</name></member>
       <member refid="class_a_g_e_1_1_memory_stream_writer_1a27d49d51f0b7a62ee1157664a00fe728" prot="public" virt="virtual"><scope>AGE::MemoryStreamWriter</scope><name>IsStreamGood</name></member>

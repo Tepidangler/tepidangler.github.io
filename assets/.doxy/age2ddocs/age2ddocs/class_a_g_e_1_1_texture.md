@@ -67,7 +67,7 @@ Inherited by the following classes: [AGE::Texture2D](class_a_g_e_1_1_texture2_d.
 | virtual void | [**SetTextureFilePath**](#function-settexturefilepath) (const std::string & Path) = 0<br> |
 | virtual void | [**Unbind**](#function-unbind) () const = 0<br> |
 | virtual bool | [**operator==**](#function-operator) (const [**Texture**](class_a_g_e_1_1_texture.md) & Other) const = 0<br> |
-| virtual  | [**~Texture**](#function-texture) () <br> |
+| virtual  | [**~Texture**](#function-texture) () <br>_Virtual destructor for the_ [_**Texture**_](class_a_g_e_1_1_texture.md) _class._ |
 
 
 
@@ -311,12 +311,23 @@ virtual bool AGE::Texture::operator== (
 
 ### function ~Texture 
 
+_Virtual destructor for the_ [_**Texture**_](class_a_g_e_1_1_texture.md) _class._
 ```C++
 inline virtual AGE::Texture::~Texture () 
 ```
 
 
 
+This function is responsible for releasing any resources that were acquired by the [**Texture**](class_a_g_e_1_1_texture.md) object, such as memory or file handles. It does not return anything and thus has an empty return type (void).
+
+
+Virtual destructor for the [**Texture**](class_a_g_e_1_1_texture.md) class.
+
+
+This function is a virtual destructor that cleans up any resources used by an instance of the [**Texture**](class_a_g_e_1_1_texture.md) class. It does not take any parameters and returns nothing. 
+
+
+        
 
 <hr>
 

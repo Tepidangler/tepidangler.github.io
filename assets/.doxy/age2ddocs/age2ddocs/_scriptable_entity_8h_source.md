@@ -47,39 +47,63 @@ namespace AGE
     {
     public:
 
-        virtual ~ScriptableEntity() {};
+        vi
+rtual ~S
+criptableEntity() {};
 
-        virtual bool IsCharacter()
+        vi
+rtual bo
+ol IsCharacter()
         {
             return GetScriptableEntityType() == "Character";
         }
         template<typename T>
-        T& GetComponent()
+        T&
+ GetComponent()
         {
             return m_Entity.GetComponent<T>();
         }
 
         template<typename T, typename ... Args>
-        T& AddComponent(Args&& ... args)
+        T&
+ AddComponent(Args&& ... args)
         {
             return m_Entity.AddComponent<T>();
         }
 
-        virtual std::string GetScriptableEntityType() { return ""; }
+        vi
+rtual st
+d::string GetScriptableEntityType() { return ""; }
         virtual void OnEvent(Event& E) {};
-        virtual void OnOverlapStart() {}
-        virtual void OnOverlapStop() {}
-        virtual void OnHit() {}
+        vi
+rtual vo
+id OnOverlapStart() {}
+        vi
+rtual vo
+id OnOverlapStop() {}
+        vi
+rtual vo
+id OnHit() {}
 
         virtual void AddBeginPlayFunctions(AGEFunction< AGENode, ScriptableEntity> Func) {};
         virtual void AddTickFunctions(AGEFunction< AGENode, ScriptableEntity> Func) {};
 
         virtual void ClearFunctions() {};
-        virtual std::string GetName() { return ""; };
-        virtual Vector3 GetLocation() { return {}; }
-        virtual void SetLocation(const AGE::Vector3& Location) {}
+        vi
+rtual st
+d::string GetName() { return ""; };
+        viCOMMENT:
+CONFIDENCE: 1.0;
 
-        virtual UUID GetID() { return m_Entity.GetUUID(); }
+rt
+ual Vector3 GetLocation() { return {}; }
+        vi
+rtual vo
+id SetLocation(const AGE::Vector3& Location) {}
+
+        vi
+rtual UU
+ID GetID() { return m_Entity.GetUUID(); }
 
     protected:
         virtual void OnCreate() {};
@@ -87,7 +111,9 @@ namespace AGE
         virtual void OnDestroy() {};
         virtual void OnUpdate(TimeStep DeltaTime) {};
         virtual void Reset() {};
-        virtual Entity& GetEntityHandle() { return m_Entity; }
+        vi
+rtual En
+tity& GetEntityHandle() { return m_Entity; }
         virtual void PushComp();
 
     private:

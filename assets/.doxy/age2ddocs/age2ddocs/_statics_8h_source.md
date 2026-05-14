@@ -19,7 +19,7 @@ namespace AGE
         class EngineStatics
         {
         public:
-            static bool IsBigEndian(void)
+static bool IsBigEndian(void)
             {
                 union {
                     uint32_t i;
@@ -30,14 +30,14 @@ namespace AGE
             }
 
             template<typename T>
-            static bool IsBitSet(T Num, T Pos)
+static bool IsBitSet(T Num, T Pos)
             {
                 T Mask = 1 << Pos;
 
                 return (Num & Mask) != 0;
             }
 
-            static std::string GetFilename(std::filesystem::path& Name)
+static std::string GetFilename(std::filesystem::path& Name)
             {
                 return Name.replace_extension().filename().string();
             }

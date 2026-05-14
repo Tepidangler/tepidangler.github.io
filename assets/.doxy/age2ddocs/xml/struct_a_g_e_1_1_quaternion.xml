@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="352" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="352" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="1054" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="1054" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_a_g_e_1_1_quaternion_1a0040a05a0821764143da0d4503c68550" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="352" column="8" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="352" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="1054" column="8" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="1054" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_a_g_e_1_1_quaternion_1a08b2a2e533dfe8d29561c4f10a51bb52" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="352" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="352" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="1054" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="1054" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_a_g_e_1_1_quaternion_1a4aa9b89360ffdb34ad762b428fe60b1e" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="352" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="352" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="1054" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="1054" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -68,12 +68,18 @@
         <name>Quaternion</name>
         <qualifiedname>AGE::Quaternion::Quaternion</qualifiedname>
         <briefdescription>
+<para>Default constructor for the <ref refid="struct_a_g_e_1_1_quaternion" kindref="compound">Quaternion</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>Initializes a new instance of the <ref refid="struct_a_g_e_1_1_quaternion" kindref="compound">Quaternion</ref> class with all elements set to zero.</para>
+<para>Default constructor for the <ref refid="struct_a_g_e_1_1_quaternion" kindref="compound">Quaternion</ref> class. This function initializes a new instance of the <ref refid="struct_a_g_e_1_1_quaternion" kindref="compound">Quaternion</ref> class with all elements set to zero. The quaternion is initialized as the identity quaternion, which represents no rotation in 3D space.</para>
+<para><simplesect kind="return"><para>A default constructed <ref refid="struct_a_g_e_1_1_quaternion" kindref="compound">Quaternion</ref> object. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="354" column="1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="1068" column="1"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_quaternion_1aa0db4a95710d3dfc43834c7aadbfcc45" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -98,12 +104,83 @@
           <declname>s</declname>
         </param>
         <briefdescription>
+<para><ref refid="struct_a_g_e_1_1_quaternion" kindref="compound">Quaternion</ref> constructor. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is used to initialize a new instance of the <ref refid="struct_a_g_e_1_1_quaternion" kindref="compound">Quaternion</ref> class with four parameters representing the x, y, z and w components of the quaternion respectively.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value for the x component of the quaternion. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value for the y component of the quaternion. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value for the z component of the quaternion. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value for the w component of the quaternion.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<ref refid="struct_a_g_e_1_1_quaternion" kindref="compound">Quaternion</ref> constructor.</para>
+<para>This function initializes a new instance of the <ref refid="struct_a_g_e_1_1_quaternion" kindref="compound">Quaternion</ref> class with given values for x, y, z and w coordinates.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to initialize x coordinate. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to initialize y coordinate. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to initialize z coordinate. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to initialize w coordinate. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="356" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="356" bodyend="360"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="1090" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="1090" bodyend="1094"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_quaternion_1a5a167204fa61d184e4c263c2e87454fd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -120,12 +197,49 @@
           <declname>s</declname>
         </param>
         <briefdescription>
+<para>Constructs a <ref refid="struct_a_g_e_1_1_quaternion" kindref="compound">Quaternion</ref> from a <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> and a scalar value. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes in a <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> and a scalar, which are used to initialize the x, y, z coordinates of the <ref refid="struct_a_g_e_1_1_quaternion" kindref="compound">Quaternion</ref> and its w (scalar) component respectively.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input vector that will be used to set the x, y, and z components of the quaternion. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The scalar value that will be used to initialize the w component of the quaternion.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<ref refid="struct_a_g_e_1_1_quaternion" kindref="compound">Quaternion</ref> constructor that takes a <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> and a scalar as input parameters. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A const reference to a <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object representing the vector part of the quaternion. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The float value representing the scalar part of the quaternion. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="362" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="362" bodyend="366"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="1109" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="1109" bodyend="1113"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_quaternion_1abe36db4f80940e88d6f796989b0aafac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> &amp;</type>
@@ -137,12 +251,20 @@
           <type>void</type>
         </param>
         <briefdescription>
+<para>Returns a reference to the x component of the vector. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function returns a reference to the x component of the vector, which can be used for direct manipulation or read-only access. The returned value is reinterpreted as a <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref>&amp; object. <simplesect kind="return"><para>A reference to the x component of the vector.</para>
+</simplesect>
+Returns a reference to the first three elements of this vector.</para>
+<para>This function returns a reference to the first three elements of the vector. The returned object can be used for modifying these values directly, without needing to access them through other member functions or operators.</para>
+<para><simplesect kind="return"><para>A reference to the first three elements of the vector. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="368" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="368" bodyend="371"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="1128" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="1128" bodyend="1131"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_quaternion_1ab21ab429c46905b75d5f433db6a896c5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> &amp;</type>
@@ -154,12 +276,19 @@
           <type>void</type>
         </param>
         <briefdescription>
+<para>Returns a reference to the first three components of this vector. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function returns a reference to the first three components of the current vector object. The returned reference can be used for read-only access to these components, or for modifying them directly if desired. <simplesect kind="return"><para>A const reference to the first three components of the vector.</para>
+</simplesect>
+Returns a constant reference to the first three elements of the vector.</para>
+<para>This function returns a constant reference to the first three elements of the vector. It is used when you want to access these elements without modifying them, and it avoids unnecessary copying. The returned object should not be modified as it directly references internal data of this instance. <simplesect kind="return"><para>A constant reference to the first three elements of the vector. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="373" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="373" bodyend="376"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="1146" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="1146" bodyend="1149"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_quaternion_1a134a53270a56706353eb2d75ae7a38a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref></type>
@@ -171,12 +300,21 @@
           <type>void</type>
         </param>
         <briefdescription>
+<para>Calculates the rotation matrix associated with this quaternion. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function first calculates various intermediate values that are used in the calculation of the rotation matrix. These include products of the quaternion components and their squares. It then constructs a 3x3 <ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref> object using these calculated values to represent the rotation represented by the quaternion.</para>
+<para><simplesect kind="return"><para>A 3x3 <ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref> representing the rotation associated with this quaternion.</para>
+</simplesect>
+Computes the rotation matrix associated with this quaternion.</para>
+<para>The function calculates a 3D rotation matrix from the quaternion representation of a rotation. This is achieved by converting the quaternion to a 4x4 matrix, and then extracting the upper left 3x3 submatrix which represents the rotation.</para>
+<para><simplesect kind="return"><para>A <ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref> object representing the 3D rotation represented by this quaternion. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="378" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="493" bodyend="510"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="1151" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="1006" bodyend="1023"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_quaternion_1a5b885ba59211d590c90c1486534089b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -189,19 +327,31 @@
           <declname>m</declname>
         </param>
         <briefdescription>
+<para>Sets the orientation from a given rotation matrix. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function converts a 3x3 rotation matrix into a quaternion representation of an orientation. It uses a formula based on the trace of the input matrix to determine which calculation path to take (sum &gt; 0 or max element). The resulting quaternion is stored in this object for later use.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 3x3 rotation matrix. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="379" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="512" bodyend="556"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="1152" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="1033" bodyend="1077"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="350" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="351" bodyend="380"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="1052" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="1053" bodyend="1153"/>
     <listofallmembers>
       <member refid="struct_a_g_e_1_1_quaternion_1a134a53270a56706353eb2d75ae7a38a8" prot="public" virt="non-virtual"><scope>AGE::Quaternion</scope><name>GetRotationMatrix</name></member>
       <member refid="struct_a_g_e_1_1_quaternion_1abe36db4f80940e88d6f796989b0aafac" prot="public" virt="non-virtual"><scope>AGE::Quaternion</scope><name>GetVectorPart</name></member>

@@ -38,9 +38,9 @@ namespace AGE
         //Primitives
 
         //Quads
-        static void DrawQuad(const QuadProperties& Props);
-        static void DrawQuad(const Ref<Texture2D>& Texture, const QuadProperties& Props);
-        static void DrawQuad(const Ref<SubTexture2D>& Subtexture, const QuadProperties& Props);
+        static void DrawQuad(const QuadProperties Props);
+        static void DrawQuad(const Ref<Texture2D>& Texture, const QuadProperties Props);
+        static void DrawQuad(const Ref<SubTexture2D>& Subtexture, const QuadProperties Props);
 
         //Circles
         static void DrawCircle(const Matrix4D& Transform, const Vector4& Color, float Thickness = 1.f, float Fade = .005f, int EntityID = -1);
@@ -50,9 +50,10 @@ namespace AGE
         static void DrawRect(const Matrix4D& Transform, const Vector4& Color, int EntityID = -1);
 
         static void DrawSprite(SpriteRendererComponent& SRC);
+        static void DrawTile(const SpriteRendererComponent& SRC);
         static void DrawString(const StringProperties& Props);
 
-        static void DrawTileMap(const Ref<Tilemap>& Map, const TilemapProperties& Props);
+        static void DrawTileMapLayers(TileMapRendererComponent& TMRC, tmx_map* Map, std::vector<tmx_layer*> layers);
 
         static Statistics GetStats();
 
@@ -60,6 +61,9 @@ namespace AGE
         static void SetLineWidth(float Width);
 
     private:
+        static void DrawTileMapLayer(TileMapRendererComponent& TMRC, tmx_map* Map, tmx_layer* layer, int Depth);
+
+
         friend class AGEVideo;
     };
 }

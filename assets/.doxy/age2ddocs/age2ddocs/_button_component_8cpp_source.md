@@ -27,7 +27,7 @@ RTTR_REGISTRATION{
 
 namespace AGE
 {
-    ButtonComponent::ButtonComponent(const std::string& Name)
+ButtonComponent::ButtonComponent(const std::string& Name)
     {
         m_Name = Name;
         m_Type = UIComponentType::ButtonComponent;
@@ -36,7 +36,7 @@ namespace AGE
         };
     }
 
-    void ButtonComponent::DrawContent() {
+void ButtonComponent::DrawContent() {
         ImGui::Text("Box Properties");
         DrawVec3Control("Screen Position", m_BoxProperties.Position);
         DrawVec3Control("Screen Rotation", m_BoxProperties.Rotation);
@@ -44,7 +44,7 @@ namespace AGE
         ImGui::ColorEdit4("Box Color", &m_BoxProperties.TintColor.x);
     }
 
-    void ButtonComponent::OnUpdate(TimeStep DeltaTime) {
+void ButtonComponent::OnUpdate(TimeStep DeltaTime) {
         UIComponent::OnUpdate(DeltaTime);
 
         if (m_CompProperties.Visible)
@@ -56,7 +56,7 @@ namespace AGE
         }
     }
 
-    void ButtonComponent::OnEvent(Event &Event)
+void ButtonComponent::OnEvent(Event &Event)
     {
         AGE::EventDispatcher Dispatcher(Event);
 
@@ -69,7 +69,7 @@ namespace AGE
         }
     }
 
-    bool ButtonComponent::IsButtonHovered()
+bool ButtonComponent::IsButtonHovered()
     {
         Vector2 MousePos = App::Get().GetDeviceManager().GetWindow().GetMousePos();
         Vector2 FramebufferSize = App::Get().GetFramebufferSize();
@@ -79,7 +79,7 @@ namespace AGE
         && NormalizedMousePos.y > (m_Bounds[0].y - m_Bounds[1].y * .5f) && NormalizedMousePos.y < (m_Bounds[0].y + m_Bounds[1].y * .5f);
     }
 
-    bool ButtonComponent::OnKeyPressed(KeyPressedEvent &E)
+bool ButtonComponent::OnKeyPressed(KeyPressedEvent &E)
     {
         if (!m_CompProperties.Focused) {
             return false;
@@ -96,7 +96,7 @@ namespace AGE
         return false;
     }
 
-    bool ButtonComponent::OnClicked(MouseButtonPressedEvent &E)
+bool ButtonComponent::OnClicked(MouseButtonPressedEvent &E)
     {
         m_OnClick();
         return false;

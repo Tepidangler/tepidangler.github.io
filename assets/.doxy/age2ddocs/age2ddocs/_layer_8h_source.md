@@ -18,7 +18,9 @@
 
 namespace AGE
 {
-    class AGE_API Layer
+    
+
+class AGE_API Layer
     {
     public:
 
@@ -28,19 +30,19 @@ namespace AGE
 
         virtual void Init() {};
 
-        virtual void OnAttach() {}
+virtual void OnAttach() {}
         
-        virtual void OnDetach() {}
+virtual void OnDetach() {}
         
-        virtual void OnUpdate(TimeStep DeltaTime) {} 
+virtual void OnUpdate(TimeStep DeltaTime) {} 
 
-        virtual void OnImGuiRender(TimeStep DeltaTime) {}
+virtual void OnImGuiRender(TimeStep DeltaTime) {}
         
-        virtual void OnEvent(Event& Event) {}
+virtual void OnEvent(Event& Event) {}
 
         float GetTime();
 
-        inline const std::string& GetName() const { return m_DebugName; }
+inline const std::string& GetName() const { return m_DebugName; }
 
     protected:
         std::string m_DebugName;

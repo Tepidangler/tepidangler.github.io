@@ -65,7 +65,7 @@ namespace AGE
     {
     public:
         UIComponent(const std::string& Name);
-        virtual ~UIComponent() = default;
+virtual ~UIComponent() = default;
 
         virtual void OnUpdate(TimeStep DeltaTime) {};
 
@@ -73,16 +73,16 @@ namespace AGE
 
         virtual void CallSerialize(DataWriter* Serializer) = 0;
         virtual void CallDeserialize(DataReader* Serializer) = 0;
-        std::string& GetName() {return m_Name;};
-        UIProperties& GetProperties() {return m_CompProperties;};
-        UIComponentType::Value GetType() {return m_Type;}
+std::string& GetName() {return m_Name;};
+UIProperties& GetProperties() {return m_CompProperties;};
+UIComponentType::Value GetType() {return m_Type;}
         UIProperties m_CompProperties;
         std::string m_Name = "";
 
         static Ref<UIComponent> Create(const std::string& Name, UIComponentType Type);
         static void DrawVec3Control(const std::string& Label, Vector3& Values, float ResetValue = 0.f, float ColumnWidth = 100.f);
 
-        virtual void DrawFontSelectionComboBox(){}
+virtual void DrawFontSelectionComboBox(){}
         virtual void DrawContent() = 0;
 
         template<typename T>
@@ -92,7 +92,7 @@ namespace AGE
     protected:
         UIComponentType m_Type = UIComponentType::TextComponent;
 
-        UIComponent() = default;
+UIComponent() = default;
 
 
         friend struct Widget;

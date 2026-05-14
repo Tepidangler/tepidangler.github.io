@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/VerticalBoxComponent.h" line="32" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/VerticalBoxComponent.h" bodystart="32" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/VerticalBoxComponent.h" line="60" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/VerticalBoxComponent.h" bodystart="60" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -31,12 +31,35 @@
           <declname>Name</declname>
         </param>
         <briefdescription>
+<para>Constructs a <ref refid="class_a_g_e_1_1_vertical_box_component" kindref="compound">VerticalBoxComponent</ref> with the given name. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function initializes a new instance of <ref refid="class_a_g_e_1_1_vertical_box_component" kindref="compound">VerticalBoxComponent</ref> with the provided name and sets its type to VerticalBoxComponentType.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name for this component.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Constructs a <ref refid="class_a_g_e_1_1_vertical_box_component" kindref="compound">VerticalBoxComponent</ref> with the given name.</para>
+<para>This constructor initializes the component&apos;s name and type to represent a vertical box component. The name of the component is set by the parameter &apos;Name&apos;.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string representing the name of the component. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/VerticalBoxComponent.h" line="14" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/VerticalBoxComponent.cpp" bodystart="16" bodyend="19"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/VerticalBoxComponent.h" line="14" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/VerticalBoxComponent.cpp" bodystart="31" bodyend="34"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_vertical_box_component_1a63ea52ac2c3394e9185608681439fda5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -50,12 +73,35 @@
           <declname>DeltaTime</declname>
         </param>
         <briefdescription>
+<para>This function updates the component based on a time step. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function first calls the base class&apos;s <ref refid="class_a_g_e_1_1_vertical_box_component_1a63ea52ac2c3394e9185608681439fda5" kindref="member">OnUpdate()</ref> method with the provided delta time, which allows for any necessary cleanup or other tasks to be performed before the update process begins. It then continues with its own specific update logic.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>DeltaTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- A <ref refid="class_a_g_e_1_1_time_step" kindref="compound">TimeStep</ref> object representing the amount of time that has passed since the last frame.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This function updates the component based on a time step.</para>
+<para>The function first calls the OnUpdate method of its base class, <ref refid="class_a_g_e_1_1_u_i_component" kindref="compound">UIComponent</ref>, to handle any general updates that might be necessary. Then it performs any specific updates related to this <ref refid="class_a_g_e_1_1_vertical_box_component" kindref="compound">VerticalBoxComponent</ref> itself.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>DeltaTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The amount of time that has passed since the last update. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/VerticalBoxComponent.h" line="15" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/VerticalBoxComponent.cpp" bodystart="21" bodyend="24"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/VerticalBoxComponent.h" line="15" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/VerticalBoxComponent.cpp" bodystart="50" bodyend="53"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_vertical_box_component_1a07ef0a7b422bc31725a022409baace31" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -69,12 +115,35 @@
           <declname>Event</declname>
         </param>
         <briefdescription>
+<para>Handles an event of type <ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref> by updating the component&apos;s state accordingly. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes in a reference to an <ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref> object and processes it based on its type. The exact behavior depends on the specific implementation of this class, which is not specified here.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to the <ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref> object that needs to be processed.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Handles an event of type <ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref>.</para>
+<para>This function is responsible for processing the incoming events and updating the state of the <ref refid="class_a_g_e_1_1_vertical_box_component" kindref="compound">VerticalBoxComponent</ref> accordingly.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in"><ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The event to be processed. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/VerticalBoxComponent.h" line="16" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/VerticalBoxComponent.cpp" bodystart="26" bodyend="27"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/VerticalBoxComponent.h" line="16" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/VerticalBoxComponent.cpp" bodystart="69" bodyend="70"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_vertical_box_component_1a420612b19740aa5beaa7a24870b348c2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -88,12 +157,38 @@
           <declname>Serializer</declname>
         </param>
         <briefdescription>
+<para>This function serializes the <ref refid="class_a_g_e_1_1_vertical_box_component" kindref="compound">VerticalBoxComponent</ref> object. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function writes the current state of the <ref refid="class_a_g_e_1_1_vertical_box_component" kindref="compound">VerticalBoxComponent</ref> object to a <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref> instance, which can be used for further processing or storage.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Serializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref> instance that will handle the serialization process.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void No return value is expected as this function only writes data and does not return any result.</para>
+</simplesect>
+This function is used to serialize the <ref refid="class_a_g_e_1_1_vertical_box_component" kindref="compound">VerticalBoxComponent</ref> object.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Serializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to a <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref> object, which provides methods for writing data.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>None </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/VerticalBoxComponent.h" line="18" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/VerticalBoxComponent.h" bodystart="18" bodyend="21"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/VerticalBoxComponent.h" line="34" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/VerticalBoxComponent.h" bodystart="34" bodyend="37"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_vertical_box_component_1a0595b7cbcb0094e2740afc486bede4d8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -107,12 +202,33 @@
           <declname>Serializer</declname>
         </param>
         <briefdescription>
+<para>This function is used to deserialize data from a <ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref> object. It reads an object of type <ref refid="class_a_g_e_1_1_vertical_box_component" kindref="compound">VerticalBoxComponent</ref> using the provided serializer. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Serializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the <ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref> object that will be used for deserialization.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This function is used to deserialize data from a <ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref> object. It reads an object of type <ref refid="class_a_g_e_1_1_vertical_box_component" kindref="compound">VerticalBoxComponent</ref> into the current instance of the class.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Serializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the <ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref> object that contains the serialized data. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/VerticalBoxComponent.h" line="22" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/VerticalBoxComponent.h" bodystart="22" bodyend="25"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/VerticalBoxComponent.h" line="50" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/VerticalBoxComponent.h" bodystart="50" bodyend="53"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_vertical_box_component_1a9d414c55abb28cfa350adb6346bc2967" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -122,12 +238,21 @@
         <qualifiedname>AGE::VerticalBoxComponent::DrawContent</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_u_i_component_1ab7694d7df5410816a9fa16f17e4dbe42">DrawContent</reimplements>
         <briefdescription>
+<para>Draw the content of this component in a vertical layout. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is responsible for drawing the content of the component in a vertical layout, which means that it will draw all its child components one after another vertically. It does not handle any specific styling or positioning of these child components. These are handled by their respective Draw methods.</para>
+<para><simplesect kind="return"><para>void</para>
+</simplesect>
+Draw the content of this component in a vertical layout.</para>
+<para>This function draws the content of this component in a vertical layout, which means that all child components are drawn one after another vertically. The exact behavior depends on the specific implementation of the <ref refid="class_a_g_e_1_1_vertical_box_component" kindref="compound">VerticalBoxComponent</ref> class and its subclasses.</para>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/VerticalBoxComponent.h" line="26" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/VerticalBoxComponent.cpp" bodystart="29" bodyend="30"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/VerticalBoxComponent.h" line="54" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/VerticalBoxComponent.cpp" bodystart="88" bodyend="89"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -181,7 +306,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/VerticalBoxComponent.h" line="11" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/VerticalBoxComponent.h" bodystart="12" bodyend="33"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/VerticalBoxComponent.h" line="11" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/VerticalBoxComponent.h" bodystart="12" bodyend="61"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_u_i_component_1a98e1aaddee431d6b3b7ff6f5e5536de4" prot="public" virt="non-virtual"><scope>AGE::VerticalBoxComponent</scope><name>As</name></member>
       <member refid="class_a_g_e_1_1_u_i_component_1a3dfa8952db40b83e29831b76352fa8e5" prot="public" virt="non-virtual"><scope>AGE::VerticalBoxComponent</scope><name>As</name></member>

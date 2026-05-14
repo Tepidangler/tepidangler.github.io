@@ -93,19 +93,19 @@
 </tr>
 <tr>
 <td style="text-align: right;">uint64_t</td>
-<td style="text-align: left;"><a href="#function-getassetid"><strong>GetAssetID</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-getassetid"><strong>GetAssetID</strong></a> () const<br><em>Returns the Asset ID of the object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">Ref&lt; <a href="../class_a_g_e_1_1_texture2_d/"><strong>Texture2D</strong></a> &gt;</td>
-<td style="text-align: left;"><a href="#function-getatlastexture"><strong>GetAtlasTexture</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-getatlastexture"><strong>GetAtlasTexture</strong></a> () const<br><em>Returns the atlas texture reference.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">const std::string &amp;</td>
-<td style="text-align: left;"><a href="#function-getfontname"><strong>GetFontName</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-getfontname"><strong>GetFontName</strong></a> () const<br><em>Returns the name of the font used in this object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">const <a href="../struct_a_g_e_1_1_m_s_d_f_data/"><strong>MSDFData</strong></a> *</td>
-<td style="text-align: left;"><a href="#function-getmsdfdata"><strong>GetMSDFData</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-getmsdfdata"><strong>GetMSDFData</strong></a> () const<br><em>Retrieves the MSDF data associated with this object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
@@ -117,7 +117,7 @@
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-agefont"><strong>~AGEFont</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-agefont"><strong>~AGEFont</strong></a> () <br><em>Destructor for</em> <a href="./"><em><strong>AGEFont</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
@@ -132,7 +132,7 @@
 <tbody>
 <tr>
 <td style="text-align: right;">Ref&lt; <a href="./"><strong>AGEFont</strong></a> &gt;</td>
-<td style="text-align: left;"><a href="#function-getdefault"><strong>GetDefault</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getdefault"><strong>GetDefault</strong></a> () <br><em>Get the default font instance. If it doesn't exist, create a new one and register it in</em> <a href="../class_a_g_e_1_1_asset_manager/"><em><strong>AssetManager</strong></em></a> <em>.</em></td>
 </tr>
 </tbody>
 </table>
@@ -143,26 +143,51 @@
     bool LoadingDefault=false
 ) 
 </code></pre>
+<p>Constructor for <a href="./"><strong>AGEFont</strong></a> class. It loads a font from the given path and initializes <a href="../struct_a_g_e_1_1_m_s_d_f_data/"><strong>MSDFData</strong></a> object with it. The function checks if the provided file exists, initializes FreeType library, loads the font using FreeType, generates glyphs for each character in the charset, packs them into an atlas, applies edge coloring to them, creates a texture from the packed glyphs and caches it. If LoadingDefault is true, it saves the default fonts; otherwise, it saves the custom ones. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>FontPath</code> The filesystem path to the font file. </li>
+<li><code>LoadingDefault</code> Flag indicating whether we are loading default fonts or not. </li>
+</ul>
 <hr>
 
 <h3 id="function-getassetid">function GetAssetID</h3>
+<p><em>Returns the Asset ID of the object.</em> </p>
 <pre><code class="language-C++">inline uint64_t AGE::AGEFont::GetAssetID () const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>The unique identifier for this asset. </p>
 <hr>
 
 <h3 id="function-getatlastexture">function GetAtlasTexture</h3>
+<p><em>Returns the atlas texture reference.</em> </p>
 <pre><code class="language-C++">inline Ref&lt; Texture2D &gt; AGE::AGEFont::GetAtlasTexture () const
 </code></pre>
+<p>This function returns a constant reference to the atlas texture stored in the object. The returned reference can be used to access and manipulate the atlas texture data.</p>
+<p><strong>Returns:</strong></p>
+<p>A constant reference to the atlas texture.</p>
+<p>Returns the atlas texture reference. </p>
+<p><strong>Returns:</strong></p>
+<p>The atlas texture reference. </p>
 <hr>
 
 <h3 id="function-getfontname">function GetFontName</h3>
+<p><em>Returns the name of the font used in this object.</em> </p>
 <pre><code class="language-C++">inline const std::string &amp; AGE::AGEFont::GetFontName () const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A constant reference to a string containing the font name. </p>
 <hr>
 
 <h3 id="function-getmsdfdata">function GetMSDFData</h3>
+<p><em>Retrieves the MSDF data associated with this object.</em> </p>
 <pre><code class="language-C++">inline const MSDFData * AGE::AGEFont::GetMSDFData () const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A pointer to the MSDF data, or nullptr if no data is available.</p>
+<p>Returns the MSDF data associated with this object. </p>
+<p><strong>Returns:</strong></p>
+<p>Pointer to an immutable <a href="../struct_a_g_e_1_1_m_s_d_f_data/"><strong>MSDFData</strong></a> instance, or nullptr if no data is available. </p>
 <hr>
 
 <h3 id="function-loadfont">function LoadFont</h3>
@@ -178,13 +203,18 @@
 <hr>
 
 <h3 id="function-agefont_1">function ~AGEFont</h3>
+<p><em>Destructor for</em> <a href="./"><em><strong>AGEFont</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::AGEFont::~AGEFont () 
 </code></pre>
+<p>This function is responsible for releasing the memory allocated to the data member 'm_Data' which holds the font data. It does this by deleting the pointer, effectively freeing up the memory space it was using. </p>
 <hr>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
 <h3 id="function-getdefault">function GetDefault</h3>
+<p><em>Get the default font instance. If it doesn't exist, create a new one and register it in</em> <a href="../class_a_g_e_1_1_asset_manager/"><em><strong>AssetManager</strong></em></a> <em>.</em></p>
 <pre><code class="language-C++">static Ref&lt; AGEFont &gt; AGE::AGEFont::GetDefault () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>Ref&lt;AGEFont&gt; A reference to the default font instance. </p>
 <hr>
 
 <hr />

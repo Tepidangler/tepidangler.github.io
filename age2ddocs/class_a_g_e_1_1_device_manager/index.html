@@ -88,53 +88,72 @@
 <tbody>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-devicemanager"><strong>DeviceManager</strong></a> (AudioEngineType AudioEngine, bool UseXInput=false) <br></td>
+<td style="text-align: left;"><a href="#function-devicemanager"><strong>DeviceManager</strong></a> (AudioEngineType AudioEngine, bool UseXInput=false) <br><em>Constructs a</em> <a href="./"><em><strong>DeviceManager</strong></em></a> <em>object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"><a href="../class_a_g_e_1_1_audio_manager/"><strong>AudioManager</strong></a> &amp;</td>
-<td style="text-align: left;"><a href="#function-getaudiomanager"><strong>GetAudioManager</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getaudiomanager"><strong>GetAudioManager</strong></a> () <br><em>Returns a reference to the global instance of the</em> <a href="../class_a_g_e_1_1_audio_manager/"><em><strong>AudioManager</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"><a href="../class_a_g_e_1_1_a_g_e_window/"><strong>AGEWindow</strong></a> &amp;</td>
-<td style="text-align: left;"><a href="#function-getwindow"><strong>GetWindow</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getwindow"><strong>GetWindow</strong></a> () <br><em>Returns a reference to the main application window.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-updatewindow"><strong>UpdateWindow</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-updatewindow"><strong>UpdateWindow</strong></a> () <br><em>This function updates the window by calling OnUpdate method of m_Window object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual</td>
-<td style="text-align: left;"><a href="#function-devicemanager"><strong>~DeviceManager</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-devicemanager"><strong>~DeviceManager</strong></a> () = default<br><em>Virtual destructor for the</em> <a href="./"><em><strong>DeviceManager</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-devicemanager">function DeviceManager</h3>
+<p><em>Constructs a</em> <a href="./"><em><strong>DeviceManager</strong></em></a> <em>object.</em></p>
 <pre><code class="language-C++">AGE::DeviceManager::DeviceManager (
     AudioEngineType AudioEngine,
     bool UseXInput=false
 ) 
 </code></pre>
+<p>This constructor initializes the device manager with an audio engine type and a boolean flag indicating whether to use XInput or not. It creates an <a href="../class_a_g_e_1_1_a_g_e_window/"><strong>AGEWindow</strong></a>, <a href="../class_a_g_e_1_1_audio_manager/"><strong>AudioManager</strong></a>, and optionally an XInput instance based on the input parameters. The initialization is logged using CoreLogger::Info().</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><a href="../class_a_g_e_1_1_audio_engine/"><strong>AudioEngine</strong></a> The type of audio engine to be used by the device manager. </li>
+<li><code>UseXInput</code> A boolean flag indicating whether or not to use XInput. </li>
+</ul>
 <hr>
 
 <h3 id="function-getaudiomanager">function GetAudioManager</h3>
+<p><em>Returns a reference to the global instance of the</em> <a href="../class_a_g_e_1_1_audio_manager/"><em><strong>AudioManager</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">inline AudioManager &amp; AGE::DeviceManager::GetAudioManager () 
 </code></pre>
+<p>This function returns a reference to the globally accessible instance of the <a href="../class_a_g_e_1_1_audio_manager/"><strong>AudioManager</strong></a> class, which is used for managing audio in the application. The returned object can be used to interact with the audio system.</p>
+<p><strong>Returns:</strong></p>
+<p>Reference to the global <a href="../class_a_g_e_1_1_audio_manager/"><strong>AudioManager</strong></a> instance. </p>
 <hr>
 
 <h3 id="function-getwindow">function GetWindow</h3>
+<p><em>Returns a reference to the main application window.</em> </p>
 <pre><code class="language-C++">inline AGEWindow &amp; AGE::DeviceManager::GetWindow () 
 </code></pre>
+<p>This function returns a reference to the main application window, which is used throughout the program for various operations such as rendering and user input handling.</p>
+<p><strong>Returns:</strong></p>
+<p>A reference to the main application window (<a href="../class_a_g_e_1_1_a_g_e_window/"><strong>AGEWindow</strong></a>&amp;). </p>
 <hr>
 
 <h3 id="function-updatewindow">function UpdateWindow</h3>
+<p><em>This function updates the window by calling OnUpdate method of m_Window object.</em> </p>
 <pre><code class="language-C++">inline void AGE::DeviceManager::UpdateWindow () 
 </code></pre>
+<p>The function does not take any parameters and returns nothing. It directly calls the OnUpdate() method on the m_Window object, which presumably handles updating the window's content or properties based on some internal state. </p>
 <hr>
 
 <h3 id="function-devicemanager_1">function ~DeviceManager</h3>
+<p><em>Virtual destructor for the</em> <a href="./"><em><strong>DeviceManager</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">virtual AGE::DeviceManager::~DeviceManager () = default
 </code></pre>
+<p>This function is responsible for releasing any resources that were acquired by the <a href="./"><strong>DeviceManager</strong></a> instance, such as memory or file handles. It does not return anything and has no parameters. </p>
 <hr>
 
 <hr />

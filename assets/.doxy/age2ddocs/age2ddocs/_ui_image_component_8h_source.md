@@ -26,12 +26,12 @@ namespace AGE
 
         UIImageComponent(const std::string& Name);
 
-        virtual ~UIImageComponent() = default;
+virtual ~UIImageComponent() = default;
 
-        void CallSerialize(DataWriter* Serializer) override
+void CallSerialize(DataWriter* Serializer) override
         {
         }
-        void CallDeserialize(DataReader* Serializer) override
+void CallDeserialize(DataReader* Serializer) override
         {
         }
 

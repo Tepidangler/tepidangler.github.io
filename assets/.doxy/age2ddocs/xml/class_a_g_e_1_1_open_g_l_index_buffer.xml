@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="72" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" bodystart="72" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="91" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" bodystart="91" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_open_g_l_index_buffer_1a9eca287dc1548bdbaadc26d77755eba7" prot="private" static="no" mutable="no">
         <type>uint32_t</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="74" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" bodystart="74" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="93" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" bodystart="93" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -47,14 +47,53 @@
         <param>
           <type>uint32_t</type>
           <declname>Size</declname>
+          <defname>Count</defname>
         </param>
         <briefdescription>
+<para>Constructor for <ref refid="class_a_g_e_1_1_open_g_l_index_buffer" kindref="compound">OpenGLIndexBuffer</ref>. Creates an index buffer object and initializes it with the given indices. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Indices</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the array of indices that will be used to initialize the buffer. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of elements in the Indices array.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Constructs an <ref refid="class_a_g_e_1_1_open_g_l_index_buffer" kindref="compound">OpenGLIndexBuffer</ref> object.</para>
+<para>This function creates a new OpenGL index buffer and initializes it with the given indices. The number of indices is specified by the Count parameter.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Indices</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the array of indices that will be copied into the GPU memory. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of indices in the Indices array. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="56" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="184" bodyend="193"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="71" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="505" bodyend="514"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_index_buffer_1ae66659632d2bb569fe7a643f7d5eadbc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -63,12 +102,28 @@
         <name>~OpenGLIndexBuffer</name>
         <qualifiedname>AGE::OpenGLIndexBuffer::~OpenGLIndexBuffer</qualifiedname>
         <briefdescription>
+<para>Destructor for <ref refid="class_a_g_e_1_1_open_g_l_index_buffer" kindref="compound">OpenGLIndexBuffer</ref>. Deletes the buffer with ID m_RendererID using glDeleteBuffers function. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>None</para>
+</simplesect>
+Destructor for <ref refid="class_a_g_e_1_1_open_g_l_index_buffer" kindref="compound">OpenGLIndexBuffer</ref>. Deletes the buffer with ID m_RendererID using glDeleteBuffers function.</para>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="58" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="195" bodyend="200"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="73" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="527" bodyend="532"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_index_buffer_1a138cc7a9f465717436e70dd260615d69" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -78,12 +133,18 @@
         <qualifiedname>AGE::OpenGLIndexBuffer::Bind</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_index_buffer_1ae940c238a7a3ef8862c0f073645731d3">Bind</reimplements>
         <briefdescription>
+<para>This function binds the OpenGL Index <ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function uses glBindBuffer to bind the buffer with ID &apos;m_RendererID&apos; as an element array buffer (GL_ELEMENT_ARRAY_BUFFER). It is used for rendering of indexed primitives, such as triangles or lines, using vertices from a vertex array.</para>
+<para><simplesect kind="return"><para>void No return value.</para>
+</simplesect>
+This function binds the OpenGL Index <ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref>.</para>
+<para>It uses glBindBuffer to bind the buffer with target GL_ELEMENT_ARRAY_BUFFER and the ID of this buffer as argument. The purpose of binding an index buffer is to specify which vertex array object (VAO) should be used for rendering. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="62" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="201" bodyend="206"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="77" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="547" bodyend="552"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_index_buffer_1acd5a9c5e6106abc5db8bf4c2190fc415" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -93,12 +154,21 @@
         <qualifiedname>AGE::OpenGLIndexBuffer::Unbind</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_index_buffer_1af23ed3b2d3cf51b881675a8a9f3a3fb6">Unbind</reimplements>
         <briefdescription>
+<para>This function unbinds the OpenGL Element Array <ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para>It binds the buffer target to GL_ELEMENT_ARRAY_BUFFER and sets the buffer ID to 0, effectively unbinding it from the current context.</para>
+<para><simplesect kind="return"><para>void</para>
+</simplesect>
+This function unbinds the OpenGL Element Array <ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref>.</para>
+<para>It binds the buffer target to GL_ELEMENT_ARRAY_BUFFER and sets the buffer ID to 0, effectively unbinding it from any rendering operations that use this buffer.</para>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="64" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="207" bodyend="212"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="79" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="567" bodyend="572"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_index_buffer_1a8ccf8b01247bed24b4c79c76381875e0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -108,12 +178,21 @@
         <qualifiedname>AGE::OpenGLIndexBuffer::InvalidateBuffer</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_index_buffer_1af83fc80121c57972092be7c080ffa9a5">InvalidateBuffer</reimplements>
         <briefdescription>
+<para>Invalidates and deletes the OpenGL buffer. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function first invalidates any existing data in the buffer using glInvalidateBufferData(). Then it deletes the buffer itself with glDeleteBuffers(). The buffer&apos;s ID is passed to these functions, indicating which buffer should be affected.</para>
+<para><simplesect kind="return"><para>void</para>
+</simplesect>
+This function is used to invalidate the buffer data and delete the OpenGL index buffer.</para>
+<para>The function first calls glInvalidateBufferData() on the OpenGL context with the renderer ID of this object as an argument, which marks the buffer&apos;s data as needing update. Then it deletes the buffer using glDeleteBuffers(), passing in the same renderer ID to remove the buffer from memory.</para>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="66" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="213" bodyend="220"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="81" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="589" bodyend="596"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_index_buffer_1a9739427bfbdf2f3c3ca02a79680649f4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>uint32_t</type>
@@ -123,12 +202,16 @@
         <qualifiedname>AGE::OpenGLIndexBuffer::GetCount</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_index_buffer_1a5160c37fbb3241d51ddbf7d58f252c5a">GetCount</reimplements>
         <briefdescription>
+<para>This function returns the current count value. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>The current count value as a uint32_t. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="68" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" bodystart="68" bodyend="68"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="87" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" bodystart="87" bodyend="87"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -159,7 +242,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="53" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" bodystart="54" bodyend="76"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="68" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" bodystart="69" bodyend="95"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_index_buffer_1a4e052debe5fc619d08f10f81ddfbde90" prot="public" virt="non-virtual"><scope>AGE::OpenGLIndexBuffer</scope><name>As</name></member>
       <member refid="class_a_g_e_1_1_open_g_l_index_buffer_1a138cc7a9f465717436e70dd260615d69" prot="public" virt="virtual"><scope>AGE::OpenGLIndexBuffer</scope><name>Bind</name></member>

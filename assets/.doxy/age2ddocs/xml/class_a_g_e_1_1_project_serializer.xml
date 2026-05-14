@@ -30,12 +30,23 @@
           <declname>Project</declname>
         </param>
         <briefdescription>
+<para>Constructs a new instance of the <ref refid="class_a_g_e_1_1_project_serializer" kindref="compound">ProjectSerializer</ref> class with the given project reference. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_a_g_e_1_1_project" kindref="compound">Project</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The project to be serialized and stored in this object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Utils/Public/Serializers.h" line="23" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" bodystart="823" bodyend="827"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Utils/Public/Serializers.h" line="23" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" bodystart="1108" bodyend="1112"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_project_serializer_1af6ab326adb83b01106dfa0ea37b078c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -48,12 +59,26 @@
           <declname>FilePath</declname>
         </param>
         <briefdescription>
+<para>Serializes the project configuration and information into a YAML file. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function serializes the project&apos;s configuration and information into a YAML file at the specified path. The configuration includes details about the project such as its name, starting scene, asset directory, C++ namespace, copyright notice, audio engine used, renderer used, quest filepath, config filepath, and built scenes.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FilePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path to the YAML file where the serialized data will be written.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the serialization was successful, false otherwise. In this case, it always returns true as there are no exceptions that could cause a failure. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Utils/Public/Serializers.h" line="25" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" bodystart="828" bodyend="862"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Utils/Public/Serializers.h" line="25" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" bodystart="1123" bodyend="1157"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_project_serializer_1a2b9ee94ed86fb85cd7d27d22ad031f91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -71,7 +96,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Utils/Public/Serializers.h" line="26" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" bodystart="863" bodyend="935"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Utils/Public/Serializers.h" line="26" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" bodystart="1159" bodyend="1231"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_project_serializer_1a08c5e0e481d5d32922a5b54311185397" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -84,12 +109,26 @@
           <declname>FilePath</declname>
         </param>
         <briefdescription>
+<para>Deserializes a project from a YAML file. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function reads the contents of a YAML file and populates the internal configuration and info structures with data from the file. If the file cannot be loaded, an error message is logged and false is returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FilePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path to the YAML file containing project information. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the deserialization was successful, false otherwise. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Utils/Public/Serializers.h" line="27" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" bodystart="936" bodyend="980"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Utils/Public/Serializers.h" line="27" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" bodystart="1241" bodyend="1285"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_project_serializer_1a6e79c032bb2bc5aab7c6278533a62270" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -102,12 +141,26 @@
           <declname>FilePath</declname>
         </param>
         <briefdescription>
+<para>Deserializes a binary file into the project. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function attempts to deserialize a binary file located at the given path into the current project state. It returns true if the operation was successful, and false otherwise.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FilePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path of the binary file to be deserialized. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the binary file was successfully deserialized, false otherwise. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Utils/Public/Serializers.h" line="28" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" bodystart="981" bodyend="984"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Utils/Public/Serializers.h" line="28" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" bodystart="1294" bodyend="1297"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

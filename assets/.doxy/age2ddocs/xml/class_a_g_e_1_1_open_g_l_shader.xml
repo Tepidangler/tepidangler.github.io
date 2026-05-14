@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="50" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" bodystart="50" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="69" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" bodystart="69" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_open_g_l_shader_1a0096d42f5fc22108d55d5fe9eab65ce5" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="51" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" bodystart="51" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="70" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" bodystart="70" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -45,12 +45,32 @@
           <declname>FilePath</declname>
         </param>
         <briefdescription>
+<para>Constructs an <ref refid="class_a_g_e_1_1_open_g_l_shader" kindref="compound">OpenGLShader</ref> object from a file path. </para>
         </briefdescription>
         <detaileddescription>
+<para>Constructor for <ref refid="class_a_g_e_1_1_open_g_l_shader" kindref="compound">OpenGLShader</ref> class. It takes a file path as input and reads the shader source code from it. The source code is then preprocessed and compiled into separate shaders. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FilePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string representing the file path of the shader source code. This should be in the format &quot;Assets/Shaders/Something.vsfs&quot;. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This constructor reads and preprocesses the shader source code, compiles each type of shader, links them together, and extracts the name of the shader from the file path. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FilePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path to the shader source code file. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="13" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="30" bodyend="44"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="13" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="56" bodyend="70"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1ac14dbe38c049032cd80246d7a41a4c01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -67,12 +87,50 @@
           <declname>FragmentSrcPath</declname>
         </param>
         <briefdescription>
+<para>Constructor for <ref refid="class_a_g_e_1_1_open_g_l_shader" kindref="compound">OpenGLShader</ref> class. Initializes an instance by reading shader sources from files specified by their paths, compiling them into a program that can be used in OpenGL rendering, and assigning a name derived from the input paths. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>VertexSrcPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path to the vertex shader source file. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FragmentSrcPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path to the fragment shader source file.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Constructor for <ref refid="class_a_g_e_1_1_open_g_l_shader" kindref="compound">OpenGLShader</ref> class.</para>
+<para>This constructor takes in two strings representing the file paths of vertex and fragment shaders respectively. It reads these files into an unordered map with keys GL_VERTEX_SHADER and GL_FRAGMENT_SHADER, then compiles them using the Compile function. The name of the shader is extracted from the input file path and stored in m_ShaderName.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>VertexSrcPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File path to vertex shader source code. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FragmentSrcPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File path to fragment shader source code. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="14" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="46" bodyend="61"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="14" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="87" bodyend="102"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1a865ffbd35489f1c7db14e6dfcc1eda15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -93,12 +151,67 @@
           <declname>FragmentSrc</declname>
         </param>
         <briefdescription>
+<para>Constructs an <ref refid="class_a_g_e_1_1_open_g_l_shader" kindref="compound">OpenGLShader</ref> object with the given name, vertex source code and fragment source code. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function initializes an instance of <ref refid="class_a_g_e_1_1_open_g_l_shader" kindref="compound">OpenGLShader</ref> with a specified name and shader sources for both vertex and fragment stages. The sources are passed as strings to the Compile method which handles the actual compilation process.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the shader program. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>VertexSrc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string containing the source code for the vertex shader stage. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FragmentSrc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string containing the source code for the fragment shader stage.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Constructs an <ref refid="class_a_g_e_1_1_open_g_l_shader" kindref="compound">OpenGLShader</ref> object with the given name, vertex source code and fragment source code.</para>
+<para>This function initializes an instance of <ref refid="class_a_g_e_1_1_open_g_l_shader" kindref="compound">OpenGLShader</ref> by setting its shader name to the provided name, and compiling both a vertex and a fragment shader from the provided source codes. The sources are expected to be strings containing GLSL (OpenGL Shading Language) code.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the shader program. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>VertexSrc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string containing the GLSL code for the vertex shader. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FragmentSrc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string containing the GLSL code for the fragment shader. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="15" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="62" bodyend="70"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="15" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="122" bodyend="130"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1a41e3e5c6616a0bbf290f324a30d66981" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -107,12 +220,16 @@
         <name>~OpenGLShader</name>
         <qualifiedname>AGE::OpenGLShader::~OpenGLShader</qualifiedname>
         <briefdescription>
+<para>Destructor for the <ref refid="class_a_g_e_1_1_open_g_l_shader" kindref="compound">OpenGLShader</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function deletes a shader program from the GPU using glDeleteProgram(). The ID of the shader program to delete is stored in m_RendererID.</para>
+<para>Destructor for the <ref refid="class_a_g_e_1_1_open_g_l_shader" kindref="compound">OpenGLShader</ref> class.</para>
+<para>This function deletes a shader program from the GPU using glDeleteProgram(). The ID of the shader program to delete is stored in m_RendererID. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="17" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="72" bodyend="76"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="17" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="142" bodyend="146"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1aff1aa85f0941852547e964ec51071a0a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -122,12 +239,16 @@
         <qualifiedname>AGE::OpenGLShader::Bind</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_shader_1a3ef78a4e4184937f699a55f8fb125846">Bind</reimplements>
         <briefdescription>
+<para>This function binds the OpenGL shader program. </para>
         </briefdescription>
         <detaileddescription>
+<para>It uses the <computeroutput>glUseProgram</computeroutput> function to bind the shader program with the given renderer ID. The function does not return any value, so it is a void function.</para>
+<para>This function binds the OpenGL shader program.</para>
+<para>It uses the glUseProgram function to bind this shader program, setting it as the current active program in the OpenGL context. The m_RendererID member variable is used as an argument for this function call. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="19" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="77" bodyend="81"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="19" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="158" bodyend="164"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1a29d0e49b8ad6ec8624a094653cd523f8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -137,20 +258,26 @@
         <qualifiedname>AGE::OpenGLShader::Unbind</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_shader_1a6d1b6f97a2cb68484b7f9193733e99d7">Unbind</reimplements>
         <briefdescription>
+<para>This function unbinds the current shader program from use, setting the context to that of the default OpenGL state. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>void</para>
+</simplesect>
+This function unbinds the current shader program from use by binding to 0 (the null program). <simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="20" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="82" bodyend="85"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="20" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="174" bodyend="177"/>
       </memberdef>
-      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1a6a99dcca672a594d95d6f29aac64fdfc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1a8915abe382b28384a6b2b1866a6192ee" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>void AGE::OpenGLShader::SetFloat</definition>
-        <argsstring>(const char *Name, float Values, float *ValuePtr=nullptr, int Count=2) const override</argsstring>
+        <argsstring>(const char *Name, float Values) const override</argsstring>
         <name>SetFloat</name>
         <qualifiedname>AGE::OpenGLShader::SetFloat</qualifiedname>
-        <reimplements refid="class_a_g_e_1_1_shader_1af4fc6bbabaa96c171a91a4a5ea5c7c49">SetFloat</reimplements>
+        <reimplements refid="class_a_g_e_1_1_shader_1acea03c03a543948d0572481a320cfdb4">SetFloat</reimplements>
         <param>
           <type>const char *</type>
           <declname>Name</declname>
@@ -159,31 +286,61 @@
           <type>float</type>
           <declname>Values</declname>
         </param>
-        <param>
-          <type>float *</type>
-          <declname>ValuePtr</declname>
-          <defval>nullptr</defval>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>Count</declname>
-          <defval>2</defval>
-        </param>
         <briefdescription>
+<para>This function sets a single floating-point value with the given name. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the float variable to set. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new value for the float variable.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>None</para>
+</simplesect>
+This function sets a single floating-point value with the given name. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the float variable to set. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new value for the float variable. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="22" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="87" bodyend="91"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="22" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="192" bodyend="196"/>
       </memberdef>
-      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1a29b8e908babdab23056a1172828131c0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1acd6532d8c117b9e792013b4bb570ac2c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>void AGE::OpenGLShader::SetFloat2</definition>
-        <argsstring>(const char *Name, const Vector2 &amp;Values, const Vector2 *ValuePtr=nullptr, int Count=2) const override</argsstring>
+        <argsstring>(const char *Name, const Vector2 &amp;Values) const override</argsstring>
         <name>SetFloat2</name>
         <qualifiedname>AGE::OpenGLShader::SetFloat2</qualifiedname>
-        <reimplements refid="class_a_g_e_1_1_shader_1a770fc5d04d514fd1c323c7d80694544b">SetFloat2</reimplements>
+        <reimplements refid="class_a_g_e_1_1_shader_1a7824fbebbe1091877ff768ed554f31dc">SetFloat2</reimplements>
         <param>
           <type>const char *</type>
           <declname>Name</declname>
@@ -192,31 +349,62 @@
           <type>const <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> &amp;</type>
           <declname>Values</declname>
         </param>
-        <param>
-          <type>const <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> *</type>
-          <declname>ValuePtr</declname>
-          <defval>nullptr</defval>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>Count</declname>
-          <defval>2</defval>
-        </param>
         <briefdescription>
+<para>This function sets a float vector of two elements with the given name. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the uniform variable to set. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> object containing the values to be set for the uniform variable.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void</para>
+</simplesect>
+This function sets a float vector of two elements with the given name.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the uniform variable to set. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> object containing the values to be set for the uniform variable.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="23" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="93" bodyend="97"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="23" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="213" bodyend="217"/>
       </memberdef>
-      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1a73349f695713a74a86981d4c17fcfd1f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1a6b14d462f84d3b109b30d51c663fe574" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>void AGE::OpenGLShader::SetFloat3</definition>
-        <argsstring>(const char *Name, const Vector3 &amp;Values, const Vector3 *ValuePtr=nullptr, int Count=2) const override</argsstring>
+        <argsstring>(const char *Name, const Vector3 &amp;Values) const override</argsstring>
         <name>SetFloat3</name>
         <qualifiedname>AGE::OpenGLShader::SetFloat3</qualifiedname>
-        <reimplements refid="class_a_g_e_1_1_shader_1a1bb27b5fbc9e85ce9a597aa944681803">SetFloat3</reimplements>
+        <reimplements refid="class_a_g_e_1_1_shader_1a3ab54b29fb7f2e3064af7af09e6cd15f">SetFloat3</reimplements>
         <param>
           <type>const char *</type>
           <declname>Name</declname>
@@ -225,56 +413,118 @@
           <type>const <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> &amp;</type>
           <declname>Values</declname>
         </param>
-        <param>
-          <type>const <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> *</type>
-          <declname>ValuePtr</declname>
-          <defval>nullptr</defval>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>Count</declname>
-          <defval>2</defval>
-        </param>
         <briefdescription>
+<para>This function sets a float vector in the <ref refid="class_a_g_e_1_1_open_g_l_shader" kindref="compound">OpenGLShader</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the uniform variable to set. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> value to be uploaded.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void</para>
+</simplesect>
+This function sets a float vector of length 3.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the uniform variable to set. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object containing the new values for the uniform variable.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="24" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="99" bodyend="103"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="24" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="234" bodyend="238"/>
       </memberdef>
-      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1a014c0eb079509c74c6d25db090174f30" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1ad520acc15fdc4b7b2211d46d46671e1a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>void AGE::OpenGLShader::SetFloat4</definition>
-        <argsstring>(const char *Name, const Vector4 &amp;Value, const Vector4 *ValuePtr=nullptr, int Count=2) const override</argsstring>
+        <argsstring>(const char *Name, const Vector4 Value) const override</argsstring>
         <name>SetFloat4</name>
         <qualifiedname>AGE::OpenGLShader::SetFloat4</qualifiedname>
-        <reimplements refid="class_a_g_e_1_1_shader_1a78fb6fd86cce4b4d42a21806b20a967d">SetFloat4</reimplements>
+        <reimplements refid="class_a_g_e_1_1_shader_1ad9056db839a3d27d682034fea746563f">SetFloat4</reimplements>
         <param>
           <type>const char *</type>
           <declname>Name</declname>
         </param>
         <param>
-          <type>const <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> &amp;</type>
+          <type>const <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref></type>
           <declname>Value</declname>
         </param>
-        <param>
-          <type>const <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> *</type>
-          <declname>ValuePtr</declname>
-          <defval>nullptr</defval>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>Count</declname>
-          <defval>2</defval>
-        </param>
         <briefdescription>
+<para>This function sets a float vector of size 4 by name. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the uniform variable to set. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> value to be set.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void</para>
+</simplesect>
+This function sets a float vector of size 4 in the <ref refid="class_a_g_e_1_1_open_g_l_shader" kindref="compound">OpenGLShader</ref> object.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the uniform variable to set. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> value to be set for the uniform variable.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="25" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="105" bodyend="109"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="25" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="255" bodyend="259"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1a2f7d9ee7caccf482346d7ab92be1b819" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -292,35 +542,117 @@
           <declname>Matrix</declname>
         </param>
         <briefdescription>
+<para>This function sets a 3x3 matrix with the given name. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the uniform variable to set in the shader program. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Matrix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 3x3 matrix to be uploaded.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void</para>
+</simplesect>
+This function sets a 3x3 matrix with the given name and value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the uniform variable to set in the shader program. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Matrix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 3x3 matrix to be uploaded.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="26" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="116" bodyend="120"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="26" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="276" bodyend="280"/>
       </memberdef>
-      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1affa41bc5d9d8fdd81092d2cf6c8c4660" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1a0f9379d1becc6ab976fd32f16a8989d8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>void AGE::OpenGLShader::SetMat4</definition>
-        <argsstring>(const char *Name, const Matrix4D &amp;Matrix) const override</argsstring>
+        <argsstring>(const char *Name, const Matrix4D Matrix) const override</argsstring>
         <name>SetMat4</name>
         <qualifiedname>AGE::OpenGLShader::SetMat4</qualifiedname>
-        <reimplements refid="class_a_g_e_1_1_shader_1ad7e0badd8936c8e056f6df639d7c146b">SetMat4</reimplements>
+        <reimplements refid="class_a_g_e_1_1_shader_1a1cc6e0a771715f009e659240a18ad955">SetMat4</reimplements>
         <param>
           <type>const char *</type>
           <declname>Name</declname>
         </param>
         <param>
-          <type>const <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> &amp;</type>
+          <type>const <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref></type>
           <declname>Matrix</declname>
         </param>
         <briefdescription>
+<para>Set a 4x4 matrix uniform in the shader. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function sets a 4x4 matrix uniform with the given name and value in the <ref refid="class_a_g_e_1_1_open_g_l_shader" kindref="compound">OpenGLShader</ref> object. The matrix is uploaded to the GPU for use by the shaders.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the uniform variable to set. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Matrix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 4x4 matrix to upload.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void</para>
+</simplesect>
+This function sets a matrix of type <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> with the given name. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the uniform variable to set in the shader program. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Matrix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> object that will be uploaded to the GPU. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="27" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="111" bodyend="115"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="27" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="297" bodyend="301"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1ac2294fd8f640fb6ebd395a0a608f4f29" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -349,32 +681,109 @@
           <defval>2</defval>
         </param>
         <briefdescription>
+<para>This function sets an integer uniform in the <ref refid="class_a_g_e_1_1_open_g_l_shader" kindref="compound">OpenGLShader</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the uniform to set. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_a_g_e_1_1_texture" kindref="compound">Texture</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The texture unit number to bind to the uniform. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TexturePtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to array of texture units to bind to the uniform. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of elements in the TexturePtr array.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void</para>
+</simplesect>
+This function sets an integer uniform in the OpenGL shader.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the uniform variable to set. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_a_g_e_1_1_texture" kindref="compound">Texture</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The texture unit number to bind. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TexturePtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the array of texture units to bind. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of elements in the TexturePtr array. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="28" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="121" bodyend="125"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="28" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="320" bodyend="324"/>
       </memberdef>
-      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1a1fc3fd48fb344bf5dda2f3d93345a861" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1a87a327e9b0031ce25af88182363d2a7b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type>const std::string &amp;</type>
-        <definition>const std::string &amp; AGE::OpenGLShader::GetShaderName</definition>
+        <definition>virtual const std::string &amp; AGE::OpenGLShader::GetShaderName</definition>
         <argsstring>() const override</argsstring>
         <name>GetShaderName</name>
         <qualifiedname>AGE::OpenGLShader::GetShaderName</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_shader_1a4d0077713225811ccbffac4945e51bbb">GetShaderName</reimplements>
         <briefdescription>
+<para>Returns the name of the shader. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>A constant reference to a string containing the name of the shader.</para>
+</simplesect>
+Returns the name of the shader. <simplesect kind="return"><para>A constant reference to a string containing the name of the shader. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="30" column="19" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" bodystart="30" bodyend="30"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="38" column="27" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" bodystart="38" bodyend="38"/>
       </memberdef>
-      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1ac56fa9bc272ca73c1c471a4dbf429e8e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1a30c6ffe6e9c3d2a39adb3464febc38e4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void AGE::OpenGLShader::UploadFloat</definition>
-        <argsstring>(const char *Name, float Values, float *ValuePtr=nullptr, int Count=2) const</argsstring>
+        <argsstring>(const char *Name, float Values) const</argsstring>
         <name>UploadFloat</name>
         <qualifiedname>AGE::OpenGLShader::UploadFloat</qualifiedname>
         <param>
@@ -385,28 +794,59 @@
           <type>float</type>
           <declname>Values</declname>
         </param>
-        <param>
-          <type>float *</type>
-          <declname>ValuePtr</declname>
-          <defval>nullptr</defval>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>Count</declname>
-          <defval>2</defval>
-        </param>
         <briefdescription>
+<para>Uploads a single floating-point value to the GPU. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function uploads a single float value to the GPU using OpenGL&apos;s glUniform1f function. It does this by first obtaining the location of the uniform variable in the shader program with glGetUniformLocation, and then passing that location along with the float value to be uploaded to the GPU.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the uniform variable in the shader program. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The single floating-point value to upload to the GPU.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void</para>
+</simplesect>
+Uploads a single floating-point value to the GPU.</para>
+<para>This function uploads a single float value to the GPU using OpenGL&apos;s glUniform1f function. The location of the uniform variable is determined by calling glGetUniformLocation with the shader program and the name of the uniform variable as arguments.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string representing the name of the uniform variable in the shader program. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The float value to be uploaded to the GPU. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="32" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="127" bodyend="135"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="40" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="343" bodyend="346"/>
       </memberdef>
-      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1ad6abf900f2f67dea0f60597ceda1376e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1a8992e7949ee17700182af8b9c8fbdaa3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void AGE::OpenGLShader::UploadFloat2</definition>
-        <argsstring>(const char *Name, const Vector2 &amp;Values, const Vector2 *ValuePtr=nullptr, int Count=2) const</argsstring>
+        <argsstring>(const char *Name, const Vector2 &amp;Values) const</argsstring>
         <name>UploadFloat2</name>
         <qualifiedname>AGE::OpenGLShader::UploadFloat2</qualifiedname>
         <param>
@@ -417,28 +857,57 @@
           <type>const <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> &amp;</type>
           <declname>Values</declname>
         </param>
-        <param>
-          <type>const <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> *</type>
-          <declname>ValuePtr</declname>
-          <defval>nullptr</defval>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>Count</declname>
-          <defval>2</defval>
-        </param>
         <briefdescription>
+<para>Uploads a 2D float vector to the GPU. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function uploads a 2D float vector to the GPU using OpenGL&apos;s glUniform2f and glGetUniformLocation functions. The uniform location is determined by the provided name, which should correspond to an existing uniform in the shader program.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string representing the name of the uniform variable in the shader program. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> object containing the 2D float values to be uploaded.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Uploads a 2-component float vector to the GPU.</para>
+<para>This function uploads a two component floating point vector to the GPU at the location specified by Name. The values of the vector are passed as separate arguments, Values[0] and Values[1].</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the uniform variable in the shader program. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A 2-component float vector containing the new value for the uniform variable. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="33" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="137" bodyend="145"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="41" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="363" bodyend="366"/>
       </memberdef>
-      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1aba0453d8e3a7a8d4e00711fcbbd9f2de" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1a1e541b19dc69af5ed224740f53ba4b54" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void AGE::OpenGLShader::UploadFloat3</definition>
-        <argsstring>(const char *Name, const Vector3 &amp;Values, const Vector3 *ValuePtr=nullptr, int Count=2) const</argsstring>
+        <argsstring>(const char *Name, const Vector3 &amp;Values) const</argsstring>
         <name>UploadFloat3</name>
         <qualifiedname>AGE::OpenGLShader::UploadFloat3</qualifiedname>
         <param>
@@ -449,28 +918,57 @@
           <type>const <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> &amp;</type>
           <declname>Values</declname>
         </param>
-        <param>
-          <type>const <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> *</type>
-          <declname>ValuePtr</declname>
-          <defval>nullptr</defval>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>Count</declname>
-          <defval>2</defval>
-        </param>
         <briefdescription>
+<para>Uploads a 3-component float vector to the GPU. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function uploads a three component floating point vector to the GPU, which can be used for various shader operations such as light positioning or material properties. The uniform location is obtained using the provided name and uploaded to the GPU using <computeroutput>glUniform3f</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string representing the name of the uniform variable in the shader program. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A 3-component floating point vector containing the values to be uploaded.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Uploads a 3-component floating point vector to the GPU.</para>
+<para>This function uploads a three component floating point vector to the GPU, which can be used for various shader operations such as light positioning or material properties.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the uniform variable in the shader program. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A 3-component floating point vector containing the values to upload. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="34" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="147" bodyend="155"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="42" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="383" bodyend="386"/>
       </memberdef>
-      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1ab7f8ddf177069314b5071336f5dded8c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1a028775d88d8f1acc650351c57e826084" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void AGE::OpenGLShader::UploadFloat4</definition>
-        <argsstring>(const char *Name, const Vector4 &amp;Value, const Vector4 *ValuePtr=nullptr, int Count=2) const</argsstring>
+        <argsstring>(const char *Name, const Vector4 &amp;Values) const</argsstring>
         <name>UploadFloat4</name>
         <qualifiedname>AGE::OpenGLShader::UploadFloat4</qualifiedname>
         <param>
@@ -479,25 +977,54 @@
         </param>
         <param>
           <type>const <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> &amp;</type>
-          <declname>Value</declname>
-        </param>
-        <param>
-          <type>const <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> *</type>
-          <declname>ValuePtr</declname>
-          <defval>nullptr</defval>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>Count</declname>
-          <defval>2</defval>
+          <declname>Values</declname>
         </param>
         <briefdescription>
+<para>Uploads a 4-component vector to the GPU. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function uploads a 4-component vector (represented by a <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object) to the GPU, using OpenGL&apos;s glUniform4f function. The location of the uniform variable on the GPU is determined by the provided name string.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to a null-terminated string representing the name of the uniform variable in the shader program. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A constant reference to a <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object containing the 4 components of the vector to be uploaded.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Uploads a 4-component vector to the GPU as a uniform variable.</para>
+<para>This function uploads a 4-component vector (x, y, z, w) to the GPU as a uniform variable with the specified name. The location of this uniform is obtained using <computeroutput>glGetUniformLocation</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string representing the name of the uniform variable on the GPU. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A 4-component vector containing the values to be uploaded. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="35" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="157" bodyend="165"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="43" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="403" bodyend="407"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1aa316d39c9742ae3fd0d489e29ec2f96e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -514,12 +1041,51 @@
           <declname>Matrix</declname>
         </param>
         <briefdescription>
+<para>Uploads a 3x3 matrix to the GPU shader program. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function uploads a 3x3 matrix to the GPU shader program using OpenGL&apos;s glUniformMatrix3fv function. The location of the uniform variable in the shader is determined by calling glGetUniformLocation with the name of the uniform and the ID of the shader program.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string representing the name of the uniform variable in the shader program. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Matrix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A 3x3 matrix to be uploaded to the GPU.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Uploads a 3x3 matrix to the GPU shader program.</para>
+<para>This function uploads a 3x3 matrix to the GPU shader program using OpenGL&apos;s glUniformMatrix3fv function. The location of the uniform variable in the shader program is obtained by calling glGetUniformLocation with the name of the uniform and the ID of the shader program.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string representing the name of the uniform variable in the shader program. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Matrix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A 3x3 matrix to be uploaded to the GPU. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="36" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="166" bodyend="170"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="44" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="424" bodyend="428"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1a27b5a67cdcf00aa06961c0bfdfca5e82" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -536,12 +1102,51 @@
           <declname>Matrix</declname>
         </param>
         <briefdescription>
+<para>Uploads a <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> to the OpenGL shader. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function uploads a <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> to an OpenGL shader by first getting the location of the uniform variable in the shader using glGetUniformLocation, then passing the matrix data to this location with glUniformMatrix4fv.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the uniform variable in the shader. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Matrix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> to be uploaded.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Uploads a <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> to the OpenGL shader.</para>
+<para>This function uploads a <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> to an OpenGL shader by first getting the uniform location of the variable in the shader, and then using glUniformMatrix4fv to set the value of that variable. The matrix is uploaded as a raw float array.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> variable in the shader. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Matrix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> to be uploaded. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="37" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="171" bodyend="188"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="45" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="446" bodyend="463"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1abf88867619db1095d4436b2e22d81c01" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -569,12 +1174,82 @@
           <defval>2</defval>
         </param>
         <briefdescription>
+<para>Uploads an integer uniform to the OpenGL shader. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function uploads a single integer or an array of integers as a uniform variable in the OpenGL shader program. It first checks if the <computeroutput>TexturePtr</computeroutput> parameter is not null, and if so, it uses <computeroutput>glUniform1iv()</computeroutput> to set the uniform value using the pointer to the data. If <computeroutput>TexturePtr</computeroutput> is null, it simply sets the single integer uniform with <computeroutput>glUniform1i()</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the uniform variable in the shader program. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_a_g_e_1_1_texture" kindref="compound">Texture</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A single integer value to be uploaded as a uniform. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TexturePtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to an array of integers to be uploaded as uniforms. If this is null, <computeroutput><ref refid="class_a_g_e_1_1_texture" kindref="compound">Texture</ref></computeroutput> will be used instead. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of elements in the <computeroutput>TexturePtr</computeroutput> array if it&apos;s not null. This parameter is ignored if <computeroutput>TexturePtr</computeroutput> is null.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Uploads an integer uniform to the OpenGL shader.</para>
+<para>This function uploads a single integer or an array of integers to the specified uniform variable in the OpenGL shader. The location of the uniform is determined by its name, which must be valid and existent within the shader program. If TexturePtr is not null, it will use glUniform1iv to upload Count number of integer values from TexturePtr array. Otherwise, it will simply upload a single integer value using glUniform1i. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the uniform variable in the shader program. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_a_g_e_1_1_texture" kindref="compound">Texture</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A single integer value to be uploaded. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TexturePtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to an array of integers to be uploaded. If this is null, only a single integer will be uploaded. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of elements in the TexturePtr array if it&apos;s not null. This parameter has no effect if TexturePtr is null. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="38" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="190" bodyend="198"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="46" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="487" bodyend="495"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1aa14f0741247841eedd616e970cd67788" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -587,12 +1262,38 @@
           <declname>FilePath</declname>
         </param>
         <briefdescription>
+<para>Reads a file from the disk and returns its content as a string. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function opens a file at the given path, reads its contents into a string, and then closes the file. If the file cannot be opened for any reason (e.g., it does not exist), an error message is logged to the console.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FilePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path of the file to read. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A string containing the contents of the file, or &quot;Unknown&quot; if the file could not be opened.</para>
+</simplesect>
+Reads a file from the disk and returns its content as a string.</para>
+<para>This function opens a file at the given path, reads its entire contents into a string, and then closes the file. If the file cannot be opened for any reason (e.g., it does not exist), an error message is logged to the console. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FilePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path of the file to read from. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A string containing the content of the file. If the file could not be opened, this will be an empty string. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="40" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="200" bodyend="220"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="48" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="514" bodyend="534"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1a5e8d3741f88ec6c5b64d6239a4ad258e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::unordered_map&lt; GLenum, std::string &gt;</type>
@@ -605,12 +1306,26 @@
           <declname>Source</declname>
         </param>
         <briefdescription>
+<para>Preprocesses OpenGL shader source code to separate different types of shaders based on specific token. </para>
         </briefdescription>
         <detaileddescription>
+<para>Preprocesses an OpenGL shader source code, separating it into different sections based on type (vertex, fragment, etc.). The function takes in a string of source code and returns an unordered map where each key is a GLenum representing the shader type and each value is the corresponding shader source code. It uses a specific token (#type) to identify different sections within the source code. </para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Original source code of the shader program. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Unordered map where keys are GLenum representing shader types and values are strings containing corresponding shader sources. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="42" column="21" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="222" bodyend="244"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="50" column="21" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="547" bodyend="569"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1ae9cb26e65074c0cc4e8da4462ec0d98c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -625,10 +1340,20 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para>Compiles a collection of OpenGL shaders into a single program. The function takes in a map where each key-value pair represents the type and source code of a shader. If any compilation errors occur, they are logged and the function returns without further action. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ShaderSources</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A dictionary mapping GLenum (representing shader type) to string (source code). Maximum 4 shaders supported. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="44" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="246" bodyend="339"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="52" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLShader.cpp" bodystart="578" bodyend="671"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_shader_1a58e285cf6d18a1c97fa921aebe3264b7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type>uint32_t</type>
@@ -638,12 +1363,19 @@
         <qualifiedname>AGE::OpenGLShader::GetRendererID</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_shader_1ac4b0eac9cd891e569afff48f8d58a1b7">GetRendererID</reimplements>
         <briefdescription>
+<para>Returns the unique identifier for the renderer. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function returns a constant unsigned integer representing the unique ID of the renderer. It is an overridden virtual function from its base class, indicating that it provides a specific implementation for this method.</para>
+<para><simplesect kind="return"><para>A constant unsigned integer representing the renderer&apos;s ID.</para>
+</simplesect>
+This function returns the renderer ID of the object. <simplesect kind="return"><para>The renderer ID as a uint32_t value. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="46" column="25" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" bodystart="46" bodyend="46"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="65" column="25" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" bodystart="65" bodyend="65"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -674,7 +1406,7 @@
         <link refid="class_a_g_e_1_1_shader"/>
       </node>
     </collaborationgraph>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="10" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" bodystart="11" bodyend="52"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" line="10" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLShader.h" bodystart="11" bodyend="71"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_open_g_l_shader_1aff1aa85f0941852547e964ec51071a0a" prot="public" virt="virtual"><scope>AGE::OpenGLShader</scope><name>Bind</name></member>
       <member refid="class_a_g_e_1_1_open_g_l_shader_1ae9cb26e65074c0cc4e8da4462ec0d98c" prot="public" virt="non-virtual"><scope>AGE::OpenGLShader</scope><name>Compile</name></member>
@@ -682,7 +1414,7 @@
       <member refid="class_a_g_e_1_1_shader_1a91921c91d60998e1670b2af46d1a6730" prot="public" virt="non-virtual"><scope>AGE::OpenGLShader</scope><name>Create</name></member>
       <member refid="class_a_g_e_1_1_shader_1a05a2042805f5e8d249310042880b3299" prot="public" virt="non-virtual"><scope>AGE::OpenGLShader</scope><name>Create</name></member>
       <member refid="class_a_g_e_1_1_open_g_l_shader_1a58e285cf6d18a1c97fa921aebe3264b7" prot="public" virt="virtual"><scope>AGE::OpenGLShader</scope><name>GetRendererID</name></member>
-      <member refid="class_a_g_e_1_1_open_g_l_shader_1a1fc3fd48fb344bf5dda2f3d93345a861" prot="public" virt="virtual"><scope>AGE::OpenGLShader</scope><name>GetShaderName</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_shader_1a87a327e9b0031ce25af88182363d2a7b" prot="public" virt="virtual"><scope>AGE::OpenGLShader</scope><name>GetShaderName</name></member>
       <member refid="class_a_g_e_1_1_open_g_l_shader_1a63328532f810d5e70dcc3827f9d7fa6f" prot="private" virt="non-virtual"><scope>AGE::OpenGLShader</scope><name>m_RendererID</name></member>
       <member refid="class_a_g_e_1_1_open_g_l_shader_1a0096d42f5fc22108d55d5fe9eab65ce5" prot="private" virt="non-virtual"><scope>AGE::OpenGLShader</scope><name>m_ShaderName</name></member>
       <member refid="class_a_g_e_1_1_open_g_l_shader_1ac71aeeb660e2c6d845a25aa20737b4ba" prot="public" virt="non-virtual"><scope>AGE::OpenGLShader</scope><name>OpenGLShader</name></member>
@@ -690,18 +1422,18 @@
       <member refid="class_a_g_e_1_1_open_g_l_shader_1a865ffbd35489f1c7db14e6dfcc1eda15" prot="public" virt="non-virtual"><scope>AGE::OpenGLShader</scope><name>OpenGLShader</name></member>
       <member refid="class_a_g_e_1_1_open_g_l_shader_1a5e8d3741f88ec6c5b64d6239a4ad258e" prot="public" virt="non-virtual"><scope>AGE::OpenGLShader</scope><name>PreProcess</name></member>
       <member refid="class_a_g_e_1_1_open_g_l_shader_1aa14f0741247841eedd616e970cd67788" prot="public" virt="non-virtual"><scope>AGE::OpenGLShader</scope><name>ReadFile</name></member>
-      <member refid="class_a_g_e_1_1_open_g_l_shader_1a6a99dcca672a594d95d6f29aac64fdfc" prot="public" virt="virtual"><scope>AGE::OpenGLShader</scope><name>SetFloat</name></member>
-      <member refid="class_a_g_e_1_1_open_g_l_shader_1a29b8e908babdab23056a1172828131c0" prot="public" virt="virtual"><scope>AGE::OpenGLShader</scope><name>SetFloat2</name></member>
-      <member refid="class_a_g_e_1_1_open_g_l_shader_1a73349f695713a74a86981d4c17fcfd1f" prot="public" virt="virtual"><scope>AGE::OpenGLShader</scope><name>SetFloat3</name></member>
-      <member refid="class_a_g_e_1_1_open_g_l_shader_1a014c0eb079509c74c6d25db090174f30" prot="public" virt="virtual"><scope>AGE::OpenGLShader</scope><name>SetFloat4</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_shader_1a8915abe382b28384a6b2b1866a6192ee" prot="public" virt="virtual"><scope>AGE::OpenGLShader</scope><name>SetFloat</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_shader_1acd6532d8c117b9e792013b4bb570ac2c" prot="public" virt="virtual"><scope>AGE::OpenGLShader</scope><name>SetFloat2</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_shader_1a6b14d462f84d3b109b30d51c663fe574" prot="public" virt="virtual"><scope>AGE::OpenGLShader</scope><name>SetFloat3</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_shader_1ad520acc15fdc4b7b2211d46d46671e1a" prot="public" virt="virtual"><scope>AGE::OpenGLShader</scope><name>SetFloat4</name></member>
       <member refid="class_a_g_e_1_1_open_g_l_shader_1ac2294fd8f640fb6ebd395a0a608f4f29" prot="public" virt="virtual"><scope>AGE::OpenGLShader</scope><name>SetInt</name></member>
       <member refid="class_a_g_e_1_1_open_g_l_shader_1a2f7d9ee7caccf482346d7ab92be1b819" prot="public" virt="virtual"><scope>AGE::OpenGLShader</scope><name>SetMat3</name></member>
-      <member refid="class_a_g_e_1_1_open_g_l_shader_1affa41bc5d9d8fdd81092d2cf6c8c4660" prot="public" virt="virtual"><scope>AGE::OpenGLShader</scope><name>SetMat4</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_shader_1a0f9379d1becc6ab976fd32f16a8989d8" prot="public" virt="virtual"><scope>AGE::OpenGLShader</scope><name>SetMat4</name></member>
       <member refid="class_a_g_e_1_1_open_g_l_shader_1a29d0e49b8ad6ec8624a094653cd523f8" prot="public" virt="virtual"><scope>AGE::OpenGLShader</scope><name>Unbind</name></member>
-      <member refid="class_a_g_e_1_1_open_g_l_shader_1ac56fa9bc272ca73c1c471a4dbf429e8e" prot="public" virt="non-virtual"><scope>AGE::OpenGLShader</scope><name>UploadFloat</name></member>
-      <member refid="class_a_g_e_1_1_open_g_l_shader_1ad6abf900f2f67dea0f60597ceda1376e" prot="public" virt="non-virtual"><scope>AGE::OpenGLShader</scope><name>UploadFloat2</name></member>
-      <member refid="class_a_g_e_1_1_open_g_l_shader_1aba0453d8e3a7a8d4e00711fcbbd9f2de" prot="public" virt="non-virtual"><scope>AGE::OpenGLShader</scope><name>UploadFloat3</name></member>
-      <member refid="class_a_g_e_1_1_open_g_l_shader_1ab7f8ddf177069314b5071336f5dded8c" prot="public" virt="non-virtual"><scope>AGE::OpenGLShader</scope><name>UploadFloat4</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_shader_1a30c6ffe6e9c3d2a39adb3464febc38e4" prot="public" virt="non-virtual"><scope>AGE::OpenGLShader</scope><name>UploadFloat</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_shader_1a8992e7949ee17700182af8b9c8fbdaa3" prot="public" virt="non-virtual"><scope>AGE::OpenGLShader</scope><name>UploadFloat2</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_shader_1a1e541b19dc69af5ed224740f53ba4b54" prot="public" virt="non-virtual"><scope>AGE::OpenGLShader</scope><name>UploadFloat3</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_shader_1a028775d88d8f1acc650351c57e826084" prot="public" virt="non-virtual"><scope>AGE::OpenGLShader</scope><name>UploadFloat4</name></member>
       <member refid="class_a_g_e_1_1_open_g_l_shader_1abf88867619db1095d4436b2e22d81c01" prot="public" virt="non-virtual"><scope>AGE::OpenGLShader</scope><name>UploadInt</name></member>
       <member refid="class_a_g_e_1_1_open_g_l_shader_1aa316d39c9742ae3fd0d489e29ec2f96e" prot="public" virt="non-virtual"><scope>AGE::OpenGLShader</scope><name>UploadMat3</name></member>
       <member refid="class_a_g_e_1_1_open_g_l_shader_1a27b5a67cdcf00aa06961c0bfdfca5e82" prot="public" virt="non-virtual"><scope>AGE::OpenGLShader</scope><name>UploadMat4</name></member>

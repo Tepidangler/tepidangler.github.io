@@ -105,11 +105,11 @@
 <tbody>
 <tr>
 <td style="text-align: right;">float</td>
-<td style="text-align: left;"><a href="#function-getx"><strong>GetX</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-getx"><strong>GetX</strong></a> () const<br><em>Returns the current x-coordinate of the mouse cursor.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">float</td>
-<td style="text-align: left;"><a href="#function-gety"><strong>GetY</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-gety"><strong>GetY</strong></a> () const<br><em>This function returns the current value of member variable 'm_MouseY'.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
@@ -117,7 +117,7 @@
 </tr>
 <tr>
 <td style="text-align: right;">virtual std::string</td>
-<td style="text-align: left;"><a href="#function-tostring"><strong>ToString</strong></a> () override const<br></td>
+<td style="text-align: left;"><a href="#function-tostring"><strong>ToString</strong></a> () override const<br><em>Converts the event data into a string format.</em></td>
 </tr>
 </tbody>
 </table>
@@ -161,11 +161,11 @@
 </tr>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-isincategory"><strong>IsInCategory</strong></a> (EventCategory Category) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-isincategory"><strong>IsInCategory</strong></a> (EventCategory Category) <br><em>Checks if an event is in a specific category.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual std::string</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-tostring"><strong>ToString</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-tostring"><strong>ToString</strong></a> () const<br><em>Returns a string representation of the object.</em></td>
 </tr>
 </tbody>
 </table>
@@ -217,23 +217,35 @@
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_mouse_event/#function-mouseevent-23"><strong>MouseEvent</strong></a> (float x, float y) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_mouse_event/#function-mouseevent-23"><strong>MouseEvent</strong></a> (float x, float y) <br><em>Constructs a</em> <a href="../class_a_g_e_1_1_mouse_event/"><em><strong>MouseEvent</strong></em></a> <em>object with the given coordinates.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_mouse_event/#function-mouseevent-33"><strong>MouseEvent</strong></a> (float xOffset, float yOffset, bool Scrolled) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_mouse_event/#function-mouseevent-33"><strong>MouseEvent</strong></a> (float xOffset, float yOffset, bool Scrolled) <br><em>Constructs a</em> <a href="../class_a_g_e_1_1_mouse_event/"><em><strong>MouseEvent</strong></em></a> <em>object with given offsets.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-getx">function GetX</h3>
+<p><em>Returns the current x-coordinate of the mouse cursor.</em> </p>
 <pre><code class="language-C++">inline float AGE::MouseMovedEvent::GetX () const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A floating point number representing the current x-coordinate of the mouse cursor.</p>
+<p>Returns the current x-coordinate of the mouse cursor. </p>
+<p><strong>Returns:</strong></p>
+<p>The x-coordinate value as a floating point number. If there is an error in retrieving the data, it returns -1.0. </p>
 <hr>
 
 <h3 id="function-gety">function GetY</h3>
+<p><em>This function returns the current value of member variable 'm_MouseY'.</em> </p>
 <pre><code class="language-C++">inline float AGE::MouseMovedEvent::GetY () const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A floating-point number representing the y-coordinate.</p>
+<p>This function returns the value of member variable 'm_MouseY'. </p>
+<p><strong>Returns:</strong></p>
+<p>A floating-point number representing the current y-coordinate. </p>
 <hr>
 
 <h3 id="function-mousemovedevent">function MouseMovedEvent</h3>
@@ -245,8 +257,15 @@
 <hr>
 
 <h3 id="function-tostring">function ToString</h3>
+<p><em>Converts the event data into a string format.</em> </p>
 <pre><code class="language-C++">inline virtual std::string AGE::MouseMovedEvent::ToString () override const
 </code></pre>
+<p>This function converts the mouse movement event data into a human-readable string format. The string includes the x and y coordinates of the mouse cursor at the time of the event.</p>
+<p><strong>Returns:</strong></p>
+<p>A string containing the details of the mouse movement event.</p>
+<p>This function returns a string representation of the <a href="./"><strong>MouseMovedEvent</strong></a> object. The returned string includes the x and y coordinates of the mouse cursor at the time of the event.</p>
+<p><strong>Returns:</strong></p>
+<p>A string in the format "MouseMovedEvent: &lt;m_MouseX&gt;, &lt;m_MouseY&gt;". </p>
 <p>Implements <a href="../class_a_g_e_1_1_event/#function-tostring"><em>AGE::Event::ToString</em></a></p>
 <hr>
 

@@ -10,12 +10,21 @@
         <name>Convert</name>
         <qualifiedname>AGE::Convert::Convert</qualifiedname>
         <briefdescription>
+<para>Converts the input into another format. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes an input and converts it to a different format. The exact conversion performed is not specified, as this depends on the implementation details of the <ref refid="class_a_g_e_1_1_convert_1a15f7da4de169d2762e461425ce30c0d2" kindref="member">Convert()</ref> function.</para>
+<para><simplesect kind="return"><para>Returns void.</para>
+</simplesect>
+Converts the input into another format.</para>
+<para>This function takes an input and converts it to a different format. The exact conversion performed is not specified, as this depends on the implementation details of the <ref refid="class_a_g_e_1_1_convert_1a15f7da4de169d2762e461425ce30c0d2" kindref="member">Convert()</ref> function.</para>
+<para><simplesect kind="return"><para>Returns void. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/UtilityFunctions.h" line="20" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/UtilityFunctions.h" bodystart="20" bodyend="20"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/UtilityFunctions.h" line="34" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/UtilityFunctions.h" bodystart="34" bodyend="34"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -30,12 +39,39 @@
           <declname>vec</declname>
         </param>
         <briefdescription>
+<para>Converts a <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> to GLM&apos;s vec3 format. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes in a <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object and returns its equivalent glm::vec3 representation. It directly maps the x, y, and z properties of the input <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> to the respective components of the output glm::vec3.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object to be converted. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A glm::vec3 object with the same values as the input <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref>.</para>
+</simplesect>
+Converts a <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object to a GLM vec3 object.</para>
+<para>This function takes in a <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object and returns its equivalent glm::vec3 representation. The conversion is done by simply copying the x, y, and z values from the input <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object into the new glm::vec3 object.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object to be converted. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A glm::vec3 object with the same x, y, and z values as the input <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/UtilityFunctions.h" line="30" column="18" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/UtilityFunctions.cpp" bodystart="39" bodyend="41"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/UtilityFunctions.h" line="44" column="18" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/UtilityFunctions.cpp" bodystart="156" bodyend="158"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_convert_1a36b797beb95ea457b1520f0114a5c6ea" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>glm::vec4</type>
@@ -48,19 +84,46 @@
           <declname>vec</declname>
         </param>
         <briefdescription>
+<para>Converts a <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> to a GLM vec4. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes in a <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object and returns its equivalent glm::vec4 representation. The conversion is done by simply copying the x, y, z, and w values from the input <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> into the corresponding components of the output glm::vec4.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> to be converted. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A glm::vec4 with the same x, y, z, and w values as the input <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref>.</para>
+</simplesect>
+Converts a <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> to a GLM vec4.</para>
+<para>This function takes in a <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> and returns a glm::vec4 with the same x, y, z, w values. The conversion is done by directly copying the values from the input <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> to the output glm::vec4.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> to be converted.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A GLM vector with the same x, y, z, w values as the input <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref>. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/UtilityFunctions.h" line="31" column="18" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/UtilityFunctions.cpp" bodystart="43" bodyend="45"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/UtilityFunctions.h" line="45" column="18" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/UtilityFunctions.cpp" bodystart="178" bodyend="180"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/UtilityFunctions.h" line="18" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/UtilityFunctions.h" bodystart="18" bodyend="32"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/UtilityFunctions.h" line="18" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/UtilityFunctions.h" bodystart="18" bodyend="46"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_convert_1a15f7da4de169d2762e461425ce30c0d2" prot="public" virt="non-virtual"><scope>AGE::Convert</scope><name>Convert</name></member>
       <member refid="class_a_g_e_1_1_convert_1ab158f1fd7f51a81bc9127b8f70cec3ee" prot="public" virt="non-virtual"><scope>AGE::Convert</scope><name>ToGLM</name></member>

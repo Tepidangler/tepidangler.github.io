@@ -24,21 +24,30 @@ namespace AGE
     {
 
     public:
-        Camera() = default;
-        Camera(Matrix4D Projection)
+COMMENT:
+CONFIDENCE: 1.0;
+
+Camera() = default;
+        COMMENT:
+CONFIDENCE: 1.0;
+
+COMMENT:
+CONFIDENCE: 1.0;
+
+Camera(Matrix4D Projection)
             : m_Projection(Projection) {}
-        Camera(Vector4 Eye, Vector4 At, Vector4 Up) {};
+Camera(Vector4 Eye, Vector4 At, Vector4 Up) {};
 
-        const Matrix4D& GetProjection() const { return m_Projection; }
-        Matrix4D& GetProjection() { return m_Projection; }
-        const Matrix4D GetWorldMatrix() const  { return m_World; }
-        Matrix4D GetWorldMatrix() { return m_World; }
-        const ConstantBufferStruct GetConstantBufferData() const { return m_ConstantBuffer; }
-        ConstantBufferStruct GetConstantBufferData() { return m_ConstantBuffer; }
-        ProjectionType GetProjectionType() const { return m_ProjectionType; }
-        virtual void SetProjectionType(ProjectionType Type) { m_ProjectionType = Type; }
+const Matrix4D& GetProjection() const { return m_Projection; }
+Matrix4D& GetProjection() { return m_Projection; }
+const Matrix4D GetWorldMatrix() const  { return m_World; }
+Matrix4D GetWorldMatrix() { return m_World; }
+const ConstantBufferStruct GetConstantBufferData() const { return m_ConstantBuffer; }
+ConstantBufferStruct GetConstantBufferData() { return m_ConstantBuffer; }
+ProjectionType GetProjectionType() const { return m_ProjectionType; }
+virtual void SetProjectionType(ProjectionType Type) { m_ProjectionType = Type; }
 
-        virtual ~Camera() {}
+virtual ~Camera() {}
 
     protected:
 

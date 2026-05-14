@@ -24,6 +24,7 @@
     <derivedcompoundref refid="class_a_g_e_1_1_window_lost_focus_event" prot="public" virt="non-virtual">AGE::WindowLostFocusEvent</derivedcompoundref>
     <derivedcompoundref refid="class_a_g_e_1_1_window_moved_event" prot="public" virt="non-virtual">AGE::WindowMovedEvent</derivedcompoundref>
     <derivedcompoundref refid="class_a_g_e_1_1_window_resize_event" prot="public" virt="non-virtual">AGE::WindowResizeEvent</derivedcompoundref>
+    <includes local="no">Event.h</includes>
     <sectiondef kind="friend">
       <memberdef kind="friend" id="class_a_g_e_1_1_event_1aad5f38ccd490ea17008460423f52325a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>class</type>
@@ -40,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" line="53" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" bodystart="53" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" line="63" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" bodystart="63" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-attrib">
@@ -57,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" line="66" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" bodystart="66" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" line="108" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" bodystart="108" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -73,7 +74,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" line="55" column="19"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" line="65" column="19"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_event_1a007332c35050a5561feaf2c40c917290" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>const char *</type>
@@ -87,7 +88,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" line="56" column="20"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" line="66" column="20"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_event_1ae76fb834a0ee69601539da677f1333fa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>int</type>
@@ -101,7 +102,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" line="57" column="13"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" line="67" column="13"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_event_1abb5a1a933883fb8fb99999523e8805a8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type>std::string</type>
@@ -122,12 +123,21 @@
         <reimplementedby refid="class_a_g_e_1_1_string_paste_event_1a7fab025e6572b4e213dbfeabe29bc64c">ToString</reimplementedby>
         <reimplementedby refid="class_a_g_e_1_1_window_resize_event_1a3b28b1c4e34e5b6b41ffce7d5f8e87cd">ToString</reimplementedby>
         <briefdescription>
+<para>Returns a string representation of the object. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function returns a string that represents the current object&apos;s state. It does this by calling the <computeroutput>GetName</computeroutput> method and returning its result.</para>
+<para><simplesect kind="return"><para>A string representing the current object&apos;s name.</para>
+</simplesect>
+Converts the object into a string representation.</para>
+<para>This function returns a string that represents the current object&apos;s name. It uses the <computeroutput>GetName</computeroutput> method to get the name of the object.</para>
+<para><simplesect kind="return"><para>A string representing the current object&apos;s name. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" line="58" column="21" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" bodystart="58" bodyend="58"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" line="82" column="21" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" bodystart="82" bodyend="82"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_event_1afb010977c2bb1113d2af91d95c70ecab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -140,17 +150,48 @@
           <declname>Category</declname>
         </param>
         <briefdescription>
+<para>Checks if an event is in a specific category. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function checks whether the provided EventCategory is set within the categories that are currently active. The comparison is done by bitwise AND operation with GetCategoryFlags() and Category.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Category</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The category to check against. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the event is in the specified category, false otherwise.</para>
+</simplesect>
+Checks if an event is in a specific category.</para>
+<para>This function checks whether the given EventCategory (bitmask) is set within the result of GetCategoryFlags(). It uses bitwise AND operation to compare the Category flag with all flags.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Category</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The category to check against. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the event is in the specified category, false otherwise. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" line="60" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" bodystart="60" bodyend="63"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" line="102" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" bodystart="102" bodyend="105"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>Abstract base class for an event. </para>
     </briefdescription>
     <detaileddescription>
+<para>This is the abstract base class that represents a generic event in the system. It provides methods to get information about the type of the event, its category flags and whether it has been handled or not.</para>
+<para>Represents an event in the system.</para>
+<para>This class represents a generic event that can be handled by various components of the system. It provides methods to get information about the type, category and name of the event. The ToString method returns the name of the event as default implementation but subclasses may override it with more meaningful representation. </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="2">
@@ -356,7 +397,7 @@
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" line="51" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" bodystart="52" bodyend="67"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" line="61" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/Event.h" bodystart="62" bodyend="109"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_event_1aad5f38ccd490ea17008460423f52325a" prot="private" virt="non-virtual"><scope>AGE::Event</scope><name>EventDispatcher</name></member>
       <member refid="class_a_g_e_1_1_event_1ae76fb834a0ee69601539da677f1333fa" prot="public" virt="pure-virtual"><scope>AGE::Event</scope><name>GetCategoryFlags</name></member>

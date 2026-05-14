@@ -56,7 +56,7 @@
 
 | Type | Name |
 | ---: | :--- |
-|  auto | [**CleanupOutputString**](#function-cleanupoutputstring) (const char(&) expr, const char(&) remove) <br> |
+|  This function cleans up an input string by removing a specified substring constexpr auto | [**CleanupOutputString**](#function-cleanupoutputstring) (const char(&) expr, const char(&) remove) <br> |
 
 
 
@@ -94,7 +94,7 @@
 
 ```C++
 template<size_t N, size_t K>
-auto AGE::InstrumentorUtils::CleanupOutputString (
+This function cleans up an input string by removing a specified substring constexpr auto AGE::InstrumentorUtils::CleanupOutputString (
     const char(&) expr,
     const char(&) remove
 ) 

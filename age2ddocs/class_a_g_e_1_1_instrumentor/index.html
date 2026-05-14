@@ -88,23 +88,23 @@
 <tbody>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-beginsession"><strong>BeginSession</strong></a> (const std::string &amp; name, const std::string &amp; filepath="results.json") <br></td>
+<td style="text-align: left;"><a href="#function-beginsession"><strong>BeginSession</strong></a> (const std::string &amp; name, const std::string &amp; filepath="results.json") <br><em>Starts a new instrumentation session.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-endsession"><strong>EndSession</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-endsession"><strong>EndSession</strong></a> () <br><em>This function is used to end the session. It locks a mutex and then calls an internal function to actually end the session.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-instrumentor-13"><strong>Instrumentor</strong></a> (const <a href="./"><strong>Instrumentor</strong></a> &amp;) = delete<br></td>
+<td style="text-align: left;"><a href="#function-instrumentor-13"><strong>Instrumentor</strong></a> (const <a href="./"><strong>Instrumentor</strong></a> &amp;) = delete<br><em>Deleted copy constructor for the</em> <a href="./"><em><strong>Instrumentor</strong></em></a> <em>class to prevent copying.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-instrumentor-23"><strong>Instrumentor</strong></a> (<a href="./"><strong>Instrumentor</strong></a> &amp;&amp;) = delete<br></td>
+<td style="text-align: left;"><a href="#function-instrumentor-23"><strong>Instrumentor</strong></a> (<a href="./"><strong>Instrumentor</strong></a> &amp;&amp;) = delete<br><a href="./"><em><strong>Instrumentor</strong></em></a> <em>move constructor is deleted to prevent copying of the instrumentor object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-writeprofile"><strong>WriteProfile</strong></a> (const <a href="../struct_a_g_e_1_1_profile_result/"><strong>ProfileResult</strong></a> &amp; result) <br></td>
+<td style="text-align: left;"><a href="#function-writeprofile"><strong>WriteProfile</strong></a> (const <a href="../struct_a_g_e_1_1_profile_result/"><strong>ProfileResult</strong></a> &amp; result) <br><em>Writes a profile result to an output stream in JSON format.</em></td>
 </tr>
 </tbody>
 </table>
@@ -119,48 +119,103 @@
 <tbody>
 <tr>
 <td style="text-align: right;"><a href="./"><strong>Instrumentor</strong></a> &amp;</td>
-<td style="text-align: left;"><a href="#function-get"><strong>Get</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-get"><strong>Get</strong></a> () <br><em>Returns a reference to the singleton instance of the</em> <a href="./"><em><strong>Instrumentor</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-beginsession">function BeginSession</h3>
+<p><em>Starts a new instrumentation session.</em> </p>
 <pre><code class="language-C++">inline void AGE::Instrumentor::BeginSession (
     const std::string &amp; name,
     const std::string &amp; filepath=&quot;results.json&quot;
 ) 
 </code></pre>
+<p>This function starts a new session with the given name and writes the header to the output stream. If there is an existing session, it will be closed before starting the new one. The results of profiling meant for the original session will end up in the newly opened session instead. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>name</code> The name of the new session. </li>
+<li><code>filepath</code> The path to the output JSON file. Defaults to "results.json".</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Starts a new profiling session.</p>
+<p>This function starts a new profiling session with the given name and writes the header to the output stream. If there is already an active session, it will be closed before starting the new one. The results of any profiling data meant for the original session will instead go into the newly started session.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>name</code> The name of the new session. This should ideally represent what the session is measuring or recording. </li>
+<li><code>filepath</code> Optional parameter specifying where to write the profiling data. Defaults to "results.json". </li>
+</ul>
 <hr>
 
 <h3 id="function-endsession">function EndSession</h3>
+<p><em>This function is used to end the session. It locks a mutex and then calls an internal function to actually end the session.</em> </p>
 <pre><code class="language-C++">inline void AGE::Instrumentor::EndSession () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>This function is used to end the session. It ensures thread safety by using a std::lock_guard on m_Mutex. The actual work of ending the session is done by calling InternalEndSession(). </p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-instrumentor-13">function Instrumentor [1/3]</h3>
+<p><em>Deleted copy constructor for the</em> <a href="./"><em><strong>Instrumentor</strong></em></a> <em>class to prevent copying.</em></p>
 <pre><code class="language-C++">AGE::Instrumentor::Instrumentor (
     const Instrumentor &amp;
 ) = delete
 </code></pre>
+<p>This function is marked as deleted because we do not want any copies of an instance of this class. It's a good practice to avoid unnecessary copying and duplication in our code, which can lead to performance issues or memory leaks. The copy constructor for the <a href="./"><strong>Instrumentor</strong></a> class has been set to private to prevent its use.</p>
+<p>Deleted copy constructor for the <a href="./"><strong>Instrumentor</strong></a> class.</p>
+<p>This function is marked as deleted to prevent copying of an instance of this class, which would not make sense in the context of our application. </p>
 <hr>
 
 <h3 id="function-instrumentor-23">function Instrumentor [2/3]</h3>
+<p><a href="./"><em><strong>Instrumentor</strong></em></a> <em>move constructor is deleted to prevent copying of the instrumentor object.</em></p>
 <pre><code class="language-C++">AGE::Instrumentor::Instrumentor (
     Instrumentor &amp;&amp;
 ) = delete
 </code></pre>
+<p>This function is marked as deleted in C++, which means that it cannot be used for creating a copy of an existing object. It's useful when we want to ensure that objects are not copied unintentionally and can only be moved.</p>
+<p><strong>Returns:</strong></p>
+<p>The move constructor is implicitly declared as deleted by the compiler if any non-static data member or base class has a user-declared destructor, copy assignment operator, or move assignment operator.</p>
+<p>Move constructor for the <a href="./"><strong>Instrumentor</strong></a> class. Deleted to prevent copying of objects. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>other</code> The object to be moved from. </li>
+</ul>
 <hr>
 
 <h3 id="function-writeprofile">function WriteProfile</h3>
+<p><em>Writes a profile result to an output stream in JSON format.</em> </p>
 <pre><code class="language-C++">inline void AGE::Instrumentor::WriteProfile (
     const ProfileResult &amp; result
 ) 
 </code></pre>
+<p>This function takes a <a href="../struct_a_g_e_1_1_profile_result/"><strong>ProfileResult</strong></a> object and writes it as a JSON string to the output stream. The JSON string includes details about the elapsed time, name of the operation, thread ID, and start timestamp. It also locks the mutex for thread safety. If the current session is active (m_CurrentSession == true), the function writes the JSON string to the output stream and flushes it.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>result</code> The <a href="../struct_a_g_e_1_1_profile_result/"><strong>ProfileResult</strong></a> object to be written.</li>
+</ul>
+<p>Writes a profile result to the output stream in JSON format.</p>
+<p>This function takes a <a href="../struct_a_g_e_1_1_profile_result/"><strong>ProfileResult</strong></a> object and writes its data into an output stream in JSON format. The data includes the category, duration, name, phase (X for unknown), process ID (0 as it's not applicable here), thread ID, and timestamp. It also locks a mutex to ensure thread safety when writing to the output stream. If the current session is active, the function writes the JSON string into the output stream and flushes it.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>result</code> The <a href="../struct_a_g_e_1_1_profile_result/"><strong>ProfileResult</strong></a> object containing data about the profile. </li>
+</ul>
 <hr>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
 <h3 id="function-get">function Get</h3>
+<p><em>Returns a reference to the singleton instance of the</em> <a href="./"><em><strong>Instrumentor</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">static inline Instrumentor &amp; AGE::Instrumentor::Get () 
 </code></pre>
+<p>This function creates and returns a reference to an instance of the <a href="./"><strong>Instrumentor</strong></a> class, which is a part of the profiling system used in this application. The instance is created using the 'static' keyword, ensuring that it is only initialized once and reused across multiple calls.</p>
+<p><strong>Returns:</strong></p>
+<p>A reference to the singleton instance of the <a href="./"><strong>Instrumentor</strong></a> class.</p>
+<p>Returns a reference to the singleton instance of the <a href="./"><strong>Instrumentor</strong></a> class.</p>
+<p>This function creates and returns a static instance of the <a href="./"><strong>Instrumentor</strong></a> class, ensuring that only one instance exists throughout the program's execution. The instance is returned as a reference, allowing for easy access and manipulation of its properties or methods.</p>
+<p><strong>Returns:</strong></p>
+<p>A reference to the singleton instance of the <a href="./"><strong>Instrumentor</strong></a> class. </p>
 <hr>
 
 <hr />

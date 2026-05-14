@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeltaTime.h" line="19" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeltaTime.h" bodystart="19" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeltaTime.h" line="57" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeltaTime.h" bodystart="57" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -31,12 +31,32 @@
           <defval>0.f</defval>
         </param>
         <briefdescription>
+<para>Constructs a <ref refid="class_a_g_e_1_1_time_step" kindref="compound">TimeStep</ref> object with the given time value. If no argument is provided, it defaults to 0. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time value for this <ref refid="class_a_g_e_1_1_time_step" kindref="compound">TimeStep</ref>. Defaults to 0 if not specified.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Constructs a <ref refid="class_a_g_e_1_1_time_step" kindref="compound">TimeStep</ref> object with the given time value. If no argument is provided, it defaults to 0. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time value for this <ref refid="class_a_g_e_1_1_time_step" kindref="compound">TimeStep</ref>. Defaults to 0 if not specified. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeltaTime.h" line="8" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeltaTime.h" bodystart="8" bodyend="11"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeltaTime.h" line="16" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeltaTime.h" bodystart="16" bodyend="19"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_time_step_1af623d435fe14f6cb2d102404d86bff20" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>float</type>
@@ -45,12 +65,18 @@
         <name>GetSeconds</name>
         <qualifiedname>AGE::TimeStep::GetSeconds</qualifiedname>
         <briefdescription>
+<para>This function returns the time value in seconds. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>A float representing the time in seconds.</para>
+</simplesect>
+This function returns the time value in seconds. <simplesect kind="return"><para>A float representing the time in seconds. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeltaTime.h" line="13" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeltaTime.h" bodystart="13" bodyend="13"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeltaTime.h" line="29" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeltaTime.h" bodystart="29" bodyend="29"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_time_step_1a1eaff9041ea986f6c191571ce483077a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>float</type>
@@ -59,12 +85,18 @@
         <name>GetMilliseconds</name>
         <qualifiedname>AGE::TimeStep::GetMilliseconds</qualifiedname>
         <briefdescription>
+<para>This function returns the time value in milliseconds. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>The time value multiplied by 1000 to convert it into milliseconds.</para>
+</simplesect>
+This function returns the time value in milliseconds. <simplesect kind="return"><para>The time value multiplied by 1000 to convert it into milliseconds. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeltaTime.h" line="14" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeltaTime.h" bodystart="14" bodyend="14"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeltaTime.h" line="38" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeltaTime.h" bodystart="38" bodyend="38"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_time_step_1a9dde05d203190a98d0ae55a3258a386c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -73,19 +105,28 @@
         <name>operator float</name>
         <qualifiedname>AGE::TimeStep::operator float</qualifiedname>
         <briefdescription>
+<para>Converts the object into a floating-point number representing time. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function returns the value of &apos;m_Time&apos; which is a private member variable of this class. It provides an implicit conversion to float, allowing it to be used in arithmetic expressions where a float is expected.</para>
+<para><simplesect kind="return"><para>A floating-point number representing the time stored in &apos;m_Time&apos;.</para>
+</simplesect>
+Converts the object to a floating-point number representing time.</para>
+<para>This function returns the value of the &apos;m_Time&apos; member variable, which represents time in some unit. The exact meaning and interpretation of this value is not specified here.</para>
+<para><simplesect kind="return"><para>A float representing the current time value. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeltaTime.h" line="16" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeltaTime.h" bodystart="16" bodyend="16"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeltaTime.h" line="54" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeltaTime.h" bodystart="54" bodyend="54"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeltaTime.h" line="5" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeltaTime.h" bodystart="6" bodyend="20"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeltaTime.h" line="5" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeltaTime.h" bodystart="6" bodyend="58"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_time_step_1a1eaff9041ea986f6c191571ce483077a" prot="public" virt="non-virtual"><scope>AGE::TimeStep</scope><name>GetMilliseconds</name></member>
       <member refid="class_a_g_e_1_1_time_step_1af623d435fe14f6cb2d102404d86bff20" prot="public" virt="non-virtual"><scope>AGE::TimeStep</scope><name>GetSeconds</name></member>

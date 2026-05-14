@@ -22,12 +22,19 @@ namespace AGE
 
 
 
-    UUID::UUID()
+COMMENT:
+CONFIDENCE: 1.0;
+
+UUID::UUID()
         :m_UUID(s_UniformDistribution(s_Engine))
     {
     }
 
-    UUID::UUID(uint64_t uuid)
+UUID::UUID(uint64_t uuid)
+        :m_UUID(uuid)
+{
+}
+UUID::UUID(uint64_t uuid)
         :m_UUID(uuid)
     {
     }

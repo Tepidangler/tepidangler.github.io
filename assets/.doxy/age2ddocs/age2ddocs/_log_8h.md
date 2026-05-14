@@ -93,48 +93,7 @@
 
 
 
-## Macros
 
-| Type | Name |
-| ---: | :--- |
-| define  | [**AGE\_CORE\_ASSERT**](_log_8h.md#define-age_core_assert) (x, ...) <br> |
-| define  | [**AGE\_GAME\_ASSERT**](_log_8h.md#define-age_game_assert) (x, ...) <br> |
-
-## Macro Definition Documentation
-
-
-
-
-
-### define AGE\_CORE\_ASSERT 
-
-```C++
-#define AGE_CORE_ASSERT (
-    x,
-    ...
-) 
-```
-
-
-
-
-<hr>
-
-
-
-### define AGE\_GAME\_ASSERT 
-
-```C++
-#define AGE_GAME_ASSERT (
-    x,
-    ...
-) 
-```
-
-
-
-
-<hr>
 
 ------------------------------
 The documentation for this class was generated from the following file `C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h`

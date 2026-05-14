@@ -89,11 +89,11 @@
 <tbody>
 <tr>
 <td style="text-align: right;">T *</td>
-<td style="text-align: left;"><a href="#function-as-12"><strong>As</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-as-12"><strong>As</strong></a> () <br><em>This function is a placeholder for future use. It currently always asserts false and returns null.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"><a href="../class_a_g_e_1_1_open_g_l_context/"><strong>OpenGLContext</strong></a> *</td>
-<td style="text-align: left;"><a href="#function-as-22"><strong>As</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-as-22"><strong>As</strong></a> () <br><em>This function returns a pointer to the OpenGL context associated with this instance of</em> <a href="./"><em><strong>GraphicsContext</strong></em></a> <em>.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
@@ -105,7 +105,7 @@
 </tr>
 <tr>
 <td style="text-align: right;">virtual</td>
-<td style="text-align: left;"><a href="#function-graphicscontext"><strong>~GraphicsContext</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-graphicscontext"><strong>~GraphicsContext</strong></a> () <br><em>Virtual destructor for the</em> <a href="./"><em><strong>GraphicsContext</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
@@ -120,21 +120,37 @@
 <tbody>
 <tr>
 <td style="text-align: right;">Scope&lt; <a href="./"><strong>GraphicsContext</strong></a> &gt;</td>
-<td style="text-align: left;"><a href="#function-create"><strong>Create</strong></a> (void * Window) <br></td>
+<td style="text-align: left;"><a href="#function-create"><strong>Create</strong></a> (void * Window) <br><em>Creates a graphics context based on the current renderer API.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-as-12">function As [1/2]</h3>
+<p><em>This function is a placeholder for future use. It currently always asserts false and returns null.</em> </p>
 <pre><code class="language-C++">template&lt;typename T&gt;
 T * AGE::GraphicsContext::As () 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>None</code> </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>T* Returns nullptr.</p>
+<p>This function is currently not implemented and will always throw an assertion. It returns a pointer of type T*, which in this case is unknown to the documentation. The function does not take any parameters. In future, it should be implemented to cast the <a href="./"><strong>GraphicsContext</strong></a> instance to another derived class if possible. </p>
+<p><strong>Returns:</strong></p>
+<p>A nullptr as per current implementation. </p>
 <hr>
 
 <h3 id="function-as-22">function As [2/2]</h3>
+<p><em>This function returns a pointer to the OpenGL context associated with this instance of</em> <a href="./"><em><strong>GraphicsContext</strong></em></a> <em>.</em></p>
 <pre><code class="language-C++">template&lt;&gt;
 OpenGLContext * AGE::GraphicsContext::As () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>Pointer to an <a href="../class_a_g_e_1_1_open_g_l_context/"><strong>OpenGLContext</strong></a> object, or nullptr if no such context exists.</p>
+<p>This function returns a pointer to the OpenGL context associated with this <a href="./"><strong>GraphicsContext</strong></a> object. </p>
+<p><strong>Returns:</strong></p>
+<p>A pointer to an <a href="../class_a_g_e_1_1_open_g_l_context/"><strong>OpenGLContext</strong></a>, or nullptr if no such context exists. </p>
 <hr>
 
 <h3 id="function-init">function Init</h3>
@@ -148,15 +164,21 @@ OpenGLContext * AGE::GraphicsContext::As ()
 <hr>
 
 <h3 id="function-graphicscontext">function ~GraphicsContext</h3>
+<p><em>Virtual destructor for the</em> <a href="./"><em><strong>GraphicsContext</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">inline virtual AGE::GraphicsContext::~GraphicsContext () 
 </code></pre>
+<p>This function is responsible for releasing any resources that were acquired by the object during its lifetime, such as memory or GPU handles. It does not return anything and thus has an empty return type (void).</p>
+<p>Virtual destructor for the <a href="./"><strong>GraphicsContext</strong></a> class.</p>
+<p>This function is responsible for releasing any resources that were acquired by the object during its lifetime, such as memory or graphics contexts. It does not return anything and thus has an empty return type (void). </p>
 <hr>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
 <h3 id="function-create">function Create</h3>
+<p><em>Creates a graphics context based on the current renderer API.</em> </p>
 <pre><code class="language-C++">static Scope&lt; GraphicsContext &gt; AGE::GraphicsContext::Create (
     void * Window
 ) 
 </code></pre>
+<p>This function creates and returns a Scope of <a href="./"><strong>GraphicsContext</strong></a> which is initialized according to the currently set <a href="../class_a_g_e_1_1_renderer/"><strong>Renderer</strong></a> API. If no valid API is set, it asserts false and returns nullptr. </p>
 <hr>
 
 <hr />

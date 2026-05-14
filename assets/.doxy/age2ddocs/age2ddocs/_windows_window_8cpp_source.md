@@ -32,37 +32,38 @@ namespace AGE
     static bool s_GLFWInitialized = false;
     WindowsWindow* WindowsWindow::s_Window;
 
-    static void GLFWErrorCallback(int Error, const char* Description)
+static void GLFWErrorCallback(int Error, const char* Description)
     {
         CoreLogger::Error("GLFW Error ({0}): {1}", Error, Description);
     }
 
-    Scope<AGEWindow> AGEWindow::Create(const WindowProps& Props)
+Scope<AGEWindow> AGEWindow::Create(const WindowProps& Props)
     {
         return CreateScope<WindowsWindow>(Props);
     }
 
-    WindowsWindow::WindowsWindow(const WindowProps& Props)
+WindowsWindow::WindowsWindow(const WindowProps& Props)
     {
         AGE_PROFILE_FUNCTION();
         Init(Props);
         s_Window = this;
     }
 
-    WindowsWindow::~WindowsWindow()
+WindowsWindow::~WindowsWindow()
     {
         AGE_PROFILE_FUNCTION();
         Shutdown();
     }
 
-    Vector2 WindowsWindow::GetMousePos()
+Vector2 WindowsWindow::GetMousePos()
     {
         double x, y;
         glfwGetCursorPos(m_Window,&x, &y);
         return {static_cast<float>(x),static_cast<float>(y)};
     }
 
-    void WindowsWindow::JoystickCallback(int jid, int event)
+void Win
+dowsWindow::JoystickCallback(int jid, int event)
     {
 
         if (event == GLFW_CONNECTED)
@@ -78,13 +79,15 @@ namespace AGE
         }
     }
 
-    void WindowsWindow::SwitchRenderer()
+void Win
+dowsWindow::SwitchRenderer()
     {
         RendererChangeEvent Event(this);
         m_RendererCallback(Event);
     }
 
-    void WindowsWindow::RebuildWindow()
+void Win
+dowsWindow::RebuildWindow()
     {
         Shutdown();
         m_Context.reset();
@@ -96,14 +99,17 @@ namespace AGE
         Init(Props);
     }
 
-    void WindowsWindow::SetWindowIcon(const std::filesystem::path& Path)
+void Win
+dowsWindow::SetWindowIcon(const std::filesystem::path& Path)
     {
         m_Images[0].pixels = stbi_load(Path.string().c_str(), &m_Images[0].width, &m_Images[0].height, 0, 4);
         glfwSetWindowIcon(m_Window, 1, m_Images);
         stbi_image_free(m_Images[0].pixels);
     }
 
-    void WindowsWindow::Init(const WindowProps& Props)
+    
+void Win
+dowsWindow::Init(const WindowProps& Props)
     {
         AGE_PROFILE_FUNCTION();
         m_Data.Title = Props.Title;
@@ -118,7 +124,7 @@ namespace AGE
         if (!s_GLFWInitialized)
         {
             int success = glfwInit();
-            AGE_CORE_ASSERT(success, "Could not initialize GLFW!");
+            CoreLogger::Assert(success, "Could not initialize GLFW!");
 
             glfwSetErrorCallback(GLFWErrorCallback);
 
@@ -306,7 +312,8 @@ namespace AGE
 
     }
 
-    void WindowsWindow::Shutdown()
+void Win
+dowsWindow::Shutdown()
     {
         AGE_PROFILE_FUNCTION();
         glfwSetWindowShouldClose(m_Window, true);
@@ -320,7 +327,8 @@ namespace AGE
 
 
 
-    void WindowsWindow::OnUpdate()
+void Win
+dowsWindow::OnUpdate()
     {
         AGE_PROFILE_FUNCTION();
         glfwPollEvents();
@@ -328,7 +336,8 @@ namespace AGE
         m_Context->SwapBuffers();
     }
 
-    void WindowsWindow::SetVSync(bool Enabled)
+void Win
+dowsWindow::SetVSync(bool Enabled)
     {
         AGE_PROFILE_FUNCTION();
 
@@ -344,11 +353,13 @@ namespace AGE
         m_Data.VSync = Enabled;
     }
 
-    bool WindowsWindow::IsVSync() const
+bool Win
+dowsWindow::IsVSync() const
     {
         return m_Data.VSync;
     }
-    void WindowsWindow::ProcessJoystickInput()
+void Win
+dowsWindow::ProcessJoystickInput()
     {
     }
 }

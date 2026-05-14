@@ -16,12 +16,26 @@
           <declname>rhs</declname>
         </param>
         <briefdescription>
+<para>Encodes an AnimationSpecification object into a Node object. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes an instance of the AnimationSpecification class and encodes it into a Node object, which is then returned by the function. The encoding process involves pushing back several properties of the AnimationSpecification object onto the Node object in specific order: Name, NumberOfFrames, MovementStatus (cast to int), Width, Height, TextureFilePath, and bIsReadyToLoad.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The AnimationSpecification object to be encoded. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A Node object containing the encoded data from the AnimationSpecification object. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" line="228" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" bodystart="228" bodyend="240"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" line="371" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" bodystart="371" bodyend="383"/>
       </memberdef>
       <memberdef kind="function" id="struct_y_a_m_l_1_1convert_3_01_a_g_e_1_1_animation_specification_01_4_1a7cc77dcb151a27b65858f6e53d451aa1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -38,19 +52,41 @@
           <declname>rhs</declname>
         </param>
         <briefdescription>
+<para>Decodes a Node object into an AnimationSpecification object. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes in a const reference to a Node object and a reference to an <ref refid="struct_a_g_e_1_1_animation_specification" kindref="compound">AGE::AnimationSpecification</ref> object. It checks if the Node is a sequence and if it has any elements. If these conditions are not met, it returns false. Otherwise, it populates the AnimationSpecification with data from the Node. The function then returns true.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The const reference to the Node object to be decoded. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The reference to the <ref refid="struct_a_g_e_1_1_animation_specification" kindref="compound">AGE::AnimationSpecification</ref> object that will hold the decoded data.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the Node was successfully decoded, false otherwise. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" line="242" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" bodystart="242" bodyend="258"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" line="396" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" bodystart="396" bodyend="412"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" line="226" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" bodystart="227" bodyend="259"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" line="361" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" bodystart="362" bodyend="413"/>
     <listofallmembers>
       <member refid="struct_y_a_m_l_1_1convert_3_01_a_g_e_1_1_animation_specification_01_4_1a7cc77dcb151a27b65858f6e53d451aa1" prot="public" virt="non-virtual"><scope>YAML::convert&lt; AGE::AnimationSpecification &gt;</scope><name>decode</name></member>
       <member refid="struct_y_a_m_l_1_1convert_3_01_a_g_e_1_1_animation_specification_01_4_1acec4c72ca3808eedda0a1dc07304c7c6" prot="public" virt="non-virtual"><scope>YAML::convert&lt; AGE::AnimationSpecification &gt;</scope><name>encode</name></member>

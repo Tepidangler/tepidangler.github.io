@@ -39,57 +39,60 @@ namespace AGE
             ImageComponent
         };
 
-        UIComponentType() = default;
-         UIComponentType(Value Val)
+UIComponentType() = default;
+         COMMENT:
+CONFIDENCE: 1.0;
+
+UIComponentType(Value Val)
             : value(Val)
         {
             Name = ToString(value);
 
         }
 
-        constexpr operator Value() const {return value;}
+constexpr operator Value() const {return value;}
 
         explicit operator bool() const = delete;
 
-        constexpr bool operator==(UIComponentType a) const
+constexpr bool operator==(UIComponentType a) const
         {
             return value == a.value;
         }
 
-        constexpr bool operator!=(UIComponentType a) const
+constexpr bool operator!=(UIComponentType a) const
         {
             return value != a.value;
         }
 
-        operator std::string()  const
+operator std::string()  const
         {
             return Name;
         }
-        std::string operator()(Value Val)  const
+std::string operator()(Value Val)  const
         {
             return ToString(Val);
         }
 
-        Value ToValue()
+Value ToValue()
         {
             return value;
         }
-        Value ToValue() const
+Value ToValue() const
         {
             return value;
         }
 
-        std::string& ToString()
+std::string& ToString()
         {
             return Name;
         }
 
-        std::string ToString() const
+std::string ToString() const
         {
             return Name;
         }
 
-        std::string ToString(Value Val)
+std::string ToString(Value Val)
         {
             switch(Val)
             {
@@ -128,7 +131,7 @@ namespace AGE
             return std::string();
         }
 
-        std::string ToString(Value Val) const
+std::string ToString(Value Val) const
         {
             switch(Val)
             {
@@ -167,13 +170,13 @@ namespace AGE
 
         }
 
-        static void Serialize(DataWriter* Serializer, const UIComponentType& Instance)
+static void Serialize(DataWriter* Serializer, const UIComponentType& Instance)
         {
             Serializer->WriteString(Instance.Name);
             Serializer->WriteRaw<uint16_t>(Instance.value);
         }
 
-        static void Deserialize(DataReader* Serializer, UIComponentType& Instance)
+static void Deserialize(DataReader* Serializer, UIComponentType& Instance)
         {
             Serializer->ReadString(Instance.Name);
             Serializer->ReadRaw<Value>(Instance.value);
@@ -187,7 +190,7 @@ namespace AGE
 
     struct UIProperties
     {
-        UIProperties() = default;
+UIProperties() = default;
         Vector3 Position = Vector3(0.f);
         Vector3 Rotation = Vector3(0.f);
         Vector3 Scale = Vector3(1.f);
@@ -197,7 +200,7 @@ namespace AGE
 
     struct BoxProperties
     {
-        BoxProperties() = default;
+BoxProperties() = default;
         Vector3 Position = Vector3(0.f);
         Vector3 Rotation = Vector3(0.f);
         Vector3 Scale = Vector3(1.f);

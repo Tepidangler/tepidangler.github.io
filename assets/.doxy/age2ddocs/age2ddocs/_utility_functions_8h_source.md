@@ -27,7 +27,7 @@ namespace AGE {
 
     class Convert {
     public:
-        Convert() {}
+Convert() {}
 #ifdef AG_PLATFORM_WINDOWS
         static DirectX::XMFLOAT2 ToXMFloat2(Vector2 vec);
         static DirectX::XMFLOAT3 ToXMFloat3(Vector3 vec);

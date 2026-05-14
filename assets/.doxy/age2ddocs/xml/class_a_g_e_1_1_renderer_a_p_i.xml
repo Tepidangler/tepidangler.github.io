@@ -47,7 +47,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" line="45" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" bodystart="45" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" line="58" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" bodystart="58" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -58,12 +58,14 @@
         <name>~RendererAPI</name>
         <qualifiedname>AGE::RendererAPI::~RendererAPI</qualifiedname>
         <briefdescription>
+<para>Virtual destructor for <ref refid="class_a_g_e_1_1_renderer_a_p_i" kindref="compound">RendererAPI</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is responsible for freeing any resources that the <ref refid="class_a_g_e_1_1_renderer_a_p_i" kindref="compound">RendererAPI</ref> object may have acquired during its lifetime, such as memory or graphics resources. It does not return a value and has no parameters. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" line="20" column="9"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" line="25" column="9"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_renderer_a_p_i_1ae3488c25a4da67baebaa3116268d7b2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -78,7 +80,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" line="22" column="14"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" line="27" column="14"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_renderer_a_p_i_1a44952d1edbac0dcec2ce6aff8a2869ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -109,7 +111,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" line="23" column="14"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" line="28" column="14"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_renderer_a_p_i_1a2855685bbbe23f2e9aca1212723a311f" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -128,7 +130,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" line="24" column="14"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" line="29" column="14"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_renderer_a_p_i_1a38799865f7c521674297bd44c81d1e3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -143,7 +145,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" line="25" column="14"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" line="30" column="14"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_renderer_a_p_i_1a72b89f7e09639acc1df2583d1eadb62d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -170,7 +172,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" line="27" column="14"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" line="32" column="14"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_renderer_a_p_i_1a1b202df5a96ed8a047ffbf3c277ca866" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -193,30 +195,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" line="28" column="14"/>
-      </memberdef>
-      <memberdef kind="function" id="class_a_g_e_1_1_renderer_a_p_i_1a5cb4b8e410b01f2becf8da9524aaa661" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
-        <type>void</type>
-        <definition>virtual void AGE::RendererAPI::DrawArrays</definition>
-        <argsstring>(const Ref&lt; VertexArray &gt; &amp;VertexArray, uint32_t IndexCount)=0</argsstring>
-        <name>DrawArrays</name>
-        <qualifiedname>AGE::RendererAPI::DrawArrays</qualifiedname>
-        <reimplementedby refid="class_a_g_e_1_1_open_g_l_renderer_a_p_i_1a155d5cbf1677c608fbfc4e38c927676e">DrawArrays</reimplementedby>
-        <param>
-          <type>const Ref&lt; <ref refid="class_a_g_e_1_1_vertex_array" kindref="compound">VertexArray</ref> &gt; &amp;</type>
-          <declname>VertexArray</declname>
-        </param>
-        <param>
-          <type>uint32_t</type>
-          <declname>IndexCount</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" line="29" column="14"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" line="33" column="14"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_renderer_a_p_i_1a3bf8971007535abda2083b296e568ae4" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -239,7 +218,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" line="30" column="14"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" line="34" column="14"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_renderer_a_p_i_1a58c74b240efa0fcd5717faeb115212e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -262,7 +241,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" line="31" column="14"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" line="35" column="14"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_renderer_a_p_i_1a874e5c3e2ca0a656179e7467e4727298" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -281,7 +260,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" line="32" column="14"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" line="36" column="14"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_renderer_a_p_i_1a4ed43bb7836e5475fcb5540707a45221" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -296,7 +275,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" line="34" column="14"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" line="38" column="14"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_renderer_a_p_i_1a53042de46356a65648808a30c5667b7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -311,7 +290,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" line="36" column="14"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" line="40" column="14"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_renderer_a_p_i_1aedaf757a78a5ae71f0c8204922cd756a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -326,7 +305,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" line="38" column="14"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" line="42" column="14"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -337,12 +316,21 @@
         <name>Create</name>
         <qualifiedname>AGE::RendererAPI::Create</qualifiedname>
         <briefdescription>
+<para>Creates a new instance of the <ref refid="class_a_g_e_1_1_renderer_a_p_i" kindref="compound">RendererAPI</ref> based on the current setting. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function creates and returns an instance of the appropriate <ref refid="class_a_g_e_1_1_renderer_a_p_i" kindref="compound">RendererAPI</ref> class, depending on the currently set API. If no API is set (i.e., s_API is None), it asserts false with a message &quot;RendererAPI::API::None is currently not supported!&quot;. For OpenGL, it returns a new instance of <ref refid="class_a_g_e_1_1_open_g_l_renderer_a_p_i" kindref="compound">OpenGLRendererAPI</ref>. In all other cases, it asserts false with the message &quot;Unknown Renderer API!&quot; and returns nullptr.</para>
+<para><simplesect kind="return"><para>Scope&lt;RendererAPI&gt; - The newly created <ref refid="class_a_g_e_1_1_renderer_a_p_i" kindref="compound">RendererAPI</ref> instance or nullptr if an invalid API is set.</para>
+</simplesect>
+Creates a new instance of the <ref refid="class_a_g_e_1_1_renderer_a_p_i" kindref="compound">RendererAPI</ref> based on the current setting.</para>
+<para>This function creates and returns an instance of either <ref refid="class_a_g_e_1_1_open_g_l_renderer_a_p_i" kindref="compound">OpenGLRendererAPI</ref> or another type of <ref refid="class_a_g_e_1_1_renderer_a_p_i" kindref="compound">RendererAPI</ref>, depending on what is currently set as the API. If no valid API is set (i.e., s_API is None), it asserts false with a message indicating that this case is not supported.</para>
+<para><simplesect kind="return"><para>Scope&lt;RendererAPI&gt; A new instance of the <ref refid="class_a_g_e_1_1_renderer_a_p_i" kindref="compound">RendererAPI</ref>, or nullptr if an invalid API is detected. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" line="21" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/RenderAPI.cpp" bodystart="9" bodyend="27"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" line="26" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/RenderAPI.cpp" bodystart="23" bodyend="41"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_renderer_a_p_i_1ab16ab91724de81fb8180a4c9e3fb99da" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>API</type>
@@ -351,12 +339,16 @@
         <name>GetAPI</name>
         <qualifiedname>AGE::RendererAPI::GetAPI</qualifiedname>
         <briefdescription>
+<para>This function returns the current API object used by the application. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>The currently active API object, or &quot;Unknown&quot; if no API is set. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" line="40" column="19" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" bodystart="40" bodyend="40"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" line="48" column="19" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" bodystart="48" bodyend="48"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_renderer_a_p_i_1a61a74e229f23e0a2663a70d6eeaa599b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -369,12 +361,25 @@
           <declname>Type</declname>
         </param>
         <briefdescription>
+<para>This function sets the API type for the <ref refid="class_a_g_e_1_1_renderer_a_p_i" kindref="compound">RendererAPI</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The API type to be set, which can be one of the values defined in the RendererAPI::API enum. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" line="42" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" bodystart="42" bodyend="42"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" line="55" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" bodystart="55" bodyend="55"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -393,12 +398,11 @@
         <link refid="class_a_g_e_1_1_renderer_a_p_i"/>
       </node>
     </inheritancegraph>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" line="9" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" bodystart="10" bodyend="48"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" line="9" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" bodystart="10" bodyend="61"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_renderer_a_p_i_1a250b9226de465d3ae74b52f6254fad00" prot="public" virt="non-virtual"><scope>AGE::RendererAPI</scope><name>API</name></member>
       <member refid="class_a_g_e_1_1_renderer_a_p_i_1a38799865f7c521674297bd44c81d1e3d" prot="public" virt="pure-virtual"><scope>AGE::RendererAPI</scope><name>Clear</name></member>
       <member refid="class_a_g_e_1_1_renderer_a_p_i_1a98a8ec3558c0a1ba1d1af9e795f44549" prot="public" virt="non-virtual"><scope>AGE::RendererAPI</scope><name>Create</name></member>
-      <member refid="class_a_g_e_1_1_renderer_a_p_i_1a5cb4b8e410b01f2becf8da9524aaa661" prot="public" virt="pure-virtual"><scope>AGE::RendererAPI</scope><name>DrawArrays</name></member>
       <member refid="class_a_g_e_1_1_renderer_a_p_i_1a72b89f7e09639acc1df2583d1eadb62d" prot="public" virt="pure-virtual"><scope>AGE::RendererAPI</scope><name>DrawIndexed</name></member>
       <member refid="class_a_g_e_1_1_renderer_a_p_i_1a1b202df5a96ed8a047ffbf3c277ca866" prot="public" virt="pure-virtual"><scope>AGE::RendererAPI</scope><name>DrawIndexed</name></member>
       <member refid="class_a_g_e_1_1_renderer_a_p_i_1a3bf8971007535abda2083b296e568ae4" prot="public" virt="pure-virtual"><scope>AGE::RendererAPI</scope><name>DrawLines</name></member>

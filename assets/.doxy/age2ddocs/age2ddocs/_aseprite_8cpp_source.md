@@ -22,7 +22,9 @@ namespace AGE
 {
 
     //Aseprite uses little endian byte order
-    void Aseprite::ReadData(const std::filesystem::path& Filepath)
+    
+
+void Aseprite::ReadData(const std::filesystem::path& Filepath)
     {
         std::string Name = GetFileName(Filepath);
         AsepriteHeader Header;
@@ -70,7 +72,16 @@ namespace AGE
         }
     }
 
-    Ref<Texture2D> Aseprite::CreateImage(const std::string& Filename, bool ShouldCreateTexture, bool ShouldFlipOnLoad)
+    "/**\n \
+* @brief Creates an image from the given Aseprite file.\n \
+* This function reads data from a specified Aseprite file, processes it and creates an image object. The created image can optionally be converted into a texture.\n \
+* @param Filename The name of the Aseprite file to read from.\n \
+* @param ShouldCreateTexture If true, a texture will be created from the image data. Otherwise, only the image object is returned.\n \
+* @param ShouldFlipOnLoad If true, the loaded image will be flipped vertically.\n \
+* @return A reference to the created image or texture (if any). Returns nullptr if no image was created and the function should not create a texture.\n \
+*/"
+"Creates an image from a given Aseprite file and optionally creates a texture."
+Ref<Texture2D> Aseprite::CreateImage(const std::string& Filename, bool ShouldCreateTexture, bool ShouldFlipOnLoad)
     {
         std::vector<uint8_t> ImgData;
 
@@ -103,18 +114,20 @@ namespace AGE
         return nullptr;
     }
 
-    Ref<Texture2D> Aseprite::CreateTexture(std::string ImageName)
+Ref<Texture2D> Aseprite::CreateTexture(std::string ImageName)
     {
         auto& Img = m_ImagePairs[ImageName];
         return Texture2D::Create(Img.get(), Img->GetImageSpec().GetWidth(), Img->GetImageSpec().GetHeight(), Img->GetImageSpec().GetChannels(), Img->GetImageByteSize());
     }
 
-    std::vector<AsepriteFrameData>& Aseprite::GetSpriteFrameData(const std::string& SpriteName)
+std::vector<AsepriteFrameData>& Aseprite::GetSpriteFrameData(const std::string& SpriteName)
     {
         return m_AsepriteData[SpriteName].Frames;
     }
 
-    void Aseprite::ReadFrameData(const std::string& Filename,  FileStreamReader* Stream, size_t Size)
+    
+
+void Aseprite::ReadFrameData(const std::string& Filename,  FileStreamReader* Stream, size_t Size)
     {
         AsepriteFrameData Data;
         AsepriteChunk Chunk;
@@ -164,7 +177,9 @@ namespace AGE
             m_AsepriteData[Filename].Frames[i] = Data;
         }
     }
-    void Aseprite::ReadOldPaletteChunk(AsepriteFileData& Data)
+    
+
+void Aseprite::ReadOldPaletteChunk(AsepriteFileData& Data)
     {
         AsepriteOldPaletteChunk Chunk;
         uint8_t Color[3];
@@ -206,7 +221,14 @@ namespace AGE
 
     }
 
-    void Aseprite::ReadLayerChunk(AsepriteFileData& Data)
+"/**\n" \
+" * @brief Reads layer chunk data from an Aseprite file.\n" \
+" * This function iterates over all frames in a given AsepriteFileData object, then for each frame,\n" \
+" * it checks if any of the chunks are of type LayerChunk. If they are, it reads the layer chunk data\n" \
+" * into an AsepriteLayer object and adds this to the Frame's list of layers.\n" \
+" * @param Data The AsepriteFileData object that contains all frames and chunks from the Aseprite file.\n" \
+" */\n"
+void Aseprite::ReadLayerChunk(AsepriteFileData& Data)
     {
         AsepriteLayer LayerChunk;
         uint8_t Useless;
@@ -244,7 +266,9 @@ namespace AGE
         }
     }
 
-    AsepriteCelChunk Aseprite::ReadCelChunk(AsepriteFileData& Data)
+    
+"/**\n * @brief Reads a cel chunk from the given Aseprite file data.\n * \n * This function reads and parses cel chunks from an Aseprite file, which are used to define the appearance of individual frames in animations. The parsed information is stored in the `AsepriteCelChunk` struct.\n * \n * @param Data Reference to the AsepriteFileData object containing the data to be read from.\n * \n * @return An instance of `AsepriteCelChunk` filled with parsed cel chunk information.\n */"
+AsepriteCelChunk Aseprite::ReadCelChunk(AsepriteFileData& Data)
     {
         AsepriteCelChunk CelChunk;
         uint8_t Useless;
@@ -321,7 +345,8 @@ namespace AGE
         return CelChunk;
     }
 
-    void Aseprite::ReadColorProfileChunk( AsepriteFileData& Data)
+
+void Aseprite::ReadColorProfileChunk( AsepriteFileData& Data)
     {
         AsepriteColorProfileChunk Chunk;
         uint8_t Useless;
@@ -355,7 +380,8 @@ namespace AGE
         }
     }
 
-    void Aseprite::ReadExternalFilesChunk( AsepriteFileData& Data)
+
+void Aseprite::ReadExternalFilesChunk( AsepriteFileData& Data)
     {
         AsepriteExternalFilesChunk Chunk;
         uint8_t Useless;
@@ -388,7 +414,7 @@ namespace AGE
         }
     }
 
-    void Aseprite::ReadMaskChunk( AsepriteFileData& Data)
+void Aseprite::ReadMaskChunk( AsepriteFileData& Data)
     {
         AsepriteMaskChunk Chunk;
         uint8_t Useless;
@@ -421,7 +447,15 @@ namespace AGE
         }
     }
 
-    void Aseprite::ReadTagsChunk( AsepriteFileData& Data)
+    "/**\n" \
+" * @brief Reads the Tags chunk from an Aseprite file and stores it in a data structure.\n" \
+" * \n" \
+" * This function iterates over all frames of the given AsepriteFileData object, checks if each Chunk'<｜begin▁of▁sentence｜>\n" \
+" * type is AsepriteChunkType::TagsChunk, and if so, reads the Tags chunk from that Chunk's data into an AsepriteTagsChunk structure.\n" \
+" * \n" \
+" * @param Data The AsepriteFileData object to read from. This contains all frames of the animation.\n" \
+" */\n"
+void Aseprite::ReadTagsChunk( AsepriteFileData& Data)
     {
         AsepriteTagsChunk Chunk;
         uint8_t Useless;
@@ -463,7 +497,9 @@ namespace AGE
         }
     }
 
-    void Aseprite::ReadNewPaletteChunk( AsepriteFileData& Data)
+    
+void Ase
+prite::ReadNewPaletteChunk( AsepriteFileData& Data)
     {
         AsepritePaletteChunk Chunk;
         uint8_t Useless;
@@ -511,7 +547,9 @@ namespace AGE
         }
     }
 
-    void Aseprite::ReadUserDataChunk( AsepriteFileData& Data)
+    
+void Ase
+prite::ReadUserDataChunk( AsepriteFileData& Data)
     {
         AsepriteUserData Chunk;
         //uint8_t Useless;
@@ -724,7 +762,9 @@ namespace AGE
         }
     }
 
-    void Aseprite::ReadSliceChunk( AsepriteFileData& Data)
+    
+void Ase
+prite::ReadSliceChunk( AsepriteFileData& Data)
     {
         AsepriteSliceChunk Chunk;
         uint32_t Useless;
@@ -770,7 +810,9 @@ namespace AGE
         }
     }
 
-    void Aseprite::ReorderLayers(const std::string& Filename)
+    
+void Ase
+prite::ReorderLayers(const std::string& Filename)
     {
         bool ZIndexExist = false;
 
@@ -812,7 +854,8 @@ namespace AGE
 
     }
 
-    std::string Aseprite::GetFileName(const std::filesystem::path& Path)
+std::str
+ing Aseprite::GetFileName(const std::filesystem::path& Path)
     {
 
         std::string base = Path.string().substr(Path.string().find_last_of("/\\") + 1);
@@ -826,11 +869,14 @@ namespace AGE
 
         return std::string();
     }
-    AsepritePropertyTypes Aseprite::ConvertToType(uint16_t T)
+Aseprite
+PropertyTypes Aseprite::ConvertToType(uint16_t T)
     {
         return (AsepritePropertyTypes)T;
     }
-    void Aseprite::ProcessElement(MemoryStreamReader* Stream, AsepritePropertyTypes T, AsepriteUserProps& Data)
+    <doxygen comment>
+void Ase
+prite::ProcessElement(MemoryStreamReader* Stream, AsepritePropertyTypes T, AsepriteUserProps& Data)
     {
         switch (T)
         {

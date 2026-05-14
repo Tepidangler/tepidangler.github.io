@@ -13,7 +13,7 @@
 #endif // !VECTOR2_H
 
 #include <cmath>
-#include <glm/glm.hpp>
+
 #include <sstream>
 #pragma once
 
@@ -28,110 +28,120 @@ namespace AGE {
         Vector2();
         explicit Vector2(float a);
         Vector2(float a, float b);
-        Vector2(const Vector2& Other)
+Vector2(const Vector2& Other)
         {
             x = Other.x;
             y = Other.y;
         }
 
-        Vector2& operator=(const Vector2& Other)
+Vector2& operator=(const Vector2& Other)
         {
             x = Other.x;
             y = Other.y;
             return *this;
         }
 
-        float dot(const Vector2& vec) const {
+float dot(const Vector2& vec) const {
             float product = (x * vec.x) + (y * vec.y);
             return product;
         }
 
-        float norm(const Vector2& vec) const {
+float norm(const Vector2& vec) const {
             float magnitude = sqrtf(powf((x - vec.x), 2.f) + powf((y - vec.y), 2.f));
 
             return magnitude;
         }
 
-        float magnitude() const {
+float magnitude() const {
             return norm(Vector2());
         }
 
         Vector2 normalize() const;
 
-        float& operator [](int i)
+float& operator [](int i)
         {
             return ((&x)[i]);
         }
 
-        const float& operator [](int i) const
+const float& operator [](int i) const
         {
             return ((&x)[i]);
         }
 
-        Vector2 operator+(const Vector2& vec) const {
+Vector2 operator+(const Vector2& vec) const {
             return Vector2(x + vec.x, y + vec.y);
         }
 
-        void operator+=(const Vector2& vec) {
+void operator+=(const Vector2& vec) {
             x += vec.x;
             y += vec.y;
         }
 
-        Vector2 operator-(const Vector2& vec) const {
+Vector2 operator-(const Vector2& vec) const {
             return Vector2(x - vec.x, y - vec.y);
         }
-        Vector2 operator-(const float val) const {
+Vector2 operator-(const float val) const {
             return Vector2(x - val, y - val);
         }
 
 
-        void operator-=(const Vector2& vec) {
+void operator-=(const Vector2& vec) {
             x -= vec.x;
             y -= vec.y;
         }
 
-        Vector2 operator*(float scalar) const {
+        COMMENT:
+CONFIDENCE: 1.0;
+
+COMMENT:
+CONFIDENCE: 1.0;
+
+Vector2 operator*(float scalar) const {
             return Vector2(x * scalar, y * scalar);
         }
 
-        void operator*=(float scalar) {
+void operator*=(float scalar) {
             x *= scalar;
             y *= scalar;
         }
 
-        Vector2 operator/(float scalar) const {
+        COMMENT:
+CONFIDENCE: 1.0;
+
+COMMENT:
+CONFIDENCE: 1.0;
+
+Vector2 operator/(float scalar) const {
             return Vector2(x / scalar, y / scalar);
         }
 
-        Vector2 operator/(const Vector2& vec) const {
+COMMENT:
+CONFIDENCE: 1.0;
+
+Vector2 operator/(const Vector2& vec) const {
             return Vector2(x / vec.x, y / vec.y);
         }
 
-        void operator/=(float scalar) {
+void operator/=(float scalar) {
             x /= scalar;
             y /= scalar;
         }
 
-        bool operator==(const Vector2& vec) const {
+bool operator==(const Vector2& vec) const {
             return x == vec.x && y == vec.y;
         }
 
-        bool operator!=(const Vector2& vec) const {
+bool operator!=(const Vector2& vec) const {
             return x != vec.x || y != vec.y;
         }
 
-        operator std::string()
+operator std::string()
         {
             std::stringstream SS;
 
             SS << "X: " << x << " Y: " << y << '\n';
 
             return SS.str();
-        }
-
-        operator glm::vec2() const
-        {
-            return {x,y};
         }
     };
 

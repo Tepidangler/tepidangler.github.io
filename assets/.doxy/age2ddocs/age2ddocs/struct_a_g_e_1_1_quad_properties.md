@@ -63,7 +63,7 @@
 
 | Type | Name |
 | ---: | :--- |
-|  void | [**ResetProperties**](#function-resetproperties) () <br> |
+|  void | [**ResetProperties**](#function-resetproperties) () <br>_Resets all properties of the object to default values._  |
 
 
 
@@ -205,12 +205,27 @@ Matrix4D AGE::QuadProperties::Transform;
 
 ### function ResetProperties 
 
+_Resets all properties of the object to default values._ 
 ```C++
 inline void AGE::QuadProperties::ResetProperties () 
 ```
 
 
 
+This function resets all properties of an object to their initial state. The properties include Alpha, Size, Color, TilingFactor, TintColor, TextureCoords, Transform and EntityID. All are set to their respective defaults: Alpha is set to 1.0f, Size is set to {1.0f, 1.0f}, Color is set to {1.0f, 1.0f, 1.0f, 1.0f}, TilingFactor is set to 1.0f, TintColor is set to {1.0f, 1.0f, 1.0f, 1.0f}, TextureCoords are set to {{1.0f, 1.0f}, {1.0f, 0.0f}, {0.0f, 0.0f}, {0.0f, 1.0f}}, Transform is set to {1.0f} and EntityID is set to -1.
+
+
+
+
+**Returns:**
+
+void 
+
+
+
+
+
+        
 
 <hr>
 

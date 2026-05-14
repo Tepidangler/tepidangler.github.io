@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/RendererEvent.h" line="38" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/RendererEvent.h" bodystart="38" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/RendererEvent.h" line="67" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/RendererEvent.h" bodystart="67" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -31,12 +31,23 @@
           <declname>DeltaTime</declname>
         </param>
         <briefdescription>
+<para><ref refid="class_a_g_e_1_1_render_u_i_event" kindref="compound">RenderUIEvent</ref> is a function that takes in a <ref refid="class_a_g_e_1_1_time_step" kindref="compound">TimeStep</ref> as an argument and assigns it to the member variable m_DeltaTime. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>DeltaTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time step for rendering UI events. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/RendererEvent.h" line="34" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/RendererEvent.h" bodystart="34" bodyend="35"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/RendererEvent.h" line="59" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/RendererEvent.h" bodystart="59" bodyend="60"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_render_u_i_event_1a309b411731aa4f2d960f4c22ea96f3c1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="class_a_g_e_1_1_time_step" kindref="compound">TimeStep</ref></type>
@@ -45,12 +56,16 @@
         <name>GetDeltaTime</name>
         <qualifiedname>AGE::RenderUIEvent::GetDeltaTime</qualifiedname>
         <briefdescription>
+<para>This function returns the time difference between two frames in the game world. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>The time difference as a <ref refid="class_a_g_e_1_1_time_step" kindref="compound">TimeStep</ref> object. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/RendererEvent.h" line="37" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/RendererEvent.h" bodystart="37" bodyend="37"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/RendererEvent.h" line="66" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/RendererEvent.h" bodystart="66" bodyend="66"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -88,7 +103,7 @@
         <link refid="class_a_g_e_1_1_time_step"/>
       </node>
     </collaborationgraph>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/RendererEvent.h" line="31" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/RendererEvent.h" bodystart="32" bodyend="41"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/RendererEvent.h" line="51" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/RendererEvent.h" bodystart="52" bodyend="70"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_event_1ae76fb834a0ee69601539da677f1333fa" prot="public" virt="pure-virtual"><scope>AGE::RenderUIEvent</scope><name>GetCategoryFlags</name></member>
       <member refid="class_a_g_e_1_1_render_u_i_event_1a309b411731aa4f2d960f4c22ea96f3c1" prot="public" virt="non-virtual"><scope>AGE::RenderUIEvent</scope><name>GetDeltaTime</name></member>

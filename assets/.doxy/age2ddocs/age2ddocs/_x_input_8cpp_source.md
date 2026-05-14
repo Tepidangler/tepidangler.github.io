@@ -16,14 +16,16 @@
 #include "Core/Public/Log.h"
 namespace AGE
 {
-    XInput::XInput()
+XInput::XInput()
     {
         CoreLogger::Info("Registering Controllers...");
         RegisterControllers();
 
     }
 
-    void XInput::RegisterControllers()
+    
+
+void XInput::RegisterControllers()
     {
         ulong_t Result;
 
@@ -60,7 +62,7 @@ namespace AGE
             }
         }
     }
-    void XInput::ClampLeftThumbstickDeadZone(XINPUT_GAMEPAD& Gamepad, const XInputControllerInfo& Info)
+void XInput::ClampLeftThumbstickDeadZone(XINPUT_GAMEPAD& Gamepad, const XInputControllerInfo& Info)
     {
         float LX = Gamepad.sThumbLX;
         float LY = Gamepad.sThumbLY;
@@ -105,7 +107,7 @@ namespace AGE
         }
     }
 
-    void XInput::ClampRightThumbstickDeadZone(XINPUT_GAMEPAD& Gamepad, const XInputControllerInfo& Info)
+void XInput::ClampRightThumbstickDeadZone(XINPUT_GAMEPAD& Gamepad, const XInputControllerInfo& Info)
     {
         float RX = Gamepad.sThumbRX;
         float RY = Gamepad.sThumbRY;
@@ -148,7 +150,9 @@ namespace AGE
             Info.CallbackFn(Event);
         }
     }
-    void XInput::ClampLeftTriggerDeadZone(XINPUT_GAMEPAD& Gamepad, const XInputControllerInfo& Info)
+    
+
+void XInput::ClampLeftTriggerDeadZone(XINPUT_GAMEPAD& Gamepad, const XInputControllerInfo& Info)
     {
         float LT = Gamepad.bLeftTrigger;
         float NormalizedLT = 0.f;
@@ -176,7 +180,8 @@ namespace AGE
             Info.CallbackFn(Event);
         }
     }
-    void XInput::ClampRightTriggerDeadZone(XINPUT_GAMEPAD& Gamepad, const XInputControllerInfo& Info)
+
+void XInput::ClampRightTriggerDeadZone(XINPUT_GAMEPAD& Gamepad, const XInputControllerInfo& Info)
     {
         float RT = Gamepad.bRightTrigger;
 
@@ -205,7 +210,9 @@ namespace AGE
             Info.CallbackFn(Event);
         }
     }
-    void XInput::CheckButtonInput(XINPUT_GAMEPAD& Gamepad, const XInputControllerInfo& Info)
+    
+
+void XInput::CheckButtonInput(XINPUT_GAMEPAD& Gamepad, const XInputControllerInfo& Info)
     {
         bool IsSet = IsBitSet(Gamepad.wButtons, GamePad::XInputDpadUp);
         bool WasSet = IsBitSet(m_Controllers[Info.UserIndex].second.ButtonState, GamePad::XInputDpadUp);
@@ -550,11 +557,13 @@ namespace AGE
         }
 
     }
-    bool XInput::IsBitSet(uint16_t Number, uint16_t Mask)
+bool XInput::IsBitSet(uint16_t Number, uint16_t Mask)
     {
         return (Number & Mask) != 0;
     }
-    void XInput::RegisterSingleController(ulong_t Slot)
+    
+
+void XInput::RegisterSingleController(ulong_t Slot)
     {
         ulong_t Result;
         XINPUT_STATE State;
@@ -585,48 +594,48 @@ namespace AGE
             CoreLogger::Info("\t Controller in slot {} Sucessfully Registered!", Slot);
         }
     }
-    std::pair<uint16_t, uint16_t> XInput::GetLRDeadzones(ulong_t Slot)
+std::pair<uint16_t, uint16_t> XInput::GetLRDeadzones(ulong_t Slot)
     {
         return std::pair<uint16_t, uint16_t>(m_Controllers[Slot].second.Settings.LeftThumbstickDeadzone, m_Controllers[Slot].second.Settings.RightThumbstickDeadzone);
     }
-    uint16_t XInput::GetLeftThumbstickDeadzone(ulong_t Slot)
+uint16_t XInput::GetLeftThumbstickDeadzone(ulong_t Slot)
     {
         return GetLRDeadzones(Slot).first;
     }
-    void XInput::SetLeftThumbstickDeadzone(ulong_t Slot, uint16_t Value)
+void XInput::SetLeftThumbstickDeadzone(ulong_t Slot, uint16_t Value)
     {
         m_Controllers[Slot].second.Settings.LeftThumbstickDeadzone = Value;
 
     }
-    uint16_t XInput::GetRightThumbstickDeadzone(ulong_t Slot)
+uint16_t XInput::GetRightThumbstickDeadzone(ulong_t Slot)
     {
         return GetLRDeadzones(Slot).second;
     }
-    void XInput::SetRightThumbstickDeadzone(ulong_t Slot, uint16_t Value)
+void XInput::SetRightThumbstickDeadzone(ulong_t Slot, uint16_t Value)
     {
         m_Controllers[Slot].second.Settings.RightThumbstickDeadzone = Value;
     }
-    std::pair<uint16_t, uint16_t> XInput::GetTriggerThresholds(ulong_t Slot)
+std::pair<uint16_t, uint16_t> XInput::GetTriggerThresholds(ulong_t Slot)
     {
         return std::pair<uint16_t, uint16_t>(m_Controllers[Slot].second.Settings.LeftTriggerDeadzone, m_Controllers[Slot].second.Settings.RightTriggerDeadzone);
     }
-    uint16_t XInput::GetLeftTriggerThreshold(ulong_t Slot)
+uint16_t XInput::GetLeftTriggerThreshold(ulong_t Slot)
     {
         return GetTriggerThresholds(Slot).first;
     }
-    void XInput::SetLeftTriggerThreshold(ulong_t Slot, uint16_t Value)
+void XInput::SetLeftTriggerThreshold(ulong_t Slot, uint16_t Value)
     {
         m_Controllers[Slot].second.Settings.LeftTriggerDeadzone = Value;
     }
-    uint16_t XInput::GetRightTriggerThreshold(ulong_t Slot)
+uint16_t XInput::GetRightTriggerThreshold(ulong_t Slot)
     {
         return GetTriggerThresholds(Slot).second;
     }
-    void XInput::SetRightTriggerThreshold(ulong_t Slot, uint16_t Value)
+void XInput::SetRightTriggerThreshold(ulong_t Slot, uint16_t Value)
     {
         m_Controllers[Slot].second.Settings.RightTriggerDeadzone = Value;
     }
-    void XInput::SetLowFrequencyMotorSpeed(uint16_t Speed, ulong_t ControllerSlot)
+void XInput::SetLowFrequencyMotorSpeed(uint16_t Speed, ulong_t ControllerSlot)
     {
         m_Controllers[ControllerSlot].second.Settings.LowFreqMotorSpeed = Speed;
         ulong_t Result;
@@ -638,7 +647,7 @@ namespace AGE
         Result = XInputSetState(ControllerSlot, &Vibration);
 
     }
-    void XInput::SetHighFrequencyMotorSpeed(uint16_t Speed, ulong_t ControllerSlot)
+void XInput::SetHighFrequencyMotorSpeed(uint16_t Speed, ulong_t ControllerSlot)
     {
         m_Controllers[ControllerSlot].second.Settings.HighFreqMotorSpeed = Speed;
         ulong_t Result;
@@ -650,7 +659,9 @@ namespace AGE
         Result = XInputSetState(ControllerSlot, &Vibration);
     }
 
-    void XInput::PollControllers()
+    
+
+void XInput::PollControllers()
     {
         for (ulong_t i = 0; i < m_Controllers.size(); i++)
         {

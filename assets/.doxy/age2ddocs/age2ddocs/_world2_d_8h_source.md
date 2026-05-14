@@ -34,7 +34,7 @@ namespace AGE
         void QuerySegmentOverlap(const QueryParams& Params) override;
         void QueryHit(const QueryParams& Params) override;
 
-        b2QueryFilter& GetQueryFilter() { return m_QueryFilter; }
+b2QueryFilter& GetQueryFilter() { return m_QueryFilter; }
 
         b2BodyDef MakeBodyDefinition(const BodyType& Type, const Vector3& Translation, const Vector3& Rotation, bool IsRotationFixed, void* UserData);
 

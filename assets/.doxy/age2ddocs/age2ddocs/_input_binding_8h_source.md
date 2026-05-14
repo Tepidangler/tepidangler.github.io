@@ -47,48 +47,48 @@ namespace AGE
         using ActionCallbackFn = std::function<void()>;
         using AxisCallbackFn = std::function<void(float)>;
 
-        virtual ~InputBinding() = default;
+virtual ~InputBinding() = default;
 
         static Ref<InputBinding> CreateGamepadBinding(const std::string_view& Name, GamePad::Buttons button = GamePad::Buttons::INVALID, Binding::Type bindingtype = Binding::Type::INVALID);
         static Ref<InputBinding> CreateGamepadBinding(const std::string_view& Name, GamePad::Axes axes = GamePad::Axes::INVALIDAXES, Binding::Type bindingtype = Binding::Type::Axis);
         static Ref<InputBinding> CreateKBMBinding(const std::string_view& Name, Key::Keys keycode = Key::INVALID, Binding::Type bindingtype = Binding::INVALID);
         static Ref<InputBinding> CreateInvalid();
-        void BindAxisFunction(AxisCallbackFn Func)
+void BindAxisFunction(AxisCallbackFn Func)
         {
             BindedAxisFunction = Func;
         }
-        void BindActionFunction(ActionCallbackFn Func)
+void BindActionFunction(ActionCallbackFn Func)
         {
             BindedActionFunction = Func;
         }
 
-        void ActionExecute()
+void ActionExecute()
         {
             BindedActionFunction();
         }
-        void AxisExecute()
+void AxisExecute()
         {
             BindedAxisFunction(m_AxisValue);
         }
         virtual uint16_t GetKey() const = 0;
-        std::string GetName() const { return m_BindingName; }
-        std::string GetInputType() const {return m_InputType;}
-        void SetInputType(const std::string_view& type) {m_InputType = type;}
-        bool IsPaired() const { return bPaired; }
-        void SetPaired(bool value) { bPaired = value; }
-        int32_t GetHandle() const { return m_Handle; }
-        float GetAxisValue() const { return m_AxisValue; }
-        void SetAxisValue(float value) { m_AxisValue = value; }
+std::string GetName() const { return m_BindingName; }
+std::string GetInputType() const {return m_InputType;}
+void SetInputType(const std::string_view& type) {m_InputType = type;}
+bool IsPaired() const { return bPaired; }
+void SetPaired(bool value) { bPaired = value; }
+int32_t GetHandle() const { return m_Handle; }
+float GetAxisValue() const { return m_AxisValue; }
+void SetAxisValue(float value) { m_AxisValue = value; }
 
-        void GenerateNewHandle()
+void GenerateNewHandle()
         {
             static int32_t sHandle = 1;
             m_Handle = sHandle++;
         }
 
-        bool IsValid() { return m_Handle != -1; }
+bool IsValid() { return m_Handle != -1; }
 
-        bool operator==(const InputBinding& rhs)
+bool operator==(const InputBinding& rhs)
         {
             return (IsValid() && GetHandle() == rhs.GetHandle());
         }
@@ -108,12 +108,12 @@ namespace AGE
 
     struct InvalidInputBinding_t : public InputBinding
     {
-        InvalidInputBinding_t()
+InvalidInputBinding_t()
         {
             m_BindingName = "INVALID";
         }
-        ~InvalidInputBinding_t() = default;
-        uint16_t GetKey() const override
+~InvalidInputBinding_t() = default;
+uint16_t GetKey() const override
         {
             return UINT16_MAX;
         }
@@ -121,7 +121,7 @@ namespace AGE
 
     struct GamepadInputBinding : public InputBinding
     {
-        GamepadInputBinding(const std::string_view& Name,Binding::Type type)
+GamepadInputBinding(const std::string_view& Name,Binding::Type type)
             :m_BindingType(type)
         {
             m_BindingName = Name;
@@ -131,7 +131,7 @@ namespace AGE
             m_Handle = -1;
             m_State = KeyState::Released;
         }
-        GamepadInputBinding(const std::string_view& Name,GamePad::Buttons button, Binding::Type type)
+GamepadInputBinding(const std::string_view& Name,GamePad::Buttons button, Binding::Type type)
             :m_Button(button), m_BindingType(type)
         {
             m_BindingName = Name;
@@ -141,7 +141,7 @@ namespace AGE
             m_Handle = -1;
             m_State = KeyState::Released;
         }
-        GamepadInputBinding(const std::string_view& Name,GamePad::Axes axes, Binding::Type type)
+GamepadInputBinding(const std::string_view& Name,GamePad::Axes axes, Binding::Type type)
             :m_Axes(axes), m_BindingType(type)
         {
             m_BindingName = Name;
@@ -151,9 +151,9 @@ namespace AGE
             m_Handle = -1;
             m_State = KeyState::Released;
         }
-        ~GamepadInputBinding() override = default;
+~GamepadInputBinding() override = default;
 
-        uint16_t GetKey() const override
+uint16_t GetKey() const override
         {
             switch (m_BindingType)
             {
@@ -177,12 +177,12 @@ namespace AGE
         Binding::Type m_BindingType;
 
     private:
-        GamepadInputBinding() = default;
+GamepadInputBinding() = default;
     };
 
     struct KBMInputBinding : public InputBinding
     {
-        KBMInputBinding(const std::string_view& Name, Binding::Type type)
+KBMInputBinding(const std::string_view& Name, Binding::Type type)
             :m_BindingType(type)
         {
             m_BindingName = Name;
@@ -192,7 +192,7 @@ namespace AGE
             m_Handle = -1;
             m_State = KeyState::Released;
         }
-        KBMInputBinding(const std::string_view& Name, Key::Keys keycode, Binding::Type type)
+KBMInputBinding(const std::string_view& Name, Key::Keys keycode, Binding::Type type)
             :m_Key(keycode), m_BindingType(type)
         {
             m_BindingName = Name;
@@ -203,9 +203,9 @@ namespace AGE
             m_State = KeyState::Released;
         }
 
-        ~KBMInputBinding() override = default;
+~KBMInputBinding() override = default;
 
-        uint16_t GetKey() const override
+uint16_t GetKey() const override
         {
             switch (m_BindingType)
             {
@@ -226,7 +226,7 @@ namespace AGE
         Key::Keys m_Key = Key::INVALID;
         Binding::Type m_BindingType;
     private:
-        KBMInputBinding() = default;
+KBMInputBinding() = default;
     };
 } // AGE
 

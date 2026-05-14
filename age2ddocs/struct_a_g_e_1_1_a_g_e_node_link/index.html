@@ -115,15 +115,15 @@
 <tbody>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-agenodelink-12"><strong>AGENodeLink</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-agenodelink-12"><strong>AGENodeLink</strong></a> () = default<br><em>Default constructor for</em> <a href="./"><em><strong>AGENodeLink</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-agenodelink-22"><strong>AGENodeLink</strong></a> (ax::NodeEditor::LinkId LID, ax::NodeEditor::PinId SPID, ax::NodeEditor::PinId EPID) <br></td>
+<td style="text-align: left;"><a href="#function-agenodelink-22"><strong>AGENodeLink</strong></a> (ax::NodeEditor::LinkId LID, ax::NodeEditor::PinId SPID, ax::NodeEditor::PinId EPID) <br><em>Constructs an instance of</em> <a href="./"><em><strong>AGENodeLink</strong></em></a> <em>with the given LinkId, StartPinId and EndPinId. The color is set to white (255, 255, 255).</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual</td>
-<td style="text-align: left;"><a href="#function-agenodelink"><strong>~AGENodeLink</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-agenodelink"><strong>~AGENodeLink</strong></a> () = default<br><em>Virtual destructor for the</em> <a href="./"><em><strong>AGENodeLink</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
@@ -138,11 +138,11 @@
 <tbody>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-deserialize"><strong>Deserialize</strong></a> (<a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> * Serializer, <a href="./"><strong>AGENodeLink</strong></a> &amp; Data) <br></td>
+<td style="text-align: left;"><a href="#function-deserialize"><strong>Deserialize</strong></a> (<a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> * Serializer, <a href="./"><strong>AGENodeLink</strong></a> &amp; Data) <br><em>Deserializes data from a</em> <a href="../class_a_g_e_1_1_data_reader/"><em><strong>DataReader</strong></em></a> <em>into an</em><a href="./"><em><strong>AGENodeLink</strong></em></a> <em>object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-serialize"><strong>Serialize</strong></a> (<a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> * Serializer, const <a href="./"><strong>AGENodeLink</strong></a> &amp; Data) <br></td>
+<td style="text-align: left;"><a href="#function-serialize"><strong>Serialize</strong></a> (<a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> * Serializer, const <a href="./"><strong>AGENodeLink</strong></a> &amp; Data) <br><em>This function serializes an</em> <a href="./"><em><strong>AGENodeLink</strong></em></a> <em>object into a</em><a href="../class_a_g_e_1_1_data_writer/"><em><strong>DataWriter</strong></em></a> <em>.</em></td>
 </tr>
 </tbody>
 </table>
@@ -168,38 +168,90 @@
 <hr>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-agenodelink-12">function AGENodeLink [1/2]</h3>
+<p><em>Default constructor for</em> <a href="./"><em><strong>AGENodeLink</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::AGENodeLink::AGENodeLink () = default
 </code></pre>
+<p>This function initializes an instance of the <a href="./"><strong>AGENodeLink</strong></a> class with its members set to their default values. The default value is determined by the C++ standard, which may vary depending on the specific type of each member variable. For example, if a member variable is of type int, it will be initialized to 0; for pointers, they will be initialized to nullptr. If you need more control over initialization, consider using an initializer list in the constructor definition.</p>
+<p><strong>Returns:</strong></p>
+<p>An instance of <a href="./"><strong>AGENodeLink</strong></a> with all members set to their default values.</p>
+<p>Default constructor for <a href="./"><strong>AGENodeLink</strong></a> class. </p>
 <hr>
 
 <h3 id="function-agenodelink-22">function AGENodeLink [2/2]</h3>
+<p><em>Constructs an instance of</em> <a href="./"><em><strong>AGENodeLink</strong></em></a> <em>with the given LinkId, StartPinId and EndPinId. The color is set to white (255, 255, 255).</em></p>
 <pre><code class="language-C++">inline AGE::AGENodeLink::AGENodeLink (
     ax::NodeEditor::LinkId LID,
     ax::NodeEditor::PinId SPID,
     ax::NodeEditor::PinId EPID
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>LID</code> The unique identifier for this link. </li>
+<li><code>SPID</code> The id of the start pin of this link. </li>
+<li><code>EPID</code> The id of the end pin of this link.</li>
+</ul>
+<p>Constructs an instance of <a href="./"><strong>AGENodeLink</strong></a> with the given LinkId, StartPinId and EndPinId. The color is set to white (255, 255, 255). </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>LID</code> Unique identifier for the link. </li>
+<li><code>SPID</code> Identifier for the start pin of the link. </li>
+<li><code>EPID</code> Identifier for the end pin of the link. </li>
+</ul>
 <hr>
 
 <h3 id="function-agenodelink">function ~AGENodeLink</h3>
+<p><em>Virtual destructor for the</em> <a href="./"><em><strong>AGENodeLink</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">virtual AGE::AGENodeLink::~AGENodeLink () = default
 </code></pre>
+<p>This function is responsible for freeing any resources that were allocated by the object during its lifetime. It does not take any parameters and returns void.</p>
+<p>Virtual destructor for the <a href="./"><strong>AGENodeLink</strong></a> class.</p>
+<p>This function is responsible for releasing any resources that were acquired by the object during its lifetime. It does not take any parameters and returns void. </p>
 <hr>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
 <h3 id="function-deserialize">function Deserialize</h3>
+<p><em>Deserializes data from a</em> <a href="../class_a_g_e_1_1_data_reader/"><em><strong>DataReader</strong></em></a> <em>into an</em><a href="./"><em><strong>AGENodeLink</strong></em></a> <em>object.</em></p>
 <pre><code class="language-C++">static inline void AGE::AGENodeLink::Deserialize (
     DataReader * Serializer,
     AGENodeLink &amp; Data
 ) 
 </code></pre>
+<p>This function reads raw data from the provided <a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> and populates an <a href="./"><strong>AGENodeLink</strong></a> object with it. The data read includes IDs for the node link, start pin ID, end pin ID, and color of the link.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Serializer</code> A pointer to a <a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> that provides the serialized data. </li>
+<li><code>Data</code> An <a href="./"><strong>AGENodeLink</strong></a> object where the deserialized data will be stored.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Deserialize function for <a href="./"><strong>AGENodeLink</strong></a> data structure. This function reads raw data from a <a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> object and populates an <a href="./"><strong>AGENodeLink</strong></a> object with the deserialized data.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Serializer</code> Pointer to the <a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> object that provides the serialized data. </li>
+<li><code>Data</code> Reference to the <a href="./"><strong>AGENodeLink</strong></a> object where the deserialized data will be stored. </li>
+</ul>
 <hr>
 
 <h3 id="function-serialize">function Serialize</h3>
+<p><em>This function serializes an</em> <a href="./"><em><strong>AGENodeLink</strong></em></a> <em>object into a</em><a href="../class_a_g_e_1_1_data_writer/"><em><strong>DataWriter</strong></em></a> <em>.</em></p>
 <pre><code class="language-C++">static inline void AGE::AGENodeLink::Serialize (
     DataWriter * Serializer,
     const AGENodeLink &amp; Data
 ) 
 </code></pre>
+<p>The function writes the ID, StartPinID, EndPinID and Color of the given <a href="./"><strong>AGENodeLink</strong></a> to the provided <a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a>. It uses WriteRaw method from <a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> to write each value as raw binary data.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Serializer</code> Pointer to a <a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> object that will be used for serialization. </li>
+<li><code>Data</code> Reference to an <a href="./"><strong>AGENodeLink</strong></a> object that needs to be serialized.</li>
+</ul>
+<p>This function serializes an <a href="./"><strong>AGENodeLink</strong></a> object into a <a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a>.</p>
+<p>The function writes the ID, StartPinID, EndPinID and Color of the given <a href="./"><strong>AGENodeLink</strong></a> to the provided <a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a>. It uses WriteRaw method for each data type (uint64_t, uint32_t) to write the respective values into the serializer.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Serializer</code> Pointer to a <a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> object where the serialized data will be written. </li>
+<li><code>Data</code> Reference to an <a href="./"><strong>AGENodeLink</strong></a> object that needs to be serialized. </li>
+</ul>
 <hr>
 
 <hr />

@@ -40,7 +40,7 @@ namespace AGE
     {
     public:
         IniReader(const std::filesystem::path &Path);
-        ~IniReader() = default;
+~IniReader() = default;
 
         std::string Read(const std::string &Section, const std::string &Key, bool& HasMultipleValues);
 

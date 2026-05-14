@@ -75,9 +75,12 @@ namespace AGE
         T& iterable_;
 
     public:
-        explicit Reverse(T& iterable) : iterable_{ iterable } {}
-        auto begin() const { return std::rbegin(iterable_); }
-        auto end() const { return std::rend(iterable_); }
+explicit Reverse(T& iterable) : iterable_{ iterable } {}
+auto begin() const { return std::rbegin(iterable_); }
+        COMMENT:
+CONFIDENCE: 1.0;
+
+auto end() const { return std::rend(iterable_); }
     };
 }
 

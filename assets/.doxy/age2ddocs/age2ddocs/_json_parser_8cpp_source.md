@@ -15,13 +15,15 @@
 #include "GameStructs/Public/GameStructs.h"
 namespace AGE
 {
-    JsonParser::JsonParser(const std::string& FilePath)
+JsonParser::JsonParser(const std::string& FilePath)
     {
 
     }
 
     template<>
-    bool JsonParser::SaveJsonFile<Ref<GameFramework::QuestInfo>>(const std::filesystem::path& Filepath, std::vector<Ref<GameFramework::QuestInfo>>& Data)
+    
+"/**\n * @brief This function saves a vector of QuestInfo objects to a JSON file.\n * \n * @param Filepath The path to the file where the data will be saved.\n * @param Data A reference to a vector containing the QuestInfo objects that will be serialized and written to the file.\n * \n * @return Returns true if successful, false otherwise. If the input vector is empty, this function returns false without writing anything to the file.\n * \n * @exception This function does not handle exceptions related to file I/O or JSON serialization. Any such errors should be handled by the caller of this function.\n */"
+bool JsonParser::SaveJsonFile<Ref<GameFramework::QuestInfo>>(const std::filesystem::path& Filepath, std::vector<Ref<GameFramework::QuestInfo>>& Data)
     {
         std::ofstream Out(Filepath);
         if (Data.empty())
@@ -55,7 +57,8 @@ namespace AGE
     }
 
     template<>
-    bool JsonParser::SaveJsonFile<GameFramework::ItemInfo>(const std::filesystem::path& Filepath, std::vector<GameFramework::ItemInfo>& Data)
+    "/**\n * @brief This function saves a vector of ItemInfo objects to a JSON file.\n * \n * @param Filepath The path where the JSON file will be saved.\n * @param Data A reference to the vector of ItemInfo objects that will be serialized and written to the file.\n *\n * @return Returns true if successful, false otherwise. If the data vector is empty, this function returns false without attempting to write anything.\n */"
+bool JsonParser::SaveJsonFile<GameFramework::ItemInfo>(const std::filesystem::path& Filepath, std::vector<GameFramework::ItemInfo>& Data)
     {
         std::ofstream Out(Filepath);
         if (Data.empty())
@@ -90,7 +93,7 @@ namespace AGE
     }
 
     template<>
-    bool JsonParser::SaveJsonFile<GameFramework::PlayerStats>(const std::filesystem::path& Filepath, std::vector<GameFramework::PlayerStats>& Data)
+bool JsonParser::SaveJsonFile<GameFramework::PlayerStats>(const std::filesystem::path& Filepath, std::vector<GameFramework::PlayerStats>& Data)
     {
         std::ofstream Out(Filepath);
         if (Data.empty())
@@ -122,7 +125,8 @@ namespace AGE
     }
 
     template<>
-    bool JsonParser::SaveJsonFile<GameFramework::EnemyStats>(const std::filesystem::path& Filepath, std::vector<GameFramework::EnemyStats>& Data)
+
+bool JsonParser::SaveJsonFile<GameFramework::EnemyStats>(const std::filesystem::path& Filepath, std::vector<GameFramework::EnemyStats>& Data)
     {
         if (!std::filesystem::exists(Filepath.parent_path()))
         {
@@ -158,7 +162,7 @@ namespace AGE
     }
 
 
-    nlohmann::json JsonParser::LoadJsonFile(const std::filesystem::path& Filepath)
+nlohmann::json JsonParser::LoadJsonFile(const std::filesystem::path& Filepath)
     {
         if (!std::filesystem::exists(Filepath))
         {
@@ -183,7 +187,7 @@ namespace AGE
         nlohmann::json Data = nlohmann::json::parse(In);
         return Data;
     }
-    std::string JsonParser::Parse(const std::string& FilePath)
+std::string JsonParser::Parse(const std::string& FilePath)
     {
         std::ifstream In(FilePath);
         nlohmann::json data = nlohmann::json::parse(In);
@@ -192,7 +196,7 @@ namespace AGE
         return Dump;
 
     }
-    std::string JsonParser::ParseString(const std::string& String)
+std::string JsonParser::ParseString(const std::string& String)
     {
         nlohmann::json data = nlohmann::json::parse(String);
 

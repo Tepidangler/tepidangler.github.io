@@ -19,15 +19,15 @@ namespace AGE
 
     class InputEvent : public Event
     {
-        inline int GetGamepadButton() { return m_Button; }
+inline int GetGamepadButton() { return m_Button; }
 
         EVENT_CLASS_CATEGORY(EventCategoryInput | EventCategoryGame)
 
     protected:
         InputEvent();
-        InputEvent(int Axis, float Position)
+InputEvent(int Axis, float Position)
             :m_Axis(Axis), m_Position(Position) {}
-        InputEvent(int Button)
+InputEvent(int Button)
             : m_Button(Button) {}
 
     protected:
@@ -39,31 +39,31 @@ namespace AGE
     class AxisEvent : public InputEvent
     {
     public:
-        AxisEvent(int Axis, float Position)
+AxisEvent(int Axis, float Position)
             : InputEvent(Axis, Position) {}
 
-        inline int GetAxis() { return m_Axis; }
-        inline float GetPosition() { return m_Position; }
+inline int GetAxis() { return m_Axis; }
+inline float GetPosition() { return m_Position; }
         EVENT_CLASS_TYPE(AxisMoved)
     };
 
     class GamepadButtonPressedEvent : public InputEvent
     {
     public:
-        GamepadButtonPressedEvent(int Button)
+GamepadButtonPressedEvent(int Button)
             :InputEvent(Button) {}
 
-        inline int GetButton() { return m_Button; }
+inline int GetButton() { return m_Button; }
         EVENT_CLASS_TYPE(GamepadButtonPressed)
     };
 
     class GamepadButtonReleasedEvent : public InputEvent
     {
     public:
-        GamepadButtonReleasedEvent(int Button)
+GamepadButtonReleasedEvent(int Button)
             :InputEvent(Button) {}
 
-        inline int GetButton() { return m_Button; }
+inline int GetButton() { return m_Button; }
         EVENT_CLASS_TYPE(GamepadButtonReleased)
     };
 
@@ -71,7 +71,7 @@ namespace AGE
     {
         EVENT_CLASS_CATEGORY(EventCategoryGame)
         protected:
-        SceneEvent(Ref<Scene> Scene)
+SceneEvent(Ref<Scene> Scene)
             :m_Scene(Scene) {}
 
     protected:
@@ -81,10 +81,10 @@ namespace AGE
     class SceneChangedEvent : public SceneEvent
     {
         public:
-        SceneChangedEvent(Ref<Scene> Scene)
+SceneChangedEvent(Ref<Scene> Scene)
             :SceneEvent(Scene){}
 
-        inline Ref<Scene> GetScene() {return m_Scene;}
+inline Ref<Scene> GetScene() {return m_Scene;}
         EVENT_CLASS_TYPE(SceneChanged)
     };
 }

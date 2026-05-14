@@ -120,11 +120,11 @@
 <tbody>
 <tr>
 <td style="text-align: right;"><a href="../class_a_g_e_1_1_time_step/"><strong>TimeStep</strong></a></td>
-<td style="text-align: left;"><a href="#function-getdeltatime"><strong>GetDeltaTime</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-getdeltatime"><strong>GetDeltaTime</strong></a> () const<br><em>This function returns the time difference between two frames in the game world.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-renderuievent"><strong>RenderUIEvent</strong></a> (<a href="../class_a_g_e_1_1_time_step/"><strong>TimeStep</strong></a> DeltaTime) <br></td>
+<td style="text-align: left;"><a href="#function-renderuievent"><strong>RenderUIEvent</strong></a> (<a href="../class_a_g_e_1_1_time_step/"><strong>TimeStep</strong></a> DeltaTime) <br><a href="./"><em><strong>RenderUIEvent</strong></em></a> <em>is a function that takes in a</em><a href="../class_a_g_e_1_1_time_step/"><em><strong>TimeStep</strong></em></a> <em>as an argument and assigns it to the member variable m_DeltaTime.</em></td>
 </tr>
 </tbody>
 </table>
@@ -152,11 +152,11 @@
 </tr>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-isincategory"><strong>IsInCategory</strong></a> (EventCategory Category) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-isincategory"><strong>IsInCategory</strong></a> (EventCategory Category) <br><em>Checks if an event is in a specific category.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual std::string</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-tostring"><strong>ToString</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-tostring"><strong>ToString</strong></a> () const<br><em>Returns a string representation of the object.</em></td>
 </tr>
 </tbody>
 </table>
@@ -167,15 +167,23 @@
 <hr>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-getdeltatime">function GetDeltaTime</h3>
+<p><em>This function returns the time difference between two frames in the game world.</em> </p>
 <pre><code class="language-C++">inline TimeStep AGE::RenderUIEvent::GetDeltaTime () const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>The time difference as a <a href="../class_a_g_e_1_1_time_step/"><strong>TimeStep</strong></a> object. </p>
 <hr>
 
 <h3 id="function-renderuievent">function RenderUIEvent</h3>
+<p><a href="./"><em><strong>RenderUIEvent</strong></em></a> <em>is a function that takes in a</em><a href="../class_a_g_e_1_1_time_step/"><em><strong>TimeStep</strong></em></a> <em>as an argument and assigns it to the member variable m_DeltaTime.</em></p>
 <pre><code class="language-C++">inline AGE::RenderUIEvent::RenderUIEvent (
     TimeStep DeltaTime
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>DeltaTime</code> The time step for rendering UI events. </li>
+</ul>
 <hr>
 
 <hr />

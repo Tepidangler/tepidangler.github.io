@@ -3,6 +3,21 @@
   <compounddef id="struct_a_g_e_1_1_a_g_e_rect" kind="struct" language="C++" prot="public">
     <compoundname>AGE::AGERect</compoundname>
     <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_a_g_e_1_1_a_g_e_rect_1a02ab41f5ae8b1680dcbb2cb3c37f55ec" prot="public" static="no" mutable="no">
+        <type>COMMENT</type>
+        <definition>COMMENT AGE::AGERect::__pad0__</definition>
+        <argsstring></argsstring>
+        <name>__pad0__</name>
+        <qualifiedname>AGE::AGERect::__pad0__</qualifiedname>
+        <bitfield>CONFIDENCE: 1.0</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="526" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="534" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="variable" id="struct_a_g_e_1_1_a_g_e_rect_1aac7e246273db0abe99486e6766b6cf36" prot="public" static="no" mutable="no">
         <type><ref refid="struct_a_g_e_1_1_a_g_e_point" kindref="compound">AGEPoint</ref></type>
         <definition>AGEPoint AGE::AGERect::XY</definition>
@@ -15,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="378" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="378" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="538" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="538" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_a_g_e_1_1_a_g_e_rect_1a47c66d79892a5828b44ac7acd6935263" prot="public" static="no" mutable="no">
         <type>int32_t</type>
@@ -29,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="379" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="379" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="539" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="539" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_a_g_e_1_1_a_g_e_rect_1acc6865c0be3f7b1f262739b1162683b2" prot="public" static="no" mutable="no">
         <type>int32_t</type>
@@ -43,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="380" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="380" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="540" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="540" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -54,12 +69,14 @@
         <name>AGERect</name>
         <qualifiedname>AGE::AGERect::AGERect</qualifiedname>
         <briefdescription>
+<para>Default constructor for <ref refid="struct_a_g_e_1_1_a_g_e_rect" kindref="compound">AGERect</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function initializes an instance of the <ref refid="struct_a_g_e_1_1_a_g_e_rect" kindref="compound">AGERect</ref> class with default values. It does not take any parameters and returns no value. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="370" column="1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="505" column="1"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_a_g_e_rect_1a592a9b30933b2130ba69bf833c6f0dbb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -80,12 +97,39 @@
           <declname>height</declname>
         </param>
         <briefdescription>
+<para>Constructs an <ref refid="struct_a_g_e_1_1_a_g_e_rect" kindref="compound">AGERect</ref> object with a given point, width and height. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Point</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The top-left corner of the rectangle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The width of the rectangle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The height of the rectangle. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="371" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="371" bodyend="372"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="513" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="513" bodyend="514"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_a_g_e_rect_1a0306a7cf4e20ff511d19e5ba33f70eb5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -110,12 +154,47 @@
           <declname>height</declname>
         </param>
         <briefdescription>
+<para>Constructs an instance of <ref refid="struct_a_g_e_1_1_a_g_e_rect" kindref="compound">AGERect</ref> with the given coordinates and dimensions. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x-coordinate of the top left corner of the rectangle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y-coordinate of the top left corner of the rectangle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The width of the rectangle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The height of the rectangle. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="374" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="374" bodyend="375"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="524" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="524" bodyend="525"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_a_g_e_rect_1a942399f1310db1e7814fe60c85f34b2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -129,7 +208,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="376" column="1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="536" column="1"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_a_g_e_rect_1acc6642853f90869aa7bfdb6186c697b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -142,12 +221,26 @@
           <declname>Point</declname>
         </param>
         <briefdescription>
+<para>Checks whether the current point is equal to another given point. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function compares the x and y coordinates of the current point with those of a provided point. If both are identical, it returns true indicating that the points are equivalent. Otherwise, it returns false.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Point</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_a_g_e_point" kindref="compound">AGEPoint</ref> object to compare against.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the x and y coordinates of the two points match, False otherwise. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="382" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="382" bodyend="385"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="551" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="551" bodyend="554"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -167,8 +260,9 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="367" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="368" bodyend="386"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="496" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="497" bodyend="555"/>
     <listofallmembers>
+      <member refid="struct_a_g_e_1_1_a_g_e_rect_1a02ab41f5ae8b1680dcbb2cb3c37f55ec" prot="public" virt="non-virtual"><scope>AGE::AGERect</scope><name>__pad0__</name></member>
       <member refid="struct_a_g_e_1_1_a_g_e_rect_1a7545a264c4b6c249df0e8cc8f7f69e97" prot="public" virt="non-virtual"><scope>AGE::AGERect</scope><name>AGERect</name></member>
       <member refid="struct_a_g_e_1_1_a_g_e_rect_1a592a9b30933b2130ba69bf833c6f0dbb" prot="public" virt="non-virtual"><scope>AGE::AGERect</scope><name>AGERect</name></member>
       <member refid="struct_a_g_e_1_1_a_g_e_rect_1a0306a7cf4e20ff511d19e5ba33f70eb5" prot="public" virt="non-virtual"><scope>AGE::AGERect</scope><name>AGERect</name></member>

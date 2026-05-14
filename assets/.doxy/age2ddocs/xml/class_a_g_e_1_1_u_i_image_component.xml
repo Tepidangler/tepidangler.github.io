@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/UiImageComponent.h" line="32" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/UiImageComponent.h" bodystart="32" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/UiImageComponent.h" line="70" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/UiImageComponent.h" bodystart="70" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_u_i_image_component_1a0ed33a297bf0b0407d2d0302d09eef97" prot="public" static="no" mutable="no">
         <type>std::string</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/UiImageComponent.h" line="33" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/UiImageComponent.h" bodystart="33" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/UiImageComponent.h" line="71" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/UiImageComponent.h" bodystart="71" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_u_i_image_component_1a90d87942660ac8b9a425a4e35dfd6e12" prot="public" static="no" mutable="no">
         <type>std::vector&lt; std::string &gt;</type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/UiImageComponent.h" line="34" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/UiImageComponent.h" bodystart="34" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/UiImageComponent.h" line="72" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/UiImageComponent.h" bodystart="72" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_u_i_image_component_1aced91247c7b45840e4e9f09585dd08d0" prot="public" static="no" mutable="no">
         <type><ref refid="struct_a_g_e_1_1_quad_properties" kindref="compound">QuadProperties</ref></type>
@@ -59,7 +59,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/UiImageComponent.h" line="35" column="16" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/UiImageComponent.h" bodystart="35" bodyend="35"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/UiImageComponent.h" line="73" column="16" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/UiImageComponent.h" bodystart="73" bodyend="73"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -74,12 +74,35 @@
           <declname>Name</declname>
         </param>
         <briefdescription>
+<para>Constructs an instance of <ref refid="class_a_g_e_1_1_u_i_image_component" kindref="compound">UIImageComponent</ref> with the given name and initializes it. </para>
         </briefdescription>
         <detaileddescription>
+<para>This constructor creates a new <ref refid="class_a_g_e_1_1_u_i_image_component" kindref="compound">UIImageComponent</ref> with the provided name, sets its type to ImageComponent, retrieves all textures from the <ref refid="class_a_g_e_1_1_asset_manager" kindref="compound">AssetManager</ref>&apos;s asset registry, stores their names in m_TextureNames, and finally creates an instance of <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> using default parameters.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name for this <ref refid="class_a_g_e_1_1_u_i_image_component" kindref="compound">UIImageComponent</ref>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Constructs an instance of <ref refid="class_a_g_e_1_1_u_i_image_component" kindref="compound">UIImageComponent</ref> with the given name and initializes it with a default texture.</para>
+<para>The constructor creates an unordered map of textures from the <ref refid="class_a_g_e_1_1_asset_manager" kindref="compound">AssetManager</ref>&apos;s asset registry using GetTextures() method. It then iterates over this map, pushing each texture&apos;s name into m_TextureNames vector. Finally, it creates a new <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> instance with default specifications and assigns it to m_Image.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the <ref refid="class_a_g_e_1_1_u_i_image_component" kindref="compound">UIImageComponent</ref> instance. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/UiImageComponent.h" line="17" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/UiImageComponent.cpp" bodystart="17" bodyend="29"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/UiImageComponent.h" line="17" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/UiImageComponent.cpp" bodystart="33" bodyend="45"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_u_i_image_component_1a3af6a51ad6a2229bde090066a1283417" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -88,12 +111,16 @@
         <name>~UIImageComponent</name>
         <qualifiedname>AGE::UIImageComponent::~UIImageComponent</qualifiedname>
         <briefdescription>
+<para>Virtual destructor for the <ref refid="class_a_g_e_1_1_u_i_image_component" kindref="compound">UIImageComponent</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is responsible for releasing any resources that were acquired by the object during its lifetime. It does not take any parameters and returns no value.</para>
+<para>Virtual destructor for the <ref refid="class_a_g_e_1_1_u_i_image_component" kindref="compound">UIImageComponent</ref> class.</para>
+<para>This function is responsible for releasing any resources that were acquired by the object during its lifetime, such as memory or file handles. It does not return anything and has no parameters. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/UiImageComponent.h" line="19" column="9"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/UiImageComponent.h" line="29" column="9"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_u_i_image_component_1a39479ecfe67f93656679fcddc18f20b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -107,12 +134,35 @@
           <declname>Serializer</declname>
         </param>
         <briefdescription>
+<para>This function is used to serialize data using a <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref> object. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function takes in a pointer to a <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref> object as its parameter. It does not return anything, so the return type should be void.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Serializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to a <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref> object that will handle the serialization process.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This function is used to serialize data using a <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref> object.</para>
+<para>The function takes in one parameter, a pointer to a <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref> object which is responsible for writing the serialized data. It does not return anything as it&apos;s an override of the base class method and doesn&apos;t need any post-processing after serialization.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Serializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to a <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref> object that will be used to write the serialized data. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/UiImageComponent.h" line="21" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/UiImageComponent.h" bodystart="21" bodyend="23"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/UiImageComponent.h" line="46" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/UiImageComponent.h" bodystart="46" bodyend="48"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_u_i_image_component_1aac2bf6a1ba80286dc7a1a69a0068268a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -126,12 +176,34 @@
           <declname>Serializer</declname>
         </param>
         <briefdescription>
+<para>This function is used to call the deserialization process on a <ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref> object. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function takes in a pointer to a <ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref> object as its parameter. It does not return anything, so it&apos;s void type.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Serializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to a <ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref> object that will be used for the deserialization process.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This function is used to call the deserialization process on a <ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref> object. The exact behavior of this function depends on its implementation in the derived class, as it&apos;s marked as &apos;override&apos;.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Serializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to an instance of <ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref> that will be used for deserialization. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/UiImageComponent.h" line="24" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/UiImageComponent.h" bodystart="24" bodyend="26"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/UiImageComponent.h" line="62" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/UiImageComponent.h" bodystart="62" bodyend="64"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_u_i_image_component_1a2e3bceb18a1ebe818ab5b7fcbfe25e20" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -145,12 +217,37 @@
           <declname>DeltaTime</declname>
         </param>
         <briefdescription>
+<para>This function updates the image component. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function takes a <ref refid="class_a_g_e_1_1_time_step" kindref="compound">TimeStep</ref> parameter representing the time elapsed since the last frame. It uses this value to update the image and its properties.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>DeltaTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- A <ref refid="class_a_g_e_1_1_time_step" kindref="compound">TimeStep</ref> object representing the time elapsed since the last frame.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void</para>
+</simplesect>
+This function updates the image component.</para>
+<para>The function takes in a <ref refid="class_a_g_e_1_1_time_step" kindref="compound">TimeStep</ref> parameter representing the delta time since the last frame. It then uses this value to update the properties of the image component, such as its position or scale. Finally, it renders the updated image using <ref refid="class_a_g_e_1_1_renderer2_d_1a012305ca47d628775a684d8bf730415f" kindref="member">Renderer2D::DrawQuad()</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>DeltaTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time elapsed since the last frame in seconds. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/UiImageComponent.h" line="28" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/UiImageComponent.cpp" bodystart="31" bodyend="34"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/UiImageComponent.h" line="66" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/UiImageComponent.cpp" bodystart="63" bodyend="66"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_u_i_image_component_1a86066db7c0a2e4494bbd9d1ddea3fcf4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -164,12 +261,37 @@
           <declname>Event</declname>
         </param>
         <briefdescription>
+<para>Handles an event of type <ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is responsible for handling events dispatched by the system. It takes in a reference to an <ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref> object and processes it accordingly. The exact behavior depends on the specifics of the <ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref> subclass that is being handled.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in"><ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- A reference to the event to be processed.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This function is used to handle events in the <ref refid="class_a_g_e_1_1_u_i_image_component" kindref="compound">UIImageComponent</ref> class.</para>
+<para>The function takes an <ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref> object as a parameter and processes it according to its type.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in"><ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- An instance of the <ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref> class that represents the event to be processed.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/UiImageComponent.h" line="29" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/UiImageComponent.cpp" bodystart="36" bodyend="38"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/UiImageComponent.h" line="67" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/UiImageComponent.cpp" bodystart="85" bodyend="87"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_u_i_image_component_1a9fd2087e0ec06c4f47675a6684e0176f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -184,7 +306,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/UiImageComponent.h" line="30" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/UiImageComponent.cpp" bodystart="40" bodyend="67"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/UiImageComponent.h" line="68" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/UiImageComponent.cpp" bodystart="91" bodyend="118"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -268,7 +390,7 @@
         <link refid="struct_a_g_e_1_1_vector4"/>
       </node>
     </collaborationgraph>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/UiImageComponent.h" line="13" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/UiImageComponent.h" bodystart="14" bodyend="39"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/UiImageComponent.h" line="13" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/UiImageComponent.h" bodystart="14" bodyend="77"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_u_i_component_1a98e1aaddee431d6b3b7ff6f5e5536de4" prot="public" virt="non-virtual"><scope>AGE::UIImageComponent</scope><name>As</name></member>
       <member refid="class_a_g_e_1_1_u_i_component_1a3dfa8952db40b83e29831b76352fa8e5" prot="public" virt="non-virtual"><scope>AGE::UIImageComponent</scope><name>As</name></member>

@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="515" column="21" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" bodystart="515" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="849" column="21" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" bodystart="849" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-attrib">
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="516" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" bodystart="516" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="850" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" bodystart="850" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_asset_manager_1a9432bbbb3e4492f4892b2175925879f2" prot="private" static="no" mutable="no">
         <type>std::filesystem::path</type>
@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="517" column="23" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" bodystart="517" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="851" column="23" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" bodystart="851" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_asset_manager_1a8be55597d32fd27259ec5d521a92deb6" prot="private" static="no" mutable="no">
         <type>std::pair&lt; <ref refid="class_a_g_e_1_1_asset_pak" kindref="compound">AssetPak</ref> *, size_t &gt;</type>
@@ -60,7 +60,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="518" column="11" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" bodystart="518" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="852" column="11" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" bodystart="852" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -71,12 +71,16 @@
         <name>Get</name>
         <qualifiedname>AGE::AssetManager::Get</qualifiedname>
         <briefdescription>
+<para>Returns a reference to the global instance of <ref refid="class_a_g_e_1_1_asset_manager" kindref="compound">AssetManager</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Reference to the global <ref refid="class_a_g_e_1_1_asset_manager" kindref="compound">AssetManager</ref> instance. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="440" column="21" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" bodystart="440" bodyend="440"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="752" column="21" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" bodystart="752" bodyend="752"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -87,12 +91,13 @@
         <name>AssetManager</name>
         <qualifiedname>AGE::AssetManager::AssetManager</qualifiedname>
         <briefdescription>
+<para>Default constructor for the <ref refid="class_a_g_e_1_1_asset_manager" kindref="compound">AssetManager</ref> class. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="442" column="1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="757" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_asset_manager_1a53de52beebf8ff04a413d04e03b6150a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -105,12 +110,34 @@
           <declname>GameContentPath</declname>
         </param>
         <briefdescription>
+<para>Constructor for the <ref refid="class_a_g_e_1_1_asset_manager" kindref="compound">AssetManager</ref> class. Initializes the game content path and creates an instance of the <ref refid="struct_a_g_e_1_1_asset_registry" kindref="compound">AssetRegistry</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>GameContentPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path to the game&apos;s content directory.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Constructor for <ref refid="class_a_g_e_1_1_asset_manager" kindref="compound">AssetManager</ref> class.</para>
+<para>This constructor initializes the <ref refid="class_a_g_e_1_1_asset_manager" kindref="compound">AssetManager</ref> with a given game content path and creates an instance of <ref refid="struct_a_g_e_1_1_asset_registry" kindref="compound">AssetRegistry</ref>. It also checks if there is already an instance of <ref refid="class_a_g_e_1_1_asset_manager" kindref="compound">AssetManager</ref>, in which case it asserts that no other instance should exist.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>GameContentPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path to the game&apos;s content directory. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="443" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="10" bodyend="16"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="758" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="21" bodyend="27"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_asset_manager_1af47ef7c800688f9e78e46189d0ff8933" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -128,12 +155,50 @@
           <defval>0</defval>
         </param>
         <briefdescription>
+<para>Constructor for the <ref refid="class_a_g_e_1_1_asset_manager" kindref="compound">AssetManager</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This constructor initializes an instance of the <ref refid="class_a_g_e_1_1_asset_manager" kindref="compound">AssetManager</ref> class with a pointer to a pak file and its size. It also checks if an instance of <ref refid="class_a_g_e_1_1_asset_manager" kindref="compound">AssetManager</ref> already exists, logging an error message if it does. The instance is then set as the current one. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>AddrToPakFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A void pointer to the start of the pak file memory block. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>SizeOfPakFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the pak file in bytes.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Constructor for <ref refid="class_a_g_e_1_1_asset_manager" kindref="compound">AssetManager</ref> class. Initializes the asset manager with a pointer to an <ref refid="class_a_g_e_1_1_asset_pak" kindref="compound">AssetPak</ref> object and its size. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>AddrToPakFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to an <ref refid="class_a_g_e_1_1_asset_pak" kindref="compound">AssetPak</ref> object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>SizeOfPakFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the <ref refid="class_a_g_e_1_1_asset_pak" kindref="compound">AssetPak</ref> object in bytes. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>None </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="444" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="17" bodyend="23"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="759" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="41" bodyend="47"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_asset_manager_1a13488ec0713bd8ba20bff6f58ad87df0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::filesystem::path &amp;</type>
@@ -142,12 +207,17 @@
         <name>GetGameContentPath</name>
         <qualifiedname>AGE::AssetManager::GetGameContentPath</qualifiedname>
         <briefdescription>
+<para>Returns the game content path. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function returns a reference to the game content path, which is used as the root directory for all game-related content files. The returned path may be empty if it has not been set yet.</para>
+<para><simplesect kind="return"><para>A reference to the game content path. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="446" column="23" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" bodystart="446" bodyend="446"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="769" column="23" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" bodystart="769" bodyend="769"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_asset_manager_1ab06c9ce1211a68b088a940526fa3823f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -165,12 +235,55 @@
           <defval>0</defval>
         </param>
         <briefdescription>
+<para>Loads a PAK file into the <ref refid="class_a_g_e_1_1_asset_manager" kindref="compound">AssetManager</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes in an address and size of a PAK file, stores them as members of the class, and returns true if the pointer to the PAK file is not null.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>AddrToPakFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A void pointer to the start of the PAK file data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>SizeOfPakFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the PAK file in bytes.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the PAK file was successfully loaded, false otherwise.</para>
+</simplesect>
+Loads a PAK file into the <ref refid="class_a_g_e_1_1_asset_manager" kindref="compound">AssetManager</ref>.</para>
+<para>This function takes in an address and size of a PAK file, stores them as a pair in m_PakPair, and returns true if the pointer to the PAK file is not null.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>AddrToPakFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A void pointer to the start of the PAK file data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>SizeOfPakFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the PAK file in bytes.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the PAK file was successfully loaded, false otherwise. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="447" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="24" bodyend="29"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="770" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="70" bodyend="75"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_asset_manager_1a07739fc43cb47c4a51722bd2c2e6969a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>Ref&lt; <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> &gt;</type>
@@ -183,12 +296,39 @@
           <declname>FilePath</declname>
         </param>
         <briefdescription>
+<para>Loads a texture from the specified file path. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes in a constant reference to a filesystem path, which represents the location of the texture file on disk. It returns an instance of Ref&lt;Texture2D&gt;, which is essentially a smart pointer that manages the lifetime of <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> objects. The actual loading and management of textures is handled by the <ref refid="class_a_g_e_1_1_asset_manager" kindref="compound">AssetManager</ref>&apos;s registry object.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FilePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A constant reference to the filesystem path of the texture file on disk. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An instance of Ref&lt;Texture2D&gt;, which represents a smart pointer managing the lifetime of <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> objects.</para>
+</simplesect>
+Loads a texture from the specified file path.</para>
+<para>This function takes in a constant reference to a filesystem path, which represents the location of the texture file on disk. It returns a <computeroutput>Ref&lt;<ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref>&gt;</computeroutput> object, which is essentially a smart pointer that manages the lifetime of a <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> instance. The actual loading and management of textures is handled by an internal registry in the <ref refid="class_a_g_e_1_1_asset_manager" kindref="compound">AssetManager</ref> class.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FilePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A constant reference to a filesystem path representing the location of the texture file on disk. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Ref&lt;Texture2D&gt; A smart pointer that manages the lifetime of a <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> instance. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="449" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="30" bodyend="33"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="772" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="92" bodyend="95"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_asset_manager_1a355201e45fa88bf37e4582f48475cfdc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>Ref&lt; <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> &gt;</type>
@@ -205,12 +345,55 @@
           <declname>Size</declname>
         </param>
         <briefdescription>
+<para>Loads a texture from binary data. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function loads a <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> object from raw binary data. The binary data is expected to be in the format that was used when saving the texture, i.e., it should contain all necessary information for re-creating the texture.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the start of the binary data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the binary data in bytes.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to a <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> object, or nullptr if the loading failed.</para>
+</simplesect>
+Loads a texture from binary data.</para>
+<para>This function loads a texture from the provided binary data. The binary data is expected to be in a format that can be understood by the <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> class, such as PNG or JPEG. If the loading fails for any reason, it returns nullptr.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the start of the binary data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the binary data in bytes.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to a <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> object representing the loaded texture. If loading fails, this will be a null reference. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="450" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="34" bodyend="38"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="773" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="116" bodyend="120"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_asset_manager_1a413c7d0c9b38ba7fb6a6d69f81972ff4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>Ref&lt; <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> &gt;</type>
@@ -223,12 +406,39 @@
           <declname>ID</declname>
         </param>
         <briefdescription>
+<para>Retrieves a texture from the asset manager. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes in an <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref> (Universally Unique Identifier) of a texture, and returns a reference to that texture. If the texture does not exist, it will return an empty reference.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref> of the texture to retrieve. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the requested texture if it exists, otherwise an empty reference.</para>
+</simplesect>
+Retrieves a reference to a <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> object with the given <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref>.</para>
+<para>This function retrieves and returns a reference to a <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> object from the asset manager&apos;s registry using the provided <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref>. The returned reference can be used for further operations on the texture, such as rendering or manipulation.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref> of the <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> object to retrieve. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the requested <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> object. If no matching <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> is found in the registry, an empty Ref&lt;Texture2D&gt; will be returned. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="452" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="39" bodyend="42"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="775" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="138" bodyend="141"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_asset_manager_1aba969a5397f67c6b9422dd750733e7cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>Ref&lt; <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> &gt;</type>
@@ -258,15 +468,48 @@
 <parametername>-</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>A newly created shared_ptr with the texture </para>
+<para>A newly created shared_ptr with the texture</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
+Retrieves a texture from the asset manager.</para>
+<para>This function retrieves a texture with the specified name from the registry and returns it as a reference. If no such texture exists, an exception is thrown.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the texture to retrieve. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the retrieved texture. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>std::runtime_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if there&apos;s no texture with the given name in the registry.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Retrieves a texture from the asset manager. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the texture to retrieve. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> object if it exists, otherwise an empty Ref&lt;Texture2D&gt;. </para>
+</simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="453" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="49" bodyend="52"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="776" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="162" bodyend="165"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_asset_manager_1a7ee40b5de86bd3545e108985ec5b2576" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -279,12 +522,39 @@
           <declname>Filepath</declname>
         </param>
         <briefdescription>
+<para>Checks if a texture is loaded. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function checks whether the given file path corresponds to an already loaded texture in the <ref refid="class_a_g_e_1_1_asset_manager" kindref="compound">AssetManager</ref>&apos;s registry.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Filepath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path of the texture to check for. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the texture is loaded, false otherwise.</para>
+</simplesect>
+Checks if a texture is loaded.</para>
+<para>This function checks whether the given file path corresponds to an already loaded texture in the <ref refid="class_a_g_e_1_1_asset_manager" kindref="compound">AssetManager</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Filepath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path of the texture to check for. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the texture is loaded, false otherwise. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="455" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="53" bodyend="56"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="778" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="182" bodyend="185"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_asset_manager_1afb158169bfaa5f7c24f005434a49c974" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -297,12 +567,35 @@
           <declname>FilePath</declname>
         </param>
         <briefdescription>
+<para>Loads a shader from the specified file path. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes in a constant string reference (const std::string&amp;) as an argument, which represents the file path of the shader to be loaded. It then calls the <computeroutput>LoadShader</computeroutput> method on the member variable m_Registry with this file path as its parameter.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FilePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The file path of the shader to load.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Loads a shader from the specified file path.</para>
+<para>This function takes in a constant string reference, which represents the file path of the shader to be loaded. It then uses this file path to load the shader using the <computeroutput>LoadShader</computeroutput> method on the <computeroutput>m_Registry</computeroutput> object.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FilePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The file path of the shader to be loaded. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="457" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="57" bodyend="60"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="780" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="200" bodyend="203"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_asset_manager_1a39037d120092443d9ac91f9d0897b66b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -319,12 +612,50 @@
           <declname>FilePath2</declname>
         </param>
         <briefdescription>
+<para>Loads a shader from two file paths. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function loads a shader using the provided file paths and registers it in the <ref refid="class_a_g_e_1_1_asset_manager" kindref="compound">AssetManager</ref>&apos;s registry. The first parameter is the path to the vertex shader file, while the second one is for the fragment (or pixel) shader.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FilePath1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path to the vertex shader file. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FilePath2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path to the fragment shader file.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Loads a shader from two file paths.</para>
+<para>This function loads a shader using the provided file paths and registers it in the <ref refid="class_a_g_e_1_1_asset_manager" kindref="compound">AssetManager</ref>&apos;s registry. The first parameter is the path to the vertex shader, while the second one is for the fragment (or pixel) shader. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FilePath1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path to the vertex shader file. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FilePath2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path to the fragment shader file. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="458" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="61" bodyend="64"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="781" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="221" bodyend="224"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_asset_manager_1afee74f30f0c71d71813b1089607740ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -341,12 +672,51 @@
           <declname>Source</declname>
         </param>
         <briefdescription>
+<para>Loads a shader into the asset manager. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes in an integer Name and a string reference Source. It then calls the LoadShader method on the m_Registry object with these parameters. The purpose of this function is to load a shader into the <ref refid="class_a_g_e_1_1_asset_manager" kindref="compound">AssetManager</ref> for later use.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A unique identifier for the shader. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source code of the shader.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Loads a shader into the asset manager.</para>
+<para>This function takes an integer and a string as parameters. The integer is used to identify the shader in some way (e.g., its name or ID), while the string contains the source code of the shader. It then calls the <computeroutput>LoadShader</computeroutput> method on the registry object, passing these two values along.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A unique identifier for the shader to be loaded. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source code of the shader. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="459" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="65" bodyend="68"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="782" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="242" bodyend="245"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_asset_manager_1a6bcb4fd025e08d476e218dc2eb27ea56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>Ref&lt; <ref refid="class_a_g_e_1_1_shader" kindref="compound">Shader</ref> &gt;</type>
@@ -359,12 +729,37 @@
           <declname>Name</declname>
         </param>
         <briefdescription>
+<para>Get a shader from the registry by name. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function retrieves a shader object from the asset manager&apos;s registry using the provided name. The returned reference can be used to access and manipulate the shader.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the shader to retrieve. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the requested shader, or an empty reference if no such shader exists in the registry.</para>
+</simplesect>
+Get a shader from the registry by name. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the shader to retrieve. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the requested shader, or an empty Ref if no such shader exists. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="460" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="69" bodyend="72"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="783" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="260" bodyend="263"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_asset_manager_1a978443510b984eb67b7148eb29c342c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -377,12 +772,39 @@
           <declname>Name</declname>
         </param>
         <briefdescription>
+<para>Checks if a shader with the given name exists. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function checks whether there is an existing shader in the <ref refid="class_a_g_e_1_1_asset_manager" kindref="compound">AssetManager</ref>&apos;s registry that matches the provided name.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the shader to check for. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if a shader with the given name exists, false otherwise.</para>
+</simplesect>
+Checks if a shader with the given name exists.</para>
+<para>This function checks whether there is a registered shader in the <ref refid="class_a_g_e_1_1_asset_manager" kindref="compound">AssetManager</ref>&apos;s registry that has the same name as provided.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the shader to check for. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if a shader with the given name exists, false otherwise. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="461" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="73" bodyend="76"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="784" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="280" bodyend="283"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_asset_manager_1a6d6375c73a3f6d1af497b154fd2c2bb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>Ref&lt; <ref refid="class_a_g_e_1_1_scene" kindref="compound">Scene</ref> &gt;</type>
@@ -395,12 +817,48 @@
           <declname>Filepath</declname>
         </param>
         <briefdescription>
+<para>Loads a scene from the given file path. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function loads a scene from the specified file path and returns it as a reference to a <ref refid="class_a_g_e_1_1_scene" kindref="compound">Scene</ref> object. If the scene cannot be loaded, an exception is thrown.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Filepath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path of the scene file to load. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the loaded <ref refid="class_a_g_e_1_1_scene" kindref="compound">Scene</ref> object. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>std::runtime_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the scene could not be loaded.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Loads a scene from the given file path.</para>
+<para>This function loads a scene from the specified file path and returns it as a reference to an <ref refid="class_a_g_e_1_1_asset_manager" kindref="compound">AssetManager</ref>&apos;s <ref refid="class_a_g_e_1_1_scene" kindref="compound">Scene</ref> object. The file path is used to identify the location of the scene data.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Filepath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path to the scene file. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the loaded scene. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="463" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="77" bodyend="80"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="786" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="302" bodyend="305"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_asset_manager_1afb72c51dbd8ed025f715cb2a1d21f1ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>Ref&lt; <ref refid="class_a_g_e_1_1_scene" kindref="compound">Scene</ref> &gt;</type>
@@ -413,12 +871,39 @@
           <declname>ID</declname>
         </param>
         <briefdescription>
+<para>Retrieves a scene from the registry using its unique identifier. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes in a constant reference to a <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref>, which is used as an identifier for the scene. It then returns a reference to the scene with that specific ID. If no such scene exists, it will return an empty reference.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unique identifier of the scene to be retrieved. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the scene if found, otherwise an empty reference.</para>
+</simplesect>
+Retrieves a scene from the registry using its unique identifier.</para>
+<para>This function takes in a constant reference to a <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref> (Universally Unique Identifier), which is used as an index to retrieve the corresponding scene from the asset manager&apos;s registry. The function returns a <computeroutput>Ref&lt;<ref refid="class_a_g_e_1_1_scene" kindref="compound">Scene</ref>&gt;</computeroutput>, which represents a smart pointer to a <ref refid="class_a_g_e_1_1_scene" kindref="compound">Scene</ref> object. If no such scene exists with the given ID, it will return an empty reference.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A constant reference to the <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref> of the scene to be retrieved. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The requested scene if found, otherwise an empty reference. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="464" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="142" bodyend="145"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="787" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="581" bodyend="584"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_asset_manager_1a1377b856beefe8b5c435bf314c5a80bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>Ref&lt; <ref refid="class_a_g_e_1_1_scene" kindref="compound">Scene</ref> &gt;</type>
@@ -431,12 +916,39 @@
           <declname>Name</declname>
         </param>
         <briefdescription>
+<para>Retrieves a scene with the given name. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function retrieves and returns a reference to a <ref refid="class_a_g_e_1_1_scene" kindref="compound">Scene</ref> object from the registry using the provided name string. If no such scene exists, it will return an empty Ref&lt;Scene&gt;.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the scene to retrieve. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the requested scene if found; otherwise, an empty Ref&lt;Scene&gt;.</para>
+</simplesect>
+Retrieves a scene by its name.</para>
+<para>This function retrieves and returns the scene with the given name from the registry. If no such scene exists, it will return an empty reference.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the scene to retrieve. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the requested scene if found; otherwise, an empty reference. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="465" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="146" bodyend="149"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="788" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="602" bodyend="605"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_asset_manager_1a67d994d13aea155d469dc91ce85dc26b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -449,12 +961,39 @@
           <declname>Filepath</declname>
         </param>
         <briefdescription>
+<para>Checks if a scene is loaded. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function checks whether the given file path corresponds to an already loaded scene in the <ref refid="class_a_g_e_1_1_asset_manager" kindref="compound">AssetManager</ref>&apos;s registry.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Filepath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path of the scene to check for. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the scene is loaded, false otherwise.</para>
+</simplesect>
+Checks if a scene is loaded.</para>
+<para>This function checks whether the specified file path corresponds to an already loaded scene in the <ref refid="class_a_g_e_1_1_asset_manager" kindref="compound">AssetManager</ref>&apos;s registry.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Filepath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path of the scene to be checked. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the scene is loaded, false otherwise. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="466" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="138" bodyend="141"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="789" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="561" bodyend="564"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_asset_manager_1adee9409d2dc9c50b8f5a1e45bc9208d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -467,12 +1006,37 @@
           <declname>OutArray</declname>
         </param>
         <briefdescription>
+<para>This function retrieves the names of all scenes in the <ref refid="class_a_g_e_1_1_asset_manager" kindref="compound">AssetManager</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>OutArray</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to a std::vector&lt;std::string&gt; where the scene names will be stored.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void</para>
+</simplesect>
+This function retrieves the names of all scenes in the <ref refid="class_a_g_e_1_1_asset_manager" kindref="compound">AssetManager</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>OutArray</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to a std::vector&lt;std::string&gt; where the scene names will be stored.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="468" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="81" bodyend="97"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="791" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="320" bodyend="336"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_asset_manager_1abe41302d61424788f1114ae5447082b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>Ref&lt; <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> &gt;</type>
@@ -485,12 +1049,39 @@
           <declname>Filepath</declname>
         </param>
         <briefdescription>
+<para>Loads an <ref refid="class_a_g_e_1_1_aseprite" kindref="compound">Aseprite</ref> file from the specified path. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function loads a texture from the provided file path using the Asset Registry&apos;s LoadTexture method. The loaded texture is then returned as a Ref&lt;Texture2D&gt; object.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Filepath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path to the <ref refid="class_a_g_e_1_1_aseprite" kindref="compound">Aseprite</ref> file to load. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A Ref&lt;Texture2D&gt; object representing the loaded texture, or an empty Ref if the file could not be loaded.</para>
+</simplesect>
+Loads an <ref refid="class_a_g_e_1_1_aseprite" kindref="compound">Aseprite</ref> file from the specified path.</para>
+<para>This function loads a texture from the given file path using the Asset Registry&apos;s LoadTexture method. The loaded texture is then returned as a Ref&lt;Texture2D&gt; object.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Filepath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path to the <ref refid="class_a_g_e_1_1_aseprite" kindref="compound">Aseprite</ref> file to load. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A Ref&lt;Texture2D&gt; object representing the loaded texture, or an empty Ref if the file could not be loaded. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="470" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="98" bodyend="101"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="793" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="353" bodyend="356"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_asset_manager_1a09c2accc5c6aea9f377ab3c7ae8461bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>Ref&lt; <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> &gt;</type>
@@ -503,12 +1094,39 @@
           <declname>ID</declname>
         </param>
         <briefdescription>
+<para>Retrieves a texture from the registry using its unique identifier. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function uses the <ref refid="class_a_g_e_1_1_asset_manager" kindref="compound">AssetManager</ref>&apos;s Registry to get a <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> object with the specified <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref>. The returned reference can be used for further operations on the texture.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A const reference to the <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref> of the texture to retrieve. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Ref&lt;Texture2D&gt; A reference to the retrieved <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> object. If no such texture exists, an empty reference is returned.</para>
+</simplesect>
+Retrieves a texture from the asset manager using its unique identifier.</para>
+<para>This function retrieves a texture from the registry of the <ref refid="class_a_g_e_1_1_asset_manager" kindref="compound">AssetManager</ref> instance by its unique identifier (<ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref>). The <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref> is used to identify and retrieve the specific texture.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A constant reference to the <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref> that represents the texture to be retrieved. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A Ref&lt;Texture2D&gt; object representing the requested texture. If no such texture exists, an empty Ref&lt;Texture2D&gt; object is returned. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="471" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="102" bodyend="105"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="794" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="373" bodyend="376"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_asset_manager_1a924e98a782cc65ae25dc22da3ae4d89d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>Ref&lt; <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> &gt;</type>
@@ -521,12 +1139,39 @@
           <declname>Name</declname>
         </param>
         <briefdescription>
+<para>Retrieves a texture from the asset registry using an <ref refid="class_a_g_e_1_1_aseprite" kindref="compound">Aseprite</ref> file name. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes in a string representing the name of an <ref refid="class_a_g_e_1_1_aseprite" kindref="compound">Aseprite</ref> file, and returns a reference to a <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> object. The actual retrieval is done through the <ref refid="class_a_g_e_1_1_asset_manager" kindref="compound">AssetManager</ref>&apos;s internal registry.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the <ref refid="class_a_g_e_1_1_aseprite" kindref="compound">Aseprite</ref> file to retrieve the texture for. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to the retrieved <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> object. If no such texture exists, an empty reference will be returned.</para>
+</simplesect>
+Retrieves a texture from the asset registry using an <ref refid="class_a_g_e_1_1_aseprite" kindref="compound">Aseprite</ref> file name.</para>
+<para>This function takes in an <ref refid="class_a_g_e_1_1_aseprite" kindref="compound">Aseprite</ref> file name and returns a reference to a <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> object. The actual retrieval of the texture is handled by the <ref refid="class_a_g_e_1_1_asset_manager" kindref="compound">AssetManager</ref>&apos;s internal registry, which this function interacts with through <computeroutput>m_Registry</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the <ref refid="class_a_g_e_1_1_aseprite" kindref="compound">Aseprite</ref> file for which to retrieve the texture.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to a <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> object representing the desired texture. If no such texture exists in the registry, this function will return an empty Ref&lt;Texture2D&gt;. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="472" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="106" bodyend="109"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="795" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="394" bodyend="397"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_asset_manager_1a07a23a5bd43c54e2d95185da9db77c21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -539,12 +1184,39 @@
           <declname>Filepath</declname>
         </param>
         <briefdescription>
+<para>Checks if an <ref refid="class_a_g_e_1_1_aseprite" kindref="compound">Aseprite</ref> file is loaded. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function checks whether a given <ref refid="class_a_g_e_1_1_aseprite" kindref="compound">Aseprite</ref> file has been loaded into the <ref refid="class_a_g_e_1_1_asset_manager" kindref="compound">AssetManager</ref>&apos;s registry.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Filepath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path of the <ref refid="class_a_g_e_1_1_aseprite" kindref="compound">Aseprite</ref> file to check for. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the <ref refid="class_a_g_e_1_1_aseprite" kindref="compound">Aseprite</ref> file is loaded, false otherwise.</para>
+</simplesect>
+Checks if an <ref refid="class_a_g_e_1_1_aseprite" kindref="compound">Aseprite</ref> file is loaded.</para>
+<para>This function checks whether a given <ref refid="class_a_g_e_1_1_aseprite" kindref="compound">Aseprite</ref> file has been loaded into the <ref refid="class_a_g_e_1_1_asset_manager" kindref="compound">AssetManager</ref>&apos;s registry.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Filepath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path of the <ref refid="class_a_g_e_1_1_aseprite" kindref="compound">Aseprite</ref> file to check for. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the <ref refid="class_a_g_e_1_1_aseprite" kindref="compound">Aseprite</ref> file is loaded, false otherwise. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="473" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="110" bodyend="113"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="796" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="414" bodyend="417"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_asset_manager_1aacaf57bf0009d6c6ed2bc7372ba5af2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>Ref&lt; <ref refid="class_a_g_e_1_1_a_g_e_font" kindref="compound">AGEFont</ref> &gt;</type>
@@ -557,12 +1229,39 @@
           <declname>Filepath</declname>
         </param>
         <briefdescription>
+<para>Loads a font from the specified file path. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function loads a font from the given file path and returns a reference to it. If the font is already loaded, this function will return a reference to that existing instance instead of loading the font again.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Filepath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path to the font file. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the loaded font.</para>
+</simplesect>
+Loads a font from the specified file path.</para>
+<para>This function loads a font from the given file path and returns a reference to it. If the font is already loaded, this will return a reference to that instance instead of loading again.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Filepath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path to the font file. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the loaded font. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="475" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="114" bodyend="117"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="798" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="434" bodyend="437"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_asset_manager_1a9aa311bae0225a674fa673f1195c7f3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>Ref&lt; <ref refid="class_a_g_e_1_1_a_g_e_font" kindref="compound">AGEFont</ref> &gt;</type>
@@ -575,12 +1274,48 @@
           <declname>ID</declname>
         </param>
         <briefdescription>
+<para>Retrieves a font from the asset manager. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function retrieves a font with the specified unique identifier (<ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref>). The <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref> is used to identify and retrieve the font from the registry. If the font does not exist in the registry, an exception will be thrown.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unique identifier of the font to retrieve. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the requested font. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>std::runtime_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the font with the specified <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref> is not found in the registry.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Retrieves a font from the asset manager.</para>
+<para>This function retrieves a font with the specified unique identifier (<ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref>). It returns a reference to the font if it exists, or an empty reference otherwise.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref> of the font to retrieve. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the font if found, or an empty reference. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="476" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="118" bodyend="121"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="799" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="456" bodyend="459"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_asset_manager_1a7d465a112dc1d28fc3544e149f4068d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>Ref&lt; <ref refid="class_a_g_e_1_1_a_g_e_font" kindref="compound">AGEFont</ref> &gt;</type>
@@ -593,12 +1328,39 @@
           <declname>Name</declname>
         </param>
         <briefdescription>
+<para>Get a font from the asset manager. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function retrieves a font with a specified name from the asset manager&apos;s registry. If the font does not exist, it will return an empty reference.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the font to retrieve. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the requested font if found; otherwise, an empty reference.</para>
+</simplesect>
+Retrieves a font from the asset manager.</para>
+<para>This function is used to get a font with a specific name from the asset manager. The font can then be used for rendering text in the game.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the font to retrieve. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the requested font. If no such font exists, an empty reference will be returned. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="477" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="122" bodyend="125"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="800" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="476" bodyend="479"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_asset_manager_1a70c2be62430f8bafea99fbc526c6bbb2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -611,12 +1373,39 @@
           <declname>Filepath</declname>
         </param>
         <briefdescription>
+<para>Checks if a font is loaded. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function checks whether the specified font file has been loaded into memory. It uses an internal registry to check this information.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Filepath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path of the font file to be checked. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the font is loaded, false otherwise.</para>
+</simplesect>
+Checks if a font is loaded.</para>
+<para>This function checks whether the specified font file is currently loaded in memory. It does this by querying the <ref refid="struct_a_g_e_1_1_asset_registry" kindref="compound">AssetRegistry</ref> object associated with the <ref refid="class_a_g_e_1_1_asset_manager" kindref="compound">AssetManager</ref> instance.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Filepath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path to the font file to check for. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the font is loaded, false otherwise. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="478" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="126" bodyend="129"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="801" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="498" bodyend="501"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_asset_manager_1a53474a1342a27cc20caac2fbcbaa67e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -629,12 +1418,39 @@
           <declname>Filepath</declname>
         </param>
         <briefdescription>
+<para>Loads a soundbank from the specified file path. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes in a const reference to a std::filesystem::path object, which represents the location of the soundbank file on disk. The function then uses this path to load the soundbank into the <ref refid="class_a_g_e_1_1_asset_manager" kindref="compound">AssetManager</ref>&apos;s registry.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Filepath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A constant reference to a std::filesystem::path object representing the location of the soundbank file on disk.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void No return value is provided by this function.</para>
+</simplesect>
+Loads a soundbank from the specified file path.</para>
+<para>This function takes in a const reference to a std::filesystem::path object, which represents the location of the soundbank file on disk. The function then uses this path to load the soundbank into memory using the <ref refid="struct_a_g_e_1_1_asset_registry" kindref="compound">AssetRegistry</ref>&apos;s LoadSoundbank method.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Filepath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A const reference to a std::filesystem::path object representing the location of the soundbank file on disk. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void No return value. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="480" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="130" bodyend="133"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="803" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="519" bodyend="522"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_asset_manager_1a5e2ce6a3b787ff4fca19cd5730db2de7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -647,12 +1463,39 @@
           <declname>Filepath</declname>
         </param>
         <briefdescription>
+<para>Checks if a soundbank is loaded. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function checks whether the specified soundbank file has been loaded into memory. It does this by calling <computeroutput><ref refid="class_a_g_e_1_1_asset_manager_1a5e2ce6a3b787ff4fca19cd5730db2de7" kindref="member">AssetManager::IsSoundbankLoaded</ref></computeroutput> on the internal registry object, which presumably handles all asset loading and management.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Filepath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path to the soundbank file to check for. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the soundbank is loaded, false otherwise.</para>
+</simplesect>
+Checks if a soundbank is loaded.</para>
+<para>This function checks whether the specified soundbank file has been loaded into memory. It does this by calling <computeroutput><ref refid="class_a_g_e_1_1_asset_manager_1a5e2ce6a3b787ff4fca19cd5730db2de7" kindref="member">AssetManager::IsSoundbankLoaded</ref></computeroutput> on the internal registry object.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Filepath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path to the soundbank file to check for. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the soundbank is loaded, false otherwise. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="482" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="134" bodyend="137"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="805" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="541" bodyend="544"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_asset_manager_1a08cb94284a3be77946ab8c259f0fe2bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>Ref&lt; <ref refid="class_a_g_e_1_1_audio_source" kindref="compound">AudioSource</ref> &gt;</type>
@@ -665,12 +1508,39 @@
           <declname>Filepath</declname>
         </param>
         <briefdescription>
+<para>Loads a sound from the specified file path. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function loads an audio source from the given file path and returns a reference to it. If the sound is already loaded, this function will return a reference to the existing sound.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Filepath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path of the sound file to load. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the loaded or existing sound.</para>
+</simplesect>
+Loads a sound from the given file path.</para>
+<para>This function loads an audio source from the specified file path and returns a reference to it. If the sound is already loaded, this will return a reference to that existing sound.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Filepath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path of the sound file to load. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the loaded audio source. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="484" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="150" bodyend="153"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="807" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="622" bodyend="625"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_asset_manager_1af69ce37f316a147e11ffdf462212f8bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>Ref&lt; <ref refid="class_a_g_e_1_1_audio_source" kindref="compound">AudioSource</ref> &gt;</type>
@@ -683,12 +1553,39 @@
           <declname>ID</declname>
         </param>
         <briefdescription>
+<para>Retrieves an audio source with a specific <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function retrieves and returns the audio source associated with the given <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref> from the asset manager&apos;s registry. If no such sound exists, it will return an empty reference.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref> of the audio source to retrieve. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the retrieved audio source or an empty reference if no such sound exists.</para>
+</simplesect>
+Retrieves an audio source with the given unique identifier.</para>
+<para>This function retrieves and returns a reference to an <ref refid="class_a_g_e_1_1_audio_source" kindref="compound">AudioSource</ref> object from the registry using its unique identifier (<ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref>). If no such sound exists, it will return an empty Ref&lt;AudioSource&gt;.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref> of the audio source to retrieve. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the requested audio source if found; otherwise, an empty Ref&lt;AudioSource&gt;. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="485" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="154" bodyend="157"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="808" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="643" bodyend="646"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_asset_manager_1aa1a13c9f8e7b37182c542afc4b51f141" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>Ref&lt; <ref refid="class_a_g_e_1_1_audio_source" kindref="compound">AudioSource</ref> &gt;</type>
@@ -701,12 +1598,39 @@
           <declname>Name</declname>
         </param>
         <briefdescription>
+<para>Retrieves an audio source with the given name. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function retrieves and returns a reference to an <ref refid="class_a_g_e_1_1_audio_source" kindref="compound">AudioSource</ref> object from the registry using the provided name. If no such sound exists, it will return an empty reference.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the sound to retrieve. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the audio source with the given name, or an empty reference if no such sound exists.</para>
+</simplesect>
+Retrieves an audio source from the registry by name.</para>
+<para>This function retrieves a reference to an <ref refid="class_a_g_e_1_1_audio_source" kindref="compound">AudioSource</ref> object stored in the <ref refid="class_a_g_e_1_1_asset_manager" kindref="compound">AssetManager</ref>&apos;s Registry with the given Name. The returned Reference can be used to access and manipulate the sound data associated with this name.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- A string representing the unique identifier of the audio source. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Ref&lt;AudioSource&gt; - A reference to an <ref refid="class_a_g_e_1_1_audio_source" kindref="compound">AudioSource</ref> object in the <ref refid="class_a_g_e_1_1_asset_manager" kindref="compound">AssetManager</ref>&apos;s Registry. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="486" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="158" bodyend="161"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="809" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="664" bodyend="667"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_asset_manager_1a3fd75fe68724f2d2d3897ac090595ddf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -719,12 +1643,39 @@
           <declname>Filepath</declname>
         </param>
         <briefdescription>
+<para>Checks if a sound is loaded. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function checks whether the specified sound file is currently loaded in memory. It does this by using an <ref refid="struct_a_g_e_1_1_asset_registry" kindref="compound">AssetRegistry</ref> object to check its internal state.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Filepath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path of the sound file to be checked. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the sound is loaded, false otherwise.</para>
+</simplesect>
+Checks if a sound is loaded.</para>
+<para>This function checks whether the specified sound file is currently loaded in memory. It uses an internal registry to keep track of all loaded sounds, and returns true if the given filepath corresponds to a known sound that has been loaded. If the sound is not loaded or there was an error during the check, it will return false.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Filepath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path to the sound file to be checked. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the sound is loaded, false otherwise. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="488" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="162" bodyend="165"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="811" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Private/AssetManager.cpp" bodystart="687" bodyend="690"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_asset_manager_1a7c0ab2f5b3dd228bdacb6efe64f1bfe4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>Ref&lt; <ref refid="struct_a_g_e_1_1_asset_registry" kindref="compound">AssetRegistry</ref> &gt;</type>
@@ -733,12 +1684,16 @@
         <name>GetAssetRegistry</name>
         <qualifiedname>AGE::AssetManager::GetAssetRegistry</qualifiedname>
         <briefdescription>
+<para>Retrieves the Asset Registry object associated with this instance. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>A reference to the Asset Registry object. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="490" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" bodystart="490" bodyend="490"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="817" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" bodystart="817" bodyend="817"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_asset_manager_1acf94cd2998f4eb4a0391edaab419a4e9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -756,19 +1711,31 @@
           <declname>Asset</declname>
         </param>
         <briefdescription>
+<para>Registers an asset of type T into the system. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function registers an asset of a specific type (T) into the system. If the type is <ref refid="class_a_g_e_1_1_audio_source" kindref="compound">AudioSource</ref>, it will log an error message saying that registering audio sources is currently unsupported. For <ref refid="class_a_g_e_1_1_a_g_e_font" kindref="compound">AGEFont</ref> and <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> types, it will call the RegisterFont method on the registry object with the given asset as parameter.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Asset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The asset to be registered. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="493" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" bodystart="493" bodyend="512"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="827" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" bodystart="827" bodyend="846"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="436" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" bodystart="437" bodyend="519"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" line="744" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Assets/Public/AssetManager.h" bodystart="745" bodyend="853"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_asset_manager_1a6aecc0680671f9fb32ebe50f2e134b12" prot="public" virt="non-virtual"><scope>AGE::AssetManager</scope><name>AssetManager</name></member>
       <member refid="class_a_g_e_1_1_asset_manager_1a53de52beebf8ff04a413d04e03b6150a" prot="public" virt="non-virtual"><scope>AGE::AssetManager</scope><name>AssetManager</name></member>

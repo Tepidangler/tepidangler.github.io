@@ -88,31 +88,50 @@
 <tbody>
 <tr>
 <td style="text-align: right;">std::string</td>
-<td style="text-align: left;"><a href="#function-openfile"><strong>OpenFile</strong></a> (const std::string &amp; Title, const std::filesystem::path &amp; DefaultPath, std::vector&lt; std::string &gt; Filter) <br></td>
+<td style="text-align: left;"><a href="#function-openfile"><strong>OpenFile</strong></a> (const std::string &amp; Title, const std::filesystem::path &amp; DefaultPath, std::vector&lt; std::string &gt; Filter) <br><em>Opens a file dialog and returns the path of the selected file.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">std::string</td>
-<td style="text-align: left;"><a href="#function-savefile"><strong>SaveFile</strong></a> (const std::string &amp; Title, const std::filesystem::path &amp; DefaultPath, std::vector&lt; std::string &gt; Filter) <br></td>
+<td style="text-align: left;"><a href="#function-savefile"><strong>SaveFile</strong></a> (const std::string &amp; Title, const std::filesystem::path &amp; DefaultPath, std::vector&lt; std::string &gt; Filter) <br><em>This function opens a file dialog and allows the user to select a file for saving.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
 <h3 id="function-openfile">function OpenFile</h3>
+<p><em>Opens a file dialog and returns the path of the selected file.</em> </p>
 <pre><code class="language-C++">static std::string AGE::FileDialogs::OpenFile (
     const std::string &amp; Title,
     const std::filesystem::path &amp; DefaultPath,
     std::vector&lt; std::string &gt; Filter
 ) 
 </code></pre>
+<p>This function opens a file dialog with the given title, default path, and filter. If no file is selected, it returns an empty string. The returned string contains the path of the first selected file.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Title</code> The title of the file dialog. </li>
+<li><code>DefaultPath</code> The default path for the file dialog. </li>
+<li><code>Filter</code> A vector of strings representing the filter for the file dialog.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Returns a string containing the path of the selected file, or an empty string if no file is selected. </p>
 <hr>
 
 <h3 id="function-savefile">function SaveFile</h3>
+<p><em>This function opens a file dialog and allows the user to select a file for saving.</em> </p>
 <pre><code class="language-C++">static std::string AGE::FileDialogs::SaveFile (
     const std::string &amp; Title,
     const std::filesystem::path &amp; DefaultPath,
     std::vector&lt; std::string &gt; Filter
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Title</code> The title of the file dialog. </li>
+<li><code>DefaultPath</code> The default path where the file dialog starts from. </li>
+<li><code>Filter</code> A vector of strings representing the types of files that can be selected in the dialog.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Returns a string containing the path to the selected file, or an empty string if no file was selected. </p>
 <hr>
 
 <hr />

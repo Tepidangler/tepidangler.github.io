@@ -16,33 +16,33 @@ namespace AGE
 
   
 
-    VideoSource::VideoSource(const std::string& FilePath)
+VideoSource::VideoSource(const std::string& FilePath)
         :m_FilePath(FilePath)
     {
 
     }
 
-    void VideoSource::SeekFrame()
+void VideoSource::SeekFrame()
     {
     }
 
-    void VideoSource::ReadFrame()
+void VideoSource::ReadFrame()
     {
 
     }
 
-    void VideoSource::MakeTexture()
+void VideoSource::MakeTexture()
     {
        
 
     }
 
-    void VideoSource::IncrementFrameCount()
+void VideoSource::IncrementFrameCount()
     {
 
     }
 
-    VideoSource::~VideoSource()
+VideoSource::~VideoSource()
     {
 
     }

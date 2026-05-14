@@ -18,7 +18,7 @@
 
 namespace AGE
 {
-    IniReader::IniReader(const std::filesystem::path &Path)
+IniReader::IniReader(const std::filesystem::path &Path)
         :m_IniPath(Path)
     {
         m_Ini.SetUnicode();
@@ -31,7 +31,7 @@ namespace AGE
         }
     }
 
-    std::string IniReader::Read(const std::string &Section, const std::string &Key, bool &HasMultipleValues)
+std::string IniReader::Read(const std::string &Section, const std::string &Key, bool &HasMultipleValues)
     {
         std::string Result = "";
 
@@ -47,7 +47,7 @@ namespace AGE
 
     }
 
-    std::vector<std::string> IniReader::ReadAll(const std::string &Section, const std::string &Key)
+std::vector<std::string> IniReader::ReadAll(const std::string &Section, const std::string &Key)
     {
         CSimpleIniA::TNamesDepend Values;
         std::vector<std::string> Results;

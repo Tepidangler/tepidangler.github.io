@@ -14,15 +14,15 @@
 
 namespace AGE 
 {
-    SubTexture2D::SubTexture2D(const Ref<Texture2D>& Texture, const Vector2& Min, const Vector2& Max)
+SubTexture2D::SubTexture2D(const Ref<Texture2D>& Texture, const Vector2& Min, const Vector2& Max)
         :m_Texture(Texture)
     {
-        m_TexCoords[0] = { Max[0], Max[1] };
+        m_TexCoords[0] = { Min[0], Min[1] };
         m_TexCoords[1] = { Max[0], Min[1] };
-        m_TexCoords[2] = { Min[0], Min[1] };
+        m_TexCoords[2] = { Max[0], Max[1] };
         m_TexCoords[3] = { Min[0], Max[1] };
     }
-    SubTexture2D::SubTexture2D(void* Data)
+SubTexture2D::SubTexture2D(void* Data)
     {
 
         SubTexture2D* Tex = (SubTexture2D*)Data;
@@ -36,7 +36,7 @@ namespace AGE
         m_Height = Tex->GetHeight();
     }
 
-    Ref<SubTexture2D> SubTexture2D::CreateFromCoords(const Ref<Texture2D>& Texture, const Vector2& SpriteLoc, const Vector2& CellSize, const Vector2& SpriteSize)
+Ref<SubTexture2D> SubTexture2D::CreateFromCoords(const Ref<Texture2D>& Texture, const Vector2& SpriteLoc, const Vector2& CellSize, const Vector2& SpriteSize)
     {
         Vector2 min = { (SpriteLoc[0] * CellSize[0]) / (float)Texture->GetWidth(), (SpriteLoc[1] * CellSize[1]) / (float)Texture->GetHeight() };
         Vector2 max = { ((SpriteLoc[0] + SpriteSize[0]) * (float)CellSize[0]) / (float)Texture->GetWidth(), ((SpriteLoc[1] + SpriteSize[1]) * CellSize[1]) / (float)Texture->GetHeight()};

@@ -19,21 +19,23 @@ namespace AGE
     namespace Util
     {
         //TODO: Complete this
-        static std::string FMOD_ErrorString(FMOD_RESULT& Code)
+static std::string FMOD_ErrorString(FMOD_RESULT& Code)
         {
             return "";
         }
     }
 
-    FmodEngine::FmodEngine()
+FmodEngine::FmodEngine()
     {
         Init();
     }
-    FmodEngine::~FmodEngine()
+FmodEngine::~FmodEngine()
     {
         Shutdown();
     }
-    void FmodEngine::Init()
+    "/**\n * @brief Initialize the FMOD engine.\n * This function sets up basic settings for FMOD system.\n * It creates a new instance of FMOD Studio System,\n * checks if creation was successful, sets number of listeners to 1,\n * enables advanced settings, gets core system pointer,\n * sets output type and software format.\n * Then it initializes the FMOD system with buffer size\n * and normal priority. If any step fails, an error message is logged and program exits."
+
+void FmodEngine::Init()
     {
         FMOD_RESULT Result;
         FMOD_STUDIO_ADVANCEDSETTINGS Settings{};
@@ -64,23 +66,23 @@ namespace AGE
 
     }
 
-    void FmodEngine::Start()
+void FmodEngine::Start()
     {
         m_CurrentEventInstance->start();
 
     }
 
-    void FmodEngine::Update()
+void FmodEngine::Update()
     {
         m_System->update();
     }
 
-    void FmodEngine::Stop()
+void FmodEngine::Stop()
     {
         m_CurrentEventInstance->stop(FMOD_STUDIO_STOP_ALLOWFADEOUT);
     }
 
-    void FmodEngine::Shutdown()
+void FmodEngine::Shutdown()
     {
         for (auto K : m_Events)
         {
@@ -101,7 +103,7 @@ namespace AGE
         m_System->release();
     }
 
-    void FmodEngine::LoadBanks(const std::vector<Ref<SoundBank>>& Banks)
+void FmodEngine::LoadBanks(const std::vector<Ref<SoundBank>>& Banks)
     {
         for (auto& B : Banks)
         {
@@ -109,12 +111,14 @@ namespace AGE
         }
     }
 
-    void FmodEngine::LoadBank(Ref<SoundBank> Bank)
+void FmodEngine::LoadBank(Ref<SoundBank> Bank)
     {
         LoadBankFromFile(Bank->GetFilePath().string());
     }
 
-    void FmodEngine::LoadEvents()
+    
+
+void FmodEngine::LoadEvents()
     {
         for (auto KV : m_Banks)
         {
@@ -144,7 +148,7 @@ namespace AGE
         }
     }
 
-    void FmodEngine::SetCurrentEventName(const std::string &Name)
+void FmodEngine::SetCurrentEventName(const std::string &Name)
     {
         m_CurrentEventInstanceName = Name;
 
@@ -156,24 +160,26 @@ namespace AGE
 
     }
 
-    bool FmodEngine::IsEventValid(const std::string& EventName)
+bool FmodEngine::IsEventValid(const std::string& EventName)
     {
         return m_Events[EventName]->isValid();
     }
 
-    void FmodEngine::SetParameterByName(const std::string &Name, float Value)
+void FmodEngine::SetParameterByName(const std::string &Name, float Value)
     {
         GetCurrentEvent()->setParameterByName(Name.c_str(),Value);
     }
 
-    void FmodEngine::Set3DAttributes(void *Attributes)
+void FmodEngine::Set3DAttributes(void *Attributes)
     {
         FMOD_3D_ATTRIBUTES* Attribs{};
         Attribs = reinterpret_cast<FMOD_3D_ATTRIBUTES*>(Attributes);
         GetCurrentEvent()->set3DAttributes(Attribs);
     }
 
-    void FmodEngine::LoadBankFromFile(const std::string& FileName)
+    
+
+void FmodEngine::LoadBankFromFile(const std::string& FileName)
     {
         FMOD_RESULT Result;
         std::string Tmp;
@@ -193,12 +199,13 @@ namespace AGE
 
     }
 
-    void FmodEngine::LoadBankFromMemory(const char* Data)
+void FmodEngine::LoadBankFromMemory(const char* Data)
     {
-        AGE_CORE_ASSERT(false, "Not Implemented!");
+        CoreLogger::Assert(false, "Not Implemented!");
     }
 
-    void FmodEngine::CreateFmodEvent(const std::string &EventString)
+
+void FmodEngine::CreateFmodEvent(const std::string &EventString)
     {
         FMOD::Studio::EventDescription* Desc;
         GetSystem()->getEvent(EventString.c_str(), &Desc);
@@ -216,7 +223,7 @@ namespace AGE
     }
 
     template<>
-    FmodEngine* AudioEngine::As()
+FmodEngine* AudioEngine::As()
     {
         return (FmodEngine*)this;
     }

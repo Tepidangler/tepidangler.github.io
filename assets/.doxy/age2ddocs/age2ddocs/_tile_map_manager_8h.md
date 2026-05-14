@@ -38,6 +38,7 @@
 
 | Type | Name |
 | ---: | :--- |
+| struct | [**TileMapData**](struct_a_g_e_1_1_tile_map_data.md) <br> |
 | class | [**TileMapManager**](class_a_g_e_1_1_tile_map_manager.md) <br> |
 
 

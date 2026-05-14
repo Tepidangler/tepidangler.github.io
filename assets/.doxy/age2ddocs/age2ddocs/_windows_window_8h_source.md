@@ -29,12 +29,12 @@ namespace AGE
 
         void OnUpdate() override;
 
-        inline unsigned int GetWidth() const override { return m_Data.Width; }
-        inline unsigned int GetHeight() const override { return m_Data.Height; }
+inline unsigned int GetWidth() const override { return m_Data.Width; }
+inline unsigned int GetHeight() const override { return m_Data.Height; }
 
         // Window Attributes
 
-        inline void SetEventCallback(const EventCallbackFn& Callback) override 
+inline void SetEventCallback(const EventCallbackFn& Callback) override 
         {
             m_Data.EventCallback = Callback; 
             m_RendererCallback = Callback;
@@ -49,12 +49,12 @@ namespace AGE
         bool IsVSync() const override;
         void ProcessJoystickInput();
 
-        static WindowsWindow& Get() { return *s_Window; }
-        void* GetNativeWindow() const override { return m_Window; }
-        HWND GetPlatformWindow() override { return m_Win32Window; }
+static WindowsWindow& Get() { return *s_Window; }
+void* GetNativeWindow() const override { return m_Window; }
+HWND GetPlatformWindow() override { return m_Win32Window; }
         Vector2 GetMousePos() override;
 
-        GraphicsContext* GetGraphicsContext() override { return m_Context.get(); }
+GraphicsContext* GetGraphicsContext() override { return m_Context.get(); }
 
         static void JoystickCallback(int JID, int Event);
 

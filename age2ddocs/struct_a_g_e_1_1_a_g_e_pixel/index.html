@@ -111,23 +111,23 @@
 <tbody>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-agepixel-13"><strong>AGEPixel</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-agepixel-13"><strong>AGEPixel</strong></a> () = default<br><em>Default constructor for the</em> <a href="./"><em><strong>AGEPixel</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-agepixel-23"><strong>AGEPixel</strong></a> (uint8_t a, uint8_t b, uint8_t c, uint8_t d) <br></td>
+<td style="text-align: left;"><a href="#function-agepixel-23"><strong>AGEPixel</strong></a> (uint8_t a, uint8_t b, uint8_t c, uint8_t d) <br><em>Constructs an instance of</em> <a href="./"><em><strong>AGEPixel</strong></em></a> <em>with the given RGBA values.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-agepixel-33"><strong>AGEPixel</strong></a> (float a, float b, float c, float d) <br></td>
+<td style="text-align: left;"><a href="#function-agepixel-33"><strong>AGEPixel</strong></a> (float a, float b, float c, float d) <br><em>Constructs an instance of</em> <a href="./"><em><strong>AGEPixel</strong></em></a> <em>with the given float values.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-operator-bytef-*"><strong>operator Bytef *</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-operator-bytef-*"><strong>operator Bytef *</strong></a> () <br><em>This function converts the object to a Bytef pointer.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-operator-uint32_t"><strong>operator uint32_t</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-operator-uint32_t"><strong>operator uint32_t</strong></a> () <br><em>Converts the RGBA color to a uint32_t value.</em></td>
 </tr>
 </tbody>
 </table>
@@ -148,11 +148,13 @@
 <hr>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-agepixel-13">function AGEPixel [1/3]</h3>
+<p><em>Default constructor for the</em> <a href="./"><em><strong>AGEPixel</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::AGEPixel::AGEPixel () = default
 </code></pre>
 <hr>
 
 <h3 id="function-agepixel-23">function AGEPixel [2/3]</h3>
+<p><em>Constructs an instance of</em> <a href="./"><em><strong>AGEPixel</strong></em></a> <em>with the given RGBA values.</em></p>
 <pre><code class="language-C++">inline AGE::AGEPixel::AGEPixel (
     uint8_t a,
     uint8_t b,
@@ -160,9 +162,18 @@
     uint8_t d
 ) 
 </code></pre>
+<p>The function takes four uint8_t parameters representing the red, green, blue and alpha components of a color in that order. It then stores these values internally as Uint32_t for further processing. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>a</code> Red component (0-255). </li>
+<li><code>b</code> Green component (0-255). </li>
+<li><code>c</code> Blue component (0-255). </li>
+<li><code>d</code> Alpha component (0-255). </li>
+</ul>
 <hr>
 
 <h3 id="function-agepixel-33">function AGEPixel [3/3]</h3>
+<p><em>Constructs an instance of</em> <a href="./"><em><strong>AGEPixel</strong></em></a> <em>with the given float values.</em></p>
 <pre><code class="language-C++">inline AGE::AGEPixel::AGEPixel (
     float a,
     float b,
@@ -170,16 +181,32 @@
     float d
 ) 
 </code></pre>
+<p>This function takes four float values and assigns them to the RGBAf array in the order they are provided. It then converts these floats into a uint32_t representation using ConvertFloatToU32() function, which is stored in U32RBGA array. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>a</code> First float value. </li>
+<li><code>b</code> Second float value. </li>
+<li><code>c</code> Third float value. </li>
+<li><code>d</code> Fourth float value. </li>
+</ul>
 <hr>
 
 <h3 id="function-operator-bytef">function operator Bytef *</h3>
+<p><em>This function converts the object to a Bytef pointer.</em> </p>
 <pre><code class="language-C++">inline AGE::AGEPixel::operator Bytef * () 
 </code></pre>
+<p>The function returns a pointer of type Bytef that points to the RGBA color array. It is used for certain operations in the Zlib library, which requires data to be in this format.</p>
+<p><strong>Returns:</strong></p>
+<p>A pointer of type Bytef pointing to the RGBA color array. </p>
 <hr>
 
 <h3 id="function-operator-uint32_t">function operator uint32_t</h3>
+<p><em>Converts the RGBA color to a uint32_t value.</em> </p>
 <pre><code class="language-C++">inline AGE::AGEPixel::operator uint32_t () 
 </code></pre>
+<p>The function shifts and combines the four bytes of the RGBA color into one uint32_t value, with each byte contributing 0 bits, 8 bits, 16 bits, and 24 bits respectively. This is done using bitwise shift and OR operations.</p>
+<p><strong>Returns:</strong></p>
+<p>A uint32_t representation of the RGBA color. </p>
 <hr>
 
 <hr />

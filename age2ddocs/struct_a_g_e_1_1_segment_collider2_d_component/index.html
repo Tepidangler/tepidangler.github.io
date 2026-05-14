@@ -131,11 +131,11 @@
 <tbody>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-segmentcollider2dcomponent-12"><strong>SegmentCollider2DComponent</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-segmentcollider2dcomponent-12"><strong>SegmentCollider2DComponent</strong></a> () = default<br><em>Default constructor for the</em> <a href="./"><em><strong>SegmentCollider2DComponent</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-segmentcollider2dcomponent-22"><strong>SegmentCollider2DComponent</strong></a> (const <a href="./"><strong>SegmentCollider2DComponent</strong></a> &amp;) = default<br></td>
+<td style="text-align: left;"><a href="#function-segmentcollider2dcomponent-22"><strong>SegmentCollider2DComponent</strong></a> (const <a href="./"><strong>SegmentCollider2DComponent</strong></a> &amp;) = default<br><em>Default copy constructor for the</em> <a href="./"><em><strong>SegmentCollider2DComponent</strong></em></a> <em>class. This function is used to create a new instance of the class by copying an existing one, which can be useful in scenarios where you need to maintain multiple instances of the same data but with different values.</em></td>
 </tr>
 </tbody>
 </table>
@@ -150,11 +150,11 @@
 <tbody>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-deserialize"><strong>Deserialize</strong></a> (<a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> * Serializer, <a href="./"><strong>SegmentCollider2DComponent</strong></a> &amp; Data) <br></td>
+<td style="text-align: left;"><a href="#function-deserialize"><strong>Deserialize</strong></a> (<a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> * Serializer, <a href="./"><strong>SegmentCollider2DComponent</strong></a> &amp; Data) <br><em>This function deserializes data from a serialized format into the provided</em> <a href="./"><em><strong>SegmentCollider2DComponent</strong></em></a> <em>.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-serialize"><strong>Serialize</strong></a> (<a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> * Serializer, const <a href="./"><strong>SegmentCollider2DComponent</strong></a> &amp; Data) <br></td>
+<td style="text-align: left;"><a href="#function-serialize"><strong>Serialize</strong></a> (<a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> * Serializer, const <a href="./"><strong>SegmentCollider2DComponent</strong></a> &amp; Data) <br><em>This function serializes the data of a</em> <a href="./"><em><strong>SegmentCollider2DComponent</strong></em></a> <em>.</em></td>
 </tr>
 </tbody>
 </table>
@@ -200,31 +200,52 @@
 <hr>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-segmentcollider2dcomponent-12">function SegmentCollider2DComponent [1/2]</h3>
+<p><em>Default constructor for the</em> <a href="./"><em><strong>SegmentCollider2DComponent</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::SegmentCollider2DComponent::SegmentCollider2DComponent () = default
 </code></pre>
 <hr>
 
 <h3 id="function-segmentcollider2dcomponent-22">function SegmentCollider2DComponent [2/2]</h3>
+<p><em>Default copy constructor for the</em> <a href="./"><em><strong>SegmentCollider2DComponent</strong></em></a> <em>class. This function is used to create a new instance of the class by copying an existing one, which can be useful in scenarios where you need to maintain multiple instances of the same data but with different values.</em></p>
 <pre><code class="language-C++">AGE::SegmentCollider2DComponent::SegmentCollider2DComponent (
     const SegmentCollider2DComponent &amp;
 ) = default
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>other</code> The existing instance of the class that will be copied. </li>
+</ul>
 <hr>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
 <h3 id="function-deserialize">function Deserialize</h3>
+<p><em>This function deserializes data from a serialized format into the provided</em> <a href="./"><em><strong>SegmentCollider2DComponent</strong></em></a> <em>.</em></p>
 <pre><code class="language-C++">static inline void AGE::SegmentCollider2DComponent::Deserialize (
     DataReader * Serializer,
     SegmentCollider2DComponent &amp; Data
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Serializer</code> A pointer to an instance of <a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> that provides the serialized data. </li>
+<li><code>Data</code> The <a href="./"><strong>SegmentCollider2DComponent</strong></a> where the deserialized data will be stored.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-serialize">function Serialize</h3>
+<p><em>This function serializes the data of a</em> <a href="./"><em><strong>SegmentCollider2DComponent</strong></em></a> <em>.</em></p>
 <pre><code class="language-C++">static inline void AGE::SegmentCollider2DComponent::Serialize (
     DataWriter * Serializer,
     const SegmentCollider2DComponent &amp; Data
 ) 
 </code></pre>
+<p>The function takes in two parameters - a pointer to a <a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> object and a constant reference to a <a href="./"><strong>SegmentCollider2DComponent</strong></a> object. It does not return anything as it is a void function.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Serializer</code> A pointer to the <a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> object that will be used for serialization. </li>
+<li><code>Data</code> The constant reference to the <a href="./"><strong>SegmentCollider2DComponent</strong></a> object whose data needs to be serialized. </li>
+</ul>
 <hr>
 
 <hr />

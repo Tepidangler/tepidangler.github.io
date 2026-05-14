@@ -33,7 +33,7 @@ namespace AGE
     {
     public:
 
-        XInputControllerSettings() = default;
+XInputControllerSettings() = default;
 
         int LeftThumbstickDeadzone = XINPUT_GAMEPAD_LEFT_THUMB_DEADZONE;
         int RightThumbstickDeadzone = XINPUT_GAMEPAD_RIGHT_THUMB_DEADZONE;
@@ -49,7 +49,7 @@ namespace AGE
     struct XInputControllerInfo
     {
     public:
-        XInputControllerInfo() = default;
+XInputControllerInfo() = default;
 
         ulong_t PacketNumber = 0;
 
@@ -67,7 +67,7 @@ namespace AGE
 
         std::function<void(Event&)> CallbackFn;
 
-        operator bool()
+operator bool()
         {
             return bConnected;
         }
@@ -85,9 +85,9 @@ namespace AGE
         uint8_t RGBAc[4];
         uint32_t U32RBGA[4];
 
-        AGEPixel() = default;
+AGEPixel() = default;
 
-        AGEPixel(uint8_t a, uint8_t b, uint8_t c, uint8_t d)
+AGEPixel(uint8_t a, uint8_t b, uint8_t c, uint8_t d)
         {
             RGBAc[0] = a;
             RGBAc[1] = b;
@@ -103,7 +103,7 @@ namespace AGE
             
         }
 
-        AGEPixel(float a, float b, float c, float d)
+AGEPixel(float a, float b, float c, float d)
         {
             RGBAf[0] = a;
             RGBAf[1] = b;
@@ -121,17 +121,17 @@ namespace AGE
 
         }
 
-        operator Bytef*()
+operator Bytef*()
         {
             return (Bytef*)RGBAc;
         }
 
-        operator uint32_t()
+operator uint32_t()
         {
             return (uint32_t)((RGBAc[0] << 0) | (RGBAc[1] << 8) | (RGBAc[2] << 16) | (RGBAc[3] << 24));
         }
     private:
-        uint32_t* ConvertFloatToU32(float* Bytes)
+uint32_t* ConvertFloatToU32(float* Bytes)
         {
             double rgb[4] = { Bytes[0], Bytes[1], Bytes[2], 0};
             __m128 alpha = _mm_set1_ps(Bytes[3]);
@@ -230,29 +230,21 @@ namespace AGE
         Vector4 VertexColor;
         Vector2 VertexTexCoords;
         float TexID;
+
         //Vector4 OutlineColor;
 
         int EntityID;
     };
 
-    struct TilemapVertex
+    struct TileVertex
     {
         Vector3 VertexPosition;
+        Vector2 VertexTexCoords;
         Vector4 VertexColor;
-        Vector2 VertexUV ;
-        uint32_t VertexTSID = 0;
+        float VertexTexID ;
+        float VertexTilingFactor;
         int VertexEntityID = -1;
 
-    };
-
-    struct TilemapProperties
-    {
-        Matrix4D Transform;
-        Vector4 Color{1.f,1.f,1.f,1.f};
-        uint32_t TileSetID = 0;
-        std::map<uint32_t, std::vector<Vector2*>> UV;
-        int EntityID;
-        uint32_t NumofLayers =1;
     };
 
     struct QuadProperties
@@ -267,7 +259,7 @@ namespace AGE
 
         //Editor-Only
         int EntityID = -1;
-        void ResetProperties()
+void ResetProperties()
         {
             Alpha = 1.f;
             Size = { 1.f, 1.f };
@@ -323,11 +315,11 @@ namespace AGE
         uint32_t x = 1280;
         uint32_t y = 720;
 
-        std::pair<uint32_t,uint32_t> GetResolution() {return std::make_pair(x,y);}
-        void SetResolution(uint32_t X, uint32_t Y) {x = X; y= Y;}
+std::pair<uint32_t,uint32_t> GetResolution() {return std::make_pair(x,y);}
+void SetResolution(uint32_t X, uint32_t Y) {x = X; y= Y;}
 
-        uint32_t GetWidth() {return x;}
-        uint32_t GetHeight() {return y;}
+uint32_t GetWidth() {return x;}
+uint32_t GetHeight() {return y;}
 
 
     };
@@ -336,14 +328,17 @@ namespace AGE
     struct AsepriteVariant;
     struct AGEPoint
     {
-        AGEPoint() = default;
-        AGEPoint(int32_t x, int32_t y)
+AGEPoint() = default;
+        COMMENT:
+CONFIDENCE: 1.0;
+
+AGEPoint(int32_t x, int32_t y)
             :X(x), Y(y) {}
-        ~AGEPoint() = default;
+~AGEPoint() = default;
         int32_t X;
         int32_t Y;
 
-        bool operator==(const AGEPoint& Other)
+bool operator==(const AGEPoint& Other)
         {
             bool x = X == Other.X;
             bool y = Y == Other.Y;
@@ -351,7 +346,7 @@ namespace AGE
             return x && y;
         }
 
-        bool operator!=(const AGEPoint& Other)
+bool operator!=(const AGEPoint& Other)
         {
             bool x = X == Other.X;
             bool y = Y == Other.Y;
@@ -362,10 +357,10 @@ namespace AGE
     };
     struct AGESize
     {
-        AGESize() = default;
-        AGESize(int32_t width, int32_t height)
+AGESize() = default;
+AGESize(int32_t width, int32_t height)
             :Width(width), Height(height) {}
-        ~AGESize() = default;
+~AGESize() = default;
 
         int32_t Width;
         int32_t Height;
@@ -373,19 +368,22 @@ namespace AGE
     struct AGERect
     {
     public:
-        AGERect() = default;
-        AGERect(AGEPoint Point, int32_t width, int32_t height)
+AGERect() = default;
+AGERect(AGEPoint Point, int32_t width, int32_t height)
             : XY(Point), Width(width), Height(height) {}
 
-        AGERect(int32_t x, int32_t y, int32_t width, int32_t height)
+AGERect(int32_t x, int32_t y, int32_t width, int32_t height)
             :XY({x,y}), Width(width), Height(height) {}
-        ~AGERect() = default;
+        COMMENT:
+CONFIDENCE: 1.0;
+
+~AGERect() = default;
 
         AGEPoint XY;
         int32_t Width;
         int32_t Height;
 
-        bool Contains(AGEPoint Point)
+bool Contains(AGEPoint Point)
         {
             return XY == Point;
         }
@@ -482,23 +480,23 @@ namespace AGE
     {
         //Copied this implementation right out of the Aseprite user_data.h
 
-        AsepriteVariant() = default;
-        AsepriteVariant(const AsepriteVariant& v) = default;
+AsepriteVariant() = default;
+AsepriteVariant(const AsepriteVariant& v) = default;
 
         template<typename T>
-        AsepriteVariant(T&& v) : VariantBase(std::forward<T>(v)) { }
+AsepriteVariant(T&& v) : VariantBase(std::forward<T>(v)) { }
 
         // Avoid using Variant.operator=(const char*) because the "const
         // char*" is converted to a bool implicitly by MSVC.
-        AsepriteVariant& operator=(const char*) = delete;
+AsepriteVariant& operator=(const char*) = delete;
 
         template<typename T>
-        AsepriteVariant& operator=(T&& v) {
+AsepriteVariant& operator=(T&& v) {
             VariantBase::operator=(std::forward<T>(v));
             return *this;
         }
 
-        const size_t type() const {
+const size_t type() const {
             return index();
         }
     };
@@ -577,8 +575,8 @@ namespace AGE
     struct AsepriteCelChunk
     {
     public:
-        AsepriteCelChunk() = default;
-        ~AsepriteCelChunk() = default;
+AsepriteCelChunk() = default;
+~AsepriteCelChunk() = default;
 
 
         uint16_t LayerIndex;
@@ -592,7 +590,7 @@ namespace AGE
         uint16_t FramePosition; // Frame position to link with
         std::vector<AsepritePixelData> PixelDatas;
 
-        int order() const
+int order() const
         {
             return LayerIndex + zIndex;
         }
@@ -606,10 +604,10 @@ namespace AGE
     struct AsepriteLayer
     {
     public:
-        AsepriteLayer() = default;
-        AsepriteLayer(int LIndex, int ZIndex)
+AsepriteLayer() = default;
+AsepriteLayer(int LIndex, int ZIndex)
             :Layerindex(LIndex), zIndex(ZIndex) {}
-        AsepriteLayer(const AsepriteLayer&) = default;
+AsepriteLayer(const AsepriteLayer&) = default;
 
         int Layerindex;
         int zIndex;
@@ -686,8 +684,8 @@ namespace AGE
     struct AsepriteChunk
     {
     public:
-        AsepriteChunk() = default;
-        AsepriteChunk(const AsepriteChunk&) = default;
+AsepriteChunk() = default;
+AsepriteChunk(const AsepriteChunk&) = default;
 
         uint32_t Size;
         AsepriteChunkType Type;
@@ -697,8 +695,8 @@ namespace AGE
     struct AsepriteHeader
     {
     public:
-        AsepriteHeader() = default;
-        AsepriteHeader(const AsepriteHeader&) = default;
+AsepriteHeader() = default;
+AsepriteHeader(const AsepriteHeader&) = default;
         //HeaderData
         uint32_t FileSize;
         uint16_t MagicNumber = 0xA5E0;
@@ -724,8 +722,8 @@ namespace AGE
     struct AsepriteFrameData
     {
     public:
-        AsepriteFrameData() = default;
-        AsepriteFrameData(const AsepriteFrameData&) = default;
+AsepriteFrameData() = default;
+AsepriteFrameData(const AsepriteFrameData&) = default;
         //FrameData
         uint32_t BytesInFrame;
         uint16_t MagicNumber = 0xF1FA;
@@ -743,10 +741,10 @@ namespace AGE
     struct AsepriteFileData
     {
     public:
-        AsepriteFileData() = default;
-        AsepriteFileData(const AsepriteHeader& HeaderData)
+AsepriteFileData() = default;
+AsepriteFileData(const AsepriteHeader& HeaderData)
             :Header(HeaderData) {}
-        AsepriteFileData(const AsepriteFileData&) = default;
+AsepriteFileData(const AsepriteFileData&) = default;
 
         AsepriteHeader Header;
         std::vector<AsepriteFrameData> Frames;

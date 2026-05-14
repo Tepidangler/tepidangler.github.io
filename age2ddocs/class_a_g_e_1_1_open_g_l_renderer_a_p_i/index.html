@@ -105,59 +105,55 @@
 <tbody>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-clear"><strong>Clear</strong></a> () override<br></td>
+<td style="text-align: left;"><a href="#function-clear"><strong>Clear</strong></a> () override<br><em>Clears the color and depth buffers of the OpenGL context.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-drawarrays"><strong>DrawArrays</strong></a> (const Ref&lt; <a href="../class_a_g_e_1_1_vertex_array/"><strong>VertexArray</strong></a> &gt; &amp; VertexArray, uint32_t IndexCount) override<br></td>
+<td style="text-align: left;"><a href="#function-drawindexed-12"><strong>DrawIndexed</strong></a> (uint32_t IndexCount, uint32_t IndexStart, int VertexStart) override<br><em>This function is used to draw indexed elements in a graphics context.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-drawindexed-12"><strong>DrawIndexed</strong></a> (uint32_t IndexCount, uint32_t IndexStart, int VertexStart) override<br></td>
+<td style="text-align: left;"><a href="#function-drawindexed-22"><strong>DrawIndexed</strong></a> (const Ref&lt; <a href="../class_a_g_e_1_1_vertex_array/"><strong>VertexArray</strong></a> &gt; &amp; VertexArray, uint32_t IndexCount) override<br><em>Draws an indexed element array.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-drawindexed-22"><strong>DrawIndexed</strong></a> (const Ref&lt; <a href="../class_a_g_e_1_1_vertex_array/"><strong>VertexArray</strong></a> &gt; &amp; VertexArray, uint32_t IndexCount) override<br></td>
+<td style="text-align: left;"><a href="#function-drawlines"><strong>DrawLines</strong></a> (const Ref&lt; <a href="../class_a_g_e_1_1_vertex_array/"><strong>VertexArray</strong></a> &gt; &amp; VertexArray, uint32_t VertexCount) override<br><em>Draws a series of lines defined by the given vertex array.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-drawlines"><strong>DrawLines</strong></a> (const Ref&lt; <a href="../class_a_g_e_1_1_vertex_array/"><strong>VertexArray</strong></a> &gt; &amp; VertexArray, uint32_t VertexCount) override<br></td>
+<td style="text-align: left;"><a href="#function-drawstrips"><strong>DrawStrips</strong></a> (const Ref&lt; <a href="../class_a_g_e_1_1_vertex_array/"><strong>VertexArray</strong></a> &gt; &amp; VertexArray, uint32_t IndexCount) override<br><em>DrawStrips is a function that draws triangle strips using OpenGL.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-drawstrips"><strong>DrawStrips</strong></a> (const Ref&lt; <a href="../class_a_g_e_1_1_vertex_array/"><strong>VertexArray</strong></a> &gt; &amp; VertexArray, uint32_t IndexCount) override<br></td>
+<td style="text-align: left;"><a href="#function-flush"><strong>Flush</strong></a> () override<br><em>This function flushes the OpenGL command buffer. It ensures that all commands issued up to this point are executed immediately, without buffering them for later execution.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-flush"><strong>Flush</strong></a> () override<br></td>
+<td style="text-align: left;"><a href="#function-init"><strong>Init</strong></a> () override<br><em>Initializes the OpenGL</em> <a href="../class_a_g_e_1_1_renderer/"><em><strong>Renderer</strong></em></a> <em>API with various settings for rendering.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-init"><strong>Init</strong></a> () override<br></td>
+<td style="text-align: left;"><a href="#function-present"><strong>Present</strong></a> () override<br><em>This function is used to present the rendered scene to the screen. It does not take any parameters and returns void, indicating that it has completed its operation without returning a value.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-present"><strong>Present</strong></a> () override<br></td>
+<td style="text-align: left;"><a href="#function-setclearcolor"><strong>SetClearColor</strong></a> (const <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> Color) override<br><em>This function sets the clear color for the OpenGL context.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-setclearcolor"><strong>SetClearColor</strong></a> (const <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> Color) override<br></td>
+<td style="text-align: left;"><a href="#function-setlinewidth"><strong>SetLineWidth</strong></a> (float Width) override<br><em>Set the line width for subsequent drawing operations.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-setlinewidth"><strong>SetLineWidth</strong></a> (float Width) override<br></td>
+<td style="text-align: left;"><a href="#function-setviewport"><strong>SetViewport</strong></a> (uint32_t x, uint32_t y, uint32_t Width, uint32_t Height) override<br><em>Set the viewport for OpenGL rendering.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-setviewport"><strong>SetViewport</strong></a> (uint32_t x, uint32_t y, uint32_t Width, uint32_t Height) override<br></td>
-</tr>
-<tr>
-<td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-submit"><strong>Submit</strong></a> () override<br></td>
+<td style="text-align: left;"><a href="#function-submit"><strong>Submit</strong></a> () override<br><em>Submits the current frame for rendering.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-openglrendererapi"><strong>~OpenGLRendererAPI</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-openglrendererapi"><strong>~OpenGLRendererAPI</strong></a> () = default<br><em>Default destructor for the</em> <a href="./"><em><strong>OpenGLRendererAPI</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
@@ -174,10 +170,6 @@
 <tr>
 <td style="text-align: right;">virtual void</td>
 <td style="text-align: left;"><a href="../class_a_g_e_1_1_renderer_a_p_i/#function-clear"><strong>Clear</strong></a> () = 0<br></td>
-</tr>
-<tr>
-<td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_renderer_a_p_i/#function-drawarrays"><strong>DrawArrays</strong></a> (const Ref&lt; <a href="../class_a_g_e_1_1_vertex_array/"><strong>VertexArray</strong></a> &gt; &amp; VertexArray, uint32_t IndexCount) = 0<br></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
@@ -225,7 +217,7 @@
 </tr>
 <tr>
 <td style="text-align: right;">virtual</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_renderer_a_p_i/#function-rendererapi"><strong>~RendererAPI</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_renderer_a_p_i/#function-rendererapi"><strong>~RendererAPI</strong></a> () = default<br><em>Virtual destructor for</em> <a href="../class_a_g_e_1_1_renderer_a_p_i/"><em><strong>RendererAPI</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
@@ -241,107 +233,209 @@
 <tbody>
 <tr>
 <td style="text-align: right;">Scope&lt; <a href="../class_a_g_e_1_1_renderer_a_p_i/"><strong>RendererAPI</strong></a> &gt;</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_renderer_a_p_i/#function-create"><strong>Create</strong></a> () <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_renderer_a_p_i/#function-create"><strong>Create</strong></a> () <br><em>Creates a new instance of the</em> <a href="../class_a_g_e_1_1_renderer_a_p_i/"><em><strong>RendererAPI</strong></em></a> <em>based on the current setting.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">API</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_renderer_a_p_i/#function-getapi"><strong>GetAPI</strong></a> () <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_renderer_a_p_i/#function-getapi"><strong>GetAPI</strong></a> () <br><em>This function returns the current API object used by the application.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_renderer_a_p_i/#function-setapi"><strong>SetAPI</strong></a> (RendererAPI::API Type) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_renderer_a_p_i/#function-setapi"><strong>SetAPI</strong></a> (RendererAPI::API Type) <br><em>This function sets the API type for the</em> <a href="../class_a_g_e_1_1_renderer_a_p_i/"><em><strong>RendererAPI</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-clear">function Clear</h3>
+<p><em>Clears the color and depth buffers of the OpenGL context.</em> </p>
 <pre><code class="language-C++">virtual void AGE::OpenGLRendererAPI::Clear () override
 </code></pre>
+<p>This function uses glClear to clear both the color and depth buffer bits, indicating that all pixels in these buffers should be cleared. The color buffer is typically filled with black (0, 0, 0), while the depth buffer is set to maximum value.</p>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Clears the color and depth buffer.</p>
+<p>This function uses OpenGL's glClear() function to clear both the color and depth buffers. The GL_COLOR_BUFFER_BIT and GL_DEPTH_BUFFER_BIT flags are used to specify which buffers should be cleared. </p>
 <p>Implements <a href="../class_a_g_e_1_1_renderer_a_p_i/#function-clear"><em>AGE::RendererAPI::Clear</em></a></p>
 <hr>
 
-<h3 id="function-drawarrays">function DrawArrays</h3>
-<pre><code class="language-C++">virtual void AGE::OpenGLRendererAPI::DrawArrays (
-    const Ref&lt; VertexArray &gt; &amp; VertexArray,
-    uint32_t IndexCount
-) override
-</code></pre>
-<p>Implements <a href="../class_a_g_e_1_1_renderer_a_p_i/#function-drawarrays"><em>AGE::RendererAPI::DrawArrays</em></a></p>
-<hr>
-
 <h3 id="function-drawindexed-12">function DrawIndexed [1/2]</h3>
+<p><em>This function is used to draw indexed elements in a graphics context.</em> </p>
 <pre><code class="language-C++">inline virtual void AGE::OpenGLRendererAPI::DrawIndexed (
     uint32_t IndexCount,
     uint32_t IndexStart,
     int VertexStart
 ) override
 </code></pre>
+<p>The function takes three parameters: the number of indices (IndexCount), the starting index (IndexStart), and the starting vertex position (VertexStart). It does not return anything, hence void return type.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>IndexCount</code> Number of indices to be drawn. </li>
+<li><code>IndexStart</code> Starting index for drawing elements. </li>
+<li><code>VertexStart</code> The starting vertex position.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Nothing is returned as the function is declared with 'override' keyword, indicating it overrides a virtual function in base class.</p>
+<p>This function draws a set of vertices using index buffers. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>IndexCount</code> The number of indices to draw from the index buffer. </li>
+<li><code>IndexStart</code> The starting index in the index buffer. </li>
+<li><code>VertexStart</code> The vertex offset within the vertex buffer. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <p>Implements <a href="../class_a_g_e_1_1_renderer_a_p_i/#function-drawindexed-12"><em>AGE::RendererAPI::DrawIndexed</em></a></p>
 <hr>
 
 <h3 id="function-drawindexed-22">function DrawIndexed [2/2]</h3>
+<p><em>Draws an indexed element array.</em> </p>
 <pre><code class="language-C++">virtual void AGE::OpenGLRendererAPI::DrawIndexed (
     const Ref&lt; VertexArray &gt; &amp; VertexArray,
     uint32_t IndexCount
 ) override
 </code></pre>
+<p>This function binds the given vertex array and then draws its elements using OpenGL's glDrawElements function. The number of indices to draw is determined by either the provided IndexCount parameter or, if no such count was provided, by the count in the bound index buffer. After drawing, it unbinds any texture for safety.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><a href="../class_a_g_e_1_1_vertex_array/"><strong>VertexArray</strong></a> A reference to a vertex array object that contains the data to be drawn. </li>
+<li><code>IndexCount</code> The number of indices to draw from the element array. If this is zero, the count in the index buffer will be used instead.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>This function is used to draw an indexed element array. It binds the vertex array and then uses OpenGL's glDrawElements function to render a set number of elements from the index buffer. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><a href="../class_a_g_e_1_1_vertex_array/"><strong>VertexArray</strong></a> A reference to a constant <a href="../class_a_g_e_1_1_vertex_array/"><strong>VertexArray</strong></a> object which represents the data for rendering. </li>
+<li><code>IndexCount</code> The number of indices to be drawn. If this is 0, it defaults to the count in the index buffer of the vertex array. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <p>Implements <a href="../class_a_g_e_1_1_renderer_a_p_i/#function-drawindexed-22"><em>AGE::RendererAPI::DrawIndexed</em></a></p>
 <hr>
 
 <h3 id="function-drawlines">function DrawLines</h3>
+<p><em>Draws a series of lines defined by the given vertex array.</em> </p>
 <pre><code class="language-C++">virtual void AGE::OpenGLRendererAPI::DrawLines (
     const Ref&lt; VertexArray &gt; &amp; VertexArray,
     uint32_t VertexCount
 ) override
 </code></pre>
+<p>This function binds the provided <a href="../class_a_g_e_1_1_vertex_array/"><strong>VertexArray</strong></a> object and then uses OpenGL's glDrawArrays to draw an array of vertices as line segments. The number of vertices drawn is specified by the 'VertexCount' parameter.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><a href="../class_a_g_e_1_1_vertex_array/"><strong>VertexArray</strong></a> A reference to a <a href="../class_a_g_e_1_1_vertex_array/"><strong>VertexArray</strong></a> object that contains the vertex data for the lines to be drawn. </li>
+<li><code>VertexCount</code> The number of vertices in the <a href="../class_a_g_e_1_1_vertex_array/"><strong>VertexArray</strong></a> to draw.</li>
+</ul>
+<p>Draws a series of lines defined by the given vertex array.</p>
+<p>This function binds the provided <a href="../class_a_g_e_1_1_vertex_array/"><strong>VertexArray</strong></a> object and then uses OpenGL's glDrawArrays to draw a series of lines, starting from the first element (index 0) and drawing 'VertexCount' number of vertices. The type of primitives drawn is specified as GL_LINES.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><a href="../class_a_g_e_1_1_vertex_array/"><strong>VertexArray</strong></a> A reference to a <a href="../class_a_g_e_1_1_vertex_array/"><strong>VertexArray</strong></a> object that contains the vertex data for the lines to be drawn. </li>
+<li><code>VertexCount</code> The number of vertices in the line strip or loop, i.e., the number of elements to draw.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <p>Implements <a href="../class_a_g_e_1_1_renderer_a_p_i/#function-drawlines"><em>AGE::RendererAPI::DrawLines</em></a></p>
 <hr>
 
 <h3 id="function-drawstrips">function DrawStrips</h3>
+<p><em>DrawStrips is a function that draws triangle strips using OpenGL.</em> </p>
 <pre><code class="language-C++">virtual void AGE::OpenGLRendererAPI::DrawStrips (
     const Ref&lt; VertexArray &gt; &amp; VertexArray,
     uint32_t IndexCount
 ) override
 </code></pre>
+<p>It binds the given <a href="../class_a_g_e_1_1_vertex_array/"><strong>VertexArray</strong></a> and then uses glDrawElements to draw elements with GL_TRIANGLE_STRIP mode. If IndexCount is not provided, it will use the count from the index buffer of the <a href="../class_a_g_e_1_1_vertex_array/"><strong>VertexArray</strong></a>. After drawing, it unbinds the texture for safety.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><a href="../class_a_g_e_1_1_vertex_array/"><strong>VertexArray</strong></a> A reference to a constant <a href="../class_a_g_e_1_1_vertex_array/"><strong>VertexArray</strong></a> object that represents the vertex data to be drawn. </li>
+<li><code>IndexCount</code> The number of indices to draw. If not provided, it will use the count from the index buffer of the <a href="../class_a_g_e_1_1_vertex_array/"><strong>VertexArray</strong></a>.</li>
+</ul>
+<p>DrawStrips is a function that draws triangle strips using the OpenGL API.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><a href="../class_a_g_e_1_1_vertex_array/"><strong>VertexArray</strong></a> A reference to a constant <a href="../class_a_g_e_1_1_vertex_array/"><strong>VertexArray</strong></a> object which represents the vertex array data. </li>
+<li><code>IndexCount</code> An unsigned integer representing the number of indices to be drawn. If this value is zero, it defaults to the count in the index buffer of the <a href="../class_a_g_e_1_1_vertex_array/"><strong>VertexArray</strong></a>. </li>
+</ul>
 <p>Implements <a href="../class_a_g_e_1_1_renderer_a_p_i/#function-drawstrips"><em>AGE::RendererAPI::DrawStrips</em></a></p>
 <hr>
 
 <h3 id="function-flush">function Flush</h3>
+<p><em>This function flushes the OpenGL command buffer. It ensures that all commands issued up to this point are executed immediately, without buffering them for later execution.</em> </p>
 <pre><code class="language-C++">virtual void AGE::OpenGLRendererAPI::Flush () override
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Flushes the OpenGL command queue.</p>
+<p>This function calls glFlush(), which forces all pending commands to be executed as quickly as possible. It is useful for ensuring that certain operations are completed before proceeding with other tasks.</p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <p>Implements <a href="../class_a_g_e_1_1_renderer_a_p_i/#function-flush"><em>AGE::RendererAPI::Flush</em></a></p>
 <hr>
 
 <h3 id="function-init">function Init</h3>
+<p><em>Initializes the OpenGL</em> <a href="../class_a_g_e_1_1_renderer/"><em><strong>Renderer</strong></em></a> <em>API with various settings for rendering.</em></p>
 <pre><code class="language-C++">virtual void AGE::OpenGLRendererAPI::Init () override
 </code></pre>
+<p>This function sets up several important OpenGL states such as blending, depth testing, line smoothing and front face winding order. It enables features like blending (for transparency), depth testing (for occlusion culling) and line smoothing (for smoother lines). The blend equation is set to GL_FUNC_ADD for the source and destination colors, the blend function is set to use GL_SRC_ALPHA as the source color and GL_ONE_MINUS_SRC_ALPHA as the destination color. Depth testing is enabled with a depth function of GL_LEQUAL which means pixels that are closer to the camera will be drawn over those that are further away. The clear depth value is set to 1.0f. <a href="../struct_a_g_e_1_1_line/"><strong>Line</strong></a> smoothing is enabled, and front face winding order is set to GL_CW (counter-clockwise).</p>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Initializes the OpenGL <a href="../class_a_g_e_1_1_renderer/"><strong>Renderer</strong></a> API with various settings for rendering.</p>
+<p>This function sets up several important OpenGL states such as blending, depth testing, line smoothing and front face winding order. It enables blending by setting the source blend factor to GL_SRC_ALPHA and the destination blend factor to GL_ONE_MINUS_SRC_ALPHA. Depth testing is enabled with a depth function of GL_LEQUAL, clearing the depth buffer with glClearDepth(1.0f), and enabling line smoothing with glEnable(GL_LINE_SMOOTH). The front face winding order is set to GL_CW using glFrontFace(GL_CW).</p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <p>Implements <a href="../class_a_g_e_1_1_renderer_a_p_i/#function-init"><em>AGE::RendererAPI::Init</em></a></p>
 <hr>
 
 <h3 id="function-present">function Present</h3>
+<p><em>This function is used to present the rendered scene to the screen. It does not take any parameters and returns void, indicating that it has completed its operation without returning a value.</em> </p>
 <pre><code class="language-C++">virtual void AGE::OpenGLRendererAPI::Present () override
 </code></pre>
-<p>This Function Currently Fails silently since there is really no use for them however because of how pure virtual classes work it has to be here to compile </p>
+<p>This Function Currently Fails silently since there is really no use for them however because of how pure virtual classes work it has to be here to compile</p>
+<p>This function is used to present the rendered scene to the screen. It does not take any parameters and returns void, indicating that it has completed its task without returning a value. </p>
 <p>Implements <a href="../class_a_g_e_1_1_renderer_a_p_i/#function-present"><em>AGE::RendererAPI::Present</em></a></p>
 <hr>
 
 <h3 id="function-setclearcolor">function SetClearColor</h3>
+<p><em>This function sets the clear color for the OpenGL context.</em> </p>
 <pre><code class="language-C++">virtual void AGE::OpenGLRendererAPI::SetClearColor (
     const Vector4 Color
 ) override
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Color</code> A <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> object representing the RGBA values of the clear color.</li>
+</ul>
+<p>Set the clear color for OpenGL rendering context.</p>
+<p>This function sets the clear color for the current OpenGL rendering context. The color is specified as a <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> with each component ranging from 0 to 1.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Color</code> A <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> specifying the red, green, blue and alpha components of the color. </li>
+</ul>
 <p>Implements <a href="../class_a_g_e_1_1_renderer_a_p_i/#function-setclearcolor"><em>AGE::RendererAPI::SetClearColor</em></a></p>
 <hr>
 
 <h3 id="function-setlinewidth">function SetLineWidth</h3>
+<p><em>Set the line width for subsequent drawing operations.</em> </p>
 <pre><code class="language-C++">virtual void AGE::OpenGLRendererAPI::SetLineWidth (
     float Width
 ) override
 </code></pre>
+<p>This function sets the current line width to a value in pixels. The actual effect of this setting depends on the specific rendering mode and transformation matrices currently active.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Width</code> The new line width, in pixels. Must be greater than zero.</li>
+</ul>
+<p>This function sets the width of lines used for rendering. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Width</code> The new line width to be set. Must be greater than zero. </li>
+</ul>
 <p>Implements <a href="../class_a_g_e_1_1_renderer_a_p_i/#function-setlinewidth"><em>AGE::RendererAPI::SetLineWidth</em></a></p>
 <hr>
 
 <h3 id="function-setviewport">function SetViewport</h3>
+<p><em>Set the viewport for OpenGL rendering.</em> </p>
 <pre><code class="language-C++">virtual void AGE::OpenGLRendererAPI::SetViewport (
     uint32_t x,
     uint32_t y,
@@ -349,19 +443,54 @@
     uint32_t Height
 ) override
 </code></pre>
+<p>This function sets the viewport in OpenGL to a specified width and height at a given x and y position. The coordinates are defined as integers, with (0,0) being the bottom-left corner of the window/viewport. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>x</code> The x coordinate of the lower left corner of the viewport rectangle. </li>
+<li><code>y</code> The y coordinate of the lower left corner of the viewport rectangle. </li>
+<li><code>Width</code> The width of the viewport, in pixels. </li>
+<li><code>Height</code> The height of the viewport, in pixels.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void No return value is expected as this function only sets OpenGL state variables.</p>
+<p>Set the viewport for OpenGL rendering.</p>
+<p>This function sets the viewport in OpenGL to a specified width and height starting at coordinates (x, y). The viewport is defined as the rectangular area of the window where rendering takes place.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>x</code> The x-coordinate of the lower left corner of the viewport rectangle. </li>
+<li><code>y</code> The y-coordinate of the lower left corner of the viewport rectangle. </li>
+<li><code>Width</code> The width of the viewport rectangle. </li>
+<li><code>Height</code> The height of the viewport rectangle. </li>
+</ul>
 <p>Implements <a href="../class_a_g_e_1_1_renderer_a_p_i/#function-setviewport"><em>AGE::RendererAPI::SetViewport</em></a></p>
 <hr>
 
 <h3 id="function-submit">function Submit</h3>
+<p><em>Submits the current frame for rendering.</em> </p>
 <pre><code class="language-C++">virtual void AGE::OpenGLRendererAPI::Submit () override
 </code></pre>
-<p>This Function Currently Fails silently since there is really no use for them however because of how pure virtual classes work it has to be here to compile </p>
+<p>This Function Currently Fails silently since there is really no use for them however because of how pure virtual classes work it has to be here to compile</p>
+<p>This function submits the current frame to be rendered by the OpenGL <a href="../class_a_g_e_1_1_renderer/"><strong>Renderer</strong></a> API. It does not actually render anything, it just prepares everything for drawing. The actual rendering is done in the <code>OpenGLRendererAPI::EndScene()</code> function.</p>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Submits the current frame for rendering.</p>
+<p>This function submits the current frame to be rendered by the OpenGL <a href="../class_a_g_e_1_1_renderer/"><strong>Renderer</strong></a> API. It does not actually render anything, it just prepares everything for rendering.</p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <p>Implements <a href="../class_a_g_e_1_1_renderer_a_p_i/#function-submit"><em>AGE::RendererAPI::Submit</em></a></p>
 <hr>
 
 <h3 id="function-openglrendererapi">function ~OpenGLRendererAPI</h3>
+<p><em>Default destructor for the</em> <a href="./"><em><strong>OpenGLRendererAPI</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::OpenGLRendererAPI::~OpenGLRendererAPI () = default
 </code></pre>
+<p>This function is responsible for releasing any resources that were acquired during the lifetime of an instance of this class. It does not perform any operations on the actual objects being rendered, but rather cleans up any internal data structures or handles used by the renderer.</p>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Default destructor for the <a href="./"><strong>OpenGLRendererAPI</strong></a> class.</p>
+<p>This function is responsible for freeing any resources that were allocated during the lifetime of an instance of this class. It does not perform any operations on the state of the renderer itself, but rather cleans up any associated memory or other resources.</p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <hr />

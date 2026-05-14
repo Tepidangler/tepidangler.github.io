@@ -11,12 +11,14 @@
         <name>~UniformBuffer</name>
         <qualifiedname>AGE::UniformBuffer::~UniformBuffer</qualifiedname>
         <briefdescription>
+<para>Virtual destructor for the <ref refid="class_a_g_e_1_1_uniform_buffer" kindref="compound">UniformBuffer</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is responsible for releasing any resources that were acquired by the <ref refid="class_a_g_e_1_1_uniform_buffer" kindref="compound">UniformBuffer</ref> object, such as memory or GPU resources. It does not return anything and thus has an empty return type (void). </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" line="259" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" bodystart="259" bodyend="259"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" line="330" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" bodystart="330" bodyend="330"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_uniform_buffer_1ae6f018a0fc8ed1824f898fd9dcb6a12f" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -31,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" line="260" column="14"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" line="331" column="14"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_uniform_buffer_1a56568838877758ba500a7eb780571bb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -46,7 +48,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" line="261" column="14"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" line="332" column="14"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_uniform_buffer_1a894b11a76fa282874d3637b9ed2aeb37" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -74,7 +76,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" line="262" column="14"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" line="333" column="14"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_uniform_buffer_1a903928c01ee11960debc6f49c4450803" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -88,12 +90,19 @@
         <name>As</name>
         <qualifiedname>AGE::UniformBuffer::As</qualifiedname>
         <briefdescription>
+<para>This function is currently not implemented and will always throw an assertion. It returns a null pointer of type T*. The purpose of this function is unknown. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>A null pointer of type T*</para>
+</simplesect>
+This function is currently not implemented and will always throw an assertion. It returns a null pointer of type T*. The purpose of this function is unknown.</para>
+<para><simplesect kind="return"><para>Returns a null pointer of type T* </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" line="266" column="3" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/RenderBuffer.cpp" bodystart="120" bodyend="124"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" line="337" column="3" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/RenderBuffer.cpp" bodystart="208" bodyend="212"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -112,12 +121,55 @@
           <declname>Binding</declname>
         </param>
         <briefdescription>
+<para>Creates a new <ref refid="class_a_g_e_1_1_uniform_buffer" kindref="compound">UniformBuffer</ref> instance. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function creates and initializes a new <ref refid="class_a_g_e_1_1_uniform_buffer" kindref="compound">UniformBuffer</ref> object of the specified size and binding point. The type of buffer to be created is determined by the current <ref refid="class_a_g_e_1_1_renderer" kindref="compound">Renderer</ref> API in use. If OpenGL is currently being used, an <ref refid="class_a_g_e_1_1_open_g_l_uniform_buffer" kindref="compound">OpenGLUniformBuffer</ref> will be created; otherwise, if no supported API is found, null is returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size (in bytes) of the <ref refid="class_a_g_e_1_1_uniform_buffer" kindref="compound">UniformBuffer</ref> to create. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Binding</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The binding point for the <ref refid="class_a_g_e_1_1_uniform_buffer" kindref="compound">UniformBuffer</ref> in the shader program.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to a new <ref refid="class_a_g_e_1_1_uniform_buffer" kindref="compound">UniformBuffer</ref> object if successful, nullptr otherwise.</para>
+</simplesect>
+Creates a new uniform buffer.</para>
+<para>This function creates and initializes a new <ref refid="class_a_g_e_1_1_uniform_buffer" kindref="compound">UniformBuffer</ref> object of the specified size and binding point. The type of the underlying implementation is determined by the current <ref refid="class_a_g_e_1_1_renderer" kindref="compound">Renderer</ref> API in use.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the uniform buffer, in bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Binding</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The binding point for this uniform buffer. This determines which shader program can access it.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to a new <ref refid="class_a_g_e_1_1_uniform_buffer" kindref="compound">UniformBuffer</ref> object. If an unsupported <ref refid="class_a_g_e_1_1_renderer" kindref="compound">Renderer</ref> API is detected or if there are issues with creating the buffer, nullptr is returned instead. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" line="264" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/RenderBuffer.cpp" bodystart="91" bodyend="105"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" line="335" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/RenderBuffer.cpp" bodystart="143" bodyend="157"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -136,7 +188,7 @@
         <link refid="class_a_g_e_1_1_uniform_buffer"/>
       </node>
     </inheritancegraph>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" line="256" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" bodystart="257" bodyend="267"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" line="322" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" bodystart="323" bodyend="338"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_uniform_buffer_1a903928c01ee11960debc6f49c4450803" prot="public" virt="non-virtual"><scope>AGE::UniformBuffer</scope><name>As</name></member>
       <member refid="class_a_g_e_1_1_uniform_buffer_1ae6f018a0fc8ed1824f898fd9dcb6a12f" prot="public" virt="pure-virtual"><scope>AGE::UniformBuffer</scope><name>Bind</name></member>

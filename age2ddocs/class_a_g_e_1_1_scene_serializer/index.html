@@ -92,11 +92,11 @@
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-sceneserializer"><strong>SceneSerializer</strong></a> (const Ref&lt; <a href="../class_a_g_e_1_1_scene/"><strong>Scene</strong></a> &gt; &amp; S) <br></td>
+<td style="text-align: left;"><a href="#function-sceneserializer"><strong>SceneSerializer</strong></a> (const Ref&lt; <a href="../class_a_g_e_1_1_scene/"><strong>Scene</strong></a> &gt; &amp; S) <br><em>Constructs a</em> <a href="./"><em><strong>SceneSerializer</strong></em></a> <em>object with the given scene reference.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-serialize"><strong>Serialize</strong></a> (const std::string &amp; FilePath) <br></td>
+<td style="text-align: left;"><a href="#function-serialize"><strong>Serialize</strong></a> (const std::string &amp; FilePath) <br><em>This function serializes the current scene into a YAML file at the specified path.</em></td>
 </tr>
 </tbody>
 </table>
@@ -109,17 +109,31 @@
 <hr>
 
 <h3 id="function-sceneserializer">function SceneSerializer</h3>
+<p><em>Constructs a</em> <a href="./"><em><strong>SceneSerializer</strong></em></a> <em>object with the given scene reference.</em></p>
 <pre><code class="language-C++">AGE::SceneSerializer::SceneSerializer (
     const Ref&lt; Scene &gt; &amp; S
 ) 
 </code></pre>
+<p>This constructor initializes the m_Scene member variable with the provided scene reference.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>S</code> A const reference to a Ref&lt;Scene&gt; object representing the scene to be serialized. </li>
+</ul>
 <hr>
 
 <h3 id="function-serialize">function Serialize</h3>
+<p><em>This function serializes the current scene into a YAML file at the specified path.</em> </p>
 <pre><code class="language-C++">void AGE::SceneSerializer::Serialize (
     const std::string &amp; FilePath
 ) 
 </code></pre>
+<p>The function extracts the filename from the provided filepath, sets this as the name of the scene, and then writes out the scene data to the file in YAML format. Each entity in the scene is represented by an entry in the "Entities" sequence.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>FilePath</code> A string representing the path where the serialized scene should be saved.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <hr />

@@ -42,15 +42,15 @@ namespace AGE
     public:
 
         Scene();
-        Scene(const Scene& Other) = delete;
-        Scene(UUID ID)
+Scene(const Scene& Other) = delete;
+Scene(UUID ID)
             :m_AssetID(ID) {}
-        Scene(const std::string& Name)
+Scene(const std::string& Name)
             :m_Name(Name), m_AssetID(UUID()) {}
         ~Scene();
 
-        UUID& GetAssetID() { return m_AssetID; }
-        std::string& GetName() { return m_Name; }
+UUID& GetAssetID() { return m_AssetID; }
+std::string& GetName() { return m_Name; }
         Entity CreateEntity(const std::string Name = "");
         Entity CreateEntityWithUUID(UUID uuid, const std::string& Name = std::string());
 
@@ -67,7 +67,7 @@ namespace AGE
 
         void BuildScene(const std::filesystem::path& ProjectPath);
 
-        void SetSceneName(const std::string& Name) { m_Name = Name; }
+void SetSceneName(const std::string& Name) { m_Name = Name; }
 
         static Ref<Scene> LoadScene(const std::filesystem::path& Path);
 
@@ -79,22 +79,22 @@ namespace AGE
         void OnRuntimeStop();
 
         template<typename... Components>
-        auto GetAllEntitiesWith()
+auto GetAllEntitiesWith()
         {
             return m_Registry.view<Components...>();
         }
 
-        inline void SetEventCallback(const std::function<void(Event&)>& Callback)
+inline void SetEventCallback(const std::function<void(Event&)>& Callback)
         {
             m_SceneEvent = Callback;
         }
 
-        inline void BroadcastEvent(Event& Event)
+inline void BroadcastEvent(Event& Event)
         {
             m_SceneEvent(Event);
         }
 
-        void operator=(const Scene& Other)
+void operator=(const Scene& Other)
         {
 
         }

@@ -11,12 +11,13 @@
         <name>AsepriteVariant</name>
         <qualifiedname>AGE::AsepriteVariant::AsepriteVariant</qualifiedname>
         <briefdescription>
+<para>Default constructor for <ref refid="struct_a_g_e_1_1_aseprite_variant" kindref="compound">AsepriteVariant</ref> class. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="479" column="1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="651" column="1"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_aseprite_variant_1a11d53f89193e3490d4593b2e8c1fa3bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -29,12 +30,24 @@
           <declname>v</declname>
         </param>
         <briefdescription>
+<para>Copy constructor for the <ref refid="struct_a_g_e_1_1_aseprite_variant" kindref="compound">AsepriteVariant</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function creates a new instance of <ref refid="struct_a_g_e_1_1_aseprite_variant" kindref="compound">AsepriteVariant</ref> that is a copy of an existing one. It uses the &apos;= default&apos; syntax to delegate the work to the compiler-generated copy constructor.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The existing <ref refid="struct_a_g_e_1_1_aseprite_variant" kindref="compound">AsepriteVariant</ref> instance to be copied. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="480" column="1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="659" column="1"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_aseprite_variant_1a5a871176826a4c1eeb4f0a3670a67815" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -52,12 +65,33 @@
           <declname>v</declname>
         </param>
         <briefdescription>
+<para>Constructs a variant object with the given value. </para>
         </briefdescription>
         <detaileddescription>
+<para>This constructor takes an rvalue reference to construct a variant object from a temporary value. It uses std::forward to ensure that the correct move semantics are used based on whether T is an lvalue or rvalue.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the value being moved into the variant. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value being moved into the variant. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="483" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="483" bodyend="483"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="670" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="670" bodyend="670"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_aseprite_variant_1aefaeea876b15dc9fa102f6cc41e937c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="struct_a_g_e_1_1_aseprite_variant" kindref="compound">AsepriteVariant</ref> &amp;</type>
@@ -69,12 +103,26 @@
           <type>const char *</type>
         </param>
         <briefdescription>
+<para>Overloaded assignment operator that disallows the use of a const char* as an argument. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is marked as deleted to prevent its usage with a const char*. It will not compile if someone tries to assign a const char* value to this object.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to be assigned, which should not be of type const char*.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the modified <ref refid="struct_a_g_e_1_1_aseprite_variant" kindref="compound">AsepriteVariant</ref> object. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="487" column="17"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="683" column="17"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_aseprite_variant_1a1d39f798e3d3be7b8ce5f94eb4a3d659" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -92,12 +140,26 @@
           <declname>v</declname>
         </param>
         <briefdescription>
+<para>Assignment operator for <ref refid="struct_a_g_e_1_1_aseprite_variant" kindref="compound">AsepriteVariant</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function overloads the assignment operator to allow for moving of values into an <ref refid="struct_a_g_e_1_1_aseprite_variant" kindref="compound">AsepriteVariant</ref> object. It takes a rvalue reference (T&amp;&amp;) as its parameter, which allows it to accept both lvalues and rvalues. The function then calls the assignment operator of VariantBase with std::forward to handle the forwarding of the argument.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to be moved into this <ref refid="struct_a_g_e_1_1_aseprite_variant" kindref="compound">AsepriteVariant</ref> object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to the modified <ref refid="struct_a_g_e_1_1_aseprite_variant" kindref="compound">AsepriteVariant</ref> object. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="490" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="490" bodyend="493"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="694" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="694" bodyend="697"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_aseprite_variant_1ae7aff145967d086b60765364f6817987" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const size_t</type>
@@ -106,12 +168,17 @@
         <name>type</name>
         <qualifiedname>AGE::AsepriteVariant::type</qualifiedname>
         <briefdescription>
+<para>Returns the value of the &apos;index&apos; function for this object. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is a simple wrapper around another function, &apos;index&apos;, which returns an unsigned integer. It simply calls that function and returns its result. The purpose of this function could be to provide a consistent interface or to add additional functionality in derived classes.</para>
+<para><simplesect kind="return"><para>The value returned by the &apos;index&apos; function for this object. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="495" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="495" bodyend="497"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="707" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="707" bodyend="709"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -140,7 +207,7 @@
         <label>VariantBase</label>
       </node>
     </collaborationgraph>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="475" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="476" bodyend="498"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="644" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="645" bodyend="710"/>
     <listofallmembers>
       <member refid="struct_a_g_e_1_1_aseprite_variant_1a70804106a8777bca1645aeca2e765c08" prot="public" virt="non-virtual"><scope>AGE::AsepriteVariant</scope><name>AsepriteVariant</name></member>
       <member refid="struct_a_g_e_1_1_aseprite_variant_1a11d53f89193e3490d4593b2e8c1fa3bf" prot="public" virt="non-virtual"><scope>AGE::AsepriteVariant</scope><name>AsepriteVariant</name></member>

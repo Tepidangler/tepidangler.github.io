@@ -88,19 +88,19 @@
 <tbody>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="#function-deserialize"><strong>Deserialize</strong></a> (const std::filesystem::path &amp; FilePath) <br></td>
+<td style="text-align: left;"><a href="#function-deserialize"><strong>Deserialize</strong></a> (const std::filesystem::path &amp; FilePath) <br><em>Deserializes a project from a YAML file.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="#function-deserializebinary"><strong>DeserializeBinary</strong></a> (const std::filesystem::path &amp; FilePath) <br></td>
+<td style="text-align: left;"><a href="#function-deserializebinary"><strong>DeserializeBinary</strong></a> (const std::filesystem::path &amp; FilePath) <br><em>Deserializes a binary file into the project.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-projectserializer"><strong>ProjectSerializer</strong></a> (Ref&lt; <a href="../class_a_g_e_1_1_project/"><strong>Project</strong></a> &gt; Project) <br></td>
+<td style="text-align: left;"><a href="#function-projectserializer"><strong>ProjectSerializer</strong></a> (Ref&lt; <a href="../class_a_g_e_1_1_project/"><strong>Project</strong></a> &gt; Project) <br><em>Constructs a new instance of the</em> <a href="./"><em><strong>ProjectSerializer</strong></em></a> <em>class with the given project reference.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="#function-serialize"><strong>Serialize</strong></a> (const std::filesystem::path &amp; FilePath) <br></td>
+<td style="text-align: left;"><a href="#function-serialize"><strong>Serialize</strong></a> (const std::filesystem::path &amp; FilePath) <br><em>Serializes the project configuration and information into a YAML file.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
@@ -110,31 +110,60 @@
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-deserialize">function Deserialize</h3>
+<p><em>Deserializes a project from a YAML file.</em> </p>
 <pre><code class="language-C++">bool AGE::ProjectSerializer::Deserialize (
     const std::filesystem::path &amp; FilePath
 ) 
 </code></pre>
+<p>This function reads the contents of a YAML file and populates the internal configuration and info structures with data from the file. If the file cannot be loaded, an error message is logged and false is returned.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>FilePath</code> The path to the YAML file containing project information. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>True if the deserialization was successful, false otherwise. </p>
 <hr>
 
 <h3 id="function-deserializebinary">function DeserializeBinary</h3>
+<p><em>Deserializes a binary file into the project.</em> </p>
 <pre><code class="language-C++">bool AGE::ProjectSerializer::DeserializeBinary (
     const std::filesystem::path &amp; FilePath
 ) 
 </code></pre>
+<p>This function attempts to deserialize a binary file located at the given path into the current project state. It returns true if the operation was successful, and false otherwise.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>FilePath</code> The path of the binary file to be deserialized. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>True if the binary file was successfully deserialized, false otherwise. </p>
 <hr>
 
 <h3 id="function-projectserializer">function ProjectSerializer</h3>
+<p><em>Constructs a new instance of the</em> <a href="./"><em><strong>ProjectSerializer</strong></em></a> <em>class with the given project reference.</em></p>
 <pre><code class="language-C++">AGE::ProjectSerializer::ProjectSerializer (
     Ref&lt; Project &gt; Project
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><a href="../class_a_g_e_1_1_project/"><strong>Project</strong></a> The project to be serialized and stored in this object. </li>
+</ul>
 <hr>
 
 <h3 id="function-serialize">function Serialize</h3>
+<p><em>Serializes the project configuration and information into a YAML file.</em> </p>
 <pre><code class="language-C++">bool AGE::ProjectSerializer::Serialize (
     const std::filesystem::path &amp; FilePath
 ) 
 </code></pre>
+<p>This function serializes the project's configuration and information into a YAML file at the specified path. The configuration includes details about the project such as its name, starting scene, asset directory, C++ namespace, copyright notice, audio engine used, renderer used, quest filepath, config filepath, and built scenes.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>FilePath</code> The path to the YAML file where the serialized data will be written.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Returns true if the serialization was successful, false otherwise. In this case, it always returns true as there are no exceptions that could cause a failure. </p>
 <hr>
 
 <h3 id="function-serializebinary">function SerializeBinary</h3>

@@ -88,31 +88,31 @@
 <tbody>
 <tr>
 <td style="text-align: right;">uint32_t *</td>
-<td style="text-align: left;"><a href="#function-getimagebuffer-12"><strong>GetImageBuffer</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getimagebuffer-12"><strong>GetImageBuffer</strong></a> () <br><em>This function returns a pointer to the RGB image buffer.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">const uint32_t *</td>
-<td style="text-align: left;"><a href="#function-getimagebuffer-22"><strong>GetImageBuffer</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-getimagebuffer-22"><strong>GetImageBuffer</strong></a> () const<br><em>Returns a pointer to the RGB image buffer.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">size_t</td>
-<td style="text-align: left;"><a href="#function-getimagebytesize"><strong>GetImageByteSize</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getimagebytesize"><strong>GetImageByteSize</strong></a> () <br><em>This function returns the size of an image in bytes.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"><a href="../struct_a_g_e_1_1_image_specification/"><strong>ImageSpecification</strong></a> &amp;</td>
-<td style="text-align: left;"><a href="#function-getimagespec-12"><strong>GetImageSpec</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getimagespec-12"><strong>GetImageSpec</strong></a> () <br><em>Returns the image specification object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">const <a href="../struct_a_g_e_1_1_image_specification/"><strong>ImageSpecification</strong></a> &amp;</td>
-<td style="text-align: left;"><a href="#function-getimagespec-22"><strong>GetImageSpec</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-getimagespec-22"><strong>GetImageSpec</strong></a> () const<br><em>Returns the image specification object associated with this instance.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">T</td>
-<td style="text-align: left;"><a href="#function-getpixel"><strong>GetPixel</strong></a> (T x, T y) <br></td>
+<td style="text-align: left;"><a href="#function-getpixel"><strong>GetPixel</strong></a> (T x, T y) <br><em>This function returns the pixel value at a given position.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-image-14"><strong>Image</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-image-14"><strong>Image</strong></a> () = default<br><em>Default constructor for the</em> <a href="./"><em><strong>Image</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
@@ -120,60 +120,118 @@
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-image-34"><strong>Image</strong></a> (const <a href="./"><strong>Image</strong></a> &amp; Other) = default<br></td>
+<td style="text-align: left;"><a href="#function-image-34"><strong>Image</strong></a> (const <a href="./"><strong>Image</strong></a> &amp; Other) = default<br><em>Copy constructor for the</em> <a href="./"><em><strong>Image</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-image-44"><strong>Image</strong></a> (const <a href="./"><strong>Image</strong></a> &amp;&amp; Other) noexcept<br></td>
+<td style="text-align: left;"><a href="#function-image-44"><strong>Image</strong></a> (const <a href="./"><strong>Image</strong></a> &amp;&amp; Other) noexcept<br><em>Move constructor for</em> <a href="./"><em><strong>Image</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setimagespec"><strong>SetImageSpec</strong></a> (const <a href="../struct_a_g_e_1_1_image_specification/"><strong>ImageSpecification</strong></a> &amp; Spec) <br></td>
+<td style="text-align: left;"><a href="#function-setimagespec"><strong>SetImageSpec</strong></a> (const <a href="../struct_a_g_e_1_1_image_specification/"><strong>ImageSpecification</strong></a> &amp; Spec) <br><em>Sets the image specification.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual</td>
-<td style="text-align: left;"><a href="#function-image"><strong>~Image</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-image"><strong>~Image</strong></a> () <br><em>Destructor for the</em> <a href="./"><em><strong>Image</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-getimagebuffer-12">function GetImageBuffer [1/2]</h3>
+<p><em>This function returns a pointer to the RGB image buffer.</em> </p>
 <pre><code class="language-C++">inline uint32_t * AGE::Image::GetImageBuffer () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>Pointer to the RGB image buffer, type is uint32_t*. If no image data exists, it will return nullptr.</p>
+<p>This function returns a pointer to the RGB image buffer. </p>
+<p><strong>Returns:</strong></p>
+<p>Pointer to the RGB image buffer, type is uint32_t*. If no image data exists, it will return nullptr. </p>
 <hr>
 
 <h3 id="function-getimagebuffer-22">function GetImageBuffer [2/2]</h3>
+<p><em>Returns a pointer to the RGB image buffer.</em> </p>
 <pre><code class="language-C++">inline const uint32_t * AGE::Image::GetImageBuffer () const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>Pointer to the RGB image buffer, or nullptr if no image is available.</p>
+<p>Returns a pointer to the RGB image buffer. </p>
+<p><strong>Returns:</strong></p>
+<p>Pointer to the RGB image buffer, or nullptr if no image is available. </p>
 <hr>
 
 <h3 id="function-getimagebytesize">function GetImageByteSize</h3>
+<p><em>This function returns the size of an image in bytes.</em> </p>
 <pre><code class="language-C++">inline size_t AGE::Image::GetImageByteSize () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>The byte size of the image.</p>
+<p>This function returns the byte size of an image. </p>
+<p><strong>Returns:</strong></p>
+<p>The byte size of the image as a size_t value. </p>
 <hr>
 
 <h3 id="function-getimagespec-12">function GetImageSpec [1/2]</h3>
+<p><em>Returns the image specification object.</em> </p>
 <pre><code class="language-C++">inline ImageSpecification &amp; AGE::Image::GetImageSpec () 
 </code></pre>
+<p>This function returns a reference to an <a href="../struct_a_g_e_1_1_image_specification/"><strong>ImageSpecification</strong></a> object, which contains information about the image such as its size and format.</p>
+<p><strong>Returns:</strong></p>
+<p>A reference to the <a href="../struct_a_g_e_1_1_image_specification/"><strong>ImageSpecification</strong></a> object.</p>
+<p>Returns the image specification object.</p>
+<p>This function returns a reference to the internal image specification object, which contains all the information about an image such as its size and format.</p>
+<p><strong>Returns:</strong></p>
+<p>A reference to the image specification object (m_Spec). </p>
 <hr>
 
 <h3 id="function-getimagespec-22">function GetImageSpec [2/2]</h3>
+<p><em>Returns the image specification object associated with this instance.</em> </p>
 <pre><code class="language-C++">inline const ImageSpecification &amp; AGE::Image::GetImageSpec () const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A constant reference to the image specification object (m_Spec).</p>
+<p>Returns the image specification.</p>
+<p>This function returns a constant reference to the image specification stored in the object. The returned value can be used to access various properties of the image, such as its size or format.</p>
+<p><strong>Returns:</strong></p>
+<p>A constant reference to the image specification. </p>
 <hr>
 
 <h3 id="function-getpixel">function GetPixel</h3>
+<p><em>This function returns the pixel value at a given position.</em> </p>
 <pre><code class="language-C++">template&lt;typename T&gt;
 inline T AGE::Image::GetPixel (
     T x,
     T y
 ) 
 </code></pre>
+<p>The function checks if the template type T is uint32_t or uint16_t and calls the appropriate function to get the pixel address. If T is not either of these types, it will return a default value of T. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>x</code> The x-coordinate of the pixel position. </li>
+<li><code>y</code> The y-coordinate of the pixel position. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Returns the pixel value at the given position.</p>
+<p>This function returns a pixel value based on the template type. If T is of type uint32_t it calls the GetRGBAddress() function with parameters x and y. If T is of type uint16_t it calls the GetGSAddress() function with parameters x and y. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>x</code> The x-coordinate of the pixel to get. </li>
+<li><code>y</code> The y-coordinate of the pixel to get. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Returns a value based on the template type. If T is uint32_t, it returns an RGB address. If T is uint16_t, it returns a grayscale address. </p>
 <hr>
 
 <h3 id="function-image-14">function Image [1/4]</h3>
+<p><em>Default constructor for the</em> <a href="./"><em><strong>Image</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::Image::Image () = default
 </code></pre>
+<p>This function initializes an instance of the <a href="./"><strong>Image</strong></a> class with default values. It is used to create a new image object without any specific attributes set.</p>
+<p><strong>Returns:</strong></p>
+<p>A new <a href="./"><strong>Image</strong></a> object with all fields initialized to their default values.</p>
+<p>Default constructor for the <a href="./"><strong>Image</strong></a> class.</p>
+<p>This function initializes an instance of the <a href="./"><strong>Image</strong></a> class with default values. It is used to create a new image object without any specific attributes set.</p>
+<p><strong>Returns:</strong></p>
+<p>A newly created <a href="./"><strong>Image</strong></a> object with all fields initialized to their default values. </p>
 <hr>
 
 <h3 id="function-image-24">function Image [2/4]</h3>
@@ -185,29 +243,70 @@ inline T AGE::Image::GetPixel (
 <hr>
 
 <h3 id="function-image-34">function Image [3/4]</h3>
+<p><em>Copy constructor for the</em> <a href="./"><em><strong>Image</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::Image::Image (
     const Image &amp; Other
 ) = default
 </code></pre>
+<p>This function creates a new instance of an <a href="./"><strong>Image</strong></a> object by copying all data from another <a href="./"><strong>Image</strong></a> object. It uses the '= default' syntax to delegate the copy construction to the compiler, which means it will use the default implementation provided by the compiler. The compiler-generated copy constructor performs a memberwise copy of the source object into this new object. This includes copying all data members that are part of the <a href="./"><strong>Image</strong></a> class.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Other</code> The <a href="./"><strong>Image</strong></a> object to be copied.</li>
+</ul>
+<p>Copy constructor for the <a href="./"><strong>Image</strong></a> class.</p>
+<p>This function creates a new instance of an <a href="./"><strong>Image</strong></a> object by copying all data from another <a href="./"><strong>Image</strong></a> object. It is used to ensure deep copy semantics when passing objects by value or returning them from functions.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Other</code> The <a href="./"><strong>Image</strong></a> object to be copied. </li>
+</ul>
 <hr>
 
 <h3 id="function-image-44">function Image [4/4]</h3>
+<p><em>Move constructor for</em> <a href="./"><em><strong>Image</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">inline AGE::Image::Image (
     const Image &amp;&amp; Other
 ) noexcept
 </code></pre>
+<p>This function is used to create a new instance of the <a href="./"><strong>Image</strong></a> class by moving all its data from an existing instance. It takes in a const lvalue reference to another <a href="./"><strong>Image</strong></a> object and moves its data into this new object, leaving the original object empty. The move operation is exception-safe as it does not throw exceptions under normal circumstances.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Other</code> An rvalue reference to an existing <a href="./"><strong>Image</strong></a> object.</li>
+</ul>
+<p>Move constructor for the <a href="./"><strong>Image</strong></a> class.</p>
+<p>This function creates a new instance of the <a href="./"><strong>Image</strong></a> class by moving all data from another instance to this one. It is used when an rvalue reference to an <a href="./"><strong>Image</strong></a> object is passed in, such as when it's returned from a function.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Other</code> The other <a href="./"><strong>Image</strong></a> object from which to move data. </li>
+</ul>
 <hr>
 
 <h3 id="function-setimagespec">function SetImageSpec</h3>
+<p><em>Sets the image specification.</em> </p>
 <pre><code class="language-C++">inline void AGE::Image::SetImageSpec (
     const ImageSpecification &amp; Spec
 ) 
 </code></pre>
+<p>This function sets the image specification to a new value. The <a href="../struct_a_g_e_1_1_image_specification/"><strong>ImageSpecification</strong></a> object is passed by const reference, meaning that no copy of it will be made and the original object can still be used elsewhere in the code.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Spec</code> A constant reference to an <a href="../struct_a_g_e_1_1_image_specification/"><strong>ImageSpecification</strong></a> object containing the new image specification.</li>
+</ul>
+<p>Sets the image specification. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Spec</code> The new image specification to set. </li>
+</ul>
 <hr>
 
 <h3 id="function-image">function ~Image</h3>
+<p><em>Destructor for the</em> <a href="./"><em><strong>Image</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">virtual AGE::Image::~Image () 
 </code></pre>
+<p>This destructor does not perform any specific action as it is a default one provided by the compiler. It simply releases any resources that were acquired during object creation, such as memory allocated with 'new'.</p>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Destructor for the <a href="./"><strong>Image</strong></a> class.</p>
+<p>This destructor is responsible for releasing any resources that were acquired by the <a href="./"><strong>Image</strong></a> object, such as memory allocated for its pixels. </p>
 <hr>
 
 <hr />

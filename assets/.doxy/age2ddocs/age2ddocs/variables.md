@@ -196,7 +196,6 @@
 
 ## h
 
-* **half\_t** ([**Types.h**](_types_8h.md))
 * **h** ([**imgui\_impl\_opengl3\_loader.h**](imgui__impl__opengl3__loader_8h.md))
 * **handleMissingGlyphs** ([**imgui\_impl\_opengl3\_loader.h**](imgui__impl__opengl3__loader_8h.md))
 * **height** ([**imgui\_impl\_opengl3\_loader.h**](imgui__impl__opengl3__loader_8h.md))

@@ -89,28 +89,45 @@
 <tbody>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="#function-decode"><strong>decode</strong></a> (const Node &amp; node, <a href="../struct_a_g_e_1_1_vector2/"><strong>AGE::Vector2</strong></a> &amp; rhs) <br></td>
+<td style="text-align: left;"><a href="#function-decode"><strong>decode</strong></a> (const Node &amp; node, <a href="../struct_a_g_e_1_1_vector2/"><strong>AGE::Vector2</strong></a> &amp; rhs) <br><em>Decodes a Node object into an</em> <a href="../struct_a_g_e_1_1_vector2/"><em><strong>AGE::Vector2</strong></em></a> <em>.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">Node</td>
-<td style="text-align: left;"><a href="#function-encode"><strong>encode</strong></a> (const <a href="../struct_a_g_e_1_1_vector2/"><strong>AGE::Vector2</strong></a> &amp; rhs) <br></td>
+<td style="text-align: left;"><a href="#function-encode"><strong>encode</strong></a> (const <a href="../struct_a_g_e_1_1_vector2/"><strong>AGE::Vector2</strong></a> &amp; rhs) <br><em>Encodes a 2D vector into a Node object.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
 <h3 id="function-decode">function decode</h3>
+<p><em>Decodes a Node object into an</em> <a href="../struct_a_g_e_1_1_vector2/"><em><strong>AGE::Vector2</strong></em></a> <em>.</em></p>
 <pre><code class="language-C++">static inline bool YAML::convert&lt; AGE::Vector2 &gt;::decode (
     const Node &amp; node,
     AGE::Vector2 &amp; rhs
 ) 
 </code></pre>
+<p>This function attempts to decode the given Node object into an <a href="../struct_a_g_e_1_1_vector2/"><strong>AGE::Vector2</strong></a>. It checks if the node is a sequence and has exactly two elements, then assigns the first element of the node as x value of the vector and the second one as y value. If the conditions are not met, it returns false.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>node</code> The Node object to be decoded. </li>
+<li><code>rhs</code> The <a href="../struct_a_g_e_1_1_vector2/"><strong>AGE::Vector2</strong></a> that will store the decoded values. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>True if the decoding was successful, False otherwise. </p>
 <hr>
 
 <h3 id="function-encode">function encode</h3>
+<p><em>Encodes a 2D vector into a Node object.</em> </p>
 <pre><code class="language-C++">static inline Node YAML::convert&lt; AGE::Vector2 &gt;::encode (
     const AGE::Vector2 &amp; rhs
 ) 
 </code></pre>
+<p>This function takes in a const reference to an <a href="../struct_a_g_e_1_1_vector2/"><strong>AGE::Vector2</strong></a> and encodes it into a Node object by pushing the x and y coordinates of the Vector2 onto the Node. The encoded Node is then returned.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>rhs</code> The 2D vector to be encoded. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>The encoded Node containing the x and y coordinates of the input Vector2. </p>
 <hr>
 
 <hr />

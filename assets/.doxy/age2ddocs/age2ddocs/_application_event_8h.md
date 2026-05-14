@@ -39,16 +39,16 @@
 | class | [**AppRenderEvent**](class_a_g_e_1_1_app_render_event.md) <br> |
 | class | [**AppTickEvent**](class_a_g_e_1_1_app_tick_event.md) <br> |
 | class | [**AppUpdateEvent**](class_a_g_e_1_1_app_update_event.md) <br> |
-| class | [**FramebufferResizeEvent**](class_a_g_e_1_1_framebuffer_resize_event.md) <br> |
+| class | [**FramebufferResizeEvent**](class_a_g_e_1_1_framebuffer_resize_event.md) <br>_Represents a framebuffer resize event._  |
 | class | [**ProjectCreatedEvent**](class_a_g_e_1_1_project_created_event.md) <br> |
 | class | [**ProjectLoadedEvent**](class_a_g_e_1_1_project_loaded_event.md) <br> |
-| class | [**StringCopyEvent**](class_a_g_e_1_1_string_copy_event.md) <br> |
-| class | [**StringPasteEvent**](class_a_g_e_1_1_string_paste_event.md) <br> |
+| class | [**StringCopyEvent**](class_a_g_e_1_1_string_copy_event.md) <br>_Represents a string copy event. This event is triggered when a string is copied to the clipboard._  |
+| class | [**StringPasteEvent**](class_a_g_e_1_1_string_paste_event.md) <br>_Represents a string paste event. This event is triggered when a string is pasted from the clipboard._  |
 | class | [**WindowCloseEvent**](class_a_g_e_1_1_window_close_event.md) <br> |
 | class | [**WindowFocusEvent**](class_a_g_e_1_1_window_focus_event.md) <br> |
 | class | [**WindowLostFocusEvent**](class_a_g_e_1_1_window_lost_focus_event.md) <br> |
 | class | [**WindowMovedEvent**](class_a_g_e_1_1_window_moved_event.md) <br> |
-| class | [**WindowResizeEvent**](class_a_g_e_1_1_window_resize_event.md) <br> |
+| class | [**WindowResizeEvent**](class_a_g_e_1_1_window_resize_event.md) <br>_Represents a window resize event._  |
 
 
 

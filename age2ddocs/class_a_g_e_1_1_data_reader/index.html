@@ -97,11 +97,11 @@
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-readarray"><strong>ReadArray</strong></a> (std::vector&lt; T &gt; &amp; Array, uint32_t Size=0) <br></td>
+<td style="text-align: left;"><a href="#function-readarray"><strong>ReadArray</strong></a> (std::vector&lt; T &gt; &amp; Array, uint32_t Size=0) <br><em>Reads an array of elements from the input stream. If the size is not provided, it reads the size first and then the array. The function uses C++14's std::is_trivial to determine whether T is a trivial type or not. For trivial types, it directly reads into the array element using ReadRaw. For non-trivial types, it uses ReadObject.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-readbuffer"><strong>ReadBuffer</strong></a> (char * Data, size_t Size) <br></td>
+<td style="text-align: left;"><a href="#function-readbuffer"><strong>ReadBuffer</strong></a> (char * Data, size_t Size) <br><em>Reads data from the buffer. If size is zero, it reads a uint32_t to determine the size of the data to read next.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual bool</td>
@@ -121,27 +121,27 @@
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-readmap-13"><strong>ReadMap</strong></a> (std::map&lt; Key, Value &gt; &amp; Map, uint32_t Size=0) <br></td>
+<td style="text-align: left;"><a href="#function-readmap-13"><strong>ReadMap</strong></a> (std::map&lt; Key, Value &gt; &amp; Map, uint32_t Size=0) <br><em>Reads a map from the input stream.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-readmap-23"><strong>ReadMap</strong></a> (std::unordered_map&lt; Key, Value &gt; &amp; Map, uint32_t Size=0) <br></td>
+<td style="text-align: left;"><a href="#function-readmap-23"><strong>ReadMap</strong></a> (std::unordered_map&lt; Key, Value &gt; &amp; Map, uint32_t Size=0) <br><em>Reads a map from the input stream.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-readmap-33"><strong>ReadMap</strong></a> (std::unordered_map&lt; std::string, Value &gt; &amp; Map, uint32_t Size=0) <br></td>
+<td style="text-align: left;"><a href="#function-readmap-33"><strong>ReadMap</strong></a> (std::unordered_map&lt; std::string, Value &gt; &amp; Map, uint32_t Size=0) <br><em>Reads a map from the input stream. The size of the map is read if not provided as an argument. If the key and value types are trivial, raw data is read directly; otherwise, objects are read.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-readobject"><strong>ReadObject</strong></a> (T &amp; Obj) <br></td>
+<td style="text-align: left;"><a href="#function-readobject"><strong>ReadObject</strong></a> (T &amp; Obj) <br><em>This function reads an object of type T from the stream using Deserialize method.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-readraw"><strong>ReadRaw</strong></a> (T &amp; Type) <br></td>
+<td style="text-align: left;"><a href="#function-readraw"><strong>ReadRaw</strong></a> (T &amp; Type) <br><em>This function reads raw data into a specified type.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-readstring"><strong>ReadString</strong></a> (std::string &amp; String) <br></td>
+<td style="text-align: left;"><a href="#function-readstring"><strong>ReadString</strong></a> (std::string &amp; String) <br><em>Reads a string from the data source.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
@@ -149,11 +149,11 @@
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-operator-bool"><strong>operator bool</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-operator-bool"><strong>operator bool</strong></a> () const<br><em>Checks the state of the stream.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual</td>
-<td style="text-align: left;"><a href="#function-datareader"><strong>~DataReader</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-datareader"><strong>~DataReader</strong></a> () = default<br><em>Virtual destructor for the</em> <a href="./"><em><strong>DataReader</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
@@ -169,20 +169,46 @@
 <hr>
 
 <h3 id="function-readarray">function ReadArray</h3>
+<p><em>Reads an array of elements from the input stream. If the size is not provided, it reads the size first and then the array. The function uses C++14's std::is_trivial to determine whether T is a trivial type or not. For trivial types, it directly reads into the array element using ReadRaw. For non-trivial types, it uses ReadObject.</em> </p>
 <pre><code class="language-C++">template&lt;typename T&gt;
 inline void AGE::DataReader::ReadArray (
     std::vector&lt; T &gt; &amp; Array,
     uint32_t Size=0
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Array</code> Reference to the vector that will hold the read elements. </li>
+<li><code>Size</code> The size of the array. If zero, the function first reads the size.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Reads an array of elements from the input stream. If the size is not provided, it reads the size first. The function uses <code>ReadRaw</code> for trivial types and <code>ReadObject</code> for non-trivial types.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Array</code> Reference to the vector where the data will be stored. </li>
+<li><code>Size</code> Optional parameter specifying the number of elements in the array. If not provided, it is read first. </li>
+</ul>
 <hr>
 
 <h3 id="function-readbuffer">function ReadBuffer</h3>
+<p><em>Reads data from the buffer. If size is zero, it reads a uint32_t to determine the size of the data to read next.</em> </p>
 <pre><code class="language-C++">void AGE::DataReader::ReadBuffer (
     char * Data,
     size_t Size
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Data</code> Pointer to the buffer where the data will be stored. </li>
+<li><code>Size</code> The size of the data to read. If this is zero, it means that the size of the data is expected to follow in a uint32_t format.</li>
+</ul>
+<p>Reads data from the buffer. If size is zero, it reads a uint32_t to determine the size of the data to read next.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Data</code> Pointer to the buffer where the data will be stored. </li>
+<li><code>Size</code> The size of the data in bytes. If this is zero, the function assumes that the actual size needs to be read first. </li>
+</ul>
 <hr>
 
 <h3 id="function-readbytes-12">function ReadBytes [1/2]</h3>
@@ -217,53 +243,135 @@ inline void AGE::DataReader::ReadArray (
 <hr>
 
 <h3 id="function-readmap-13">function ReadMap [1/3]</h3>
+<p><em>Reads a map from the input stream.</em> </p>
 <pre><code class="language-C++">template&lt;typename Key, typename Value&gt;
 inline void AGE::DataReader::ReadMap (
     std::map&lt; Key, Value &gt; &amp; Map,
     uint32_t Size=0
 ) 
 </code></pre>
+<p>This function reads a map of keys and values from the input stream. If the size is not provided, it will read it first. The key type can be any trivial or non-trivial type that has been defined for serialization. The value type must also be either trivial or non-trivial. It uses ReadRaw to read raw data if the key or value types are trivial and ReadObject otherwise.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Map</code> Reference to the map to be populated with keys and values. </li>
+<li><code>Size</code> Optional parameter specifying the size of the map. If not provided, it will be read first.</li>
+</ul>
+<p>Reads a map from the input stream. The size of the map is read if not provided as an argument. If the key or value types are trivial, raw data is read directly; otherwise, objects are read. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Map</code> Reference to the map that will be populated with the values read from the input stream. </li>
+<li><code>Size</code> Optional parameter specifying the size of the map. If not provided, it is read from the input stream. </li>
+</ul>
 <hr>
 
 <h3 id="function-readmap-23">function ReadMap [2/3]</h3>
+<p><em>Reads a map from the input stream.</em> </p>
 <pre><code class="language-C++">template&lt;typename Key, typename Value&gt;
 inline void AGE::DataReader::ReadMap (
     std::unordered_map&lt; Key, Value &gt; &amp; Map,
     uint32_t Size=0
 ) 
 </code></pre>
+<p>This function reads a map of keys and values from the input stream. If the size is not provided, it will read the size first. For each key-value pair, if the key or value type is trivial (like int, float etc.), it uses <code>ReadRaw</code> to read them directly; otherwise, it uses <code>ReadObject</code> to read them.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Map</code> The map to be filled with keys and values from the input stream. </li>
+<li><code>Size</code> Optional parameter specifying the size of the map. If not provided, it will be read first.</li>
+</ul>
+<p>Reads a map from the input stream.</p>
+<p>This function reads a map of keys and values from the input stream. If no size is provided, it will read one first. The key-value pairs are read in order based on the size. For each pair, if the key type is trivial (like int or float), it directly reads the key; otherwise, it calls ReadObject to read the key. Similarly for the value, if its type is trivial, it directly reads the value; otherwise, it calls ReadObject to read the value.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Map</code> The map to be populated with the data from the input stream. </li>
+<li><code>Size</code> The number of elements in the map (default: 0). If not provided, a size is expected to follow. </li>
+</ul>
 <hr>
 
 <h3 id="function-readmap-33">function ReadMap [3/3]</h3>
+<p><em>Reads a map from the input stream. The size of the map is read if not provided as an argument. If the key and value types are trivial, raw data is read directly; otherwise, objects are read.</em> </p>
 <pre><code class="language-C++">template&lt;typename Key, typename Value&gt;
 inline void AGE::DataReader::ReadMap (
     std::unordered_map&lt; std::string, Value &gt; &amp; Map,
     uint32_t Size=0
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Map</code> The unordered_map to be populated with the data read from the input stream. </li>
+<li><code>Size</code> The size of the map. Defaults to 0 if not provided. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Reads a map from the input stream.</p>
+<p>This function reads a map of keys to values from the input stream. The size of the map is read first if not provided, then each key-value pair is read in a loop. If the Key or Value type is trivial (e.g., int, float), it uses ReadRaw to read directly into them; otherwise, it uses ReadObject.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Map</code> The unordered map to be populated with keys and values. </li>
+<li><code>Size</code> Optional parameter specifying the size of the map. If not provided, it is read from the input stream first. </li>
+</ul>
 <hr>
 
 <h3 id="function-readobject">function ReadObject</h3>
+<p><em>This function reads an object of type T from the stream using Deserialize method.</em> </p>
 <pre><code class="language-C++">template&lt;typename T&gt;
 inline void AGE::DataReader::ReadObject (
     T &amp; Obj
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Obj</code> The object to be read into. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>This function reads an object from the stream using Deserialize method of T.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Obj</code> The object to be read into. </li>
+</ul>
 <hr>
 
 <h3 id="function-readraw">function ReadRaw</h3>
+<p><em>This function reads raw data into a specified type.</em> </p>
 <pre><code class="language-C++">template&lt;typename T&gt;
 inline void AGE::DataReader::ReadRaw (
     T &amp; Type
 ) 
 </code></pre>
+<p>The function takes a reference to the variable of type T and attempts to read data from an underlying source into it. If successful, it asserts that the operation was successful; if not, it throws an exception with the message "Failed to Read Data".</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Type</code> A reference to the variable where the raw data will be stored. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>This function reads raw data into a specified type.</p>
+<p>The function takes a reference to an object of type T and attempts to read the size of T bytes from the input source. If successful, it will store the read data in the provided variable. Otherwise, it will throw an assertion with the message "Failed to Read Data".</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Type</code> A reference to an object of type T where the read data will be stored. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-readstring">function ReadString</h3>
+<p><em>Reads a string from the data source.</em> </p>
 <pre><code class="language-C++">void AGE::DataReader::ReadString (
     std::string &amp; String
 ) 
 </code></pre>
+<p>This function reads a string from the data source, resizing the input string to match the size of the read data and assigning it the value of the read data.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>String</code> The string to be read into.</li>
+</ul>
+<p>Reads a string from the data source.</p>
+<p>This function reads a string from the data source, which is expected to be in the format of a size_t followed by the actual string data. The size_t indicates the length of the following string data.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>String</code> A reference to the string that will hold the read data. </li>
+</ul>
 <hr>
 
 <h3 id="function-setstreamposition">function SetStreamPosition</h3>
@@ -274,13 +382,25 @@ inline void AGE::DataReader::ReadRaw (
 <hr>
 
 <h3 id="function-operator-bool">function operator bool</h3>
+<p><em>Checks the state of the stream.</em> </p>
 <pre><code class="language-C++">inline AGE::DataReader::operator bool () const
 </code></pre>
+<p>This function returns a boolean value indicating whether or not the stream is in a good state. It does this by calling the private method <code>IsStreamGood()</code>, which should be implemented elsewhere in the codebase.</p>
+<p><strong>Returns:</strong></p>
+<p>True if the stream is in a good state, false otherwise.</p>
+<p>Checks the status of the stream.</p>
+<p>This function checks whether the stream is in a good state or not by calling the <code>IsStreamGood</code> method. It returns true if the stream is good, and false otherwise.</p>
+<p><strong>Returns:</strong></p>
+<p>True if the stream is good, false otherwise. </p>
 <hr>
 
 <h3 id="function-datareader">function ~DataReader</h3>
+<p><em>Virtual destructor for the</em> <a href="./"><em><strong>DataReader</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">virtual AGE::DataReader::~DataReader () = default
 </code></pre>
+<p>This function is responsible for releasing any resources that were acquired by the <a href="./"><strong>DataReader</strong></a> instance, such as memory or file handles. It does not return anything and has no parameters.</p>
+<p>Virtual destructor for the <a href="./"><strong>DataReader</strong></a> class.</p>
+<p>This function is responsible for releasing any resources that were acquired by the <a href="./"><strong>DataReader</strong></a> instance, such as memory or file handles. It does not return anything (void) and hence it doesn't need a Doxygen comment to document its return value. </p>
 <hr>
 
 <hr />

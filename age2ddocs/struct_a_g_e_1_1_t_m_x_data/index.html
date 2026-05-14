@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Struct AGE::TilesetData - AGE2D Docs</title>
+    <title>Struct AGE::TMXData - AGE2D Docs</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Struct AGE::TilesetData";
-        var mkdocs_page_input_path = "age2ddocs\\struct_a_g_e_1_1_tileset_data.md";
+        var mkdocs_page_name = "Struct AGE::TMXData";
+        var mkdocs_page_input_path = "age2ddocs\\struct_a_g_e_1_1_t_m_x_data.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -66,7 +66,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Struct AGE::TilesetData</li>
+      <li class="breadcrumb-item active">Struct AGE::TMXData</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -75,8 +75,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="struct-agetilesetdata">Struct AGE::TilesetData</h1>
-<p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespace_a_g_e/"><strong>AGE</strong></a> <strong>&gt;</strong> <a href="./"><strong>TilesetData</strong></a></p>
+                <h1 id="struct-agetmxdata">Struct AGE::TMXData</h1>
+<p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespace_a_g_e/"><strong>AGE</strong></a> <strong>&gt;</strong> <a href="./"><strong>TMXData</strong></a></p>
 <h2 id="public-attributes">Public Attributes</h2>
 <table>
 <thead>
@@ -87,50 +87,14 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: right;">Ref&lt; <a href="../class_a_g_e_1_1_texture2_d/"><strong>Texture2D</strong></a> &gt;</td>
-<td style="text-align: left;"><a href="#variable-atlastexture"><strong>AtlasTexture</strong></a>  <br></td>
-</tr>
-<tr>
-<td style="text-align: right;">uint32_t</td>
-<td style="text-align: left;"><a href="#variable-firstgid"><strong>FirstGID</strong></a>  <br></td>
-</tr>
-<tr>
-<td style="text-align: right;">std::vector&lt; Ref&lt; <a href="../class_a_g_e_1_1_sub_texture2_d/"><strong>SubTexture2D</strong></a> &gt; &gt;</td>
-<td style="text-align: left;"><a href="#variable-subtexs"><strong>SubTexs</strong></a>  <br></td>
-</tr>
-<tr>
-<td style="text-align: right;">uint32_t</td>
-<td style="text-align: left;"><a href="#variable-tileheight"><strong>TileHeight</strong></a>   = <code>0</code><br></td>
-</tr>
-<tr>
-<td style="text-align: right;">uint32_t</td>
-<td style="text-align: left;"><a href="#variable-tilewidth"><strong>TileWidth</strong></a>  <br></td>
+<td style="text-align: right;">std::vector&lt; tmx_layer * &gt;</td>
+<td style="text-align: left;"><a href="#variable-layers"><strong>Layers</strong></a>  <br></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-attributes-documentation">Public Attributes Documentation</h2>
-<h3 id="variable-atlastexture">variable AtlasTexture</h3>
-<pre><code class="language-C++">Ref&lt;Texture2D&gt; AGE::TilesetData::AtlasTexture;
-</code></pre>
-<hr>
-
-<h3 id="variable-firstgid">variable FirstGID</h3>
-<pre><code class="language-C++">uint32_t AGE::TilesetData::FirstGID;
-</code></pre>
-<hr>
-
-<h3 id="variable-subtexs">variable SubTexs</h3>
-<pre><code class="language-C++">std::vector&lt;Ref&lt;SubTexture2D&gt; &gt; AGE::TilesetData::SubTexs;
-</code></pre>
-<hr>
-
-<h3 id="variable-tileheight">variable TileHeight</h3>
-<pre><code class="language-C++">uint32_t AGE::TilesetData::TileHeight;
-</code></pre>
-<hr>
-
-<h3 id="variable-tilewidth">variable TileWidth</h3>
-<pre><code class="language-C++">uint32_t AGE::TilesetData::TileWidth;
+<h3 id="variable-layers">variable Layers</h3>
+<pre><code class="language-C++">std::vector&lt;tmx_layer*&gt; AGE::TMXData::Layers;
 </code></pre>
 <hr>
 

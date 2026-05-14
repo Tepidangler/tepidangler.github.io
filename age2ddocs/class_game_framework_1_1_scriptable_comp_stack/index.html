@@ -88,81 +88,139 @@
 <tbody>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-popcomponent"><strong>PopComponent</strong></a> (<a href="../class_a_g_e_1_1_scriptable_entity/"><strong>AGE::ScriptableEntity</strong></a> * Entt) <br></td>
+<td style="text-align: left;"><a href="#function-popcomponent"><strong>PopComponent</strong></a> (<a href="../class_a_g_e_1_1_scriptable_entity/"><strong>AGE::ScriptableEntity</strong></a> * Entt) <br><em>Removes a ScriptableEntity from the stack of components.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-pushcomponent"><strong>PushComponent</strong></a> (<a href="../class_a_g_e_1_1_scriptable_entity/"><strong>AGE::ScriptableEntity</strong></a> * Entt) <br></td>
+<td style="text-align: left;"><a href="#function-pushcomponent"><strong>PushComponent</strong></a> (<a href="../class_a_g_e_1_1_scriptable_entity/"><strong>AGE::ScriptableEntity</strong></a> * Entt) <br><em>Pushes a ScriptableEntity onto the stack at the specified index.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-scriptablecompstack"><strong>ScriptableCompStack</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-scriptablecompstack"><strong>ScriptableCompStack</strong></a> () <br><em>Constructor for the</em> <a href="./"><em><strong>ScriptableCompStack</strong></em></a> <em>class. Initializes an empty stack of components.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">std::vector&lt; <a href="../class_a_g_e_1_1_scriptable_entity/"><strong>AGE::ScriptableEntity</strong></a> * &gt;::iterator</td>
-<td style="text-align: left;"><a href="#function-begin-12"><strong>begin</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-begin-12"><strong>begin</strong></a> () <br><em>Returns an iterator pointing to the beginning of the 'm_Entitys' vector.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">std::vector&lt; <a href="../class_a_g_e_1_1_scriptable_entity/"><strong>AGE::ScriptableEntity</strong></a> * &gt;::const_iterator</td>
-<td style="text-align: left;"><a href="#function-begin-22"><strong>begin</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-begin-22"><strong>begin</strong></a> () const<br><em>Returns a constant iterator pointing to the beginning of the 'm_Entitys' vector.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">std::vector&lt; <a href="../class_a_g_e_1_1_scriptable_entity/"><strong>AGE::ScriptableEntity</strong></a> * &gt;::iterator</td>
-<td style="text-align: left;"><a href="#function-end-12"><strong>end</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-end-12"><strong>end</strong></a> () <br><em>Returns an iterator pointing to the theoretical element that follows the last element of the container. This function returns an iterator pointing to one past the last element in the vector, which is considered as a valid position for insertion but does not point to any real data.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">std::vector&lt; <a href="../class_a_g_e_1_1_scriptable_entity/"><strong>AGE::ScriptableEntity</strong></a> * &gt;::const_iterator</td>
-<td style="text-align: left;"><a href="#function-end-22"><strong>end</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-end-22"><strong>end</strong></a> () const<br><em>Returns a constant iterator pointing to the past-the-end element of the container.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-scriptablecompstack"><strong>~ScriptableCompStack</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-scriptablecompstack"><strong>~ScriptableCompStack</strong></a> () <br><em>Destructor for the</em> <a href="./"><em><strong>ScriptableCompStack</strong></em></a> <em>class. It iterates over all elements in the vector 'm_Entitys' and deletes each one using the destructor of the ScriptableEntity class.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-popcomponent">function PopComponent</h3>
+<p><em>Removes a ScriptableEntity from the stack of components.</em> </p>
 <pre><code class="language-C++">void GameFramework::ScriptableCompStack::PopComponent (
     AGE::ScriptableEntity * Entt
 ) 
 </code></pre>
+<p>This function searches for the provided ScriptableEntity in the m_Entitys vector and removes it if found. It also decrements the m_EntityInsertIndex by one to ensure that new entities are inserted at the correct position.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Entt</code> Pointer to the ScriptableEntity to be removed from the stack.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Removes a ScriptableEntity from the stack of components.</p>
+<p>This function searches for the provided entity in the m_Entitys vector and if it is found, removes it along with its associated data. The iterator 'it' is used to find the position of the entity within the vector. If the entity is not found, nothing happens.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Entt</code> Pointer to the ScriptableEntity that needs to be removed from the stack. </li>
+</ul>
 <hr>
 
 <h3 id="function-pushcomponent">function PushComponent</h3>
+<p><em>Pushes a ScriptableEntity onto the stack at the specified index.</em> </p>
 <pre><code class="language-C++">void GameFramework::ScriptableCompStack::PushComponent (
     AGE::ScriptableEntity * Entt
 ) 
 </code></pre>
+<p>This function inserts a new ScriptableEntity into the m_Entitys vector at the position indicated by m_EntityInsertIndex. The entity is then incremented for the next push operation.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Entt</code> Pointer to the ScriptableEntity that will be pushed onto the stack. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void No return value.</p>
+<p>Pushes a ScriptableEntity onto the stack at the specified index.</p>
+<p>This function inserts the given ScriptableEntity into the m_Entitys vector at the position indicated by m_EntityInsertIndex. The entity is then incremented for future use.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Entt</code> Pointer to the ScriptableEntity that will be pushed onto the stack.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void No return value. </p>
 <hr>
 
 <h3 id="function-scriptablecompstack">function ScriptableCompStack</h3>
+<p><em>Constructor for the</em> <a href="./"><em><strong>ScriptableCompStack</strong></em></a> <em>class. Initializes an empty stack of components.</em></p>
 <pre><code class="language-C++">GameFramework::ScriptableCompStack::ScriptableCompStack () 
 </code></pre>
+<p>Constructor for the <a href="./"><strong>ScriptableCompStack</strong></a> class. Initializes an empty stack of components. </p>
 <hr>
 
 <h3 id="function-begin-12">function begin [1/2]</h3>
+<p><em>Returns an iterator pointing to the beginning of the 'm_Entitys' vector.</em> </p>
 <pre><code class="language-C++">inline std::vector&lt; AGE::ScriptableEntity * &gt;::iterator GameFramework::ScriptableCompStack::begin () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>An iterator to the start of the 'm_Entitys' vector.</p>
+<p>Returns an iterator pointing to the beginning of the 'm_Entitys' vector. </p>
+<p><strong>Returns:</strong></p>
+<p>An iterator to the start of the 'm_Entitys' vector. </p>
 <hr>
 
 <h3 id="function-begin-22">function begin [2/2]</h3>
+<p><em>Returns a constant iterator pointing to the beginning of the 'm_Entitys' vector.</em> </p>
 <pre><code class="language-C++">inline std::vector&lt; AGE::ScriptableEntity * &gt;::const_iterator GameFramework::ScriptableCompStack::begin () const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A constant iterator to the beginning of the 'm_Entitys' vector. If the vector is empty, past-the-end (cend) iterator is returned.</p>
+<p>Returns a constant iterator pointing to the beginning of the 'm_Entitys' vector. </p>
+<p><strong>Returns:</strong></p>
+<p>A constant iterator to the beginning of the 'm_Entitys' vector. </p>
 <hr>
 
 <h3 id="function-end-12">function end [1/2]</h3>
+<p><em>Returns an iterator pointing to the theoretical element that follows the last element of the container. This function returns an iterator pointing to one past the last element in the vector, which is considered as a valid position for insertion but does not point to any real data.</em> </p>
 <pre><code class="language-C++">inline std::vector&lt; AGE::ScriptableEntity * &gt;::iterator GameFramework::ScriptableCompStack::end () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>An iterator to the theoretical element that follows the end of the sequence.</p>
+<p>Returns an iterator pointing to the theoretical element that follows the last element of the vector. </p>
+<p><strong>Returns:</strong></p>
+<p>An iterator to the theoretical element following the last element of the vector. </p>
 <hr>
 
 <h3 id="function-end-22">function end [2/2]</h3>
+<p><em>Returns a constant iterator pointing to the past-the-end element of the container.</em> </p>
 <pre><code class="language-C++">inline std::vector&lt; AGE::ScriptableEntity * &gt;::const_iterator GameFramework::ScriptableCompStack::end () const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A constant iterator pointing to the past-the-end element in the container.</p>
+<p>Returns a constant iterator pointing to the past-the-end element of the container. </p>
+<p><strong>Returns:</strong></p>
+<p>A constant iterator pointing to the past-the-end element in the container. </p>
 <hr>
 
 <h3 id="function-scriptablecompstack_1">function ~ScriptableCompStack</h3>
+<p><em>Destructor for the</em> <a href="./"><em><strong>ScriptableCompStack</strong></em></a> <em>class. It iterates over all elements in the vector 'm_Entitys' and deletes each one using the destructor of the ScriptableEntity class.</em></p>
 <pre><code class="language-C++">GameFramework::ScriptableCompStack::~ScriptableCompStack () 
 </code></pre>
+<p>Destructor for the <a href="./"><strong>ScriptableCompStack</strong></a> class. It iterates over all elements in the 'm_Entitys' vector and deletes each one using the destructor of the ScriptableEntity class. </p>
 <hr>
 
 <hr />

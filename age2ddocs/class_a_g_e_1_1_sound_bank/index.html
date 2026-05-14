@@ -115,39 +115,39 @@
 <tbody>
 <tr>
 <td style="text-align: right;"><a href="../class_a_g_e_1_1_u_u_i_d/"><strong>UUID</strong></a> &amp;</td>
-<td style="text-align: left;"><a href="#function-getassetid"><strong>GetAssetID</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getassetid"><strong>GetAssetID</strong></a> () <br><em>Gets the Asset ID of the object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">uint32_t</td>
-<td style="text-align: left;"><a href="#function-getbankid"><strong>GetBankID</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getbankid"><strong>GetBankID</strong></a> () <br><em>This function returns the bank ID of the current object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">std::string &amp;</td>
-<td style="text-align: left;"><a href="#function-getbankname"><strong>GetBankName</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getbankname"><strong>GetBankName</strong></a> () <br><em>Returns the name of the bank.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">std::filesystem::path &amp;</td>
-<td style="text-align: left;"><a href="#function-getfilepath"><strong>GetFilePath</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getfilepath"><strong>GetFilePath</strong></a> () <br><em>Returns the file path of the object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setbankid"><strong>SetBankID</strong></a> (uint32_t ID) <br></td>
+<td style="text-align: left;"><a href="#function-setbankid"><strong>SetBankID</strong></a> (uint32_t ID) <br><em>This function sets the bank ID to a given value.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setbankname"><strong>SetBankName</strong></a> (const std::string &amp; Name) <br></td>
+<td style="text-align: left;"><a href="#function-setbankname"><strong>SetBankName</strong></a> (const std::string &amp; Name) <br><em>This function sets the bank name.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-soundbank-12"><strong>SoundBank</strong></a> (const std::filesystem::path &amp; FilePath, <a href="../class_a_g_e_1_1_u_u_i_d/"><strong>UUID</strong></a> ID) <br></td>
+<td style="text-align: left;"><a href="#function-soundbank-12"><strong>SoundBank</strong></a> (const std::filesystem::path &amp; FilePath, <a href="../class_a_g_e_1_1_u_u_i_d/"><strong>UUID</strong></a> ID) <br><em>Constructs a</em> <a href="./"><em><strong>SoundBank</strong></em></a> <em>object with the given file path and</em><a href="../class_a_g_e_1_1_u_u_i_d/"><em><strong>UUID</strong></em></a> <em>.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-soundbank-22"><strong>SoundBank</strong></a> (const <a href="./"><strong>SoundBank</strong></a> &amp;) = default<br></td>
+<td style="text-align: left;"><a href="#function-soundbank-22"><strong>SoundBank</strong></a> (const <a href="./"><strong>SoundBank</strong></a> &amp;) = default<br><em>Default copy constructor for the</em> <a href="./"><em><strong>SoundBank</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-soundbank"><strong>~SoundBank</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-soundbank"><strong>~SoundBank</strong></a> () = default<br><em>Default destructor for the</em> <a href="./"><em><strong>SoundBank</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
@@ -173,57 +173,140 @@
 <hr>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-getassetid">function GetAssetID</h3>
+<p><em>Gets the Asset ID of the object.</em> </p>
 <pre><code class="language-C++">inline UUID &amp; AGE::SoundBank::GetAssetID () 
 </code></pre>
+<p>This function returns a reference to the private member variable 'm_AssetID'. It is used to access and possibly modify it if necessary. The returned value should not be altered as it may affect other parts of the program that rely on this unique identifier for their operations.</p>
+<p><strong>Returns:</strong></p>
+<p>A reference to <a href="../class_a_g_e_1_1_u_u_i_d/"><strong>UUID</strong></a>&amp; representing the Asset ID.</p>
+<p>Gets the Asset ID of the object.</p>
+<p>This function returns a reference to the private member variable 'm_AssetID'. It is used to access and possibly modify this value if necessary.</p>
+<p><strong>Returns:</strong></p>
+<p>A reference to <a href="../class_a_g_e_1_1_u_u_i_d/"><strong>UUID</strong></a>&amp; representing the Asset ID. </p>
 <hr>
 
 <h3 id="function-getbankid">function GetBankID</h3>
+<p><em>This function returns the bank ID of the current object.</em> </p>
 <pre><code class="language-C++">inline uint32_t AGE::SoundBank::GetBankID () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>uint32_t The bank ID as a 32-bit unsigned integer.</p>
+<p>Retrieves the bank ID of the object. </p>
+<p><strong>Returns:</strong></p>
+<p>The bank ID as a uint32_t value. </p>
 <hr>
 
 <h3 id="function-getbankname">function GetBankName</h3>
+<p><em>Returns the name of the bank.</em> </p>
 <pre><code class="language-C++">inline std::string &amp; AGE::SoundBank::GetBankName () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A reference to a string containing the name of the bank.</p>
+<p>Gets the name of a bank.</p>
+<p>This function returns a reference to the private member variable <code>m_Name</code>, which holds the name of the bank. The returned value is non-const and can be modified by the caller. However, it's important to note that any changes made to this string will affect the internal state of the object.</p>
+<p><strong>Returns:</strong></p>
+<p>A reference to a string containing the name of the bank. </p>
 <hr>
 
 <h3 id="function-getfilepath">function GetFilePath</h3>
+<p><em>Returns the file path of the object.</em> </p>
 <pre><code class="language-C++">inline std::filesystem::path &amp; AGE::SoundBank::GetFilePath () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A reference to the file path member variable.</p>
+<p>Returns the file path of the object. </p>
+<p><strong>Returns:</strong></p>
+<p>A reference to a std::filesystem::path object representing the file path. </p>
 <hr>
 
 <h3 id="function-setbankid">function SetBankID</h3>
+<p><em>This function sets the bank ID to a given value.</em> </p>
 <pre><code class="language-C++">inline void AGE::SoundBank::SetBankID (
     uint32_t ID
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>ID</code> The new uint32_t type ID that will be set for the bank.</li>
+</ul>
+<p>This function sets the bank identifier with a given uint32 value. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>ID</code> The unique identifier of the bank to be set. </li>
+</ul>
 <hr>
 
 <h3 id="function-setbankname">function SetBankName</h3>
+<p><em>This function sets the bank name.</em> </p>
 <pre><code class="language-C++">inline void AGE::SoundBank::SetBankName (
     const std::string &amp; Name
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Name</code> The new name of the bank.</li>
+</ul>
+<p>Sets the bank name.</p>
+<p>This function sets the bank name by assigning it to the member variable m_Name. The parameter 'Name' is a const reference to std::string, which represents the new bank name.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Name</code> A const reference to std::string representing the new bank name. </li>
+</ul>
 <hr>
 
 <h3 id="function-soundbank-12">function SoundBank [1/2]</h3>
+<p><em>Constructs a</em> <a href="./"><em><strong>SoundBank</strong></em></a> <em>object with the given file path and</em><a href="../class_a_g_e_1_1_u_u_i_d/"><em><strong>UUID</strong></em></a> <em>.</em></p>
 <pre><code class="language-C++">AGE::SoundBank::SoundBank (
     const std::filesystem::path &amp; FilePath,
     UUID ID
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>FilePath</code> The path to the sound bank file. </li>
+<li><code>ID</code> The unique identifier for this sound bank.</li>
+</ul>
+<p>This function initializes a new <a href="./"><strong>SoundBank</strong></a> object by setting its file path and <a href="../class_a_g_e_1_1_u_u_i_d/"><strong>UUID</strong></a>, and also sets the name of the sound bank as the filename from the given path.</p>
+<p>Constructs a <a href="./"><strong>SoundBank</strong></a> object from the given file path and <a href="../class_a_g_e_1_1_u_u_i_d/"><strong>UUID</strong></a>. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>FilePath</code> The path to the sound bank file. </li>
+<li><code>ID</code> The unique identifier for this sound bank. </li>
+</ul>
 <hr>
 
 <h3 id="function-soundbank-22">function SoundBank [2/2]</h3>
+<p><em>Default copy constructor for the</em> <a href="./"><em><strong>SoundBank</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::SoundBank::SoundBank (
     const SoundBank &amp;
 ) = default
 </code></pre>
+<p>This function is used to create a new instance of the <a href="./"><strong>SoundBank</strong></a> class by copying an existing one. It uses the '= default' syntax, which tells the compiler to use the default implementation provided by the compiler.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>other</code> The <a href="./"><strong>SoundBank</strong></a> object to be copied.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A new instance of the <a href="./"><strong>SoundBank</strong></a> class with the same data as the input parameter.</p>
+<p>Default copy constructor for the <a href="./"><strong>SoundBank</strong></a> class.</p>
+<p>This function is used to create a new instance of the <a href="./"><strong>SoundBank</strong></a> class by copying an existing one. It uses the '= default' syntax, which instructs the compiler to generate a default implementation for this member function.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>other</code> The <a href="./"><strong>SoundBank</strong></a> object to be copied.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A new <a href="./"><strong>SoundBank</strong></a> instance that is a copy of the input <a href="./"><strong>SoundBank</strong></a>. </p>
 <hr>
 
 <h3 id="function-soundbank">function ~SoundBank</h3>
+<p><em>Default destructor for the</em> <a href="./"><em><strong>SoundBank</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::SoundBank::~SoundBank () = default
 </code></pre>
+<p>This function is used to clean up any resources that the <a href="./"><strong>SoundBank</strong></a> object may be using, such as memory or file handles. It's important to ensure that all resources are properly released when they are no longer needed to prevent potential memory leaks or other issues.</p>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Destructor for the <a href="./"><strong>SoundBank</strong></a> class.</p>
+<p>This function is responsible for releasing any resources that were acquired by the <a href="./"><strong>SoundBank</strong></a> object, such as memory or file handles. It does not return anything and has no parameters. </p>
 <hr>
 
 <hr />

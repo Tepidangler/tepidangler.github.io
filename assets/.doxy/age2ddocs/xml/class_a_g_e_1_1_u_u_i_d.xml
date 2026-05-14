@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/UUID.h" line="22" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/UUID.h" bodystart="22" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/UUID.h" line="50" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/UUID.h" bodystart="50" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/UUID.h" line="13" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/UUID.cpp" bodystart="15" bodyend="18"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/UUID.h" line="13" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/UUID.cpp" bodystart="28" bodyend="31"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_u_u_i_d_1a29f75f3252030d842d5b186322c1fc72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -44,12 +44,34 @@
           <declname>uuid</declname>
         </param>
         <briefdescription>
+<para>Constructs a <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref> object with the given uint64_t value. </para>
         </briefdescription>
         <detaileddescription>
+<para>This constructor takes an unsigned 64-bit integer and assigns it to the member variable m_UUID.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>uuid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The uint64_t value to be assigned to m_UUID.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Constructs a <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref> object with the given uint64_t value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>uuid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The uint64_t value to be used as the <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/UUID.h" line="14" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/UUID.cpp" bodystart="20" bodyend="23"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/UUID.h" line="14" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/UUID.cpp" bodystart="45" bodyend="48"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_u_u_i_d_1a3a3a835013983c95f40b5fc7a63a3049" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -61,12 +83,35 @@
           <type>const <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref> &amp;</type>
         </param>
         <briefdescription>
+<para>Default copy constructor for the <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is used to create a new instance of the <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref> class by copying an existing one. It uses the &apos;= default&apos; syntax, which instructs the compiler to generate a default implementation for this function.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>uuid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref> object to be copied.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Copy constructor for the <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref> class.</para>
+<para>This function creates a new instance of the <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref> class by copying an existing one. It uses the &apos;= default&apos; syntax, which instructs the compiler to generate a default implementation for this function using the default copy semantics provided by the language.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>uuid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref> object to be copied. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/UUID.h" line="15" column="1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/UUID.h" line="29" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_u_u_i_d_1a1e1df1dce275cc4fbb2b6391789bb737" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -75,19 +120,28 @@
         <name>operator uint64_t</name>
         <qualifiedname>AGE::UUID::operator uint64_t</qualifiedname>
         <briefdescription>
+<para>Converts the <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref> object to a uint64_t value. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function returns the underlying uint64_t representation of the <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref> object, which is its unique identifier.</para>
+<para><simplesect kind="return"><para>The 64-bit unsigned integer representation of the <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref> object.</para>
+</simplesect>
+Converts the <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref> to a uint64_t value.</para>
+<para>This function returns the internal representation of the <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref> as a uint64_t value. The conversion is done by simply returning the stored m_UUID member variable.</para>
+<para><simplesect kind="return"><para>A uint64_t representation of the <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref>. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/UUID.h" line="18" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/UUID.h" bodystart="18" bodyend="18"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/UUID.h" line="46" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/UUID.h" bodystart="46" bodyend="46"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/UUID.h" line="10" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/UUID.h" bodystart="11" bodyend="23"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/UUID.h" line="10" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/UUID.h" bodystart="11" bodyend="51"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_u_u_i_d_1a0286acc5f80d84ba8ad9d7eb306b1d54" prot="private" virt="non-virtual"><scope>AGE::UUID</scope><name>m_UUID</name></member>
       <member refid="class_a_g_e_1_1_u_u_i_d_1a1e1df1dce275cc4fbb2b6391789bb737" prot="public" virt="non-virtual"><scope>AGE::UUID</scope><name>operator uint64_t</name></member>

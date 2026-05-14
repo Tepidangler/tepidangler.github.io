@@ -25,12 +25,53 @@
           <declname>args</declname>
         </param>
         <briefdescription>
+<para>This function logs a trace message with the specified format and arguments. The formatted string is prefixed with &quot;[AGECORE] &quot;. It also adds each character of the log line to <ref refid="class_a_g_e_1_1_log_1a292f3269d949d267f59d1663d45c8111" kindref="member">Log::GetLogs()</ref> and updates <ref refid="class_a_g_e_1_1_log_1a4315846a52a37900638a64f692dd1674" kindref="member">Log::GetOffsets()</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fmt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A std::string_view representing the format string for the trace message. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Variadic arguments representing the values to be formatted into the trace message.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void</para>
+</simplesect>
+This function logs a trace message to the system&apos;s debug output and also stores it in the log buffer for later retrieval.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fmt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The format string used to create the logged message. It should follow the same syntax as printf/scanf functions. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Variadic arguments that correspond to the placeholders in the format string.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" line="75" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" bodystart="75" bodyend="92"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" line="138" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" bodystart="138" bodyend="155"/>
       </memberdef>
       <memberdef kind="function" id="_log_8h_1a89286f57dca687c7f12aa603d509c88b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -54,12 +95,33 @@
           <declname>args</declname>
         </param>
         <briefdescription>
+<para>This function logs informational messages to the console and a debug log file. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fmt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A format string that specifies how subsequent arguments are converted for output. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Arguments referenced by the format specifiers in the format string.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" line="94" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" bodystart="94" bodyend="113"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" line="166" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" bodystart="166" bodyend="185"/>
       </memberdef>
       <memberdef kind="function" id="_log_8h_1a6901920f08e118465870c12a9af25a0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -83,12 +145,53 @@
           <declname>args</declname>
         </param>
         <briefdescription>
+<para>This function logs a warning message to the console and stores it in the log buffer for later retrieval. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fmt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The format string used to create the warning message. It should follow the same syntax as printf or std::format. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The arguments that will be substituted into the format string.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>None</para>
+</simplesect>
+This function logs a warning message to the console and stores it for later retrieval.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fmt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The format string used to create the warning message. It should follow the same syntax as printf/scanf functions in C++. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Variadic arguments that correspond to the placeholders in the format string.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" line="115" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" bodystart="115" bodyend="134"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" line="203" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" bodystart="203" bodyend="222"/>
       </memberdef>
       <memberdef kind="function" id="_log_8h_1a587dd256070bb782a21b89d36d9e4a5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -112,12 +215,50 @@
           <declname>args</declname>
         </param>
         <briefdescription>
+<para>This function logs an error message to the core logger and various other logging systems. The error message is formatted using a variadic template, allowing for flexible formatting of the error message. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fmt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string_view representing the format string for the error message. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Variadic arguments representing the values to be inserted into the format string.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void This function does not return a value.</para>
+</simplesect>
+This function logs an error message to the core logger, appending &quot;[AGECORE]&quot; before it. It also pushes each character of the logged string into <ref refid="class_a_g_e_1_1_log_1a292f3269d949d267f59d1663d45c8111" kindref="member">Log::GetLogs()</ref> and updates <ref refid="class_a_g_e_1_1_log_1a4315846a52a37900638a64f692dd1674" kindref="member">Log::GetOffsets()</ref>. The log type is set as Error using LogType::Error. If AG_PLATFORM_WINDOWS is defined, it uses OutputDebugString to output the error message; if not, printf is used instead. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fmt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string_view representing the format of the error message. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Variadic arguments for the format string. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" line="136" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" bodystart="136" bodyend="155"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" line="241" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" bodystart="241" bodyend="260"/>
       </memberdef>
       <memberdef kind="function" id="_log_8h_1aaf909f24f68db5fb2def4d63a30b440f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -141,18 +282,146 @@
           <declname>args</declname>
         </param>
         <briefdescription>
+<para>This function logs a critical message to the system. The message is formatted using fmt::format and includes the prefix &quot;[AGECORE] &quot;. It also pushes each character of the logged string into <ref refid="class_a_g_e_1_1_log_1a292f3269d949d267f59d1663d45c8111" kindref="member">Log::GetLogs()</ref> for later analysis, increments the offset by the size of the logged string, and sets the log type to Critical. The function supports both Windows and Linux platforms via preprocessor directives. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fmt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A std::string_view representing the format string for the message. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Variadic arguments representing the values to be formatted into the message. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void</para>
+</simplesect>
+This function logs a critical message to the system. The log includes the formatted string and arguments, along with additional information such as timestamp and log level. It also pushes each character of the log line into <ref refid="class_a_g_e_1_1_log_1a292f3269d949d267f59d1663d45c8111" kindref="member">Log::GetLogs()</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fmt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A std::string_view representing the format string for the message to be logged. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Variadic arguments representing the values to be formatted into the message.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" line="157" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" bodystart="157" bodyend="176"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" line="279" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" bodystart="279" bodyend="298"/>
+      </memberdef>
+      <memberdef kind="function" id="_log_8h_1a5039edf87c953858d787c659399ad9a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void AGE::CoreLogger::Assert</definition>
+        <argsstring>(bool Condition, std::string_view fmt, Args &amp;&amp;... args)</argsstring>
+        <name>Assert</name>
+        <qualifiedname>AGE::CoreLogger::Assert</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>Condition</declname>
+        </param>
+        <param>
+          <type>std::string_view</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+<para>This function is used for asserting conditions in the code. If the condition is false, it throws an exception with a formatted message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Condition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The condition to be checked. It should evaluate to true if the program state is valid and false otherwise. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fmt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A format string that describes how the arguments should be formatted when included into the error message. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Variadic arguments representing values to include in the error message. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void This function does not return a value. It throws an exception if the condition is false.</para>
+</simplesect>
+This function is used for asserting a condition in the code. If the condition is not met, it throws an exception with a formatted message. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Condition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The boolean condition to be checked. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fmt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A format string that will be used to create the error message if the condition is false. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Arguments for the format string. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" line="352" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" bodystart="352" bodyend="352"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" line="72" column="1"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" line="118" column="1"/>
   </compounddef>
 </doxygen>

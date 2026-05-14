@@ -115,31 +115,31 @@
 <tbody>
 <tr>
 <td style="text-align: right;"><a href="../struct_a_g_e_1_1_matrix3_d/"><strong>Matrix3D</strong></a></td>
-<td style="text-align: left;"><a href="#function-getrotationmatrix"><strong>GetRotationMatrix</strong></a> (void) <br></td>
+<td style="text-align: left;"><a href="#function-getrotationmatrix"><strong>GetRotationMatrix</strong></a> (void) <br><em>Calculates the rotation matrix associated with this quaternion.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"><a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> &amp;</td>
-<td style="text-align: left;"><a href="#function-getvectorpart-12"><strong>GetVectorPart</strong></a> (void) <br></td>
+<td style="text-align: left;"><a href="#function-getvectorpart-12"><strong>GetVectorPart</strong></a> (void) <br><em>Returns a reference to the x component of the vector.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">const <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> &amp;</td>
-<td style="text-align: left;"><a href="#function-getvectorpart-22"><strong>GetVectorPart</strong></a> (void) const<br></td>
+<td style="text-align: left;"><a href="#function-getvectorpart-22"><strong>GetVectorPart</strong></a> (void) const<br><em>Returns a reference to the first three components of this vector.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-quaternion-13"><strong>Quaternion</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-quaternion-13"><strong>Quaternion</strong></a> () = default<br><em>Default constructor for the</em> <a href="./"><em><strong>Quaternion</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-quaternion-23"><strong>Quaternion</strong></a> (float a, float b, float c, float s) <br></td>
+<td style="text-align: left;"><a href="#function-quaternion-23"><strong>Quaternion</strong></a> (float a, float b, float c, float s) <br><a href="./"><em><strong>Quaternion</strong></em></a> <em>constructor.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-quaternion-33"><strong>Quaternion</strong></a> (const <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> &amp; v, float s) <br></td>
+<td style="text-align: left;"><a href="#function-quaternion-33"><strong>Quaternion</strong></a> (const <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> &amp; v, float s) <br><em>Constructs a</em> <a href="./"><em><strong>Quaternion</strong></em></a> <em>from a</em><a href="../struct_a_g_e_1_1_vector3/"><em><strong>Vector3</strong></em></a> <em>and a scalar value.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setrotationmatrix"><strong>SetRotationMatrix</strong></a> (const <a href="../struct_a_g_e_1_1_matrix3_d/"><strong>Matrix3D</strong></a> &amp; m) <br></td>
+<td style="text-align: left;"><a href="#function-setrotationmatrix"><strong>SetRotationMatrix</strong></a> (const <a href="../struct_a_g_e_1_1_matrix3_d/"><strong>Matrix3D</strong></a> &amp; m) <br><em>Sets the orientation from a given rotation matrix.</em></td>
 </tr>
 </tbody>
 </table>
@@ -165,32 +165,62 @@
 <hr>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-getrotationmatrix">function GetRotationMatrix</h3>
+<p><em>Calculates the rotation matrix associated with this quaternion.</em> </p>
 <pre><code class="language-C++">Matrix3D AGE::Quaternion::GetRotationMatrix (
     void
 ) 
 </code></pre>
+<p>The function first calculates various intermediate values that are used in the calculation of the rotation matrix. These include products of the quaternion components and their squares. It then constructs a 3x3 <a href="../struct_a_g_e_1_1_matrix3_d/"><strong>Matrix3D</strong></a> object using these calculated values to represent the rotation represented by the quaternion.</p>
+<p><strong>Returns:</strong></p>
+<p>A 3x3 <a href="../struct_a_g_e_1_1_matrix3_d/"><strong>Matrix3D</strong></a> representing the rotation associated with this quaternion.</p>
+<p>Computes the rotation matrix associated with this quaternion.</p>
+<p>The function calculates a 3D rotation matrix from the quaternion representation of a rotation. This is achieved by converting the quaternion to a 4x4 matrix, and then extracting the upper left 3x3 submatrix which represents the rotation.</p>
+<p><strong>Returns:</strong></p>
+<p>A <a href="../struct_a_g_e_1_1_matrix3_d/"><strong>Matrix3D</strong></a> object representing the 3D rotation represented by this quaternion. </p>
 <hr>
 
 <h3 id="function-getvectorpart-12">function GetVectorPart [1/2]</h3>
+<p><em>Returns a reference to the x component of the vector.</em> </p>
 <pre><code class="language-C++">inline Vector3 &amp; AGE::Quaternion::GetVectorPart (
     void
 ) 
 </code></pre>
+<p>This function returns a reference to the x component of the vector, which can be used for direct manipulation or read-only access. The returned value is reinterpreted as a <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a>&amp; object. </p>
+<p><strong>Returns:</strong></p>
+<p>A reference to the x component of the vector.</p>
+<p>Returns a reference to the first three elements of this vector.</p>
+<p>This function returns a reference to the first three elements of the vector. The returned object can be used for modifying these values directly, without needing to access them through other member functions or operators.</p>
+<p><strong>Returns:</strong></p>
+<p>A reference to the first three elements of the vector. </p>
 <hr>
 
 <h3 id="function-getvectorpart-22">function GetVectorPart [2/2]</h3>
+<p><em>Returns a reference to the first three components of this vector.</em> </p>
 <pre><code class="language-C++">inline const Vector3 &amp; AGE::Quaternion::GetVectorPart (
     void
 ) const
 </code></pre>
+<p>This function returns a reference to the first three components of the current vector object. The returned reference can be used for read-only access to these components, or for modifying them directly if desired. </p>
+<p><strong>Returns:</strong></p>
+<p>A const reference to the first three components of the vector.</p>
+<p>Returns a constant reference to the first three elements of the vector.</p>
+<p>This function returns a constant reference to the first three elements of the vector. It is used when you want to access these elements without modifying them, and it avoids unnecessary copying. The returned object should not be modified as it directly references internal data of this instance. </p>
+<p><strong>Returns:</strong></p>
+<p>A constant reference to the first three elements of the vector. </p>
 <hr>
 
 <h3 id="function-quaternion-13">function Quaternion [1/3]</h3>
+<p><em>Default constructor for the</em> <a href="./"><em><strong>Quaternion</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::Quaternion::Quaternion () = default
 </code></pre>
+<p>Initializes a new instance of the <a href="./"><strong>Quaternion</strong></a> class with all elements set to zero.</p>
+<p>Default constructor for the <a href="./"><strong>Quaternion</strong></a> class. This function initializes a new instance of the <a href="./"><strong>Quaternion</strong></a> class with all elements set to zero. The quaternion is initialized as the identity quaternion, which represents no rotation in 3D space.</p>
+<p><strong>Returns:</strong></p>
+<p>A default constructed <a href="./"><strong>Quaternion</strong></a> object. </p>
 <hr>
 
 <h3 id="function-quaternion-23">function Quaternion [2/3]</h3>
+<p><a href="./"><em><strong>Quaternion</strong></em></a> <em>constructor.</em></p>
 <pre><code class="language-C++">inline AGE::Quaternion::Quaternion (
     float a,
     float b,
@@ -198,21 +228,57 @@
     float s
 ) 
 </code></pre>
+<p>This function is used to initialize a new instance of the <a href="./"><strong>Quaternion</strong></a> class with four parameters representing the x, y, z and w components of the quaternion respectively.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>a</code> The value for the x component of the quaternion. </li>
+<li><code>b</code> The value for the y component of the quaternion. </li>
+<li><code>c</code> The value for the z component of the quaternion. </li>
+<li><code>s</code> The value for the w component of the quaternion.</li>
+</ul>
+<p><a href="./"><strong>Quaternion</strong></a> constructor.</p>
+<p>This function initializes a new instance of the <a href="./"><strong>Quaternion</strong></a> class with given values for x, y, z and w coordinates.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>a</code> The value to initialize x coordinate. </li>
+<li><code>b</code> The value to initialize y coordinate. </li>
+<li><code>c</code> The value to initialize z coordinate. </li>
+<li><code>s</code> The value to initialize w coordinate. </li>
+</ul>
 <hr>
 
 <h3 id="function-quaternion-33">function Quaternion [3/3]</h3>
+<p><em>Constructs a</em> <a href="./"><em><strong>Quaternion</strong></em></a> <em>from a</em><a href="../struct_a_g_e_1_1_vector3/"><em><strong>Vector3</strong></em></a> <em>and a scalar value.</em></p>
 <pre><code class="language-C++">inline AGE::Quaternion::Quaternion (
     const Vector3 &amp; v,
     float s
 ) 
 </code></pre>
+<p>This function takes in a <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> and a scalar, which are used to initialize the x, y, z coordinates of the <a href="./"><strong>Quaternion</strong></a> and its w (scalar) component respectively.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>v</code> The input vector that will be used to set the x, y, and z components of the quaternion. </li>
+<li><code>s</code> The scalar value that will be used to initialize the w component of the quaternion.</li>
+</ul>
+<p><a href="./"><strong>Quaternion</strong></a> constructor that takes a <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> and a scalar as input parameters. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>v</code> A const reference to a <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> object representing the vector part of the quaternion. </li>
+<li><code>s</code> The float value representing the scalar part of the quaternion. </li>
+</ul>
 <hr>
 
 <h3 id="function-setrotationmatrix">function SetRotationMatrix</h3>
+<p><em>Sets the orientation from a given rotation matrix.</em> </p>
 <pre><code class="language-C++">void AGE::Quaternion::SetRotationMatrix (
     const Matrix3D &amp; m
 ) 
 </code></pre>
+<p>This function converts a 3x3 rotation matrix into a quaternion representation of an orientation. It uses a formula based on the trace of the input matrix to determine which calculation path to take (sum &gt; 0 or max element). The resulting quaternion is stored in this object for later use.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>m</code> The 3x3 rotation matrix. </li>
+</ul>
 <hr>
 
 <hr />

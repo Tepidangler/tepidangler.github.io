@@ -2,6 +2,38 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
   <compounddef id="class_a_g_e_1_1_buffer_layout" kind="class" language="C++" prot="public">
     <compoundname>AGE::BufferLayout</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_a_g_e_1_1_buffer_layout_1a80a47340dee8d7ff01e9d7de40fb0410" prot="public" static="no" mutable="no">
+        <type>COMMENT</type>
+        <definition>COMMENT AGE::BufferLayout::__pad0__</definition>
+        <argsstring></argsstring>
+        <name>__pad0__</name>
+        <qualifiedname>AGE::BufferLayout::__pad0__</qualifiedname>
+        <bitfield>CONFIDENCE: 1.0</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" line="202" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_g_e_1_1_buffer_layout_1a01b726e735eb1c40e7bc393d5f63b145" prot="public" static="no" mutable="no">
+        <type>COMMENT</type>
+        <definition>COMMENT AGE::BufferLayout::__pad1__</definition>
+        <argsstring></argsstring>
+        <name>__pad1__</name>
+        <qualifiedname>AGE::BufferLayout::__pad1__</qualifiedname>
+        <bitfield>CONFIDENCE: 1.0</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" line="216" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" bodystart="221" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
     <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="class_a_g_e_1_1_buffer_layout_1a982e9e2278edec6044ea00397ae5e762" prot="private" static="no" mutable="no">
         <type>std::vector&lt; <ref refid="struct_a_g_e_1_1_buffer_element" kindref="compound">BufferElement</ref> &gt;</type>
@@ -15,7 +47,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" line="197" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" bodystart="197" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" line="253" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" bodystart="253" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_buffer_layout_1a500823f2ffd750838890d31974089767" prot="private" static="no" mutable="no">
         <type>uint32_t</type>
@@ -30,7 +62,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" line="198" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" bodystart="198" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" line="254" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" bodystart="254" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -41,12 +73,15 @@
         <name>BufferLayout</name>
         <qualifiedname>AGE::BufferLayout::BufferLayout</qualifiedname>
         <briefdescription>
+<para><ref refid="class_a_g_e_1_1_buffer_layout" kindref="compound">BufferLayout</ref> is a class that represents the layout of a buffer in memory. It provides methods for adding elements to the buffer and retrieving them by index. The buffer can hold any type of data, but it&apos;s typically used with primitive types like int, float, etc. </para>
         </briefdescription>
         <detaileddescription>
+<para><ref refid="class_a_g_e_1_1_buffer_layout" kindref="compound">BufferLayout</ref> is a class that represents the layout of a buffer in memory.</para>
+<para>This class provides methods for managing and manipulating the layout of a buffer in memory. It does not handle the actual data within the buffer, only its structure. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" line="162" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/RenderBuffer.cpp" bodystart="88" bodyend="90"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" line="177" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/RenderBuffer.cpp" bodystart="120" bodyend="122"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_buffer_layout_1a35838ea1fb70e4f88094a183631ffa39" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -59,12 +94,23 @@
           <declname>Elements</declname>
         </param>
         <briefdescription>
+<para>Constructor for the <ref refid="class_a_g_e_1_1_buffer_layout" kindref="compound">BufferLayout</ref> class. Initializes the buffer layout with a list of elements. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Elements</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A std::initializer_list&lt;BufferElement&gt; containing the elements to be added to the layout. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" line="164" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" bodystart="164" bodyend="168"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" line="184" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" bodystart="184" bodyend="188"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_buffer_layout_1ad5776ad4857321f39542eb16320b440a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const std::vector&lt; <ref refid="struct_a_g_e_1_1_buffer_element" kindref="compound">BufferElement</ref> &gt; &amp;</type>
@@ -73,12 +119,16 @@
         <name>GetElements</name>
         <qualifiedname>AGE::BufferLayout::GetElements</qualifiedname>
         <briefdescription>
+<para>Returns a constant reference to the vector of BufferElements stored in this object. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>A constant reference to the vector of BufferElements (m_Elements). </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" line="170" column="26" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" bodystart="170" bodyend="170"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" line="194" column="26" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" bodystart="194" bodyend="194"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_buffer_layout_1ad9960bbc2fab9c3989f1e54cf829bb20" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>uint32_t</type>
@@ -87,12 +137,16 @@
         <name>GetStride</name>
         <qualifiedname>AGE::BufferLayout::GetStride</qualifiedname>
         <briefdescription>
+<para>Returns the stride value of the object. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>The stride value as a uint32_t. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" line="172" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" bodystart="172" bodyend="172"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" line="200" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" bodystart="200" bodyend="200"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_buffer_layout_1a732bb04f784341feec954fee71581717" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::vector&lt; <ref refid="struct_a_g_e_1_1_buffer_element" kindref="compound">BufferElement</ref> &gt;::iterator</type>
@@ -106,7 +160,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" line="174" column="25" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" bodystart="174" bodyend="174"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" line="209" column="25" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" bodystart="209" bodyend="209"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_buffer_layout_1ab023f8bab00567d19b223a603650c46e" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::vector&lt; <ref refid="struct_a_g_e_1_1_buffer_element" kindref="compound">BufferElement</ref> &gt;::iterator</type>
@@ -115,12 +169,16 @@
         <name>end</name>
         <qualifiedname>AGE::BufferLayout::end</qualifiedname>
         <briefdescription>
+<para>Returns an iterator pointing to the theoretical element past the last element of the vector. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>An iterator to the theoretical element past the end of the vector. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" line="176" column="25" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" bodystart="176" bodyend="176"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" line="215" column="25" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" bodystart="215" bodyend="215"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_buffer_layout_1ae0a4adceeadf1565e7bbc3dd622b299f" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>std::vector&lt; <ref refid="struct_a_g_e_1_1_buffer_element" kindref="compound">BufferElement</ref> &gt;::const_iterator</type>
@@ -134,7 +192,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" line="177" column="31" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" bodystart="177" bodyend="177"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" line="223" column="31" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" bodystart="223" bodyend="223"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_buffer_layout_1a7a9ab3b40e88d5c018710e68ccc87fed" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>std::vector&lt; <ref refid="struct_a_g_e_1_1_buffer_element" kindref="compound">BufferElement</ref> &gt;::const_iterator</type>
@@ -143,12 +201,16 @@
         <name>end</name>
         <qualifiedname>AGE::BufferLayout::end</qualifiedname>
         <briefdescription>
+<para>Returns a constant iterator pointing to the past-the-end element in the buffer elements vector. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>A constant iterator pointing to the past-the-end element. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" line="179" column="31" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" bodystart="179" bodyend="179"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" line="229" column="31" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" bodystart="229" bodyend="229"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -159,20 +221,26 @@
         <name>CalculateOffsetsAndStride</name>
         <qualifiedname>AGE::BufferLayout::CalculateOffsetsAndStride</qualifiedname>
         <briefdescription>
+<para>Calculates the offsets and stride for each element in a container. The function iterates over all elements, setting their offset to the current total offset (which starts at 0), then incrementing the total offset by the size of the current element. It also updates the overall stride which is the sum of sizes of all elements. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" line="182" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" bodystart="182" bodyend="192"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" line="238" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" bodystart="238" bodyend="248"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" line="158" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" bodystart="159" bodyend="199"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" line="173" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderBuffer.h" bodystart="174" bodyend="255"/>
     <listofallmembers>
+      <member refid="class_a_g_e_1_1_buffer_layout_1a80a47340dee8d7ff01e9d7de40fb0410" prot="public" virt="non-virtual"><scope>AGE::BufferLayout</scope><name>__pad0__</name></member>
+      <member refid="class_a_g_e_1_1_buffer_layout_1a01b726e735eb1c40e7bc393d5f63b145" prot="public" virt="non-virtual"><scope>AGE::BufferLayout</scope><name>__pad1__</name></member>
       <member refid="class_a_g_e_1_1_buffer_layout_1a732bb04f784341feec954fee71581717" prot="public" virt="non-virtual"><scope>AGE::BufferLayout</scope><name>begin</name></member>
       <member refid="class_a_g_e_1_1_buffer_layout_1ae0a4adceeadf1565e7bbc3dd622b299f" prot="public" virt="non-virtual"><scope>AGE::BufferLayout</scope><name>begin</name></member>
       <member refid="class_a_g_e_1_1_buffer_layout_1ad42ed2e6d732a01ff6d6543ba518633c" prot="public" virt="non-virtual"><scope>AGE::BufferLayout</scope><name>BufferLayout</name></member>

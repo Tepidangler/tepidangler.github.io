@@ -77,6 +77,10 @@
               
                 <h1 id="class-agekeytypedevent">Class AGE::KeyTypedEvent</h1>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespace_a_g_e/"><strong>AGE</strong></a> <strong>&gt;</strong> <a href="./"><strong>KeyTypedEvent</strong></a></p>
+<p><em>Represents a Key Typed</em> <a href="../class_a_g_e_1_1_event/"><em><strong>Event</strong></em></a> <em>in the system.</em><a href="#detailed-description">More...</a></p>
+<ul>
+<li><code>#include &lt;KeyEvent.h&gt;</code></li>
+</ul>
 <p>Inherits the following classes: <a href="../class_a_g_e_1_1_key_event/">AGE::KeyEvent</a></p>
 <h2 id="public-attributes-inherited-from-ageevent">Public Attributes inherited from AGE::Event</h2>
 <p>See <a href="../class_a_g_e_1_1_event/">AGE::Event</a></p>
@@ -109,7 +113,7 @@
 </tr>
 <tr>
 <td style="text-align: right;">virtual std::string</td>
-<td style="text-align: left;"><a href="#function-tostring"><strong>ToString</strong></a> () override const<br></td>
+<td style="text-align: left;"><a href="#function-tostring"><strong>ToString</strong></a> () override const<br><em>Converts the event into a string format.</em></td>
 </tr>
 </tbody>
 </table>
@@ -153,11 +157,11 @@
 </tr>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-isincategory"><strong>IsInCategory</strong></a> (EventCategory Category) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-isincategory"><strong>IsInCategory</strong></a> (EventCategory Category) <br><em>Checks if an event is in a specific category.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual std::string</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-tostring"><strong>ToString</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-tostring"><strong>ToString</strong></a> () const<br><em>Returns a string representation of the object.</em></td>
 </tr>
 </tbody>
 </table>
@@ -193,6 +197,12 @@
 </tr>
 </tbody>
 </table>
+<h2 id="detailed-description">Detailed Description</h2>
+<p>This class extends the base <a href="../class_a_g_e_1_1_key_event/"><strong>KeyEvent</strong></a> class and represents an event where a key has been typed into the system. It provides a method to convert this event into a string representation.</p>
+<p>Converts the event into a string format.</p>
+<p>This function converts the <a href="./"><strong>KeyTypedEvent</strong></a> object into a string format that includes the key code of the event. The resulting string is returned by this method.</p>
+<p><strong>Returns:</strong></p>
+<p>A string representation of the <a href="./"><strong>KeyTypedEvent</strong></a> object, including the key code. </p>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-keytypedevent">function KeyTypedEvent</h3>
 <pre><code class="language-C++">inline AGE::KeyTypedEvent::KeyTypedEvent (
@@ -202,8 +212,16 @@
 <hr>
 
 <h3 id="function-tostring">function ToString</h3>
+<p><em>Converts the event into a string format.</em> </p>
 <pre><code class="language-C++">inline virtual std::string AGE::KeyTypedEvent::ToString () override const
 </code></pre>
+<p>This function converts the <a href="./"><strong>KeyTypedEvent</strong></a> object into a string format that includes the key code of the event. The resulting string is returned by this method.</p>
+<p><strong>Returns:</strong></p>
+<p>A string representation of the <a href="./"><strong>KeyTypedEvent</strong></a> object, including the key code.</p>
+<p>Converts the event to a string representation.</p>
+<p>This function converts the <a href="./"><strong>KeyTypedEvent</strong></a> into a string format that includes the key code of the event. The resulting string is returned by this method.</p>
+<p><strong>Returns:</strong></p>
+<p>A string in the format "KeyTypedEvent: &lt;key_code&gt;". </p>
 <p>Implements <a href="../class_a_g_e_1_1_event/#function-tostring"><em>AGE::Event::ToString</em></a></p>
 <hr>
 

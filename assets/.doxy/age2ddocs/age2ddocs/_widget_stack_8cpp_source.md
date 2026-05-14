@@ -18,17 +18,17 @@
 
 namespace AGE
 {
-    void WidgetStack::PushWidgetToStack(Ref<ScriptableWidget> Widget)
+void WidgetStack::PushWidgetToStack(Ref<ScriptableWidget> Widget)
     {
         m_Widgets.emplace_front(Widget);
     }
 
-    void WidgetStack::PopWidgetFromStack()
+void WidgetStack::PopWidgetFromStack()
     {
         m_Widgets.pop_front();
     }
 
-    void WidgetStack::OnTopUpdate(TimeStep DeltaTime)
+void WidgetStack::OnTopUpdate(TimeStep DeltaTime)
     {
         if (m_Widgets.size() > 0)
         {
@@ -36,11 +36,11 @@ namespace AGE
         }
     }
 
-    void WidgetStack::ActivateWidget() {
+void WidgetStack::ActivateWidget() {
         m_Widgets.front()->SetVisibility(true);
     }
 
-    void WidgetStack::DeactivateWidget() {
+void WidgetStack::DeactivateWidget() {
         m_Widgets.front()->SetVisibility(false);
     }
 } // AGE

@@ -36,7 +36,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**Event**](class_a_g_e_1_1_event.md) <br> |
+| class | [**Event**](class_a_g_e_1_1_event.md) <br>_Abstract base class for an event._  |
 | class | [**EventDispatcher**](class_a_g_e_1_1_event_dispatcher.md) <br> |
 
 

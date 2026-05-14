@@ -64,9 +64,9 @@
 
 | Type | Name |
 | ---: | :--- |
-|   | [**AsepriteLayer**](#function-asepritelayer-13) () = default<br> |
-|   | [**AsepriteLayer**](#function-asepritelayer-23) (int LIndex, int ZIndex) <br> |
-|   | [**AsepriteLayer**](#function-asepritelayer-33) (const [**AsepriteLayer**](struct_a_g_e_1_1_aseprite_layer.md) &) = default<br> |
+|   | [**AsepriteLayer**](#function-asepritelayer-13) () = default<br>_Default constructor for_ [_**AsepriteLayer**_](struct_a_g_e_1_1_aseprite_layer.md) _class._ |
+|   | [**AsepriteLayer**](#function-asepritelayer-23) (int LIndex, int ZIndex) <br>_Constructs an_ [_**AsepriteLayer**_](struct_a_g_e_1_1_aseprite_layer.md) _object with the given layer index and z-index._ |
+|   | [**AsepriteLayer**](#function-asepritelayer-33) (const [**AsepriteLayer**](struct_a_g_e_1_1_aseprite_layer.md) &) = default<br>_Copy constructor for the_ [_**AsepriteLayer**_](struct_a_g_e_1_1_aseprite_layer.md) _class._ |
 
 
 
@@ -221,12 +221,17 @@ int AGE::AsepriteLayer::zIndex;
 
 ### function AsepriteLayer [1/3]
 
+_Default constructor for_ [_**AsepriteLayer**_](struct_a_g_e_1_1_aseprite_layer.md) _class._
 ```C++
 AGE::AsepriteLayer::AsepriteLayer () = default
 ```
 
 
 
+This function initializes an instance of the [**AsepriteLayer**](struct_a_g_e_1_1_aseprite_layer.md) class with default values. It is used to create a new layer in [**Aseprite**](class_a_g_e_1_1_aseprite.md). 
+
+
+        
 
 <hr>
 
@@ -234,6 +239,7 @@ AGE::AsepriteLayer::AsepriteLayer () = default
 
 ### function AsepriteLayer [2/3]
 
+_Constructs an_ [_**AsepriteLayer**_](struct_a_g_e_1_1_aseprite_layer.md) _object with the given layer index and z-index._
 ```C++
 inline AGE::AsepriteLayer::AsepriteLayer (
     int LIndex,
@@ -244,12 +250,25 @@ inline AGE::AsepriteLayer::AsepriteLayer (
 
 
 
+
+**Parameters:**
+
+
+* `LIndex` The index of the layer in the [**Aseprite**](class_a_g_e_1_1_aseprite.md) document. 
+* `ZIndex` The z-index of the layer, used for layering within a document. 
+
+
+
+
+        
+
 <hr>
 
 
 
 ### function AsepriteLayer [3/3]
 
+_Copy constructor for the_ [_**AsepriteLayer**_](struct_a_g_e_1_1_aseprite_layer.md) _class._
 ```C++
 AGE::AsepriteLayer::AsepriteLayer (
     const AsepriteLayer &
@@ -258,6 +277,20 @@ AGE::AsepriteLayer::AsepriteLayer (
 
 
 
+This function creates a new instance of [**AsepriteLayer**](struct_a_g_e_1_1_aseprite_layer.md) that is a copy of an existing one. It uses the default implementation provided by the compiler, which should work correctly as long as the members of [**AsepriteLayer**](struct_a_g_e_1_1_aseprite_layer.md) are trivially copyable.
+
+
+
+
+**Parameters:**
+
+
+* `other` The existing layer to be copied. 
+
+
+
+
+        
 
 <hr>
 

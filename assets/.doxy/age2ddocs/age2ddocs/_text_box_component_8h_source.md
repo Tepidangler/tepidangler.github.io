@@ -37,16 +37,16 @@ namespace AGE
 
         void DrawFontSelectionComboBox() override;
         void DrawContent() override;
-        void CallSerialize(DataWriter* Serializer) override
+void CallSerialize(DataWriter* Serializer) override
         {
             Serializer->WriteObject<TextBoxComponent>(*this);
         }
-        void CallDeserialize(DataReader* Serializer) override
+void CallDeserialize(DataReader* Serializer) override
         {
             Serializer->ReadObject<TextBoxComponent>(*this);
         }
 
-        static void Serialize(DataWriter* Serializer, const TextBoxComponent& Instance)
+static void Serialize(DataWriter* Serializer, const TextBoxComponent& Instance)
         {
             Serializer->WriteString(Instance.m_Name);
             Serializer->WriteRaw<uint16_t>(Instance.m_Type);
@@ -65,7 +65,8 @@ namespace AGE
             Serializer->WriteRaw<float>(Instance.m_StringProperties.Rotation.z);
         }
 
-        static void Deserialize(DataReader* Serializer, TextBoxComponent& Instance)
+
+static void Deserialize(DataReader* Serializer, TextBoxComponent& Instance)
         {
             Serializer->ReadString(Instance.m_Name);
             uint16_t Type;

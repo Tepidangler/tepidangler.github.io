@@ -20,7 +20,7 @@ namespace AGE
     {
     public:
         
-        virtual ~GraphicsContext() {}
+virtual ~GraphicsContext() {}
         virtual void Init() = 0;
 
         virtual void SwapBuffers() = 0;

@@ -41,10 +41,10 @@ namespace AGE {
     class Instrumentor
     {
     public:
-        Instrumentor(const Instrumentor&) = delete;
-        Instrumentor(Instrumentor&&) = delete;
+Instrumentor(const Instrumentor&) = delete;
+Instrumentor(Instrumentor&&) = delete;
 
-        void BeginSession(const std::string& name, const std::string& filepath = "results.json")
+void BeginSession(const std::string& name, const std::string& filepath = "results.json")
         {
             std::lock_guard lock(m_Mutex);
             if (m_CurrentSession)
@@ -75,13 +75,13 @@ namespace AGE {
             }
         }
 
-        void EndSession()
+void EndSession()
         {
             std::lock_guard lock(m_Mutex);
             InternalEndSession();
         }
 
-        void WriteProfile(const ProfileResult& result)
+void WriteProfile(const ProfileResult& result)
         {
             std::stringstream json;
 
@@ -104,29 +104,29 @@ namespace AGE {
             }
         }
 
-        static Instrumentor& Get()
+static Instrumentor& Get()
         {
             static Instrumentor instance;
             return instance;
         }
     private:
-        Instrumentor()
+Instrumentor()
             : m_CurrentSession(nullptr)
         {
         }
 
-        ~Instrumentor()
+~Instrumentor()
         {
             EndSession();
         }
 
-        void WriteHeader()
+void WriteHeader()
         {
             m_OutputStream << "{\"otherData\": {},\"traceEvents\":[{}";
             m_OutputStream.flush();
         }
 
-        void WriteFooter()
+void WriteFooter()
         {
             m_OutputStream << "]}";
             m_OutputStream.flush();
@@ -134,7 +134,7 @@ namespace AGE {
 
         // Note: you must already own lock on m_Mutex before
         // calling InternalEndSession()
-        void InternalEndSession()
+void InternalEndSession()
         {
             if (m_CurrentSession)
             {
@@ -153,19 +153,19 @@ namespace AGE {
     class InstrumentationTimer
     {
     public:
-        InstrumentationTimer(const char* name)
+InstrumentationTimer(const char* name)
             : m_Name(name), m_Stopped(false)
         {
             m_StartTimepoint = std::chrono::steady_clock::now();
         }
 
-        ~InstrumentationTimer()
+~InstrumentationTimer()
         {
             if (!m_Stopped)
                 Stop();
         }
 
-        void Stop()
+void Stop()
         {
             auto endTimepoint = std::chrono::steady_clock::now();
             auto highResStart = FloatingPointMicroseconds{ m_StartTimepoint.time_since_epoch() };
@@ -190,7 +190,9 @@ namespace AGE {
         };
 
         template <size_t N, size_t K>
-        constexpr auto CleanupOutputString(const char(&expr)[N], const char(&remove)[K])
+        "This function cleans up an input string by removing a specified substring."
+constexpr 
+auto CleanupOutputString(const char(&expr)[N], const char(&remove)[K])
         {
             ChangeResult<N> result = {};
 

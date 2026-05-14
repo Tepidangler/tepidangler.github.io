@@ -111,7 +111,7 @@
 <tbody>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-bind"><strong>Bind</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-bind"><strong>Bind</strong></a> () <br><em>Binds a new scriptable entity type to the</em> <a href="./"><em><strong>NativeScriptComponent</strong></em></a> <em>system.</em></td>
 </tr>
 </tbody>
 </table>
@@ -126,11 +126,11 @@
 <tbody>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-deserialize"><strong>Deserialize</strong></a> (<a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> * Serializer, <a href="./"><strong>NativeScriptComponent</strong></a> &amp; Data) <br></td>
+<td style="text-align: left;"><a href="#function-deserialize"><strong>Deserialize</strong></a> (<a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> * Serializer, <a href="./"><strong>NativeScriptComponent</strong></a> &amp; Data) <br><em>This function deserializes data from a serialized format into the native script component.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-serialize"><strong>Serialize</strong></a> (<a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> * Serializer, const <a href="./"><strong>NativeScriptComponent</strong></a> &amp; Data) <br></td>
+<td style="text-align: left;"><a href="#function-serialize"><strong>Serialize</strong></a> (<a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> * Serializer, const <a href="./"><strong>NativeScriptComponent</strong></a> &amp; Data) <br><em>This function serializes the given</em> <a href="./"><em><strong>NativeScriptComponent</strong></em></a> <em>into a</em><a href="../class_a_g_e_1_1_data_writer/"><em><strong>DataWriter</strong></em></a> <em>object.</em></td>
 </tr>
 </tbody>
 </table>
@@ -151,25 +151,43 @@
 <hr>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-bind">function Bind</h3>
+<p><em>Binds a new scriptable entity type to the</em> <a href="./"><em><strong>NativeScriptComponent</strong></em></a> <em>system.</em></p>
 <pre><code class="language-C++">template&lt;typename T&gt;
 inline void AGE::NativeScriptComponent::Bind () 
 </code></pre>
+<p>This function sets up the necessary functions for creating and destroying instances of a specific scriptable entity type (T). The InstantiateScript lambda creates an instance of T, while DestroyScript deletes it. These lambdas are set based on the compiler used to compile the code. If the compiler is not recognized or supported by AGE yet, an error message will be shown.</p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
 <h3 id="function-deserialize">function Deserialize</h3>
+<p><em>This function deserializes data from a serialized format into the native script component.</em> </p>
 <pre><code class="language-C++">static inline void AGE::NativeScriptComponent::Deserialize (
     DataReader * Serializer,
     NativeScriptComponent &amp; Data
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Serializer</code> A pointer to an instance of <code>DataReader</code> that provides the serialized data. </li>
+<li><code>Data</code> The reference to the <code>NativeScriptComponent</code> where the deserialized data will be stored.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-serialize">function Serialize</h3>
+<p><em>This function serializes the given</em> <a href="./"><em><strong>NativeScriptComponent</strong></em></a> <em>into a</em><a href="../class_a_g_e_1_1_data_writer/"><em><strong>DataWriter</strong></em></a> <em>object.</em></p>
 <pre><code class="language-C++">static inline void AGE::NativeScriptComponent::Serialize (
     DataWriter * Serializer,
     const NativeScriptComponent &amp; Data
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Serializer</code> The <a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> object to write data to. </li>
+<li><code>Data</code> The <a href="./"><strong>NativeScriptComponent</strong></a> object to be serialized. </li>
+</ul>
 <hr>
 
 <hr />

@@ -134,6 +134,34 @@
 <td style="text-align: right;">Ref&lt; <a href="../class_a_g_e_1_1_texture2_d/"><strong>Texture2D</strong></a> &gt;</td>
 <td style="text-align: left;"><a href="#variable-texture"><strong>Texture</strong></a>  <br></td>
 </tr>
+<tr>
+<td style="text-align: right;">float</td>
+<td style="text-align: left;"><a href="#variable-tileheight"><strong>TileHeight</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">int</td>
+<td style="text-align: left;"><a href="#variable-tileid"><strong>TileID</strong></a>   = <code>-1</code><br></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a></td>
+<td style="text-align: left;"><a href="#variable-tilelocation"><strong>TileLocation</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">float</td>
+<td style="text-align: left;"><a href="#variable-tilewidth"><strong>TileWidth</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">int</td>
+<td style="text-align: left;"><a href="#variable-tileslayer"><strong>TilesLayer</strong></a>   = <code>-1</code><br></td>
+</tr>
+<tr>
+<td style="text-align: right;">COMMENT</td>
+<td style="text-align: left;"><a href="#variable-__pad0__"><strong>__pad0__</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">bool</td>
+<td style="text-align: left;"><a href="#variable-btile"><strong>bTile</strong></a>   = <code>false</code><br></td>
+</tr>
 </tbody>
 </table>
 <h2 id="public-functions">Public Functions</h2>
@@ -147,15 +175,15 @@
 <tbody>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="#function-animisready"><strong>AnimIsReady</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-animisready"><strong>AnimIsReady</strong></a> () <br><em>This function checks if any animation is ready to load.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-spriterenderercomponent-13"><strong>SpriteRendererComponent</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-spriterenderercomponent-13"><strong>SpriteRendererComponent</strong></a> () = default<br><em>Default constructor for the</em> <a href="./"><em><strong>SpriteRendererComponent</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-spriterenderercomponent-23"><strong>SpriteRendererComponent</strong></a> (const <a href="./"><strong>SpriteRendererComponent</strong></a> &amp;) = default<br></td>
+<td style="text-align: left;"><a href="#function-spriterenderercomponent-23"><strong>SpriteRendererComponent</strong></a> (const <a href="./"><strong>SpriteRendererComponent</strong></a> &amp;) = default<br><em>Default copy constructor for the</em> <a href="./"><em><strong>SpriteRendererComponent</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
@@ -174,11 +202,11 @@
 <tbody>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-deserialize"><strong>Deserialize</strong></a> (<a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> * Serializer, <a href="./"><strong>SpriteRendererComponent</strong></a> &amp; Data) <br></td>
+<td style="text-align: left;"><a href="#function-deserialize"><strong>Deserialize</strong></a> (<a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> * Serializer, <a href="./"><strong>SpriteRendererComponent</strong></a> &amp; Data) <br><em>This function deserializes a</em> <a href="./"><em><strong>SpriteRendererComponent</strong></em></a> <em>from the provided</em><a href="../class_a_g_e_1_1_data_reader/"><em><strong>DataReader</strong></em></a> <em>.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-serialize"><strong>Serialize</strong></a> (<a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> * Serializer, const <a href="./"><strong>SpriteRendererComponent</strong></a> &amp; Data) <br></td>
+<td style="text-align: left;"><a href="#function-serialize"><strong>Serialize</strong></a> (<a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> * Serializer, const <a href="./"><strong>SpriteRendererComponent</strong></a> &amp; Data) <br><em>This function serializes the sprite renderer component data into a</em> <a href="../class_a_g_e_1_1_data_writer/"><em><strong>DataWriter</strong></em></a> <em>object.</em></td>
 </tr>
 </tbody>
 </table>
@@ -242,22 +270,68 @@
 <pre><code class="language-C++">Ref&lt;Texture2D&gt; AGE::SpriteRendererComponent::Texture;
 </code></pre>
 <hr>
-<h2 id="public-functions-documentation">Public Functions Documentation</h2>
-<h3 id="function-animisready">function AnimIsReady</h3>
-<pre><code class="language-C++">inline bool AGE::SpriteRendererComponent::AnimIsReady () 
+
+<h3 id="variable-tileheight">variable TileHeight</h3>
+<pre><code class="language-C++">float AGE::SpriteRendererComponent::TileHeight;
 </code></pre>
 <hr>
 
+<h3 id="variable-tileid">variable TileID</h3>
+<pre><code class="language-C++">int AGE::SpriteRendererComponent::TileID;
+</code></pre>
+<hr>
+
+<h3 id="variable-tilelocation">variable TileLocation</h3>
+<pre><code class="language-C++">Vector2 AGE::SpriteRendererComponent::TileLocation;
+</code></pre>
+<hr>
+
+<h3 id="variable-tilewidth">variable TileWidth</h3>
+<pre><code class="language-C++">float AGE::SpriteRendererComponent::TileWidth;
+</code></pre>
+<hr>
+
+<h3 id="variable-tileslayer">variable TilesLayer</h3>
+<pre><code class="language-C++">int AGE::SpriteRendererComponent::TilesLayer;
+</code></pre>
+<hr>
+
+<h3 id="variable-__pad0__">variable __pad0__</h3>
+<pre><code class="language-C++">COMMENT AGE::SpriteRendererComponent::__pad0__;
+</code></pre>
+<hr>
+
+<h3 id="variable-btile">variable bTile</h3>
+<pre><code class="language-C++">bool AGE::SpriteRendererComponent::bTile;
+</code></pre>
+<hr>
+<h2 id="public-functions-documentation">Public Functions Documentation</h2>
+<h3 id="function-animisready">function AnimIsReady</h3>
+<p><em>This function checks if any animation is ready to load.</em> </p>
+<pre><code class="language-C++">inline bool AGE::SpriteRendererComponent::AnimIsReady () 
+</code></pre>
+<p>It iterates over the AnimTextures vector and returns true as soon as it finds an animation that matches the current MovementStatus and is ready to load (i.e., IsReadyToLoad() returns true). If no such animation is found, it returns false.</p>
+<p><strong>Returns:</strong></p>
+<p>bool - Returns true if any animation is ready to load, false otherwise. </p>
+<hr>
+
 <h3 id="function-spriterenderercomponent-13">function SpriteRendererComponent [1/3]</h3>
+<p><em>Default constructor for the</em> <a href="./"><em><strong>SpriteRendererComponent</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::SpriteRendererComponent::SpriteRendererComponent () = default
 </code></pre>
 <hr>
 
 <h3 id="function-spriterenderercomponent-23">function SpriteRendererComponent [2/3]</h3>
+<p><em>Default copy constructor for the</em> <a href="./"><em><strong>SpriteRendererComponent</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::SpriteRendererComponent::SpriteRendererComponent (
     const SpriteRendererComponent &amp;
 ) = default
 </code></pre>
+<p>This function is used to create a new instance of the <a href="./"><strong>SpriteRendererComponent</strong></a> class by copying an existing one. It uses the '= default' syntax, which instructs the compiler to generate a default implementation for this member function.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>other</code> The existing <a href="./"><strong>SpriteRendererComponent</strong></a> instance to copy. </li>
+</ul>
 <hr>
 
 <h3 id="function-spriterenderercomponent-33">function SpriteRendererComponent [3/3]</h3>
@@ -268,19 +342,34 @@
 <hr>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
 <h3 id="function-deserialize">function Deserialize</h3>
+<p><em>This function deserializes a</em> <a href="./"><em><strong>SpriteRendererComponent</strong></em></a> <em>from the provided</em><a href="../class_a_g_e_1_1_data_reader/"><em><strong>DataReader</strong></em></a> <em>.</em></p>
 <pre><code class="language-C++">static inline void AGE::SpriteRendererComponent::Deserialize (
     DataReader * Serializer,
     SpriteRendererComponent &amp; Data
 ) 
 </code></pre>
+<p>The function reads data from the serialized format and populates the <a href="./"><strong>SpriteRendererComponent</strong></a> with it. It does not return anything as it directly modifies the passed in <a href="./"><strong>SpriteRendererComponent</strong></a> reference.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Serializer</code> A pointer to a <a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> instance that provides the serialized data. </li>
+<li><code>Data</code> Reference to the <a href="./"><strong>SpriteRendererComponent</strong></a> which will be populated by this function. </li>
+</ul>
 <hr>
 
 <h3 id="function-serialize">function Serialize</h3>
+<p><em>This function serializes the sprite renderer component data into a</em> <a href="../class_a_g_e_1_1_data_writer/"><em><strong>DataWriter</strong></em></a> <em>object.</em></p>
 <pre><code class="language-C++">static inline void AGE::SpriteRendererComponent::Serialize (
     DataWriter * Serializer,
     const SpriteRendererComponent &amp; Data
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Serializer</code> Pointer to the <a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> object where the data will be written. </li>
+<li><code>Data</code> The <a href="./"><strong>SpriteRendererComponent</strong></a> whose data is being serialized.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>None </p>
 <hr>
 
 <hr />

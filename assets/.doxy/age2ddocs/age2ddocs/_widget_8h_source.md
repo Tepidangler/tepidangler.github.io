@@ -23,12 +23,12 @@ namespace AGE
 
     struct Widget
     {
-        static void Serialize(DataWriter* Serializer, const Widget& Data)
+static void Serialize(DataWriter* Serializer, const Widget& Data)
         {
 
         }
 
-        static void Deserialize(DataReader* Serializer, Widget& Data)
+static void Deserialize(DataReader* Serializer, Widget& Data)
         {
 
         }
@@ -38,7 +38,7 @@ namespace AGE
         void (*DestroyScript)(Widget*);
 
         template<typename T>
-        void Bind()
+void Bind()
         {
             InstantiateScript = []() {return static_cast<ScriptableWidget*>(new T()); };
             DestroyScript = [](Widget* WC) {delete WC->Instance; WC->Instance = nullptr; };

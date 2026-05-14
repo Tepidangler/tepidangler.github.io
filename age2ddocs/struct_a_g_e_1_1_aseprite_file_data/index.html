@@ -107,15 +107,15 @@
 <tbody>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-asepritefiledata-13"><strong>AsepriteFileData</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-asepritefiledata-13"><strong>AsepriteFileData</strong></a> () = default<br><em>Default constructor for</em> <a href="./"><em><strong>AsepriteFileData</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-asepritefiledata-23"><strong>AsepriteFileData</strong></a> (const <a href="../struct_a_g_e_1_1_aseprite_header/"><strong>AsepriteHeader</strong></a> &amp; HeaderData) <br></td>
+<td style="text-align: left;"><a href="#function-asepritefiledata-23"><strong>AsepriteFileData</strong></a> (const <a href="../struct_a_g_e_1_1_aseprite_header/"><strong>AsepriteHeader</strong></a> &amp; HeaderData) <br><em>Constructs an instance of the</em> <a href="./"><em><strong>AsepriteFileData</strong></em></a> <em>class using a const reference to an</em><a href="../struct_a_g_e_1_1_aseprite_header/"><em><strong>AsepriteHeader</strong></em></a> <em>object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-asepritefiledata-33"><strong>AsepriteFileData</strong></a> (const <a href="./"><strong>AsepriteFileData</strong></a> &amp;) = default<br></td>
+<td style="text-align: left;"><a href="#function-asepritefiledata-33"><strong>AsepriteFileData</strong></a> (const <a href="./"><strong>AsepriteFileData</strong></a> &amp;) = default<br><em>Default copy constructor for the</em> <a href="./"><em><strong>AsepriteFileData</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
@@ -131,22 +131,37 @@
 <hr>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-asepritefiledata-13">function AsepriteFileData [1/3]</h3>
+<p><em>Default constructor for</em> <a href="./"><em><strong>AsepriteFileData</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::AsepriteFileData::AsepriteFileData () = default
 </code></pre>
+<p>This function initializes an instance of the <a href="./"><strong>AsepriteFileData</strong></a> class with default values. It is used to create a new object without any specific initialization.</p>
+<p><strong>Returns:</strong></p>
+<p>An instance of <a href="./"><strong>AsepriteFileData</strong></a> with all fields initialized to their default values. </p>
 <hr>
 
 <h3 id="function-asepritefiledata-23">function AsepriteFileData [2/3]</h3>
+<p><em>Constructs an instance of the</em> <a href="./"><em><strong>AsepriteFileData</strong></em></a> <em>class using a const reference to an</em><a href="../struct_a_g_e_1_1_aseprite_header/"><em><strong>AsepriteHeader</strong></em></a> <em>object.</em></p>
 <pre><code class="language-C++">inline AGE::AsepriteFileData::AsepriteFileData (
     const AsepriteHeader &amp; HeaderData
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>HeaderData</code> A const reference to an <a href="../struct_a_g_e_1_1_aseprite_header/"><strong>AsepriteHeader</strong></a> object containing header data for the <a href="../class_a_g_e_1_1_aseprite/"><strong>Aseprite</strong></a> file. </li>
+</ul>
 <hr>
 
 <h3 id="function-asepritefiledata-33">function AsepriteFileData [3/3]</h3>
+<p><em>Default copy constructor for the</em> <a href="./"><em><strong>AsepriteFileData</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::AsepriteFileData::AsepriteFileData (
     const AsepriteFileData &amp;
 ) = default
 </code></pre>
+<p>This function is used to create a new instance of <a href="./"><strong>AsepriteFileData</strong></a> by copying an existing one. It uses the '= default' syntax, which tells the compiler to generate the body of this function using the default behavior provided by the compiler.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>other</code> The existing <a href="./"><strong>AsepriteFileData</strong></a> instance to copy. </li>
+</ul>
 <hr>
 
 <hr />

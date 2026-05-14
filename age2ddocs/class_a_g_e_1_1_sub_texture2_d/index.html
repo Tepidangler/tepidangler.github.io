@@ -77,6 +77,21 @@
               
                 <h1 id="class-agesubtexture2d">Class AGE::SubTexture2D</h1>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespace_a_g_e/"><strong>AGE</strong></a> <strong>&gt;</strong> <a href="./"><strong>SubTexture2D</strong></a></p>
+<h2 id="public-attributes">Public Attributes</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">COMMENT</td>
+<td style="text-align: left;"><a href="#variable-__pad0__"><strong>__pad0__</strong></a>  <br></td>
+</tr>
+</tbody>
+</table>
 <h2 id="public-functions">Public Functions</h2>
 <table>
 <thead>
@@ -88,27 +103,27 @@
 <tbody>
 <tr>
 <td style="text-align: right;">const float</td>
-<td style="text-align: left;"><a href="#function-getheight"><strong>GetHeight</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-getheight"><strong>GetHeight</strong></a> () const<br><em>Returns the height of an object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">const <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> *</td>
-<td style="text-align: left;"><a href="#function-gettexcoords"><strong>GetTexCoords</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-gettexcoords"><strong>GetTexCoords</strong></a> () const<br><em>Returns the texture coordinates of an object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">const Ref&lt; <a href="../class_a_g_e_1_1_texture2_d/"><strong>Texture2D</strong></a> &gt;</td>
-<td style="text-align: left;"><a href="#function-gettexture"><strong>GetTexture</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-gettexture"><strong>GetTexture</strong></a> () const<br><em>Returns the texture object associated with this instance.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">const float</td>
-<td style="text-align: left;"><a href="#function-getwidth"><strong>GetWidth</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-getwidth"><strong>GetWidth</strong></a> () const<br><em>Returns the width of an object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-subtexture2d-12"><strong>SubTexture2D</strong></a> (const Ref&lt; <a href="../class_a_g_e_1_1_texture2_d/"><strong>Texture2D</strong></a> &gt; &amp; Texture, const <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> &amp; Min, const <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> &amp; Max) <br></td>
+<td style="text-align: left;"><a href="#function-subtexture2d-12"><strong>SubTexture2D</strong></a> (const Ref&lt; <a href="../class_a_g_e_1_1_texture2_d/"><strong>Texture2D</strong></a> &gt; &amp; Texture, const <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> &amp; Min, const <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> &amp; Max) <br><em>Constructs a</em> <a href="./"><em><strong>SubTexture2D</strong></em></a> <em>object from a reference to a</em><a href="../class_a_g_e_1_1_texture2_d/"><em><strong>Texture2D</strong></em></a> <em>, and two</em><a href="../struct_a_g_e_1_1_vector2/"><em><strong>Vector2</strong></em></a> <em>objects representing the minimum and maximum texture coordinates.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-subtexture2d-22"><strong>SubTexture2D</strong></a> (void * Data) <br></td>
+<td style="text-align: left;"><a href="#function-subtexture2d-22"><strong>SubTexture2D</strong></a> (void * Data) <br><em>Constructor for</em> <a href="./"><em><strong>SubTexture2D</strong></em></a> <em>class. It takes a void pointer to data and initializes the texture, texcoords, width and height based on the data provided.</em></td>
 </tr>
 </tbody>
 </table>
@@ -123,48 +138,105 @@
 <tbody>
 <tr>
 <td style="text-align: right;">Ref&lt; <a href="./"><strong>SubTexture2D</strong></a> &gt;</td>
-<td style="text-align: left;"><a href="#function-createfromcoords"><strong>CreateFromCoords</strong></a> (const Ref&lt; <a href="../class_a_g_e_1_1_texture2_d/"><strong>Texture2D</strong></a> &gt; &amp; Texture, const <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> &amp; SpriteLoc, const <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> &amp; CellSize, const <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> &amp; SpriteSize=<a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a>{1.f, 1.f}) <br></td>
+<td style="text-align: left;"><a href="#function-createfromcoords"><strong>CreateFromCoords</strong></a> (const Ref&lt; <a href="../class_a_g_e_1_1_texture2_d/"><strong>Texture2D</strong></a> &gt; &amp; Texture, const <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> &amp; SpriteLoc, const <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> &amp; CellSize, const <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> &amp; SpriteSize=<a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a>{1.f, 1.f}) <br><em>Creates a subtexture from given texture at specified coordinates.</em></td>
 </tr>
 </tbody>
 </table>
+<h2 id="public-attributes-documentation">Public Attributes Documentation</h2>
+<h3 id="variable-__pad0__">variable __pad0__</h3>
+<pre><code class="language-C++">COMMENT AGE::SubTexture2D::__pad0__;
+</code></pre>
+<hr>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-getheight">function GetHeight</h3>
+<p><em>Returns the height of an object.</em> </p>
 <pre><code class="language-C++">inline const float AGE::SubTexture2D::GetHeight () const
 </code></pre>
+<p>This function is used to get the current height value of an object. It does not take any parameters and returns a floating-point number representing the height.</p>
+<p><strong>Returns:</strong></p>
+<p>A float representing the height of the object. If no height has been set, it will return 0.0.</p>
+<p>Returns the height of an object.</p>
+<p><strong>Returns:</strong></p>
+<p>A constant float representing the height of the object. </p>
 <hr>
 
 <h3 id="function-gettexcoords">function GetTexCoords</h3>
+<p><em>Returns the texture coordinates of an object.</em> </p>
 <pre><code class="language-C++">inline const Vector2 * AGE::SubTexture2D::GetTexCoords () const
 </code></pre>
+<p>This function returns a pointer to the constant <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> object that represents the texture coordinates of an object. These are typically used for rendering textures on polygons in computer graphics.</p>
+<p><strong>Returns:</strong></p>
+<p>A pointer to a constant <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> object representing the texture coordinates. </p>
 <hr>
 
 <h3 id="function-gettexture">function GetTexture</h3>
+<p><em>Returns the texture object associated with this instance.</em> </p>
 <pre><code class="language-C++">inline const Ref&lt; Texture2D &gt; AGE::SubTexture2D::GetTexture () const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A constant reference to the <a href="../class_a_g_e_1_1_texture2_d/"><strong>Texture2D</strong></a> object.</p>
+<p>Returns the texture object associated with this instance. </p>
+<p><strong>Returns:</strong></p>
+<p>A constant reference to the <a href="../class_a_g_e_1_1_texture2_d/"><strong>Texture2D</strong></a> object. </p>
 <hr>
 
 <h3 id="function-getwidth">function GetWidth</h3>
+<p><em>Returns the width of an object.</em> </p>
 <pre><code class="language-C++">inline const float AGE::SubTexture2D::GetWidth () const
 </code></pre>
+<p>This function returns the current value of the member variable 'm_Width'. It is a getter method for this variable.</p>
+<p><strong>Returns:</strong></p>
+<p>A float representing the width of the object. If no width has been set, it will return 0.0.</p>
+<p>Returns the width of an object.</p>
+<p>This function returns the current value of the member variable 'm_Width'. It is a getter for this variable and does not take any parameters.</p>
+<p><strong>Returns:</strong></p>
+<p>float The current width of the object. </p>
 <hr>
 
 <h3 id="function-subtexture2d-12">function SubTexture2D [1/2]</h3>
+<p><em>Constructs a</em> <a href="./"><em><strong>SubTexture2D</strong></em></a> <em>object from a reference to a</em><a href="../class_a_g_e_1_1_texture2_d/"><em><strong>Texture2D</strong></em></a> <em>, and two</em><a href="../struct_a_g_e_1_1_vector2/"><em><strong>Vector2</strong></em></a> <em>objects representing the minimum and maximum texture coordinates.</em></p>
 <pre><code class="language-C++">AGE::SubTexture2D::SubTexture2D (
     const Ref&lt; Texture2D &gt; &amp; Texture,
     const Vector2 &amp; Min,
     const Vector2 &amp; Max
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><a href="../class_a_g_e_1_1_texture/"><strong>Texture</strong></a> A const reference to a <a href="../class_a_g_e_1_1_texture2_d/"><strong>Texture2D</strong></a> object. This is the texture that the subtexture will be created for. </li>
+<li><code>Min</code> A const reference to a <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> object. This represents the bottom-left corner of the subtexture within the parent texture. </li>
+<li><code>Max</code> A const reference to a <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> object. This represents the top-right corner of the subtexture within the parent texture.</li>
+</ul>
+<p>Constructs a <a href="./"><strong>SubTexture2D</strong></a> object from a reference to a <a href="../class_a_g_e_1_1_texture2_d/"><strong>Texture2D</strong></a>, and two <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> coordinates.</p>
+<p>The constructor initializes the texture member variable with the provided <a href="../class_a_g_e_1_1_texture2_d/"><strong>Texture2D</strong></a> reference. It also calculates the texture coordinates for the sub-texture based on the Min and Max vectors. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><a href="../class_a_g_e_1_1_texture/"><strong>Texture</strong></a> A const reference to a <a href="../class_a_g_e_1_1_texture2_d/"><strong>Texture2D</strong></a> object. </li>
+<li><code>Min</code> A <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> representing the minimum x, y coordinates of the sub-texture in the texture atlas. </li>
+<li><code>Max</code> A <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> representing the maximum x, y coordinates of the sub-texture in the texture atlas. </li>
+</ul>
 <hr>
 
 <h3 id="function-subtexture2d-22">function SubTexture2D [2/2]</h3>
+<p><em>Constructor for</em> <a href="./"><em><strong>SubTexture2D</strong></em></a> <em>class. It takes a void pointer to data and initializes the texture, texcoords, width and height based on the data provided.</em></p>
 <pre><code class="language-C++">AGE::SubTexture2D::SubTexture2D (
     void * Data
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Data</code> A void pointer to the data from which the initialization will be done. The exact type of this data is unknown.</li>
+</ul>
+<p>Constructs a <a href="./"><strong>SubTexture2D</strong></a> object from another one.</p>
+<p>This constructor creates a new <a href="./"><strong>SubTexture2D</strong></a> object by copying the data of an existing one. It sets the texture, texcoords, width and height based on the values in the provided <a href="./"><strong>SubTexture2D</strong></a> object. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Data</code> A pointer to the <a href="./"><strong>SubTexture2D</strong></a> object to copy from. </li>
+</ul>
 <hr>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
 <h3 id="function-createfromcoords">function CreateFromCoords</h3>
+<p><em>Creates a subtexture from given texture at specified coordinates.</em> </p>
 <pre><code class="language-C++">static Ref&lt; SubTexture2D &gt; AGE::SubTexture2D::CreateFromCoords (
     const Ref&lt; Texture2D &gt; &amp; Texture,
     const Vector2 &amp; SpriteLoc,
@@ -172,6 +244,18 @@
     const Vector2 &amp; SpriteSize=Vector2 {1.f, 1.f}
 ) 
 </code></pre>
+<p>This function takes in <a href="../class_a_g_e_1_1_texture2_d/"><strong>Texture2D</strong></a>, <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> (SpriteLoc, CellSize, SpriteSize) to calculate the min and max UVs for <a href="./"><strong>SubTexture2D</strong></a>.</p>
+<p>Creates a subtexture from given parameters.</p>
+<p>This function takes in parameters that define a rectangular area within a larger texture and calculates the UV coordinates for this area. It then returns a new <a href="./"><strong>SubTexture2D</strong></a> object with these calculated coordinates.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><a href="../class_a_g_e_1_1_texture/"><strong>Texture</strong></a> The main texture to create the subtexture from. </li>
+<li><code>SpriteLoc</code> The location of the sprite in the texture (in cells). </li>
+<li><code>CellSize</code> The size of each cell in the texture (in pixels). </li>
+<li><code>SpriteSize</code> The size of the sprite within a single cell (in cells).</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A reference to a new <a href="./"><strong>SubTexture2D</strong></a> object. </p>
 <hr>
 
 <hr />

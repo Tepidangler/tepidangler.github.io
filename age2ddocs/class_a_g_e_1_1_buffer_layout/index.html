@@ -77,6 +77,25 @@
               
                 <h1 id="class-agebufferlayout">Class AGE::BufferLayout</h1>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespace_a_g_e/"><strong>AGE</strong></a> <strong>&gt;</strong> <a href="./"><strong>BufferLayout</strong></a></p>
+<h2 id="public-attributes">Public Attributes</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">COMMENT</td>
+<td style="text-align: left;"><a href="#variable-__pad0__"><strong>__pad0__</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">COMMENT</td>
+<td style="text-align: left;"><a href="#variable-__pad1__"><strong>__pad1__</strong></a>  <br></td>
+</tr>
+</tbody>
+</table>
 <h2 id="public-functions">Public Functions</h2>
 <table>
 <thead>
@@ -88,19 +107,19 @@
 <tbody>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-bufferlayout-12"><strong>BufferLayout</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-bufferlayout-12"><strong>BufferLayout</strong></a> () <br><a href="./"><em><strong>BufferLayout</strong></em></a> <em>is a class that represents the layout of a buffer in memory. It provides methods for adding elements to the buffer and retrieving them by index. The buffer can hold any type of data, but it's typically used with primitive types like int, float, etc.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-bufferlayout-22"><strong>BufferLayout</strong></a> (const std::initializer_list&lt; <a href="../struct_a_g_e_1_1_buffer_element/"><strong>BufferElement</strong></a> &gt; &amp; Elements) <br></td>
+<td style="text-align: left;"><a href="#function-bufferlayout-22"><strong>BufferLayout</strong></a> (const std::initializer_list&lt; <a href="../struct_a_g_e_1_1_buffer_element/"><strong>BufferElement</strong></a> &gt; &amp; Elements) <br><em>Constructor for the</em> <a href="./"><em><strong>BufferLayout</strong></em></a> <em>class. Initializes the buffer layout with a list of elements.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">const std::vector&lt; <a href="../struct_a_g_e_1_1_buffer_element/"><strong>BufferElement</strong></a> &gt; &amp;</td>
-<td style="text-align: left;"><a href="#function-getelements"><strong>GetElements</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-getelements"><strong>GetElements</strong></a> () const<br><em>Returns a constant reference to the vector of BufferElements stored in this object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">uint32_t</td>
-<td style="text-align: left;"><a href="#function-getstride"><strong>GetStride</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-getstride"><strong>GetStride</strong></a> () const<br><em>Returns the stride value of the object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">std::vector&lt; <a href="../struct_a_g_e_1_1_buffer_element/"><strong>BufferElement</strong></a> &gt;::iterator</td>
@@ -112,35 +131,59 @@
 </tr>
 <tr>
 <td style="text-align: right;">std::vector&lt; <a href="../struct_a_g_e_1_1_buffer_element/"><strong>BufferElement</strong></a> &gt;::iterator</td>
-<td style="text-align: left;"><a href="#function-end-12"><strong>end</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-end-12"><strong>end</strong></a> () <br><em>Returns an iterator pointing to the theoretical element past the last element of the vector.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">std::vector&lt; <a href="../struct_a_g_e_1_1_buffer_element/"><strong>BufferElement</strong></a> &gt;::const_iterator</td>
-<td style="text-align: left;"><a href="#function-end-22"><strong>end</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-end-22"><strong>end</strong></a> () const<br><em>Returns a constant iterator pointing to the past-the-end element in the buffer elements vector.</em></td>
 </tr>
 </tbody>
 </table>
-<h2 id="public-functions-documentation">Public Functions Documentation</h2>
-<h3 id="function-bufferlayout-12">function BufferLayout [1/2]</h3>
-<pre><code class="language-C++">AGE::BufferLayout::BufferLayout () 
+<h2 id="public-attributes-documentation">Public Attributes Documentation</h2>
+<h3 id="variable-__pad0__">variable __pad0__</h3>
+<pre><code class="language-C++">COMMENT AGE::BufferLayout::__pad0__;
 </code></pre>
 <hr>
 
+<h3 id="variable-__pad1__">variable __pad1__</h3>
+<pre><code class="language-C++">COMMENT AGE::BufferLayout::__pad1__;
+</code></pre>
+<hr>
+<h2 id="public-functions-documentation">Public Functions Documentation</h2>
+<h3 id="function-bufferlayout-12">function BufferLayout [1/2]</h3>
+<p><a href="./"><em><strong>BufferLayout</strong></em></a> <em>is a class that represents the layout of a buffer in memory. It provides methods for adding elements to the buffer and retrieving them by index. The buffer can hold any type of data, but it's typically used with primitive types like int, float, etc.</em></p>
+<pre><code class="language-C++">AGE::BufferLayout::BufferLayout () 
+</code></pre>
+<p><a href="./"><strong>BufferLayout</strong></a> is a class that represents the layout of a buffer in memory.</p>
+<p>This class provides methods for managing and manipulating the layout of a buffer in memory. It does not handle the actual data within the buffer, only its structure. </p>
+<hr>
+
 <h3 id="function-bufferlayout-22">function BufferLayout [2/2]</h3>
+<p><em>Constructor for the</em> <a href="./"><em><strong>BufferLayout</strong></em></a> <em>class. Initializes the buffer layout with a list of elements.</em></p>
 <pre><code class="language-C++">inline AGE::BufferLayout::BufferLayout (
     const std::initializer_list&lt; BufferElement &gt; &amp; Elements
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Elements</code> A std::initializer_list&lt;BufferElement&gt; containing the elements to be added to the layout. </li>
+</ul>
 <hr>
 
 <h3 id="function-getelements">function GetElements</h3>
+<p><em>Returns a constant reference to the vector of BufferElements stored in this object.</em> </p>
 <pre><code class="language-C++">inline const std::vector&lt; BufferElement &gt; &amp; AGE::BufferLayout::GetElements () const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A constant reference to the vector of BufferElements (m_Elements). </p>
 <hr>
 
 <h3 id="function-getstride">function GetStride</h3>
+<p><em>Returns the stride value of the object.</em> </p>
 <pre><code class="language-C++">inline uint32_t AGE::BufferLayout::GetStride () const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>The stride value as a uint32_t. </p>
 <hr>
 
 <h3 id="function-begin-12">function begin [1/2]</h3>
@@ -154,13 +197,19 @@
 <hr>
 
 <h3 id="function-end-12">function end [1/2]</h3>
+<p><em>Returns an iterator pointing to the theoretical element past the last element of the vector.</em> </p>
 <pre><code class="language-C++">inline std::vector&lt; BufferElement &gt;::iterator AGE::BufferLayout::end () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>An iterator to the theoretical element past the end of the vector. </p>
 <hr>
 
 <h3 id="function-end-22">function end [2/2]</h3>
+<p><em>Returns a constant iterator pointing to the past-the-end element in the buffer elements vector.</em> </p>
 <pre><code class="language-C++">inline std::vector&lt; BufferElement &gt;::const_iterator AGE::BufferLayout::end () const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A constant iterator pointing to the past-the-end element. </p>
 <hr>
 
 <hr />

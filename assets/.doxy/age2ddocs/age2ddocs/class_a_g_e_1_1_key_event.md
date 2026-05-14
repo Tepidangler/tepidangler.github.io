@@ -8,8 +8,9 @@
 
 
 
+_Represents a keyboard event._ [More...](#detailed-description)
 
-
+* `#include <KeyEvent.h>`
 
 
 
@@ -92,8 +93,8 @@ See [AGE::Event](class_a_g_e_1_1_event.md)
 | virtual int | [**GetCategoryFlags**](class_a_g_e_1_1_event.md#function-getcategoryflags) () const = 0<br> |
 | virtual EventType | [**GetEventType**](class_a_g_e_1_1_event.md#function-geteventtype) () const = 0<br> |
 | virtual const char \* | [**GetName**](class_a_g_e_1_1_event.md#function-getname) () const = 0<br> |
-|  bool | [**IsInCategory**](class_a_g_e_1_1_event.md#function-isincategory) (EventCategory Category) <br> |
-| virtual std::string | [**ToString**](class_a_g_e_1_1_event.md#function-tostring) () const<br> |
+|  bool | [**IsInCategory**](class_a_g_e_1_1_event.md#function-isincategory) (EventCategory Category) <br>_Checks if an event is in a specific category._  |
+| virtual std::string | [**ToString**](class_a_g_e_1_1_event.md#function-tostring) () const<br>_Returns a string representation of the object._  |
 
 
 
@@ -158,6 +159,19 @@ See [AGE::Event](class_a_g_e_1_1_event.md)
 
 
 
+## Detailed Description
+
+
+This class is used to represent a keyboard event, which includes the key code associated with the event.
+
+
+Represents a keyboard event.
+
+
+This class is used to represent a keyboard event, which includes the key code of the pressed key. 
+
+
+    
 ## Public Functions Documentation
 
 

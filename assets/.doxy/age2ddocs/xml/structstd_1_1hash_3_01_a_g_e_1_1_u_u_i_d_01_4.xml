@@ -16,19 +16,46 @@
           <declname>uuid</declname>
         </param>
         <briefdescription>
+<para>Computes a hash value for the given UUID. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function computes a hash value based on the input UUID using the standard C++ library&apos;s <computeroutput>hash</computeroutput> class with <computeroutput>uint64_t</computeroutput> as its template argument. The purpose of this function is to provide a unique identifier for each UUID, which can be useful in certain data structures or algorithms that require unique keys.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>uuid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The UUID to compute the hash value for. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A size_t representing the computed hash value.</para>
+</simplesect>
+Computes a hash value for the given UUID.</para>
+<para>This function takes an <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">AGE::UUID</ref> object as input and returns its corresponding hash value. The hash is computed by converting the UUID to uint64_t and then using std::hash&lt;uint64_t&gt;().</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>uuid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The UUID for which a hash value is calculated. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A size_t representing the hashed value of the input UUID. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/UUID.h" line="32" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/UUID.h" bodystart="32" bodyend="35"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/UUID.h" line="76" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/UUID.h" bodystart="76" bodyend="79"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/UUID.h" line="30" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/UUID.h" bodystart="31" bodyend="36"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/UUID.h" line="58" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/UUID.h" bodystart="59" bodyend="80"/>
     <listofallmembers>
       <member refid="structstd_1_1hash_3_01_a_g_e_1_1_u_u_i_d_01_4_1adad63769ca5494106fd1fe01663d17ef" prot="public" virt="non-virtual"><scope>std::hash&lt; AGE::UUID &gt;</scope><name>operator()</name></member>
     </listofallmembers>

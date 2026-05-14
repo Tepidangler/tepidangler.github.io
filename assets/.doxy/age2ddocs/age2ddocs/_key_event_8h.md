@@ -36,10 +36,10 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**KeyEvent**](class_a_g_e_1_1_key_event.md) <br> |
-| class | [**KeyPressedEvent**](class_a_g_e_1_1_key_pressed_event.md) <br> |
+| class | [**KeyEvent**](class_a_g_e_1_1_key_event.md) <br>_Represents a keyboard event._  |
+| class | [**KeyPressedEvent**](class_a_g_e_1_1_key_pressed_event.md) <br>_Returns the repeat count of a certain process or operation._  |
 | class | [**KeyReleasedEvent**](class_a_g_e_1_1_key_released_event.md) <br> |
-| class | [**KeyTypedEvent**](class_a_g_e_1_1_key_typed_event.md) <br> |
+| class | [**KeyTypedEvent**](class_a_g_e_1_1_key_typed_event.md) <br>_Represents a Key Typed_ [_**Event**_](class_a_g_e_1_1_event.md) _in the system._ |
 
 
 

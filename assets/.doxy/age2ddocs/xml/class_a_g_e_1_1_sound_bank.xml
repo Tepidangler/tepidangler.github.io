@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" line="31" column="23" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" bodystart="31" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" line="124" column="23" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" bodystart="124" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_sound_bank_1a28af2d377c3fe6f625319d6679294678" prot="public" static="no" mutable="no">
         <type>std::string</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" line="32" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" bodystart="32" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" line="125" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" bodystart="125" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_sound_bank_1a48d23b9d087d48bc0ecd62289161be9b" prot="public" static="no" mutable="no">
         <type>uint32_t</type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" line="33" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" bodystart="33" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" line="126" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" bodystart="126" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_sound_bank_1a14589d7f1db8908cf39aa2f2657da870" prot="public" static="no" mutable="no">
         <type><ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref></type>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" line="34" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" bodystart="34" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" line="127" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" bodystart="127" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -76,12 +76,49 @@
           <declname>ID</declname>
         </param>
         <briefdescription>
+<para>Constructs a <ref refid="class_a_g_e_1_1_sound_bank" kindref="compound">SoundBank</ref> object with the given file path and <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FilePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path to the sound bank file. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unique identifier for this sound bank.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This function initializes a new <ref refid="class_a_g_e_1_1_sound_bank" kindref="compound">SoundBank</ref> object by setting its file path and <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref>, and also sets the name of the sound bank as the filename from the given path.</para>
+<para>Constructs a <ref refid="class_a_g_e_1_1_sound_bank" kindref="compound">SoundBank</ref> object from the given file path and <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref>. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FilePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path to the sound bank file. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unique identifier for this sound bank. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" line="19" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Private/Soundbank.cpp" bodystart="9" bodyend="13"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" line="19" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Private/Soundbank.cpp" bodystart="21" bodyend="25"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_sound_bank_1ab1cf7cafb4f34287a3c265e15be96098" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -93,12 +130,39 @@
           <type>const <ref refid="class_a_g_e_1_1_sound_bank" kindref="compound">SoundBank</ref> &amp;</type>
         </param>
         <briefdescription>
+<para>Default copy constructor for the <ref refid="class_a_g_e_1_1_sound_bank" kindref="compound">SoundBank</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is used to create a new instance of the <ref refid="class_a_g_e_1_1_sound_bank" kindref="compound">SoundBank</ref> class by copying an existing one. It uses the &apos;= default&apos; syntax, which tells the compiler to use the default implementation provided by the compiler.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_a_g_e_1_1_sound_bank" kindref="compound">SoundBank</ref> object to be copied.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new instance of the <ref refid="class_a_g_e_1_1_sound_bank" kindref="compound">SoundBank</ref> class with the same data as the input parameter.</para>
+</simplesect>
+Default copy constructor for the <ref refid="class_a_g_e_1_1_sound_bank" kindref="compound">SoundBank</ref> class.</para>
+<para>This function is used to create a new instance of the <ref refid="class_a_g_e_1_1_sound_bank" kindref="compound">SoundBank</ref> class by copying an existing one. It uses the &apos;= default&apos; syntax, which instructs the compiler to generate a default implementation for this member function.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_a_g_e_1_1_sound_bank" kindref="compound">SoundBank</ref> object to be copied.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new <ref refid="class_a_g_e_1_1_sound_bank" kindref="compound">SoundBank</ref> instance that is a copy of the input <ref refid="class_a_g_e_1_1_sound_bank" kindref="compound">SoundBank</ref>. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" line="20" column="1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" line="38" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_sound_bank_1a56f5482c96c4213b34b7858fb5009234" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -107,12 +171,18 @@
         <name>~SoundBank</name>
         <qualifiedname>AGE::SoundBank::~SoundBank</qualifiedname>
         <briefdescription>
+<para>Default destructor for the <ref refid="class_a_g_e_1_1_sound_bank" kindref="compound">SoundBank</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is used to clean up any resources that the <ref refid="class_a_g_e_1_1_sound_bank" kindref="compound">SoundBank</ref> object may be using, such as memory or file handles. It&apos;s important to ensure that all resources are properly released when they are no longer needed to prevent potential memory leaks or other issues.</para>
+<para><simplesect kind="return"><para>void</para>
+</simplesect>
+Destructor for the <ref refid="class_a_g_e_1_1_sound_bank" kindref="compound">SoundBank</ref> class.</para>
+<para>This function is responsible for releasing any resources that were acquired by the <ref refid="class_a_g_e_1_1_sound_bank" kindref="compound">SoundBank</ref> object, such as memory or file handles. It does not return anything and has no parameters. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" line="21" column="1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" line="51" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_sound_bank_1a7c591e410aaeabb9ea3c3fde243b5592" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::filesystem::path &amp;</type>
@@ -121,12 +191,18 @@
         <name>GetFilePath</name>
         <qualifiedname>AGE::SoundBank::GetFilePath</qualifiedname>
         <briefdescription>
+<para>Returns the file path of the object. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>A reference to the file path member variable.</para>
+</simplesect>
+Returns the file path of the object. <simplesect kind="return"><para>A reference to a std::filesystem::path object representing the file path. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" line="23" column="23" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" bodystart="23" bodyend="23"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" line="61" column="23" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" bodystart="61" bodyend="61"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_sound_bank_1a8c91bbfa7625587a237eb66ef1a1ca7f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::string &amp;</type>
@@ -135,12 +211,20 @@
         <name>GetBankName</name>
         <qualifiedname>AGE::SoundBank::GetBankName</qualifiedname>
         <briefdescription>
+<para>Returns the name of the bank. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>A reference to a string containing the name of the bank.</para>
+</simplesect>
+Gets the name of a bank.</para>
+<para>This function returns a reference to the private member variable <computeroutput>m_Name</computeroutput>, which holds the name of the bank. The returned value is non-const and can be modified by the caller. However, it&apos;s important to note that any changes made to this string will affect the internal state of the object.</para>
+<para><simplesect kind="return"><para>A reference to a string containing the name of the bank. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" line="24" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" bodystart="24" bodyend="24"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" line="74" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" bodystart="74" bodyend="74"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_sound_bank_1a6f3d6c295d812c65ff4d9257fe01b823" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -153,12 +237,34 @@
           <declname>Name</declname>
         </param>
         <briefdescription>
+<para>This function sets the bank name. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new name of the bank.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Sets the bank name.</para>
+<para>This function sets the bank name by assigning it to the member variable m_Name. The parameter &apos;Name&apos; is a const reference to std::string, which represents the new bank name.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A const reference to std::string representing the new bank name. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" line="25" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" bodystart="25" bodyend="25"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" line="87" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" bodystart="87" bodyend="87"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_sound_bank_1ae00d103ae92bc18143fcfd90bc01a843" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint32_t</type>
@@ -167,12 +273,18 @@
         <name>GetBankID</name>
         <qualifiedname>AGE::SoundBank::GetBankID</qualifiedname>
         <briefdescription>
+<para>This function returns the bank ID of the current object. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>uint32_t The bank ID as a 32-bit unsigned integer.</para>
+</simplesect>
+Retrieves the bank ID of the object. <simplesect kind="return"><para>The bank ID as a uint32_t value. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" line="26" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" bodystart="26" bodyend="26"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" line="96" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" bodystart="96" bodyend="96"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_sound_bank_1ab27f0e0f8fb12f502f15480499eff4a1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -185,12 +297,32 @@
           <declname>ID</declname>
         </param>
         <briefdescription>
+<para>This function sets the bank ID to a given value. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new uint32_t type ID that will be set for the bank.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This function sets the bank identifier with a given uint32 value. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unique identifier of the bank to be set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" line="27" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" bodystart="27" bodyend="27"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" line="105" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" bodystart="105" bodyend="105"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_sound_bank_1a5e7b1907ae06e1616712d01e5e74b082" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref> &amp;</type>
@@ -199,12 +331,21 @@
         <name>GetAssetID</name>
         <qualifiedname>AGE::SoundBank::GetAssetID</qualifiedname>
         <briefdescription>
+<para>Gets the Asset ID of the object. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function returns a reference to the private member variable &apos;m_AssetID&apos;. It is used to access and possibly modify it if necessary. The returned value should not be altered as it may affect other parts of the program that rely on this unique identifier for their operations.</para>
+<para><simplesect kind="return"><para>A reference to <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref>&amp; representing the Asset ID.</para>
+</simplesect>
+Gets the Asset ID of the object.</para>
+<para>This function returns a reference to the private member variable &apos;m_AssetID&apos;. It is used to access and possibly modify this value if necessary.</para>
+<para><simplesect kind="return"><para>A reference to <ref refid="class_a_g_e_1_1_u_u_i_d" kindref="compound">UUID</ref>&amp; representing the Asset ID. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" line="29" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" bodystart="29" bodyend="29"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" line="122" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" bodystart="122" bodyend="122"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -224,7 +365,7 @@
         <link refid="class_a_g_e_1_1_u_u_i_d"/>
       </node>
     </collaborationgraph>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" line="16" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" bodystart="17" bodyend="35"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" line="16" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AudioEngine/Public/Soundbank.h" bodystart="17" bodyend="128"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_sound_bank_1a5e7b1907ae06e1616712d01e5e74b082" prot="public" virt="non-virtual"><scope>AGE::SoundBank</scope><name>GetAssetID</name></member>
       <member refid="class_a_g_e_1_1_sound_bank_1ae00d103ae92bc18143fcfd90bc01a843" prot="public" virt="non-virtual"><scope>AGE::SoundBank</scope><name>GetBankID</name></member>

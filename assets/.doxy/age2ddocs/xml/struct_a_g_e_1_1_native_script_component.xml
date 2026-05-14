@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" line="411" column="18" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" bodystart="411" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" line="819" column="18" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" bodystart="819" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_a_g_e_1_1_native_script_component_1abb2a78b4e576c86f04aa76d45881ef9f" prot="public" static="no" mutable="no">
         <type><ref refid="class_a_g_e_1_1_scriptable_entity" kindref="compound">ScriptableEntity</ref> *(*</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" line="413" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" bodystart="413" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" line="821" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" bodystart="821" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_a_g_e_1_1_native_script_component_1a0a129b0b3aa4dc771fd131aa51bd761b" prot="public" static="no" mutable="no">
         <type>void(*</type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" line="414" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" bodystart="414" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" line="822" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" bodystart="822" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -63,12 +63,31 @@
           <declname>Data</declname>
         </param>
         <briefdescription>
+<para>This function serializes the given <ref refid="struct_a_g_e_1_1_native_script_component" kindref="compound">NativeScriptComponent</ref> into a <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref> object. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Serializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref> object to write data to. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">Data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_native_script_component" kindref="compound">NativeScriptComponent</ref> object to be serialized. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" line="401" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" bodystart="401" bodyend="404"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" line="801" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" bodystart="801" bodyend="804"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_native_script_component_1af3ca5beba999859d4598c0e1ece4f3b3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -85,12 +104,33 @@
           <declname>Data</declname>
         </param>
         <briefdescription>
+<para>This function deserializes data from a serialized format into the native script component. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Serializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to an instance of <computeroutput><ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref></computeroutput> that provides the serialized data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">Data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The reference to the <computeroutput><ref refid="struct_a_g_e_1_1_native_script_component" kindref="compound">NativeScriptComponent</ref></computeroutput> where the deserialized data will be stored.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" line="406" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" bodystart="406" bodyend="409"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" line="814" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" bodystart="814" bodyend="817"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -106,12 +146,17 @@
         <name>Bind</name>
         <qualifiedname>AGE::NativeScriptComponent::Bind</qualifiedname>
         <briefdescription>
+<para>Binds a new scriptable entity type to the <ref refid="struct_a_g_e_1_1_native_script_component" kindref="compound">NativeScriptComponent</ref> system. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function sets up the necessary functions for creating and destroying instances of a specific scriptable entity type (T). The InstantiateScript lambda creates an instance of T, while DestroyScript deletes it. These lambdas are set based on the compiler used to compile the code. If the compiler is not recognized or supported by AGE yet, an error message will be shown.</para>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" line="417" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" bodystart="417" bodyend="433"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" line="835" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" bodystart="835" bodyend="851"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -137,7 +182,7 @@
         <label>std::enable_shared_from_this&lt; ScriptableEntity &gt;</label>
       </node>
     </collaborationgraph>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" line="398" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" bodystart="399" bodyend="434"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" line="792" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" bodystart="793" bodyend="852"/>
     <listofallmembers>
       <member refid="struct_a_g_e_1_1_native_script_component_1ada392cf6c0b4b3972a6bc22a478d7612" prot="public" virt="non-virtual"><scope>AGE::NativeScriptComponent</scope><name>Bind</name></member>
       <member refid="struct_a_g_e_1_1_native_script_component_1af3ca5beba999859d4598c0e1ece4f3b3" prot="public" virt="non-virtual"><scope>AGE::NativeScriptComponent</scope><name>Deserialize</name></member>

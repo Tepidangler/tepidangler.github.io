@@ -107,19 +107,19 @@
 <tbody>
 <tr>
 <td style="text-align: right;">uint32_t</td>
-<td style="text-align: left;"><a href="#function-getheight"><strong>GetHeight</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getheight"><strong>GetHeight</strong></a> () <br><em>This function returns the height of an object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">std::pair&lt; uint32_t, uint32_t &gt;</td>
-<td style="text-align: left;"><a href="#function-getresolution"><strong>GetResolution</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getresolution"><strong>GetResolution</strong></a> () <br><em>Returns the resolution of the screen in pixels as a pair of uint32_t values. The first value is the width and the second one is the height.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">uint32_t</td>
-<td style="text-align: left;"><a href="#function-getwidth"><strong>GetWidth</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getwidth"><strong>GetWidth</strong></a> () <br><em>This function returns the width of an object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setresolution"><strong>SetResolution</strong></a> (uint32_t X, uint32_t Y) <br></td>
+<td style="text-align: left;"><a href="#function-setresolution"><strong>SetResolution</strong></a> (uint32_t X, uint32_t Y) <br><em>Sets the resolution of the display to a specified width and height.</em></td>
 </tr>
 </tbody>
 </table>
@@ -135,26 +135,43 @@
 <hr>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-getheight">function GetHeight</h3>
+<p><em>This function returns the height of an object.</em> </p>
 <pre><code class="language-C++">inline uint32_t AGE::ScreenResolution::GetHeight () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>uint32_t The height of the object in units not specified by the function. </p>
 <hr>
 
 <h3 id="function-getresolution">function GetResolution</h3>
+<p><em>Returns the resolution of the screen in pixels as a pair of uint32_t values. The first value is the width and the second one is the height.</em> </p>
 <pre><code class="language-C++">inline std::pair&lt; uint32_t, uint32_t &gt; AGE::ScreenResolution::GetResolution () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A pair containing two uint32_t values representing the resolution of the screen. </p>
 <hr>
 
 <h3 id="function-getwidth">function GetWidth</h3>
+<p><em>This function returns the width of an object.</em> </p>
 <pre><code class="language-C++">inline uint32_t AGE::ScreenResolution::GetWidth () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>The width as a uint32_t value. </p>
 <hr>
 
 <h3 id="function-setresolution">function SetResolution</h3>
+<p><em>Sets the resolution of the display to a specified width and height.</em> </p>
 <pre><code class="language-C++">inline void AGE::ScreenResolution::SetResolution (
     uint32_t X,
     uint32_t Y
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>X</code> The new width of the display in pixels. </li>
+<li><code>Y</code> The new height of the display in pixels. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <hr />

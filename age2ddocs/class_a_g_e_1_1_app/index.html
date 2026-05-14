@@ -77,6 +77,10 @@
               
                 <h1 id="class-ageapp">Class AGE::App</h1>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespace_a_g_e/"><strong>AGE</strong></a> <strong>&gt;</strong> <a href="./"><strong>App</strong></a></p>
+<p><em>The main application class.</em> <a href="#detailed-description">More...</a></p>
+<ul>
+<li><code>#include &lt;App.h&gt;</code></li>
+</ul>
 <h2 id="public-functions">Public Functions</h2>
 <table>
 <thead>
@@ -92,71 +96,71 @@
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-close"><strong>Close</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-close"><strong>Close</strong></a> () <br><em>Closes the application by setting m_Running to false.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"><a href="../struct_a_g_e_1_1_app_config/"><strong>AppConfig</strong></a> &amp;</td>
-<td style="text-align: left;"><a href="#function-getappconfig"><strong>GetAppConfig</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getappconfig"><strong>GetAppConfig</strong></a> () <br><em>Returns the application configuration object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"><a href="../struct_a_g_e_1_1_application_command_line_args/"><strong>ApplicationCommandLineArgs</strong></a></td>
-<td style="text-align: left;"><a href="#function-getcommandlineargs"><strong>GetCommandLineArgs</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-getcommandlineargs"><strong>GetCommandLineArgs</strong></a> () const<br><em>Retrieves the command line arguments of the application.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"><a href="../class_a_g_e_1_1_device_manager/"><strong>DeviceManager</strong></a> &amp;</td>
-<td style="text-align: left;"><a href="#function-getdevicemanager"><strong>GetDeviceManager</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getdevicemanager"><strong>GetDeviceManager</strong></a> () <br><em>Returns a reference to the device manager instance.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-getdirectxerrormessages"><strong>GetDirectXErrorMessages</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getdirectxerrormessages"><strong>GetDirectXErrorMessages</strong></a> () <br><em>This function retrieves DirectX error messages.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">const <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> &amp;</td>
-<td style="text-align: left;"><a href="#function-getframebuffersize"><strong>GetFramebufferSize</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getframebuffersize"><strong>GetFramebufferSize</strong></a> () <br><em>Returns the framebuffer size of the application.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"><a href="../class_a_g_e_1_1_im_gui_layer/"><strong>ImGuiLayer</strong></a> *</td>
-<td style="text-align: left;"><a href="#function-getimguilayer"><strong>GetImGuiLayer</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getimguilayer"><strong>GetImGuiLayer</strong></a> () <br><em>This function returns the ImGui layer of the application.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">Ref&lt; <a href="../class_a_g_e_1_1_project/"><strong>Project</strong></a> &gt; &amp;</td>
-<td style="text-align: left;"><a href="#function-getproject"><strong>GetProject</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getproject"><strong>GetProject</strong></a> () <br><em>Returns a reference to the</em> <a href="../class_a_g_e_1_1_project/"><em><strong>Project</strong></em></a> <em>object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">uint16_t</td>
-<td style="text-align: left;"><a href="#function-gettargetplatform"><strong>GetTargetPlatform</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-gettargetplatform"><strong>GetTargetPlatform</strong></a> () <br><em>This function returns the target platform.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-init"><strong>Init</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-init"><strong>Init</strong></a> () <br><em>Initializes the application. This function sets up various components of the app such as device manager, asset manager and ImGui layer.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-initlayers"><strong>InitLayers</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-initlayers"><strong>InitLayers</strong></a> () <br><em>Initializes and attaches all layers in the layer stack.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-initrenderer"><strong>InitRenderer</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-initrenderer"><strong>InitRenderer</strong></a> () <br><em>Initializes the renderer.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-loadassets"><strong>LoadAssets</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-loadassets"><strong>LoadAssets</strong></a> () <br><em>Loads assets asynchronously in separate threads.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-onevent"><strong>OnEvent</strong></a> (<a href="../class_a_g_e_1_1_event/"><strong>Event</strong></a> &amp; E) <br></td>
+<td style="text-align: left;"><a href="#function-onevent"><strong>OnEvent</strong></a> (<a href="../class_a_g_e_1_1_event/"><strong>Event</strong></a> &amp; E) <br><em>Handles an event dispatched by the application.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-pushlayer"><strong>PushLayer</strong></a> (<a href="../class_a_g_e_1_1_layer/"><strong>Layer</strong></a> * Layer) <br></td>
+<td style="text-align: left;"><a href="#function-pushlayer"><strong>PushLayer</strong></a> (<a href="../class_a_g_e_1_1_layer/"><strong>Layer</strong></a> * Layer) <br><em>Pushes a layer onto the stack and attaches it.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-pushoverlay"><strong>PushOverlay</strong></a> (<a href="../class_a_g_e_1_1_layer/"><strong>Layer</strong></a> * Layer) <br></td>
+<td style="text-align: left;"><a href="#function-pushoverlay"><strong>PushOverlay</strong></a> (<a href="../class_a_g_e_1_1_layer/"><strong>Layer</strong></a> * Layer) <br><em>Pushes an overlay layer onto the stack and calls its OnAttach() function.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-pushscriptablecomp"><strong>PushScriptableComp</strong></a> (<a href="../class_a_g_e_1_1_scriptable_entity/"><strong>ScriptableEntity</strong></a> * Comp) <br></td>
+<td style="text-align: left;"><a href="#function-pushscriptablecomp"><strong>PushScriptableComp</strong></a> (<a href="../class_a_g_e_1_1_scriptable_entity/"><strong>ScriptableEntity</strong></a> * Comp) <br><em>Pushes a</em> <a href="../class_a_g_e_1_1_scriptable_entity/"><em><strong>ScriptableEntity</strong></em></a> <em>component onto the stack.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
@@ -164,19 +168,19 @@
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setproject"><strong>SetProject</strong></a> (Ref&lt; <a href="../class_a_g_e_1_1_project/"><strong>Project</strong></a> &gt; Proj) <br></td>
+<td style="text-align: left;"><a href="#function-setproject"><strong>SetProject</strong></a> (Ref&lt; <a href="../class_a_g_e_1_1_project/"><strong>Project</strong></a> &gt; Proj) <br><em>Sets the project object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-settargetplatform"><strong>SetTargetPlatform</strong></a> (uint16_t Target) <br></td>
+<td style="text-align: left;"><a href="#function-settargetplatform"><strong>SetTargetPlatform</strong></a> (uint16_t Target) <br><em>Sets the target platform to a specified value.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-shutdown"><strong>Shutdown</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-shutdown"><strong>Shutdown</strong></a> () <br><em>This function is used to shutdown the application. It sets a flag indicating that the program is no longer running, and then shuts down the renderer.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual</td>
-<td style="text-align: left;"><a href="#function-app"><strong>~App</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-app"><strong>~App</strong></a> () <br><em>Destructor for the</em> <a href="./"><em><strong>App</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
@@ -191,10 +195,12 @@
 <tbody>
 <tr>
 <td style="text-align: right;"><a href="./"><strong>App</strong></a> &amp;</td>
-<td style="text-align: left;"><a href="#function-get"><strong>Get</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-get"><strong>Get</strong></a> () <br><em>This function returns a reference to the singleton instance of the</em> <a href="./"><em><strong>App</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
+<h2 id="detailed-description">Detailed Description</h2>
+<p>This class represents the core of the AGE (Another Game Engine) framework, managing various aspects such as device management, layers, scripts, and assets. It also handles window events and manages the ImGui layer for user interface elements. </p>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-app">function App</h3>
 <pre><code class="language-C++">AGE::App::App (
@@ -202,99 +208,257 @@
     ApplicationCommandLineArgs Args=ApplicationCommandLineArgs ()
 ) 
 </code></pre>
+<p>Constructor for the <a href="./"><strong>App</strong></a> class. Initializes an instance of the application with a name and command line arguments.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>name</code> The name of the application. </li>
+<li><code>Args</code> Command line arguments provided when starting the application.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>None Constructor for the <a href="./"><strong>App</strong></a> class. Initializes an instance of the application with a name and command line arguments.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>name</code> The name of the application. </li>
+<li><code>Args</code> Command line arguments provided when starting the application.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>None </p>
 <hr>
 
 <h3 id="function-close">function Close</h3>
+<p><em>Closes the application by setting m_Running to false.</em> </p>
 <pre><code class="language-C++">void AGE::App::Close () 
 </code></pre>
+<p>This function sets the member variable m_Running to false, effectively closing the application. It does not return anything and has no parameters.</p>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Closes the application by setting m_Running to false.</p>
+<p>This function sets the member variable m_Running of an instance of the <a href="./"><strong>App</strong></a> class to false, effectively closing the application. It does not return any value and has no parameters.</p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-getappconfig">function GetAppConfig</h3>
+<p><em>Returns the application configuration object.</em> </p>
 <pre><code class="language-C++">inline AppConfig &amp; AGE::App::GetAppConfig () 
 </code></pre>
+<p>This function returns a reference to the <a href="../struct_a_g_e_1_1_app_config/"><strong>AppConfig</strong></a> object that holds all the configurations for the application. The returned object can be used to modify the application's settings.</p>
+<p><strong>Returns:</strong></p>
+<p>A reference to the <a href="../struct_a_g_e_1_1_app_config/"><strong>AppConfig</strong></a> object.</p>
+<p>Returns the application configuration object.</p>
+<p>This function returns a reference to the <a href="../struct_a_g_e_1_1_app_config/"><strong>AppConfig</strong></a> object that holds all of the configuration settings for the application. It is used by other parts of the application to access and modify these settings as needed.</p>
+<p><strong>Returns:</strong></p>
+<p>A reference to the <a href="../struct_a_g_e_1_1_app_config/"><strong>AppConfig</strong></a> object. </p>
 <hr>
 
 <h3 id="function-getcommandlineargs">function GetCommandLineArgs</h3>
+<p><em>Retrieves the command line arguments of the application.</em> </p>
 <pre><code class="language-C++">inline ApplicationCommandLineArgs AGE::App::GetCommandLineArgs () const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>An instance of <a href="../struct_a_g_e_1_1_application_command_line_args/"><strong>ApplicationCommandLineArgs</strong></a> containing all the command line arguments.</p>
+<p>Retrieves the command line arguments of the application. </p>
+<p><strong>Returns:</strong></p>
+<p>An instance of <a href="../struct_a_g_e_1_1_application_command_line_args/"><strong>ApplicationCommandLineArgs</strong></a> containing all the command line arguments. </p>
 <hr>
 
 <h3 id="function-getdevicemanager">function GetDeviceManager</h3>
+<p><em>Returns a reference to the device manager instance.</em> </p>
 <pre><code class="language-C++">inline DeviceManager &amp; AGE::App::GetDeviceManager () 
 </code></pre>
+<p>This function returns a reference to the device manager instance that is currently in use by the application. The returned object can be used to interact with the hardware devices managed by the system.</p>
+<p><strong>Returns:</strong></p>
+<p>A reference to the <a href="../class_a_g_e_1_1_device_manager/"><strong>DeviceManager</strong></a> instance.</p>
+<p>Returns a reference to the device manager instance.</p>
+<p>This function returns a reference to the device manager instance that is currently in use by the application. The returned object can be used for various operations related to managing devices, such as initializing or shutting down devices.</p>
+<p><strong>Returns:</strong></p>
+<p>A reference to the <a href="../class_a_g_e_1_1_device_manager/"><strong>DeviceManager</strong></a> instance. </p>
 <hr>
 
 <h3 id="function-getdirectxerrormessages">function GetDirectXErrorMessages</h3>
+<p><em>This function retrieves DirectX error messages.</em> </p>
 <pre><code class="language-C++">void AGE::App::GetDirectXErrorMessages () 
 </code></pre>
+<p>The function does not take any parameters and returns void. It is designed to handle the retrieval of error messages from the DirectX API, which can be useful for debugging purposes. However, it doesn't provide any specific information about the errors that might occur during its execution. For more detailed error handling, consider using other functions or classes provided by the DirectX SDK.</p>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>This function retrieves DirectX error messages.</p>
+<p>The function does not take any parameters and returns void. It is designed to handle the retrieval of error messages from the DirectX library, which can be useful for debugging purposes. However, it doesn't provide specific information about the errors that have occurred. For this, additional functions or methods might be needed.</p>
+<p><strong>Returns:</strong></p>
+<p>Void </p>
 <hr>
 
 <h3 id="function-getframebuffersize">function GetFramebufferSize</h3>
+<p><em>Returns the framebuffer size of the application.</em> </p>
 <pre><code class="language-C++">inline const Vector2 &amp; AGE::App::GetFramebufferSize () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A constant reference to a <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> object representing the current framebuffer size.</p>
+<p>Returns the framebuffer size of the application. </p>
+<p><strong>Returns:</strong></p>
+<p>A constant reference to a <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> object representing the current framebuffer size. </p>
 <hr>
 
 <h3 id="function-getimguilayer">function GetImGuiLayer</h3>
+<p><em>This function returns the ImGui layer of the application.</em> </p>
 <pre><code class="language-C++">inline ImGuiLayer * AGE::App::GetImGuiLayer () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>Pointer to the <a href="../class_a_g_e_1_1_im_gui_layer/"><strong>ImGuiLayer</strong></a> object if it exists, nullptr otherwise.</p>
+<p>Returns the ImGui layer instance.</p>
+<p>This function returns a pointer to the ImGui layer instance stored in this class. It is used for handling user interface events and rendering.</p>
+<p><strong>Returns:</strong></p>
+<p>Pointer to the <a href="../class_a_g_e_1_1_im_gui_layer/"><strong>ImGuiLayer</strong></a> instance. </p>
 <hr>
 
 <h3 id="function-getproject">function GetProject</h3>
+<p><em>Returns a reference to the</em> <a href="../class_a_g_e_1_1_project/"><em><strong>Project</strong></em></a> <em>object.</em></p>
 <pre><code class="language-C++">inline Ref&lt; Project &gt; &amp; AGE::App::GetProject () 
 </code></pre>
+<p>This function returns a reference to the <a href="../class_a_g_e_1_1_project/"><strong>Project</strong></a> object stored in the member variable 'm_Project'. It allows for direct manipulation of this data if required.</p>
+<p><strong>Returns:</strong></p>
+<p>A reference to the <a href="../class_a_g_e_1_1_project/"><strong>Project</strong></a> object.</p>
+<p>Returns a reference to the <a href="../class_a_g_e_1_1_project/"><strong>Project</strong></a> object.</p>
+<p>This function returns a reference to the <a href="../class_a_g_e_1_1_project/"><strong>Project</strong></a> object stored in the class instance. It allows for direct manipulation of this data if necessary.</p>
+<p><strong>Returns:</strong></p>
+<p>A reference to the <a href="../class_a_g_e_1_1_project/"><strong>Project</strong></a> object. </p>
 <hr>
 
 <h3 id="function-gettargetplatform">function GetTargetPlatform</h3>
+<p><em>This function returns the target platform.</em> </p>
 <pre><code class="language-C++">inline uint16_t AGE::App::GetTargetPlatform () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>uint16_t The target platform as a uint16_t value.</p>
+<p>This function returns the target platform. </p>
+<p><strong>Returns:</strong></p>
+<p>uint16_t The target platform as a uint16_t value. </p>
 <hr>
 
 <h3 id="function-init">function Init</h3>
+<p><em>Initializes the application. This function sets up various components of the app such as device manager, asset manager and ImGui layer.</em> </p>
 <pre><code class="language-C++">void AGE::App::Init () 
 </code></pre>
+<p>It creates a <a href="../class_a_g_e_1_1_device_manager/"><strong>DeviceManager</strong></a> instance with an AudioEngineType of AGESoundEngine. The event callback for this is set to <a href="./#function-onevent"><strong>App::OnEvent</strong></a>.</p>
+<p>In non-distribution builds, no further setup is performed. However, in distribution builds, it initializes the <a href="../class_a_g_e_1_1_asset_manager/"><strong>AssetManager</strong></a> and loads a .AGEpak file.</p>
+<p>It then pushes an <a href="../class_a_g_e_1_1_im_gui_layer/"><strong>ImGuiLayer</strong></a> onto the layer stack and attaches it to the NewProjectLayer if bShowNewProjectMenu is true. Finally, it sets m_Running to true. </p>
 <hr>
 
 <h3 id="function-initlayers">function InitLayers</h3>
+<p><em>Initializes and attaches all layers in the layer stack.</em> </p>
 <pre><code class="language-C++">void AGE::App::InitLayers () 
 </code></pre>
+<p>This function iterates over each layer in the m_LayerStack, checks if its name is either "NewProjectLayer" or "ImGuiLayer", and skips these two special layers. For other layers, it calls their <a href="./#function-init"><strong>Init()</strong></a> method to initialize them and then OnAttach() to attach them. The variable bBlockThisFrame is also set to false at the end of this function.</p>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Initializes and attaches all layers in the layer stack.</p>
+<p>This function iterates over each layer in the m_LayerStack vector, checks if its name is either "NewProjectLayer" or "ImGuiLayer", and skips these two special layers. For other layers, it calls <a href="./#function-init"><strong>Init()</strong></a> to initialize them and OnAttach() to attach them to the application. It also sets bBlockThisFrame to false at the end of this function.</p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-initrenderer">function InitRenderer</h3>
+<p><em>Initializes the renderer.</em> </p>
 <pre><code class="language-C++">void AGE::App::InitRenderer () 
 </code></pre>
+<p>This function is used to initialize the <a href="../class_a_g_e_1_1_renderer/"><strong>Renderer</strong></a> by calling its Init method. It sets up any necessary resources for rendering, such as shaders and textures.</p>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Initializes the <a href="../class_a_g_e_1_1_renderer/"><strong>Renderer</strong></a> module.</p>
+<p>This function is used to initialize the <a href="../class_a_g_e_1_1_renderer/"><strong>Renderer</strong></a> module by calling the <a href="./#function-init"><strong>Init()</strong></a> function from the <a href="../class_a_g_e_1_1_renderer/"><strong>Renderer</strong></a> class. It sets up any necessary resources for rendering, such as setting up OpenGL context or initializing shaders and textures.</p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-loadassets">function LoadAssets</h3>
+<p><em>Loads assets asynchronously in separate threads.</em> </p>
 <pre><code class="language-C++">void AGE::App::LoadAssets () 
 </code></pre>
+<p>This function starts three additional threads to load scenes, sound banks and <a href="../class_a_g_e_1_1_aseprite/"><strong>Aseprite</strong></a> files respectively. After starting the threads, it detaches them so that they run independently of the main thread. Finally, it calls <code>LoadTextures</code> and <code>LoadShaders</code> functions to load textures and shaders.</p>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Loads assets in separate threads for concurrent loading.</p>
+<p>This function starts three additional threads to load scenes, sound banks and <a href="../class_a_g_e_1_1_aseprite/"><strong>Aseprite</strong></a> files concurrently. It then detaches these threads so they run independently of the main thread. After that, it calls <code>LoadTextures</code> and <code>LoadShaders</code> functions to finish the asset loading process.</p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-onevent">function OnEvent</h3>
+<p><em>Handles an event dispatched by the application.</em> </p>
 <pre><code class="language-C++">void AGE::App::OnEvent (
     Event &amp; E
 ) 
 </code></pre>
+<p>This function is responsible for dispatching events to all layers and components in the application. It uses an <a href="../class_a_g_e_1_1_event_dispatcher/"><strong>EventDispatcher</strong></a> object to handle different types of events, such as <a href="../class_a_g_e_1_1_window_close_event/"><strong>WindowCloseEvent</strong></a>, <a href="../class_a_g_e_1_1_window_resize_event/"><strong>WindowResizeEvent</strong></a>, <a href="../class_a_g_e_1_1_framebuffer_resize_event/"><strong>FramebufferResizeEvent</strong></a>, <a href="../class_a_g_e_1_1_renderer_change_event/"><strong>RendererChangeEvent</strong></a>, <a href="../class_a_g_e_1_1_project_created_event/"><strong>ProjectCreatedEvent</strong></a>, and <a href="../class_a_g_e_1_1_project_loaded_event/"><strong>ProjectLoadedEvent</strong></a>.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>E</code> Reference to the event that needs to be handled.</li>
+</ul>
+<p>Handles an event dispatched by the application.</p>
+<p>This function is responsible for dispatching events to all layers and components in the application's layer stack. It uses an <a href="../class_a_g_e_1_1_event_dispatcher/"><strong>EventDispatcher</strong></a> object to handle different types of events such as <a href="../class_a_g_e_1_1_window_close_event/"><strong>WindowCloseEvent</strong></a>, <a href="../class_a_g_e_1_1_window_resize_event/"><strong>WindowResizeEvent</strong></a>, <a href="../class_a_g_e_1_1_framebuffer_resize_event/"><strong>FramebufferResizeEvent</strong></a>, <a href="../class_a_g_e_1_1_renderer_change_event/"><strong>RendererChangeEvent</strong></a>, <a href="../class_a_g_e_1_1_project_created_event/"><strong>ProjectCreatedEvent</strong></a>, and <a href="../class_a_g_e_1_1_project_loaded_event/"><strong>ProjectLoadedEvent</strong></a>. The function also checks for specific conditions like if the NewProjectLayer is shown or if event handling should be blocked in the current frame. It iterates over the layer stack from back to front and calls OnEvent on each layer until an event has been handled. Similarly, it does this for components as well. If an event gets handled during any of these iterations, the loop breaks early.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>E</code> The event to be dispatched. </li>
+</ul>
 <hr>
 
 <h3 id="function-pushlayer">function PushLayer</h3>
+<p><em>Pushes a layer onto the stack and attaches it.</em> </p>
 <pre><code class="language-C++">void AGE::App::PushLayer (
     Layer * Layer
 ) 
 </code></pre>
+<p>This function pushes a given <a href="../class_a_g_e_1_1_layer/"><strong>Layer</strong></a> object onto the m_LayerStack, which is essentially a stack of layers used in an application. The OnAttach() method for this layer will be called to initialize it. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><a href="../class_a_g_e_1_1_layer/"><strong>Layer</strong></a> Pointer to the <a href="../class_a_g_e_1_1_layer/"><strong>Layer</strong></a> that needs to be pushed and attached.</li>
+</ul>
+<p>Pushes a layer onto the application's layer stack.</p>
+<p>This function pushes a given <a href="../class_a_g_e_1_1_layer/"><strong>Layer</strong></a> object into the m_LayerStack of the <a href="./"><strong>App</strong></a> class. The layer is added at the top of the stack, and will be processed last during rendering.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><a href="../class_a_g_e_1_1_layer/"><strong>Layer</strong></a> Pointer to the <a href="../class_a_g_e_1_1_layer/"><strong>Layer</strong></a> object that needs to be pushed onto the stack. </li>
+</ul>
 <hr>
 
 <h3 id="function-pushoverlay">function PushOverlay</h3>
+<p><em>Pushes an overlay layer onto the stack and calls its OnAttach() function.</em> </p>
 <pre><code class="language-C++">void AGE::App::PushOverlay (
     Layer * Layer
 ) 
 </code></pre>
+<p>This function pushes a given <a href="../class_a_g_e_1_1_layer/"><strong>Layer</strong></a> object into the m_LayerStack, which is assumed to be of type <a href="../class_a_g_e_1_1_layer_stack/"><strong>LayerStack</strong></a>. The <a href="../class_a_g_e_1_1_layer/"><strong>Layer</strong></a>'s OnAttach() function is then called.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><a href="../class_a_g_e_1_1_layer/"><strong>Layer</strong></a> Pointer to the <a href="../class_a_g_e_1_1_layer/"><strong>Layer</strong></a> object that will be pushed onto the stack and its OnAttach() function will be called.</li>
+</ul>
+<p>Pushes an overlay layer onto the stack and calls its OnAttach function.</p>
+<p>This function pushes a given <a href="../class_a_g_e_1_1_layer/"><strong>Layer</strong></a> object into the m_LayerStack, which is assumed to be of type <a href="../class_a_g_e_1_1_layer_stack/"><strong>LayerStack</strong></a>. It then calls the OnAttach() function on this <a href="../class_a_g_e_1_1_layer/"><strong>Layer</strong></a> object. The AGE_PROFILE_FUNCTION macro is used for profiling purposes and should not affect the functionality of the application.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><a href="../class_a_g_e_1_1_layer/"><strong>Layer</strong></a> Pointer to a <a href="../class_a_g_e_1_1_layer/"><strong>Layer</strong></a> object that will be pushed onto the stack. </li>
+</ul>
 <hr>
 
 <h3 id="function-pushscriptablecomp">function PushScriptableComp</h3>
+<p><em>Pushes a</em> <a href="../class_a_g_e_1_1_scriptable_entity/"><em><strong>ScriptableEntity</strong></em></a> <em>component onto the stack.</em></p>
 <pre><code class="language-C++">void AGE::App::PushScriptableComp (
     ScriptableEntity * Comp
 ) 
 </code></pre>
+<p>This function pushes a given <a href="../class_a_g_e_1_1_scriptable_entity/"><strong>ScriptableEntity</strong></a> component onto the m_CompStack, which is likely to be a stack of components for some kind of scripting system or similar use case. The parameter Comp should be an instance of a class that inherits from the <a href="../class_a_g_e_1_1_scriptable_entity/"><strong>ScriptableEntity</strong></a> base class.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Comp</code> Pointer to the <a href="../class_a_g_e_1_1_scriptable_entity/"><strong>ScriptableEntity</strong></a> component to push onto the stack. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void No return value.</p>
+<p>Pushes a <a href="../class_a_g_e_1_1_scriptable_entity/"><strong>ScriptableEntity</strong></a> component onto the stack.</p>
+<p>This function takes in a pointer to a <a href="../class_a_g_e_1_1_scriptable_entity/"><strong>ScriptableEntity</strong></a> object and pushes it into the m_CompStack, which is likely a stack of components for some kind of application.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Comp</code> A pointer to the <a href="../class_a_g_e_1_1_scriptable_entity/"><strong>ScriptableEntity</strong></a> component that will be pushed onto the stack. </li>
+</ul>
 <hr>
 
 <h3 id="function-run">function Run</h3>
@@ -303,32 +467,78 @@
 <hr>
 
 <h3 id="function-setproject">function SetProject</h3>
+<p><em>Sets the project object.</em> </p>
 <pre><code class="language-C++">inline void AGE::App::SetProject (
     Ref&lt; Project &gt; Proj
 ) 
 </code></pre>
+<p>This function sets the value of the member variable 'm_Project' to the input parameter 'Proj'. It takes a reference to a <a href="../class_a_g_e_1_1_project/"><strong>Project</strong></a> object and assigns it to 'm_Project'.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Proj</code> A Ref&lt;Project&gt; object representing the new project.</li>
+</ul>
+<p>Sets the project object.</p>
+<p>This function sets the value of the member variable <code>m_Project</code> to the provided <code>Proj</code> parameter. The purpose of this function is to provide a way to update the current project object that's being used by other parts of the system.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Proj</code> A reference to the new <a href="../class_a_g_e_1_1_project/"><strong>Project</strong></a> object to be set. </li>
+</ul>
 <hr>
 
 <h3 id="function-settargetplatform">function SetTargetPlatform</h3>
+<p><em>Sets the target platform to a specified value.</em> </p>
 <pre><code class="language-C++">inline void AGE::App::SetTargetPlatform (
     uint16_t Target
 ) 
 </code></pre>
+<p>This function sets the member variable <code>m_Target</code> of the class to a new value, which represents the target platform. The parameter <code>Target</code> is an unsigned 16-bit integer that specifies the new target platform.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Target</code> The new target platform as an unsigned 16-bit integer.</li>
+</ul>
+<p>Sets the target platform to a given value.</p>
+<p>This function sets the member variable <code>m_Target</code> to the provided uint16_t parameter <code>Target</code>, which is cast to type <code>TargetPlatform</code> before assignment. The purpose of this function is to update the current target platform being targeted by the system.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Target</code> The new value for the target platform. This should be a valid enumerator of the <code>TargetPlatform</code> enum. </li>
+</ul>
 <hr>
 
 <h3 id="function-shutdown">function Shutdown</h3>
+<p><em>This function is used to shutdown the application. It sets a flag indicating that the program is no longer running, and then shuts down the renderer.</em> </p>
 <pre><code class="language-C++">void AGE::App::Shutdown () 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>None</code> </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>This function is used to shutdown the application. It sets a flag indicating that the program is no longer running, and then shuts down the renderer. </p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-app_1">function ~App</h3>
+<p><em>Destructor for the</em> <a href="./"><em><strong>App</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">virtual AGE::App::~App () 
 </code></pre>
+<p>This function is responsible for cleaning up any resources that were acquired during the lifetime of an instance of this class, such as memory or file handles. It calls the <a href="./#function-shutdown"><strong>Shutdown()</strong></a> method to perform these cleanups.</p>
+<p>Destructor for the <a href="./"><strong>App</strong></a> class.</p>
+<p>This function is responsible for cleaning up any resources that were acquired during the lifetime of an instance of this class. In this case, it calls the <a href="./#function-shutdown"><strong>Shutdown()</strong></a> method to ensure all system resources are properly released and cleaned up.</p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
 <h3 id="function-get">function Get</h3>
+<p><em>This function returns a reference to the singleton instance of the</em> <a href="./"><em><strong>App</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">static inline App &amp; AGE::App::Get () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A reference to the singleton instance of the <a href="./"><strong>App</strong></a> class.</p>
+<p>This function returns a reference to the singleton instance of the <a href="./"><strong>App</strong></a> class. </p>
+<p><strong>Returns:</strong></p>
+<p>A reference to the singleton instance of the <a href="./"><strong>App</strong></a> class. </p>
 <hr>
 
 <hr />

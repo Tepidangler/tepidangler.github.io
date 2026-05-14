@@ -19,7 +19,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" line="24" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" bodystart="24" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" line="62" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" bodystart="62" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_input_event_1a6c2a7fbcbfbec23725ebb264abfb23c2" prot="protected" static="no" mutable="no">
         <type>float</type>
@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" line="25" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" bodystart="25" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" line="63" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" bodystart="63" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_input_event_1a7867d2aed19babe08e2ebf5ce80ed932" prot="protected" static="no" mutable="no">
         <type>int</type>
@@ -47,7 +47,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" line="26" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" bodystart="26" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" line="64" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" bodystart="64" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -58,12 +58,21 @@
         <name>GetGamepadButton</name>
         <qualifiedname>AGE::InputEvent::GetGamepadButton</qualifiedname>
         <briefdescription>
+<para>Retrieves the gamepad button state. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is used to get the current state of a gamepad button. It returns an integer representing the state of the button, which could be either pressed or not pressed.</para>
+<para><simplesect kind="return"><para>An integer value indicating the state of the gamepad button. If the button is pressed, it will return 1; if not, it will return 0.</para>
+</simplesect>
+Retrieves the gamepad button state.</para>
+<para>This function returns the current state of the gamepad button. The returned value is an integer representing the state of the button, which could be a combination of various flags indicating different states such as pressed or released.</para>
+<para><simplesect kind="return"><para>An integer representing the current state of the gamepad button. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" line="12" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" bodystart="12" bodyend="12"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" line="26" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" bodystart="26" bodyend="26"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="protected-func">
@@ -79,7 +88,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" line="17" column="1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" line="31" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_input_event_1ac729e3a2e862885929d3c95158197f36" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -96,12 +105,48 @@
           <declname>Position</declname>
         </param>
         <briefdescription>
+<para>Constructs an <ref refid="class_a_g_e_1_1_input_event" kindref="compound">InputEvent</ref> object with the specified axis and position. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Axis</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input event&apos;s axis. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input event&apos;s position on the axis.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Constructs an <ref refid="class_a_g_e_1_1_input_event" kindref="compound">InputEvent</ref> object with the specified axis and position. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Axis</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input event&apos;s axis. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input event&apos;s position on the axis. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" line="18" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" bodystart="18" bodyend="19"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" line="42" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" bodystart="42" bodyend="43"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_input_event_1a62cb3c23ab55169f27407de92887a1fa" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -114,12 +159,35 @@
           <declname>Button</declname>
         </param>
         <briefdescription>
+<para>Constructor for the <ref refid="class_a_g_e_1_1_input_event" kindref="compound">InputEvent</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This constructor initializes an instance of the <ref refid="class_a_g_e_1_1_input_event" kindref="compound">InputEvent</ref> class with a specific button value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Button</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The integer representation of the input event&apos;s button.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Constructor for the <ref refid="class_a_g_e_1_1_input_event" kindref="compound">InputEvent</ref> class.</para>
+<para>This constructor initializes an instance of the <ref refid="class_a_g_e_1_1_input_event" kindref="compound">InputEvent</ref> class with a specific button value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Button</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The integer representation of the input event&apos;s button. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" line="20" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" bodystart="20" bodyend="21"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" line="58" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" bodystart="58" bodyend="59"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -168,7 +236,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" line="10" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" bodystart="11" bodyend="27"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" line="10" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" bodystart="11" bodyend="65"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_event_1ae76fb834a0ee69601539da677f1333fa" prot="public" virt="pure-virtual"><scope>AGE::InputEvent</scope><name>GetCategoryFlags</name></member>
       <member refid="class_a_g_e_1_1_event_1a4cfb95332801a921e9449a03a34b87b0" prot="public" virt="pure-virtual"><scope>AGE::InputEvent</scope><name>GetEventType</name></member>

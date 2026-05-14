@@ -88,43 +88,43 @@
 <tbody>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-beginscene-12"><strong>BeginScene</strong></a> (const <a href="../class_a_g_e_1_1_camera/"><strong>Camera</strong></a> &amp; Camera, const <a href="../struct_a_g_e_1_1_matrix4_d/"><strong>Matrix4D</strong></a> &amp; Transform) <br></td>
+<td style="text-align: left;"><a href="#function-beginscene-12"><strong>BeginScene</strong></a> (const <a href="../class_a_g_e_1_1_camera/"><strong>Camera</strong></a> &amp; Camera, const <a href="../struct_a_g_e_1_1_matrix4_d/"><strong>Matrix4D</strong></a> &amp; Transform) <br><em>Begins a 2D scene with the specified camera and transformation.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-beginscene-22"><strong>BeginScene</strong></a> (const <a href="../class_a_g_e_1_1_editor_camera/"><strong>EditorCamera</strong></a> &amp; Camera) <br></td>
+<td style="text-align: left;"><a href="#function-beginscene-22"><strong>BeginScene</strong></a> (const <a href="../class_a_g_e_1_1_editor_camera/"><strong>EditorCamera</strong></a> &amp; Camera) <br><em>Begin a 2D scene with the given camera.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-drawcircle"><strong>DrawCircle</strong></a> (const <a href="../struct_a_g_e_1_1_matrix4_d/"><strong>Matrix4D</strong></a> &amp; Transform, const <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> &amp; Color, float Thickness=1.f, float Fade=.005f, int EntityID=-1) <br></td>
+<td style="text-align: left;"><a href="#function-drawcircle"><strong>DrawCircle</strong></a> (const <a href="../struct_a_g_e_1_1_matrix4_d/"><strong>Matrix4D</strong></a> &amp; Transform, const <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> &amp; Color, float Thickness=1.f, float Fade=.005f, int EntityID=-1) <br><em>Draw a circle on the screen using the provided parameters.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-drawline"><strong>DrawLine</strong></a> (const <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> &amp; Pos0, const <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> &amp; Pos1, const <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> &amp; Color, int EntityID=-1) <br></td>
+<td style="text-align: left;"><a href="#function-drawline"><strong>DrawLine</strong></a> (const <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> &amp; Pos0, const <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> &amp; Pos1, const <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> &amp; Color, int EntityID=-1) <br><em>Draw a line in the 3D scene.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-drawquad-13"><strong>DrawQuad</strong></a> (const <a href="../struct_a_g_e_1_1_quad_properties/"><strong>QuadProperties</strong></a> &amp; Props) <br></td>
+<td style="text-align: left;"><a href="#function-drawquad-13"><strong>DrawQuad</strong></a> (const <a href="../struct_a_g_e_1_1_quad_properties/"><strong>QuadProperties</strong></a> Props) <br><em>Draw a quadrilateral with the specified properties.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-drawquad-23"><strong>DrawQuad</strong></a> (const Ref&lt; <a href="../class_a_g_e_1_1_texture2_d/"><strong>Texture2D</strong></a> &gt; &amp; Texture, const <a href="../struct_a_g_e_1_1_quad_properties/"><strong>QuadProperties</strong></a> &amp; Props) <br></td>
+<td style="text-align: left;"><a href="#function-drawquad-23"><strong>DrawQuad</strong></a> (const Ref&lt; <a href="../class_a_g_e_1_1_texture2_d/"><strong>Texture2D</strong></a> &gt; &amp; Texture, const <a href="../struct_a_g_e_1_1_quad_properties/"><strong>QuadProperties</strong></a> Props) <br><em>Draw a quad with the given properties and texture.</em>  <em>*</em> <em>* This function is used to draw a single quad in the 2D graphics pipeline. It takes as input the texture, quad properties (color, size, transform, texture coordinates, tiling factor, entity ID), and it updates the vertex buffer accordingly. If the current batch of quads exceeds the maximum index count, it will start a new batch.</em> <em>*</em> <em>*.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-drawquad-33"><strong>DrawQuad</strong></a> (const Ref&lt; <a href="../class_a_g_e_1_1_sub_texture2_d/"><strong>SubTexture2D</strong></a> &gt; &amp; Subtexture, const <a href="../struct_a_g_e_1_1_quad_properties/"><strong>QuadProperties</strong></a> &amp; Props) <br></td>
+<td style="text-align: left;"><a href="#function-drawquad-33"><strong>DrawQuad</strong></a> (const Ref&lt; <a href="../class_a_g_e_1_1_sub_texture2_d/"><strong>SubTexture2D</strong></a> &gt; &amp; Subtexture, const <a href="../struct_a_g_e_1_1_quad_properties/"><strong>QuadProperties</strong></a> Props) <br><em>Draw a quad using the provided properties and subtexture.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-drawrect-12"><strong>DrawRect</strong></a> (const <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> &amp; Position, const <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> &amp; Size, const <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> &amp; Color, int EntityID=-1) <br></td>
+<td style="text-align: left;"><a href="#function-drawrect-12"><strong>DrawRect</strong></a> (const <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> &amp; Position, const <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> &amp; Size, const <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> &amp; Color, int EntityID=-1) <br><em>Draws a 2D rectangle on the screen.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-drawrect-22"><strong>DrawRect</strong></a> (const <a href="../struct_a_g_e_1_1_matrix4_d/"><strong>Matrix4D</strong></a> &amp; Transform, const <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> &amp; Color, int EntityID=-1) <br></td>
+<td style="text-align: left;"><a href="#function-drawrect-22"><strong>DrawRect</strong></a> (const <a href="../struct_a_g_e_1_1_matrix4_d/"><strong>Matrix4D</strong></a> &amp; Transform, const <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> &amp; Color, int EntityID=-1) <br><em>Draws a 2D rectangle using lines.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-drawsprite"><strong>DrawSprite</strong></a> (<a href="../struct_a_g_e_1_1_sprite_renderer_component/"><strong>SpriteRendererComponent</strong></a> &amp; SRC) <br></td>
+<td style="text-align: left;"><a href="#function-drawsprite"><strong>DrawSprite</strong></a> (<a href="../struct_a_g_e_1_1_sprite_renderer_component/"><strong>SpriteRendererComponent</strong></a> &amp; SRC) <br><em>Draws a 2D sprite based on the</em> <a href="../struct_a_g_e_1_1_sprite_renderer_component/"><em><strong>SpriteRendererComponent</strong></em></a> <em>provided.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
@@ -132,55 +132,88 @@
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-drawtilemap"><strong>DrawTileMap</strong></a> (const Ref&lt; <a href="../class_a_g_e_1_1_tilemap/"><strong>Tilemap</strong></a> &gt; &amp; Map, const <a href="../struct_a_g_e_1_1_tilemap_properties/"><strong>TilemapProperties</strong></a> &amp; Props) <br></td>
+<td style="text-align: left;"><a href="#function-drawtile"><strong>DrawTile</strong></a> (const <a href="../struct_a_g_e_1_1_sprite_renderer_component/"><strong>SpriteRendererComponent</strong></a> &amp; SRC) <br><em>Draws a single tile using the</em> <a href="../struct_a_g_e_1_1_sprite_renderer_component/"><em><strong>SpriteRendererComponent</strong></em></a> <em>data.</em> <em>*</em> <em>* This function updates necessary buffers and statistics as needed, based on the details provided by the</em><a href="../struct_a_g_e_1_1_sprite_renderer_component/"><em><strong>SpriteRendererComponent</strong></em></a> <em>.</em> <em>*</em> <em>*.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-endscene"><strong>EndScene</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-drawtilemaplayers"><strong>DrawTileMapLayers</strong></a> (<a href="../struct_a_g_e_1_1_tile_map_renderer_component/"><strong>TileMapRendererComponent</strong></a> &amp; TMRC, tmx_map * Map, std::vector&lt; tmx_layer * &gt; layers) <br><em>Draws a tile map layer using the provided</em> <a href="../struct_a_g_e_1_1_tile_map_renderer_component/"><em><strong>TileMapRendererComponent</strong></em></a> <em>, tmx_map and vector of tmx_layer objects.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-flush"><strong>Flush</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-endscene"><strong>EndScene</strong></a> () <br><em>This function is used to end the current scene rendering in a 2D context. It calls the Flush2D method of the currently active GraphicsPipeline object, which should handle any remaining rendering tasks for this frame.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">void</td>
+<td style="text-align: left;"><a href="#function-flush"><strong>Flush</strong></a> () <br><em>This function flushes the 2D rendering pipeline.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">float</td>
-<td style="text-align: left;"><a href="#function-getlinewidth"><strong>GetLineWidth</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getlinewidth"><strong>GetLineWidth</strong></a> () <br><em>This function returns the current line width.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"><a href="../struct_a_g_e_1_1_statistics/"><strong>Statistics</strong></a></td>
-<td style="text-align: left;"><a href="#function-getstats"><strong>GetStats</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getstats"><strong>GetStats</strong></a> () <br><em>Get the statistics of the 2D renderer.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-init"><strong>Init</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-init"><strong>Init</strong></a> () <br><em>Initializes the</em> <a href="./"><em><strong>Renderer2D</strong></em></a> <em>object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setlinewidth"><strong>SetLineWidth</strong></a> (float Width) <br></td>
+<td style="text-align: left;"><a href="#function-setlinewidth"><strong>SetLineWidth</strong></a> (float Width) <br><em>Set the line width for rendering.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-shutdown"><strong>Shutdown</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-shutdown"><strong>Shutdown</strong></a> () <br><em>Shuts down the</em> <a href="./"><em><strong>Renderer2D</strong></em></a> <em>instance.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
 <h3 id="function-beginscene-12">function BeginScene [1/2]</h3>
+<p><em>Begins a 2D scene with the specified camera and transformation.</em> </p>
 <pre><code class="language-C++">static void AGE::Renderer2D::BeginScene (
     const Camera &amp; Camera,
     const Matrix4D &amp; Transform
 ) 
 </code></pre>
+<p>This function starts a new batch for rendering 2D objects, using the provided camera and transformation matrix. The camera is used to calculate the view-projection matrix that will be applied during rendering.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><a href="../class_a_g_e_1_1_camera/"><strong>Camera</strong></a> A const reference to the camera object representing the current scene's viewpoint. </li>
+<li><code>Transform</code> A const reference to a <a href="../struct_a_g_e_1_1_matrix4_d/"><strong>Matrix4D</strong></a> object representing any additional transformations to apply to this batch of objects.</li>
+</ul>
+<p>Begins a 2D scene with the specified camera and transformation.</p>
+<p>This function starts a new batch for rendering 2D objects using the provided camera and transformation matrix. The camera is used to calculate the view-projection matrix, which is then passed to the graphics pipeline.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><a href="../class_a_g_e_1_1_camera/"><strong>Camera</strong></a> A const reference to the camera object representing the current scene's viewpoint. </li>
+<li><code>Transform</code> A const reference to a <a href="../struct_a_g_e_1_1_matrix4_d/"><strong>Matrix4D</strong></a> object representing the transformation of the objects in the scene. </li>
+</ul>
 <hr>
 
 <h3 id="function-beginscene-22">function BeginScene [2/2]</h3>
+<p><em>Begin a 2D scene with the given camera.</em> </p>
 <pre><code class="language-C++">static void AGE::Renderer2D::BeginScene (
     const EditorCamera &amp; Camera
 ) 
 </code></pre>
+<p>This function begins a new 2D scene using the provided <a href="../class_a_g_e_1_1_editor_camera/"><strong>EditorCamera</strong></a>. It calculates the <a href="../class_a_g_e_1_1_world/"><strong>World</strong></a> View Projection Matrix (WVPM) based on the camera's projection, view matrix and world matrix. The WVPM is then set as the CameraUniformBuffer data. Finally, it starts a batch for rendering 2D objects.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><a href="../class_a_g_e_1_1_camera/"><strong>Camera</strong></a> The <a href="../class_a_g_e_1_1_editor_camera/"><strong>EditorCamera</strong></a> to use for this scene.</li>
+</ul>
+<p>Begins a 2D scene with the provided camera.</p>
+<p>This function sets up the necessary data for rendering 2D graphics using the given camera. It calculates the <a href="../class_a_g_e_1_1_world/"><strong>World</strong></a> View Projection Matrix (WVPM) based on the camera's projection, view matrix and world matrix. The WVPM is then set as a uniform buffer in the graphics pipeline. Finally, it starts a new batch of 2D rendering commands.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><a href="../class_a_g_e_1_1_camera/"><strong>Camera</strong></a> A reference to an <a href="../class_a_g_e_1_1_editor_camera/"><strong>EditorCamera</strong></a> object representing the camera for the scene.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-drawcircle">function DrawCircle</h3>
+<p><em>Draw a circle on the screen using the provided parameters.</em> </p>
 <pre><code class="language-C++">static void AGE::Renderer2D::DrawCircle (
     const Matrix4D &amp; Transform,
     const Vector4 &amp; Color,
@@ -189,9 +222,19 @@
     int EntityID=-1
 ) 
 </code></pre>
+<p>This function is used to draw a circle on the screen with the given transform, color, thickness, fade and entity ID. The function first checks if there are enough indices in the buffer for another circle. If not, it calls <code>NextBatch()</code> to create a new batch. Then, it creates a circle using the provided parameters and increments the index count and circle count stats.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Transform</code> The transformation matrix of the circle. </li>
+<li><code>Color</code> The color of the circle. </li>
+<li><code>Thickness</code> The thickness of the circle's outline. </li>
+<li><code>Fade</code> The fade value for the circle. </li>
+<li><code>EntityID</code> The ID of the entity associated with the circle. </li>
+</ul>
 <hr>
 
 <h3 id="function-drawline">function DrawLine</h3>
+<p><em>Draw a line in the 3D scene.</em> </p>
 <pre><code class="language-C++">static void AGE::Renderer2D::DrawLine (
     const Vector3 &amp; Pos0,
     const Vector3 &amp; Pos1,
@@ -199,32 +242,81 @@
     int EntityID=-1
 ) 
 </code></pre>
+<p>This function is used to draw a line segment in the 3D scene with a specified color and positions. The line is drawn between two points, Pos0 and Pos1. The color of the line can be customized by passing a <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> representing the RGBA values. The EntityID parameter allows for identification of which entity (if any) this line corresponds to.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Pos0</code> A constant reference to a <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> representing the start point of the line segment. </li>
+<li><code>Pos1</code> A constant reference to a <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> representing the end point of the line segment. </li>
+<li><code>Color</code> A constant reference to a <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> representing the RGBA color values for the line. </li>
+<li><code>EntityID</code> An integer value that represents the ID of the entity associated with this line (if any).</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Draw a line in the 3D scene.</p>
+<p>This function is used to draw a line segment in the 3D scene with a specified color and positions. The line will be drawn between two points, Pos0 and Pos1. The color of the line can also be specified using the Color parameter. The EntityID provides an identifier for the entity associated with this line.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Pos0</code> The starting position of the line segment. </li>
+<li><code>Pos1</code> The ending position of the line segment. </li>
+<li><code>Color</code> The RGBA color of the line segment. </li>
+<li><code>EntityID</code> An identifier for the entity associated with this line. </li>
+</ul>
 <hr>
 
 <h3 id="function-drawquad-13">function DrawQuad [1/3]</h3>
+<p><em>Draw a quadrilateral with the specified properties.</em> </p>
 <pre><code class="language-C++">static void AGE::Renderer2D::DrawQuad (
-    const QuadProperties &amp; Props
+    const QuadProperties Props
 ) 
 </code></pre>
+<p>This function draws a quadrilateral on the screen using the provided <a href="../struct_a_g_e_1_1_quad_properties/"><strong>QuadProperties</strong></a> object. The quad is drawn in the current graphics pipeline and its vertices are added to the vertex buffer if there's enough space. If not, it calls <code>NextBatch2D</code> to start a new batch.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Props</code> A structure containing properties of the quadrilateral such as color, size, transformation matrix, texture coordinates, tiling factor and entity ID.</li>
+</ul>
+<p>Draw a quadrilateral with the specified properties.</p>
+<p>This function draws a quadrilateral on the screen using the provided <a href="../struct_a_g_e_1_1_quad_properties/"><strong>QuadProperties</strong></a> object. It checks if there are enough indices to draw another quad, and if not, it calls RenderCommand::s_GraphicsPipeline-&gt;NextBatch2D() to start a new batch. Then it creates a quad with the specified properties and increments the index count by 6. Finally, it updates the stats for quads drawn.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Props</code> The <a href="../struct_a_g_e_1_1_quad_properties/"><strong>QuadProperties</strong></a> object containing all the information about the quad to be drawn. This includes color, size, transformation matrix, texture coordinates, tiling factor, and entity ID. </li>
+</ul>
 <hr>
 
 <h3 id="function-drawquad-23">function DrawQuad [2/3]</h3>
+<p><em>Draw a quad with the given properties and texture.</em>  <em>*</em> <em>* This function is used to draw a single quad in the 2D graphics pipeline. It takes as input the texture, quad properties (color, size, transform, texture coordinates, tiling factor, entity ID), and it updates the vertex buffer accordingly. If the current batch of quads exceeds the maximum index count, it will start a new batch.</em> <em>*</em> <em>*.</em></p>
 <pre><code class="language-C++">static void AGE::Renderer2D::DrawQuad (
     const Ref&lt; Texture2D &gt; &amp; Texture,
-    const QuadProperties &amp; Props
+    const QuadProperties Props
 ) 
 </code></pre>
+<p>*</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><a href="../class_a_g_e_1_1_texture/"><strong>Texture</strong></a> The reference to the texture that should be used for rendering this quad.
+ *</li>
+<li><code>Props</code> A structure containing all properties necessary for rendering (tint color, size, transform, texture coordinates, tiling factor, entity ID).</li>
+</ul>
 <hr>
 
 <h3 id="function-drawquad-33">function DrawQuad [3/3]</h3>
+<p><em>Draw a quad using the provided properties and subtexture.</em> </p>
 <pre><code class="language-C++">static void AGE::Renderer2D::DrawQuad (
     const Ref&lt; SubTexture2D &gt; &amp; Subtexture,
-    const QuadProperties &amp; Props
+    const QuadProperties Props
 ) 
 </code></pre>
+<p>This function is used to draw a single quad in 2D space. It takes a reference to a <a href="../class_a_g_e_1_1_sub_texture2_d/"><strong>SubTexture2D</strong></a>, which contains information about the texture of the quad, as well as a <a href="../struct_a_g_e_1_1_quad_properties/"><strong>QuadProperties</strong></a> struct that holds various properties related to the quad, such as its color, size, transformation matrix, texture coordinates, tiling factor and entity ID.</p>
+<p>The function first checks if there are enough indices in the current batch for another quad. If not, it calls RenderCommand::s_GraphicsPipeline-&gt;NextBatch2D() to start a new batch. It then retrieves the texture from the subtexture and checks if it is already bound (i.e., its pointer exists within the TextureSlots array).</p>
+<p>If the texture is not yet bound, it binds it by incrementing the TextureSlotIndex and adding a new entry to the TextureSlots array. It then creates a quad in the vertex buffer using RenderCommand::s_GraphicsPipeline-&gt;GetData().VertexBuffers["Quad"]-&gt;CreateQuad(), increments QuadIndexCount by 6 (since each quad is made up of two triangles, thus 6 indices), and increases the QuadCount statistic.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Subtexture</code> A reference to a <a href="../class_a_g_e_1_1_sub_texture2_d/"><strong>SubTexture2D</strong></a> object containing information about the texture of the quad. </li>
+<li><code>Props</code> A struct containing various properties related to the quad, such as its color, size, transformation matrix, texture coordinates, tiling factor and entity ID. </li>
+</ul>
 <hr>
 
 <h3 id="function-drawrect-12">function DrawRect [1/2]</h3>
+<p><em>Draws a 2D rectangle on the screen.</em> </p>
 <pre><code class="language-C++">static void AGE::Renderer2D::DrawRect (
     const Vector3 &amp; Position,
     const Vector2 &amp; Size,
@@ -232,22 +324,71 @@
     int EntityID=-1
 ) 
 </code></pre>
+<p>This function takes in a position, size and color to draw a rectangle on the screen. The rectangle is defined by four lines - two horizontal and two vertical.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Position</code> The center of the rectangle. </li>
+<li><code>Size</code> The width and height of the rectangle. </li>
+<li><code>Color</code> The color of the rectangle. </li>
+<li><code>EntityID</code> An identifier for the entity associated with this rectangle.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Draws a 2D rectangle on the screen.</p>
+<p>This function takes in a position, size and color to draw a rectangle on the screen. The rectangle is defined by four lines forming a quadrilateral.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Position</code> The center position of the rectangle. </li>
+<li><code>Size</code> The width and height of the rectangle. </li>
+<li><code>Color</code> The color of the rectangle. </li>
+<li><code>EntityID</code> An identifier for the entity associated with this rectangle.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-drawrect-22">function DrawRect [2/2]</h3>
+<p><em>Draws a 2D rectangle using lines.</em> </p>
 <pre><code class="language-C++">static void AGE::Renderer2D::DrawRect (
     const Matrix4D &amp; Transform,
     const Vector4 &amp; Color,
     int EntityID=-1
 ) 
 </code></pre>
+<p>This function takes in a transformation matrix, color and entity ID as parameters to draw a 2D rectangle on the screen. The transformation matrix is used to transform the vertices of the rectangle into world space. The color specifies the color of the rectangle and the entity ID can be used for further processing or identification of the drawn object.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Transform</code> A constant reference to a <a href="../struct_a_g_e_1_1_matrix4_d/"><strong>Matrix4D</strong></a> object representing the transformation matrix. </li>
+<li><code>Color</code> A constant reference to a <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> object representing the color of the rectangle. </li>
+<li><code>EntityID</code> An integer representing the entity ID of the drawn object.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Draws a 2D rectangle using lines.</p>
+<p>This function takes in a transformation matrix, color and entity ID as parameters to draw a 2D rectangle on the screen. The transformation matrix is used to transform the vertices of the rectangle into their corresponding positions on the screen. The color specifies the color of the rectangle and the entity ID can be used for any purpose such as debugging or identification purposes.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Transform</code> A constant reference to a <a href="../struct_a_g_e_1_1_matrix4_d/"><strong>Matrix4D</strong></a> object representing the transformation matrix. </li>
+<li><code>Color</code> A constant reference to a <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> object representing the color of the rectangle. </li>
+<li><code>EntityID</code> An integer representing the entity ID.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-drawsprite">function DrawSprite</h3>
+<p><em>Draws a 2D sprite based on the</em> <a href="../struct_a_g_e_1_1_sprite_renderer_component/"><em><strong>SpriteRendererComponent</strong></em></a> <em>provided.</em></p>
 <pre><code class="language-C++">static void AGE::Renderer2D::DrawSprite (
     SpriteRendererComponent &amp; SRC
 ) 
 </code></pre>
+<p>The function checks if there is a texture or animation textures in the component and draws accordingly. If neither are present, it draws a quad with no texture.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>SRC</code> Reference to the <a href="../struct_a_g_e_1_1_sprite_renderer_component/"><strong>SpriteRendererComponent</strong></a> that contains all necessary information for drawing the sprite.</li>
+</ul>
+<p>Draws a 2D sprite based on the <a href="../struct_a_g_e_1_1_sprite_renderer_component/"><strong>SpriteRendererComponent</strong></a> provided.</p>
+<p>The function checks if there is a <a href="../class_a_g_e_1_1_texture/"><strong>Texture</strong></a> or SubTexture in the <a href="../struct_a_g_e_1_1_sprite_renderer_component/"><strong>SpriteRendererComponent</strong></a>, and then calls the appropriate drawing functions accordingly. If neither are present, it draws a quad with no texture. </p>
 <hr>
 
 <h3 id="function-drawstring">function DrawString</h3>
@@ -257,49 +398,124 @@
 </code></pre>
 <hr>
 
-<h3 id="function-drawtilemap">function DrawTileMap</h3>
-<pre><code class="language-C++">static void AGE::Renderer2D::DrawTileMap (
-    const Ref&lt; Tilemap &gt; &amp; Map,
-    const TilemapProperties &amp; Props
+<h3 id="function-drawtile">function DrawTile</h3>
+<p><em>Draws a single tile using the</em> <a href="../struct_a_g_e_1_1_sprite_renderer_component/"><em><strong>SpriteRendererComponent</strong></em></a> <em>data.</em> <em>*</em> <em>* This function updates necessary buffers and statistics as needed, based on the details provided by the</em><a href="../struct_a_g_e_1_1_sprite_renderer_component/"><em><strong>SpriteRendererComponent</strong></em></a> <em>.</em> <em>*</em> <em>*.</em></p>
+<pre><code class="language-C++">static void AGE::Renderer2D::DrawTile (
+    const SpriteRendererComponent &amp; SRC
 ) 
 </code></pre>
+<p>*</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>SRC</code> The <a href="../struct_a_g_e_1_1_sprite_renderer_component/"><strong>SpriteRendererComponent</strong></a> containing all the information about the tile to be drawn.</li>
+</ul>
+<hr>
+
+<h3 id="function-drawtilemaplayers">function DrawTileMapLayers</h3>
+<p><em>Draws a tile map layer using the provided</em> <a href="../struct_a_g_e_1_1_tile_map_renderer_component/"><em><strong>TileMapRendererComponent</strong></em></a> <em>, tmx_map and vector of tmx_layer objects.</em></p>
+<pre><code class="language-C++">static void AGE::Renderer2D::DrawTileMapLayers (
+    TileMapRendererComponent &amp; TMRC,
+    tmx_map * Map,
+    std::vector&lt; tmx_layer * &gt; layers
+) 
+</code></pre>
+<p>This function prepares buffers for rendering tiles by creating index buffer, vertex array, and vertex buffers. It also sets up their layouts and pushes them into respective vectors in the graphics pipeline data structure. The function then iterates over the layers in reverse order to ensure correct drawing order (back-to-front).</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>TMRC</code> Reference to a <a href="../struct_a_g_e_1_1_tile_map_renderer_component/"><strong>TileMapRendererComponent</strong></a> object that holds rendering related information. </li>
+<li><code>Map</code> Pointer to a tmx_map object representing the tile map. </li>
+<li><code>layers</code> Vector of pointers to tmx_layer objects representing different layers in the tile map.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-endscene">function EndScene</h3>
+<p><em>This function is used to end the current scene rendering in a 2D context. It calls the Flush2D method of the currently active GraphicsPipeline object, which should handle any remaining rendering tasks for this frame.</em> </p>
 <pre><code class="language-C++">static void AGE::Renderer2D::EndScene () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>This function is used to end the current rendering scene. It flushes all pending draw calls in the 2D graphics pipeline.</p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-flush">function Flush</h3>
+<p><em>This function flushes the 2D rendering pipeline.</em> </p>
 <pre><code class="language-C++">static void AGE::Renderer2D::Flush () 
 </code></pre>
+<p>The <a href="../class_a_g_e_1_1_render_command/"><strong>RenderCommand</strong></a> class' s_GraphicsPipeline member is accessed and its Flush2D() method is called to flush all pending draw calls in the 2D graphics pipeline.</p>
+<p><strong>Returns:</strong></p>
+<p>void No return value.</p>
+<p>This function flushes the 2D graphics pipeline. It ensures all pending draw calls are executed and completed before any new ones can begin.</p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-getlinewidth">function GetLineWidth</h3>
+<p><em>This function returns the current line width.</em> </p>
 <pre><code class="language-C++">static float AGE::Renderer2D::GetLineWidth () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A float representing the current line width.</p>
+<p>This function returns the current line width.</p>
+<p><strong>Returns:</strong></p>
+<p>float The current line width as defined in the graphics pipeline data. </p>
 <hr>
 
 <h3 id="function-getstats">function GetStats</h3>
+<p><em>Get the statistics of the 2D renderer.</em> </p>
 <pre><code class="language-C++">static Statistics AGE::Renderer2D::GetStats () 
 </code></pre>
+<p>This function retrieves and returns the current statistics of the 2D renderer, including rendering time, draw calls, etc.</p>
+<p><strong>Returns:</strong></p>
+<p>A <a href="../struct_a_g_e_1_1_statistics/"><strong>Statistics</strong></a> object containing the current stats of the 2D renderer.</p>
+<p>Get the statistics of the 2D renderer.</p>
+<p>This function retrieves and returns the current statistics of the 2D renderer, including information about rendering performance such as draw calls, vertices, etc.</p>
+<p><strong>Returns:</strong></p>
+<p>A <a href="../struct_a_g_e_1_1_statistics/"><strong>Statistics</strong></a> object containing the current stats of the 2D renderer. </p>
 <hr>
 
 <h3 id="function-init">function Init</h3>
+<p><em>Initializes the</em> <a href="./"><em><strong>Renderer2D</strong></em></a> <em>object.</em></p>
 <pre><code class="language-C++">static void AGE::Renderer2D::Init () 
 </code></pre>
+<p>This function is used to initialize the <a href="./"><strong>Renderer2D</strong></a> object, setting it up for rendering operations. It does not take any parameters and returns void.</p>
+<p>Initializes the <a href="./"><strong>Renderer2D</strong></a> object.</p>
+<p>This function is used to initialize the <a href="./"><strong>Renderer2D</strong></a> object, setting it up for rendering operations. It does not take any parameters and returns void. </p>
 <hr>
 
 <h3 id="function-setlinewidth">function SetLineWidth</h3>
+<p><em>Set the line width for rendering.</em> </p>
 <pre><code class="language-C++">static void AGE::Renderer2D::SetLineWidth (
     float Width
 ) 
 </code></pre>
+<p>This function sets the line width used in rendering operations. The actual effect may vary depending on the specific renderer and its configuration.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Width</code> The new line width to be set. Must be a positive value.</li>
+</ul>
+<p>Set the line width for rendering.</p>
+<p>This function sets the line width used in rendering operations. The actual effect may vary depending on the specific renderer and its configuration.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Width</code> The new line width to be set. Must be a positive value. </li>
+</ul>
 <hr>
 
 <h3 id="function-shutdown">function Shutdown</h3>
+<p><em>Shuts down the</em> <a href="./"><em><strong>Renderer2D</strong></em></a> <em>instance.</em></p>
 <pre><code class="language-C++">static void AGE::Renderer2D::Shutdown () 
 </code></pre>
+<p>This function is used to clean up any resources that were allocated during initialization of the <a href="./"><strong>Renderer2D</strong></a> instance, such as freeing GPU memory or closing open graphics contexts. It also resets all internal state so a new call to Initialize() will start with an empty slate.</p>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Shuts down the <a href="./"><strong>Renderer2D</strong></a> instance.</p>
+<p>This function is used to clean up any resources that were allocated during initialization of the <a href="./"><strong>Renderer2D</strong></a> object, such as freeing GPU memory or closing open graphics contexts. It also resets all internal state so a new call to Initialize() will start with a fresh slate.</p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <hr />

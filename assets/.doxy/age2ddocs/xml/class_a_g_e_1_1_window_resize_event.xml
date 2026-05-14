@@ -3,6 +3,7 @@
   <compounddef id="class_a_g_e_1_1_window_resize_event" kind="class" language="C++" prot="public">
     <compoundname>AGE::WindowResizeEvent</compoundname>
     <basecompoundref refid="class_a_g_e_1_1_event" prot="public" virt="non-virtual">AGE::Event</basecompoundref>
+    <includes local="no">ApplicationEvent.h</includes>
     <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="class_a_g_e_1_1_window_resize_event_1a06d658ad3f00e176029f39a89986fc16" prot="private" static="no" mutable="no">
         <type>unsigned int</type>
@@ -16,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" line="27" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" bodystart="27" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" line="75" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" bodystart="75" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_window_resize_event_1a3a0453881d2f6496e79d0da82a639d05" prot="private" static="no" mutable="no">
         <type>unsigned int</type>
@@ -30,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" line="28" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" bodystart="28" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" line="76" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" bodystart="76" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -54,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" line="10" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" bodystart="10" bodyend="11"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" line="19" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" bodystart="19" bodyend="20"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_window_resize_event_1a389ee9b1d7f9c90009822276523f9617" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>unsigned int</type>
@@ -63,12 +64,19 @@
         <name>GetWidth</name>
         <qualifiedname>AGE::WindowResizeEvent::GetWidth</qualifiedname>
         <briefdescription>
+<para>Returns the width of the object. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function returns the current value of the private member variable &apos;m_Width&apos;. It provides a way to access and retrieve the width of an object.</para>
+<para><simplesect kind="return"><para>unsigned int The current width of the object. If no width is set, it will return 0.</para>
+</simplesect>
+Returns the width of the object. <simplesect kind="return"><para>The width as an unsigned integer value. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" line="14" column="21" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" bodystart="14" bodyend="14"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" line="34" column="21" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" bodystart="34" bodyend="34"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_window_resize_event_1a7f61ca9d2c1b3ad8ddd0e0268ef695dd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>unsigned int</type>
@@ -77,12 +85,21 @@
         <name>GetHeight</name>
         <qualifiedname>AGE::WindowResizeEvent::GetHeight</qualifiedname>
         <briefdescription>
+<para>Returns the height of an object. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is used to get the current height value of an object. It returns an unsigned integer representing the height.</para>
+<para><simplesect kind="return"><para>The current height of the object as an unsigned int. If no height has been set, it will return 0.</para>
+</simplesect>
+Returns the height of an object.</para>
+<para>This function returns the current value of the member variable &apos;m_Height&apos;. It is a getter method for this variable.</para>
+<para><simplesect kind="return"><para>The current height as an unsigned integer. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" line="15" column="21" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" bodystart="15" bodyend="15"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" line="49" column="21" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" bodystart="49" bodyend="49"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_window_resize_event_1a3b28b1c4e34e5b6b41ffce7d5f8e87cd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type>std::string</type>
@@ -92,17 +109,28 @@
         <qualifiedname>AGE::WindowResizeEvent::ToString</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_event_1abb5a1a933883fb8fb99999523e8805a8">ToString</reimplements>
         <briefdescription>
+<para>This function returns a string representation of the <ref refid="class_a_g_e_1_1_window_resize_event" kindref="compound">WindowResizeEvent</ref> object. The returned string includes the width and height of the window that was resized. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>A string containing the details about the event, such as the new width and height of the window.</para>
+</simplesect>
+Converts the <ref refid="class_a_g_e_1_1_window_resize_event" kindref="compound">WindowResizeEvent</ref> object into a string format.</para>
+<para>The function constructs and returns a string that represents the current state of the <ref refid="class_a_g_e_1_1_window_resize_event" kindref="compound">WindowResizeEvent</ref> object. This includes details about the width and height of the window.</para>
+<para><simplesect kind="return"><para>A string representation of the <ref refid="class_a_g_e_1_1_window_resize_event" kindref="compound">WindowResizeEvent</ref> object, including its width and height. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" line="17" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" bodystart="17" bodyend="22"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" line="65" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" bodystart="65" bodyend="70"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>Represents a window resize event. </para>
     </briefdescription>
     <detaileddescription>
+<para>This class is used to represent a window resize event, which includes the width and height of the resized window.</para>
+<para>This class represents a window resize event. It is triggered when the size of an application&apos;s window changes. </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="2">
@@ -128,7 +156,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" line="7" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" bodystart="8" bodyend="29"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" line="16" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" bodystart="17" bodyend="77"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_event_1ae76fb834a0ee69601539da677f1333fa" prot="public" virt="pure-virtual"><scope>AGE::WindowResizeEvent</scope><name>GetCategoryFlags</name></member>
       <member refid="class_a_g_e_1_1_event_1a4cfb95332801a921e9449a03a34b87b0" prot="public" virt="pure-virtual"><scope>AGE::WindowResizeEvent</scope><name>GetEventType</name></member>

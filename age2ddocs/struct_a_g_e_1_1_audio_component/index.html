@@ -115,19 +115,19 @@
 <tbody>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-addsound"><strong>AddSound</strong></a> (Ref&lt; <a href="../class_a_g_e_1_1_audio_source/"><strong>AudioSource</strong></a> &gt; Sound) <br></td>
+<td style="text-align: left;"><a href="#function-addsound"><strong>AddSound</strong></a> (Ref&lt; <a href="../class_a_g_e_1_1_audio_source/"><strong>AudioSource</strong></a> &gt; Sound) <br><em>This function adds a sound to the Sounds vector.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-audiocomponent-12"><strong>AudioComponent</strong></a> (const Ref&lt; <a href="../class_a_g_e_1_1_audio_engine/"><strong>AudioEngine</strong></a> &gt; &amp; Engine) <br></td>
+<td style="text-align: left;"><a href="#function-audiocomponent-12"><strong>AudioComponent</strong></a> (const Ref&lt; <a href="../class_a_g_e_1_1_audio_engine/"><strong>AudioEngine</strong></a> &gt; &amp; Engine) <br><em>Constructs an instance of</em> <a href="./"><em><strong>AudioComponent</strong></em></a> <em>with a reference to the audio engine.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-audiocomponent-22"><strong>AudioComponent</strong></a> (const <a href="./"><strong>AudioComponent</strong></a> &amp;) = default<br></td>
+<td style="text-align: left;"><a href="#function-audiocomponent-22"><strong>AudioComponent</strong></a> (const <a href="./"><strong>AudioComponent</strong></a> &amp;) = default<br><em>Default copy constructor for the</em> <a href="./"><em><strong>AudioComponent</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">Ref&lt; <a href="../class_a_g_e_1_1_audio_engine/"><strong>AudioEngine</strong></a> &gt; &amp;</td>
-<td style="text-align: left;"><a href="#function-getaudioengine"><strong>GetAudioEngine</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getaudioengine"><strong>GetAudioEngine</strong></a> () <br><em>Returns a reference to the global instance of the</em> <a href="../class_a_g_e_1_1_audio_engine/"><em><strong>AudioEngine</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
@@ -142,11 +142,11 @@
 <tbody>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-deserialize"><strong>Deserialize</strong></a> (<a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> * Serializer, <a href="./"><strong>AudioComponent</strong></a> &amp; Data) <br></td>
+<td style="text-align: left;"><a href="#function-deserialize"><strong>Deserialize</strong></a> (<a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> * Serializer, <a href="./"><strong>AudioComponent</strong></a> &amp; Data) <br><em>This function deserializes data from a serialized format into an</em> <a href="./"><em><strong>AudioComponent</strong></em></a> <em>object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-serialize"><strong>Serialize</strong></a> (<a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> * Serializer, const <a href="./"><strong>AudioComponent</strong></a> &amp; Data) <br></td>
+<td style="text-align: left;"><a href="#function-serialize"><strong>Serialize</strong></a> (<a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> * Serializer, const <a href="./"><strong>AudioComponent</strong></a> &amp; Data) <br><em>This function serializes an instance of the</em> <a href="./"><em><strong>AudioComponent</strong></em></a> <em>class into a</em><a href="../class_a_g_e_1_1_data_writer/"><em><strong>DataWriter</strong></em></a> <em>object.</em></td>
 </tr>
 </tbody>
 </table>
@@ -172,45 +172,80 @@
 <hr>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-addsound">function AddSound</h3>
+<p><em>This function adds a sound to the Sounds vector.</em> </p>
 <pre><code class="language-C++">inline void AGE::AudioComponent::AddSound (
     Ref&lt; AudioSource &gt; Sound
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Sound</code> A reference to an <a href="../class_a_g_e_1_1_audio_source/"><strong>AudioSource</strong></a> object which represents the sound to be added. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-audiocomponent-12">function AudioComponent [1/2]</h3>
+<p><em>Constructs an instance of</em> <a href="./"><em><strong>AudioComponent</strong></em></a> <em>with a reference to the audio engine.</em></p>
 <pre><code class="language-C++">inline AGE::AudioComponent::AudioComponent (
     const Ref&lt; AudioEngine &gt; &amp; Engine
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Engine</code> A reference to the audio engine. </li>
+</ul>
 <hr>
 
 <h3 id="function-audiocomponent-22">function AudioComponent [2/2]</h3>
+<p><em>Default copy constructor for the</em> <a href="./"><em><strong>AudioComponent</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::AudioComponent::AudioComponent (
     const AudioComponent &amp;
 ) = default
 </code></pre>
+<p>This function is used to create a new instance of an <a href="./"><strong>AudioComponent</strong></a> by copying data from another existing instance. It uses the '= default' syntax in C++, which instructs the compiler to generate a default implementation for this member function.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>other</code> The existing <a href="./"><strong>AudioComponent</strong></a> instance to copy data from. </li>
+</ul>
 <hr>
 
 <h3 id="function-getaudioengine">function GetAudioEngine</h3>
+<p><em>Returns a reference to the global instance of the</em> <a href="../class_a_g_e_1_1_audio_engine/"><em><strong>AudioEngine</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">inline Ref&lt; AudioEngine &gt; &amp; AGE::AudioComponent::GetAudioEngine () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>Reference to the global <a href="../class_a_g_e_1_1_audio_engine/"><strong>AudioEngine</strong></a> object. </p>
 <hr>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
 <h3 id="function-deserialize">function Deserialize</h3>
+<p><em>This function deserializes data from a serialized format into an</em> <a href="./"><em><strong>AudioComponent</strong></em></a> <em>object.</em></p>
 <pre><code class="language-C++">static inline void AGE::AudioComponent::Deserialize (
     DataReader * Serializer,
     AudioComponent &amp; Data
 ) 
 </code></pre>
+<p>The function takes in two parameters - a pointer to a <a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> object and a reference to an <a href="./"><strong>AudioComponent</strong></a> object. It does not return anything, but it modifies the <a href="./"><strong>AudioComponent</strong></a> object by filling its fields with data read from the <a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> object.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Serializer</code> A pointer to a <a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> object that contains serialized data. </li>
+<li><code>Data</code> A reference to an <a href="./"><strong>AudioComponent</strong></a> object which will be filled with deserialized data. </li>
+</ul>
 <hr>
 
 <h3 id="function-serialize">function Serialize</h3>
+<p><em>This function serializes an instance of the</em> <a href="./"><em><strong>AudioComponent</strong></em></a> <em>class into a</em><a href="../class_a_g_e_1_1_data_writer/"><em><strong>DataWriter</strong></em></a> <em>object.</em></p>
 <pre><code class="language-C++">static inline void AGE::AudioComponent::Serialize (
     DataWriter * Serializer,
     const AudioComponent &amp; Data
 ) 
 </code></pre>
+<p>The function takes two parameters: a pointer to a <a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> object and a constant reference to an <a href="./"><strong>AudioComponent</strong></a> object. It does not return anything, so void is used as the return type.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Serializer</code> A pointer to a <a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> object that will be serializing the data. </li>
+<li><code>Data</code> The constant reference to an <a href="./"><strong>AudioComponent</strong></a> object that needs to be serialized. </li>
+</ul>
 <hr>
 
 <hr />

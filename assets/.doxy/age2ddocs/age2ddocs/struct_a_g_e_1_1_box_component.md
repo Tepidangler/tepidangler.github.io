@@ -57,8 +57,8 @@
 
 | Type | Name |
 | ---: | :--- |
-|   | [**BoxComponent**](#function-boxcomponent-12) () = default<br> |
-|   | [**BoxComponent**](#function-boxcomponent-22) (const [**BoxComponent**](struct_a_g_e_1_1_box_component.md) &) = default<br> |
+|   | [**BoxComponent**](#function-boxcomponent-12) () = default<br>_Default constructor for the_ [_**BoxComponent**_](struct_a_g_e_1_1_box_component.md) _class._ |
+|   | [**BoxComponent**](#function-boxcomponent-22) (const [**BoxComponent**](struct_a_g_e_1_1_box_component.md) &) = default<br>_Default copy constructor for the_ [_**BoxComponent**_](struct_a_g_e_1_1_box_component.md) _class._ |
 
 
 
@@ -122,6 +122,7 @@ Ref<Texture2D> AGE::BoxComponent::Texture;
 
 ### function BoxComponent [1/2]
 
+_Default constructor for the_ [_**BoxComponent**_](struct_a_g_e_1_1_box_component.md) _class._
 ```C++
 AGE::BoxComponent::BoxComponent () = default
 ```
@@ -135,6 +136,7 @@ AGE::BoxComponent::BoxComponent () = default
 
 ### function BoxComponent [2/2]
 
+_Default copy constructor for the_ [_**BoxComponent**_](struct_a_g_e_1_1_box_component.md) _class._
 ```C++
 AGE::BoxComponent::BoxComponent (
     const BoxComponent &
@@ -143,6 +145,20 @@ AGE::BoxComponent::BoxComponent (
 
 
 
+This function is used to create a new instance of the [**BoxComponent**](struct_a_g_e_1_1_box_component.md) class by copying an existing one. It uses the '= default' syntax, which tells the compiler to use the default implementation provided by the compiler.
+
+
+
+
+**Parameters:**
+
+
+* `other` The [**BoxComponent**](struct_a_g_e_1_1_box_component.md) object to be copied. 
+
+
+
+
+        
 
 <hr>
 

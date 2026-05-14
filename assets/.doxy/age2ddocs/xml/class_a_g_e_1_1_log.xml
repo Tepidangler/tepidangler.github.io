@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" line="63" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" bodystart="63" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" line="109" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" bodystart="109" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_log_1ad2b6fea0bed9fee0470e150878384fd2" prot="private" static="yes" mutable="no">
         <type>Ref&lt; spdlog::logger &gt;</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" line="64" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" bodystart="64" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" line="110" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" bodystart="110" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_log_1a1b81246561723e83b91721eb7c462bca" prot="private" static="yes" mutable="no">
         <type>std::vector&lt; char &gt;</type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" line="66" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" bodystart="66" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" line="112" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" bodystart="112" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_log_1a4af93c52ce8987878766f2ccc471433b" prot="private" static="yes" mutable="no">
         <type>std::vector&lt; size_t &gt;</type>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" line="67" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" bodystart="67" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" line="113" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" bodystart="113" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_log_1a3fe78aa23afb43186f9afb7e1e222e3a" prot="private" static="yes" mutable="no">
         <type>std::vector&lt; LogType &gt;</type>
@@ -71,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" line="68" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" bodystart="68" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" line="114" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" bodystart="114" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -82,12 +82,18 @@
         <name>Init</name>
         <qualifiedname>AGE::Log::Init</qualifiedname>
         <briefdescription>
+<para>Initializes the logging system with specific formatting and log levels for two different logger instances, &quot;AGECORE&quot; and &quot;AGEGAME&quot;. The pattern used is &quot;[TIME] NAME: MESSAGE&quot;, where TIME represents the time at which the message was logged, NAME is the name of the logger instance that produced the message, and MESSAGE is the actual log message. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>void</para>
+</simplesect>
+Initializes the logging system with specific format and log levels for two different logger instances, &quot;AGECORE&quot; and &quot;AGEGAME&quot;. The pattern set is &quot;%^[%T] %n: %v%$&quot;, which includes timestamp, logger name, and message in color. Both loggers are set to trace level. <simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" line="52" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/Log.cpp" bodystart="14" bodyend="24"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" line="52" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/Log.cpp" bodystart="24" bodyend="34"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_log_1ab97ee2f616088017ddd909f5434d6f06" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>Ref&lt; spdlog::logger &gt; &amp;</type>
@@ -96,12 +102,18 @@
         <name>GetCoreLogger</name>
         <qualifiedname>AGE::Log::GetCoreLogger</qualifiedname>
         <briefdescription>
+<para>This function returns a reference to the core logger used by the application. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>A reference to the core logger.</para>
+</simplesect>
+This function returns a reference to the core logger of the application. The core logger is used for logging messages that are important and should be visible in all parts of the application. It&apos;s implemented as an inline static member function of the Application class, so it can be accessed directly from anywhere within the code without needing to create a new instance every time. <simplesect kind="return"><para>A reference to the core logger object. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" line="54" column="19" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" bodystart="54" bodyend="54"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" line="65" column="19" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" bodystart="65" bodyend="65"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_log_1ab5c0d8a2651902fbe544cb04ee4cb932" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>Ref&lt; spdlog::logger &gt; &amp;</type>
@@ -110,12 +122,19 @@
         <name>GetGameLogger</name>
         <qualifiedname>AGE::Log::GetGameLogger</qualifiedname>
         <briefdescription>
+<para>This function returns a reference to the game logger object. </para>
         </briefdescription>
         <detaileddescription>
+<para>The game logger is used for logging messages related to the gameplay. It provides detailed information about what&apos;s happening in the game, which can be useful for debugging and performance tuning.</para>
+<para><simplesect kind="return"><para>A reference to the game logger object.</para>
+</simplesect>
+This function returns a reference to the game logger object. <simplesect kind="return"><para>A reference to the game logger object. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" line="55" column="19" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" bodystart="55" bodyend="55"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" line="77" column="19" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" bodystart="77" bodyend="77"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_log_1a292f3269d949d267f59d1663d45c8111" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::vector&lt; char &gt; &amp;</type>
@@ -124,12 +143,18 @@
         <name>GetLogs</name>
         <qualifiedname>AGE::Log::GetLogs</qualifiedname>
         <briefdescription>
+<para>This function returns a reference to the vector &apos;s_Logs&apos;. The purpose of this function is to provide access to the logs for other parts of the program. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>A reference to the vector &apos;s_Logs&apos;</para>
+</simplesect>
+This function returns a reference to the vector &apos;s_Logs&apos;. The purpose of this function is to provide access to the logs for other parts of the program. <simplesect kind="return"><para>A reference to the vector &apos;s_Logs&apos; </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" line="56" column="27" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" bodystart="56" bodyend="56"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" line="86" column="27" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" bodystart="86" bodyend="86"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_log_1a4315846a52a37900638a64f692dd1674" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::vector&lt; size_t &gt; &amp;</type>
@@ -138,12 +163,18 @@
         <name>GetOffsets</name>
         <qualifiedname>AGE::Log::GetOffsets</qualifiedname>
         <briefdescription>
+<para>This function returns a reference to the vector <computeroutput>s_Offsets</computeroutput> which is used for storing offset values. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>A reference to the vector <computeroutput>s_Offsets</computeroutput>.</para>
+</simplesect>
+This function returns a reference to the vector &apos;s_Offsets&apos;. It is used for storing offset values. <simplesect kind="return"><para>A reference to the vector &apos;s_Offsets&apos; </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" line="57" column="27" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" bodystart="57" bodyend="57"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" line="95" column="27" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" bodystart="95" bodyend="95"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_log_1a5c4346e70239543f5909d48ba7013eba" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::vector&lt; LogType &gt; &amp;</type>
@@ -152,19 +183,25 @@
         <name>GetTypes</name>
         <qualifiedname>AGE::Log::GetTypes</qualifiedname>
         <briefdescription>
+<para>Returns a reference to the internal vector of LogTypes. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Reference to the internal vector of LogTypes.</para>
+</simplesect>
+This function returns a reference to the vector <computeroutput>s_Type</computeroutput> which holds all possible log types. <simplesect kind="return"><para>A reference to the vector of LogTypes. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" line="58" column="27" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" bodystart="58" bodyend="58"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" line="104" column="27" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" bodystart="104" bodyend="104"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" line="48" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" bodystart="49" bodyend="70"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" line="48" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Log.h" bodystart="49" bodyend="116"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_log_1ab97ee2f616088017ddd909f5434d6f06" prot="public" virt="non-virtual"><scope>AGE::Log</scope><name>GetCoreLogger</name></member>
       <member refid="class_a_g_e_1_1_log_1ab5c0d8a2651902fbe544cb04ee4cb932" prot="public" virt="non-virtual"><scope>AGE::Log</scope><name>GetGameLogger</name></member>

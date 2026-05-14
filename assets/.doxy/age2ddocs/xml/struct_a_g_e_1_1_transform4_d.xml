@@ -3,6 +3,38 @@
   <compounddef id="struct_a_g_e_1_1_transform4_d" kind="struct" language="C++" prot="public">
     <compoundname>AGE::Transform4D</compoundname>
     <basecompoundref refid="struct_a_g_e_1_1_matrix4_d" prot="public" virt="non-virtual">AGE::Matrix4D</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_a_g_e_1_1_transform4_d_1aa17aaea32263558194cbb26f34926c84" prot="public" static="no" mutable="no">
+        <type>COMMENT</type>
+        <definition>COMMENT AGE::Transform4D::__pad0__</definition>
+        <argsstring></argsstring>
+        <name>__pad0__</name>
+        <qualifiedname>AGE::Transform4D::__pad0__</qualifiedname>
+        <bitfield>CONFIDENCE: 1.0</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="936" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="947" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_transform4_d_1a55defe116439120633868ac6a1c54e14" prot="public" static="no" mutable="no">
+        <type>COMMENT</type>
+        <definition>COMMENT AGE::Transform4D::__pad1__</definition>
+        <argsstring></argsstring>
+        <name>__pad1__</name>
+        <qualifiedname>AGE::Transform4D::__pad1__</qualifiedname>
+        <bitfield>CONFIDENCE: 1.0</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="949" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="960" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
     <sectiondef kind="public-func">
       <memberdef kind="function" id="struct_a_g_e_1_1_transform4_d_1a9cc575875db101d3b7b225532c725c32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -11,12 +43,17 @@
         <name>Transform4D</name>
         <qualifiedname>AGE::Transform4D::Transform4D</qualifiedname>
         <briefdescription>
+<para>Default constructor for the <ref refid="struct_a_g_e_1_1_transform4_d" kindref="compound">Transform4D</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function initializes a new instance of the <ref refid="struct_a_g_e_1_1_transform4_d" kindref="compound">Transform4D</ref> class with default values. The default values are typically set to identity transformations, but this behavior can be overridden in derived classes.</para>
+<para><simplesect kind="return"><para>A new instance of the <ref refid="struct_a_g_e_1_1_transform4_d" kindref="compound">Transform4D</ref> class with default values.</para>
+</simplesect>
+Default constructor for the <ref refid="struct_a_g_e_1_1_transform4_d" kindref="compound">Transform4D</ref> class. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="300" column="1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="910" column="1"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_transform4_d_1a72e48aaecbb7958346163a4bb624d061" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -73,12 +110,37 @@
           <declname>n23</declname>
         </param>
         <briefdescription>
+<para>Constructs a 4x4 transformation matrix from the given parameters. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function initializes a 4x4 transformation matrix with the provided values. It assumes that the last row and column are [0, 0, 0, 1] respectively.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n00</parametername>
+<parametername>n01</parametername>
+<parametername>n02</parametername>
+<parametername>n03</parametername>
+<parametername>n10</parametername>
+<parametername>n11</parametername>
+<parametername>n12</parametername>
+<parametername>n13</parametername>
+<parametername>n20</parametername>
+<parametername>n21</parametername>
+<parametername>n22</parametername>
+<parametername>n23</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Values for the matrix elements.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="302" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="302" bodyend="313"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="923" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="923" bodyend="934"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_transform4_d_1aa6ce1b491d39771a9f381a01d983d388" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -108,7 +170,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="315" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="315" bodyend="325"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="962" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="962" bodyend="972"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_transform4_d_1a45b70c0881a514aa03de209ac1509d66" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> &amp;</type>
@@ -121,12 +183,36 @@
           <declname>j</declname>
         </param>
         <briefdescription>
+<para>This function is an overloaded operator that returns a reference to the <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object at index &apos;j&apos; in the array. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the element in the array to return. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object at index &apos;j&apos;.</para>
+</simplesect>
+This function is an overloaded operator [] that returns a reference to the <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object at index &apos;j&apos; in the array. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the element to be accessed in the array. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object at index &apos;j&apos;. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="327" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="327" bodyend="330"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="984" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="984" bodyend="987"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_transform4_d_1a15ea8acdab9894059523b47ade264840" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> &amp;</type>
@@ -139,12 +225,37 @@
           <declname>j</declname>
         </param>
         <briefdescription>
+<para>This function returns a constant reference to the <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object at index &apos;j&apos; in the array. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object in the array. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A constant reference to the <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object at index &apos;j&apos;.</para>
+</simplesect>
+This function returns a constant reference to the <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object at index &apos;j&apos; in the array.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object in the array. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A constant reference to the <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object at index &apos;j&apos;. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="332" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="332" bodyend="335"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="1001" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="1001" bodyend="1004"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_transform4_d_1aae619b38c7f0d0f11137198f44966940" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref> &amp;</type>
@@ -156,12 +267,21 @@
           <type>void</type>
         </param>
         <briefdescription>
+<para>Returns the translation of this object. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function returns a reference to the translation component of this object. The returned value is const and should not be modified by the caller.</para>
+<para><simplesect kind="return"><para>A constant reference to the translation component of this object.</para>
+</simplesect>
+Returns the translation of this object.</para>
+<para>This function returns a reference to the translation component of this object. The returned value is interpreted as a const <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref>&amp;, meaning that it cannot be modified by the caller.</para>
+<para><simplesect kind="return"><para>A constant reference to the translation component of this object. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="337" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="337" bodyend="340"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="1022" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="1022" bodyend="1025"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_transform4_d_1a0e5247a08028be1ddcb53d03668531d4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -174,12 +294,35 @@
           <declname>p</declname>
         </param>
         <briefdescription>
+<para>Sets the translation of the object to a new position specified by a <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref> object. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function sets the coordinates (x, y, z) of the fourth row and column of the transformation matrix to match those of the input <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref> object &apos;p&apos;. The purpose of this function is to update the translation component of the transformation matrix based on a new position.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A constant reference to a <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref> object representing the new position.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Sets the translation of the object to a new position defined by a <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref> object.</para>
+<para>This function sets the coordinates (x, y, z) of the fourth row and columns of the transformation matrix to match those of the input <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref> object &apos;p&apos;. It is assumed that the transformation matrix &apos;n&apos; has been properly initialized before this call.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A const reference to a <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref> object representing the new position. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="342" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="342" bodyend="347"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="1044" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="1044" bodyend="1049"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -210,8 +353,10 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="298" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="299" bodyend="348"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="897" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="898" bodyend="1050"/>
     <listofallmembers>
+      <member refid="struct_a_g_e_1_1_transform4_d_1aa17aaea32263558194cbb26f34926c84" prot="public" virt="non-virtual"><scope>AGE::Transform4D</scope><name>__pad0__</name></member>
+      <member refid="struct_a_g_e_1_1_transform4_d_1a55defe116439120633868ac6a1c54e14" prot="public" virt="non-virtual"><scope>AGE::Transform4D</scope><name>__pad1__</name></member>
       <member refid="struct_a_g_e_1_1_transform4_d_1aae619b38c7f0d0f11137198f44966940" prot="public" virt="non-virtual"><scope>AGE::Transform4D</scope><name>GetTranslation</name></member>
       <member refid="struct_a_g_e_1_1_matrix4_d_1ac5e0d70aad26254f837a88355149700e" prot="public" virt="non-virtual"><scope>AGE::Transform4D</scope><name>Matrix4D</name></member>
       <member refid="struct_a_g_e_1_1_matrix4_d_1aa6bb8605698dbe53c2d14ac83838c9e0" prot="public" virt="non-virtual"><scope>AGE::Transform4D</scope><name>Matrix4D</name></member>

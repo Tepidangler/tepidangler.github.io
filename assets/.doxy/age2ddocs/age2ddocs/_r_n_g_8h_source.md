@@ -57,17 +57,17 @@ namespace AGE
         static void Init(uint32_t Seed = 0);
 
         //SRand-like (seed-related) methods
-        static void ResetSeed(uint32_t Seed, int Position = 0) 
+static void ResetSeed(uint32_t Seed, int Position = 0) 
         {   
             s_Seed = Seed; 
             s_Position = Position; 
         }
 
-        static uint32_t GetSeed() { return s_Seed; }
+static uint32_t GetSeed() { return s_Seed; }
 
-        static void SetCurrentPosition(int Position) { s_Position = Position; }
+static void SetCurrentPosition(int Position) { s_Position = Position; }
 
-        static int GetCurrentPosition() { return s_Position; }
+static int GetCurrentPosition() { return s_Position; }
 
         //Rand-like (sequential random rolls) methods. Each one advances the RNG to it's next Position
 

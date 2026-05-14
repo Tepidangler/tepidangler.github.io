@@ -1,10 +1,10 @@
 
 
-# Struct AGE::TilemapVertex
+# Struct AGE::TileVertex
 
 
 
-[**ClassList**](annotated.md) **>** [**AGE**](namespace_a_g_e.md) **>** [**TilemapVertex**](struct_a_g_e_1_1_tilemap_vertex.md)
+[**ClassList**](annotated.md) **>** [**AGE**](namespace_a_g_e.md) **>** [**TileVertex**](struct_a_g_e_1_1_tile_vertex.md)
 
 
 
@@ -38,8 +38,9 @@
 |  [**Vector4**](struct_a_g_e_1_1_vector4.md) | [**VertexColor**](#variable-vertexcolor)  <br> |
 |  int | [**VertexEntityID**](#variable-vertexentityid)   = `-1`<br> |
 |  [**Vector3**](struct_a_g_e_1_1_vector3.md) | [**VertexPosition**](#variable-vertexposition)  <br> |
-|  uint32\_t | [**VertexTSID**](#variable-vertextsid)   = `0`<br> |
-|  [**Vector2**](struct_a_g_e_1_1_vector2.md) | [**VertexUV**](#variable-vertexuv)  <br> |
+|  [**Vector2**](struct_a_g_e_1_1_vector2.md) | [**VertexTexCoords**](#variable-vertextexcoords)  <br> |
+|  float | [**VertexTexID**](#variable-vertextexid)  <br> |
+|  float | [**VertexTilingFactor**](#variable-vertextilingfactor)  <br> |
 
 
 
@@ -92,7 +93,7 @@
 ### variable VertexColor 
 
 ```C++
-Vector4 AGE::TilemapVertex::VertexColor;
+Vector4 AGE::TileVertex::VertexColor;
 ```
 
 
@@ -105,7 +106,7 @@ Vector4 AGE::TilemapVertex::VertexColor;
 ### variable VertexEntityID 
 
 ```C++
-int AGE::TilemapVertex::VertexEntityID;
+int AGE::TileVertex::VertexEntityID;
 ```
 
 
@@ -118,7 +119,7 @@ int AGE::TilemapVertex::VertexEntityID;
 ### variable VertexPosition 
 
 ```C++
-Vector3 AGE::TilemapVertex::VertexPosition;
+Vector3 AGE::TileVertex::VertexPosition;
 ```
 
 
@@ -128,10 +129,10 @@ Vector3 AGE::TilemapVertex::VertexPosition;
 
 
 
-### variable VertexTSID 
+### variable VertexTexCoords 
 
 ```C++
-uint32_t AGE::TilemapVertex::VertexTSID;
+Vector2 AGE::TileVertex::VertexTexCoords;
 ```
 
 
@@ -141,10 +142,23 @@ uint32_t AGE::TilemapVertex::VertexTSID;
 
 
 
-### variable VertexUV 
+### variable VertexTexID 
 
 ```C++
-Vector2 AGE::TilemapVertex::VertexUV;
+float AGE::TileVertex::VertexTexID;
+```
+
+
+
+
+<hr>
+
+
+
+### variable VertexTilingFactor 
+
+```C++
+float AGE::TileVertex::VertexTilingFactor;
 ```
 
 

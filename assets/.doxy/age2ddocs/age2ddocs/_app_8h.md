@@ -48,7 +48,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**App**](class_a_g_e_1_1_app.md) <br> |
+| class | [**App**](class_a_g_e_1_1_app.md) <br>_The main application class._  |
 | struct | [**AppConfig**](struct_a_g_e_1_1_app_config.md) <br> |
 | struct | [**ApplicationCommandLineArgs**](struct_a_g_e_1_1_application_command_line_args.md) <br> |
 

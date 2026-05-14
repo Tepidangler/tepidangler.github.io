@@ -15,37 +15,44 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="102" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" bodystart="102" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="135" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" bodystart="135" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
-      <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1ad37ce5f62d4c41b2e76449cb04908e6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>AGE::Physics2D::Physics2D</definition>
+      <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1a12f65d5e7b23ae3634488835f675708e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Ph</type>
+        <definition>Ph AGE::Physics2D::ysics2D</definition>
         <argsstring>()=default</argsstring>
-        <name>Physics2D</name>
-        <qualifiedname>AGE::Physics2D::Physics2D</qualifiedname>
+        <name>ysics2D</name>
+        <qualifiedname>AGE::Physics2D::ysics2D</qualifiedname>
         <briefdescription>
+<para>Default constructor for the ysics2D class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function initializes a new instance of the ysics2D class with default values. It does not take any parameters and returns an object of type ysics2D.</para>
+<para><simplesect kind="return"><para>A new instance of the ysics2D class with default values. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="25" column="1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="33" column="1"/>
       </memberdef>
-      <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1abc1e0715af2e0158acc97998f1ac9345" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>AGE::Physics2D::~Physics2D</definition>
+      <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1a2fa737f1c618396f9538dce9a6010221" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>~P</type>
+        <definition>~P AGE::Physics2D::hysics2D</definition>
         <argsstring>()=default</argsstring>
-        <name>~Physics2D</name>
-        <qualifiedname>AGE::Physics2D::~Physics2D</qualifiedname>
+        <name>hysics2D</name>
+        <qualifiedname>AGE::Physics2D::hysics2D</qualifiedname>
         <briefdescription>
+<para>Default constructor for the <ref refid="class_a_g_e_1_1_physics2_d" kindref="compound">Physics2D</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function initializes a new instance of the <ref refid="class_a_g_e_1_1_physics2_d" kindref="compound">Physics2D</ref> class with default values. It does not take any parameters and returns nothing. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="27" column="1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="41" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1aa946f6a04682792de0513006b5ac48b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -58,12 +65,26 @@
           <declname>scene</declname>
         </param>
         <briefdescription>
+<para>Creates a new physics world for the given scene. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function creates a new physics world and assigns it to the member variable <computeroutput>m_World</computeroutput>. It returns true if the creation was successful, false otherwise.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scene</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The scene for which to create the physics world. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the creation was successful, false otherwise. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="29" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="9" bodyend="14"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="43" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="17" bodyend="22"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1a1da615ee461b4a00fbfaa677ed7a4da9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -72,12 +93,17 @@
         <name>DestroyWorld</name>
         <qualifiedname>AGE::Physics2D::DestroyWorld</qualifiedname>
         <briefdescription>
+<para>Destroys the physics world. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is used to destroy the physics world, freeing up any resources it was using. After calling this function, the physics world should not be used again until a new one has been created.</para>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="31" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="16" bodyend="19"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="45" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="31" bodyend="34"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1aab2e4d5046befe7a103abf19c1a00ae6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -90,12 +116,25 @@
           <declname>DeltaTime</declname>
         </param>
         <briefdescription>
+<para>This function steps the physics simulation by a given time step. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">DeltaTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The amount of time to simulate, in seconds.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="33" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="21" bodyend="25"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="47" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="43" bodyend="47"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1a7ca9eb4ef92b4f99aeb6dec5145d74c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>b2BodyId</type>
@@ -108,12 +147,26 @@
           <declname>Def</declname>
         </param>
         <briefdescription>
+<para>Creates a body in the physics world. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function creates a new body within the physics simulation based on the provided definition. The body is added to the physics world and its ID is returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Def</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to the b2BodyDef that defines the properties of the new body. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The unique identifier (b2BodyId) for the newly created body. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="35" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="27" bodyend="30"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="49" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="57" bodyend="60"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1a0d3ea824190894f0351ce3e3d1bab6a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>b2BodyDef</type>
@@ -142,12 +195,58 @@
           <declname>UserData</declname>
         </param>
         <briefdescription>
+<para>Creates a body definition for the physics world. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function creates and returns a b2BodyDef object with the given parameters. The body type, translation, rotation, and whether the rotation is fixed are set based on the input parameters. User data can also be provided.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the body to create. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Translation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The initial position of the body. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Rotation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The initial rotation of the body. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>IsRotationFixed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A flag indicating whether the rotation should be fixed or not. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>UserData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to any user data associated with the body.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns a b2BodyDef object based on the input parameters. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="37" column="11" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="32" bodyend="35"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="51" column="11" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="75" bodyend="78"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1a78ea4e0c6124d7e8dd37fbcfe611fd4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>b2ShapeDef</type>
@@ -176,12 +275,58 @@
           <declname>UserData</declname>
         </param>
         <briefdescription>
+<para>Creates a shape definition with the given parameters. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function creates and returns a shape definition using the provided density, friction, restitution, event generation flag, and user data. The resulting shape definition is then used to create a new shape in the physics world.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Density</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The density of the shape. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Friction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The friction coefficient of the shape. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Restitution</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The restitution coefficient of the shape. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ShouldGenerateEvents</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A flag indicating whether collision events should be generated for this shape. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>UserData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to user-defined data associated with the shape.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>b2ShapeDef The created shape definition. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="39" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="37" bodyend="40"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="53" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="93" bodyend="96"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1a89852b176be5aded9168e8bb42c68b6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>b2Rot</type>
@@ -194,12 +339,26 @@
           <declname>Z</declname>
         </param>
         <briefdescription>
+<para>Creates a rotation object based on the given angle in radians. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function creates and returns a rotation object using the provided angle (in radians). The resulting rotation can be used to rotate objects or perform other transformations.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The angle in radians for which to create the rotation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A rotation object representing the specified angle. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="41" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="42" bodyend="45"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="55" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="106" bodyend="109"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1aa7812f887b022c7109f39cb6663d5bfd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>b2Polygon</type>
@@ -220,12 +379,42 @@
           <declname>Scale</declname>
         </param>
         <briefdescription>
+<para>Creates a box shape with the given dimensions and scale. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function creates a box shape with the specified height in X and Y directions and applies the provided scale to it. The resulting b2Polygon is then returned by the function.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>HeightX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The horizontal extent of the box. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>HeightY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vertical extent of the box. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The scaling factor for the box shape.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A b2Polygon representing the created box shape. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="43" column="11" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="47" bodyend="50"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="57" column="11" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="122" bodyend="125"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1a09288cbc0be113f9d356d730e2b2348a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>b2ShapeId</type>
@@ -246,12 +435,42 @@
           <declname>Box</declname>
         </param>
         <briefdescription>
+<para>Creates a polygon shape for the given body with the specified fixture and box. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function creates a polygon shape for the given body using the provided fixture definition and box. The resulting shape is then returned by the function.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The identifier of the body to create the shape for. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Fixture</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The fixture definition specifying the properties of the shape. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Box</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The polygon defining the vertices of the shape.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A unique identifier representing the newly created shape. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="44" column="11" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="52" bodyend="55"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="58" column="11" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="138" bodyend="141"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1a5ddbde137d8a60e89347371184146238" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>b2Capsule</type>
@@ -272,12 +491,42 @@
           <declname>Radius</declname>
         </param>
         <briefdescription>
+<para>Creates a capsule shape with the given parameters. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function creates and returns a capsule shape using the provided offset, scale, and radius values. The capsule is created in the context of the current world.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> specifying the position of the capsule. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> specifying the scaling factors for the capsule. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Radius</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The float value representing the radius of the capsule.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>b2Capsule The newly created capsule shape. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="46" column="11" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="57" bodyend="60"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="60" column="11" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="154" bodyend="157"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1a4d0008a402acfdd194fded0badb193f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>b2ShapeId</type>
@@ -298,12 +547,42 @@
           <declname>Capsule</declname>
         </param>
         <briefdescription>
+<para>Creates a capsule shape in the physics world. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function creates a capsule shape with the given parameters and adds it to the specified body. The ID of the body is passed as an argument, along with the fixture definition and the dimensions of the capsule.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The identifier for the body in which the capsule will be added. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">Fixture</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A structure containing the properties of the fixture to be applied to the shape. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">Capsule</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A structure containing the dimensions of the capsule (half-height, radius).</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The identifier for the newly created capsule shape. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="47" column="11" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="62" bodyend="65"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="61" column="11" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="170" bodyend="173"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1af0a7c9f196572e4486910f42cedde798" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>b2Segment</type>
@@ -312,12 +591,17 @@
         <name>CreateSegment</name>
         <qualifiedname>AGE::Physics2D::CreateSegment</qualifiedname>
         <briefdescription>
+<para>Creates a segment in the physics world. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function creates and returns a new segment object within the physics world. The specifics of how this is done are not specified as it depends on the implementation of the <ref refid="class_a_g_e_1_1_world2_d" kindref="compound">World2D</ref> class.</para>
+<para><simplesect kind="return"><para>A newly created segment object. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="49" column="11" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="67" bodyend="70"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="63" column="11" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="182" bodyend="185"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1a667aa9a767046869cd8e4e1cbbe2c153" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>b2ShapeId</type>
@@ -338,12 +622,42 @@
           <declname>Segment</declname>
         </param>
         <briefdescription>
+<para>Creates a segment shape with the given parameters. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function creates and adds a new segment shape to the physics world of the game engine. The segment is defined by two points in space.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to the body id that this fixture will be attached to. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Fixture</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A structure containing the definition for the fixture (e.g., density, restitution). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Segment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A structure representing the segment of the shape.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The unique identifier for the newly created segment shape. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="50" column="11" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="72" bodyend="75"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="64" column="11" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="198" bodyend="201"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1a01a3ed94bda0b004e73eeeee91877c8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>b2BodyId</type>
@@ -356,12 +670,26 @@
           <declname>ID</declname>
         </param>
         <briefdescription>
+<para>Retrieves a body from the physics world using its shape id. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes in a b2ShapeId, which is used to identify a specific shape within the physics world, and returns the corresponding b2BodyId. If no such body exists, it will return an invalid b2BodyId.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unique identifier of the shape whose associated body we want to retrieve. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The b2BodyId that corresponds to the given shape id. Returns an invalid b2BodyId if no such body exists in the physics world. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="52" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="77" bodyend="80"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="66" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="211" bodyend="214"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1ac4a1b85b35458eacc61bd0a37e3c05ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref></type>
@@ -374,12 +702,26 @@
           <declname>ID</declname>
         </param>
         <briefdescription>
+<para>Get the position of a body in the 2D physics world. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function retrieves the current position of a body with a given ID in the 2D physics world. The position is returned as a <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> object.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unique identifier for the body whose position you want to retrieve. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> object representing the position of the specified body. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="54" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="82" bodyend="85"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="68" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="225" bodyend="228"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1a36327e8fe7645a27c5e238304125aba7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>b2Polygon</type>
@@ -392,12 +734,26 @@
           <declname>ID</declname>
         </param>
         <briefdescription>
+<para>Retrieves a polygon from the physics world using its shape id. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes an ID of type b2ShapeId as input and returns a b2Polygon object. It retrieves the polygon data associated with the given ID from the physics world.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unique identifier for the polygon in the physics world. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A b2Polygon object representing the polygon with the provided ID. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="56" column="11" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="87" bodyend="90"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="70" column="11" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="238" bodyend="241"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1aea9cfd3b1e69cfe440b062e12bbcff46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>b2Capsule</type>
@@ -410,12 +766,25 @@
           <declname>ID</declname>
         </param>
         <briefdescription>
+<para>Retrieves a capsule with the given shape id. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unique identifier of the capsule to retrieve. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A b2Capsule object representing the retrieved capsule, or an empty one if no such capsule exists. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="58" column="11" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="92" bodyend="95"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="72" column="11" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="248" bodyend="251"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1a55bfb348e08983085fc747aa28499571" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
@@ -428,12 +797,26 @@
           <declname>ID</declname>
         </param>
         <briefdescription>
+<para>Retrieves the user data associated with a given shape id. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function retrieves the user data that was previously set using SetUserData() for a specific shape in the physics world. The shape&apos;s ID is used to identify and retrieve its corresponding user data.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unique identifier of the shape whose user data needs to be retrieved.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A void pointer to the user data associated with the given shape id, or nullptr if no such user data exists. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="60" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="97" bodyend="100"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="74" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="263" bodyend="266"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1a903130e45dbe5679c2b6dd2b64c58923" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -446,12 +829,25 @@
           <declname>ID</declname>
         </param>
         <briefdescription>
+<para>This function returns the rotation angle of a body with a given id. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unique identifier for the body whose rotation angle is to be returned. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The rotation angle in radians. If no such body exists, it will return 0. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="61" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="102" bodyend="105"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="75" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="274" bodyend="277"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1a5417d4ab9a1556f28a78aaa46f12b86d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -464,12 +860,26 @@
           <declname>Params</declname>
         </param>
         <briefdescription>
+<para>This function is used to perform a box overlap query in the physics world. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function takes as input a <ref refid="struct_a_g_e_1_1_query_params" kindref="compound">QueryParams</ref> object which contains all the parameters required for the box overlap query. It then calls the QueryBoxOverlap method on the m_World object, passing it the <ref refid="struct_a_g_e_1_1_query_params" kindref="compound">QueryParams</ref> object.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A const reference to a <ref refid="struct_a_g_e_1_1_query_params" kindref="compound">QueryParams</ref> object containing the parameters for the box overlap query.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void This function does not return any value. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="63" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="107" bodyend="110"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="77" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="288" bodyend="291"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1a7be165cc6655cf354ae3dbb8f50aaf2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -482,12 +892,25 @@
           <declname>Params</declname>
         </param>
         <briefdescription>
+<para>This function is used to query for overlapping between a capsule and the physics world. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The parameters of the capsule overlap query, including position, orientation, radius, and height. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="65" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="112" bodyend="115"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="79" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="299" bodyend="302"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1a26a1bc372105af780d3cf124cf5ae58b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -500,12 +923,25 @@
           <declname>Params</declname>
         </param>
         <briefdescription>
+<para>This function is used to query for overlapping segments in the physics world. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The parameters of the segment overlap query, including start and end points, layer mask, etc.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="67" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="117" bodyend="120"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="81" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="311" bodyend="314"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1a31b2194fb719f3994818f6414ea3c697" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -518,37 +954,54 @@
           <declname>Params</declname>
         </param>
         <briefdescription>
+<para>This function is used to query for a hit in the physics simulation. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function takes as input a const reference to a <ref refid="struct_a_g_e_1_1_query_params" kindref="compound">QueryParams</ref> object, which contains parameters related to the query. It returns a boolean value indicating whether or not a hit occurred based on these parameters.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A constant reference to an instance of <ref refid="struct_a_g_e_1_1_query_params" kindref="compound">QueryParams</ref> containing information about the query. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if a hit is detected and false otherwise. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="69" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="121" bodyend="124"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="83" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp" bodystart="323" bodyend="326"/>
       </memberdef>
-      <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1a309277b959747e049a364822b0ed22ea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>Ref&lt; <ref refid="class_a_g_e_1_1_world" kindref="compound">World</ref> &gt; &amp;</type>
-        <definition>Ref&lt; World &gt; &amp; AGE::Physics2D::GetWorld</definition>
+      <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1ad71f3f58937be3e2281c831da2eed0e4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Re f&lt; <ref refid="class_a_g_e_1_1_world" kindref="compound">World</ref> &gt; &amp;</type>
+        <definition>Re f&lt; World &gt; &amp; AGE::Physics2D::GetWorld</definition>
         <argsstring>()</argsstring>
         <name>GetWorld</name>
         <qualifiedname>AGE::Physics2D::GetWorld</qualifiedname>
         <briefdescription>
+<para>Returns a reference to the <ref refid="class_a_g_e_1_1_world" kindref="compound">World</ref> object. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function returns a reference to the <ref refid="class_a_g_e_1_1_world" kindref="compound">World</ref> object that is currently being used by the program. The returned reference can be used to modify or access the state of this object.</para>
+<para><simplesect kind="return"><para>f&lt;World&gt;&amp; A reference to the current <ref refid="class_a_g_e_1_1_world" kindref="compound">World</ref> object. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="71" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" bodystart="71" bodyend="71"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="92" column="3" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" bodystart="92" bodyend="92"/>
       </memberdef>
-    </sectiondef>
-    <sectiondef kind="public-static-func">
-      <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1a340743b747883612c682e15f3e7e15bc" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="class_a_g_e_1_1_physics2_d_1a0ebc0421ec4fb2a36c3833246dee06c3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename T</type>
           </param>
         </templateparamlist>
-        <type>T</type>
-        <definition>static T AGE::Physics2D::GetShapeFromID</definition>
+        <type>st atic T</type>
+        <definition>st atic T AGE::Physics2D::GetShapeFromID</definition>
         <argsstring>(b2ShapeId ID)</argsstring>
         <name>GetShapeFromID</name>
         <qualifiedname>AGE::Physics2D::GetShapeFromID</qualifiedname>
@@ -557,19 +1010,33 @@
           <declname>ID</declname>
         </param>
         <briefdescription>
+<para>Retrieves a shape from its ID. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function retrieves and returns the shape associated with the given ID. The type of the shape is determined by the value returned by b2Shape_GetType(ID). If the type is b2_capsuleShape, it calls b2Shape_GetCapsule(ID) to get the capsule shape. If the type is b2_polygonShape, it calls b2Shape_GetPolygon(ID) to get the polygon shape. If the type is b2_segmentShape, it calls b2Shape_GetSegment(ID) to get the segment shape. In all other cases (including if the function returns a default value), it defaults to returning the polygon shape from b2Shape_GetPolygon(ID).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unique identifier of the shape. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The shape associated with the given ID, or the default shape if no match is found. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="74" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" bodystart="74" bodyend="99"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="107" column="8" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" bodystart="107" bodyend="132"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="21" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" bodystart="22" bodyend="103"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" line="21" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/Physics2D.h" bodystart="22" bodyend="136"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_physics2_d_1a7ca9eb4ef92b4f99aeb6dec5145d74c8" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>CreateBody</name></member>
       <member refid="class_a_g_e_1_1_physics2_d_1aa7812f887b022c7109f39cb6663d5bfd" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>CreateBox</name></member>
@@ -585,20 +1052,20 @@
       <member refid="class_a_g_e_1_1_physics2_d_1aea9cfd3b1e69cfe440b062e12bbcff46" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>GetCapsule</name></member>
       <member refid="class_a_g_e_1_1_physics2_d_1a36327e8fe7645a27c5e238304125aba7" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>GetPolygon</name></member>
       <member refid="class_a_g_e_1_1_physics2_d_1a903130e45dbe5679c2b6dd2b64c58923" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>GetRotationAngle</name></member>
-      <member refid="class_a_g_e_1_1_physics2_d_1a340743b747883612c682e15f3e7e15bc" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>GetShapeFromID</name></member>
+      <member refid="class_a_g_e_1_1_physics2_d_1a0ebc0421ec4fb2a36c3833246dee06c3" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>GetShapeFromID</name></member>
       <member refid="class_a_g_e_1_1_physics2_d_1a55bfb348e08983085fc747aa28499571" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>GetUserData</name></member>
-      <member refid="class_a_g_e_1_1_physics2_d_1a309277b959747e049a364822b0ed22ea" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>GetWorld</name></member>
+      <member refid="class_a_g_e_1_1_physics2_d_1ad71f3f58937be3e2281c831da2eed0e4" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>GetWorld</name></member>
+      <member refid="class_a_g_e_1_1_physics2_d_1a2fa737f1c618396f9538dce9a6010221" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>hysics2D</name></member>
       <member refid="class_a_g_e_1_1_physics2_d_1ade19b33749a6d5453f8a4a3f1525dd6a" prot="private" virt="non-virtual"><scope>AGE::Physics2D</scope><name>m_World</name></member>
       <member refid="class_a_g_e_1_1_physics2_d_1a0d3ea824190894f0351ce3e3d1bab6a6" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>MakeBodyDefinition</name></member>
       <member refid="class_a_g_e_1_1_physics2_d_1a89852b176be5aded9168e8bb42c68b6a" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>MakeRotation</name></member>
       <member refid="class_a_g_e_1_1_physics2_d_1a78ea4e0c6124d7e8dd37fbcfe611fd4a" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>MakeShapeDefinition</name></member>
-      <member refid="class_a_g_e_1_1_physics2_d_1ad37ce5f62d4c41b2e76449cb04908e6e" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>Physics2D</name></member>
       <member refid="class_a_g_e_1_1_physics2_d_1a5417d4ab9a1556f28a78aaa46f12b86d" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>QueryBoxOverlap</name></member>
       <member refid="class_a_g_e_1_1_physics2_d_1a7be165cc6655cf354ae3dbb8f50aaf2c" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>QueryCapsuleOverlap</name></member>
       <member refid="class_a_g_e_1_1_physics2_d_1a31b2194fb719f3994818f6414ea3c697" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>QueryHit</name></member>
       <member refid="class_a_g_e_1_1_physics2_d_1a26a1bc372105af780d3cf124cf5ae58b" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>QuerySegmentOverlap</name></member>
       <member refid="class_a_g_e_1_1_physics2_d_1aab2e4d5046befe7a103abf19c1a00ae6" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>Step</name></member>
-      <member refid="class_a_g_e_1_1_physics2_d_1abc1e0715af2e0158acc97998f1ac9345" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>~Physics2D</name></member>
+      <member refid="class_a_g_e_1_1_physics2_d_1a12f65d5e7b23ae3634488835f675708e" prot="public" virt="non-virtual"><scope>AGE::Physics2D</scope><name>ysics2D</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

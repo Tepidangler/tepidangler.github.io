@@ -99,10 +99,10 @@ See [AGE::Event](class_a_g_e_1_1_event.md)
 
 | Type | Name |
 | ---: | :--- |
-|  float | [**GetXOffset**](#function-getxoffset) () const<br> |
-|  float | [**GetYOffset**](#function-getyoffset) () const<br> |
+|  float | [**GetXOffset**](#function-getxoffset) () const<br>_Returns the X offset value._  |
+|  float | [**GetYOffset**](#function-getyoffset) () const<br>_This function returns the Y offset value._  |
 |   | [**MouseScrolledEvent**](#function-mousescrolledevent) (float xOffset, float yOffset) <br> |
-| virtual std::string | [**ToString**](#function-tostring) () override const<br> |
+| virtual std::string | [**ToString**](#function-tostring) () override const<br>_This function returns a string representation of the_ [_**MouseScrolledEvent**_](class_a_g_e_1_1_mouse_scrolled_event.md) _object. The returned string includes the x and y offsets that represent the scroll event._ |
 
 
 ## Public Functions inherited from AGE::MouseEvent
@@ -123,8 +123,8 @@ See [AGE::Event](class_a_g_e_1_1_event.md)
 | virtual int | [**GetCategoryFlags**](class_a_g_e_1_1_event.md#function-getcategoryflags) () const = 0<br> |
 | virtual EventType | [**GetEventType**](class_a_g_e_1_1_event.md#function-geteventtype) () const = 0<br> |
 | virtual const char \* | [**GetName**](class_a_g_e_1_1_event.md#function-getname) () const = 0<br> |
-|  bool | [**IsInCategory**](class_a_g_e_1_1_event.md#function-isincategory) (EventCategory Category) <br> |
-| virtual std::string | [**ToString**](class_a_g_e_1_1_event.md#function-tostring) () const<br> |
+|  bool | [**IsInCategory**](class_a_g_e_1_1_event.md#function-isincategory) (EventCategory Category) <br>_Checks if an event is in a specific category._  |
+| virtual std::string | [**ToString**](class_a_g_e_1_1_event.md#function-tostring) () const<br>_Returns a string representation of the object._  |
 
 
 
@@ -213,8 +213,8 @@ See [AGE::MouseEvent](class_a_g_e_1_1_mouse_event.md)
 | Type | Name |
 | ---: | :--- |
 |   | [**MouseEvent**](class_a_g_e_1_1_mouse_event.md#function-mouseevent-13) (int Button) <br> |
-|   | [**MouseEvent**](class_a_g_e_1_1_mouse_event.md#function-mouseevent-23) (float x, float y) <br> |
-|   | [**MouseEvent**](class_a_g_e_1_1_mouse_event.md#function-mouseevent-33) (float xOffset, float yOffset, bool Scrolled) <br> |
+|   | [**MouseEvent**](class_a_g_e_1_1_mouse_event.md#function-mouseevent-23) (float x, float y) <br>_Constructs a_ [_**MouseEvent**_](class_a_g_e_1_1_mouse_event.md) _object with the given coordinates._ |
+|   | [**MouseEvent**](class_a_g_e_1_1_mouse_event.md#function-mouseevent-33) (float xOffset, float yOffset, bool Scrolled) <br>_Constructs a_ [_**MouseEvent**_](class_a_g_e_1_1_mouse_event.md) _object with given offsets._ |
 
 
 
@@ -232,12 +232,34 @@ See [AGE::MouseEvent](class_a_g_e_1_1_mouse_event.md)
 
 ### function GetXOffset 
 
+_Returns the X offset value._ 
 ```C++
 inline float AGE::MouseScrolledEvent::GetXOffset () const
 ```
 
 
 
+This function returns the current X offset value stored in the object. The X offset is used to adjust the position of objects on the x-axis.
+
+
+
+
+**Returns:**
+
+A float representing the current X offset value.
+
+
+This function returns the X offset value. 
+
+**Returns:**
+
+A floating-point number representing the X offset. 
+
+
+
+
+
+        
 
 <hr>
 
@@ -245,12 +267,31 @@ inline float AGE::MouseScrolledEvent::GetXOffset () const
 
 ### function GetYOffset 
 
+_This function returns the Y offset value._ 
 ```C++
 inline float AGE::MouseScrolledEvent::GetYOffset () const
 ```
 
 
 
+
+
+**Returns:**
+
+A floating-point number representing the Y offset.
+
+
+This function returns the Y offset value. 
+
+**Returns:**
+
+A constant float representing the current Y offset value. 
+
+
+
+
+
+        
 
 <hr>
 
@@ -274,12 +315,37 @@ inline AGE::MouseScrolledEvent::MouseScrolledEvent (
 
 ### function ToString 
 
+_This function returns a string representation of the_ [_**MouseScrolledEvent**_](class_a_g_e_1_1_mouse_scrolled_event.md) _object. The returned string includes the x and y offsets that represent the scroll event._
 ```C++
 inline virtual std::string AGE::MouseScrolledEvent::ToString () override const
 ```
 
 
 
+
+
+**Returns:**
+
+A string containing the details about the mouse scrolling event.
+
+
+Converts the [**MouseScrolledEvent**](class_a_g_e_1_1_mouse_scrolled_event.md) into a string format.
+
+
+The function constructs and returns a string representation of the [**MouseScrolledEvent**](class_a_g_e_1_1_mouse_scrolled_event.md) object, which includes the x-offset and y-offset values.
+
+
+
+
+**Returns:**
+
+A string containing the details about the [**MouseScrolledEvent**](class_a_g_e_1_1_mouse_scrolled_event.md). 
+
+
+
+
+
+        
 Implements [*AGE::Event::ToString*](class_a_g_e_1_1_event.md#function-tostring)
 
 

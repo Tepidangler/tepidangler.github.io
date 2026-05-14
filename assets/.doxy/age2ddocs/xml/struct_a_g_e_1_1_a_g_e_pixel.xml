@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="74" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="74" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="92" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="92" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_a_g_e_1_1_a_g_e_pixel_1aeb20b24b87ee30d9fc4570e150cc38c4" prot="public" static="no" mutable="no">
         <type>uint8_t</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="75" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="75" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="93" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="93" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_a_g_e_1_1_a_g_e_pixel_1a903e848745b57202f8e08ad5a5cf42d7" prot="public" static="no" mutable="no">
         <type>uint32_t</type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="76" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="76" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="94" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="94" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -54,12 +54,13 @@
         <name>AGEPixel</name>
         <qualifiedname>AGE::AGEPixel::AGEPixel</qualifiedname>
         <briefdescription>
+<para>Default constructor for the <ref refid="struct_a_g_e_1_1_a_g_e_pixel" kindref="compound">AGEPixel</ref> class. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="78" column="1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="99" column="1"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_a_g_e_pixel_1a214e0cc2ced44af8040de56f23777905" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -84,12 +85,47 @@
           <declname>d</declname>
         </param>
         <briefdescription>
+<para>Constructs an instance of <ref refid="struct_a_g_e_1_1_a_g_e_pixel" kindref="compound">AGEPixel</ref> with the given RGBA values. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function takes four uint8_t parameters representing the red, green, blue and alpha components of a color in that order. It then stores these values internally as Uint32_t for further processing. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Red component (0-255). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Green component (0-255). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Blue component (0-255). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Alpha component (0-255). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="80" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="80" bodyend="94"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="110" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="110" bodyend="124"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_a_g_e_pixel_1a4cf36b2f04cd1b479049c746f05135a6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -114,12 +150,47 @@
           <declname>d</declname>
         </param>
         <briefdescription>
+<para>Constructs an instance of <ref refid="struct_a_g_e_1_1_a_g_e_pixel" kindref="compound">AGEPixel</ref> with the given float values. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes four float values and assigns them to the RGBAf array in the order they are provided. It then converts these floats into a uint32_t representation using ConvertFloatToU32() function, which is stored in U32RBGA array. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First float value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second float value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Third float value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Fourth float value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="96" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="96" bodyend="112"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="135" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="135" bodyend="151"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_a_g_e_pixel_1aed291d34220406cfcd9a4096d01522e4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -128,12 +199,17 @@
         <name>operator Bytef *</name>
         <qualifiedname>AGE::AGEPixel::operator Bytef *</qualifiedname>
         <briefdescription>
+<para>This function converts the object to a Bytef pointer. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function returns a pointer of type Bytef that points to the RGBA color array. It is used for certain operations in the Zlib library, which requires data to be in this format.</para>
+<para><simplesect kind="return"><para>A pointer of type Bytef pointing to the RGBA color array. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="114" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="114" bodyend="117"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="161" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="161" bodyend="164"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_a_g_e_pixel_1a45aceb91059ce6086c0839a6c93c8474" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -142,12 +218,17 @@
         <name>operator uint32_t</name>
         <qualifiedname>AGE::AGEPixel::operator uint32_t</qualifiedname>
         <briefdescription>
+<para>Converts the RGBA color to a uint32_t value. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function shifts and combines the four bytes of the RGBA color into one uint32_t value, with each byte contributing 0 bits, 8 bits, 16 bits, and 24 bits respectively. This is done using bitwise shift and OR operations.</para>
+<para><simplesect kind="return"><para>A uint32_t representation of the RGBA color. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="119" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="119" bodyend="122"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="173" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="173" bodyend="176"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -162,19 +243,32 @@
           <declname>Bytes</declname>
         </param>
         <briefdescription>
+<para>Converts an array of float values to a uint32_t array. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Bytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to input float array containing four elements: r, g, b, a where each is in range [0,1].</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pointer to the uint32_t array with converted values. The first three elements correspond to RGB channels and the last one corresponds to alpha channel. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="124" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="124" bodyend="152"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="185" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="185" bodyend="213"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="71" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="72" bodyend="153"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="89" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="90" bodyend="214"/>
     <listofallmembers>
       <member refid="struct_a_g_e_1_1_a_g_e_pixel_1a127c44093e01ec021cefab9005e97e2a" prot="public" virt="non-virtual"><scope>AGE::AGEPixel</scope><name>AGEPixel</name></member>
       <member refid="struct_a_g_e_1_1_a_g_e_pixel_1a214e0cc2ced44af8040de56f23777905" prot="public" virt="non-virtual"><scope>AGE::AGEPixel</scope><name>AGEPixel</name></member>

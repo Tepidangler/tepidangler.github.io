@@ -89,16 +89,32 @@
 <tbody>
 <tr>
 <td style="text-align: right;">std::size_t</td>
-<td style="text-align: left;"><a href="#function-operator"><strong>operator()</strong></a> (const <a href="../class_a_g_e_1_1_u_u_i_d/"><strong>AGE::UUID</strong></a> &amp; uuid) noexcept const<br></td>
+<td style="text-align: left;"><a href="#function-operator"><strong>operator()</strong></a> (const <a href="../class_a_g_e_1_1_u_u_i_d/"><strong>AGE::UUID</strong></a> &amp; uuid) noexcept const<br><em>Computes a hash value for the given UUID.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-operator">function operator()</h3>
+<p><em>Computes a hash value for the given UUID.</em> </p>
 <pre><code class="language-C++">inline std::size_t std::hash&lt; AGE::UUID &gt;::operator() (
     const AGE::UUID &amp; uuid
 ) noexcept const
 </code></pre>
+<p>This function computes a hash value based on the input UUID using the standard C++ library's <code>hash</code> class with <code>uint64_t</code> as its template argument. The purpose of this function is to provide a unique identifier for each UUID, which can be useful in certain data structures or algorithms that require unique keys.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>uuid</code> The UUID to compute the hash value for. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A size_t representing the computed hash value.</p>
+<p>Computes a hash value for the given UUID.</p>
+<p>This function takes an <a href="../class_a_g_e_1_1_u_u_i_d/"><strong>AGE::UUID</strong></a> object as input and returns its corresponding hash value. The hash is computed by converting the UUID to uint64_t and then using std::hash&lt;uint64_t&gt;().</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>uuid</code> The UUID for which a hash value is calculated. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A size_t representing the hashed value of the input UUID. </p>
 <hr>
 
 <hr />

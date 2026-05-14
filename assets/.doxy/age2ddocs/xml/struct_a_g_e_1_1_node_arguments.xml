@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" line="245" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" bodystart="245" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" line="345" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" bodystart="345" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -26,12 +26,17 @@
         <name>NodeArguments</name>
         <qualifiedname>AGE::NodeArguments::NodeArguments</qualifiedname>
         <briefdescription>
+<para>Default constructor for <ref refid="struct_a_g_e_1_1_node_arguments" kindref="compound">NodeArguments</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function initializes the object with its default state. It is used to create an instance of the <ref refid="struct_a_g_e_1_1_node_arguments" kindref="compound">NodeArguments</ref> class without any arguments.</para>
+<para><simplesect kind="return"><para>An instance of the <ref refid="struct_a_g_e_1_1_node_arguments" kindref="compound">NodeArguments</ref> class with all members initialized to their default values.</para>
+</simplesect>
+Default constructor for <ref refid="struct_a_g_e_1_1_node_arguments" kindref="compound">NodeArguments</ref> class. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" line="244" column="1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" line="344" column="1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -50,16 +55,56 @@
           <declname>Data</declname>
         </param>
         <briefdescription>
+<para>This function is responsible for converting a <ref refid="struct_a_g_e_1_1_node_arguments" kindref="compound">NodeArguments</ref> object into a format that can be easily stored or transmitted. It does this by iterating over each argument in the <ref refid="struct_a_g_e_1_1_node_arguments" kindref="compound">NodeArguments</ref> and writing its type and value to the <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref>. The type of each argument is written as a byte, followed by the actual data. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Serializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to an object that can write raw bytes or strings to a storage medium. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An object containing the arguments to be serialized.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This function serializes the given data into a format that can be easily stored or transmitted.</para>
+<para>The function takes in two parameters, a <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref> object and a <ref refid="struct_a_g_e_1_1_node_arguments" kindref="compound">NodeArguments</ref> object. It writes to the <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref> object based on the type of each argument in the <ref refid="struct_a_g_e_1_1_node_arguments" kindref="compound">NodeArguments</ref> object.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Serializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to an instance of <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref> that will be used for writing data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The arguments to serialize, stored as a <ref refid="struct_a_g_e_1_1_node_arguments" kindref="compound">NodeArguments</ref> object.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void This function does not return any value. It directly writes the serialized data into the provided <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref> object. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" line="247" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" bodystart="247" bodyend="375"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" line="365" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" bodystart="365" bodyend="493"/>
       </memberdef>
-      <memberdef kind="function" id="struct_a_g_e_1_1_node_arguments_1a3198a501ba15ad999ed6660312538527" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>static void AGE::NodeArguments::Deserialize</definition>
+      <memberdef kind="function" id="struct_a_g_e_1_1_node_arguments_1a1084659505f6117078397be51c6a1cb4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Deserialize function for static <ref refid="struct_a_g_e_1_1_node_arguments" kindref="compound">NodeArguments</ref> void</type>
+        <definition>Deserialize function for static NodeArguments void AGE::NodeArguments::Deserialize</definition>
         <argsstring>(DataReader *Serializer, NodeArguments &amp;Data)</argsstring>
         <name>Deserialize</name>
         <qualifiedname>AGE::NodeArguments::Deserialize</qualifiedname>
@@ -77,17 +122,17 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" line="377" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" bodystart="377" bodyend="514"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" line="497" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" bodystart="497" bodyend="634"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" line="242" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" bodystart="243" bodyend="515"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" line="332" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" bodystart="333" bodyend="635"/>
     <listofallmembers>
       <member refid="struct_a_g_e_1_1_node_arguments_1a3197696381dd3c093b3dfe48853c99ca" prot="public" virt="non-virtual"><scope>AGE::NodeArguments</scope><name>Args</name></member>
-      <member refid="struct_a_g_e_1_1_node_arguments_1a3198a501ba15ad999ed6660312538527" prot="public" virt="non-virtual"><scope>AGE::NodeArguments</scope><name>Deserialize</name></member>
+      <member refid="struct_a_g_e_1_1_node_arguments_1a1084659505f6117078397be51c6a1cb4" prot="public" virt="non-virtual"><scope>AGE::NodeArguments</scope><name>Deserialize</name></member>
       <member refid="struct_a_g_e_1_1_node_arguments_1a5b5c8db33eaa06bca9433845c5528c18" prot="public" virt="non-virtual"><scope>AGE::NodeArguments</scope><name>NodeArguments</name></member>
       <member refid="struct_a_g_e_1_1_node_arguments_1a08db018fc20ed1c5a2afd5cd6a5e6d10" prot="public" virt="non-virtual"><scope>AGE::NodeArguments</scope><name>Serialize</name></member>
     </listofallmembers>

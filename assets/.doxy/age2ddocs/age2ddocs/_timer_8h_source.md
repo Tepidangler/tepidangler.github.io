@@ -17,17 +17,17 @@ namespace AGE
     {
     public:
 
-        Timer()
+Timer()
         {
             Reset();
         }
 
-        void Reset()
+void Reset()
         {
             m_Start = std::chrono::high_resolution_clock::now();
         }
 
-        float Elapsed()
+float Elapsed()
         {
             //return std::chrono::duration_cast<std::chrono::nanoseconds>(
             //         std::chrono::high_resolution_clock::now() - m_Start).count() * .001f * .001f * .001f;
@@ -35,7 +35,7 @@ namespace AGE
             return std::chrono::duration<float, std::nano>(std::chrono::high_resolution_clock::now() - m_Start).count() * .001f * .001f * .001f;
         }
 
-        float ElapsedMillis()
+float ElapsedMillis()
         {
             return Elapsed() * 1000.f;
         }

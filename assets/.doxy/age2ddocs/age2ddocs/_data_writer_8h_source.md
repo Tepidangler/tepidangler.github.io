@@ -20,14 +20,14 @@ namespace AGE
     {
     public:
 
-        virtual ~DataWriter() = default;
+virtual ~DataWriter() = default;
 
         virtual bool IsStreamGood() const = 0;
         virtual uint64_t GetStreamPosition() = 0;
         virtual void SetStreamPosition(uint64_t Pos) = 0;
         virtual bool WriteData(const char* Data, size_t Size) = 0;
 
-        operator bool() const { return IsStreamGood(); }
+operator bool() const { return IsStreamGood(); }
 
         void WriteBuffer(Buffer buffer, bool WriteSize = true);
         void WriteZero(uint64_t Size);
@@ -35,20 +35,20 @@ namespace AGE
 
 
         template<typename T>
-        void WriteRaw(const T& Type)
+void WriteRaw(const T& Type)
         {
             bool success = WriteData((char*)&Type, sizeof(T));
-            AGE_GAME_ASSERT(success, "Failed to Write Data");
+            GameLogger::Assert(success, "Failed to Write Data");
         }
 
         template<typename T>
-        void WriteObject(const T& Obj)
+void WriteObject(const T& Obj)
         {
             T::Serialize(this, Obj);
         }
 
         template<typename Key, typename Value>
-        void WriteMap(const std::map<Key, Value>& Map, bool WriteSize = true)
+void WriteMap(const std::map<Key, Value>& Map, bool WriteSize = true)
         {
             if (WriteSize)
             {
@@ -78,7 +78,7 @@ namespace AGE
         }
 
         template<typename Key, typename Value>
-        void WriteMap(const std::unordered_map<Key, Value>& Map, bool WriteSize = true)
+void WriteMap(const std::unordered_map<Key, Value>& Map, bool WriteSize = true)
         {
             if (WriteSize)
             {
@@ -108,7 +108,7 @@ namespace AGE
         }
 
         template<typename Value>
-        void WriteMap(const std::unordered_map<std::string, Value>& Map, bool WriteSize = true)
+void WriteMap(const std::unordered_map<std::string, Value>& Map, bool WriteSize = true)
         {
             if (WriteSize)
             {
@@ -131,7 +131,7 @@ namespace AGE
         }
 
         template<typename T>
-        void WriteArray(const std::vector<T>& Array, bool WriteSize = true)
+void WriteArray(const std::vector<T>& Array, bool WriteSize = true)
         {
             if (WriteSize)
             {
@@ -158,15 +158,15 @@ namespace AGE
     {
     public:
 
-        FileStreamWriter() = default;
+FileStreamWriter() = default;
         FileStreamWriter(const std::filesystem::path& Path);
-        FileStreamWriter(const FileStreamWriter&) = delete;
+FileStreamWriter(const FileStreamWriter&) = delete;
 
         virtual ~FileStreamWriter();
 
-        bool IsStreamGood() const final { return m_Stream.good(); }
+bool IsStreamGood() const final { return m_Stream.good(); }
         //On clang we return UINT64_MAX to indicate a failure, so if compiling with clang be sure to check for that
-        uint64_t GetStreamPosition() final
+uint64_t GetStreamPosition() final
         {
 #if __clang__
             long pos = m_Stream.tellp();
@@ -179,7 +179,7 @@ namespace AGE
             return m_Stream.tellp();
 #endif
         }
-        void SetStreamPosition(uint64_t Pos) final { m_Stream.seekp((long)Pos); }
+void SetStreamPosition(uint64_t Pos) final { m_Stream.seekp((long)Pos); }
         bool WriteData(const char* Data, size_t Size) final;
 
     private:
@@ -193,13 +193,13 @@ namespace AGE
     public:
 
         MemoryStreamWriter(void* Addr);
-        MemoryStreamWriter(const MemoryStreamWriter&) = delete;
+MemoryStreamWriter(const MemoryStreamWriter&) = delete;
 
         virtual ~MemoryStreamWriter();
 
-        bool IsStreamGood() const final { return m_Stream.good(); }
+bool IsStreamGood() const final { return m_Stream.good(); }
         //On clang we return UINT64_MAX to indicate a failure, so if compiling with clang be sure to check for that
-        uint64_t GetStreamPosition() final
+uint64_t GetStreamPosition() final
         {
 #if __clang__
             long pos = m_Stream.tellp();
@@ -212,7 +212,7 @@ namespace AGE
             return m_Stream.tellp();
 #endif
         }
-        void SetStreamPosition(uint64_t Pos) final { m_Stream.seekp((long)Pos); }
+void SetStreamPosition(uint64_t Pos) final { m_Stream.seekp((long)Pos); }
         bool WriteData(const char* Data, size_t Size) final;
 
     private:

@@ -105,11 +105,11 @@
 <tbody>
 <tr>
 <td style="text-align: right;">Ref&lt; <a href="../class_a_g_e_1_1_scene/"><strong>Scene</strong></a> &gt;</td>
-<td style="text-align: left;"><a href="#function-getscene"><strong>GetScene</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getscene"><strong>GetScene</strong></a> () <br><em>Returns the current scene object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-scenechangedevent"><strong>SceneChangedEvent</strong></a> (Ref&lt; <a href="../class_a_g_e_1_1_scene/"><strong>Scene</strong></a> &gt; Scene) <br></td>
+<td style="text-align: left;"><a href="#function-scenechangedevent"><strong>SceneChangedEvent</strong></a> (Ref&lt; <a href="../class_a_g_e_1_1_scene/"><strong>Scene</strong></a> &gt; Scene) <br><em>Constructs a new instance of the</em> <a href="./"><em><strong>SceneChangedEvent</strong></em></a> <em>class with the given scene reference.</em></td>
 </tr>
 </tbody>
 </table>
@@ -137,11 +137,11 @@
 </tr>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-isincategory"><strong>IsInCategory</strong></a> (EventCategory Category) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-isincategory"><strong>IsInCategory</strong></a> (EventCategory Category) <br><em>Checks if an event is in a specific category.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual std::string</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-tostring"><strong>ToString</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-tostring"><strong>ToString</strong></a> () const<br><em>Returns a string representation of the object.</em></td>
 </tr>
 </tbody>
 </table>
@@ -173,21 +173,39 @@
 <tbody>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_scene_event/#function-sceneevent"><strong>SceneEvent</strong></a> (Ref&lt; <a href="../class_a_g_e_1_1_scene/"><strong>Scene</strong></a> &gt; Scene) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_scene_event/#function-sceneevent"><strong>SceneEvent</strong></a> (Ref&lt; <a href="../class_a_g_e_1_1_scene/"><strong>Scene</strong></a> &gt; Scene) <br><em>Constructs a new instance of the</em> <a href="../class_a_g_e_1_1_scene_event/"><em><strong>SceneEvent</strong></em></a> <em>class with the given scene.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-getscene">function GetScene</h3>
+<p><em>Returns the current scene object.</em> </p>
 <pre><code class="language-C++">inline Ref&lt; Scene &gt; AGE::SceneChangedEvent::GetScene () 
 </code></pre>
+<p>This function returns a reference to the currently active scene in the application. The returned <a href="../class_a_g_e_1_1_scene/"><strong>Scene</strong></a> object can be used for various operations such as rendering, updating, and managing game objects within the scene.</p>
+<p><strong>Returns:</strong></p>
+<p>A reference to the current scene.</p>
+<p>Returns the current scene object.</p>
+<p>This function retrieves and returns the currently active <a href="../class_a_g_e_1_1_scene/"><strong>Scene</strong></a> object, which is stored in the member variable 'm_Scene'. The returned reference can be used to manipulate or access the properties of this <a href="../class_a_g_e_1_1_scene/"><strong>Scene</strong></a> object.</p>
+<p><strong>Returns:</strong></p>
+<p>A reference to the current <a href="../class_a_g_e_1_1_scene/"><strong>Scene</strong></a> object. </p>
 <hr>
 
 <h3 id="function-scenechangedevent">function SceneChangedEvent</h3>
+<p><em>Constructs a new instance of the</em> <a href="./"><em><strong>SceneChangedEvent</strong></em></a> <em>class with the given scene reference.</em></p>
 <pre><code class="language-C++">inline AGE::SceneChangedEvent::SceneChangedEvent (
     Ref&lt; Scene &gt; Scene
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><a href="../class_a_g_e_1_1_scene/"><strong>Scene</strong></a> The scene that has changed.</li>
+</ul>
+<p>Constructs a new instance of the <a href="./"><strong>SceneChangedEvent</strong></a> class with the given scene.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><a href="../class_a_g_e_1_1_scene/"><strong>Scene</strong></a> The scene that has changed. </li>
+</ul>
 <hr>
 
 <hr />

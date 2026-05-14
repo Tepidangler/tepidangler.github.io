@@ -21,19 +21,19 @@ namespace AGE
         void* Data;
         uint64_t Size;
 
-        Buffer()
+Buffer()
             : Data(nullptr), Size(0)
         {
 
         }
 
-        Buffer(const void* data, uint64_t size = 0)
+Buffer(const void* data, uint64_t size = 0)
             :Data((void*)data), Size(size)
         {
 
         }
 
-        static Buffer Copy(const Buffer& Other)
+static Buffer Copy(const Buffer& Other)
         {
             Buffer buffer;
             buffer.Allocate(Other.Size);
@@ -41,7 +41,7 @@ namespace AGE
             return buffer;
         }
 
-        static Buffer Copy(const void* data, uint64_t size)
+static Buffer Copy(const void* data, uint64_t size)
         {
             Buffer buffer;
             buffer.Allocate(size);
@@ -49,7 +49,7 @@ namespace AGE
             return buffer;
         }
 
-        void Allocate(uint64_t size)
+void Allocate(uint64_t size)
         {
             delete[] (char*)Data;
             Data = nullptr;
@@ -63,14 +63,14 @@ namespace AGE
             Size = size;
         }
 
-        void Release()
+void Release()
         {
             delete[](char*) Data;
             Data = nullptr;
             Size = 0;
         }
 
-        void ZeroInitialize()
+void ZeroInitialize()
         {
             if (Data)
             {
@@ -79,42 +79,42 @@ namespace AGE
         }
 
         template<typename T>
-        T& Read(uint64_t offset = 0)
+T& Read(uint64_t offset = 0)
         {
             return *(T*)((char*)Data + offset);
         }
 
-        char* ReadBytes(uint64_t size, uint64_t offset) const
+char* ReadBytes(uint64_t size, uint64_t offset) const
         {
-            AGE_CORE_ASSERT(offset + size <= Size, "Buffer Overflow!");
+            CoreLogger::Assert(offset + size <= Size, "Buffer Overflow!");
             char* buf = new char [size];
             memcpy(buf, (char*)Data + offset, size);
             return buf;
         }
 
-        void Write(const void* data, uint64_t size, uint64_t offset = 0)
+void Write(const void* data, uint64_t size, uint64_t offset = 0)
         {
-            AGE_CORE_ASSERT(offset + size <= Size, "Buffer Overflow!");
+            CoreLogger::Assert(offset + size <= Size, "Buffer Overflow!");
             memcpy((char*)Data + offset, data, size);
         }
 
-        operator bool() const
+operator bool() const
         {
             return (bool)Data;
         }
 
-        char& operator[](int Index)
+char& operator[](int Index)
         {
             return ((char*)Data)[Index];
         }
 
-        static void Serialize(DataWriter* Serializer, const Buffer& Instance)
+static void Serialize(DataWriter* Serializer, const Buffer& Instance)
         {
             Serializer->WriteRaw<uint8_t>(*(uint8_t*)&Instance.Data);
             Serializer->WriteRaw<uint64_t>(Instance.Size);
         }
 
-        static void Deserialize(DataReader* Deserializer, Buffer& Instance)
+static void Deserialize(DataReader* Deserializer, Buffer& Instance)
         {
             uint8_t Bytes;
             Deserializer->ReadRaw<uint8_t>(Bytes);

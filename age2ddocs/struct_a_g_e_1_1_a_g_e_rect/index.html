@@ -98,6 +98,10 @@
 <td style="text-align: right;"><a href="../struct_a_g_e_1_1_a_g_e_point/"><strong>AGEPoint</strong></a></td>
 <td style="text-align: left;"><a href="#variable-xy"><strong>XY</strong></a>  <br></td>
 </tr>
+<tr>
+<td style="text-align: right;">COMMENT</td>
+<td style="text-align: left;"><a href="#variable-__pad0__"><strong>__pad0__</strong></a>  <br></td>
+</tr>
 </tbody>
 </table>
 <h2 id="public-functions">Public Functions</h2>
@@ -111,19 +115,19 @@
 <tbody>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-agerect-13"><strong>AGERect</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-agerect-13"><strong>AGERect</strong></a> () = default<br><em>Default constructor for</em> <a href="./"><em><strong>AGERect</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-agerect-23"><strong>AGERect</strong></a> (<a href="../struct_a_g_e_1_1_a_g_e_point/"><strong>AGEPoint</strong></a> Point, int32_t width, int32_t height) <br></td>
+<td style="text-align: left;"><a href="#function-agerect-23"><strong>AGERect</strong></a> (<a href="../struct_a_g_e_1_1_a_g_e_point/"><strong>AGEPoint</strong></a> Point, int32_t width, int32_t height) <br><em>Constructs an</em> <a href="./"><em><strong>AGERect</strong></em></a> <em>object with a given point, width and height.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-agerect-33"><strong>AGERect</strong></a> (int32_t x, int32_t y, int32_t width, int32_t height) <br></td>
+<td style="text-align: left;"><a href="#function-agerect-33"><strong>AGERect</strong></a> (int32_t x, int32_t y, int32_t width, int32_t height) <br><em>Constructs an instance of</em> <a href="./"><em><strong>AGERect</strong></em></a> <em>with the given coordinates and dimensions.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="#function-contains"><strong>Contains</strong></a> (<a href="../struct_a_g_e_1_1_a_g_e_point/"><strong>AGEPoint</strong></a> Point) <br></td>
+<td style="text-align: left;"><a href="#function-contains"><strong>Contains</strong></a> (<a href="../struct_a_g_e_1_1_a_g_e_point/"><strong>AGEPoint</strong></a> Point) <br><em>Checks whether the current point is equal to another given point.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
@@ -146,22 +150,37 @@
 <pre><code class="language-C++">AGEPoint AGE::AGERect::XY;
 </code></pre>
 <hr>
+
+<h3 id="variable-__pad0__">variable __pad0__</h3>
+<pre><code class="language-C++">COMMENT AGE::AGERect::__pad0__;
+</code></pre>
+<hr>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-agerect-13">function AGERect [1/3]</h3>
+<p><em>Default constructor for</em> <a href="./"><em><strong>AGERect</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::AGERect::AGERect () = default
 </code></pre>
+<p>This function initializes an instance of the <a href="./"><strong>AGERect</strong></a> class with default values. It does not take any parameters and returns no value. </p>
 <hr>
 
 <h3 id="function-agerect-23">function AGERect [2/3]</h3>
+<p><em>Constructs an</em> <a href="./"><em><strong>AGERect</strong></em></a> <em>object with a given point, width and height.</em></p>
 <pre><code class="language-C++">inline AGE::AGERect::AGERect (
     AGEPoint Point,
     int32_t width,
     int32_t height
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Point</code> The top-left corner of the rectangle. </li>
+<li><code>width</code> The width of the rectangle. </li>
+<li><code>height</code> The height of the rectangle. </li>
+</ul>
 <hr>
 
 <h3 id="function-agerect-33">function AGERect [3/3]</h3>
+<p><em>Constructs an instance of</em> <a href="./"><em><strong>AGERect</strong></em></a> <em>with the given coordinates and dimensions.</em></p>
 <pre><code class="language-C++">inline AGE::AGERect::AGERect (
     int32_t x,
     int32_t y,
@@ -169,13 +188,28 @@
     int32_t height
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>x</code> The x-coordinate of the top left corner of the rectangle. </li>
+<li><code>y</code> The y-coordinate of the top left corner of the rectangle. </li>
+<li><code>width</code> The width of the rectangle. </li>
+<li><code>height</code> The height of the rectangle. </li>
+</ul>
 <hr>
 
 <h3 id="function-contains">function Contains</h3>
+<p><em>Checks whether the current point is equal to another given point.</em> </p>
 <pre><code class="language-C++">inline bool AGE::AGERect::Contains (
     AGEPoint Point
 ) 
 </code></pre>
+<p>This function compares the x and y coordinates of the current point with those of a provided point. If both are identical, it returns true indicating that the points are equivalent. Otherwise, it returns false.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Point</code> The <a href="../struct_a_g_e_1_1_a_g_e_point/"><strong>AGEPoint</strong></a> object to compare against.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>True if the x and y coordinates of the two points match, False otherwise. </p>
 <hr>
 
 <h3 id="function-agerect">function ~AGERect</h3>

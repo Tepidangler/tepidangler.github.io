@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/FbxParser.h" line="28" column="18" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/FbxParser.h" bodystart="28" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/FbxParser.h" line="46" column="18" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/FbxParser.h" bodystart="46" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -27,12 +27,17 @@
         <name>FBXParser</name>
         <qualifiedname>AGE::FBXParser::FBXParser</qualifiedname>
         <briefdescription>
+<para>Default constructor for the <ref refid="class_a_g_e_1_1_f_b_x_parser" kindref="compound">FBXParser</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function initializes an instance of the <ref refid="class_a_g_e_1_1_f_b_x_parser" kindref="compound">FBXParser</ref> class with default values. It does not perform any specific operations or require any parameters to be set.</para>
+<para><simplesect kind="return"><para>A new instance of the <ref refid="class_a_g_e_1_1_f_b_x_parser" kindref="compound">FBXParser</ref> class with all fields initialized to their default values.</para>
+</simplesect>
+Default constructor for the <ref refid="class_a_g_e_1_1_f_b_x_parser" kindref="compound">FBXParser</ref> class. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/FbxParser.h" line="12" column="1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/FbxParser.h" line="22" column="1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -43,12 +48,18 @@
         <name>Get</name>
         <qualifiedname>AGE::FBXParser::Get</qualifiedname>
         <briefdescription>
+<para>This function returns a reference to the singleton instance of the <ref refid="class_a_g_e_1_1_f_b_x_parser" kindref="compound">FBXParser</ref> class. If an instance does not already exist, it will be created. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>A reference to the single instance of the <ref refid="class_a_g_e_1_1_f_b_x_parser" kindref="compound">FBXParser</ref> class.</para>
+</simplesect>
+This function returns a reference to the singleton instance of the <ref refid="class_a_g_e_1_1_f_b_x_parser" kindref="compound">FBXParser</ref> class. If an instance does not already exist, it will be created. <simplesect kind="return"><para>A reference to the <ref refid="class_a_g_e_1_1_f_b_x_parser" kindref="compound">FBXParser</ref> instance. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/FbxParser.h" line="14" column="18" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/FbxParser.h" bodystart="14" bodyend="21"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/FbxParser.h" line="32" column="18" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/FbxParser.h" bodystart="32" bodyend="39"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_f_b_x_parser_1a245478494ad2b6cb1042d4d1a7a5580b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>ufbx_scene *</type>
@@ -61,12 +72,27 @@
           <declname>Path</declname>
         </param>
         <briefdescription>
+<para>Loads a FBX file into memory and returns the loaded scene. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function loads an FBX file from the specified path, adjusting transforms if necessary. The target axes are left-handed with Y as up, and the target unit is set to be 0.01 meters. If the loading fails for any reason, it logs an error message and returns nullptr.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The file system path of the FBX file to load. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pointer to the loaded ufbx_scene if successful, otherwise nullptr.</para>
+</simplesect>
+Loads an FBX file into a ufbx_scene object.</para>
+<para>If the file cannot be loaded for any reason (e.g., it does not exist or is corrupt), an error message will be logged and nullptr will be returned. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/FbxParser.h" line="23" column="19" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Parser/Private/FbxParser.cpp" bodystart="12" bodyend="31"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/FbxParser.h" line="41" column="19" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Parser/Private/FbxParser.cpp" bodystart="25" bodyend="44"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_f_b_x_parser_1a5db8dae3e66ba599968e7ae10f5bb961" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -79,19 +105,43 @@
           <declname>scene</declname>
         </param>
         <briefdescription>
+<para>This function frees an allocated ufbx_scene. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scene</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the ufbx_scene that needs to be freed.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>None</para>
+</simplesect>
+This function frees an allocated ufbx_scene. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">scene</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the ufbx_scene that needs to be freed. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>None </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/FbxParser.h" line="25" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Parser/Private/FbxParser.cpp" bodystart="32" bodyend="35"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/FbxParser.h" line="43" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Parser/Private/FbxParser.cpp" bodystart="57" bodyend="60"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/FbxParser.h" line="9" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/FbxParser.h" bodystart="10" bodyend="29"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/FbxParser.h" line="9" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/FbxParser.h" bodystart="10" bodyend="47"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_f_b_x_parser_1a9664b62f9d0173d0da02b07d58b15a4f" prot="public" virt="non-virtual"><scope>AGE::FBXParser</scope><name>FBXParser</name></member>
       <member refid="class_a_g_e_1_1_f_b_x_parser_1a5db8dae3e66ba599968e7ae10f5bb961" prot="public" virt="non-virtual"><scope>AGE::FBXParser</scope><name>FreeScene</name></member>

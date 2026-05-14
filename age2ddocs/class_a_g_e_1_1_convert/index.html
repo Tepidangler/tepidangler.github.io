@@ -88,7 +88,7 @@
 <tbody>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-convert"><strong>Convert</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-convert"><strong>Convert</strong></a> () <br><em>Converts the input into another format.</em></td>
 </tr>
 </tbody>
 </table>
@@ -103,32 +103,72 @@
 <tbody>
 <tr>
 <td style="text-align: right;">glm::vec3</td>
-<td style="text-align: left;"><a href="#function-toglm-12"><strong>ToGLM</strong></a> (<a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> vec) <br></td>
+<td style="text-align: left;"><a href="#function-toglm-12"><strong>ToGLM</strong></a> (<a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> vec) <br><em>Converts a</em> <a href="../struct_a_g_e_1_1_vector3/"><em><strong>Vector3</strong></em></a> <em>to GLM's vec3 format.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">glm::vec4</td>
-<td style="text-align: left;"><a href="#function-toglm-22"><strong>ToGLM</strong></a> (<a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> vec) <br></td>
+<td style="text-align: left;"><a href="#function-toglm-22"><strong>ToGLM</strong></a> (<a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> vec) <br><em>Converts a</em> <a href="../struct_a_g_e_1_1_vector4/"><em><strong>Vector4</strong></em></a> <em>to a GLM vec4.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-convert">function Convert</h3>
+<p><em>Converts the input into another format.</em> </p>
 <pre><code class="language-C++">inline AGE::Convert::Convert () 
 </code></pre>
+<p>This function takes an input and converts it to a different format. The exact conversion performed is not specified, as this depends on the implementation details of the <a href="./#function-convert"><strong>Convert()</strong></a> function.</p>
+<p><strong>Returns:</strong></p>
+<p>Returns void.</p>
+<p>Converts the input into another format.</p>
+<p>This function takes an input and converts it to a different format. The exact conversion performed is not specified, as this depends on the implementation details of the <a href="./#function-convert"><strong>Convert()</strong></a> function.</p>
+<p><strong>Returns:</strong></p>
+<p>Returns void. </p>
 <hr>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
 <h3 id="function-toglm-12">function ToGLM [1/2]</h3>
+<p><em>Converts a</em> <a href="../struct_a_g_e_1_1_vector3/"><em><strong>Vector3</strong></em></a> <em>to GLM's vec3 format.</em></p>
 <pre><code class="language-C++">static glm::vec3 AGE::Convert::ToGLM (
     Vector3 vec
 ) 
 </code></pre>
+<p>This function takes in a <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> object and returns its equivalent glm::vec3 representation. It directly maps the x, y, and z properties of the input <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> to the respective components of the output glm::vec3.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>vec</code> The <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> object to be converted. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A glm::vec3 object with the same values as the input <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a>.</p>
+<p>Converts a <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> object to a GLM vec3 object.</p>
+<p>This function takes in a <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> object and returns its equivalent glm::vec3 representation. The conversion is done by simply copying the x, y, and z values from the input <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> object into the new glm::vec3 object.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>vec</code> The <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> object to be converted. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A glm::vec3 object with the same x, y, and z values as the input <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> object. </p>
 <hr>
 
 <h3 id="function-toglm-22">function ToGLM [2/2]</h3>
+<p><em>Converts a</em> <a href="../struct_a_g_e_1_1_vector4/"><em><strong>Vector4</strong></em></a> <em>to a GLM vec4.</em></p>
 <pre><code class="language-C++">static glm::vec4 AGE::Convert::ToGLM (
     Vector4 vec
 ) 
 </code></pre>
+<p>This function takes in a <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> object and returns its equivalent glm::vec4 representation. The conversion is done by simply copying the x, y, z, and w values from the input <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> into the corresponding components of the output glm::vec4.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>vec</code> The <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> to be converted. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A glm::vec4 with the same x, y, z, and w values as the input <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a>.</p>
+<p>Converts a <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> to a GLM vec4.</p>
+<p>This function takes in a <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> and returns a glm::vec4 with the same x, y, z, w values. The conversion is done by directly copying the values from the input <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> to the output glm::vec4.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>vec</code> The <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> to be converted.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A GLM vector with the same x, y, z, w values as the input <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a>. </p>
 <hr>
 
 <hr />

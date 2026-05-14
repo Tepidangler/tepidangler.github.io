@@ -88,47 +88,92 @@
 <tbody>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-iniwriter"><strong>IniWriter</strong></a> (const std::filesystem::path &amp; Path) <br></td>
+<td style="text-align: left;"><a href="#function-iniwriter"><strong>IniWriter</strong></a> (const std::filesystem::path &amp; Path) <br><em>Constructs an</em> <a href="./"><em><strong>IniWriter</strong></em></a> <em>object with a given path to the INI file.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="#function-savefile"><strong>SaveFile</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-savefile"><strong>SaveFile</strong></a> () <br><em>Saves the INI file with the given path and content.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="#function-write"><strong>Write</strong></a> (const std::string &amp; Section, const std::string &amp; Key, const std::string &amp; Value) <br></td>
+<td style="text-align: left;"><a href="#function-write"><strong>Write</strong></a> (const std::string &amp; Section, const std::string &amp; Key, const std::string &amp; Value) <br><em>Writes a key-value pair to the INI file.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-iniwriter"><strong>~IniWriter</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-iniwriter"><strong>~IniWriter</strong></a> () = default<br><em>Destructor for the</em> <a href="./"><em><strong>IniWriter</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-iniwriter">function IniWriter</h3>
+<p><em>Constructs an</em> <a href="./"><em><strong>IniWriter</strong></em></a> <em>object with a given path to the INI file.</em></p>
 <pre><code class="language-C++">AGE::IniWriter::IniWriter (
     const std::filesystem::path &amp; Path
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Path</code> The path to the INI file. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>None</p>
+<p>Constructor for the <a href="./"><strong>IniWriter</strong></a> class.</p>
+<p>This constructor takes a const reference to std::filesystem::path as an argument, which is used to initialize the member variable m_IniPath. It also sets the Unicode encoding for the INI file and attempts to load it from the provided path. If the loading fails (indicated by a return code less than 0), an error message is logged.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Path</code> The path of the INI file to be loaded. </li>
+</ul>
 <hr>
 
 <h3 id="function-savefile">function SaveFile</h3>
+<p><em>Saves the INI file with the given path and content.</em> </p>
 <pre><code class="language-C++">bool AGE::IniWriter::SaveFile () 
 </code></pre>
+<p>This function saves the current INI data to a file at the specified path. It uses the SaveFile method of the m_Ini object, which writes the data to the file system. The function returns true if the save operation was successful (indicated by SI_OK return code), and false otherwise.</p>
+<p><strong>Returns:</strong></p>
+<p>True if the INI file was successfully saved, False otherwise.</p>
+<p>Saves the INI file with the given path and content.</p>
+<p>This function saves the current INI data to a file at the specified path. It uses the SaveFile method of the m_Ini object, which writes the contents of the INI structure into the file. The function returns true if the save operation was successful (indicated by SI_OK return code), and false otherwise.</p>
+<p><strong>Returns:</strong></p>
+<p>True if the save operation was successful, false otherwise. </p>
 <hr>
 
 <h3 id="function-write">function Write</h3>
+<p><em>Writes a key-value pair to the INI file.</em> </p>
 <pre><code class="language-C++">bool AGE::IniWriter::Write (
     const std::string &amp; Section,
     const std::string &amp; Key,
     const std::string &amp; Value
 ) 
 </code></pre>
+<p>This function writes a given value for a specific key in a specified section of an INI file. The operation is successful if the key was not present and has been inserted, or if the key was already present and has been updated.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Section</code> The name of the section to write into. </li>
+<li><code>Key</code> The key to be written. </li>
+<li><code>Value</code> The value to be associated with the given key.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>True if the operation is successful (key was inserted or updated), false otherwise.</p>
+<p>Writes a key-value pair to an INI file.</p>
+<p>This function writes the provided value for the given key in the specified section of the INI file. The function returns true if the operation was successful, false otherwise.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Section</code> The name of the section where the key-value pair will be written. </li>
+<li><code>Key</code> The key that will be associated with the provided value. </li>
+<li><code>Value</code> The value to be written for the given key in the specified section.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>True if the operation was successful, false otherwise. </p>
 <hr>
 
 <h3 id="function-iniwriter_1">function ~IniWriter</h3>
+<p><em>Destructor for the</em> <a href="./"><em><strong>IniWriter</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::IniWriter::~IniWriter () = default
 </code></pre>
+<p>This function is responsible for releasing any resources that were acquired by the <a href="./"><strong>IniWriter</strong></a> object, such as memory or file handles. It does not return anything and has no parameters.</p>
+<p>Default destructor for the <a href="./"><strong>IniWriter</strong></a> class.</p>
+<p>This function is responsible for freeing any resources that were allocated by the <a href="./"><strong>IniWriter</strong></a> object, such as memory or file handles. It does not return anything and has no parameters. </p>
 <hr>
 
 <hr />

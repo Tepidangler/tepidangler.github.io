@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="745" column="16" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="745" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="1034" column="16" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="1034" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_a_g_e_1_1_aseprite_file_data_1a119d2ccfc5c9f502c1c28b19f1389e8b" prot="public" static="no" mutable="no">
         <type>std::vector&lt; <ref refid="struct_a_g_e_1_1_aseprite_frame_data" kindref="compound">AsepriteFrameData</ref> &gt;</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="746" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="746" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="1035" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="1035" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -40,12 +40,17 @@
         <name>AsepriteFileData</name>
         <qualifiedname>AGE::AsepriteFileData::AsepriteFileData</qualifiedname>
         <briefdescription>
+<para>Default constructor for <ref refid="struct_a_g_e_1_1_aseprite_file_data" kindref="compound">AsepriteFileData</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function initializes an instance of the <ref refid="struct_a_g_e_1_1_aseprite_file_data" kindref="compound">AsepriteFileData</ref> class with default values. It is used to create a new object without any specific initialization.</para>
+<para><simplesect kind="return"><para>An instance of <ref refid="struct_a_g_e_1_1_aseprite_file_data" kindref="compound">AsepriteFileData</ref> with all fields initialized to their default values. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="740" column="1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="1018" column="1"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_aseprite_file_data_1afa3d167ff637fc447a9abf4039aa655b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -58,12 +63,23 @@
           <declname>HeaderData</declname>
         </param>
         <briefdescription>
+<para>Constructs an instance of the <ref refid="struct_a_g_e_1_1_aseprite_file_data" kindref="compound">AsepriteFileData</ref> class using a const reference to an <ref refid="struct_a_g_e_1_1_aseprite_header" kindref="compound">AsepriteHeader</ref> object. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>HeaderData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A const reference to an <ref refid="struct_a_g_e_1_1_aseprite_header" kindref="compound">AsepriteHeader</ref> object containing header data for the <ref refid="class_a_g_e_1_1_aseprite" kindref="compound">Aseprite</ref> file. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="741" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="741" bodyend="742"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="1023" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="1023" bodyend="1024"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_aseprite_file_data_1a14c7051c94972ac581efcaa457f5ebc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -75,12 +91,24 @@
           <type>const <ref refid="struct_a_g_e_1_1_aseprite_file_data" kindref="compound">AsepriteFileData</ref> &amp;</type>
         </param>
         <briefdescription>
+<para>Default copy constructor for the <ref refid="struct_a_g_e_1_1_aseprite_file_data" kindref="compound">AsepriteFileData</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is used to create a new instance of <ref refid="struct_a_g_e_1_1_aseprite_file_data" kindref="compound">AsepriteFileData</ref> by copying an existing one. It uses the &apos;= default&apos; syntax, which tells the compiler to generate the body of this function using the default behavior provided by the compiler.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The existing <ref refid="struct_a_g_e_1_1_aseprite_file_data" kindref="compound">AsepriteFileData</ref> instance to copy. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="743" column="1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="1032" column="1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -100,7 +128,7 @@
         <link refid="struct_a_g_e_1_1_aseprite_header"/>
       </node>
     </collaborationgraph>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="737" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="738" bodyend="748"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="1008" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="1009" bodyend="1037"/>
     <listofallmembers>
       <member refid="struct_a_g_e_1_1_aseprite_file_data_1a42a17b81b89bbbc33db7f8bb9945035d" prot="public" virt="non-virtual"><scope>AGE::AsepriteFileData</scope><name>AsepriteFileData</name></member>
       <member refid="struct_a_g_e_1_1_aseprite_file_data_1afa3d167ff637fc447a9abf4039aa655b" prot="public" virt="non-virtual"><scope>AGE::AsepriteFileData</scope><name>AsepriteFileData</name></member>

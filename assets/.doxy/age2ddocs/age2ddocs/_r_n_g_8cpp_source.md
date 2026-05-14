@@ -25,7 +25,7 @@ namespace AGE
      int SquirrelRNG::s_Position; 
      int SquirrelRNG::s_Rotation;
 
-    void SquirrelRNG::Init(uint32_t Seed)
+void SquirrelRNG::Init(uint32_t Seed)
     {
         s_Seed = Seed;
         s_Position = 0;
@@ -33,71 +33,71 @@ namespace AGE
         s_NoiseObj = CreateScope<SquirrelNoise>();
     }
 
-    uint32_t SquirrelRNG::RollRandomUint32()
+uint32_t SquirrelRNG::RollRandomUint32()
     {
         return 0;
     }
 
-    uint16_t SquirrelRNG::RollRandomUint16()
+uint16_t SquirrelRNG::RollRandomUint16()
     {
         return 0;
     }
 
-    uint8_t SquirrelRNG::RollRandomByte()
+uint8_t SquirrelRNG::RollRandomByte()
     {
         return 0;
     }
 
-    uint32_t SquirrelRNG::RollRandomIntLessThan(uint32_t MaxValueNotInclusive)
+uint32_t SquirrelRNG::RollRandomIntLessThan(uint32_t MaxValueNotInclusive)
     {
         return 0;
     }
 
-    int SquirrelRNG::RollRandomIntInRange(int MinValueInclusive, int MaxValueInclusive)
+int SquirrelRNG::RollRandomIntInRange(int MinValueInclusive, int MaxValueInclusive)
     {
         return 0;
     }
 
-    float SquirrelRNG::RollRandomFloatZeroToOne()
+float SquirrelRNG::RollRandomFloatZeroToOne()
     {
         return SquirrelRNG::s_NoiseObj->Get1dNoiseZeroToOne(SquirrelRNG::s_Position++, s_Seed);
     }
 
-    float SquirrelRNG::RollRandomFloatInRange(float MinValueInclusive, float MaxValueInclusive)
+float SquirrelRNG::RollRandomFloatInRange(float MinValueInclusive, float MaxValueInclusive)
     {
 
         // THis implementation is likely always going to return the min value. TODO: Fix to return numbers within the range including the max
         return MinValueInclusive + (MaxValueInclusive - MinValueInclusive) * SquirrelRNG::s_NoiseObj->Get1dNoiseZeroToOne(s_Position++, s_Seed);
     }
 
-    bool SquirrelRNG::RollRandomChance(float ProbabilityofReturnTrue)
+bool SquirrelRNG::RollRandomChance(float ProbabilityofReturnTrue)
     {
         return false;
     }
 
-    void SquirrelRNG::RollRandomDirection2D(float& out_x, float& out_y)
+void SquirrelRNG::RollRandomDirection2D(float& out_x, float& out_y)
     {
         out_x = s_NoiseObj->Get2dNoiseZeroToOne(s_Position, s_Position, s_Seed);
         out_y = s_NoiseObj->Get2dNoiseZeroToOne(s_Position, s_Position + 1, s_Seed);
     }
 
-    float SquirrelRNG::RollRandomRotationFloat()
+float SquirrelRNG::RollRandomRotationFloat()
     {
         return (float)s_NoiseObj->Get1dNoiseUint(s_Rotation++, s_Seed);
     }
 
-    SquirrelNoise::SquirrelNoise()
+SquirrelNoise::SquirrelNoise()
     {
         m_Position = 0;
     }
 
 
-    uint32_t SquirrelNoise::Rand()
+uint32_t SquirrelNoise::Rand()
     {
         return Get1dNoiseUint(m_Position++);
     }
 
-    uint32_t SquirrelNoise::Get1dNoiseUint(int Position, uint32_t Seed)
+uint32_t SquirrelNoise::Get1dNoiseUint(int Position, uint32_t Seed)
     {
         constexpr unsigned int BIT_NOISE1 = 0xB5297A4D;
         constexpr unsigned int BIT_NOISE2 = 0x68E31DA4;
@@ -114,18 +114,18 @@ namespace AGE
 
         return mangled;
     }
-    uint32_t SquirrelNoise::Get2dNoiseUint(int PositionX, int PositionY, uint32_t Seed)
+uint32_t SquirrelNoise::Get2dNoiseUint(int PositionX, int PositionY, uint32_t Seed)
     {
         constexpr int PRIME_NUMBER = 198491317;
         return Get1dNoiseUint(PositionX + (PRIME_NUMBER * PositionY), Seed);
     }
-    uint32_t SquirrelNoise::Get3dNoiseUint(int PositionX, int PositionY, int PositionZ, uint32_t Seed)
+uint32_t SquirrelNoise::Get3dNoiseUint(int PositionX, int PositionY, int PositionZ, uint32_t Seed)
     {
         constexpr int PRIME_NUMBER1 = 198491317;
         constexpr int PRIME_NUMBER2 = 6542989;
         return Get1dNoiseUint(PositionX + (PRIME_NUMBER1 * PositionY) + (PRIME_NUMBER2 * PositionZ), Seed);
     }
-    uint32_t SquirrelNoise::Get4dNoiseUint(int PositionX, int PositionY, int PositionZ, int PositionW, uint32_t Seed)
+uint32_t SquirrelNoise::Get4dNoiseUint(int PositionX, int PositionY, int PositionZ, int PositionW, uint32_t Seed)
     {
         constexpr int PRIME_NUMBER1 = 198491317;
         constexpr int PRIME_NUMBER2 = 6542989;
@@ -133,7 +133,7 @@ namespace AGE
         return Get1dNoiseUint(PositionX + (PRIME_NUMBER1 * PositionY) + (PRIME_NUMBER2 * PositionZ) + (PRIME_NUMBER3 * PositionW), Seed);
     }
 
-    float SquirrelNoise::Get1dNoiseZeroToOne(int Position, uint32_t Seed)
+float SquirrelNoise::Get1dNoiseZeroToOne(int Position, uint32_t Seed)
     {
         //constexpr unsigned int BIT_NOISE1 = 0xB5297A4D;
         //constexpr unsigned int BIT_NOISE2 = 0x68E31DA4;
@@ -151,20 +151,20 @@ namespace AGE
         return (float)(ONE_OVER_MAX_UINT * Get1dNoiseUint(Position, Seed));
     }
 
-    float SquirrelNoise::Get2dNoiseZeroToOne(int PositionX, int PositionY, uint32_t Seed)
+float SquirrelNoise::Get2dNoiseZeroToOne(int PositionX, int PositionY, uint32_t Seed)
     {
         //constexpr int PRIME_NUMBER = 198491317;
         return (float)(ONE_OVER_MAX_UINT * Get2dNoiseUint(PositionX,PositionY, Seed));
     }
 
-    float SquirrelNoise::Get3dNoiseZeroToOne(int PositionX, int PositionY, int PositionZ, uint32_t Seed)
+float SquirrelNoise::Get3dNoiseZeroToOne(int PositionX, int PositionY, int PositionZ, uint32_t Seed)
     {
         //constexpr int PRIME_NUMBER1 = 198491317;
         //constexpr int PRIME_NUMBER2 = 6542989;
         return (float)(ONE_OVER_MAX_UINT * Get3dNoiseUint(PositionX, PositionY, PositionZ, Seed));
     }
 
-    float SquirrelNoise::Get4dNoiseZeroToOne(int PositionX, int PositionY, int PositionZ, int PositionW, uint32_t Seed)
+float SquirrelNoise::Get4dNoiseZeroToOne(int PositionX, int PositionY, int PositionZ, int PositionW, uint32_t Seed)
     {
         //constexpr int PRIME_NUMBER1 = 198491317;
         //constexpr int PRIME_NUMBER2 = 6542989;
@@ -172,7 +172,7 @@ namespace AGE
         return (float)(ONE_OVER_MAX_UINT * Get4dNoiseUint(PositionX, PositionY, PositionZ, PositionW, Seed));
     }
 
-    float SquirrelNoise::Get1dNoiseNegOneToOne(int Position, uint32_t Seed)
+float SquirrelNoise::Get1dNoiseNegOneToOne(int Position, uint32_t Seed)
     {
         //constexpr unsigned int BIT_NOISE1 = 0xB5297A4D;
         //constexpr unsigned int BIT_NOISE2 = 0x68E31DA4;
@@ -190,20 +190,20 @@ namespace AGE
         return (float)(ONE_OVER_MAX_INT * Get1dNoiseUint(Position, Seed));
     }
 
-    float SquirrelNoise::Get2dNoiseNegOneToOne(int PositionX, int PositionY, uint32_t Seed)
+float SquirrelNoise::Get2dNoiseNegOneToOne(int PositionX, int PositionY, uint32_t Seed)
     {
         //constexpr int PRIME_NUMBER = 198491317;
         return (float)(ONE_OVER_MAX_INT * Get2dNoiseUint(PositionX, PositionY, Seed));
     }
 
-    float SquirrelNoise::Get3dNoiseNegOneToOne(int PositionX, int PositionY, int PositionZ, uint32_t Seed)
+float SquirrelNoise::Get3dNoiseNegOneToOne(int PositionX, int PositionY, int PositionZ, uint32_t Seed)
     {
         //constexpr int PRIME_NUMBER1 = 198491317;
         //constexpr int PRIME_NUMBER2 = 6542989;
         return (float)(ONE_OVER_MAX_INT * Get3dNoiseUint(PositionX, PositionY, PositionZ, Seed));
     }
 
-    float SquirrelNoise::Get4dNoiseNegOneToOne(int PositionX, int PositionY, int PositionZ, int PositionW, uint32_t Seed)
+float SquirrelNoise::Get4dNoiseNegOneToOne(int PositionX, int PositionY, int PositionZ, int PositionW, uint32_t Seed)
     {
         //constexpr int PRIME_NUMBER1 = 198491317;
         //constexpr int PRIME_NUMBER2 = 6542989;
@@ -212,7 +212,8 @@ namespace AGE
     }
     
 
-    float SquirrelNoise::Get1dNoiseForRotation(int Rotation, uint32_t Seed)
+
+float SquirrelNoise::Get1dNoiseForRotation(int Rotation, uint32_t Seed)
     {
         constexpr unsigned int BIT_NOISE1 = 0xB5297A4D;
         constexpr unsigned int BIT_NOISE2 = 0x68E31DA4;

@@ -99,10 +99,6 @@
 <td style="text-align: left;"><a href="#variable-height"><strong>Height</strong></a>   = <code>1</code><br></td>
 </tr>
 <tr>
-<td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="#variable-isarray"><strong>IsArray</strong></a>   = <code>false</code><br></td>
-</tr>
-<tr>
 <td style="text-align: right;">uint32_t</td>
 <td style="text-align: left;"><a href="#variable-width"><strong>Width</strong></a>   = <code>1</code><br></td>
 </tr>
@@ -119,11 +115,11 @@
 <tbody>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-texturespecification"><strong>TextureSpecification</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-texturespecification"><strong>TextureSpecification</strong></a> () = default<br><em>Default constructor for the</em> <a href="./"><em><strong>TextureSpecification</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual</td>
-<td style="text-align: left;"><a href="#function-texturespecification"><strong>~TextureSpecification</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-texturespecification"><strong>~TextureSpecification</strong></a> () = default<br><em>Virtual destructor for the</em> <a href="./"><em><strong>TextureSpecification</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
@@ -138,11 +134,11 @@
 <tbody>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-deserialize"><strong>Deserialize</strong></a> (<a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> * Serializer, <a href="./"><strong>TextureSpecification</strong></a> &amp; Instance) <br></td>
+<td style="text-align: left;"><a href="#function-deserialize"><strong>Deserialize</strong></a> (<a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> * Serializer, <a href="./"><strong>TextureSpecification</strong></a> &amp; Instance) <br><em>Deserialize a</em> <a href="./"><em><strong>TextureSpecification</strong></em></a> <em>from a</em><a href="../class_a_g_e_1_1_data_reader/"><em><strong>DataReader</strong></em></a> <em>.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-serialize"><strong>Serialize</strong></a> (<a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> * Serializer, const <a href="./"><strong>TextureSpecification</strong></a> &amp; Instance) <br></td>
+<td style="text-align: left;"><a href="#function-serialize"><strong>Serialize</strong></a> (<a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> * Serializer, const <a href="./"><strong>TextureSpecification</strong></a> &amp; Instance) <br><em>This function serializes a</em> <a href="./"><em><strong>TextureSpecification</strong></em></a> <em>instance into the provided</em><a href="../class_a_g_e_1_1_data_writer/"><em><strong>DataWriter</strong></em></a> <em>.</em></td>
 </tr>
 </tbody>
 </table>
@@ -162,40 +158,73 @@
 </code></pre>
 <hr>
 
-<h3 id="variable-isarray">variable IsArray</h3>
-<pre><code class="language-C++">bool AGE::TextureSpecification::IsArray;
-</code></pre>
-<hr>
-
 <h3 id="variable-width">variable Width</h3>
 <pre><code class="language-C++">uint32_t AGE::TextureSpecification::Width;
 </code></pre>
 <hr>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-texturespecification">function TextureSpecification</h3>
+<p><em>Default constructor for the</em> <a href="./"><em><strong>TextureSpecification</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::TextureSpecification::TextureSpecification () = default
 </code></pre>
+<p>This function initializes a new instance of the <a href="./"><strong>TextureSpecification</strong></a> class with default values.</p>
+<p>Default constructor for the <a href="./"><strong>TextureSpecification</strong></a> class.</p>
+<p>This function initializes a new instance of the <a href="./"><strong>TextureSpecification</strong></a> class with default values. </p>
 <hr>
 
 <h3 id="function-texturespecification_1">function ~TextureSpecification</h3>
+<p><em>Virtual destructor for the</em> <a href="./"><em><strong>TextureSpecification</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">virtual AGE::TextureSpecification::~TextureSpecification () = default
 </code></pre>
+<p>This function is responsible for releasing any resources that were acquired by the object during its lifetime. It does not return anything and has no parameters.</p>
+<p>Virtual destructor for the <a href="./"><strong>TextureSpecification</strong></a> class.</p>
+<p>This function is responsible for releasing any resources that were acquired by the object during its lifetime, such as memory or file handles. It does not perform any operations on the state of the object itself.</p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
 <h3 id="function-deserialize">function Deserialize</h3>
+<p><em>Deserialize a</em> <a href="./"><em><strong>TextureSpecification</strong></em></a> <em>from a</em><a href="../class_a_g_e_1_1_data_reader/"><em><strong>DataReader</strong></em></a> <em>.</em></p>
 <pre><code class="language-C++">static void AGE::TextureSpecification::Deserialize (
     DataReader * Serializer,
     TextureSpecification &amp; Instance
 ) 
 </code></pre>
+<p>This function reads the Width, Height, Format and GenerateMips fields of a <a href="./"><strong>TextureSpecification</strong></a> object from a <a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a>. The Format field is read as an uint8_t and then cast to ImageFormat. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Serializer</code> A pointer to the <a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> that provides the serialized data. </li>
+<li><code>Instance</code> The <a href="./"><strong>TextureSpecification</strong></a> object to be deserialized.</li>
+</ul>
+<p>Deserialize a <a href="./"><strong>TextureSpecification</strong></a> from a <a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a>.</p>
+<p>This function reads the Width, Height, Format and GenerateMips fields of a <a href="./"><strong>TextureSpecification</strong></a> from a <a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a>. The format is read as an uint8_t and then cast to ImageFormat. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Serializer</code> A pointer to the <a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> that provides the serialized data. </li>
+<li><code>Instance</code> The <a href="./"><strong>TextureSpecification</strong></a> instance to populate with deserialized data. </li>
+</ul>
 <hr>
 
 <h3 id="function-serialize">function Serialize</h3>
+<p><em>This function serializes a</em> <a href="./"><em><strong>TextureSpecification</strong></em></a> <em>instance into the provided</em><a href="../class_a_g_e_1_1_data_writer/"><em><strong>DataWriter</strong></em></a> <em>.</em></p>
 <pre><code class="language-C++">static void AGE::TextureSpecification::Serialize (
     DataWriter * Serializer,
     const TextureSpecification &amp; Instance
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Serializer</code> Pointer to an instance of <a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> that will be used for writing data. </li>
+<li><code>Instance</code> The <a href="./"><strong>TextureSpecification</strong></a> instance to be serialized.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>This function serializes a <a href="./"><strong>TextureSpecification</strong></a> instance into the provided <a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a>.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Serializer</code> Pointer to an instance of <a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> that will be used for writing data. </li>
+<li><code>Instance</code> The <a href="./"><strong>TextureSpecification</strong></a> instance to be serialized. </li>
+</ul>
 <hr>
 
 <hr />

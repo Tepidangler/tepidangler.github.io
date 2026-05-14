@@ -26,14 +26,12 @@
 #include "Assets/Public/AssetManager.h"
 #include <yaml-cpp/yaml.h>
 
-#include "TileMap/Public/TileMapManager.h"
-
 namespace YAML
 {
     template<>
     struct convert<AGE::Vector2>
     {
-        static Node encode(const AGE::Vector2& rhs)
+static Node encode(const AGE::Vector2& rhs)
         {
             Node node;
             node.push_back(rhs.x);
@@ -42,7 +40,7 @@ namespace YAML
             return node;
         }
 
-        static bool decode(const Node& node, AGE::Vector2& rhs)
+static bool decode(const Node& node, AGE::Vector2& rhs)
         {
             if (!node.IsSequence() || node.size() != 2)
             {
@@ -58,7 +56,7 @@ namespace YAML
     template<>
     struct convert<AGE::Vector3>
     {
-        static Node encode(const AGE::Vector3& rhs)
+static Node encode(const AGE::Vector3& rhs)
         {
             Node node;
             node.push_back(rhs.x);
@@ -68,7 +66,7 @@ namespace YAML
             return node;
         }
 
-        static bool decode(const Node& node, AGE::Vector3& rhs)
+static bool decode(const Node& node, AGE::Vector3& rhs)
         {
             if (!node.IsSequence() || node.size() != 3)
             {
@@ -86,7 +84,7 @@ namespace YAML
     template<>
     struct convert<AGE::Vector4>
     {
-        static Node encode(const AGE::Vector4& rhs)
+static Node encode(const AGE::Vector4& rhs)
         {
             Node node;
 
@@ -98,7 +96,7 @@ namespace YAML
             return node;
         }
 
-        static bool decode(const Node& node, AGE::Vector4& rhs)
+static bool decode(const Node& node, AGE::Vector4& rhs)
         {
             if (!node.IsSequence() || node.size() != 4)
             {
@@ -115,7 +113,7 @@ namespace YAML
     template<>
     struct convert<AGE::Ref<AGE::Texture2D>>
     {
-        static Node encode(const AGE::Ref<AGE::Texture2D>& rhs)
+static Node encode(const AGE::Ref<AGE::Texture2D>& rhs)
         {
             Node node;
 
@@ -124,7 +122,7 @@ namespace YAML
             return node;
         }
 
-        static bool decode(const Node& node, AGE::Ref<AGE::Texture2D>& rhs)
+static bool decode(const Node& node, AGE::Ref<AGE::Texture2D>& rhs)
         {
             if (!node.IsSequence() || node.size() != 1)
             {
@@ -138,7 +136,7 @@ namespace YAML
     template<>
     struct convert<AGE::Ref<AGE::AudioSource>>
     {
-        static Node encode(const AGE::Ref<AGE::AudioSource>& rhs)
+static Node encode(const AGE::Ref<AGE::AudioSource>& rhs)
         {
             Node node;
 
@@ -147,7 +145,7 @@ namespace YAML
             return node;
         }
 
-        static bool decode(const Node& node, AGE::Ref<AGE::AudioSource>& rhs)
+static bool decode(const Node& node, AGE::Ref<AGE::AudioSource>& rhs)
         {
             if (!node.IsSequence() || node.size() <= 0)
             {
@@ -162,7 +160,7 @@ namespace YAML
     template<>
     struct convert <std::vector<std::pair<std::string, std::vector<uint8_t>>>>
     {
-        static Node encode(const std::vector<std::pair<std::string, std::vector<uint8_t>>>& rhs)
+static Node encode(const std::vector<std::pair<std::string, std::vector<uint8_t>>>& rhs)
         {
             Node node;
             for (size_t i = 0; i < rhs.size(); i++)
@@ -174,7 +172,7 @@ namespace YAML
             return node;
         }
 
-        static bool decode(const Node& node, std::vector<std::pair<std::string, std::vector<uint8_t>>>& rhs)
+static bool decode(const Node& node, std::vector<std::pair<std::string, std::vector<uint8_t>>>& rhs)
         {       
             rhs.resize(node.size()*(uint64_t)(.5f));
             std::cout << Dump(node) << std::endl;
@@ -204,7 +202,7 @@ namespace YAML
     template<>
     struct convert <std::vector<uint8_t>>
     {
-        static Node encode(const std::vector<uint8_t>& rhs)
+static Node encode(const std::vector<uint8_t>& rhs)
         {
             Node node;
             for (size_t i = 0; i < rhs.size(); i++)
@@ -214,7 +212,7 @@ namespace YAML
             return node;
         }
 
-        static bool decode(const Node& node, std::vector<uint8_t>& rhs)
+static bool decode(const Node& node, std::vector<uint8_t>& rhs)
         {
             if (!node.IsSequence() || node.size() <= 0)
             {
@@ -235,7 +233,7 @@ namespace YAML
     template<>
     struct convert <AGE::AnimationSpecification>
     {
-        static Node encode(const AGE::AnimationSpecification& rhs)
+static Node encode(const AGE::AnimationSpecification& rhs)
         {
             Node node;
             node.push_back(rhs.Name);
@@ -249,7 +247,7 @@ namespace YAML
             return node;
         }
 
-        static bool decode(const Node& node, AGE::AnimationSpecification& rhs)
+static bool decode(const Node& node, AGE::AnimationSpecification& rhs)
         {
             if (!node.IsSequence() || node.size() <= 0)
             {
@@ -271,26 +269,26 @@ namespace YAML
 
 namespace AGE
 {
-    YAML::Emitter& operator <<(YAML::Emitter& Out, const AGE::Vector2& v)
+YAML::Emitter& operator <<(YAML::Emitter& Out, const AGE::Vector2& v)
     {
         Out << YAML::Flow;
         Out << YAML::BeginSeq << v.x << v.y << YAML::EndSeq;
         return Out;
     }
 
-    YAML::Emitter& operator <<(YAML::Emitter& Out, const AGE::Vector3& v)
+YAML::Emitter& operator <<(YAML::Emitter& Out, const AGE::Vector3& v)
     {
         Out << YAML::Flow;
         Out << YAML::BeginSeq << v.x << v.y << v.z << YAML::EndSeq;
         return Out;
     }
-    YAML::Emitter& operator <<(YAML::Emitter& Out, const AGE::Vector4& v)
+YAML::Emitter& operator <<(YAML::Emitter& Out, const AGE::Vector4& v)
     {
         Out << YAML::Flow;
         Out << YAML::BeginSeq << v.x << v.y << v.z << v.w << YAML::EndSeq;
         return Out;
     }
-    YAML::Emitter& operator <<(YAML::Emitter& Out, const std::unordered_map<std::string, Ref<Texture2D>>& um)
+YAML::Emitter& operator <<(YAML::Emitter& Out, const std::unordered_map<std::string, Ref<Texture2D>>& um)
     {
         Out << YAML::Flow;
         for (auto KV : um)
@@ -299,7 +297,7 @@ namespace AGE
         }
         return Out;
     }
-    YAML::Emitter& operator <<(YAML::Emitter& Out, const std::vector<Ref<AudioSource>>& sound)
+YAML::Emitter& operator <<(YAML::Emitter& Out, const std::vector<Ref<AudioSource>>& sound)
     {
         Out << YAML::Flow;
         Out << YAML::BeginSeq;
@@ -311,7 +309,8 @@ namespace AGE
         return Out;
     }
 
-    YAML::Emitter& operator <<(YAML::Emitter& Out, const std::vector<std::pair<std::string, std::vector<uint8_t>>> Bindings)
+    
+YAML::Emitter& operator <<(YAML::Emitter& Out, const std::vector<std::pair<std::string, std::vector<uint8_t>>> Bindings)
     {
         Out << YAML::Flow;
         Out << YAML::BeginMap;
@@ -332,7 +331,7 @@ namespace AGE
         return Out;
     }
 
-    YAML::Emitter& operator <<(YAML::Emitter& Out, AGE::AnimationSpecification Anim)
+YAML::Emitter& operator <<(YAML::Emitter& Out, AGE::AnimationSpecification Anim)
     {
         Out << YAML::Flow;
         Out << YAML::BeginSeq;
@@ -350,7 +349,7 @@ namespace AGE
 
     
 
-    static std::string RigidBody2DBodyTypeToString(BodyType BodyType)
+static std::string RigidBody2DBodyTypeToString(BodyType BodyType)
     {
         switch (BodyType)
         {
@@ -368,11 +367,11 @@ namespace AGE
         }
         }
 
-        AGE_CORE_ASSERT(false, "Unknown Body Type");
+        CoreLogger::Assert(false, "Unknown Body Type");
         return {};
     }
 
-    static BodyType RigidBody2DTypeFromString(const std::string& BodyTypeString)
+static BodyType RigidBody2DTypeFromString(const std::string& BodyTypeString)
     {
         if (BodyTypeString == "Static")
         {
@@ -387,20 +386,20 @@ namespace AGE
             return BodyType::Kinematic;
         }
 
-        AGE_CORE_ASSERT(false, "Unknown Body Type");
+        CoreLogger::Assert(false, "Unknown Body Type");
         
         return BodyType::Static;
 
     }
 
-    SceneSerializer::SceneSerializer(const Ref<Scene>& S)
+SceneSerializer::SceneSerializer(const Ref<Scene>& S)
         :m_Scene(S)
     {
     }
 
-    static void SerializeEntity(YAML::Emitter& Out, Entity E)
+static void SerializeEntity(YAML::Emitter& Out, Entity E)
     {
-        AGE_CORE_ASSERT(E.HasComponent<IDComponent>(), "No ID Component present!");
+        CoreLogger::Assert(E.HasComponent<IDComponent>(), "No ID Component present!");
         Out << YAML::BeginMap;
         Out << YAML::Key << "Entity";
         Out << YAML::Value << (uint64_t)E.GetUUID();
@@ -469,6 +468,15 @@ namespace AGE
             auto& Texture = E.GetComponent<SpriteRendererComponent>().Texture;
             auto& Anims = E.GetComponent<SpriteRendererComponent>().AnimTextures;
             [[maybe_unused]] auto& SubTexture = E.GetComponent<SpriteRendererComponent>().SubTexture;
+            auto& TileID = E.GetComponent<SpriteRendererComponent>().TileID;
+            auto& Width = E.GetComponent<SpriteRendererComponent>().TileWidth;
+            auto& Height = E.GetComponent<SpriteRendererComponent>().TileHeight;
+            auto& Location = E.GetComponent<SpriteRendererComponent>().TileLocation;
+            auto& IsTile = E.GetComponent<SpriteRendererComponent>().bTile;
+            auto& Layer = E.GetComponent<SpriteRendererComponent>().TilesLayer;
+            //auto& Color = E.GetComponent<SpriteRendererComponent>().Color;
+            //auto& Color = E.GetComponent<SpriteRendererComponent>().Color;
+
             Out << YAML::Key << "Color" << YAML::Value << Color;
             Out << YAML::Key << "MovementStatus" << YAML::Value << (int)MovementStatus;
             if (Anims.size() > 0)
@@ -485,6 +493,15 @@ namespace AGE
             {
                 Out << YAML::Key << "Texture" << YAML::Value << Texture->GetTextureFilePath();
             }
+            if (TileID > -1)
+            {
+                Out << YAML::Key << "TileID" << YAML::Value << TileID;
+                Out << YAML::Key << "TileLocation" << YAML::Value << Location;
+                Out << YAML::Key << "TileWidth" << YAML::Value << Width;
+                Out << YAML::Key << "TileHeight" << YAML::Value << Height;
+                Out << YAML::Key << "Layer" << YAML::Value << Layer;
+            }
+            Out << YAML::Key << "IsTile" << YAML::Value << IsTile;
             Out << YAML::EndMap;
         }
 
@@ -494,9 +511,8 @@ namespace AGE
             Out << YAML::BeginMap;
 
             auto& Name = E.GetComponent<TileMapRendererComponent>().Name;
-            auto Path = E.GetComponent<TileMapRendererComponent>().GetTileMap()->GetPath().string();
+
             Out << YAML::Key << "Name" << YAML::Value << Name;
-            Out << YAML::Key << "Path" << YAML::Value << Path;
             Out << YAML::EndMap;
         }
         if (E.HasComponent<CircleRendererComponent>())
@@ -597,7 +613,7 @@ namespace AGE
 
     }
 
-    void SceneSerializer::Serialize(const std::string& FilePath)
+void SceneSerializer::Serialize(const std::string& FilePath)
     {
 
         std::string base = FilePath.substr(FilePath.find_last_of("/\\") + 1);
@@ -628,7 +644,8 @@ namespace AGE
         Fout << Out.c_str();
     }
 
-    bool SceneSerializer::Deserialize(const std::string& FilePath)
+    
+bool SceneSerializer::Deserialize(const std::string& FilePath)
     {
         std::ifstream Stream(FilePath);
 
@@ -700,7 +717,6 @@ namespace AGE
                     auto& Comp = DeserializedEntity.AddComponent<TileMapRendererComponent>();
 
                     Comp.Name = TMRC["Name"].as<std::string>();
-                    Comp.TileMap = TileMapManager::Get().LoadTileMap(TMRC["Path"].as<std::string>());
                 }
                 auto SRC = E["SpriteRendererComponent"];
                 if (SRC)
@@ -715,6 +731,21 @@ namespace AGE
                     {
                         Comp.MovementStatus = (CharMovementStatus)SRC["MovementStatus"].as<int>();
                     }
+                    Comp.bTile = false;
+                    if (SRC["IsTile"])
+                    {
+                        Comp.bTile = SRC["IsTile"].as<bool>();
+                    }
+                    if (Comp.bTile)
+                    {
+                        Comp.TileID = SRC["TileID"].as<int>();
+                        Comp.TileWidth = SRC["TileWidth"].as<float>();
+                        Comp.TileHeight = SRC["TileHeight"].as<float>();
+                        Comp.TileLocation = SRC["TileLocation"].as<AGE::Vector2>();
+                        Comp.TilesLayer = SRC["Layer"].as<int>();
+                    }
+
+
                     if (SRC["Texture"])
                     {
                         Comp.Texture = AssetManager::Get().LoadTexture(SRC["Texture"].as<std::string>());
@@ -830,12 +861,12 @@ namespace AGE
         return true;
     }
 
-    ProjectSerializer::ProjectSerializer(Ref<Project> Project)
+ProjectSerializer::ProjectSerializer(Ref<Project> Project)
         :m_Project(Project)
     {
 
     }
-    bool ProjectSerializer::Serialize(const std::filesystem::path& FilePath)
+bool ProjectSerializer::Serialize(const std::filesystem::path& FilePath)
     {
         const auto& Config = m_Project->GetConfig();
         const auto& Info = m_Project->GetInfo();
@@ -870,7 +901,8 @@ namespace AGE
         Fout << Out.c_str();
         return true;
     }
-    void ProjectSerializer::SerializeBinary(const std::filesystem::path& FilePath)
+    
+void ProjectSerializer::SerializeBinary(const std::filesystem::path& FilePath)
     {
         AppConfig Config = App::Get().GetAppConfig();
         std::time_t t = std::time(nullptr);
@@ -943,7 +975,7 @@ namespace AGE
 
         }
     }
-    bool ProjectSerializer::Deserialize(const std::filesystem::path& FilePath)
+bool ProjectSerializer::Deserialize(const std::filesystem::path& FilePath)
     {
         auto& Config = m_Project->GetConfig();
         auto& Info = m_Project->GetInfo();
@@ -988,7 +1020,7 @@ namespace AGE
 
         return true;
     }
-    bool ProjectSerializer::DeserializeBinary(const std::filesystem::path& FilePath)
+bool ProjectSerializer::DeserializeBinary(const std::filesystem::path& FilePath)
     {
         return false;
     }

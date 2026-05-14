@@ -22,18 +22,18 @@ namespace AGE
     class Shader
     {
     public:
-        virtual ~Shader() {};
+virtual ~Shader() {};
 
         virtual void Bind() const = 0;
         virtual void Unbind() const = 0;
 
         
-        virtual void SetFloat(const char* Name, float Values, float* ValuePtr = nullptr, int Count = 2) const = 0;
-        virtual void SetFloat2(const char* Name, const Vector2& Values, const Vector2* ValuePtr= nullptr, int Count = 2) const = 0;
-        virtual void SetFloat3(const char* Name, const Vector3& Values, const Vector3* ValuePtr= nullptr, int Count = 2) const = 0;
-        virtual void SetFloat4(const char* Name, const Vector4& Value, const Vector4* ValuePtr = nullptr, int Count = 2) const = 0;
+        virtual void SetFloat(const char* Name, float Values) const = 0;
+        virtual void SetFloat2(const char* Name, const Vector2& Values) const = 0;
+        virtual void SetFloat3(const char* Name, const Vector3& Values) const = 0;
+        virtual void SetFloat4(const char* Name, const Vector4 Value) const = 0;
+        virtual void SetMat4(const char* Name, const Matrix4D Matrix) const = 0;
         virtual void SetMat3(const char* Name, const Matrix3D& Matrix) const = 0;
-        virtual void SetMat4(const char* Name, const Matrix4D& Matrix) const = 0;
         virtual void SetInt(const char* Name, const int Texture = 0, const int* TexturePtr = nullptr, const int Count = 2) const = 0;
 
         inline virtual uint32_t GetRendererID() const = 0;
@@ -61,7 +61,7 @@ namespace AGE
 
         bool Exists(const std::string& Name);
 
-        std::unordered_map<std::string, Ref<Shader>> GetLibrary() { return m_Shaders; }
+std::unordered_map<std::string, Ref<Shader>> GetLibrary() { return m_Shaders; }
 
     private:
         std::unordered_map<std::string, Ref<Shader>> m_Shaders;

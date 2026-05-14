@@ -24,7 +24,7 @@ RTTR_REGISTRATION{
 }
 namespace AGE
 {
-    UIImageComponent::UIImageComponent(const std::string &Name)
+UIImageComponent::UIImageComponent(const std::string &Name)
     {
         m_Name = Name;
         m_Type = UIComponentType::ImageComponent;
@@ -38,16 +38,18 @@ namespace AGE
         m_Image = Texture2D::Create(TextureSpecification());
     }
 
-    void UIImageComponent::OnUpdate(TimeStep DeltaTime)
+void UIImageComponent::OnUpdate(TimeStep DeltaTime)
     {
         Renderer2D::DrawQuad(m_Image, m_Properties);
     }
 
-    void UIImageComponent::OnEvent(Event &Event)
+void UIImageComponent::OnEvent(Event &Event)
     {
     }
 
-    void UIImageComponent::DrawContent()
+    
+
+void UIImageComponent::DrawContent()
     {
         //Combo Box
 

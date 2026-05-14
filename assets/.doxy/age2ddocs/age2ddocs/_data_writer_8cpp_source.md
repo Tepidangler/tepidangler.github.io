@@ -14,16 +14,16 @@
 
 namespace AGE
 {
-    FileStreamWriter::FileStreamWriter(const std::filesystem::path& Path)
+FileStreamWriter::FileStreamWriter(const std::filesystem::path& Path)
         :m_Path(Path)
     {
         m_Stream = std::ofstream(Path, std::ofstream::out | std::ofstream::binary);
     }
-    FileStreamWriter::~FileStreamWriter()
+FileStreamWriter::~FileStreamWriter()
     {
         m_Stream.close();
     }
-    bool FileStreamWriter::WriteData(const char* Data, size_t Size)
+bool FileStreamWriter::WriteData(const char* Data, size_t Size)
     {
 #if __clang__
         m_Stream.write(Data, (long)Size);
@@ -32,7 +32,7 @@ namespace AGE
 #endif
         return true;
     }
-    void DataWriter::WriteBuffer(Buffer buffer, bool WriteSize)
+void DataWriter::WriteBuffer(Buffer buffer, bool WriteSize)
     {
         if (WriteSize)
         {
@@ -41,7 +41,7 @@ namespace AGE
 
         WriteData((char*)buffer.Data, buffer.Size);
     }
-    void DataWriter::WriteZero(uint64_t Size)
+void DataWriter::WriteZero(uint64_t Size)
     {
         char Zero = 0;
         for (uint64_t i = 0; i < Size; i++)
@@ -49,23 +49,23 @@ namespace AGE
             WriteData(&Zero, 1);
         }
     }
-    void DataWriter::WriteString(const std::string& String)
+void DataWriter::WriteString(const std::string& String)
     {
         //Lol this isn't how it works
         size_t Size = String.length();
         WriteData((char*)&Size, sizeof(size_t));
         WriteData((char*)String.data(), sizeof(char) * Size); //This should probably be String.length() as we should be multiplying the size of a char (1 byte) by the number of chars in the string
     }
-    MemoryStreamWriter::MemoryStreamWriter(void* Addr)
+MemoryStreamWriter::MemoryStreamWriter(void* Addr)
         :m_Addr(Addr)
     {
         m_Stream = std::stringstream(std::stringstream::out | std::stringstream::binary);
     }
-    MemoryStreamWriter::~MemoryStreamWriter()
+MemoryStreamWriter::~MemoryStreamWriter()
     {
         m_Stream.clear();
     }
-    bool MemoryStreamWriter::WriteData(const char* Data, size_t Size)
+bool MemoryStreamWriter::WriteData(const char* Data, size_t Size)
     {
 #if __clang__
         m_Stream.write(Data, (long)Size);

@@ -40,18 +40,18 @@ namespace AGE
         StringProperties m_StringProperties;
         void OnUpdate(TimeStep DeltaTime) override;
         void OnEvent(Event& Event) override;
-        void CallSerialize(DataWriter* Serializer) override
+void CallSerialize(DataWriter* Serializer) override
         {
             Serializer->WriteObject<TextComponent>(*this);
         }
-        void CallDeserialize(DataReader* Serializer) override
+void CallDeserialize(DataReader* Serializer) override
         {
             Serializer->ReadObject<TextComponent>(*this);
         }
         void DrawFontSelectionComboBox() override;
         void DrawContent() override;
 
-        static void Serialize(DataWriter* Serializer, const TextComponent& Instance)
+static void Serialize(DataWriter* Serializer, const TextComponent& Instance)
         {
             Serializer->WriteString(Instance.m_Name);
             Serializer->WriteRaw<uint16_t>(Instance.m_Type);
@@ -70,7 +70,8 @@ namespace AGE
             Serializer->WriteRaw<float>(Instance.m_StringProperties.Rotation.z);
         }
 
-        static void Deserialize(DataReader* Serializer, TextComponent& Instance)
+        
+static void Deserialize(DataReader* Serializer, TextComponent& Instance)
         {
             Serializer->ReadString(Instance.m_Name);
             uint16_t Type;

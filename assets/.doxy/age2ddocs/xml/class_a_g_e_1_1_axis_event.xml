@@ -19,12 +19,53 @@
           <declname>Position</declname>
         </param>
         <briefdescription>
+<para>Constructs an instance of the <ref refid="class_a_g_e_1_1_axis_event" kindref="compound">AxisEvent</ref> class with specified axis and position. </para>
         </briefdescription>
         <detaileddescription>
+<para>This constructor creates a new instance of the <ref refid="class_a_g_e_1_1_axis_event" kindref="compound">AxisEvent</ref> class by initializing its base class (<ref refid="class_a_g_e_1_1_input_event" kindref="compound">InputEvent</ref>) with the provided axis and position values.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Axis</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The identifier for the input event&apos;s associated physical axis. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current position of the physical axis in relation to its origin point.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Constructs an instance of the <ref refid="class_a_g_e_1_1_axis_event" kindref="compound">AxisEvent</ref> class with specified axis and position.</para>
+<para>This constructor creates a new instance of the <ref refid="class_a_g_e_1_1_axis_event" kindref="compound">AxisEvent</ref> class by initializing its base class (<ref refid="class_a_g_e_1_1_input_event" kindref="compound">InputEvent</ref>) with the provided axis and position values.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Axis</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The identifier for the input event&apos;s associated physical axis, such as an x-axis or y-axis. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current position on the specified axis. This could be a value between -1.0 and 1.0, representing full left to right movement.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An instance of <ref refid="class_a_g_e_1_1_axis_event" kindref="compound">AxisEvent</ref> with the provided axis and position values. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" line="32" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" bodystart="32" bodyend="33"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" line="88" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" bodystart="88" bodyend="89"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_axis_event_1ac6533292a1c53bbfd245de5ae3a39dce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -33,12 +74,19 @@
         <name>GetAxis</name>
         <qualifiedname>AGE::AxisEvent::GetAxis</qualifiedname>
         <briefdescription>
+<para>This function returns the value of the member variable &apos;m_Axis&apos;. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>The integer value stored in &apos;m_Axis&apos;</para>
+</simplesect>
+This function returns the current axis value.</para>
+<para><simplesect kind="return"><para>The integer value of the current axis. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" line="35" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" bodystart="35" bodyend="35"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" line="100" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" bodystart="100" bodyend="100"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_axis_event_1a7ef13ece377e6bfc1ec70552b53f9f4e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>float</type>
@@ -47,12 +95,20 @@
         <name>GetPosition</name>
         <qualifiedname>AGE::AxisEvent::GetPosition</qualifiedname>
         <briefdescription>
+<para>This function returns the current position value. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>A floating-point number representing the current position.</para>
+</simplesect>
+Returns the current position value.</para>
+<para>This function retrieves and returns the current position value stored in the member variable &apos;m_Position&apos;. The returned value represents a float representing the position of an object or entity.</para>
+<para><simplesect kind="return"><para>A floating-point number representing the current position. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" line="36" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" bodystart="36" bodyend="36"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" line="114" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" bodystart="114" bodyend="114"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -95,7 +151,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" line="29" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" bodystart="30" bodyend="38"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" line="67" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" bodystart="68" bodyend="116"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_axis_event_1aae5ef2aa510e78d369463c79786639c6" prot="public" virt="non-virtual"><scope>AGE::AxisEvent</scope><name>AxisEvent</name></member>
       <member refid="class_a_g_e_1_1_axis_event_1ac6533292a1c53bbfd245de5ae3a39dce" prot="public" virt="non-virtual"><scope>AGE::AxisEvent</scope><name>GetAxis</name></member>

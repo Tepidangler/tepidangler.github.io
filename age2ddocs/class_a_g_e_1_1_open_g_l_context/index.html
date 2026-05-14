@@ -77,6 +77,10 @@
               
                 <h1 id="class-ageopenglcontext">Class AGE::OpenGLContext</h1>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespace_a_g_e/"><strong>AGE</strong></a> <strong>&gt;</strong> <a href="./"><strong>OpenGLContext</strong></a></p>
+<p><em>Constructor for</em> <a href="./"><em><strong>OpenGLContext</strong></em></a> <em>. Initializes the context with a GLFW window handle.</em><a href="#detailed-description">More...</a></p>
+<ul>
+<li><code>#include &lt;OpenGlContext.h&gt;</code></li>
+</ul>
 <p>Inherits the following classes: <a href="../class_a_g_e_1_1_graphics_context/">AGE::GraphicsContext</a></p>
 <h2 id="public-functions">Public Functions</h2>
 <table>
@@ -89,27 +93,27 @@
 <tbody>
 <tr>
 <td style="text-align: right;"><a href="../class_a_g_e_1_1_open_g_l_pipeline/"><strong>OpenGLPipeline</strong></a> *</td>
-<td style="text-align: left;"><a href="#function-getpipeline"><strong>GetPipeline</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getpipeline"><strong>GetPipeline</strong></a> () <br><em>Get the pipeline object associated with this context.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-init"><strong>Init</strong></a> () override<br></td>
+<td style="text-align: left;"><a href="#function-init"><strong>Init</strong></a> () override<br><em>Initializes the OpenGL context.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-openglcontext"><strong>OpenGLContext</strong></a> (GLFWwindow * WindowHandle) <br></td>
+<td style="text-align: left;"><a href="#function-openglcontext"><strong>OpenGLContext</strong></a> (GLFWwindow * WindowHandle) <br><em>Constructs an</em> <a href="./"><em><strong>OpenGLContext</strong></em></a> <em>object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setpipeline"><strong>SetPipeline</strong></a> (<a href="../class_a_g_e_1_1_open_g_l_pipeline/"><strong>OpenGLPipeline</strong></a> * Pipeline) <br></td>
+<td style="text-align: left;"><a href="#function-setpipeline"><strong>SetPipeline</strong></a> (<a href="../class_a_g_e_1_1_open_g_l_pipeline/"><strong>OpenGLPipeline</strong></a> * Pipeline) <br><em>This function sets the pipeline for the OpenGL context.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-swapbuffers"><strong>SwapBuffers</strong></a> () override<br></td>
+<td style="text-align: left;"><a href="#function-swapbuffers"><strong>SwapBuffers</strong></a> () override<br><em>Swaps the front and back buffers of the specified window.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual</td>
-<td style="text-align: left;"><a href="#function-openglcontext"><strong>~OpenGLContext</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-openglcontext"><strong>~OpenGLContext</strong></a> () <br><em>Destructor for the</em> <a href="./"><em><strong>OpenGLContext</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
@@ -125,11 +129,11 @@
 <tbody>
 <tr>
 <td style="text-align: right;">T *</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_graphics_context/#function-as-12"><strong>As</strong></a> () <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_graphics_context/#function-as-12"><strong>As</strong></a> () <br><em>This function is a placeholder for future use. It currently always asserts false and returns null.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"><a href="./"><strong>OpenGLContext</strong></a> *</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_graphics_context/#function-as-22"><strong>As</strong></a> () <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_graphics_context/#function-as-22"><strong>As</strong></a> () <br><em>This function returns a pointer to the OpenGL context associated with this instance of</em> <a href="../class_a_g_e_1_1_graphics_context/"><em><strong>GraphicsContext</strong></em></a> <em>.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
@@ -141,22 +145,7 @@
 </tr>
 <tr>
 <td style="text-align: right;">virtual</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_graphics_context/#function-graphicscontext"><strong>~GraphicsContext</strong></a> () <br></td>
-</tr>
-</tbody>
-</table>
-<h2 id="public-static-functions">Public Static Functions</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: right;">Type</th>
-<th style="text-align: left;">Name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-openglerrorcallback"><strong>OpenGLErrorCallback</strong></a> (uint32_t source, uint32_t type, uint32_t id, uint32_t severity, int length, const char * message, const void * userParam) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_graphics_context/#function-graphicscontext"><strong>~GraphicsContext</strong></a> () <br><em>Virtual destructor for the</em> <a href="../class_a_g_e_1_1_graphics_context/"><em><strong>GraphicsContext</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
@@ -172,58 +161,99 @@
 <tbody>
 <tr>
 <td style="text-align: right;">Scope&lt; <a href="../class_a_g_e_1_1_graphics_context/"><strong>GraphicsContext</strong></a> &gt;</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_graphics_context/#function-create"><strong>Create</strong></a> (void * Window) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_graphics_context/#function-create"><strong>Create</strong></a> (void * Window) <br><em>Creates a graphics context based on the current renderer API.</em></td>
 </tr>
 </tbody>
 </table>
+<h2 id="detailed-description">Detailed Description</h2>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>WindowHandle</code> A pointer to an existing GLFWwindow object that this context will be bound to.</li>
+</ul>
+<p>This class represents an OpenGL context. It is responsible for initializing and managing the OpenGL pipeline.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>WindowHandle</code> A pointer to a GLFWwindow object, which represents the window that this context will be associated with. </li>
+</ul>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-getpipeline">function GetPipeline</h3>
+<p><em>Get the pipeline object associated with this context.</em> </p>
 <pre><code class="language-C++">OpenGLPipeline * AGE::OpenGLContext::GetPipeline () 
 </code></pre>
+<p>This function returns a pointer to the <a href="../class_a_g_e_1_1_open_g_l_pipeline/"><strong>OpenGLPipeline</strong></a> object that is currently bound to this context. The returned object can be used for rendering operations.</p>
+<p><strong>Returns:</strong></p>
+<p>OpenGLPipeline* A pointer to the current <a href="../class_a_g_e_1_1_open_g_l_pipeline/"><strong>OpenGLPipeline</strong></a> object, or nullptr if no pipeline is set.</p>
+<p>Get the pipeline object associated with this context.</p>
+<p>This function returns a pointer to the <a href="../class_a_g_e_1_1_open_g_l_pipeline/"><strong>OpenGLPipeline</strong></a> object that is currently bound to this context. The returned object can be used for rendering operations.</p>
+<p><strong>Returns:</strong></p>
+<p>OpenGLPipeline* A pointer to the current <a href="../class_a_g_e_1_1_open_g_l_pipeline/"><strong>OpenGLPipeline</strong></a> object, or nullptr if no pipeline has been set. </p>
 <hr>
 
 <h3 id="function-init">function Init</h3>
+<p><em>Initializes the OpenGL context.</em> </p>
 <pre><code class="language-C++">virtual void AGE::OpenGLContext::Init () override
 </code></pre>
+<p>This function sets up the OpenGL context for use by making it the current context using glfwMakeContextCurrent(). It then initializes GLAD, a library that provides easy access to OpenGL functions and extensions in desktop OpenGL. The status of this initialization is checked with an assertion to ensure successful completion. Finally, information about the OpenGL implementation is logged.</p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <p>Implements <a href="../class_a_g_e_1_1_graphics_context/#function-init"><em>AGE::GraphicsContext::Init</em></a></p>
 <hr>
 
 <h3 id="function-openglcontext">function OpenGLContext</h3>
+<p><em>Constructs an</em> <a href="./"><em><strong>OpenGLContext</strong></em></a> <em>object.</em></p>
 <pre><code class="language-C++">AGE::OpenGLContext::OpenGLContext (
     GLFWwindow * WindowHandle
 ) 
 </code></pre>
+<p>This constructor initializes the OpenGL context using a GLFWwindow pointer. It asserts that the window handle is not null.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>WindowHandle</code> A pointer to the GLFWwindow instance for which this <a href="./"><strong>OpenGLContext</strong></a> will be created.</li>
+</ul>
+<p>Constructor for <a href="./"><strong>OpenGLContext</strong></a> class.</p>
+<p>This constructor initializes an instance of the <a href="./"><strong>OpenGLContext</strong></a> class with a GLFWwindow pointer. It asserts that the window handle is not null, logging an error if it is.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>WindowHandle</code> Pointer to the GLFWwindow object. </li>
+</ul>
 <hr>
 
 <h3 id="function-setpipeline">function SetPipeline</h3>
+<p><em>This function sets the pipeline for the OpenGL context.</em> </p>
 <pre><code class="language-C++">void AGE::OpenGLContext::SetPipeline (
     OpenGLPipeline * Pipeline
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><a href="../class_a_g_e_1_1_pipeline/"><strong>Pipeline</strong></a> The new OpenGL pipeline to be set.</li>
+</ul>
+<p>Sets the OpenGL pipeline for rendering.</p>
+<p>This function sets the OpenGL pipeline that will be used to render graphics. The pipeline is an object of type <code>OpenGLPipeline</code>, which encapsulates all the necessary settings and shaders to perform a full-featured 3D rendering operation.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><a href="../class_a_g_e_1_1_pipeline/"><strong>Pipeline</strong></a> A pointer to the OpenGL pipeline to use for rendering. </li>
+</ul>
 <hr>
 
 <h3 id="function-swapbuffers">function SwapBuffers</h3>
+<p><em>Swaps the front and back buffers of the specified window.</em> </p>
 <pre><code class="language-C++">virtual void AGE::OpenGLContext::SwapBuffers () override
 </code></pre>
+<p>This function is used to swap the front and back buffers of a window when rendering, effectively displaying what has been rendered. The behavior of this function depends on the specific implementation of the OpenGL library being used.</p>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Swaps the front and back buffers of the specified window.</p>
+<p>This function is used to swap the front and back buffers of a window when rendering, effectively displaying what has been rendered so far on the screen. The behavior of this function depends on the platform and graphics API being used. For example, it may not be necessary or possible to call this function at every frame. However, calling it once per frame ensures that the display is updated as quickly as possible. </p>
 <p>Implements <a href="../class_a_g_e_1_1_graphics_context/#function-swapbuffers"><em>AGE::GraphicsContext::SwapBuffers</em></a></p>
 <hr>
 
 <h3 id="function-openglcontext_1">function ~OpenGLContext</h3>
+<p><em>Destructor for the</em> <a href="./"><em><strong>OpenGLContext</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">virtual AGE::OpenGLContext::~OpenGLContext () 
 </code></pre>
-<hr>
-<h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
-<h3 id="function-openglerrorcallback">function OpenGLErrorCallback</h3>
-<pre><code class="language-C++">static void AGE::OpenGLContext::OpenGLErrorCallback (
-    uint32_t source,
-    uint32_t type,
-    uint32_t id,
-    uint32_t severity,
-    int length,
-    const char * message,
-    const void * userParam
-) 
-</code></pre>
+<p>This function is responsible for cleaning up any resources that were acquired during the lifetime of this object, such as deleting buffers and textures. It does not perform any operations on the actual rendering context itself.</p>
+<p>Destructor for the <a href="./"><strong>OpenGLContext</strong></a> class. </p>
 <hr>
 
 <hr />

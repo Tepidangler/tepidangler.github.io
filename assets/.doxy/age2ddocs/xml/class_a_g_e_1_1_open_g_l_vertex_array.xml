@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" line="42" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" bodystart="42" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" line="100" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" bodystart="100" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_open_g_l_vertex_array_1ad3ddd879eb549dc06415d90ec66a8cbc" prot="private" static="no" mutable="no">
         <type>Ref&lt; <ref refid="class_a_g_e_1_1_index_buffer" kindref="compound">IndexBuffer</ref> &gt;</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" line="43" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" bodystart="43" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" line="101" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" bodystart="101" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_open_g_l_vertex_array_1a790b404f3de1790fc37423e99563e400" prot="private" static="no" mutable="no">
         <type>uint32_t</type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" line="44" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" bodystart="44" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" line="102" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" bodystart="102" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -60,7 +60,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" line="11" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLVertexArray.cpp" bodystart="70" bodyend="74"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" line="11" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLVertexArray.cpp" bodystart="72" bodyend="76"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_vertex_array_1a575eba24ea7fa5f7ed1b2dab0d132533" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -69,12 +69,17 @@
         <name>~OpenGLVertexArray</name>
         <qualifiedname>AGE::OpenGLVertexArray::~OpenGLVertexArray</qualifiedname>
         <briefdescription>
+<para>Destructor for <ref refid="class_a_g_e_1_1_open_g_l_vertex_array" kindref="compound">OpenGLVertexArray</ref> class. Deletes the vertex array object from GPU memory. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is responsible for deleting a <ref refid="struct_a_g_e_1_1_vertex" kindref="compound">Vertex</ref> Array Object (VAO) from GPU memory. The VAO was created during initialization and holds references to other data such as buffers, attributes etc. that are used in rendering operations. After deletion, this VAO can no longer be used by the OpenGL context.</para>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" line="13" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLVertexArray.cpp" bodystart="75" bodyend="80"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" line="13" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLVertexArray.cpp" bodystart="84" bodyend="89"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_vertex_array_1a0f503bfd8d5292533250207b6f014d85" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -84,12 +89,17 @@
         <qualifiedname>AGE::OpenGLVertexArray::Bind</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_vertex_array_1a5af50c27b2df5ad819e8f54c5f32b23f">Bind</reimplements>
         <briefdescription>
+<para>This function binds the vertex array object. </para>
         </briefdescription>
         <detaileddescription>
+<para>It uses OpenGL&apos;s glBindVertexArray() function to bind this <ref refid="struct_a_g_e_1_1_vertex" kindref="compound">Vertex</ref> Array Object (VAO). The VAO is an object that contains all of the state needed to supply vertex data, such as what vertex arrays to use, how to interpret them, and how to render them.</para>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" line="15" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLVertexArray.cpp" bodystart="81" bodyend="85"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" line="15" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLVertexArray.cpp" bodystart="97" bodyend="101"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_vertex_array_1a328cee5c232488f4d17e996a45f2861c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -99,12 +109,25 @@
         <qualifiedname>AGE::OpenGLVertexArray::Unbind</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_vertex_array_1aba13f09afd954f5f390bcb13238f6ad8">Unbind</reimplements>
         <briefdescription>
+<para>This function unbinds the current vertex array object. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" line="17" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLVertexArray.cpp" bodystart="86" bodyend="91"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" line="17" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLVertexArray.cpp" bodystart="108" bodyend="113"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_vertex_array_1a9c1f3704ad356ef8bccbc1469ffc028e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -123,7 +146,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" line="19" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLVertexArray.cpp" bodystart="92" bodyend="175"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" line="19" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLVertexArray.cpp" bodystart="115" bodyend="194"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_vertex_array_1a6f0979df63117ebb13ccc72f23b97e42" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -137,12 +160,23 @@
           <declname>IndexBuffer</declname>
         </param>
         <briefdescription>
+<para>This function sets the index buffer for the OpenGL <ref refid="struct_a_g_e_1_1_vertex" kindref="compound">Vertex</ref> Array. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_a_g_e_1_1_index_buffer" kindref="compound">IndexBuffer</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to an Index <ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref> object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" line="21" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLVertexArray.cpp" bodystart="176" bodyend="184"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" line="21" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLVertexArray.cpp" bodystart="200" bodyend="208"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_vertex_array_1a49fe1bcb5052f6c1da3fdbfc257a6a1b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type>const std::vector&lt; Ref&lt; <ref refid="class_a_g_e_1_1_vertex_buffer" kindref="compound">VertexBuffer</ref> &gt; &gt; &amp;</type>
@@ -152,12 +186,18 @@
         <qualifiedname>AGE::OpenGLVertexArray::GetVertexBuffers</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_vertex_array_1a3d1ff222f92ed91cc01d63af89f9cb65">GetVertexBuffers</reimplements>
         <briefdescription>
+<para>Returns a constant reference to the vertex buffers associated with this object. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>A constant reference to the vector of <ref refid="class_a_g_e_1_1_vertex_buffer" kindref="compound">VertexBuffer</ref> objects.</para>
+</simplesect>
+Returns a constant reference to the vertex buffers of this object. <simplesect kind="return"><para>A constant reference to the vector of vertex buffers (m_VertexBuffers). </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" line="23" column="19" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" bodystart="23" bodyend="23"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" line="31" column="19" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" bodystart="31" bodyend="31"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_vertex_array_1ab9bf821d250c46a2df2a2945785a0742" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type>const Ref&lt; <ref refid="class_a_g_e_1_1_index_buffer" kindref="compound">IndexBuffer</ref> &gt; &amp;</type>
@@ -167,12 +207,18 @@
         <qualifiedname>AGE::OpenGLVertexArray::GetIndexBuffer</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_vertex_array_1a3fb662eb28e5dc755ae4796edf7e5ab3">GetIndexBuffer</reimplements>
         <briefdescription>
+<para>Returns the index buffer associated with this object. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>A constant reference to the index buffer.</para>
+</simplesect>
+Returns the index buffer associated with this object. <simplesect kind="return"><para>A constant reference to the index buffer. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" line="25" column="11" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" bodystart="25" bodyend="25"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" line="41" column="11" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" bodystart="41" bodyend="41"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_vertex_array_1a76d348370c2f7b8fbc05d1307d2ac075" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -186,12 +232,25 @@
           <declname>ArrayID</declname>
         </param>
         <briefdescription>
+<para>This function enables a vertex attribute array. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ArrayID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the vertex attribute array to be enabled. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" line="27" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLVertexArray.cpp" bodystart="185" bodyend="188"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" line="43" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLVertexArray.cpp" bodystart="215" bodyend="218"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_vertex_array_1af807e859c733ad4fa1acffb9a9f5a713" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -225,12 +284,65 @@
           <declname>pointer</declname>
         </param>
         <briefdescription>
+<para>This function sets up the vertex attribute pointer for a specific index. It takes in parameters such as size of data, type of data (GL_FLOAT or GL_INT), whether the data is normalized, stride and pointer to the data. The function uses glVertexAttribPointer OpenGL function to set up the vertex attribute pointer. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the generic vertex attribute to be modified. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specifies the number of components per generic vertex attribute. Must be 1, 2, 3, or 4. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specifies the data type of each component in the array. Must be GL_FLOAT or GL_INT. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>normalized</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If true, the integer values are treated as a stream of normalized fixed-point values. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stride</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The byte offset between consecutive generic vertex attributes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pointer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specifies a pointer to the first component of the array. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" line="29" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLVertexArray.cpp" bodystart="189" bodyend="199"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" line="45" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLVertexArray.cpp" bodystart="232" bodyend="242"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_vertex_array_1aebdb59bb911c09c4d1166005c08b7a76" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>std::vector&lt; Ref&lt; <ref refid="class_a_g_e_1_1_vertex_buffer" kindref="compound">VertexBuffer</ref> &gt; &gt;::iterator</type>
@@ -240,12 +352,19 @@
         <qualifiedname>AGE::OpenGLVertexArray::begin</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_vertex_array_1a6868b10845c0f54adb3ab062b4048156">begin</reimplements>
         <briefdescription>
+<para>Returns an iterator pointing to the beginning of the vertex buffer list. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function returns an iterator that points to the first element in the vector of vertex buffers. If there are no elements, the returned iterator will be equal to <ref refid="class_a_g_e_1_1_open_g_l_vertex_array_1a86e2e9353881fc26aa13f186d973faa8" kindref="member">end()</ref>.</para>
+<para><simplesect kind="return"><para>An iterator pointing to the start of the vertex buffer list.</para>
+</simplesect>
+Returns an iterator pointing to the first element in the vertex buffer list. <simplesect kind="return"><para>An iterator pointing to the first element in the vertex buffer list. If the container is empty, the returned iterator will be equal to <ref refid="class_a_g_e_1_1_open_g_l_vertex_array_1a86e2e9353881fc26aa13f186d973faa8" kindref="member">end()</ref>. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" line="31" column="24" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" bodystart="31" bodyend="31"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" line="58" column="24" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" bodystart="58" bodyend="58"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_vertex_array_1a86e2e9353881fc26aa13f186d973faa8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>std::vector&lt; Ref&lt; <ref refid="class_a_g_e_1_1_vertex_buffer" kindref="compound">VertexBuffer</ref> &gt; &gt;::iterator</type>
@@ -255,12 +374,19 @@
         <qualifiedname>AGE::OpenGLVertexArray::end</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_vertex_array_1a9bf55705d0f5ed9ad0b75eb818b05dbd">end</reimplements>
         <briefdescription>
+<para>Returns an iterator pointing to the theoretical element that follows the last element of the container. This function is used in range-based for loops and similar contexts where a sentinel value is needed. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>An iterator to the theoretical element that follows the last element of the container.</para>
+</simplesect>
+Returns an iterator pointing to the theoretical element that follows the last element of the container. This function returns an iterator to an imaginary element following the last actual element in the vector, which is valid but does not point to any real data (as vectors are sparse containers).</para>
+<para><simplesect kind="return"><para>An iterator to the theoretical element that follows the end of the sequence controlled by the container. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" line="33" column="24" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" bodystart="33" bodyend="33"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" line="72" column="24" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" bodystart="72" bodyend="72"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_vertex_array_1a30b688d8e445dbeb57f35a1668281a7d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type>std::vector&lt; Ref&lt; <ref refid="class_a_g_e_1_1_vertex_buffer" kindref="compound">VertexBuffer</ref> &gt; &gt;::const_iterator</type>
@@ -270,12 +396,19 @@
         <qualifiedname>AGE::OpenGLVertexArray::begin</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_vertex_array_1abc5e8464b9748274cc297b7e8529007d">begin</reimplements>
         <briefdescription>
+<para>Returns a constant iterator pointing to the beginning of the vertex buffer list. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function returns an iterator that points to the first element in the vector of <ref refid="class_a_g_e_1_1_vertex_buffer" kindref="compound">VertexBuffer</ref> objects, which represents the start of the vertex buffers collection. The returned iterator can be used with standard container functions like std::advance or std::next to move through the collection.</para>
+<para><simplesect kind="return"><para>A constant iterator pointing to the beginning of the vertex buffer list. If no elements exist in the vector, the returned iterator will equal <ref refid="class_a_g_e_1_1_open_g_l_vertex_array_1a86e2e9353881fc26aa13f186d973faa8" kindref="member">end()</ref>.</para>
+</simplesect>
+Returns a constant iterator pointing to the beginning of the vertex buffer list. <simplesect kind="return"><para>A constant iterator pointing to the first element in the vertex buffer list. If the container is empty, the returned iterator will be equal to <ref refid="class_a_g_e_1_1_open_g_l_vertex_array_1a86e2e9353881fc26aa13f186d973faa8" kindref="member">end()</ref>. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" line="35" column="30" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" bodystart="35" bodyend="35"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" line="85" column="30" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" bodystart="85" bodyend="85"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_vertex_array_1a6660d006917443924c2b249f7c2caef9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type>std::vector&lt; Ref&lt; <ref refid="class_a_g_e_1_1_vertex_buffer" kindref="compound">VertexBuffer</ref> &gt; &gt;::const_iterator</type>
@@ -285,12 +418,18 @@
         <qualifiedname>AGE::OpenGLVertexArray::end</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_vertex_array_1ae93f350c061956342347596bd8f154c9">end</reimplements>
         <briefdescription>
+<para>Returns a constant iterator pointing to the theoretical element past the last element of the vertex buffer vector. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>A constant iterator pointing to the theoretical element past the end of the vertex buffer vector.</para>
+</simplesect>
+Returns an iterator pointing to the past-the-end element in the container. <simplesect kind="return"><para>A constant iterator pointing to the past-the-end element of the container. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" line="37" column="30" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" bodystart="37" bodyend="37"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" line="95" column="30" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" bodystart="95" bodyend="95"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -321,7 +460,7 @@
         <link refid="class_a_g_e_1_1_vertex_array"/>
       </node>
     </collaborationgraph>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" line="7" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" bodystart="8" bodyend="45"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" line="7" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLVertexArray.h" bodystart="8" bodyend="103"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_open_g_l_vertex_array_1a9c1f3704ad356ef8bccbc1469ffc028e" prot="public" virt="virtual"><scope>AGE::OpenGLVertexArray</scope><name>AddVertexBuffer</name></member>
       <member refid="class_a_g_e_1_1_open_g_l_vertex_array_1aebdb59bb911c09c4d1166005c08b7a76" prot="public" virt="virtual"><scope>AGE::OpenGLVertexArray</scope><name>begin</name></member>

@@ -22,24 +22,14 @@ namespace AGE
 {
     namespace Utils
     {
-        static GLenum AGEImageFormatToGLDataFormat(ImageFormat Format)
+static GLenum AGEImageFormatToGLDataFormat(ImageFormat Format)
         {
             switch (Format)
             {
-            case ImageFormat::R8:
-            {
-                return GL_RED;
-            }
-            case ImageFormat::RG16F:
-            case ImageFormat::RG8:
-            {
-                return GL_RG;
-            }
             case ImageFormat::RGB8:
             {
                 return GL_RGB;
             }
-            case ImageFormat::RGBA32F:
             case ImageFormat::RGBA8:
             {
                 return GL_RGBA;
@@ -50,22 +40,14 @@ namespace AGE
             }
             }
 
-            AGE_CORE_ASSERT(false, "Data Format not supported by AGE!");
+            CoreLogger::Assert(false, "Data Format not supported by AGE!");
             return 0;
         }
 
-        static GLenum AGEImageFormatToGLInternalFormat(ImageFormat Format)
+static GLenum AGEImageFormatToGLInternalFormat(ImageFormat Format)
         {
             switch (Format)
             {
-            case ImageFormat::R8:
-            {
-                return GL_R8;
-            }
-            case ImageFormat::RG8:
-            {
-                return GL_RG8;
-            }
             case ImageFormat::RGB8:
             {
                 return GL_RGB8;
@@ -74,74 +56,46 @@ namespace AGE
             {
                 return GL_RGBA8;
             }
-            case ImageFormat::RG16F:
-            {
-                return GL_RG16F;
-            }
-            case ImageFormat::RGBA32F:
-            {
-                return GL_RGBA32F;
-            }
-
             default:
             {
                 break;
             }
             }
 
-            AGE_CORE_ASSERT(false, "Internal Format not supported by AGE!");
+            CoreLogger::Assert(false, "Internal Format not supported by AGE!");
             return 0;
         }
 
     }
 
-    OpenGLTexture2D::OpenGLTexture2D(const TextureSpecification& Spec)
+OpenGLTexture2D::OpenGLTexture2D(const TextureSpecification& Spec)
         :m_Specification(Spec), m_Width((int)Spec.Width), m_Height((int)Spec.Height)
     {
         AGE_PROFILE_FUNCTION();
         m_InternalFormat = Utils::AGEImageFormatToGLInternalFormat(Spec.Format);
         m_DataFormat = Utils::AGEImageFormatToGLDataFormat(Spec.Format);
 
-        if (Spec.IsArray)
-        {
-            glCreateTextures(GL_TEXTURE_2D_ARRAY, 1, &m_TextureID);
-            glTextureStorage2D(m_TextureID, 1, m_InternalFormat, m_Width, m_Height);
+        glCreateTextures(GL_TEXTURE_2D, 1, &m_TextureID);
+        glTextureStorage2D(m_TextureID, 1, m_InternalFormat, m_Width, m_Height);
 
-            //Set Texture wrapping params
-            glTexParameteri(GL_TEXTURE_2D_ARRAY, GL_TEXTURE_WRAP_S, GL_REPEAT);
+        //Set Texture wrapping params
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
 
-            glTexParameteri(GL_TEXTURE_2D_ARRAY, GL_TEXTURE_WRAP_T, GL_REPEAT);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
 
 
-            //Set Texture filtering params
-            glTexParameteri(GL_TEXTURE_2D_ARRAY, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+        //Set Texture filtering params
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
 
-            glTexParameteri(GL_TEXTURE_2D_ARRAY, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
 
-            //glGenerateMipmap(m_TextureID);
-        }
-        else
-        {
-            glCreateTextures(GL_TEXTURE_2D, 1, &m_TextureID);
-            glTextureStorage2D(m_TextureID, 1, m_InternalFormat, m_Width, m_Height);
-
-            //Set Texture wrapping params
-            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-
-            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-
-
-            //Set Texture filtering params
-            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-
-            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-
-            //glGenerateMipmap(m_TextureID);
-        }
-
+        //glGenerateMipmap(m_TextureID);
     }
 
-    OpenGLTexture2D::OpenGLTexture2D(const Image* Img, uint32_t Width, uint32_t Height, int Channels, size_t Size)
+    COMMENT:
+CONFIDENCE: 1.0;
+
+OpenGLTexture2D::OpenGLTexture2D(const Image* Img, uint32_t Width, uint32_t Height, int Channels, size_t Size)
         :m_Width((int)Width), m_Height((int)Height), m_nrChannels(Channels)
     {
         AGE_PROFILE_FUNCTION();
@@ -161,7 +115,7 @@ namespace AGE
         m_InternalFormat = InternalFormat;
         m_DataFormat = DataFormat;
 
-        AGE_CORE_ASSERT(InternalFormat & DataFormat, "Format not supported!");
+        CoreLogger::Assert(InternalFormat & DataFormat, "Format not supported!");
         glCreateTextures(GL_TEXTURE_2D,1, &m_TextureID);
 
         glTextureStorage2D(m_TextureID, 1, InternalFormat, m_Width, m_Height);
@@ -185,7 +139,8 @@ namespace AGE
 
     }
     
-    OpenGLTexture2D::OpenGLTexture2D(const std::string& Path)
+    
+OpenGLTexture2D::OpenGLTexture2D(const std::string& Path)
         : m_Path(Path), m_AssetID(UUID())
     {
         AGE_PROFILE_FUNCTION();
@@ -196,8 +151,8 @@ namespace AGE
             AGE_PROFILE_SCOPE("stbi_load -> OpenGLTexture2D::OpenGLTexture2D(const std::string& Path)");
             Data = stbi_load(Path.c_str(), &m_Width, &m_Height, &m_nrChannels, 0);
         }
-        AGE_CORE_ASSERT(Data != nullptr, "Unable to Load Image");
-
+        CoreLogger::Assert(Data != nullptr, "Unable to Load Image");
+        m_ImageData = {Data, ((m_Width * m_Height) * m_nrChannels)};
 
         GLenum InternalFormat = 0, DataFormat = 0;
         if (m_nrChannels == 4)
@@ -220,7 +175,7 @@ namespace AGE
         m_InternalFormat = InternalFormat;
         m_DataFormat = DataFormat;
 
-        AGE_CORE_ASSERT(InternalFormat & DataFormat, "Format not supported!");
+        CoreLogger::Assert(InternalFormat & DataFormat, "Format not supported!");
         glCreateTextures(GL_TEXTURE_2D, 1, &m_TextureID);
 
         glTextureStorage2D(m_TextureID, 1, InternalFormat, m_Width, m_Height);
@@ -235,38 +190,72 @@ namespace AGE
 
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
 
-        OpenGLTexture2D::SetData(Data, m_Width * m_Height * m_nrChannels);
+        glTextureSubImage2D(m_TextureID, 0, 0, 0, m_Width, m_Height, DataFormat, GL_UNSIGNED_BYTE, Data);
 
-        CoreLogger::Error("OpenGLTexture2D(const std::string& Path) OpenGl Error: {}", glGetError());
+        CoreLogger::Error("{}", glGetError());
         stbi_image_free(Data);
         std::filesystem::path FilePath = m_Path;
         m_Name = Utils::EngineStatics::GetFilename(FilePath);
     }
 
-    OpenGLTexture2D::OpenGLTexture2D(uint8_t* Image, const TextureSpecification& Spec)
-        :m_Width(Spec.Width), m_Height(Spec.Height), m_nrChannels(4)
+    
+OpenGLTexture2D::OpenGLTexture2D(const tmx_image* Image)
     {
-        m_InternalFormat = Utils::AGEImageFormatToGLInternalFormat(Spec.Format);
-        m_DataFormat = Utils::AGEImageFormatToGLDataFormat(Spec.Format);
-        AGE_CORE_ASSERT(Image != nullptr, "Unable to Load Image");
+        [[maybe_unused]] char* TexData = (char*)Image->resource_image;
 
-        AGE_CORE_ASSERT(m_InternalFormat & m_DataFormat, "Format not supported!");
-        glCreateTextures(GL_TEXTURE_2D, 1, &m_TextureID);
-        glTextureStorage2D(m_TextureID, 1, m_InternalFormat, m_Width, m_Height);
-        //Set Texture wrapping params
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+        
+        //if (Tex)
+        //{
+        //  //OpenGLTexture2D Tmp = (OpenGLTexture2D)Tex;
+        //  //m_TextureID = Tex->m_TextureID;
+        //  //m_Width = Tex->m_Width;
+        //  //m_Height = Tex->m_Height;
+        //  //m_nrChannels = Tex->m_nrChannels;
+        //}
 
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
 
-        //Set Texture filtering params
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-
-        OpenGLTexture2D::SetData(Image, Spec.Width * Spec.Height * m_nrChannels);
+        //free(Tex);
+        //std::ifstream In((char*)Image->resource_image, std::ios::in | std::ios::binary);
+        //if (In)
+        //{
+        //  In.read(reinterpret_cast<OpenGLTexture2D>(Image->resource_image), sizeof(uint32_t));
+        //}
+        //m_Width = Image->width;
+        //m_Height = Image->height;
+        //m_nrChannels = 4;
+        //GLenum InternalFormat = 0, DataFormat = 0;
+        //if (m_nrChannels == 4)
+        //{
+        //  InternalFormat = GL_RGBA8;
+        //  DataFormat = GL_RGBA;
+        //}
+        //else if (m_nrChannels == 3)
+        //{
+        //  InternalFormat = GL_RGB8;
+        //  DataFormat = GL_RGB;
+        //}
+        //
+        //m_InternalFormat = InternalFormat;
+        //m_DataFormat = DataFormat;
+        //
+        //CoreLogger::Assert(InternalFormat & DataFormat, "Format not supported!")
+        //  glCreateTextures(GL_TEXTURE_2D, 1, &m_TextureID);
+        //
+        //glTextureStorage2D(m_TextureID, 1, InternalFormat, m_Width, m_Height);
+        //
+        //glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+        //
+        //glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+        //
+        //glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+        //
+        //glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+        //
+        //
+        //glTextureSubImage2D(m_TextureID, 0, 0, 0, m_Width, m_Height, DataFormat, GL_UNSIGNED_BYTE, Image->source);
     }
 
-    OpenGLTexture2D::OpenGLTexture2D(const std::vector<std::string>& Paths)
+OpenGLTexture2D::OpenGLTexture2D(const std::vector<std::string>& Paths)
     {
         AGE_PROFILE_FUNCTION();
         //stbi_set_flip_vertically_on_load(true);
@@ -280,7 +269,7 @@ namespace AGE
                 Data = stbi_load(Paths[i].c_str(), &m_Width, &m_Height, &m_nrChannels, 0);
 
             }
-            AGE_CORE_ASSERT(Data, "Unable to Load Image");
+            CoreLogger::Assert(Data, "Unable to Load Image");
 
             GLenum InternalFormat = 0, DataFormat = 0;
             if (m_nrChannels == 4)
@@ -297,7 +286,7 @@ namespace AGE
             m_InternalFormat = InternalFormat;
             m_DataFormat = DataFormat;
 
-            AGE_CORE_ASSERT(InternalFormat & DataFormat, "Format not supported!");
+            CoreLogger::Assert(InternalFormat & DataFormat, "Format not supported!");
                 glCreateTextures(GL_TEXTURE_2D, 1, &m_TextureID);
 
             glTextureStorage2D(m_TextureID, 1, InternalFormat, m_Width, m_Height);
@@ -322,54 +311,29 @@ namespace AGE
     }
 
 
-    OpenGLTexture2D::~OpenGLTexture2D()
+OpenGLTexture2D::~OpenGLTexture2D()
     {
         AGE_PROFILE_FUNCTION();
         glDeleteTextures(1, &m_TextureID);
     }
-    void OpenGLTexture2D::Bind(uint32_t Slot) const
+void OpenGLTexture2D::Bind(uint32_t Slot) const
     {
         AGE_PROFILE_FUNCTION();
         glBindTextureUnit(Slot, m_TextureID);
 
     }
-    void OpenGLTexture2D::Unbind() const
+void OpenGLTexture2D::Unbind() const
     {
         glBindTextureUnit(0, 0);
     }
 
-    void OpenGLTexture2D::SetData(void* Data, uint32_t Size)
+    
+void OpenGLTexture2D::SetData(void* Data, uint32_t Size)
     {
         AGE_PROFILE_FUNCTION();
-        uint32_t bpc; //bytes per channel
-        switch (m_DataFormat)
-        {
-            case GL_RGBA: bpc = 4; break;
-            case GL_RGB: bpc = 3; break;
-            case GL_RG: bpc = 2; break;
-            default: bpc = 1; break;
-        }
-        AGE_CORE_ASSERT(Size == ((uint32_t)(m_Width * m_Height) * bpc), "Size Data must be entire texture!");
-
-        switch (m_InternalFormat)
-        {
-            case GL_RG16F:
-            {
-                glTextureSubImage2D(m_TextureID, 0, 0, 0, m_Width, m_Height, m_DataFormat, GL_HALF_FLOAT, Data);
-                break;
-            }
-            case GL_RGBA32F:
-            case GL_RG32F:
-            {
-                glTextureSubImage2D(m_TextureID, 0, 0, 0, m_Width, m_Height, m_DataFormat, GL_FLOAT, Data);
-                break;
-            }
-            default:
-            {
-                glTextureSubImage2D(m_TextureID, 0, 0, 0, m_Width, m_Height, m_DataFormat, GL_UNSIGNED_BYTE, Data);
-                break;
-            }
-        }
+        uint32_t bpc = m_DataFormat == GL_RGBA ? 4 : 3; //bytes per channel
+        CoreLogger::Assert(Size == ((uint32_t)(m_Width * m_Height) * bpc), "Size Data must be entire texture!");
+        glTextureSubImage2D(m_TextureID, 0, 0, 0, m_Width, m_Height, m_DataFormat, GL_UNSIGNED_BYTE, Data);
         if (!m_ImageData.first)
         {
             m_ImageData.first = new uint8_t[Size];

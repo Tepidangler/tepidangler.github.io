@@ -15,7 +15,6 @@
 * `#include "Texture/Public/Texture.h"`
 * `#include "Core/Public/UUID.h"`
 * `#include <tmx.h>`
-* `#include "Core/Public/Types.h"`
 
 
 
@@ -40,8 +39,8 @@
 
 | Type | Name |
 | ---: | :--- |
+| struct | [**TMXData**](struct_a_g_e_1_1_t_m_x_data.md) <br> |
 | class | [**Tilemap**](class_a_g_e_1_1_tilemap.md) <br> |
-| struct | [**TilesetData**](struct_a_g_e_1_1_tileset_data.md) <br> |
 
 
 

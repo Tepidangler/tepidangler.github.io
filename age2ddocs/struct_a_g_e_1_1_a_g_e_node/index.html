@@ -160,11 +160,11 @@
 <tbody>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-agenode-12"><strong>AGENode</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-agenode-12"><strong>AGENode</strong></a> () = default<br><em>Default constructor for</em> <a href="./"><em><strong>AGENode</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-agenode-22"><strong>AGENode</strong></a> (ax::NodeEditor::NodeId id, const char * name, ImColor color=ImColor(255, 255, 255)) <br></td>
+<td style="text-align: left;"><a href="#function-agenode-22"><strong>AGENode</strong></a> (ax::NodeEditor::NodeId id, const char * name, ImColor color=ImColor(255, 255, 255)) <br><em>Constructs an instance of</em> <a href="./"><em><strong>AGENode</strong></em></a> <em>with the given parameters.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">bool</td>
@@ -172,15 +172,15 @@
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setnodefuncarguments"><strong>SetNodeFuncArguments</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-setnodefuncarguments"><strong>SetNodeFuncArguments</strong></a> () <br><em>This function sets the arguments for a node function based on the input parameters.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="#function-operator"><strong>operator&lt;</strong></a> (const <a href="./"><strong>AGENode</strong></a> &amp; Other) const<br></td>
+<td style="text-align: left;"><a href="#function-operator"><strong>operator&lt;</strong></a> (const <a href="./"><strong>AGENode</strong></a> &amp; Other) const<br><em>Compares the ID of this node with another node's ID.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual</td>
-<td style="text-align: left;"><a href="#function-agenode"><strong>~AGENode</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-agenode"><strong>~AGENode</strong></a> () = default<br><em>Virtual destructor for the</em> <a href="./"><em><strong>AGENode</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
@@ -195,11 +195,11 @@
 <tbody>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-deserialize"><strong>Deserialize</strong></a> (<a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> * Serializer, <a href="./"><strong>AGENode</strong></a> &amp; Data) <br></td>
+<td style="text-align: left;"><a href="#function-deserialize"><strong>Deserialize</strong></a> (<a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> * Serializer, <a href="./"><strong>AGENode</strong></a> &amp; Data) <br><em>Deserializes an object of type</em> <a href="./"><em><strong>AGENode</strong></em></a> <em>from a</em><a href="../class_a_g_e_1_1_data_reader/"><em><strong>DataReader</strong></em></a> <em>instance.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-serialize"><strong>Serialize</strong></a> (<a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> * Serializer, const <a href="./"><strong>AGENode</strong></a> &amp; Data) <br></td>
+<td style="text-align: left;"><a href="#function-serialize"><strong>Serialize</strong></a> (<a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> * Serializer, const <a href="./"><strong>AGENode</strong></a> &amp; Data) <br><em>Serializes an</em> <a href="./"><em><strong>AGENode</strong></em></a> <em>object into a</em><a href="../class_a_g_e_1_1_data_writer/"><em><strong>DataWriter</strong></em></a> <em>.</em></td>
 </tr>
 </tbody>
 </table>
@@ -280,17 +280,38 @@
 <hr>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-agenode-12">function AGENode [1/2]</h3>
+<p><em>Default constructor for</em> <a href="./"><em><strong>AGENode</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::AGENode::AGENode () = default
 </code></pre>
+<p>This function initializes an instance of the <a href="./"><strong>AGENode</strong></a> class with its default values. It does not take any parameters and returns nothing.</p>
+<p>Default constructor for <a href="./"><strong>AGENode</strong></a> class. </p>
 <hr>
 
 <h3 id="function-agenode-22">function AGENode [2/2]</h3>
+<p><em>Constructs an instance of</em> <a href="./"><em><strong>AGENode</strong></em></a> <em>with the given parameters.</em></p>
 <pre><code class="language-C++">inline AGE::AGENode::AGENode (
     ax::NodeEditor::NodeId id,
     const char * name,
     ImColor color=ImColor(255, 255, 255)
 ) 
 </code></pre>
+<p>This constructor initializes a new instance of <a href="./"><strong>AGENode</strong></a> with the provided id, name and color. The default color is white (255, 255, 255). The Type is set to Blueprint by default. Size is initialized as 0.f. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>id</code> Unique identifier for this node. </li>
+<li><code>name</code> Name of the node. </li>
+<li><code>color</code> Color of the node in RGB format (default: white).</li>
+</ul>
+<p>Constructs an instance of <a href="./"><strong>AGENode</strong></a> with the given id, name and color.</p>
+<p>The function initializes a new instance of <a href="./"><strong>AGENode</strong></a> with the provided id, name, and color. It also sets the default type to Blueprint and size to 0.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>id</code> Unique identifier for the node. </li>
+<li><code>name</code> Name or label associated with the node. </li>
+<li><code>color</code> Color used to represent the node in visualizations. Defaults to white (255, 255, 255).</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>An instance of <a href="./"><strong>AGENode</strong></a> with the provided id, name and color. </p>
 <hr>
 
 <h3 id="function-compileoutputpins">function CompileOutputPins</h3>
@@ -299,36 +320,85 @@
 <hr>
 
 <h3 id="function-setnodefuncarguments">function SetNodeFuncArguments</h3>
+<p><em>This function sets the arguments for a node function based on the input parameters.</em> </p>
 <pre><code class="language-C++">inline void AGE::AGENode::SetNodeFuncArguments () 
 </code></pre>
+<p>The function iterates over each argument in <code>FunctionArgs</code> and checks its type. If it's a pointer to string or float, it gets the value of that pointer and adds it to <code>Func.Args</code>. For an AGEPinType, if it equals Any, it adds the last input's type and value to <code>Func.Args</code>.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>bCanSkip</code> This flag is used to skip certain iterations in the loop based on its value. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void No return value. The function modifies <code>Func.Args</code> directly. </p>
 <hr>
 
 <h3 id="function-operator">function operator&lt;</h3>
+<p><em>Compares the ID of this node with another node's ID.</em> </p>
 <pre><code class="language-C++">inline bool AGE::AGENode::operator&lt; (
     const AGENode &amp; Other
 ) const
 </code></pre>
+<p>This function compares the ID of the current node (<code>this-&gt;ID.Get()</code>) with the ID of the other node passed as an argument (<code>Other.ID.Get()</code>). It returns <code>true</code> if the ID of this node is less than that of the other, and <code>false</code> otherwise.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Other</code> The <a href="./"><strong>AGENode</strong></a> instance to compare with. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>True if the ID of this node is less than that of the other, false otherwise.</p>
+<p>Compares the ID of this node with another node's ID.</p>
+<p>This function compares the ID of the current node (<code>this-&gt;ID.Get()</code>) with the ID of another node (<code>Other.ID.Get()</code>). It returns <code>true</code> if the ID of this node is less than that of the other, and <code>false</code> otherwise.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Other</code> The <a href="./"><strong>AGENode</strong></a> instance to compare against. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>True if the ID of this node is less than the other's, false otherwise. </p>
 <hr>
 
 <h3 id="function-agenode">function ~AGENode</h3>
+<p><em>Virtual destructor for the</em> <a href="./"><em><strong>AGENode</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">virtual AGE::AGENode::~AGENode () = default
 </code></pre>
+<p>This function is responsible for releasing any resources that were acquired by the object during its lifetime. It does not take any parameters and returns no value.</p>
+<p>Virtual destructor for the <a href="./"><strong>AGENode</strong></a> class.</p>
+<p>This function is responsible for releasing any resources that were acquired by the object during its lifetime. It does not return anything and has no parameters. </p>
 <hr>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
 <h3 id="function-deserialize">function Deserialize</h3>
+<p><em>Deserializes an object of type</em> <a href="./"><em><strong>AGENode</strong></em></a> <em>from a</em><a href="../class_a_g_e_1_1_data_reader/"><em><strong>DataReader</strong></em></a> <em>instance.</em></p>
 <pre><code class="language-C++">static inline void AGE::AGENode::Deserialize (
     DataReader * Serializer,
     AGENode &amp; Data
 ) 
 </code></pre>
+<p>This function reads data from the provided serializer and populates an <a href="./"><strong>AGENode</strong></a> object with it. The data read includes the node's ID, name, color, inputs, outputs, type, size, next node ID (if any), state, saved state, function arguments, whether the node is in begin play mode, and if it runs on update.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Serializer</code> A pointer to a <a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> instance that provides serialized data. </li>
+<li><code>Data</code> An lvalue reference to an <a href="./"><strong>AGENode</strong></a> object where the deserialized data will be stored.</li>
+</ul>
+<p>Deserializes an object of type <a href="./"><strong>AGENode</strong></a> from a <a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> instance.</p>
+<p>This function reads various data types and populates the provided <a href="./"><strong>AGENode</strong></a> instance with deserialized data. It uses the <a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> to read raw data, strings, arrays, and objects. The function also handles some basic data types like uint64_t, uint32_t, bool, <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a>, etc.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Serializer</code> A pointer to a <a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> instance that provides serialized data. </li>
+<li><code>Data</code> An lvalue reference to an <a href="./"><strong>AGENode</strong></a> object where the deserialized data will be stored. </li>
+</ul>
 <hr>
 
 <h3 id="function-serialize">function Serialize</h3>
+<p><em>Serializes an</em> <a href="./"><em><strong>AGENode</strong></em></a> <em>object into a</em><a href="../class_a_g_e_1_1_data_writer/"><em><strong>DataWriter</strong></em></a> <em>.</em></p>
 <pre><code class="language-C++">static inline void AGE::AGENode::Serialize (
     DataWriter * Serializer,
     const AGENode &amp; Data
 ) 
 </code></pre>
+<p>This function takes in a pointer to a <a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> and an instance of the <a href="./"><strong>AGENode</strong></a> class, then writes various properties of the node to the <a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a>.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Serializer</code> A pointer to an instance of <a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> that will be used for serialization. </li>
+<li><code>Data</code> An instance of the <a href="./"><strong>AGENode</strong></a> class whose properties are being serialized. </li>
+</ul>
 <hr>
 
 <hr />

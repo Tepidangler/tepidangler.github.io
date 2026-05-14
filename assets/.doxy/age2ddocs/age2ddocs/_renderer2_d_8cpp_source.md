@@ -53,23 +53,23 @@ RTTR_REGISTRATION
 namespace AGE
 {
 
-    void Renderer2D::Init()
+void Renderer2D::Init()
     {
 
     }
         
 
-    void Renderer2D::Shutdown()
+void Renderer2D::Shutdown()
     {
 
     }
     
-    void Renderer2D::BeginScene(const Camera& Camera, const Matrix4D& Transform)
+void Renderer2D::BeginScene(const Camera& Camera, const Matrix4D& Transform)
     {
         AGE_PROFILE_FUNCTION();
         RenderCommand::s_GraphicsPipeline->StartBatch2D();
     }
-    void Renderer2D::BeginScene(const EditorCamera& Camera)
+void Renderer2D::BeginScene(const EditorCamera& Camera)
     {
         AGE_PROFILE_FUNCTION();
 
@@ -77,18 +77,18 @@ namespace AGE
         RenderCommand::s_GraphicsPipeline->GetData().CameraUniformBuffer->SetData(&WVPM, sizeof(Renderer2DData::CameraData));
         RenderCommand::s_GraphicsPipeline->StartBatch2D();
     }
-    void Renderer2D::EndScene()
+void Renderer2D::EndScene()
     {
         AGE_PROFILE_FUNCTION();
 
         RenderCommand::s_GraphicsPipeline->Flush2D();
     }
-    void Renderer2D::Flush()
+void Renderer2D::Flush()
     {
         RenderCommand::s_GraphicsPipeline->Flush2D();       
     }
 
-    void Renderer2D::DrawQuad(const QuadProperties& Props)
+void Renderer2D::DrawQuad(const QuadProperties Props)
     {
         if (RenderCommand::s_GraphicsPipeline->GetData().QuadIndexCount >= Renderer2DData::MaxIndexCount)
         {
@@ -99,7 +99,9 @@ namespace AGE
 
         RenderCommand::s_GraphicsPipeline->GetData().Stats.QuadCount++;
     }
-    void Renderer2D::DrawQuad(const Ref<Texture2D>& Texture, const QuadProperties& Props)
+    
+"/**\n * @brief Draw a quad with the given properties and texture.\n * \n * This function is used to draw a single quad in the 2D graphics pipeline. It takes as input the texture, quad properties (color, size, transform, texture coordinates, tiling factor, entity ID), and it updates the vertex buffer accordingly. If the current batch of quads exceeds the maximum index count, it will start a new batch.\n * \n * @param Texture The reference to the texture that should be used for rendering this quad.\n * @param Props A structure containing all properties necessary for rendering (tint color, size, transform, texture coordinates, tiling factor, entity ID).\n */"
+void Renderer2D::DrawQuad(const Ref<Texture2D>& Texture, const QuadProperties Props)
     {
         if (RenderCommand::s_GraphicsPipeline->GetData().QuadIndexCount >= Renderer2DData::MaxIndexCount)
         {
@@ -130,7 +132,8 @@ namespace AGE
         RenderCommand::s_GraphicsPipeline->GetData().QuadIndexCount += 6;
         RenderCommand::s_GraphicsPipeline->GetData().Stats.QuadCount++;
     }
-    void Renderer2D::DrawQuad(const Ref<SubTexture2D>& Subtexture, const QuadProperties& Props)
+    
+void Renderer2D::DrawQuad(const Ref<SubTexture2D>& Subtexture, const QuadProperties Props)
     {
         if (RenderCommand::s_GraphicsPipeline->GetData().QuadIndexCount >= Renderer2DData::MaxIndexCount)
         {
@@ -162,7 +165,8 @@ namespace AGE
         RenderCommand::s_GraphicsPipeline->GetData().QuadIndexCount += 6;
         RenderCommand::s_GraphicsPipeline->GetData().Stats.QuadCount++;
     }
-    void Renderer2D::DrawCircle(const Matrix4D& Transform, const Vector4& Color, float Thickness, float Fade, int EntityID)
+
+void Renderer2D::DrawCircle(const Matrix4D& Transform, const Vector4& Color, float Thickness, float Fade, int EntityID)
     {
         AGE_PROFILE_FUNCTION();
 
@@ -179,14 +183,14 @@ namespace AGE
         RenderCommand::s_GraphicsPipeline->GetData().Stats.CircleCount++;
     }
 
-    void Renderer2D::DrawLine(const Vector3& Pos0, const Vector3& Pos1, const Vector4& Color, int EntityID)
+void Renderer2D::DrawLine(const Vector3& Pos0, const Vector3& Pos1, const Vector4& Color, int EntityID)
     {
         RenderCommand::s_GraphicsPipeline->GetData().LineVertexBufferPtr = RenderCommand::s_GraphicsPipeline->GetData().VertexBuffers["Line"]->CreateLine(RenderCommand::s_GraphicsPipeline->GetData().LineVertexBufferPtr, Color, Pos0, Pos1, EntityID);
 
         RenderCommand::s_GraphicsPipeline->GetData().LineVertexCount += 2;
     }
 
-    void Renderer2D::DrawRect(const Vector3& Position, const Vector2& Size, const Vector4& Color, int EntityID)
+void Renderer2D::DrawRect(const Vector3& Position, const Vector2& Size, const Vector4& Color, int EntityID)
     {
         Vector3 p0 = Vector3(Position.x - Size.x * .5f, Position.y - Size.y * .5f, Position.z);
         Vector3 p1 = Vector3(Position.x + Size.x * .5f, Position.y - Size.y * .5f, Position.z);
@@ -199,7 +203,7 @@ namespace AGE
         DrawLine(p3,p0 , Color);
     }
 
-    void Renderer2D::DrawRect(const Matrix4D& Transform, const Vector4& Color, int EntityID)
+void Renderer2D::DrawRect(const Matrix4D& Transform, const Vector4& Color, int EntityID)
     {
         Vector3 LineVertices[4];
         for (int i = 0; i < 4; i++)
@@ -214,7 +218,7 @@ namespace AGE
 
     }
 
-    void Renderer2D::DrawSprite(SpriteRendererComponent& SRC)
+void Renderer2D::DrawSprite(SpriteRendererComponent& SRC)
     {
         if (SRC.Texture)
         {
@@ -239,7 +243,45 @@ namespace AGE
             DrawQuad(SRC.SubTexture, SRC.QuadProps);
         }
     }
-    void Renderer2D::DrawString(const StringProperties& Props)
+    "/**\n * @brief Draws a single tile using the SpriteRendererComponent data.\n * \n * This function updates necessary buffers and statistics as needed, based on the details provided by the SpriteRendererComponent.\n * \n * @param SRC The SpriteRendererComponent containing all the information about the tile to be drawn.\n */"
+
+void Renderer2D::DrawTile(const SpriteRendererComponent& SRC)
+    {
+        //SpriteSheetUtils::SetTexCoords(SRC.SubTexture, SRC.QuadProps, false);
+
+        if (RenderCommand::s_GraphicsPipeline->GetData().TileIndexCounts[(size_t)SRC.TilesLayer] >= Renderer2DData::MaxIndexCount)
+        {
+            RenderCommand::s_GraphicsPipeline->NextBatch2D();
+        }
+        const Ref<Texture2D> texture = SRC.SubTexture->GetTexture();
+        float TextureIndex = 0.f;
+
+        if (texture != nullptr)
+        {
+            for (uint32_t i = 1; i < RenderCommand::s_GraphicsPipeline->GetData().TextureSlotIndex; i++)
+            {
+                if (*RenderCommand::s_GraphicsPipeline->GetData().TextureSlots[i].get() == *texture.get())
+                {
+                    TextureIndex = (float)i;
+                    break;
+                }
+            }
+
+            if (TextureIndex == 0.f)
+            {
+                TextureIndex = (float)RenderCommand::s_GraphicsPipeline->GetData().TextureSlotIndex;
+                RenderCommand::s_GraphicsPipeline->GetData().TextureSlots[RenderCommand::s_GraphicsPipeline->GetData().TextureSlotIndex] = texture;
+                RenderCommand::s_GraphicsPipeline->GetData().TextureSlotIndex++;
+
+            }
+        }
+        RenderCommand::s_GraphicsPipeline->GetData().TileVertexBufferPtrs[(size_t)SRC.TilesLayer] = RenderCommand::s_GraphicsPipeline->GetData().TileVertexBuffers[(size_t)SRC.TilesLayer]->CreateTile(RenderCommand::s_GraphicsPipeline->GetData().TileVertexBufferPtrs[(size_t)SRC.TilesLayer], SRC.QuadProps.TintColor, RenderCommand::s_GraphicsPipeline->GetData().QuadVertexPositions, SRC.QuadProps.Size, SRC.QuadProps.Transform, SRC.QuadProps.TextureCoords, SRC.QuadProps.TilingFactor, TextureIndex, SRC.QuadProps.EntityID);
+        RenderCommand::s_GraphicsPipeline->GetData().TileIndexCounts[(size_t)SRC.TilesLayer] += 6;
+        RenderCommand::s_GraphicsPipeline->GetData().Stats.TileCount++;
+    }
+    
+
+void Renderer2D::DrawString(const StringProperties& Props)
     {
 
         const auto& FontGeometry = Props.TextFont->GetMSDFData()->FontGeometry;
@@ -353,64 +395,185 @@ namespace AGE
         }
 
     }
-
-    void Renderer2D::DrawTileMap(const Ref<Tilemap>& Map, const TilemapProperties &Props)
+    
+```cpp
+```C++
+void Renderer2D::DrawTileMapLayers(TileMapRendererComponent& TMRC, tmx_map* Map, std::vector<tmx_layer*> layers)
     {
-        if (RenderCommand::s_GraphicsPipeline->GetData().TileVertexCount >= Renderer2DData::MaxVertices)
+#if 0
+        AGE_PROFILE_FUNCTION();
+        if (!TMRC.bFirstPass)
         {
-            RenderCommand::s_GraphicsPipeline->NextBatch2D();
+            return;
+        }
+        uint32_t Offset = 0;
+        uint32_t* SquareIndices = new uint32_t[RenderCommand::s_GraphicsPipeline->GetData().MaxIndexCount];
+
+
+
+
+        for (uint32_t i = 0; i < RenderCommand::s_GraphicsPipeline->GetData().MaxIndexCount; i += 6)
+        {
+            SquareIndices[i + 0] = Offset + 0; // 0|4|8
+            SquareIndices[i + 1] = Offset + 1; // 1|5|9
+            SquareIndices[i + 2] = Offset + 2; // 2|6|10
+
+            SquareIndices[i + 3] = Offset + 2; // 2|6|10
+            SquareIndices[i + 4] = Offset + 3; // 3|7|11
+            SquareIndices[i + 5] = Offset + 0; // 0|4|8
+
+            Offset += 4;
         }
 
-        int NumOfTiles = Map->GetMapDimensions().first * Map->GetMapDimensions().second;
-        Vector4* BasePos = RenderCommand::s_GraphicsPipeline->GetData().TileVertexPositions;
-        Vector2* BaseUV;
-        Vector4 CurrentPos[6];
-        Vector2 CurrentUV[6];
-        for (uint32_t l = 0; l < Props.NumofLayers; l++)
+
+        Ref<IndexBuffer> SquareIB;
+        SquareIB = IndexBuffer::Create(SquareIndices, RenderCommand::s_GraphicsPipeline->GetData().MaxIndexCount);
+
+        for (size_t i = 0; i < layers.size(); i++)
         {
-            for (int i =0,y =0, x =0; i < NumOfTiles; i++, x++)
+            RenderCommand::s_GraphicsPipeline->GetData().TileVertexArrays.push_back(VertexArray::Create());
+
+
+            RenderCommand::s_GraphicsPipeline->GetData().TileVertexArrays[i]->SetIndexBuffer(SquareIB);
+            RenderCommand::s_GraphicsPipeline->GetData().TileVertexBuffers.push_back(VertexBuffer::Create(RenderCommand::s_GraphicsPipeline->GetData().MaxVertices * sizeof(TileVertex)));
+            RenderCommand::s_GraphicsPipeline->GetData().TileVertexBuffers[i]->SetLayout({
+                { ShaderDataType::Float3, "a_Position" },
+                { ShaderDataType::Float2, "a_TexCoord" },
+                { ShaderDataType::Float4, "a_Color"},
+                { ShaderDataType::Float, "a_TextureID"},
+                { ShaderDataType::Float, "a_TilingFactor"},
+                { ShaderDataType::Int, "a_EntityID"}
+                });
+
+            RenderCommand::s_GraphicsPipeline->GetData().TileVertexArrays[i]->AddVertexBuffer(RenderCommand::s_GraphicsPipeline->GetData().TileVertexBuffers[i]);
+            RenderCommand::s_GraphicsPipeline->GetData().TileVertexBufferBases.push_back(new TileVertex[RenderCommand::s_GraphicsPipeline->GetData().MaxVertices]);
+            RenderCommand::s_GraphicsPipeline->GetData().TileIndexCounts.push_back(0);
+        }
+
+        RenderCommand::s_GraphicsPipeline->GetData().TileVertexBufferPtrs.resize(RenderCommand::s_GraphicsPipeline->GetData().TileVertexBufferBases.size());
+
+        for (size_t i = 0; i < RenderCommand::s_GraphicsPipeline->GetData().TileVertexBufferBases.size(); i++)
+        {
+            RenderCommand::s_GraphicsPipeline->GetData().TileVertexBufferPtrs[i] = RenderCommand::s_GraphicsPipeline->GetData().TileVertexBufferBases[i];
+        }
+
+        for (int i = (int)layers.size() - 1; i >= 0 ; i--)
+        {
+            DrawTileMapLayer(TMRC, Map, layers[(size_t)i], i);
+            
+        }
+        TMRC.bFirstPass = false;
+#endif
+    }
+    "Draws a 2D tile map layer."
+COMMENT: "/**\n"
+          " * @brief Draws a tile map layer based on the provided parameters.\n"
+          " * \n"
+          " * This function is responsible for drawing different types of layers in a tile map, including groups, objects, images and layers. It uses various helper functions to draw individual tiles or groups of tiles.\n"
+          " * \n"
+          " * @param TMRC A reference to the TileMapRendererComponent that contains information about the active scene and the tile map being rendered.\n"
+          " * @param Map A pointer to the tmx_map structure representing the entire map.\n"
+          " * @param layer A pointer to the tmx_layer structure representing the current layer being drawn.\n"
+          " * @param Depth The depth of the current layer in the rendering hierarchy.\n"
+          " */\n"
+CONFIDENCE: 1.0;
+
+void Renderer2D::DrawTileMapLayer(TileMapRendererComponent& TMRC, tmx_map* Map, tmx_layer* layer, int Depth)
+    {
+#if 0
+        AGE_PROFILE_FUNCTION();
+        if (layer->visible)
+        {
+            if (layer->type == L_GROUP)
             {
-                if (i % Map->GetMapDimensions().first == 0 && i != 0)
+                DrawTileMapLayer(TMRC, Map, layer->content.group_head, 0);
+            }
+            else if (layer->type == L_OBJGR)
+            {
+                CoreLogger::Assert(false, "Not Implemented!");
+            }
+            else if (layer->type == L_IMAGE)
+            {
+                //Ref<Texture2D> Tile = Texture2D::Create(layer->content.image);
+                //Entity E = TMRC.ActiveScene->CreateEntity("Tile " + TMRC.TileCount);
+                //E.AddComponent<SpriteRendererComponent>();
+                //E.GetComponent<SpriteRendererComponent>().Texture = Tile;
+                //DrawSprite(E.GetComponent<SpriteRendererComponent>());
+                //TMRC.TileCount++;
+
+            }
+            else if (layer->type == L_LAYER)
+            {
+                uint32_t i, j;
+                [[maybe_unused]] uint32_t gid, x, y, w, h, flags;
+                uint32_t ID;
+                double op;
+                tmx_tileset* ts;
+                tmx_image* im;
+                void* image;
+                op = layer->opacity;
+                for (i = 0; i < Map->height; i++)
                 {
-                    y++;
-                    x=0;
-                }
-                BaseUV = Props.UV.at(l)[i];
-                CurrentPos[0] = {BasePos[0].x + (float)x,BasePos[0].y + (float)y,BasePos[0].z+ (float)l,BasePos[0].w};
-                CurrentPos[1] = {BasePos[1].x + (float)x,BasePos[1].y + (float)y,BasePos[1].z+ (float)l,BasePos[1].w};
-                CurrentPos[2] = {BasePos[2].x + (float)x,BasePos[2].y + (float)y,BasePos[2].z+ (float)l,BasePos[2].w};
-                CurrentPos[3] = {BasePos[3].x + (float)x,BasePos[3].y + (float)y,BasePos[3].z+ (float)l,BasePos[3].w};
-                CurrentPos[4] = {BasePos[4].x + (float)x,BasePos[4].y + (float)y,BasePos[4].z+ (float)l,BasePos[4].w};
-                CurrentPos[5] = {BasePos[5].x + (float)x,BasePos[5].y + (float)y,BasePos[5].z+ (float)l,BasePos[5].w};
+                    for (j = 0; j < Map->width; j++)
+                    {
+                        gid = (layer->content.gids[(i * Map->width) + j]) & TMX_FLIP_BITS_REMOVAL;
+                        if (Map->tiles[gid] != NULL)
+                        {
+                            ts = Map->tiles[gid]->tileset;
+                            im = Map->tiles[gid]->image;
+                            x = Map->tiles[gid]->ul_x;
+                            y = Map->tiles[gid]->ul_y;
+                            ID = Map->tiles[gid]->id;
+                            w = ts->tile_width;
+                            h = ts->tile_height;
 
-                CurrentUV[0] = BaseUV[0]; // Max, Max
-                CurrentUV[1] = BaseUV[1]; // Max, Min
-                CurrentUV[2] = BaseUV[2]; // Min, Min
-                CurrentUV[3] = BaseUV[2]; // Min, Min
-                CurrentUV[4] = BaseUV[0]; // Max,Max
-                CurrentUV[5] = BaseUV[3]; // Min,Max
+                            if (im)
+                            {
+                                image = im->resource_image;
+                            }
+                            else
+                            {
+                                image = ts->image->resource_image;
+                            }
+                            //flags = (layer->content.gids[(i * Map->width) + j]) & ~TMX_FLIP_BITS_REMOVAL;
+                            if (image)
+                            {
+                                std::string Name = "Tile " + std::to_string(j) + ":" + std::to_string(i);
+                                Entity E = TMRC.ActiveScene->CreateEntity(Name);
+                                E.AddComponent<SpriteRendererComponent>();
+                                E.GetComponent<SpriteRendererComponent>().TileID = (int)ID;
+                                E.GetComponent<SpriteRendererComponent>().bTile = true;
+                                E.GetComponent<SpriteRendererComponent>().TilesLayer = Depth;
+                                E.GetComponent<SpriteRendererComponent>().SubTexture = TMRC.TileTextures[ID];
+                                E.GetComponent<SpriteRendererComponent>().TileLocation = TMRC.TileLocs[ID];
+                                E.GetComponent<SpriteRendererComponent>().TileWidth = (float)TMRC.TileMap->tiles[1]->tileset->tile_width;
+                                E.GetComponent<SpriteRendererComponent>().TileHeight = (float)TMRC.TileMap->tiles[1]->tileset->tile_height;
+                                E.GetComponent<SpriteRendererComponent>().Color = { 1.f,1.f,1.f,(float)op };
+                                E.GetComponent<SpriteRendererComponent>().QuadProps.TintColor = E.GetComponent<SpriteRendererComponent>().Color;
+                                SpriteSheetUtils::SetTexCoords(TMRC.TileTextures[ID], E.GetComponent<SpriteRendererComponent>().QuadProps);
+                                //RenderCommand::s_GraphicsPipeline->GetData().CoordBuffer.Coords.push_back(E.GetComponent<SpriteRendererComponent>().QuadProps.TextureCoords);
+                                E.GetComponent<TransformComponent>().Translation = { (float)j,(float)(Map->height - i),(float)Depth -10.f}; //Depth == 0 ? 
+                                E.GetComponent<TransformComponent>().Scale = { 1.f,1.f,1.f };
+                                TMRC.IDs.push_back(E.GetUUID());
+                                DrawTile(E.GetComponent<SpriteRendererComponent>());
+                            }
 
-                RenderCommand::s_GraphicsPipeline->GetData().TileVertexBufferPtr = RenderCommand::s_GraphicsPipeline->GetData().VertexBuffers["Tilemap"]->CreateTile(RenderCommand::s_GraphicsPipeline->GetData().TileVertexBufferPtr, Props.Color,CurrentPos,Props.Transform, CurrentUV,Props.TileSetID,Props.EntityID );
-                RenderCommand::s_GraphicsPipeline->GetData().TileVertexCount += 6;
-                RenderCommand::s_GraphicsPipeline->GetData().Stats.TileCount++;
-
-                if (RenderCommand::s_GraphicsPipeline->GetData().TileVertexCount >= Renderer2DData::MaxVertices)
-                {
-                    RenderCommand::s_GraphicsPipeline->NextBatch2D();
+                        }
+                    }
                 }
             }
         }
+#endif
     }
-
-    Statistics Renderer2D::GetStats()
+Statistics Renderer2D::GetStats()
     {
         return RenderCommand::s_GraphicsPipeline->GetData().Stats;
     }
-    float Renderer2D::GetLineWidth()
+float Renderer2D::GetLineWidth()
     {
         return RenderCommand::s_GraphicsPipeline->GetData().LineWidth;
     }
-    void Renderer2D::SetLineWidth(float Width)
+void Renderer2D::SetLineWidth(float Width)
     {
         RenderCommand::s_GraphicsPipeline->GetData().LineWidth = Width;
     }

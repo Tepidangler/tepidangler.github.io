@@ -28,7 +28,7 @@ namespace AGE
         unsigned int Height;
         const char* String;
 
-        WindowProps(const std::string& T = "Alcoy Game Engine Editor", unsigned int W = 1280, unsigned int H = 720, const char* S = "")
+WindowProps(const std::string& T = "Alcoy Game Engine Editor", unsigned int W = 1280, unsigned int H = 720, const char* S = "")
             : Title(T), Width(W), Height(H), String(S)
         {
 
@@ -37,13 +37,15 @@ namespace AGE
 
     //Represents a desktop system based Window
 
-    class AGE_API AGEWindow
+    
+virtual ~AGEWindow() {}
+class AGE_API AGEWindow
     {
     public:
         
         using EventCallbackFn = std::function<void(Event&)>;
 
-        virtual ~AGEWindow() {}
+virtual ~AGEWindow() {}
 
         virtual void OnUpdate() = 0;
 

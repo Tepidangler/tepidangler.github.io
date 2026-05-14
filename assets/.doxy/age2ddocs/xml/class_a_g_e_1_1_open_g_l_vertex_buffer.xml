@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="46" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" bodystart="46" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="61" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" bodystart="61" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_open_g_l_vertex_buffer_1a738ee43a18e60c0ea7e5aff33569ac99" prot="private" static="no" mutable="no">
         <type><ref refid="class_a_g_e_1_1_buffer_layout" kindref="compound">BufferLayout</ref></type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="48" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" bodystart="48" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="63" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" bodystart="63" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-static-attrib">
@@ -47,7 +47,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="47" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" bodystart="47" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="62" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" bodystart="62" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -62,12 +62,35 @@
           <declname>Size</declname>
         </param>
         <briefdescription>
+<para>Constructs an <ref refid="class_a_g_e_1_1_open_g_l_vertex_buffer" kindref="compound">OpenGLVertexBuffer</ref> with a given size. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function creates an OpenGL buffer and initializes it with the specified size, data type (<computeroutput>GL_ARRAY_BUFFER</computeroutput>), and usage pattern (<computeroutput>GL_DYNAMIC_DRAW</computeroutput>). The created buffer is bound to the target <computeroutput>GL_ARRAY_BUFFER</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the buffer in bytes.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Constructs an <ref refid="class_a_g_e_1_1_open_g_l_vertex_buffer" kindref="compound">OpenGLVertexBuffer</ref> with a specified size.</para>
+<para>This function creates an OpenGL buffer and initializes it with the given size. The buffer is created as dynamic, meaning its content can be changed frequently without needing to reallocate memory.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the buffer in bytes. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="12" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="19" bodyend="28"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="12" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="33" bodyend="42"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_vertex_buffer_1aa758f00f117fea3b8b5fb4faf49185d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -84,12 +107,52 @@
           <declname>Size</declname>
         </param>
         <briefdescription>
+<para>Constructs an <ref refid="class_a_g_e_1_1_open_g_l_vertex_buffer" kindref="compound">OpenGLVertexBuffer</ref> object. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function creates a buffer and binds it to the target GL_ARRAY_BUFFER, then initializes its data with the provided vertices. The size of the data is specified by the Size parameter.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Vertices</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to an array of <ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref> objects representing the vertices for initialization. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes in the Vertices array.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>None</para>
+</simplesect>
+Constructor for <ref refid="class_a_g_e_1_1_open_g_l_vertex_buffer" kindref="compound">OpenGLVertexBuffer</ref>. Initializes a vertex buffer object with the given vertices and size. The buffer is created as dynamic, meaning its content can be changed frequently.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Vertices</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to an array of <ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref> objects representing the vertices. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of elements in the Vertices array. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="13" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="30" bodyend="40"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="13" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="63" bodyend="73"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_vertex_buffer_1a9131ff25f9dc8ed12fe2f34acd652505" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -106,12 +169,50 @@
           <declname>Size</declname>
         </param>
         <briefdescription>
+<para>Constructs an <ref refid="class_a_g_e_1_1_open_g_l_vertex_buffer" kindref="compound">OpenGLVertexBuffer</ref> with given vertices and size. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function creates a new OpenGL vertex buffer object (VBO) using the <computeroutput>glCreateBuffers</computeroutput> function, assigns it a unique ID, binds it for use, and fills it with data using <computeroutput>glBufferData</computeroutput>. The data is specified as an array of floats and its size in bytes.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Vertices</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the first element of the vertices array. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to allocate memory for the buffer object&apos;s data store.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Constructs an <ref refid="class_a_g_e_1_1_open_g_l_vertex_buffer" kindref="compound">OpenGLVertexBuffer</ref> with given vertices and size.</para>
+<para>This function creates a new OpenGL vertex buffer object (VBO) using the <computeroutput>glCreateBuffers</computeroutput> function, assigns it a unique ID, binds it to the GL_ARRAY_BUFFER target, and fills it with data of specified size and content. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Vertices</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to an array of float values representing vertices. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size in bytes of the buffer object&apos;s new data store. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="16" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="42" bodyend="52"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="16" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="90" bodyend="100"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_vertex_buffer_1a35721b2e724e92eb8065d1a02f24edaa" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -120,12 +221,21 @@
         <name>~OpenGLVertexBuffer</name>
         <qualifiedname>AGE::OpenGLVertexBuffer::~OpenGLVertexBuffer</qualifiedname>
         <briefdescription>
+<para>Destructor for <ref refid="class_a_g_e_1_1_open_g_l_vertex_buffer" kindref="compound">OpenGLVertexBuffer</ref>. Deletes the vertex buffer object from GPU memory. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is responsible for deleting a <ref refid="struct_a_g_e_1_1_vertex" kindref="compound">Vertex</ref> <ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref> Object (VBO) from the GPU&apos;s memory. It does this by calling glDeleteBuffers with the ID of the VBO to be deleted. The VBO ID is stored in m_RendererID member variable.</para>
+<para><simplesect kind="return"><para>void</para>
+</simplesect>
+Destructor for <ref refid="class_a_g_e_1_1_open_g_l_vertex_buffer" kindref="compound">OpenGLVertexBuffer</ref>. Deletes the vertex buffer object from GPU memory.</para>
+<para>This function is responsible for deleting a <ref refid="struct_a_g_e_1_1_vertex" kindref="compound">Vertex</ref> <ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref> Object (VBO) from the GPU&apos;s memory. The VBO was previously created and initialized by some other part of the program.</para>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="18" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="54" bodyend="59"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="18" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="117" bodyend="122"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_vertex_buffer_1ad6593eff4e16d74326a92e8dc3866220" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -135,12 +245,21 @@
         <qualifiedname>AGE::OpenGLVertexBuffer::Bind</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_vertex_buffer_1ae545f6f44ad60d4df46cf0329acacd33">Bind</reimplements>
         <briefdescription>
+<para>This function binds the OpenGL <ref refid="struct_a_g_e_1_1_vertex" kindref="compound">Vertex</ref> <ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref> to the GL_ARRAY_BUFFER target. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function uses glBindBuffer() from the OpenGL library to bind the buffer with ID m_RendererID to the GL_ARRAY_BUFFER target. It is used when rendering vertex data in an OpenGL context.</para>
+<para><simplesect kind="return"><para>void No return value. This function only modifies the state of the OpenGL context, not returning any information.</para>
+</simplesect>
+This function binds the OpenGL <ref refid="struct_a_g_e_1_1_vertex" kindref="compound">Vertex</ref> <ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref> to the GL_ARRAY_BUFFER target.</para>
+<para>The function uses glBindBuffer with arguments (GL_ARRAY_BUFFER, m_RendererID) to bind the buffer. It is used when rendering vertex arrays and it sets the current vertex array buffer to be the one we want to use.</para>
+<para><simplesect kind="return"><para>void No return value. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="22" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="60" bodyend="65"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="22" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="139" bodyend="144"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_vertex_buffer_1a711713010a2c6ef0501657bdd73bd415" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -150,12 +269,21 @@
         <qualifiedname>AGE::OpenGLVertexBuffer::Unbind</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_vertex_buffer_1a51ec57490c6549dbe324a5a32e683c61">Unbind</reimplements>
         <briefdescription>
+<para>Unbinds the OpenGL <ref refid="struct_a_g_e_1_1_vertex" kindref="compound">Vertex</ref> <ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function binds an OpenGL buffer to a target with zero as its argument. In this case, it&apos;s binding GL_ARRAY_BUFFER to 0, effectively unbinding it.</para>
+<para><simplesect kind="return"><para>void</para>
+</simplesect>
+This function unbinds the OpenGL <ref refid="struct_a_g_e_1_1_vertex" kindref="compound">Vertex</ref> <ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref>.</para>
+<para>It binds the buffer target to GL_ARRAY_BUFFER and sets the buffer id to 0, effectively unbinding it from the current context.</para>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="24" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="66" bodyend="71"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="24" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="159" bodyend="164"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_vertex_buffer_1ac0d8ae4a0abbd62464132ec4be401e8f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -165,12 +293,21 @@
         <qualifiedname>AGE::OpenGLVertexBuffer::InvalidateBuffer</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_vertex_buffer_1a1ed54cf9ba543ab805658ee7a7df0b63">InvalidateBuffer</reimplements>
         <briefdescription>
+<para>Invalidates and deletes the OpenGL vertex buffer. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function first invalidates any existing data in the buffer using glInvalidateBufferData(). Then it deletes the buffer itself with glDeleteBuffers(). The buffer&apos;s ID is passed to these functions as a constant reference, ensuring that no changes are made to the buffer after its destruction.</para>
+<para><simplesect kind="return"><para>void</para>
+</simplesect>
+Invalidates and deletes the OpenGL vertex buffer.</para>
+<para>This function first invalidates any existing data in the buffer using glInvalidateBufferData(). It then deletes the buffer itself with glDeleteBuffers() using the renderer ID of this object as argument. The buffer is marked for deletion and its memory becomes available for reuse by other objects, effectively invalidating it.</para>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="26" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="73" bodyend="80"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="26" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="184" bodyend="191"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_vertex_buffer_1a7a032b18f9cfa9b13213b7fb89a8dbcc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -184,12 +321,23 @@
           <declname>Layout</declname>
         </param>
         <briefdescription>
+<para>Sets the layout for a buffer. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Layout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new layout to be set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="28" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" bodystart="28" bodyend="28"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="32" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" bodystart="32" bodyend="32"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_vertex_buffer_1a022ec712a588b449e0053d2ff2e47099" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -207,12 +355,55 @@
           <declname>Size</declname>
         </param>
         <briefdescription>
+<para>Adds data to the OpenGL <ref refid="struct_a_g_e_1_1_vertex" kindref="compound">Vertex</ref> <ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function binds the buffer and adds new data to it using glBufferSubData. The data is added at the beginning of the buffer, replacing any existing data.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Verticies</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to an array of floats containing the data to be added. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size in bytes of the data to be added.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void</para>
+</simplesect>
+Adds data to the OpenGL <ref refid="struct_a_g_e_1_1_vertex" kindref="compound">Vertex</ref> <ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref>.</para>
+<para>This function binds the buffer and then uses glBufferSubData to add new data at the beginning of the buffer. The size of the data is specified by the Size parameter, which should be the number of floats in the Verticies array.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Verticies</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to an array of float values representing the vertices to add to the buffer. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the Verticies array, expressed as a uint32_t. This should be equal to the number of floats in the Verticies array.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="32" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="82" bodyend="88"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="43" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="214" bodyend="220"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_vertex_buffer_1ab538fc0190903bcecabcfddb8ecaf3ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -230,12 +421,55 @@
           <declname>Size</declname>
         </param>
         <briefdescription>
+<para>Adds data to the OpenGL <ref refid="struct_a_g_e_1_1_vertex" kindref="compound">Vertex</ref> <ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function binds the buffer and updates its contents with new vertex data. The size of the data is specified by the &apos;Size&apos; parameter, which should match the actual size of the data being added. The data itself is passed as a pointer to the &apos;Verticies&apos; parameter.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Verticies</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the data that will be copied into the buffer. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size in bytes of the data pointed to by &apos;Verticies&apos;.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void</para>
+</simplesect>
+Adds data to the OpenGL <ref refid="struct_a_g_e_1_1_vertex" kindref="compound">Vertex</ref> <ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref>.</para>
+<para>This function binds the buffer and then uses glBufferSubData to add new data at the beginning of the buffer. The size of the data is specified by the Size parameter, and the actual data is pointed to by the Verticies pointer.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Verticies</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the data that will be added to the buffer. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size in bytes of the data being added.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="34" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="90" bodyend="96"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="45" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="244" bodyend="250"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_vertex_buffer_1aa97bd1d4a66c6a4e7078e3606683d2d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="struct_a_g_e_1_1_vertex" kindref="compound">Vertex</ref> *</type>
@@ -281,12 +515,167 @@
           <declname>EnttID</declname>
         </param>
         <briefdescription>
+<para>Creates a quad in the OpenGL vertex buffer. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes in various parameters to create a quad, such as color, position, size, texture coordinates, tiling factor, and entity ID. It then populates an array of vertices with these details. The resulting array is returned by reference.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the first element of the vertex array to be filled. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The color of the quad. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of positions for each vertex of the quad. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the quad. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Transform</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The transformation matrix that will be applied to the vertices&apos; positions. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TexCoords</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of texture coordinates for each vertex of the quad. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TilingFactor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The tiling factor for the texture. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the texture being used. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>EnttID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The entity ID associated with the quad.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to the filled vertex array.</para>
+</simplesect>
+Creates a quad in the OpenGL vertex buffer.</para>
+<para>This function takes an array of vertices, colors, positions, texture coordinates, and other parameters to create a quad in the vertex buffer. The quad is created by filling four vertices with data from the provided arguments.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the first element of the target array of vertices. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The color of the quad. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of positions for each vertex of the quad. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the quad. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Transform</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The transformation matrix applied to the quad&apos;s position. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TexCoords</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of texture coordinates for each vertex of the quad. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TilingFactor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The tiling factor used in the texture mapping. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the texture used by the quad. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>EnttID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the entity associated with the quad.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to the next available position after creating the quad. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="36" column="8" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="98" bodyend="113"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="47" column="8" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="286" bodyend="301"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_vertex_buffer_1ab77726bb6b2737a71811980020b55d3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="struct_a_g_e_1_1_circle_vertex" kindref="compound">CircleVertex</ref> *</type>
@@ -324,12 +713,135 @@
           <declname>EntID</declname>
         </param>
         <briefdescription>
+<para>Creates a circle in the vertex buffer. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes an array of positions, applies a transformation to each position, and stores them into the target <ref refid="struct_a_g_e_1_1_circle_vertex" kindref="compound">CircleVertex</ref> object. The color, thickness, fade factor, and entity ID are also stored for each vertex.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the <ref refid="struct_a_g_e_1_1_circle_vertex" kindref="compound">CircleVertex</ref> object where the circle will be created. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Transform</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The transformation matrix that will be applied to the positions. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> objects representing the positions of the vertices of the circle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The color of the circle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Thickness</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The thickness of the lines making up the circle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Fade</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The fade factor of the circle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>EntID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The entity ID associated with the circle.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to the <ref refid="struct_a_g_e_1_1_circle_vertex" kindref="compound">CircleVertex</ref> object where the circle was created.</para>
+</simplesect>
+Creates a circle vertex in the <ref refid="class_a_g_e_1_1_open_g_l_vertex_buffer" kindref="compound">OpenGLVertexBuffer</ref>.</para>
+<para>This function takes an array of positions, applies a transformation to each position, and stores the transformed position, local position, color, thickness, fade, and entity ID into a <ref refid="struct_a_g_e_1_1_circle_vertex" kindref="compound">CircleVertex</ref> struct. The function returns the updated target pointer.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the <ref refid="struct_a_g_e_1_1_circle_vertex" kindref="compound">CircleVertex</ref> that will be populated with data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Transform</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The transformation matrix to apply to each position. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of positions to transform and store in the vertex. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The color of the circle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Thickness</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The thickness of the circle lines. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Fade</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The fade value for the circle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>EntID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The entity ID associated with the circle.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to the updated <ref refid="struct_a_g_e_1_1_circle_vertex" kindref="compound">CircleVertex</ref> struct. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="37" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="114" bodyend="128"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="48" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="333" bodyend="347"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_vertex_buffer_1a856450ccaf6c40ec18b31cdde7b3da8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="struct_a_g_e_1_1_line_vertex" kindref="compound">LineVertex</ref> *</type>
@@ -359,12 +871,102 @@
           <declname>EntID</declname>
         </param>
         <briefdescription>
+<para>Creates a line vertex in the OpenGL <ref refid="struct_a_g_e_1_1_vertex" kindref="compound">Vertex</ref> <ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes in parameters to create two vertices that form a line. The first vertex has its position set to Position0, color set to Color and LineEntityID set to EntID. The second vertex is similar but uses Position1 for its position. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the target <ref refid="class_a_g_e_1_1_open_g_l_vertex_buffer" kindref="compound">OpenGLVertexBuffer</ref> object where the new line will be added. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The color of the line. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Position0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The starting point of the line. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Position1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ending point of the line. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>EntID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The entity ID associated with this line. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to the next available memory location in the <ref refid="class_a_g_e_1_1_open_g_l_vertex_buffer" kindref="compound">OpenGLVertexBuffer</ref> object after adding two vertices.</para>
+</simplesect>
+Creates a line vertex in the OpenGL <ref refid="struct_a_g_e_1_1_vertex" kindref="compound">Vertex</ref> <ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref>.</para>
+<para>This function creates two vertices that form a line segment. The first vertex has its position set to Position0, color set to Color and LineEntityID set to EntID. The second vertex is similar but uses Position1 for its position.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the target <ref refid="struct_a_g_e_1_1_line_vertex" kindref="compound">LineVertex</ref> object where the new vertices will be created. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The color of the line segment. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Position0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The starting point of the line segment. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Position1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ending point of the line segment. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>EntID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The entity ID associated with the line segment.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to the next available <ref refid="struct_a_g_e_1_1_line_vertex" kindref="compound">LineVertex</ref> object after two vertices have been created. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="38" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="129" bodyend="142"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="49" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="372" bodyend="385"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_vertex_buffer_1a14750f1a0f74f67903e08d1e1f568e3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="struct_a_g_e_1_1_text_vertex" kindref="compound">TextVertex</ref> *</type>
@@ -402,22 +1004,145 @@
           <declname>EntID</declname>
         </param>
         <briefdescription>
+<para>This function creates a text vertex in an OpenGL vertex buffer. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function takes in several parameters including the target <ref refid="struct_a_g_e_1_1_text_vertex" kindref="compound">TextVertex</ref> pointer, a transformation matrix, position vectors, color, texture coordinates and texture ID. It then populates each of these values into the target <ref refid="struct_a_g_e_1_1_text_vertex" kindref="compound">TextVertex</ref> object for each vertex in the quadrilateral.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the <ref refid="struct_a_g_e_1_1_text_vertex" kindref="compound">TextVertex</ref> that will be filled with data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Transform</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The transformation matrix used to transform the position vectors. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> positions which represent the vertices of a text quadrilateral. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The color of the text. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TexCoords</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> texture coordinates for each vertex in the text quadrilateral. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TexID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the texture to be used for rendering the text. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>EntID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The entity ID associated with the text.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to the filled <ref refid="struct_a_g_e_1_1_text_vertex" kindref="compound">TextVertex</ref> object.</para>
+</simplesect>
+This function creates a text vertex in an OpenGL vertex buffer.</para>
+<para>The function takes in several parameters such as the target <ref refid="struct_a_g_e_1_1_text_vertex" kindref="compound">TextVertex</ref>, transformation matrix, position vector, color, texture coordinates, texture ID and entity ID. It then populates each of these values into the target <ref refid="struct_a_g_e_1_1_text_vertex" kindref="compound">TextVertex</ref> object for each vertex in the quadrilateral.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to a <ref refid="struct_a_g_e_1_1_text_vertex" kindref="compound">TextVertex</ref> that will be filled with data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Transform</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The transformation matrix used to transform the position vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> positions which represent the vertices of the text. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The color of the text vertex. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TexCoords</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> texture coordinates for each vertex in the quadrilateral. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TexID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the texture to be used for rendering the text. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>EntID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The entity ID associated with this text vertex.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to the filled <ref refid="struct_a_g_e_1_1_text_vertex" kindref="compound">TextVertex</ref> object. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="39" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="144" bodyend="158"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="50" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="419" bodyend="433"/>
       </memberdef>
-      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_vertex_buffer_1a3ee9378cdc0adcbebce9b2da8bdd9d3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type><ref refid="struct_a_g_e_1_1_tilemap_vertex" kindref="compound">TilemapVertex</ref> *</type>
-        <definition>TilemapVertex * AGE::OpenGLVertexBuffer::CreateTile</definition>
-        <argsstring>(TilemapVertex *Target, Vector4 Color, Vector4 *Position, Matrix4D Transform, const Vector2 *UV, uint32_t TSID, int EnttID) override</argsstring>
+      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_vertex_buffer_1a97e5e10561af22d6a4d72bd32b65c71a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="struct_a_g_e_1_1_tile_vertex" kindref="compound">TileVertex</ref> *</type>
+        <definition>TileVertex * AGE::OpenGLVertexBuffer::CreateTile</definition>
+        <argsstring>(TileVertex *Target, Vector4 Color, Vector4 *Position, Vector2 Size, Matrix4D Transform, const Vector2 *TexCoords, float TilingFactor, float ID, int EnttID) override</argsstring>
         <name>CreateTile</name>
         <qualifiedname>AGE::OpenGLVertexBuffer::CreateTile</qualifiedname>
-        <reimplements refid="class_a_g_e_1_1_vertex_buffer_1a1b0e50dcbd0effe4499169ff5a6ce212">CreateTile</reimplements>
+        <reimplements refid="class_a_g_e_1_1_vertex_buffer_1a5ebdb4e00dc4eea10883958321e26f1f">CreateTile</reimplements>
         <param>
-          <type><ref refid="struct_a_g_e_1_1_tilemap_vertex" kindref="compound">TilemapVertex</ref> *</type>
+          <type><ref refid="struct_a_g_e_1_1_tile_vertex" kindref="compound">TileVertex</ref> *</type>
           <declname>Target</declname>
         </param>
         <param>
@@ -429,28 +1154,189 @@
           <declname>Position</declname>
         </param>
         <param>
+          <type><ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref></type>
+          <declname>Size</declname>
+        </param>
+        <param>
           <type><ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref></type>
           <declname>Transform</declname>
         </param>
         <param>
           <type>const <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> *</type>
-          <declname>UV</declname>
+          <declname>TexCoords</declname>
         </param>
         <param>
-          <type>uint32_t</type>
-          <declname>TSID</declname>
+          <type>float</type>
+          <declname>TilingFactor</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ID</declname>
         </param>
         <param>
           <type>int</type>
           <declname>EnttID</declname>
         </param>
         <briefdescription>
+<para>Creates a tile with the given parameters and stores it in the provided <ref refid="struct_a_g_e_1_1_tile_vertex" kindref="compound">TileVertex</ref> object. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes an array of positions, texture coordinates, color, tiling factor, entity ID, and transforms them into vertex data for a quadrilateral tile. The resulting vertex data is stored in the provided <computeroutput><ref refid="struct_a_g_e_1_1_tile_vertex" kindref="compound">TileVertex</ref></computeroutput> object. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the <ref refid="struct_a_g_e_1_1_tile_vertex" kindref="compound">TileVertex</ref> object where the created tile will be stored. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The color of the tile. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of positions that define the corners of the tile. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the tile. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Transform</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A transformation matrix applied to the positions. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TexCoords</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of texture coordinates for each corner of the tile. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TilingFactor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The tiling factor used in the texture mapping. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the texture used by the tile. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>EnttID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The entity ID associated with the tile.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to the <computeroutput><ref refid="struct_a_g_e_1_1_tile_vertex" kindref="compound">TileVertex</ref></computeroutput> object where the created tile is stored.</para>
+</simplesect>
+This function creates a tile with the given parameters.</para>
+<para>The function takes in an array of positions, texture coordinates, color, tiling factor, entity ID and transforms them into vertices for a quadrilateral mesh. It then updates the target <ref refid="struct_a_g_e_1_1_tile_vertex" kindref="compound">TileVertex</ref> object with these vertex attributes. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the <ref refid="struct_a_g_e_1_1_tile_vertex" kindref="compound">TileVertex</ref> object that will be updated. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The color of the tile. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of positions for each vertex of the tile. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the tile. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Transform</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The transformation matrix applied to the vertices. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TexCoords</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of texture coordinates for each vertex of the tile. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TilingFactor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The tiling factor used in the texture mapping. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the texture being used. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>EnttID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The entity ID associated with the tile.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to the updated Target object. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="40" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="160" bodyend="174"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="51" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="467" bodyend="481"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_vertex_buffer_1a5785446f5074362a0d45a56d17df0a71" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type>const <ref refid="class_a_g_e_1_1_buffer_layout" kindref="compound">BufferLayout</ref> &amp;</type>
@@ -460,12 +1346,16 @@
         <qualifiedname>AGE::OpenGLVertexBuffer::GetLayout</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_vertex_buffer_1ac120251d383c47c0c0e3336bbc2c9621">GetLayout</reimplements>
         <briefdescription>
+<para>Returns the layout of this buffer. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>A constant reference to the buffer&apos;s layout. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="42" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" bodystart="42" bodyend="42"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="57" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" bodystart="57" bodyend="57"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -476,12 +1366,17 @@
         <name>GetRendererID</name>
         <qualifiedname>AGE::OpenGLVertexBuffer::GetRendererID</qualifiedname>
         <briefdescription>
+<para>Returns the renderer ID of the current scene. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function returns the unique identifier for the renderer used by the current scene. The returned value is a uint32_t, which represents an unsigned integer type in C++.</para>
+<para><simplesect kind="return"><para>A uint32_t representing the renderer ID of the current scene. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="30" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" bodystart="30" bodyend="30"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="41" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" bodystart="41" bodyend="41"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -512,7 +1407,7 @@
         <link refid="class_a_g_e_1_1_vertex_buffer"/>
       </node>
     </collaborationgraph>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="9" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" bodystart="10" bodyend="51"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="9" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" bodystart="10" bodyend="66"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_open_g_l_vertex_buffer_1a022ec712a588b449e0053d2ff2e47099" prot="public" virt="virtual"><scope>AGE::OpenGLVertexBuffer</scope><name>AddDataToBuffer</name></member>
       <member refid="class_a_g_e_1_1_open_g_l_vertex_buffer_1ab538fc0190903bcecabcfddb8ecaf3ff" prot="public" virt="virtual"><scope>AGE::OpenGLVertexBuffer</scope><name>AddDataToBuffer</name></member>
@@ -520,12 +1415,12 @@
       <member refid="class_a_g_e_1_1_open_g_l_vertex_buffer_1ad6593eff4e16d74326a92e8dc3866220" prot="public" virt="virtual"><scope>AGE::OpenGLVertexBuffer</scope><name>Bind</name></member>
       <member refid="class_a_g_e_1_1_vertex_buffer_1a48d496c30061a3767851533a8aed56f3" prot="public" virt="non-virtual"><scope>AGE::OpenGLVertexBuffer</scope><name>Create</name></member>
       <member refid="class_a_g_e_1_1_vertex_buffer_1ad1f1fd16218dab6d7355f55b9cab9c8c" prot="public" virt="non-virtual"><scope>AGE::OpenGLVertexBuffer</scope><name>Create</name></member>
-      <member refid="class_a_g_e_1_1_vertex_buffer_1a6f5cad3b0622092fc28ee133252e3a65" prot="public" virt="non-virtual"><scope>AGE::OpenGLVertexBuffer</scope><name>Create</name></member>
+      <member refid="class_a_g_e_1_1_vertex_buffer_1a8ac0db5f889050e7eb04d8cf94d09e30" prot="public" virt="non-virtual"><scope>AGE::OpenGLVertexBuffer</scope><name>Create</name></member>
       <member refid="class_a_g_e_1_1_open_g_l_vertex_buffer_1ab77726bb6b2737a71811980020b55d3f" prot="public" virt="virtual"><scope>AGE::OpenGLVertexBuffer</scope><name>CreateCircle</name></member>
       <member refid="class_a_g_e_1_1_open_g_l_vertex_buffer_1a856450ccaf6c40ec18b31cdde7b3da8d" prot="public" virt="virtual"><scope>AGE::OpenGLVertexBuffer</scope><name>CreateLine</name></member>
       <member refid="class_a_g_e_1_1_open_g_l_vertex_buffer_1aa97bd1d4a66c6a4e7078e3606683d2d2" prot="public" virt="virtual"><scope>AGE::OpenGLVertexBuffer</scope><name>CreateQuad</name></member>
       <member refid="class_a_g_e_1_1_open_g_l_vertex_buffer_1a14750f1a0f74f67903e08d1e1f568e3f" prot="public" virt="virtual"><scope>AGE::OpenGLVertexBuffer</scope><name>CreateText</name></member>
-      <member refid="class_a_g_e_1_1_open_g_l_vertex_buffer_1a3ee9378cdc0adcbebce9b2da8bdd9d3e" prot="public" virt="virtual"><scope>AGE::OpenGLVertexBuffer</scope><name>CreateTile</name></member>
+      <member refid="class_a_g_e_1_1_open_g_l_vertex_buffer_1a97e5e10561af22d6a4d72bd32b65c71a" prot="public" virt="virtual"><scope>AGE::OpenGLVertexBuffer</scope><name>CreateTile</name></member>
       <member refid="class_a_g_e_1_1_open_g_l_vertex_buffer_1a5785446f5074362a0d45a56d17df0a71" prot="public" virt="virtual"><scope>AGE::OpenGLVertexBuffer</scope><name>GetLayout</name></member>
       <member refid="class_a_g_e_1_1_open_g_l_vertex_buffer_1a5193f8b45207630d89c4f3d1f99a3135" prot="public" virt="non-virtual"><scope>AGE::OpenGLVertexBuffer</scope><name>GetRendererID</name></member>
       <member refid="class_a_g_e_1_1_open_g_l_vertex_buffer_1ac0d8ae4a0abbd62464132ec4be401e8f" prot="public" virt="virtual"><scope>AGE::OpenGLVertexBuffer</scope><name>InvalidateBuffer</name></member>

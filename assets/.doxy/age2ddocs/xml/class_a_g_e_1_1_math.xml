@@ -14,12 +14,39 @@
           <declname>v</declname>
         </param>
         <briefdescription>
+<para>Calculates the magnitude of a three-dimensional vector. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes a const reference to a <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object and returns its magnitude by calculating the square root of the sum of the squares of each component (x, y, z).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A constant reference to a <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object representing the vector for which we want to calculate the magnitude. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>float The magnitude of the input vector.</para>
+</simplesect>
+Calculates the magnitude (length) of a three-dimensional vector.</para>
+<para>This function takes a constant reference to a <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object and returns its magnitude by calculating the square root of the sum of the squares of each component in the vector.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A const reference to a <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object representing the vector for which we want to calculate the magnitude.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The magnitude (length) of the input vector as a float value. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="18" column="21" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="18" bodyend="21"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="35" column="21" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="35" bodyend="38"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1a1fd103f36f1ad3e31b4581f6d9614540" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -44,12 +71,87 @@
           <declname>p</declname>
         </param>
         <briefdescription>
+<para>Computes the intersection point of three planes in a 3D space. </para>
         </briefdescription>
         <detaileddescription>
+<para>Given three planes, this function computes and returns their intersection point if they are not parallel (i.e., have a non-zero determinant). The intersection point is calculated using Cramer&apos;s rule.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First plane to intersect with. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second plane to intersect with. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f3</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Third plane to intersect with. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to a <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref> object where the intersection point will be stored if it exists.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if planes are not parallel (determinant is non-zero), false otherwise.</para>
+</simplesect>
+Computes the intersection point of three planes in a 3D space.</para>
+<para>Given three planes, this function computes and returns their intersection point if they are not parallel (i.e., have a non-zero determinant). The intersection point is calculated using Cramer&apos;s rule.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First plane to intersect with. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second plane to intersect with. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f3</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Third plane to intersect with. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to a <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref> object where the intersection point will be stored if it exists.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if planes are not parallel (determinant is non-zero), false otherwise. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="23" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="55" bodyend="69"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="40" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="79" bodyend="93"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1a08fedfee567429e26df6d6bd83318c37" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -74,12 +176,50 @@
           <declname>v</declname>
         </param>
         <briefdescription>
+<para>Computes the intersection point and direction vector of two planes in a 3D space. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function calculates the intersection line defined by its direction vector <computeroutput>v</computeroutput> and any point on this line is given by <computeroutput>p</computeroutput>. It takes as input two plane objects, each represented by a normal vector and a constant term (w). If the planes are not parallel (i.e., their normals are linearly independent), it computes the intersection point and direction vector. The function returns true if the planes intersect, false otherwise.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First plane object with normal <computeroutput>n1</computeroutput> and constant term <computeroutput>f1.w</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second plane object with normal <computeroutput>n2</computeroutput> and constant term <computeroutput>f2.w</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to a <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref> where the intersection point will be stored. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to a <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> where the direction vector of the intersection line will be stored.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if planes intersect, false otherwise. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="25" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="71" bodyend="84"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="42" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="111" bodyend="124"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1a168283d5172dbcde0f0c1aad95661788" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -94,14 +234,58 @@
         <param>
           <type>const <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> &amp;</type>
           <declname>p</declname>
+          <defname>v</defname>
         </param>
         <briefdescription>
+<para>Computes the distance between a point and a line in 2D space. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function calculates the shortest distance from a given point to a line defined by two points. The line is represented as an origin (v) and a direction vector (q).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>q</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> representing the direction of the line. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> representing the origin of the line. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>float Returns the distance between the point and the line in 2D space. If the input parameters are invalid, it returns NaN (Not a Number).</para>
+</simplesect>
+Computes the distance between a point and a line in 2D space.</para>
+<para>This function calculates the shortest distance from a given point to a line defined by two points. The line is represented as a vector, which starts at the origin (0,0).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>q</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A const reference to a <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> object representing the point in 2D space. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A const reference to a <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> object representing the direction of the line from the origin.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns a float value representing the distance between the input point and the line. If the inputs are invalid, it returns NaN (Not a Number). </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="27" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="86" bodyend="90"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="44" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="145" bodyend="149"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1a4b0ad31ae6d430bf3629dfa8d6e1f623" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -118,12 +302,55 @@
           <declname>v1</declname>
         </param>
         <briefdescription>
+<para>Computes the shortest distance between two lines in 2D space. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function calculates the shortest distance between any point on line1 and any point on line2. The result is a float value representing this minimum distance.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A constant reference to <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> object representing one point on the first line. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A constant reference to <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> object representing direction vector of the first line.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns a float value representing the shortest distance between two lines in 2D space.</para>
+</simplesect>
+Calculates the distance between two lines in a 2D space.</para>
+<para>This function calculates the shortest distance between any point on line segment AB and CD, where A = p1 and B = p1 + v1. The result is the perpendicular distance from one of the points to the other line.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First point defining the first line. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Direction vector for the first line.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns a float representing the shortest distance between two lines in a 2D space. If the lines are parallel, returns Unknown. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="29" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="92" bodyend="95"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="46" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="173" bodyend="176"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1a896c5a7fdc43a8e4a22569d369eeae9c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -144,12 +371,71 @@
           <declname>v</declname>
         </param>
         <briefdescription>
+<para>Computes the distance between a point and a line in 3-dimensional space. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function calculates the shortest distance from a given point to a line defined by an origin point (p) and a direction vector (v). It uses the formula for the distance between two points, which is sqrt((x2 - x1)^2 + (y2 - y1)^2 + (z2 - z1)^2), where (x1, y1, z1) are the coordinates of the first point and (x2, y2, z2) are the coordinates of the second point.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>q</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref> object representing the point for which we want to compute the distance from the line. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref> object representing the origin point of the line. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object representing the direction vector of the line.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A float value representing the shortest distance between the given point and the line. If the direction vector is zero, it returns Unknown.</para>
+</simplesect>
+Computes the distance between a point and a line in 3D space.</para>
+<para>The function calculates the shortest distance from a given point to a line defined by an origin point (p) and a direction vector (v). It uses cross product, dot product, and square root functions for calculations.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>q</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A constant reference to the <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref> object representing the query point. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A constant reference to the <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref> object representing the origin of the line. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A constant reference to the <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object representing the direction vector of the line.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The function returns a float value representing the distance from the point to the line. If the direction vector is zero, it means the line is degenerate and the function will return NaN (not a number). </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="31" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="97" bodyend="102"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="48" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="200" bodyend="205"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1a0c1679fb869500b5e5fbcf10827da3f5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -174,12 +460,87 @@
           <declname>v2</declname>
         </param>
         <briefdescription>
+<para>Calculates the distance between two lines in 3D space. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function calculates the shortest distance between two lines defined by points and directions. It uses the method of calculating the intersection point of the two lines, which is then used to calculate the distance from that point to either of the original line&apos;s points. If the determinant of the matrix formed by the direction vectors of the two lines is zero (i.e., the lines are parallel), it calculates a perpendicular distance using cross product instead.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first point on the first line. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The direction vector of the first line. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first point on the second line. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The direction vector of the second line.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The shortest distance between the two lines. If the determinant is zero, it returns the perpendicular distance.</para>
+</simplesect>
+Calculates the distance between two lines in 3D space.</para>
+<para>The function calculates the shortest distance between two lines in 3-dimensional space defined by points and directions. It uses the method of least squares to find the closest points on each line, which minimizes the sum of the squares of the distances.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First point on the first line. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Direction vector for the first line. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First point on the second line. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Direction vector for the second line.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The shortest distance between the two lines. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="33" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="104" bodyend="127"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="50" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="232" bodyend="255"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1a511e739e489e95548b6953285cdb9b9c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -192,12 +553,39 @@
           <declname>M</declname>
         </param>
         <briefdescription>
+<para>Calculates the determinant of a 3x3 matrix. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function calculates the determinant of a 3x3 matrix using the formula for calculating the determinant of a 3x3 matrix. The input is a const reference to a <ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref> object, which represents the matrix whose determinant we want to calculate.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>M</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A const reference to a <ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref> object representing the matrix whose determinant we want to calculate.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns a float value representing the determinant of the input 3x3 matrix. If the input matrix is not a 3x3 matrix, the behavior is undefined.</para>
+</simplesect>
+Calculates the determinant of a 3x3 matrix.</para>
+<para>The function takes as input a constant reference to a <ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref> object and returns its determinant. It uses the formula for calculating the determinant of a 3x3 matrix, which involves the dot product of the row vectors with the cross products of other row vectors.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>M</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A const reference to the input <ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref> object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The determinant of the input <ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref> as a float value. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="36" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="129" bodyend="135"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="53" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="276" bodyend="282"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1a4c167ce4f38527b6c4ba4a04c4bbe3f4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref></type>
@@ -210,12 +598,39 @@
           <declname>M</declname>
         </param>
         <briefdescription>
+<para>Computes the inverse of a 3x3 matrix. </para>
         </briefdescription>
         <detaileddescription>
+<para>Computes the inverse of a 3x3 matrix.</para>
+<para>The function takes as input a const reference to a <ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref> object and returns an instance of <ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref> that represents the inverse of the input matrix. It uses linear algebra methods, specifically the method of calculating the inverse of a matrix.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>M</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A const reference to the 3x3 matrix to be inverted. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An instance of <ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref> representing the inverse of the input matrix. </para>
+</simplesect>
+This function takes as input a const reference to a <ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref> object and returns an instance of <ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref> that represents the inverse of the input matrix. The computation is based on the formula for finding the inverse of a 3x3 matrix, which involves cross product and dot product operations.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>M</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A const reference to the <ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref> object whose inverse we want to compute. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An instance of <ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref> that represents the inverse of the input matrix. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="38" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="137" bodyend="153"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="55" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="300" bodyend="316"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1a8c300c10f4c85407273cd8eb0a450ba2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref></type>
@@ -228,12 +643,39 @@
           <declname>M</declname>
         </param>
         <briefdescription>
+<para>Computes the inverse of a 4x4 matrix. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes as input a constant reference to a 4x4 matrix and returns its inverse. The function uses various mathematical operations such as cross product and dot product to compute the inverse.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>M</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A constant reference to the 4x4 matrix to be inverted. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The inverse of the input matrix. If the determinant of the input matrix is zero, this function returns an identity matrix.</para>
+</simplesect>
+Computes the inverse of a 4x4 matrix.</para>
+<para>This function takes as input a const reference to a 4x4 matrix and returns its inverse. The implementation is based on the formula for calculating the inverse of a 4x4 matrix, which involves cross products and dot products.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>M</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A const reference to the 4x4 matrix to be inverted. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The inverse of the input matrix. If the determinant of the input matrix is zero or negative, this function returns an identity matrix. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="41" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="155" bodyend="169"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="58" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="334" bodyend="348"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1ad5deb3f042f37a6cdd5c4f98e1191877" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>float</type>
@@ -250,12 +692,54 @@
           <declname>b</declname>
         </param>
         <briefdescription>
+<para>Computes the dot product of two 2D vectors. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes two <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> objects as input and returns their dot product. The dot product is calculated by multiplying the corresponding elements from each vector together (a[0]*b[0] + a[1]*b[1]) and summing these products up.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> object to use in the dot product calculation. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> object to use in the dot product calculation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of the dot product operation.</para>
+</simplesect>
+Computes the dot product of two 2D vectors.</para>
+<para>This function takes two <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> objects as input and returns their dot product. The dot product is calculated by multiplying the corresponding elements from each vector together (a[0]*b[0] + a[1]*b[1]) and summing these products up. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First 2D vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second 2D vector. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The dot product of vectors a and b. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="44" column="21" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="44" bodyend="47"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="78" column="21" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="78" bodyend="81"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1ae99e59482de309c57495280253630ebd" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>float</type>
@@ -272,12 +756,55 @@
           <declname>b</declname>
         </param>
         <briefdescription>
+<para>Computes the dot product of two <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> objects. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function takes in two <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> objects, &apos;a&apos; and &apos;b&apos;, and returns their dot product. This is calculated as the sum of the products of corresponding elements from each vector. For example, for vectors [a1, a2, a3] and [b1, b2, b3], the dot product would be (a1*b1 + a2*b2 + a3*b3).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A float representing the dot product of &apos;a&apos; and &apos;b&apos;.</para>
+</simplesect>
+Computes the dot product of two <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> objects.</para>
+<para>This function takes two <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> objects as input and returns their dot product. The dot product is calculated by summing up the products of corresponding elements in both vectors. For example, for <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> a = [1,2,3] and <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> b = [4,5,6], the dot product would be (1*4 + 2*5 + 3*6) = 32.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A float representing the dot product of the two input vectors. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="49" column="21" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="49" bodyend="52"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="106" column="21" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="106" bodyend="109"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1af853b056dfb01d3c59279dd67684f1d9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>float</type>
@@ -294,12 +821,54 @@
           <declname>v</declname>
         </param>
         <briefdescription>
+<para>Computes the dot product of a plane and a vector in three-dimensional space. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes two parameters, a <ref refid="struct_a_g_e_1_1_plane" kindref="compound">Plane</ref> object (consisting of x, y, z coordinates) and a <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object (also consisting of x, y, z coordinates). It returns the dot product of these two sets of coordinates. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_plane" kindref="compound">Plane</ref> for which to compute the dot product. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> for which to compute the dot product. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>float The computed dot product.</para>
+</simplesect>
+Computes the dot product of a plane and a vector in three-dimensional space.</para>
+<para>This function takes two parameters, a <ref refid="struct_a_g_e_1_1_plane" kindref="compound">Plane</ref> object (consisting of x, y, z coordinates) and a <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object (also consisting of x, y, z coordinates). It returns the result of the dot product calculation which is essentially the sum of the products of corresponding elements from the two input vectors.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_plane" kindref="compound">Plane</ref> for which to compute the dot product. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> for which to compute the dot product. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>float The result of the dot product calculation. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="54" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="54" bodyend="57"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="131" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="131" bodyend="134"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1ac6469cab1b4fa6f9e1d94f7852670f3b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>float</type>
@@ -316,12 +885,55 @@
           <declname>p</declname>
         </param>
         <briefdescription>
+<para>Computes the dot product of a plane and a point in 3D space. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function takes as input a <ref refid="struct_a_g_e_1_1_plane" kindref="compound">Plane</ref> object (consisting of four components x, y, z, w) and a <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref> object (consisting of three components [0], [1], [2]). It returns the dot product of these two vectors which is calculated as follows: f.x*p[0] + f.y*p[1] + f.z*p[2] + f.w. The <ref refid="struct_a_g_e_1_1_plane" kindref="compound">Plane</ref> object represents a plane in 3D space, and the <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref> object represents a point on that same plane.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A const reference to a <ref refid="struct_a_g_e_1_1_plane" kindref="compound">Plane</ref> object representing a plane in 3D space. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A const reference to a <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref> object representing a point on the plane.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The dot product of the plane and the point as a float value.</para>
+</simplesect>
+Computes the dot product of a plane and a point in 3D space.</para>
+<para>The function takes as input a <ref refid="struct_a_g_e_1_1_plane" kindref="compound">Plane</ref> object (consisting of four components x, y, z, w) and a <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref> object (consisting of three components). It returns the result of the dot product calculation between the plane and the point.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A const reference to the <ref refid="struct_a_g_e_1_1_plane" kindref="compound">Plane</ref> object representing the plane in 3D space. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A const reference to the <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref> object representing the point in 3D space.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of the dot product calculation between the plane and the point as a float value. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="59" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="59" bodyend="62"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="157" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="157" bodyend="160"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1aa4377dff58b7b78b99ef77128b7d9849" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -346,12 +958,87 @@
           <declname>q</declname>
         </param>
         <briefdescription>
+<para>This function calculates the intersection point of a line and plane. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function takes in three parameters - a point &apos;p&apos; on the line, a direction vector &apos;v&apos;, and a plane &apos;f&apos;. It computes the intersection point &apos;q&apos; where the line intersects with the plane. If there is an intersection, it returns true; otherwise, false.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A const reference to <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref> object representing a point on the line. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A const reference to <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object representing the direction of the line. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A const reference to <ref refid="struct_a_g_e_1_1_plane" kindref="compound">Plane</ref> object representing the plane. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>q</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref> object where the intersection point will be stored if there is an intersection.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if a valid intersection exists, false otherwise.</para>
+</simplesect>
+Intersects a line with a plane.</para>
+<para>This function calculates the intersection point of a line defined by a starting point and direction vector, and a plane. The result is stored in the output parameter <computeroutput>q</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A constant reference to the starting point of the line. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A constant reference to the direction vector of the line. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A constant reference to the plane. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>q</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to a <ref refid="struct_a_g_e_1_1_point3_d" kindref="compound">Point3D</ref> object where the intersection point will be stored.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if there is an intersection, false otherwise. If no intersection exists, <computeroutput>q</computeroutput> remains unchanged. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="64" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="171" bodyend="181"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="162" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="376" bodyend="386"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1a33478f30847de6b93e175fe6d64d6321" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>float</type>
@@ -368,12 +1055,53 @@
           <declname>b</declname>
         </param>
         <briefdescription>
+<para>Compute the cross product of two 2D vectors. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function calculates the cross product of two 2D vectors, which is a scalar value representing the z-component of the vector formed by taking the cross product in three dimensions. The result is returned as a float. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First Vector for Cross Product operation. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second Vector for Cross Product operation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A float that represents the cross product of two 2D vectors.</para>
+</simplesect>
+Compute the cross product of two 2D vectors.</para>
+<para>This function calculates the 2D cross product by multiplying the components of the first vector with the second one&apos;s y-component and vice versa, then subtracting the result. The resulting value is a scalar that represents the magnitude of the cross product and its direction relative to the x and y axes respectively. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First 2D vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second 2D vector. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A float representing the 2D cross product. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="68" column="21" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="68" bodyend="72"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="182" column="21" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="182" bodyend="186"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1afb27427875e245f79ef4f96aede77a11" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref></type>
@@ -390,12 +1118,55 @@
           <declname>b</declname>
         </param>
         <briefdescription>
+<para>Computes the cross product of two vectors. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function takes two <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> objects as input and returns their cross product. It uses the standard mathematical formula for calculating the cross product of three-dimensional vectors, which is (a2*b3 - a3*b2, a3*b1 - a1*b3, a1*b2 - a2*b1).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second vector. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> The cross product of the two input vectors.</para>
+</simplesect>
+Computes the cross product of two vectors.</para>
+<para>The function takes in two <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> objects, <computeroutput>a</computeroutput> and <computeroutput>b</computeroutput>, representing three dimensional vectors. It returns a new <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object which represents the cross product of these two input vectors.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First vector for cross product calculation. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second vector for cross product calculation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object that is the result of the cross product operation. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="76" column="23" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="76" bodyend="83"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="209" column="23" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="209" bodyend="216"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1aeae5b69779a3c3b39468e29783e01a80" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref></type>
@@ -412,12 +1183,55 @@
           <declname>b</declname>
         </param>
         <briefdescription>
+<para>Computes the projection of a vector on another. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes two vectors as input and returns their projection. The projection is calculated by multiplying the first vector (a) with the ratio of its dot product with the second vector (b) divided by the square of the magnitude of the second vector (b).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vector to be projected. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vector onto which the projection is computed. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The projection of vector &apos;a&apos; on vector &apos;b&apos;.</para>
+</simplesect>
+Projects a vector onto another.</para>
+<para>This function takes two vectors as input and projects the first one onto the second one. The projection is calculated by dividing the dot product of the first vector (a) and the second vector (b) by the square of the magnitude of the second vector (b).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vector to be projected. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vector that &apos;a&apos; will be projected onto. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> The projection of vector &apos;a&apos; onto vector &apos;b&apos;. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="87" column="23" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="87" bodyend="90"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="238" column="23" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="238" bodyend="241"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1a7a8d31dfa421b881c352c68cad9e0cc2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref></type>
@@ -434,12 +1248,55 @@
           <declname>b</declname>
         </param>
         <briefdescription>
+<para>Computes the rejection of one vector from another in a 2D space. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes two vectors &apos;a&apos; and &apos;b&apos;, computes their dot product (DotProduct2D(a, b)) and divides it by the square of the magnitude of vector &apos;b&apos;. The result is then subtracted from vector &apos;a&apos; to yield a new vector.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second input vector. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> Resulting rejection vector.</para>
+</simplesect>
+Computes the rejection of a vector &apos;a&apos; along another vector &apos;b&apos;.</para>
+<para>This function takes two vectors as input and returns a new vector which is the result of rejecting vector &apos;a&apos; along vector &apos;b&apos;. The operation essentially subtracts from vector &apos;a&apos; the projection of vector &apos;b&apos; on to itself, scaled by its dot product with itself.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> object representing the vector to be rejected. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> object representing the vector along which &apos;a&apos; is being rejected.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> object resulting from the rejection of &apos;a&apos; along &apos;b&apos;. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="93" column="23" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="93" bodyend="96"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="264" column="23" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="264" bodyend="267"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1ab8457e29fa73e7d4ee6dde657eaf901c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref></type>
@@ -456,12 +1313,55 @@
           <declname>b</declname>
         </param>
         <briefdescription>
+<para>Projects a vector &apos;a&apos; onto another vector &apos;b&apos;. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes two vectors as input. The first one is the vector to be projected (a) and the second one is the vector onto which we want to project (b). It returns a new <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> that results from projection of vector &apos;a&apos; on &apos;b&apos;.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vector to be projected. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vector onto which we want to project. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> resulting from the projection of vectors &apos;a&apos; and &apos;b&apos;.</para>
+</simplesect>
+Projects a vector onto another.</para>
+<para>This function takes two vectors as input and projects the first one (a) onto the second one (b). The projection is calculated by dividing the dot product of a and b by the dot product of b with itself.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to be projected. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Base vector for projection. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> Resulting projection. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="100" column="23" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="100" bodyend="103"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="290" column="23" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="290" bodyend="293"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1ae4b6b2b5d7ed797f2f774b6cf406465c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref></type>
@@ -478,12 +1378,55 @@
           <declname>b</declname>
         </param>
         <briefdescription>
+<para>Rejects a vector from another in three dimensions. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function calculates the rejection of one vector (<computeroutput>a</computeroutput>) from another (<computeroutput>b</computeroutput>). The rejection is calculated as <computeroutput>a - b * ((a . b) / (b . b))</computeroutput>, where &apos;.&apos; denotes dot product.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to be rejected. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to reject from. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Vector resulting from the rejection of vector <computeroutput>a</computeroutput> from <computeroutput>b</computeroutput>.</para>
+</simplesect>
+Rejects a vector from another in three dimensions.</para>
+<para>This function calculates the rejection of one vector (<computeroutput>a</computeroutput>) from another (<computeroutput>b</computeroutput>). The result is calculated as <computeroutput>a - b * ((DotProduct3D(a, b)) / DotProduct3D(b, b))</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to be rejected. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector that will reject from it. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Vector resulting from the rejection of vector <computeroutput>a</computeroutput> by <computeroutput>b</computeroutput>. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="107" column="23" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="107" bodyend="110"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="317" column="23" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="317" bodyend="320"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1a5580adf02ab60459ab9f170b062148cf" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref></type>
@@ -500,12 +1443,55 @@
           <declname>q</declname>
         </param>
         <briefdescription>
+<para>This function applies a transformation to a vector using a quaternion. </para>
         </briefdescription>
         <detaileddescription>
+<para>The transformation is defined by the formula: result = v * (q.w^2 - |b|^2) + b * (2 * dot(v, b)) + cross(b, v) * (2 * q.w) where &apos;v&apos; is the input vector, &apos;q&apos; is the quaternion representing the transformation, and &apos;b&apos; is the vector part of &apos;q&apos;.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input vector to be transformed. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>q</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The quaternion that defines the transformation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object representing the transformed vector.</para>
+</simplesect>
+Transforms a vector using a quaternion rotation.</para>
+<para>This function applies the rotation defined by the given quaternion to the input vector. The transformation is performed according to the standard mathematical formula for transforming vectors with quaternions, which involves multiplication of the vector and quaternion, followed by cross product and scalar multiplication.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input vector to be transformed. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>q</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rotation defined as a quaternion. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> representing the result of the transformation. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="111" column="16" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="381" bodyend="391"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="321" column="16" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="826" bodyend="836"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1a9038a0fe274e6393442e77faa1590914" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref></type>
@@ -518,12 +1504,39 @@
           <declname>t</declname>
         </param>
         <briefdescription>
+<para>Creates a rotation matrix around the X axis. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function creates and returns a 3x3 rotation matrix that represents a rotation of &apos;t&apos; radians about the X-axis. The cosine and sine functions are used to calculate the values in the matrix, based on the input parameter &apos;t&apos;.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The angle of rotation in radians. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A 3x3 <ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref> representing a rotation transformation.</para>
+</simplesect>
+Creates a rotation matrix around the X axis.</para>
+<para>This function creates and returns a 3x3 rotation matrix that represents a rotation of &apos;t&apos; radians about the X-axis. The cosine and sine functions are used to calculate the values for the matrix elements, ensuring the correct rotation.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The angle of rotation in radians. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref> object representing a 3x3 rotation matrix. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="113" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="183" bodyend="192"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="323" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="404" bodyend="413"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1a6c41650333b98cce91ca09ba8ce76e42" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref></type>
@@ -536,12 +1549,39 @@
           <declname>t</declname>
         </param>
         <briefdescription>
+<para>Creates a rotation matrix around the Y axis. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function creates and returns a 3x3 rotation matrix that represents a rotation of &apos;t&apos; radians about the Y-axis. The cosine and sine of &apos;t&apos; are used to calculate the values in the matrix.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The angle of rotation, in radians. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref> object representing a 3x3 rotation matrix.</para>
+</simplesect>
+Creates a rotation matrix around the Y axis.</para>
+<para>This function creates and returns a 3x3 rotation matrix that represents a rotation of &apos;t&apos; radians about the Y-axis. The cosine and sine of &apos;t&apos; are used to calculate the values in the matrix.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The angle of rotation, in radians. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref> object representing a 3x3 rotation matrix. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="115" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="194" bodyend="204"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="325" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="431" bodyend="441"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1ab6204595bf53d2d7d7e5281758f63c77" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref></type>
@@ -554,12 +1594,39 @@
           <declname>t</declname>
         </param>
         <briefdescription>
+<para>Creates a rotation matrix around the Z axis. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function creates and returns a 3x3 rotation matrix that represents a rotation of &apos;t&apos; radians about the Z-axis. The cosine and sine of &apos;t&apos; are used to calculate the values in the matrix.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The angle (in radians) by which to rotate. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A 3x3 <ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref> representing a rotation of &apos;t&apos; radians about the Z-axis.</para>
+</simplesect>
+Creates a rotation matrix around the Z axis.</para>
+<para>This function creates and returns a 3x3 rotation matrix that represents a rotation of &apos;t&apos; radians about the Z-axis. The cosine and sine of &apos;t&apos; are used to calculate the values in the matrix.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The angle of rotation, in radians. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref> object representing a 3x3 rotation matrix. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="117" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="206" bodyend="217"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="327" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="459" bodyend="470"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1a37dde3a99ab0f3cf7255e4cc1b4788f0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref></type>
@@ -576,12 +1643,34 @@
           <declname>a</declname>
         </param>
         <briefdescription>
+<para>Creates a rotation matrix for a given angle and axis. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function creates a 3x3 rotation matrix based on the provided angle (in radians) and axis vector. The resulting matrix can be used to rotate vectors or points in 3D space.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rotation angle in radians. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rotation axis as a <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref> object representing the created rotation matrix. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="120" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="219" bodyend="237"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="330" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="493" bodyend="511"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1a1350d3a232d126353d51abcce321d3c3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref></type>
@@ -598,12 +1687,55 @@
           <declname>a</declname>
         </param>
         <briefdescription>
+<para>Creates a rotation matrix based on an angle and axis of rotation. </para>
         </briefdescription>
         <detaileddescription>
+<para>Creates a rotation matrix based on the given angle and axis.</para>
+<para>The function creates a 4x4 rotation matrix using Rodrigues&apos; rotation formula. It takes an angle &apos;t&apos; in radians and a <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> &apos;a&apos;, representing the axis of rotation.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Angle of rotation in radians. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Axis of rotation represented as a <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> representing the rotation matrix. </para>
+</simplesect>
+This function creates a 4x4 rotation matrix that rotates an object by the specified angle around the given axis. The axis is represented as a <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref>, where the first three components are the x, y, and z coordinates of the vector, respectively.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The angle of rotation in radians. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> representing the axis of rotation. The first three elements represent the x, y, and z coordinates of the vector, respectively.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> object that represents the created rotation matrix. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="123" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="239" bodyend="258"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="333" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="533" bodyend="552"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1a60dfb1bc5143a5b0ebabbb05f3d2505f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref></type>
@@ -616,12 +1748,26 @@
           <declname>a</declname>
         </param>
         <briefdescription>
+<para>Creates a reflection matrix for a given vector. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes in a <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object and returns a <ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref> object that represents the reflection of the input vector across an arbitrary axis. The returned matrix is calculated based on the formula for reflection matrices, which involves negating the components of the input vector multiplied by 2 and then adding 1 to each component.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A const reference to a <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object representing the vector to be reflected. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref> The reflection matrix corresponding to the input vector. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="126" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="259" bodyend="274"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="336" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="573" bodyend="588"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1a829e3d1585247ff120cc25a309165989" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref></type>
@@ -634,12 +1780,38 @@
           <declname>a</declname>
         </param>
         <briefdescription>
+<para>Creates an involution matrix from a vector. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes a <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object as input and returns a <ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref> object that represents the involution matrix corresponding to the given vector. The input vector is multiplied by 2 before being used in the calculations, which may affect the resulting matrix if the original values of the vector were not zero or one.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object representing the basis vectors for the transformation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref> Returns a <ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref> object that represents the involution matrix corresponding to the input vector.</para>
+</simplesect>
+Creates an involution matrix from a vector.</para>
+<para>This function takes a <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object as input and returns a <ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref> object that represents the involution matrix corresponding to the input vector. The input vector is multiplied by two, and then used in the construction of the resulting matrix. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A const reference to a <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object representing the input vector. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns a <ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref> object representing the involution matrix for the given input vector. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="129" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="276" bodyend="291"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="339" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="605" bodyend="620"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1a411b43beafb9f5ced486796c1790c01e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref></type>
@@ -656,12 +1828,55 @@
           <declname>a</declname>
         </param>
         <briefdescription>
+<para>Creates a scaling matrix from a scale factor and a vector. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes in a scale factor <computeroutput>s</computeroutput> and a <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> <computeroutput>a</computeroutput>, then it creates a 3D scaling matrix based on these inputs. The scale factor is subtracted by 1 to ensure the resulting matrix remains orthogonal.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The scale factor. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vector used for scaling. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref> representing the created scaling matrix.</para>
+</simplesect>
+Creates a scaling matrix from a scale factor and a vector.</para>
+<para>This function creates a 3x3 scaling matrix based on the given scale factor (s) and vector (a). The resulting matrix is used to scale vectors in homogeneous coordinates, which allows for easy transformation of objects in 3D space.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The scale factor by which to multiply each component of the input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vector whose components are multiplied by the scale factor to create the diagonal elements of the resulting matrix.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A 3x3 scaling matrix that scales vectors in homogeneous coordinates according to the given scale factor and vector. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="132" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="293" bodyend="309"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="342" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="641" bodyend="657"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1a4b06e176ce5bf97f9ce3190f066bfba8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref></type>
@@ -678,12 +1893,53 @@
           <declname>a</declname>
         </param>
         <briefdescription>
+<para>This function scales a given <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> by the x, y and z components of a <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>M</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> to be scaled. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to the <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> containing the scaling factors.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns the scaled <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref>.</para>
+</simplesect>
+This function scales a given <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> by the x, y and z components of a <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>M</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> to be scaled. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to a constant <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> containing the scaling factors in x, y and z.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The resulting <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> after being scaled by the input <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref>. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="135" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="311" bodyend="324"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="345" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="675" bodyend="688"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1ae0f1da1699bda61c986b75802dfee35f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref></type>
@@ -700,12 +1956,55 @@
           <declname>a</declname>
         </param>
         <briefdescription>
+<para>Translates a <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> by a <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes in an existing <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> and a <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> representing the translation vector. It adds the x, y, and z components of the <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> to the corresponding elements in the <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref>, effectively translating it. The modified <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> is then returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>M</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> to be translated. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The translation vector.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The translated <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref>.</para>
+</simplesect>
+Translates a <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> by a <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref>.</para>
+<para>This function takes in a <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> and a <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> as parameters. It adds the x, y, and z components of the <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> to the corresponding elements in the <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref>. The modified <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> is then returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>M</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> to be translated. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> that specifies the translation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The translated <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref>. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="137" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="326" bodyend="340"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="347" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="711" bodyend="725"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1ad1f9500256bfa0a33ea164e6c8beefed" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref></type>
@@ -726,12 +2025,71 @@
           <declname>b</declname>
         </param>
         <briefdescription>
+<para>Creates a skew symmetric matrix from given parameters. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes three parameters, two vectors and one scalar. The scalar is first converted to its tangent value using the tan() function. Then it multiplies each component of the first vector by this tangent value. These results are used to construct a skew symmetric matrix.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Scalar input which is first converted to its tangent value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector for multiplication with the tangent value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector for further multiplication in the construction of the resulting 3x3 Matrix.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A 3x3 Matrix that represents skew symmetric transformation.</para>
+</simplesect>
+Creates a skew symmetric matrix from given parameters.</para>
+<para>This function takes three parameters, two vectors and one scalar. It calculates the skew-symmetric matrix for the vector &apos;a&apos; scaled by tan(t) and multiplies it with the third vector &apos;b&apos;. The resulting <ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref> is returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Scalar value to scale the vector &apos;a&apos;. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to be scaled and used in the skew-symmetric matrix calculation. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Third vector which will be multiplied with the result of the skew-symmetric matrix calculation.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The resulting <ref refid="struct_a_g_e_1_1_matrix3_d" kindref="compound">Matrix3D</ref> after performing the required calculations. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="141" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="342" bodyend="353"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="351" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="751" bodyend="762"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1a30ef469b8469210151107aa80f6449c8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="struct_a_g_e_1_1_transform4_d" kindref="compound">Transform4D</ref></type>
@@ -744,12 +2102,38 @@
           <declname>H</declname>
         </param>
         <briefdescription>
+<para>Computes the inverse of a homogeneous transformation matrix. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes as input a constant reference to a <ref refid="struct_a_g_e_1_1_transform4_d" kindref="compound">Transform4D</ref> object which represents a homogeneous transformation matrix. It then computes and returns the inverse of this matrix.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>H</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A const reference to the <ref refid="struct_a_g_e_1_1_transform4_d" kindref="compound">Transform4D</ref> object to be inverted. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The inverse of the input <ref refid="struct_a_g_e_1_1_transform4_d" kindref="compound">Transform4D</ref> object. Computes the inverse of a 4x4 homogeneous transformation matrix.</para>
+</simplesect>
+Given a 4x4 homogeneous transformation matrix, this function computes and returns its inverse. The inverse is computed by first extracting the rotation and translation components from H, then computing the cross product of these to obtain a scale vector s, and finally inverting the determinant of the upper-left 3x3 submatrix of H.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">H</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The homogeneous transformation matrix to invert. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The inverse of the input matrix. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="143" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="355" bodyend="379"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="353" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="780" bodyend="804"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1acfac9fdd43533de0c42d4318d1db23a4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="struct_a_g_e_1_1_transform4_d" kindref="compound">Transform4D</ref></type>
@@ -762,12 +2146,39 @@
           <declname>f</declname>
         </param>
         <briefdescription>
+<para>Reflects a plane in 4D space. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes a <ref refid="struct_a_g_e_1_1_plane" kindref="compound">Plane</ref> object and returns a <ref refid="struct_a_g_e_1_1_transform4_d" kindref="compound">Transform4D</ref> that represents the reflection of the plane across the origin. The transformation matrix is calculated based on the equation for reflection in 4 dimensions, which involves negating each component of the plane&apos;s normal vector (x, y, z) and scaling it by -1.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="struct_a_g_e_1_1_plane" kindref="compound">Plane</ref> object to be reflected. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="struct_a_g_e_1_1_transform4_d" kindref="compound">Transform4D</ref> representing the reflection transformation.</para>
+</simplesect>
+Reflects a plane in 4D space.</para>
+<para>This function takes a <ref refid="struct_a_g_e_1_1_plane" kindref="compound">Plane</ref> object and returns a <ref refid="struct_a_g_e_1_1_transform4_d" kindref="compound">Transform4D</ref> that represents the reflection of the plane across the origin. The transformation matrix is calculated based on the equation for reflection in 4D space, which involves negating each component of the plane&apos;s normal vector (x, y, z) and scaling it by -1.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="struct_a_g_e_1_1_plane" kindref="compound">Plane</ref> object to be reflected. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="struct_a_g_e_1_1_transform4_d" kindref="compound">Transform4D</ref> representing the reflection transformation. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="145" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="393" bodyend="406"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="355" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="854" bodyend="867"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1a63d9b6d7b019df1aaedd2b06d7e6a0e6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref></type>
@@ -788,12 +2199,71 @@
           <declname>Scale</declname>
         </param>
         <briefdescription>
+<para>Creates a transformation matrix from position, rotation and scale vectors. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes in three vectors representing the position, rotation, and scale of an object respectively. It uses these vectors to create a transformation matrix that can be used for transformations in 3D space. The rotation is expected to be provided as Euler angles (pitch, yaw, roll).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> representing the position of the object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Rotation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> representing the rotation of the object in Euler angles (pitch, yaw, roll). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> representing the scale of the object.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> The transformation matrix created from the input vectors.</para>
+</simplesect>
+Creates a transformation matrix from position, rotation and scale vectors.</para>
+<para>This function takes three Vector3D objects as input representing the position, rotation and scale of an object in 3D space. It converts these into a single <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> object that represents the complete transformation of the object. The resulting matrix is created by first applying a translation to the identity matrix based on the Position vector, then rotating this translated matrix using the Rotation vector, and finally scaling the rotated matrix with the Scale vector.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A Vector3D representing the position of the object in 3D space. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Rotation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A Vector3D representing the rotation of the object in 3D space (in degrees). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A Vector3D representing the scale of the object in 3D space.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> that represents the complete transformation of the object. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="147" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="408" bodyend="416"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="357" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="893" bodyend="901"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1a823c822b3bd97f9f16ad3f2230789f08" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="struct_a_g_e_1_1_line" kindref="compound">Line</ref></type>
@@ -810,12 +2280,54 @@
           <declname>H</declname>
         </param>
         <briefdescription>
+<para>This function applies a 4x4 homogeneous transformation matrix to a <ref refid="struct_a_g_e_1_1_line" kindref="compound">Line</ref> object. The transformation is performed in 3D space and the resultant line is returned. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- A const reference to the <ref refid="struct_a_g_e_1_1_line" kindref="compound">Line</ref> object that needs to be transformed. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">H</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- A const reference to the <ref refid="struct_a_g_e_1_1_transform4_d" kindref="compound">Transform4D</ref> object representing the homogeneous transformation matrix.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The function returns a new <ref refid="struct_a_g_e_1_1_line" kindref="compound">Line</ref> object which is the result of applying the 4x4 transformation matrix to the input line.</para>
+</simplesect>
+Transforms a <ref refid="struct_a_g_e_1_1_line" kindref="compound">Line</ref> object using a 4x4 transformation matrix.</para>
+<para>This function takes in a <ref refid="struct_a_g_e_1_1_line" kindref="compound">Line</ref> and a 4x4 transformation matrix (<ref refid="struct_a_g_e_1_1_transform4_d" kindref="compound">Transform4D</ref>), applies the transformation to the line, and returns the transformed <ref refid="struct_a_g_e_1_1_line" kindref="compound">Line</ref>. The transformation is performed by multiplying the direction vector of the line with the upper-left 3x3 portion of the transformation matrix, and then calculating the moment using the adjugate of this matrix and the translation part of the transformation matrix.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The <ref refid="struct_a_g_e_1_1_line" kindref="compound">Line</ref> object to be transformed. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">H</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The 4x4 transformation matrix. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new <ref refid="struct_a_g_e_1_1_line" kindref="compound">Line</ref> object that is the result of the transformation. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="150" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="150" bodyend="158"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="378" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="378" bodyend="386"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1a1a080eafe00a2900765845a35eaac11e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>float</type>
@@ -828,8 +2340,35 @@
           <declname>Deg</declname>
         </param>
         <briefdescription>
+<para>Converts an angle from degrees to radians. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes a degree value and converts it into radians by multiplying the degree value with pi (3.14159) and dividing by 180. The result is then returned as a float.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Deg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The angle in degrees to be converted. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The equivalent angle in radians.</para>
+</simplesect>
+Converts an angle from degrees to radians.</para>
+<para>This function takes a degree value and converts it into radians by multiplying the degree value with pi (3.14159) divided by 180. The result is then returned as the output.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Deg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The angle in degrees to be converted to radians. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The input angle in radians. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
 <para><ref refid="class_a_g_e_1_1_convert" kindref="compound">Convert</ref> 112deg to radians</para>
@@ -838,7 +2377,7 @@
 <para>112pi/180 = thR</para>
 <para>28pi/45</para>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="160" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="160" bodyend="178"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="406" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="406" bodyend="424"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1a4b9323d98217da145722c80dd1f31c89" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref></type>
@@ -851,8 +2390,35 @@
           <declname>Vec</declname>
         </param>
         <briefdescription>
+<para>Converts degrees to radians for each component of a <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes a <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object as input and returns a new <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object where each component is the original value converted from degrees to radians. The conversion formula used here is: radian = degree * pi / 180.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object containing the values in degrees that need to be converted to radians. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object where each component has been converted from degrees to radians.</para>
+</simplesect>
+Converts degrees to radians for each component of a <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object.</para>
+<para>This function takes a <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object as input and returns a new <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object where each component is the original value converted from degrees to radians. The conversion formula used is: radian = degree * pi / 180.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object containing the values in degrees that need to be converted to radians. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object where each component has been converted from degrees to radians. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
 <para><ref refid="class_a_g_e_1_1_convert" kindref="compound">Convert</ref> 112deg to radians</para>
@@ -861,7 +2427,7 @@
 <para>112pi/180 = thR</para>
 <para>28pi/45</para>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="180" column="16" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="180" bodyend="197"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="444" column="16" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="444" bodyend="461"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1aad0355a4e064ff062cb5be386f15a57e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>float</type>
@@ -874,12 +2440,39 @@
           <declname>Rad</declname>
         </param>
         <briefdescription>
+<para>Converts a given angle from radians to degrees. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes an input in radians and converts it into degrees using the formula (Rad / pi) * 180. The result is then returned as output in degrees.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Rad</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Angle in radians to be converted to degrees. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>float Converted angle in degrees.</para>
+</simplesect>
+Converts an angle from radians to degrees.</para>
+<para>This function takes a float value representing the angle in radians and converts it to degrees. The conversion is done by multiplying the input radian value with 180, then dividing by pi (approximately 3.14159). Note that this function assumes that the input is within the range of a full circle in radians (-pi to +pi), as it does not handle negative values or values greater than 2*pi.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Rad</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The angle in radians to be converted. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>float The corresponding angle in degrees. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="198" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="198" bodyend="215"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="481" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="481" bodyend="498"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1ab1b05a094351f35be9db783622d6f229" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref></type>
@@ -892,12 +2485,38 @@
           <declname>Vec</declname>
         </param>
         <briefdescription>
+<para>Converts radians to degrees for a <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes a <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object as input and returns a new <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object where each component is the equivalent angle in degrees. The conversion formula used here is th / pi * 180, where &apos;th&apos; represents the radian angle.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object representing the angles in radians to be converted to degrees. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object with each component being the equivalent angle in degrees.</para>
+</simplesect>
+Converts a <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object from radians to degrees.</para>
+<para>This function takes a <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object in radians and converts it into degrees by multiplying each component of the vector with 180/pi (the conversion factor). The result is then returned as another <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object representing the same angle but in degrees. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object to be converted from radians to degrees. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object where each component represents the corresponding component of the input vector, now in degrees. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="217" column="16" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="217" bodyend="232"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="516" column="16" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="516" bodyend="531"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1a4a4c24f277585919f2b13b149280b737" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>float</type>
@@ -910,12 +2529,39 @@
           <declname>Deg</declname>
         </param>
         <briefdescription>
+<para>Converts an angle from degrees to radians. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes a float value representing the degree and returns its equivalent in radians. It uses the std::acosf() function, which is expected to return the arc cosine of the input value, converted into radians by dividing it by 180.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Deg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The angle in degrees to be converted. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The angle in radians equivalent to the input degree.</para>
+</simplesect>
+Converts an angle from degrees to radians.</para>
+<para>This function takes a float representing the degree value and returns its equivalent in radians. It uses the std::acosf() function, which is expected to return values between 0 and pi (3.14159), so we divide by 180 to convert from degrees to radians.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Deg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The angle in degrees to be converted. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The equivalent of the input degree value in radians. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="234" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="234" bodyend="237"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="549" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="549" bodyend="552"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1a185f60306f29072bed3db2a60d85a3c7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -940,12 +2586,50 @@
           <declname>Scale</declname>
         </param>
         <briefdescription>
+<para>Decomposes a transformation matrix into translation, rotation and scale components. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes an input transformation matrix and decomposes it into its individual components - translation, rotation and scale. The decomposition is performed using the glm library&apos;s functions for matrix operations. It first isolates perspective by clearing the last column of the matrix, then calculates translation, scale and rotation from the remaining rows.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Transform</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input transformation matrix to be decomposed. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Translation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output parameter where the translation component will be stored. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Rotation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output parameter where the rotation component will be stored in Euler angles (in radians). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output parameter where the scale component will be stored.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if successful, false otherwise. If the input matrix is not invertible or has no perspective, this function returns false. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="239" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="418" bodyend="490"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="554" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Math.cpp" bodystart="917" bodyend="989"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1a708e8298c9e9ecaa375e2d1f7f6df8c1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>float</type>
@@ -958,12 +2642,39 @@
           <declname>a</declname>
         </param>
         <briefdescription>
+<para>Computes the cosine of an angle in radians. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes an input parameter &apos;a&apos; which represents an angle in radians and returns the cosine of that angle. The result is a floating-point number representing the cosine of the input angle.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An angle in radians. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A float value representing the cosine of the input angle.</para>
+</simplesect>
+Computes the cosine of an angle in radians.</para>
+<para>This function takes an input parameter &apos;a&apos; which represents an angle in radians and returns the cosine of that angle. The result is a floating-point number representing the cosine of the input angle.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Angle in radians to compute the cosine for. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Floating point value representing the cosine of &apos;a&apos;. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="242" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="242" bodyend="245"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="575" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="575" bodyend="578"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1a4a7be4a8b94ddc31b2931a82340ad2bf" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>float</type>
@@ -976,12 +2687,39 @@
           <declname>a</declname>
         </param>
         <briefdescription>
+<para>Computes the sine of an angle in radians. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes an input parameter &apos;a&apos; which represents an angle in radians and returns its sine value. The result is computed using the standard C++ library function std::sin().</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Angle in radians to compute the sine of. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Sine of the input angle.</para>
+</simplesect>
+Computes the sine of an angle in radians.</para>
+<para>This function takes an input parameter &apos;a&apos; which represents an angle in radians and returns its sine value. The result is computed using the standard C++ library function std::sin().</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Angle in radians to compute the sine of. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Sine of the input angle. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="247" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="247" bodyend="250"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="598" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="598" bodyend="601"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1a52b336a55eba00240921bf610b1ff7fd" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>float</type>
@@ -994,12 +2732,39 @@
           <declname>a</declname>
         </param>
         <briefdescription>
+<para>Computes the arc cosine of input value. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes in a floating-point number and returns its arc cosine, which is the angle in radians whose cosine is the specified number. The result will be between 0 and pi (inclusive). If the argument is not within the range [-1,1], then NaN is returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Floating-point value for which to compute arc cosine. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Arc cosine of input value in radians.</para>
+</simplesect>
+Computes the arc cosine of a value.</para>
+<para>This function takes in a floating-point number and returns its arc cosine, which is equivalent to the inverse of the standard C++ std::acos() function. The input should be between -1 and 1 (inclusive), as it represents the ratio of the hypotenuse to the side of a right triangle whose angle you want to find. If the input is not within this range, the behavior is undefined.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A floating-point number representing the cosine of an angle in radians.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The arc cosine of &apos;a&apos;, in the range [0, pi]. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="252" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="252" bodyend="255"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="623" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="623" bodyend="626"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1ab82e3b70f23ba40b5b4ee746ceba71e9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>float</type>
@@ -1012,12 +2777,39 @@
           <declname>a</declname>
         </param>
         <briefdescription>
+<para>Calculates the square root of a given number. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes in a single parameter, &apos;a&apos;, which is the number to calculate the square root for. It returns the square root of &apos;a&apos; as a float value. If &apos;a&apos; is negative, it will return NaN (Not a Number).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input number whose square root needs to be calculated. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns the square root of &apos;a&apos;.</para>
+</simplesect>
+Computes the square root of a given number.</para>
+<para>This function takes in a single parameter, &apos;a&apos;, which is the number for which we want to compute the square root. It returns the square root of &apos;a&apos; as a float value. If &apos;a&apos; is negative, it will return NaN (Not a Number).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input number whose square root is to be computed. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns the square root of &apos;a&apos;. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="256" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="256" bodyend="259"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="646" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="646" bodyend="649"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1a334b842dc6966b5c75d6518035147252" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -1039,12 +2831,52 @@
           <declname>b</declname>
         </param>
         <briefdescription>
+<para>This function adds two generic type parameters and returns the result. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first parameter to add. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second parameter to add. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns the sum of &apos;a&apos; and &apos;b&apos;.</para>
+</simplesect>
+This function adds two values of the same type together. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first value to be added. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second value to be added. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The sum of the two input values. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="262" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="262" bodyend="265"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="664" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="664" bodyend="667"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1a28ca26da674f68a2ed1e23173ff3d9de" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -1066,12 +2898,52 @@
           <declname>b</declname>
         </param>
         <briefdescription>
+<para>This function subtracts two values of type T and returns the result. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first value to be subtracted. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second value to be subtracted from the first one. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of the subtraction operation. If the inputs are invalid, it may return an incorrect result or throw an exception.</para>
+</simplesect>
+This function subtracts two values of type T and returns the result. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first value to be subtracted. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second value to be subtracted from the first one. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of the subtraction operation. If the inputs are invalid, it may return an incorrect result or throw an exception. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="267" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="267" bodyend="270"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="681" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="681" bodyend="684"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1ab369e6e3cbdec3067d7bc2bd5d0f2288" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -1093,12 +2965,52 @@
           <declname>b</declname>
         </param>
         <briefdescription>
+<para>This function multiplies two values of type T and returns the result. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first value to multiply. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second value to multiply. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The product of a and b.</para>
+</simplesect>
+This function multiplies two values of type T and returns the result. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first value to multiply. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second value to multiply. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The product of &apos;a&apos; and &apos;b&apos;. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="272" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="272" bodyend="275"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="699" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="699" bodyend="702"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1aabae48f38cebf37299e390d62f6d42a5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -1120,12 +3032,73 @@
           <declname>b</declname>
         </param>
         <briefdescription>
+<para>Performs division operation on two numbers of type T. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes in two parameters of the same type T and returns their quotient when they are divided. If the divisor is zero, it will throw an exception to avoid undefined behavior.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first number of type T for division operation. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second number of type T for division operation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns the result of the division operation on two numbers. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>std::invalid_argument</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if divisor is zero to avoid undefined behavior.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Performs division operation on two numbers of type T.</para>
+<para>This function takes two parameters of the same type T and returns their quotient when they are divided. If the divisor is zero, it will throw an exception to avoid undefined behavior.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first number of type T. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second number of type T. It should not be zero to prevent division by zero. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns the quotient when &apos;a&apos; and &apos;b&apos; are divided. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>std::invalid_argument</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If &apos;b&apos; is zero. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="277" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="277" bodyend="280"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="724" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="724" bodyend="727"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1ae552635f7612af258fdd92c015009e9d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -1142,12 +3115,53 @@
           <declname>b</declname>
         </param>
         <briefdescription>
+<para>Computes the modulus of two numbers using fmod function from cmath library. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first number in the operation. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second number in the operation. Must be non-zero to avoid division by zero.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns the remainder of the division of &apos;a&apos; by &apos;b&apos;. If &apos;b&apos; is zero, returns NaN (Not a Number).</para>
+</simplesect>
+Computes the modulus of two numbers using the fmod function from cmath.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first number. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second number. Must not be zero to avoid division by zero.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The remainder of the division of &apos;a&apos; by &apos;b&apos;. If &apos;b&apos; is zero, returns NaN (not a number). </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="282" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="282" bodyend="285"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="745" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="745" bodyend="748"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1ac87d2dfd3e3fde4d2e78e53372c28eee" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>float</type>
@@ -1165,12 +3179,55 @@
           <defval>2.f</defval>
         </param>
         <briefdescription>
+<para>Computes the power of a number. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes two parameters and returns the result of raising the first parameter to the power of the second. If no exponent is provided, it defaults to 2.0.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base number. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The exponent. Defaults to 2.0 if not specified. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns the result of raising &apos;a&apos; to the power of &apos;b&apos;.</para>
+</simplesect>
+Computes the power of a number.</para>
+<para>This function takes two parameters and returns the result of raising the first parameter to the power of the second. If no exponent is provided (i.e., it defaults to 2), then the function behaves as if the exponent was 2.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base number. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The exponent. Defaults to 2. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns the result of raising &apos;a&apos; to the power of &apos;b&apos;. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="287" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="287" bodyend="290"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="770" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="770" bodyend="773"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_math_1a50fe873db4ce25d6640cea6216b0ecc0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>float</type>
@@ -1183,19 +3240,46 @@
           <declname>a</declname>
         </param>
         <briefdescription>
+<para>Calculates the cube root of a number. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes in a single parameter, &apos;a&apos;, and returns its cube root using the standard library&apos;s <computeroutput>std::cbrtf</computeroutput> function. The input should be greater than or equal to zero; attempting to calculate the cube root of negative numbers will result in undefined behavior.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A float number for which we want to find its cube root. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns the cube root of &apos;a&apos;.</para>
+</simplesect>
+Calculates the cube root of a number.</para>
+<para>This function takes in a floating-point number and returns its cube root value. It uses the standard library function std::cbrtf to calculate the cube root.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input floating-point number for which we want to find the cube root. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns the cube root of the input number &apos;a&apos;. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="292" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="292" bodyend="295"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="792" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="792" bodyend="795"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="14" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="15" bodyend="297"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" line="14" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Math.h" bodystart="15" bodyend="797"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_math_1a52b336a55eba00240921bf610b1ff7fd" prot="public" virt="non-virtual"><scope>AGE::Math</scope><name>ACos</name></member>
       <member refid="class_a_g_e_1_1_math_1a334b842dc6966b5c75d6518035147252" prot="public" virt="non-virtual"><scope>AGE::Math</scope><name>Add</name></member>

@@ -20,7 +20,7 @@
 
 namespace AGE
 {
-    tmx_map* TileMapImporter::ImportMap(const std::string& FilePath)
+tmx_map* TileMapImporter::ImportMap(const std::string& FilePath)
     {
         if (FilePath == "")
         {

@@ -77,6 +77,10 @@
               
                 <h1 id="class-agemousebuttonreleasedevent">Class AGE::MouseButtonReleasedEvent</h1>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespace_a_g_e/"><strong>AGE</strong></a> <strong>&gt;</strong> <a href="./"><strong>MouseButtonReleasedEvent</strong></a></p>
+<p><em>Represents a mouse button released event.</em> <a href="#detailed-description">More...</a></p>
+<ul>
+<li><code>#include &lt;MouseEvent.h&gt;</code></li>
+</ul>
 <p>Inherits the following classes: <a href="../class_a_g_e_1_1_mouse_event/">AGE::MouseEvent</a></p>
 <h2 id="public-attributes-inherited-from-ageevent">Public Attributes inherited from AGE::Event</h2>
 <p>See <a href="../class_a_g_e_1_1_event/">AGE::Event</a></p>
@@ -109,7 +113,7 @@
 </tr>
 <tr>
 <td style="text-align: right;">virtual std::string</td>
-<td style="text-align: left;"><a href="#function-tostring"><strong>ToString</strong></a> () override const<br></td>
+<td style="text-align: left;"><a href="#function-tostring"><strong>ToString</strong></a> () override const<br><em>Converts the event to a string representation.</em></td>
 </tr>
 </tbody>
 </table>
@@ -153,11 +157,11 @@
 </tr>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-isincategory"><strong>IsInCategory</strong></a> (EventCategory Category) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-isincategory"><strong>IsInCategory</strong></a> (EventCategory Category) <br><em>Checks if an event is in a specific category.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual std::string</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-tostring"><strong>ToString</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-tostring"><strong>ToString</strong></a> () const<br><em>Returns a string representation of the object.</em></td>
 </tr>
 </tbody>
 </table>
@@ -209,14 +213,18 @@
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_mouse_event/#function-mouseevent-23"><strong>MouseEvent</strong></a> (float x, float y) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_mouse_event/#function-mouseevent-23"><strong>MouseEvent</strong></a> (float x, float y) <br><em>Constructs a</em> <a href="../class_a_g_e_1_1_mouse_event/"><em><strong>MouseEvent</strong></em></a> <em>object with the given coordinates.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_mouse_event/#function-mouseevent-33"><strong>MouseEvent</strong></a> (float xOffset, float yOffset, bool Scrolled) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_mouse_event/#function-mouseevent-33"><strong>MouseEvent</strong></a> (float xOffset, float yOffset, bool Scrolled) <br><em>Constructs a</em> <a href="../class_a_g_e_1_1_mouse_event/"><em><strong>MouseEvent</strong></em></a> <em>object with given offsets.</em></td>
 </tr>
 </tbody>
 </table>
+<h2 id="detailed-description">Detailed Description</h2>
+<p>This class inherits from the <a href="../class_a_g_e_1_1_mouse_event/"><strong>MouseEvent</strong></a> base class and is used to represent a specific type of event, which is a mouse button being released. The constructor takes an integer parameter representing the button that was released. The <a href="./#function-tostring"><strong>ToString()</strong></a> method overrides the base class's pure virtual method and returns a string representation of this event.</p>
+<p>Represents a mouse button release event.</p>
+<p>This class represents a specific type of mouse event where a button is released. It includes details about the button that was released. </p>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-mousebuttonreleasedevent">function MouseButtonReleasedEvent</h3>
 <pre><code class="language-C++">inline AGE::MouseButtonReleasedEvent::MouseButtonReleasedEvent (
@@ -226,8 +234,16 @@
 <hr>
 
 <h3 id="function-tostring">function ToString</h3>
+<p><em>Converts the event to a string representation.</em> </p>
 <pre><code class="language-C++">inline virtual std::string AGE::MouseButtonReleasedEvent::ToString () override const
 </code></pre>
+<p>This function converts the <a href="./"><strong>MouseButtonReleasedEvent</strong></a> into a human-readable string format. It includes details about the button that was released.</p>
+<p><strong>Returns:</strong></p>
+<p>A string containing the event type and the button that was released.</p>
+<p>Converts the event to a string representation.</p>
+<p>This function converts the <a href="./"><strong>MouseButtonReleasedEvent</strong></a> into a human-readable format by appending the button that was released. The resulting string is returned as output of this method.</p>
+<p><strong>Returns:</strong></p>
+<p>A string containing the details about the mouse button release event. </p>
 <p>Implements <a href="../class_a_g_e_1_1_event/#function-tostring"><em>AGE::Event::ToString</em></a></p>
 <hr>
 

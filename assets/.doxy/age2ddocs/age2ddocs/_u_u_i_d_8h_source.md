@@ -22,10 +22,10 @@ namespace AGE
     public:
         UUID();
         UUID(uint64_t uuid);
-        UUID(const UUID&) = default;
+UUID(const UUID&) = default;
 
 
-        operator uint64_t() const { return m_UUID; }
+operator uint64_t() const { return m_UUID; }
 
     private:
 
@@ -39,7 +39,7 @@ namespace std
     template<>
     struct hash<AGE::UUID>
     {
-        std::size_t operator()(const AGE::UUID& uuid) const noexcept
+std::size_t operator()(const AGE::UUID& uuid) const noexcept
         {
             return hash<uint64_t>()((uint64_t)uuid);
         }

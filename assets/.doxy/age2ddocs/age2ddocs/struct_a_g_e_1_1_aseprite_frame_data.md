@@ -64,8 +64,8 @@
 
 | Type | Name |
 | ---: | :--- |
-|   | [**AsepriteFrameData**](#function-asepriteframedata-12) () = default<br> |
-|   | [**AsepriteFrameData**](#function-asepriteframedata-22) (const [**AsepriteFrameData**](struct_a_g_e_1_1_aseprite_frame_data.md) &) = default<br> |
+|   | [**AsepriteFrameData**](#function-asepriteframedata-12) () = default<br>_Default constructor for_ [_**AsepriteFrameData**_](struct_a_g_e_1_1_aseprite_frame_data.md) _class._ |
+|   | [**AsepriteFrameData**](#function-asepriteframedata-22) (const [**AsepriteFrameData**](struct_a_g_e_1_1_aseprite_frame_data.md) &) = default<br>_Default copy constructor for the_ [_**AsepriteFrameData**_](struct_a_g_e_1_1_aseprite_frame_data.md) _class._ |
 
 
 
@@ -220,6 +220,7 @@ std::vector<AsepriteOldPaletteChunk> AGE::AsepriteFrameData::OldPaletteChunks;
 
 ### function AsepriteFrameData [1/2]
 
+_Default constructor for_ [_**AsepriteFrameData**_](struct_a_g_e_1_1_aseprite_frame_data.md) _class._
 ```C++
 AGE::AsepriteFrameData::AsepriteFrameData () = default
 ```
@@ -233,6 +234,7 @@ AGE::AsepriteFrameData::AsepriteFrameData () = default
 
 ### function AsepriteFrameData [2/2]
 
+_Default copy constructor for the_ [_**AsepriteFrameData**_](struct_a_g_e_1_1_aseprite_frame_data.md) _class._
 ```C++
 AGE::AsepriteFrameData::AsepriteFrameData (
     const AsepriteFrameData &
@@ -241,6 +243,20 @@ AGE::AsepriteFrameData::AsepriteFrameData (
 
 
 
+This function is used to create a new instance of [**AsepriteFrameData**](struct_a_g_e_1_1_aseprite_frame_data.md) by copying an existing one. It uses the '= default' syntax, which instructs the compiler to generate a default implementation for this member function.
+
+
+
+
+**Parameters:**
+
+
+* `other` The existing [**AsepriteFrameData**](struct_a_g_e_1_1_aseprite_frame_data.md) instance to copy. 
+
+
+
+
+        
 
 <hr>
 

@@ -18,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" line="53" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" bodystart="53" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" line="57" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" bodystart="57" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -29,12 +29,16 @@
         <name>Init</name>
         <qualifiedname>AGE::Renderer2D::Init</qualifiedname>
         <briefdescription>
+<para>Initializes the <ref refid="class_a_g_e_1_1_renderer2_d" kindref="compound">Renderer2D</ref> object. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is used to initialize the <ref refid="class_a_g_e_1_1_renderer2_d" kindref="compound">Renderer2D</ref> object, setting it up for rendering operations. It does not take any parameters and returns void.</para>
+<para>Initializes the <ref refid="class_a_g_e_1_1_renderer2_d" kindref="compound">Renderer2D</ref> object.</para>
+<para>This function is used to initialize the <ref refid="class_a_g_e_1_1_renderer2_d" kindref="compound">Renderer2D</ref> object, setting it up for rendering operations. It does not take any parameters and returns void. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" line="17" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer2D.cpp" bodystart="46" bodyend="49"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" line="17" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer2D.cpp" bodystart="56" bodyend="59"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_renderer2_d_1af0800113102438fd0328cd2042c182f1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -43,12 +47,21 @@
         <name>Shutdown</name>
         <qualifiedname>AGE::Renderer2D::Shutdown</qualifiedname>
         <briefdescription>
+<para>Shuts down the <ref refid="class_a_g_e_1_1_renderer2_d" kindref="compound">Renderer2D</ref> instance. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is used to clean up any resources that were allocated during initialization of the <ref refid="class_a_g_e_1_1_renderer2_d" kindref="compound">Renderer2D</ref> instance, such as freeing GPU memory or closing open graphics contexts. It also resets all internal state so a new call to Initialize() will start with an empty slate.</para>
+<para><simplesect kind="return"><para>void</para>
+</simplesect>
+Shuts down the <ref refid="class_a_g_e_1_1_renderer2_d" kindref="compound">Renderer2D</ref> instance.</para>
+<para>This function is used to clean up any resources that were allocated during initialization of the <ref refid="class_a_g_e_1_1_renderer2_d" kindref="compound">Renderer2D</ref> object, such as freeing GPU memory or closing open graphics contexts. It also resets all internal state so a new call to Initialize() will start with a fresh slate.</para>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" line="19" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer2D.cpp" bodystart="52" bodyend="55"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" line="19" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer2D.cpp" bodystart="76" bodyend="79"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_renderer2_d_1a2a90df58785285da258f35f8f50bb221" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -65,12 +78,51 @@
           <declname>Transform</declname>
         </param>
         <briefdescription>
+<para>Begins a 2D scene with the specified camera and transformation. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function starts a new batch for rendering 2D objects, using the provided camera and transformation matrix. The camera is used to calculate the view-projection matrix that will be applied during rendering.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_a_g_e_1_1_camera" kindref="compound">Camera</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A const reference to the camera object representing the current scene&apos;s viewpoint. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Transform</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A const reference to a <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> object representing any additional transformations to apply to this batch of objects.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Begins a 2D scene with the specified camera and transformation.</para>
+<para>This function starts a new batch for rendering 2D objects using the provided camera and transformation matrix. The camera is used to calculate the view-projection matrix, which is then passed to the graphics pipeline.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_a_g_e_1_1_camera" kindref="compound">Camera</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A const reference to the camera object representing the current scene&apos;s viewpoint. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Transform</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A const reference to a <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> object representing the transformation of the objects in the scene. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" line="21" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer2D.cpp" bodystart="57" bodyend="61"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" line="21" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer2D.cpp" bodystart="97" bodyend="101"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_renderer2_d_1a10d0968ee953fe240fa89fd667d1ce5a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -83,12 +135,37 @@
           <declname>Camera</declname>
         </param>
         <briefdescription>
+<para>Begin a 2D scene with the given camera. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function begins a new 2D scene using the provided <ref refid="class_a_g_e_1_1_editor_camera" kindref="compound">EditorCamera</ref>. It calculates the <ref refid="class_a_g_e_1_1_world" kindref="compound">World</ref> View Projection Matrix (WVPM) based on the camera&apos;s projection, view matrix and world matrix. The WVPM is then set as the CameraUniformBuffer data. Finally, it starts a batch for rendering 2D objects.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_a_g_e_1_1_camera" kindref="compound">Camera</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_a_g_e_1_1_editor_camera" kindref="compound">EditorCamera</ref> to use for this scene.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Begins a 2D scene with the provided camera.</para>
+<para>This function sets up the necessary data for rendering 2D graphics using the given camera. It calculates the <ref refid="class_a_g_e_1_1_world" kindref="compound">World</ref> View Projection Matrix (WVPM) based on the camera&apos;s projection, view matrix and world matrix. The WVPM is then set as a uniform buffer in the graphics pipeline. Finally, it starts a new batch of 2D rendering commands.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_a_g_e_1_1_camera" kindref="compound">Camera</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to an <ref refid="class_a_g_e_1_1_editor_camera" kindref="compound">EditorCamera</ref> object representing the camera for the scene.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" line="22" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer2D.cpp" bodystart="62" bodyend="69"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" line="22" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer2D.cpp" bodystart="118" bodyend="125"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_renderer2_d_1ae17c6433407ea3116fbd1bb034d2aad3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -97,12 +174,19 @@
         <name>EndScene</name>
         <qualifiedname>AGE::Renderer2D::EndScene</qualifiedname>
         <briefdescription>
+<para>This function is used to end the current scene rendering in a 2D context. It calls the Flush2D method of the currently active GraphicsPipeline object, which should handle any remaining rendering tasks for this frame. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>void</para>
+</simplesect>
+This function is used to end the current rendering scene. It flushes all pending draw calls in the 2D graphics pipeline.</para>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" line="24" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer2D.cpp" bodystart="70" bodyend="75"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" line="24" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer2D.cpp" bodystart="138" bodyend="143"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_renderer2_d_1a68eecd13635f768d442234d46653f419" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -111,35 +195,66 @@
         <name>Flush</name>
         <qualifiedname>AGE::Renderer2D::Flush</qualifiedname>
         <briefdescription>
+<para>This function flushes the 2D rendering pipeline. </para>
         </briefdescription>
         <detaileddescription>
+<para>The <ref refid="class_a_g_e_1_1_render_command" kindref="compound">RenderCommand</ref> class&apos; s_GraphicsPipeline member is accessed and its Flush2D() method is called to flush all pending draw calls in the 2D graphics pipeline.</para>
+<para><simplesect kind="return"><para>void No return value.</para>
+</simplesect>
+This function flushes the 2D graphics pipeline. It ensures all pending draw calls are executed and completed before any new ones can begin.</para>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" line="26" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer2D.cpp" bodystart="76" bodyend="79"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" line="26" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer2D.cpp" bodystart="156" bodyend="159"/>
       </memberdef>
-      <memberdef kind="function" id="class_a_g_e_1_1_renderer2_d_1aaa458aa9bd21774c8acbfd1835b4d31f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_a_g_e_1_1_renderer2_d_1a012305ca47d628775a684d8bf730415f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void AGE::Renderer2D::DrawQuad</definition>
-        <argsstring>(const QuadProperties &amp;Props)</argsstring>
+        <argsstring>(const QuadProperties Props)</argsstring>
         <name>DrawQuad</name>
         <qualifiedname>AGE::Renderer2D::DrawQuad</qualifiedname>
         <param>
-          <type>const <ref refid="struct_a_g_e_1_1_quad_properties" kindref="compound">QuadProperties</ref> &amp;</type>
+          <type>const <ref refid="struct_a_g_e_1_1_quad_properties" kindref="compound">QuadProperties</ref></type>
           <declname>Props</declname>
         </param>
         <briefdescription>
+<para>Draw a quadrilateral with the specified properties. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function draws a quadrilateral on the screen using the provided <ref refid="struct_a_g_e_1_1_quad_properties" kindref="compound">QuadProperties</ref> object. The quad is drawn in the current graphics pipeline and its vertices are added to the vertex buffer if there&apos;s enough space. If not, it calls <computeroutput>NextBatch2D</computeroutput> to start a new batch.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Props</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A structure containing properties of the quadrilateral such as color, size, transformation matrix, texture coordinates, tiling factor and entity ID.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Draw a quadrilateral with the specified properties.</para>
+<para>This function draws a quadrilateral on the screen using the provided <ref refid="struct_a_g_e_1_1_quad_properties" kindref="compound">QuadProperties</ref> object. It checks if there are enough indices to draw another quad, and if not, it calls RenderCommand::s_GraphicsPipeline-&gt;NextBatch2D() to start a new batch. Then it creates a quad with the specified properties and increments the index count by 6. Finally, it updates the stats for quads drawn.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Props</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_quad_properties" kindref="compound">QuadProperties</ref> object containing all the information about the quad to be drawn. This includes color, size, transformation matrix, texture coordinates, tiling factor, and entity ID. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" line="31" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer2D.cpp" bodystart="81" bodyend="91"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" line="31" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer2D.cpp" bodystart="175" bodyend="185"/>
       </memberdef>
-      <memberdef kind="function" id="class_a_g_e_1_1_renderer2_d_1ada453fafca1809a7ca1be4faadd02fde" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_a_g_e_1_1_renderer2_d_1a53d0c5d97e15407a5a008aa0f1171b5d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void AGE::Renderer2D::DrawQuad</definition>
-        <argsstring>(const Ref&lt; Texture2D &gt; &amp;Texture, const QuadProperties &amp;Props)</argsstring>
+        <argsstring>(const Ref&lt; Texture2D &gt; &amp;Texture, const QuadProperties Props)</argsstring>
         <name>DrawQuad</name>
         <qualifiedname>AGE::Renderer2D::DrawQuad</qualifiedname>
         <param>
@@ -147,21 +262,47 @@
           <declname>Texture</declname>
         </param>
         <param>
-          <type>const <ref refid="struct_a_g_e_1_1_quad_properties" kindref="compound">QuadProperties</ref> &amp;</type>
+          <type>const <ref refid="struct_a_g_e_1_1_quad_properties" kindref="compound">QuadProperties</ref></type>
           <declname>Props</declname>
         </param>
         <briefdescription>
+<para>Draw a quad with the given properties and texture.<linebreak/>
+ * <linebreak/>
+ * This function is used to draw a single quad in the 2D graphics pipeline. It takes as input the texture, quad properties (color, size, transform, texture coordinates, tiling factor, entity ID), and it updates the vertex buffer accordingly. If the current batch of quads exceeds the maximum index count, it will start a new batch.<linebreak/>
+ * <linebreak/>
+ *. </para>
         </briefdescription>
         <detaileddescription>
+<para><linebreak/>
+ *<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_a_g_e_1_1_texture" kindref="compound">Texture</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The reference to the texture that should be used for rendering this quad.<linebreak/>
+ *</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Props</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A structure containing all properties necessary for rendering (tint color, size, transform, texture coordinates, tiling factor, entity ID).<linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" line="32" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer2D.cpp" bodystart="92" bodyend="122"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" line="32" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer2D.cpp" bodystart="188" bodyend="218"/>
       </memberdef>
-      <memberdef kind="function" id="class_a_g_e_1_1_renderer2_d_1aaf143553d6ec9a6afafe79d71a93b9ef" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_a_g_e_1_1_renderer2_d_1a4c12040a47848620eb583328223cd703" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void AGE::Renderer2D::DrawQuad</definition>
-        <argsstring>(const Ref&lt; SubTexture2D &gt; &amp;Subtexture, const QuadProperties &amp;Props)</argsstring>
+        <argsstring>(const Ref&lt; SubTexture2D &gt; &amp;Subtexture, const QuadProperties Props)</argsstring>
         <name>DrawQuad</name>
         <qualifiedname>AGE::Renderer2D::DrawQuad</qualifiedname>
         <param>
@@ -169,16 +310,38 @@
           <declname>Subtexture</declname>
         </param>
         <param>
-          <type>const <ref refid="struct_a_g_e_1_1_quad_properties" kindref="compound">QuadProperties</ref> &amp;</type>
+          <type>const <ref refid="struct_a_g_e_1_1_quad_properties" kindref="compound">QuadProperties</ref></type>
           <declname>Props</declname>
         </param>
         <briefdescription>
+<para>Draw a quad using the provided properties and subtexture. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is used to draw a single quad in 2D space. It takes a reference to a <ref refid="class_a_g_e_1_1_sub_texture2_d" kindref="compound">SubTexture2D</ref>, which contains information about the texture of the quad, as well as a <ref refid="struct_a_g_e_1_1_quad_properties" kindref="compound">QuadProperties</ref> struct that holds various properties related to the quad, such as its color, size, transformation matrix, texture coordinates, tiling factor and entity ID.</para>
+<para>The function first checks if there are enough indices in the current batch for another quad. If not, it calls RenderCommand::s_GraphicsPipeline-&gt;NextBatch2D() to start a new batch. It then retrieves the texture from the subtexture and checks if it is already bound (i.e., its pointer exists within the TextureSlots array).</para>
+<para>If the texture is not yet bound, it binds it by incrementing the TextureSlotIndex and adding a new entry to the TextureSlots array. It then creates a quad in the vertex buffer using RenderCommand::s_GraphicsPipeline-&gt;GetData().VertexBuffers[&quot;Quad&quot;]-&gt;CreateQuad(), increments QuadIndexCount by 6 (since each quad is made up of two triangles, thus 6 indices), and increases the QuadCount statistic.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Subtexture</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to a <ref refid="class_a_g_e_1_1_sub_texture2_d" kindref="compound">SubTexture2D</ref> object containing information about the texture of the quad. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Props</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A struct containing various properties related to the quad, such as its color, size, transformation matrix, texture coordinates, tiling factor and entity ID. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" line="33" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer2D.cpp" bodystart="123" bodyend="154"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" line="33" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer2D.cpp" bodystart="232" bodyend="263"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_renderer2_d_1a31919025935062a347fe8dacbb67a04a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -210,12 +373,56 @@
           <defval>-1</defval>
         </param>
         <briefdescription>
+<para>Draw a circle on the screen using the provided parameters. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is used to draw a circle on the screen with the given transform, color, thickness, fade and entity ID. The function first checks if there are enough indices in the buffer for another circle. If not, it calls <computeroutput>NextBatch()</computeroutput> to create a new batch. Then, it creates a circle using the provided parameters and increments the index count and circle count stats.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Transform</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The transformation matrix of the circle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The color of the circle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Thickness</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The thickness of the circle&apos;s outline. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Fade</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The fade value for the circle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>EntityID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the entity associated with the circle. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" line="36" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer2D.cpp" bodystart="155" bodyend="170"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" line="36" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer2D.cpp" bodystart="276" bodyend="291"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_renderer2_d_1a9df1cde7dc08144e3fccd04838b42193" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -241,12 +448,85 @@
           <defval>-1</defval>
         </param>
         <briefdescription>
+<para>Draw a line in the 3D scene. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is used to draw a line segment in the 3D scene with a specified color and positions. The line is drawn between two points, Pos0 and Pos1. The color of the line can be customized by passing a <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> representing the RGBA values. The EntityID parameter allows for identification of which entity (if any) this line corresponds to.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Pos0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A constant reference to a <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> representing the start point of the line segment. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Pos1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A constant reference to a <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> representing the end point of the line segment. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A constant reference to a <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> representing the RGBA color values for the line. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>EntityID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An integer value that represents the ID of the entity associated with this line (if any).</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void</para>
+</simplesect>
+Draw a line in the 3D scene.</para>
+<para>This function is used to draw a line segment in the 3D scene with a specified color and positions. The line will be drawn between two points, Pos0 and Pos1. The color of the line can also be specified using the Color parameter. The EntityID provides an identifier for the entity associated with this line.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Pos0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The starting position of the line segment. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Pos1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ending position of the line segment. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The RGBA color of the line segment. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>EntityID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An identifier for the entity associated with this line. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" line="38" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer2D.cpp" bodystart="172" bodyend="177"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" line="38" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer2D.cpp" bodystart="316" bodyend="321"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_renderer2_d_1a51e763f47b45c44feb711ba01646fd21" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -272,12 +552,87 @@
           <defval>-1</defval>
         </param>
         <briefdescription>
+<para>Draws a 2D rectangle on the screen. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes in a position, size and color to draw a rectangle on the screen. The rectangle is defined by four lines - two horizontal and two vertical.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The center of the rectangle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The width and height of the rectangle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The color of the rectangle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>EntityID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An identifier for the entity associated with this rectangle.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void</para>
+</simplesect>
+Draws a 2D rectangle on the screen.</para>
+<para>This function takes in a position, size and color to draw a rectangle on the screen. The rectangle is defined by four lines forming a quadrilateral.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The center position of the rectangle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The width and height of the rectangle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The color of the rectangle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>EntityID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An identifier for the entity associated with this rectangle.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" line="39" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer2D.cpp" bodystart="179" bodyend="190"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" line="39" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer2D.cpp" bodystart="347" bodyend="358"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_renderer2_d_1ac608160a32811afe28ae1b6c6c606b80" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -299,12 +654,71 @@
           <defval>-1</defval>
         </param>
         <briefdescription>
+<para>Draws a 2D rectangle using lines. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes in a transformation matrix, color and entity ID as parameters to draw a 2D rectangle on the screen. The transformation matrix is used to transform the vertices of the rectangle into world space. The color specifies the color of the rectangle and the entity ID can be used for further processing or identification of the drawn object.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Transform</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A constant reference to a <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> object representing the transformation matrix. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A constant reference to a <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object representing the color of the rectangle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>EntityID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An integer representing the entity ID of the drawn object.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void</para>
+</simplesect>
+Draws a 2D rectangle using lines.</para>
+<para>This function takes in a transformation matrix, color and entity ID as parameters to draw a 2D rectangle on the screen. The transformation matrix is used to transform the vertices of the rectangle into their corresponding positions on the screen. The color specifies the color of the rectangle and the entity ID can be used for any purpose such as debugging or identification purposes.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Transform</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A constant reference to a <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> object representing the transformation matrix. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A constant reference to a <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object representing the color of the rectangle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>EntityID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An integer representing the entity ID.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" line="40" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer2D.cpp" bodystart="192" bodyend="205"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" line="40" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer2D.cpp" bodystart="382" bodyend="395"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_renderer2_d_1a2983e540f292654c5cbd2dc0799da0a1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -317,12 +731,60 @@
           <declname>SRC</declname>
         </param>
         <briefdescription>
+<para>Draws a 2D sprite based on the <ref refid="struct_a_g_e_1_1_sprite_renderer_component" kindref="compound">SpriteRendererComponent</ref> provided. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function checks if there is a texture or animation textures in the component and draws accordingly. If neither are present, it draws a quad with no texture.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>SRC</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to the <ref refid="struct_a_g_e_1_1_sprite_renderer_component" kindref="compound">SpriteRendererComponent</ref> that contains all necessary information for drawing the sprite.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Draws a 2D sprite based on the <ref refid="struct_a_g_e_1_1_sprite_renderer_component" kindref="compound">SpriteRendererComponent</ref> provided.</para>
+<para>The function checks if there is a <ref refid="class_a_g_e_1_1_texture" kindref="compound">Texture</ref> or SubTexture in the <ref refid="struct_a_g_e_1_1_sprite_renderer_component" kindref="compound">SpriteRendererComponent</ref>, and then calls the appropriate drawing functions accordingly. If neither are present, it draws a quad with no texture. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" line="42" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer2D.cpp" bodystart="207" bodyend="231"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" line="42" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer2D.cpp" bodystart="409" bodyend="433"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_g_e_1_1_renderer2_d_1a75a1017ea7a876ea86eceab42a95b923" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Renderer2D::DrawTile</definition>
+        <argsstring>(const SpriteRendererComponent &amp;SRC)</argsstring>
+        <name>DrawTile</name>
+        <qualifiedname>AGE::Renderer2D::DrawTile</qualifiedname>
+        <param>
+          <type>const <ref refid="struct_a_g_e_1_1_sprite_renderer_component" kindref="compound">SpriteRendererComponent</ref> &amp;</type>
+          <declname>SRC</declname>
+        </param>
+        <briefdescription>
+<para>Draws a single tile using the <ref refid="struct_a_g_e_1_1_sprite_renderer_component" kindref="compound">SpriteRendererComponent</ref> data.<linebreak/>
+ * <linebreak/>
+ * This function updates necessary buffers and statistics as needed, based on the details provided by the <ref refid="struct_a_g_e_1_1_sprite_renderer_component" kindref="compound">SpriteRendererComponent</ref>.<linebreak/>
+ * <linebreak/>
+ *. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><linebreak/>
+ *<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>SRC</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_sprite_renderer_component" kindref="compound">SpriteRendererComponent</ref> containing all the information about the tile to be drawn.<linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" line="43" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer2D.cpp" bodystart="436" bodyend="469"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_renderer2_d_1ad74bb4897cd9f9f90c537c0bde290a5b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -340,35 +802,63 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" line="43" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer2D.cpp" bodystart="232" bodyend="345"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" line="44" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer2D.cpp" bodystart="472" bodyend="585"/>
       </memberdef>
-      <memberdef kind="function" id="class_a_g_e_1_1_renderer2_d_1a83308145902985457094cad522375af9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_a_g_e_1_1_renderer2_d_1a5b1ed064e9b6c70be44de240368c9bd4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void AGE::Renderer2D::DrawTileMap</definition>
-        <argsstring>(const Ref&lt; Tilemap &gt; &amp;Map, const TilemapProperties &amp;Props)</argsstring>
-        <name>DrawTileMap</name>
-        <qualifiedname>AGE::Renderer2D::DrawTileMap</qualifiedname>
+        <definition>cpp void AGE::Renderer2D::DrawTileMapLayers</definition>
+        <argsstring>(TileMapRendererComponent &amp;TMRC, tmx_map *Map, std::vector&lt; tmx_layer * &gt; layers)</argsstring>
+        <name>DrawTileMapLayers</name>
+        <qualifiedname>AGE::Renderer2D::DrawTileMapLayers</qualifiedname>
         <param>
-          <type>const Ref&lt; <ref refid="class_a_g_e_1_1_tilemap" kindref="compound">Tilemap</ref> &gt; &amp;</type>
+          <type><ref refid="struct_a_g_e_1_1_tile_map_renderer_component" kindref="compound">TileMapRendererComponent</ref> &amp;</type>
+          <declname>TMRC</declname>
+        </param>
+        <param>
+          <type>tmx_map *</type>
           <declname>Map</declname>
         </param>
         <param>
-          <type>const <ref refid="struct_a_g_e_1_1_tilemap_properties" kindref="compound">TilemapProperties</ref> &amp;</type>
-          <declname>Props</declname>
+          <type>std::vector&lt; tmx_layer * &gt;</type>
+          <declname>layers</declname>
         </param>
         <briefdescription>
+<para>Draws a tile map layer using the provided <ref refid="struct_a_g_e_1_1_tile_map_renderer_component" kindref="compound">TileMapRendererComponent</ref>, tmx_map and vector of tmx_layer objects. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function prepares buffers for rendering tiles by creating index buffer, vertex array, and vertex buffers. It also sets up their layouts and pushes them into respective vectors in the graphics pipeline data structure. The function then iterates over the layers in reverse order to ensure correct drawing order (back-to-front).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>TMRC</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to a <ref refid="struct_a_g_e_1_1_tile_map_renderer_component" kindref="compound">TileMapRendererComponent</ref> object that holds rendering related information. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Map</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to a tmx_map object representing the tile map. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>layers</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of pointers to tmx_layer objects representing different layers in the tile map.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
-<para>(BasePos[0].z + (float)l) - 10.f</para>
-<para>(BasePos[1].z + (float)l) - 10.f</para>
-<para>(BasePos[2].z + (float)l) - 10.f</para>
-<para>(BasePos[3].z + (float)l) - 10.f</para>
-<para>(BasePos[4].z + (float)l) - 10.f</para>
-<para>(BasePos[5].z + (float)l) - 10.f</para>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" line="45" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer2D.cpp" bodystart="347" bodyend="393"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" line="46" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer2D.cpp" bodystart="600" bodyend="666"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_renderer2_d_1ad7e12797c9383619547082dc5f017382" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="struct_a_g_e_1_1_statistics" kindref="compound">Statistics</ref></type>
@@ -377,12 +867,21 @@
         <name>GetStats</name>
         <qualifiedname>AGE::Renderer2D::GetStats</qualifiedname>
         <briefdescription>
+<para>Get the statistics of the 2D renderer. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function retrieves and returns the current statistics of the 2D renderer, including rendering time, draw calls, etc.</para>
+<para><simplesect kind="return"><para>A <ref refid="struct_a_g_e_1_1_statistics" kindref="compound">Statistics</ref> object containing the current stats of the 2D renderer.</para>
+</simplesect>
+Get the statistics of the 2D renderer.</para>
+<para>This function retrieves and returns the current statistics of the 2D renderer, including information about rendering performance such as draw calls, vertices, etc.</para>
+<para><simplesect kind="return"><para>A <ref refid="struct_a_g_e_1_1_statistics" kindref="compound">Statistics</ref> object containing the current stats of the 2D renderer. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" line="47" column="19" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer2D.cpp" bodystart="395" bodyend="398"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" line="48" column="19" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer2D.cpp" bodystart="791" bodyend="794"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_renderer2_d_1a71d66bc360872f8576377ba0b8c648d0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -391,12 +890,19 @@
         <name>GetLineWidth</name>
         <qualifiedname>AGE::Renderer2D::GetLineWidth</qualifiedname>
         <briefdescription>
+<para>This function returns the current line width. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>A float representing the current line width.</para>
+</simplesect>
+This function returns the current line width.</para>
+<para><simplesect kind="return"><para>float The current line width as defined in the graphics pipeline data. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" line="49" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer2D.cpp" bodystart="399" bodyend="402"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" line="50" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer2D.cpp" bodystart="804" bodyend="807"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_renderer2_d_1a0bc2313429b713514964df8ddb1f659a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -409,33 +915,90 @@
           <declname>Width</declname>
         </param>
         <briefdescription>
+<para>Set the line width for rendering. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function sets the line width used in rendering operations. The actual effect may vary depending on the specific renderer and its configuration.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new line width to be set. Must be a positive value.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Set the line width for rendering.</para>
+<para>This function sets the line width used in rendering operations. The actual effect may vary depending on the specific renderer and its configuration.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new line width to be set. Must be a positive value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" line="51" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer2D.cpp" bodystart="822" bodyend="825"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_a_g_e_1_1_renderer2_d_1a9fb2bb13a417c37f19cae2f71cbb4079" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AGE::Renderer2D::DrawTileMapLayer</definition>
+        <argsstring>(TileMapRendererComponent &amp;TMRC, tmx_map *Map, tmx_layer *layer, int Depth)</argsstring>
+        <name>DrawTileMapLayer</name>
+        <qualifiedname>AGE::Renderer2D::DrawTileMapLayer</qualifiedname>
+        <param>
+          <type><ref refid="struct_a_g_e_1_1_tile_map_renderer_component" kindref="compound">TileMapRendererComponent</ref> &amp;</type>
+          <declname>TMRC</declname>
+        </param>
+        <param>
+          <type>tmx_map *</type>
+          <declname>Map</declname>
+        </param>
+        <param>
+          <type>tmx_layer *</type>
+          <declname>layer</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>Depth</declname>
+        </param>
+        <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" line="50" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer2D.cpp" bodystart="403" bodyend="406"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" line="54" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer2D.cpp" bodystart="690" bodyend="776"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" line="13" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" bodystart="14" bodyend="54"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" line="13" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer2D.h" bodystart="14" bodyend="58"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_renderer2_d_1a6064f8c1055693ce9a0fcd6d0aab292a" prot="private" virt="non-virtual"><scope>AGE::Renderer2D</scope><name>AGEVideo</name></member>
       <member refid="class_a_g_e_1_1_renderer2_d_1a2a90df58785285da258f35f8f50bb221" prot="public" virt="non-virtual"><scope>AGE::Renderer2D</scope><name>BeginScene</name></member>
       <member refid="class_a_g_e_1_1_renderer2_d_1a10d0968ee953fe240fa89fd667d1ce5a" prot="public" virt="non-virtual"><scope>AGE::Renderer2D</scope><name>BeginScene</name></member>
       <member refid="class_a_g_e_1_1_renderer2_d_1a31919025935062a347fe8dacbb67a04a" prot="public" virt="non-virtual"><scope>AGE::Renderer2D</scope><name>DrawCircle</name></member>
       <member refid="class_a_g_e_1_1_renderer2_d_1a9df1cde7dc08144e3fccd04838b42193" prot="public" virt="non-virtual"><scope>AGE::Renderer2D</scope><name>DrawLine</name></member>
-      <member refid="class_a_g_e_1_1_renderer2_d_1aaa458aa9bd21774c8acbfd1835b4d31f" prot="public" virt="non-virtual"><scope>AGE::Renderer2D</scope><name>DrawQuad</name></member>
-      <member refid="class_a_g_e_1_1_renderer2_d_1ada453fafca1809a7ca1be4faadd02fde" prot="public" virt="non-virtual"><scope>AGE::Renderer2D</scope><name>DrawQuad</name></member>
-      <member refid="class_a_g_e_1_1_renderer2_d_1aaf143553d6ec9a6afafe79d71a93b9ef" prot="public" virt="non-virtual"><scope>AGE::Renderer2D</scope><name>DrawQuad</name></member>
+      <member refid="class_a_g_e_1_1_renderer2_d_1a012305ca47d628775a684d8bf730415f" prot="public" virt="non-virtual"><scope>AGE::Renderer2D</scope><name>DrawQuad</name></member>
+      <member refid="class_a_g_e_1_1_renderer2_d_1a53d0c5d97e15407a5a008aa0f1171b5d" prot="public" virt="non-virtual"><scope>AGE::Renderer2D</scope><name>DrawQuad</name></member>
+      <member refid="class_a_g_e_1_1_renderer2_d_1a4c12040a47848620eb583328223cd703" prot="public" virt="non-virtual"><scope>AGE::Renderer2D</scope><name>DrawQuad</name></member>
       <member refid="class_a_g_e_1_1_renderer2_d_1a51e763f47b45c44feb711ba01646fd21" prot="public" virt="non-virtual"><scope>AGE::Renderer2D</scope><name>DrawRect</name></member>
       <member refid="class_a_g_e_1_1_renderer2_d_1ac608160a32811afe28ae1b6c6c606b80" prot="public" virt="non-virtual"><scope>AGE::Renderer2D</scope><name>DrawRect</name></member>
       <member refid="class_a_g_e_1_1_renderer2_d_1a2983e540f292654c5cbd2dc0799da0a1" prot="public" virt="non-virtual"><scope>AGE::Renderer2D</scope><name>DrawSprite</name></member>
       <member refid="class_a_g_e_1_1_renderer2_d_1ad74bb4897cd9f9f90c537c0bde290a5b" prot="public" virt="non-virtual"><scope>AGE::Renderer2D</scope><name>DrawString</name></member>
-      <member refid="class_a_g_e_1_1_renderer2_d_1a83308145902985457094cad522375af9" prot="public" virt="non-virtual"><scope>AGE::Renderer2D</scope><name>DrawTileMap</name></member>
+      <member refid="class_a_g_e_1_1_renderer2_d_1a75a1017ea7a876ea86eceab42a95b923" prot="public" virt="non-virtual"><scope>AGE::Renderer2D</scope><name>DrawTile</name></member>
+      <member refid="class_a_g_e_1_1_renderer2_d_1a9fb2bb13a417c37f19cae2f71cbb4079" prot="private" virt="non-virtual"><scope>AGE::Renderer2D</scope><name>DrawTileMapLayer</name></member>
+      <member refid="class_a_g_e_1_1_renderer2_d_1a5b1ed064e9b6c70be44de240368c9bd4" prot="public" virt="non-virtual"><scope>AGE::Renderer2D</scope><name>DrawTileMapLayers</name></member>
       <member refid="class_a_g_e_1_1_renderer2_d_1ae17c6433407ea3116fbd1bb034d2aad3" prot="public" virt="non-virtual"><scope>AGE::Renderer2D</scope><name>EndScene</name></member>
       <member refid="class_a_g_e_1_1_renderer2_d_1a68eecd13635f768d442234d46653f419" prot="public" virt="non-virtual"><scope>AGE::Renderer2D</scope><name>Flush</name></member>
       <member refid="class_a_g_e_1_1_renderer2_d_1a71d66bc360872f8576377ba0b8c648d0" prot="public" virt="non-virtual"><scope>AGE::Renderer2D</scope><name>GetLineWidth</name></member>

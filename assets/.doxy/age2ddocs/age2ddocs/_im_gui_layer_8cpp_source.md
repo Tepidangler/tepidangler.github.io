@@ -26,17 +26,19 @@
 #include <GLFW/glfw3.h>
 namespace AGE
 {
-    ImGuiLayer::ImGuiLayer()
+ImGuiLayer::ImGuiLayer()
         : Layer("ImGuiLayer")
     {
 
     }
 
-    ImGuiLayer::~ImGuiLayer()
+ImGuiLayer::~ImGuiLayer()
     {
     }
 
-    void ImGuiLayer::OnAttach()
+    
+
+void ImGuiLayer::OnAttach()
     {
         AppConfig Config = App::Get().GetAppConfig();
         AGE_PROFILE_FUNCTION();
@@ -92,12 +94,12 @@ namespace AGE
             }
             default:
             {
-                AGE_CORE_ASSERT(false, "Invalid Render API Selected!");
+                CoreLogger::Assert(false, "Invalid Render API Selected!");
                 break;
             }
         }
     }
-    void ImGuiLayer::OnDetach()
+void ImGuiLayer::OnDetach()
     {
 
         AGE_PROFILE_FUNCTION();
@@ -116,7 +118,7 @@ namespace AGE
             }
             default:
             {
-                AGE_CORE_ASSERT(false, "Invalid Render API Selected!");
+                CoreLogger::Assert(false, "Invalid Render API Selected!");
                 break;
             }
 
@@ -125,7 +127,7 @@ namespace AGE
 
 
 
-    void ImGuiLayer::Begin()
+void ImGuiLayer::Begin()
     {
         AGE_PROFILE_FUNCTION();
         switch (Renderer::GetAPI())
@@ -146,14 +148,14 @@ namespace AGE
             }
             default:
             {
-                AGE_CORE_ASSERT(false, "Invalid Render API Selected!");
+                CoreLogger::Assert(false, "Invalid Render API Selected!");
                 break;
             }
         }
 
     }
 
-    void ImGuiLayer::OnEvent(Event& E)
+void ImGuiLayer::OnEvent(Event& E)
     {
         EventDispatcher Dispatcher(E);
 
@@ -168,18 +170,18 @@ namespace AGE
         }
     }
 
-    bool ImGuiLayer::OnWindowResized(WindowResizeEvent& E)
+bool ImGuiLayer::OnWindowResized(WindowResizeEvent& E)
     {
         return false;
     }
 
     
 
-    void ImGuiLayer::OnImGuiRender(TimeStep DeltaTime)
+void ImGuiLayer::OnImGuiRender(TimeStep DeltaTime)
     {
     }
 
-    void ImGuiLayer::End()
+void ImGuiLayer::End()
     {
         //If we've changed renderers then that means there will be nothing there to draw so we'll simply skip this frame and start fresh
         AGE_PROFILE_FUNCTION();
@@ -212,13 +214,14 @@ namespace AGE
             }
             default:
             {
-                AGE_CORE_ASSERT(false, "Invalid Render API Selected!");
+                CoreLogger::Assert(false, "Invalid Render API Selected!");
                 break;
             }
         }
     }
 
-    void ImGuiLayer::SetDarkThemeColors()
+    
+void ImGuiLayer::SetDarkThemeColors()
     {
         auto& Colors = ImGui::GetStyle().Colors;
 

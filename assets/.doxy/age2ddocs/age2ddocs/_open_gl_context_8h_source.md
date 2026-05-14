@@ -21,7 +21,7 @@ namespace AGE
 {
     class OpenGLPipeline;
 
-    class AGE_API OpenGLContext : public GraphicsContext
+class AGE_API OpenGLContext : public GraphicsContext
     {
     public:
         OpenGLContext(GLFWwindow* WindowHandle);
@@ -37,8 +37,6 @@ namespace AGE
         OpenGLPipeline* GetPipeline();
 
         void SetPipeline(OpenGLPipeline* Pipeline);
-
-        static void OpenGLErrorCallback(uint32_t source, uint32_t type, uint32_t id, uint32_t severity, int length, const char* message, const void* userParam);
 
     private:
 

@@ -37,7 +37,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**LayerStack**](class_a_g_e_1_1_layer_stack.md) <br> |
+| class | [**LayerStack**](class_a_g_e_1_1_layer_stack.md) <br>_A class for managing layers in a stack-like structure._  |
 
 
 

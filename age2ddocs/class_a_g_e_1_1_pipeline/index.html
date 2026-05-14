@@ -89,11 +89,11 @@
 <tbody>
 <tr>
 <td style="text-align: right;">T *</td>
-<td style="text-align: left;"><a href="#function-as-12"><strong>As</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-as-12"><strong>As</strong></a> () <br><em>This function is currently not implemented and will always throw an assertion error. It returns a null pointer of type T*. The purpose of this function is unknown.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"><a href="../class_a_g_e_1_1_open_g_l_pipeline/"><strong>OpenGLPipeline</strong></a> *</td>
-<td style="text-align: left;"><a href="#function-as-22"><strong>As</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-as-22"><strong>As</strong></a> () <br><em>This function returns a pointer to the</em> <a href="../class_a_g_e_1_1_open_g_l_pipeline/"><em><strong>OpenGLPipeline</strong></em></a> <em>object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
@@ -125,7 +125,7 @@
 </tr>
 <tr>
 <td style="text-align: right;">virtual</td>
-<td style="text-align: left;"><a href="#function-pipeline"><strong>~Pipeline</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-pipeline"><strong>~Pipeline</strong></a> () = default<br><em>Virtual destructor for the</em> <a href="./"><em><strong>Pipeline</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
@@ -140,21 +140,35 @@
 <tbody>
 <tr>
 <td style="text-align: right;">Scope&lt; <a href="./"><strong>Pipeline</strong></a> &gt;</td>
-<td style="text-align: left;"><a href="#function-create"><strong>Create</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-create"><strong>Create</strong></a> () <br><em>Creates a new pipeline based on the current</em> <a href="../class_a_g_e_1_1_renderer_a_p_i/"><em><strong>RendererAPI</strong></em></a> <em>.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-as-12">function As [1/2]</h3>
+<p><em>This function is currently not implemented and will always throw an assertion error. It returns a null pointer of type T*. The purpose of this function is unknown.</em> </p>
 <pre><code class="language-C++">template&lt;typename T&gt;
 T * AGE::Pipeline::As () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A null pointer of type T*</p>
+<p>This function is currently not implemented and will always throw an assertion error. It returns a null pointer of type T*. The purpose of this function is unknown.</p>
+<p><strong>Returns:</strong></p>
+<p>A null pointer of type T* </p>
 <hr>
 
 <h3 id="function-as-22">function As [2/2]</h3>
+<p><em>This function returns a pointer to the</em> <a href="../class_a_g_e_1_1_open_g_l_pipeline/"><em><strong>OpenGLPipeline</strong></em></a> <em>object.</em></p>
 <pre><code class="language-C++">template&lt;&gt;
 OpenGLPipeline * AGE::Pipeline::As () 
 </code></pre>
+<p>The function is used to cast the current instance of <a href="./"><strong>Pipeline</strong></a> to an <a href="../class_a_g_e_1_1_open_g_l_pipeline/"><strong>OpenGLPipeline</strong></a> type. It does this by returning 'this' as a void pointer, then casting it back to an <a href="../class_a_g_e_1_1_open_g_l_pipeline/"><strong>OpenGLPipeline</strong></a> pointer. This allows for polymorphism in OpenGL operations where different types of objects can respond differently to the same function calls.</p>
+<p><strong>Returns:</strong></p>
+<p>A pointer to the <a href="../class_a_g_e_1_1_open_g_l_pipeline/"><strong>OpenGLPipeline</strong></a> object. If no such object exists, returns nullptr.</p>
+<p>This function returns a pointer to an <a href="../class_a_g_e_1_1_open_g_l_pipeline/"><strong>OpenGLPipeline</strong></a> object.</p>
+<p>The function is used to convert the current object into an <a href="../class_a_g_e_1_1_open_g_l_pipeline/"><strong>OpenGLPipeline</strong></a> type. It does this by returning 'this' casted as an OpenGLPipeline*.</p>
+<p><strong>Returns:</strong></p>
+<p>An instance of <a href="../class_a_g_e_1_1_open_g_l_pipeline/"><strong>OpenGLPipeline</strong></a>. </p>
 <hr>
 
 <h3 id="function-flush2d">function Flush2D</h3>
@@ -193,13 +207,25 @@ OpenGLPipeline * AGE::Pipeline::As ()
 <hr>
 
 <h3 id="function-pipeline">function ~Pipeline</h3>
+<p><em>Virtual destructor for the</em> <a href="./"><em><strong>Pipeline</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">virtual AGE::Pipeline::~Pipeline () = default
 </code></pre>
+<p>This function is responsible for releasing any resources that were acquired by the object during its lifetime. It does not return anything and thus, it has a void return type.</p>
+<p>Virtual destructor for the <a href="./"><strong>Pipeline</strong></a> class.</p>
+<p>This function is responsible for releasing any resources that were acquired by the pipeline during its lifetime, such as memory or file handles. It does not return anything and has no parameters. </p>
 <hr>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
 <h3 id="function-create">function Create</h3>
+<p><em>Creates a new pipeline based on the current</em> <a href="../class_a_g_e_1_1_renderer_a_p_i/"><em><strong>RendererAPI</strong></em></a> <em>.</em></p>
 <pre><code class="language-C++">static Scope&lt; Pipeline &gt; AGE::Pipeline::Create () 
 </code></pre>
+<p>This function creates and returns a new <a href="./"><strong>Pipeline</strong></a> object that is specific to the currently used <a href="../class_a_g_e_1_1_renderer_a_p_i/"><strong>RendererAPI</strong></a>. The type of <a href="./"><strong>Pipeline</strong></a> created depends on which API is in use at the time this function is called. If no valid <a href="../class_a_g_e_1_1_renderer_a_p_i/"><strong>RendererAPI</strong></a> is detected, nullptr is returned.</p>
+<p><strong>Returns:</strong></p>
+<p>Scope&lt;Pipeline&gt; A new pipeline or nullptr if no valid <a href="../class_a_g_e_1_1_renderer_a_p_i/"><strong>RendererAPI</strong></a> was found.</p>
+<p>Creates a new <a href="./"><strong>Pipeline</strong></a> instance based on the current <a href="../class_a_g_e_1_1_renderer_a_p_i/"><strong>RendererAPI</strong></a>.</p>
+<p>This function checks the currently set <a href="../class_a_g_e_1_1_renderer_a_p_i/"><strong>RendererAPI</strong></a> and creates an appropriate pipeline for it. If the API is not recognized, nullptr is returned.</p>
+<p><strong>Returns:</strong></p>
+<p>Scope&lt;Pipeline&gt; A smart pointer to a new <a href="./"><strong>Pipeline</strong></a> instance or nullptr if the current <a href="../class_a_g_e_1_1_renderer_a_p_i/"><strong>RendererAPI</strong></a> is unrecognized. </p>
 <hr>
 
 <hr />

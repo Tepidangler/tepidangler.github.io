@@ -35,7 +35,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**OpenGLContext**](class_a_g_e_1_1_open_g_l_context.md) <br> |
+| class | [**OpenGLContext**](class_a_g_e_1_1_open_g_l_context.md) <br>_Constructor for_ [_**OpenGLContext**_](class_a_g_e_1_1_open_g_l_context.md) _. Initializes the context with a GLFW window handle._ |
 
 
 

@@ -11,12 +11,16 @@
         <name>~GraphicsContext</name>
         <qualifiedname>AGE::GraphicsContext::~GraphicsContext</qualifiedname>
         <briefdescription>
+<para>Virtual destructor for the <ref refid="class_a_g_e_1_1_graphics_context" kindref="compound">GraphicsContext</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is responsible for releasing any resources that were acquired by the object during its lifetime, such as memory or GPU handles. It does not return anything and thus has an empty return type (void).</para>
+<para>Virtual destructor for the <ref refid="class_a_g_e_1_1_graphics_context" kindref="compound">GraphicsContext</ref> class.</para>
+<para>This function is responsible for releasing any resources that were acquired by the object during its lifetime, such as memory or graphics contexts. It does not return anything and thus has an empty return type (void). </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/GraphicsContext.h" line="13" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/GraphicsContext.h" bodystart="13" bodyend="13"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/GraphicsContext.h" line="23" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/GraphicsContext.h" bodystart="23" bodyend="23"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_graphics_context_1a689088cae6269a64d5b67c5cca819944" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -31,7 +35,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/GraphicsContext.h" line="14" column="14"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/GraphicsContext.h" line="24" column="14"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_graphics_context_1aa5c747044fc475a9bdc0e1e789985aa2" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -46,7 +50,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/GraphicsContext.h" line="16" column="14"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/GraphicsContext.h" line="26" column="14"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_graphics_context_1ac590188247ab154d722e874e0e8e5479" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -60,12 +64,27 @@
         <name>As</name>
         <qualifiedname>AGE::GraphicsContext::As</qualifiedname>
         <briefdescription>
+<para>This function is a placeholder for future use. It currently always asserts false and returns null. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>T* Returns nullptr.</para>
+</simplesect>
+This function is currently not implemented and will always throw an assertion. It returns a pointer of type T*, which in this case is unknown to the documentation. The function does not take any parameters. In future, it should be implemented to cast the <ref refid="class_a_g_e_1_1_graphics_context" kindref="compound">GraphicsContext</ref> instance to another derived class if possible. <simplesect kind="return"><para>A nullptr as per current implementation. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/GraphicsContext.h" line="21" column="3" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/GraphicsContext.cpp" bodystart="31" bodyend="35"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/GraphicsContext.h" line="31" column="3" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/GraphicsContext.cpp" bodystart="49" bodyend="53"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_graphics_context_1a3208c4785281d9eb6044dd4278f586ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -76,12 +95,18 @@
         <name>As</name>
         <qualifiedname>AGE::GraphicsContext::As</qualifiedname>
         <briefdescription>
+<para>This function returns a pointer to the OpenGL context associated with this instance of <ref refid="class_a_g_e_1_1_graphics_context" kindref="compound">GraphicsContext</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Pointer to an <ref refid="class_a_g_e_1_1_open_g_l_context" kindref="compound">OpenGLContext</ref> object, or nullptr if no such context exists.</para>
+</simplesect>
+This function returns a pointer to the OpenGL context associated with this <ref refid="class_a_g_e_1_1_graphics_context" kindref="compound">GraphicsContext</ref> object. <simplesect kind="return"><para>A pointer to an <ref refid="class_a_g_e_1_1_open_g_l_context" kindref="compound">OpenGLContext</ref>, or nullptr if no such context exists. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGlContext.cpp" line="78" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGlContext.cpp" bodystart="78" bodyend="81"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGlContext.cpp" line="134" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGlContext.cpp" bodystart="134" bodyend="137"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -96,12 +121,14 @@
           <declname>Window</declname>
         </param>
         <briefdescription>
+<para>Creates a graphics context based on the current renderer API. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function creates and returns a Scope of <ref refid="class_a_g_e_1_1_graphics_context" kindref="compound">GraphicsContext</ref> which is initialized according to the currently set <ref refid="class_a_g_e_1_1_renderer" kindref="compound">Renderer</ref> API. If no valid API is set, it asserts false and returns nullptr. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/GraphicsContext.h" line="18" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/GraphicsContext.cpp" bodystart="9" bodyend="28"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/GraphicsContext.h" line="28" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/GraphicsContext.cpp" bodystart="15" bodyend="34"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -120,7 +147,7 @@
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/GraphicsContext.h" line="9" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/GraphicsContext.h" bodystart="10" bodyend="22"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/GraphicsContext.h" line="9" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/GraphicsContext.h" bodystart="10" bodyend="32"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_graphics_context_1ac590188247ab154d722e874e0e8e5479" prot="public" virt="non-virtual"><scope>AGE::GraphicsContext</scope><name>As</name></member>
       <member refid="class_a_g_e_1_1_graphics_context_1a3208c4785281d9eb6044dd4278f586ed" prot="public" virt="non-virtual"><scope>AGE::GraphicsContext</scope><name>As</name></member>

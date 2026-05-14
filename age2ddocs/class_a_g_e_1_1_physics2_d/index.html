@@ -88,243 +88,373 @@
 <tbody>
 <tr>
 <td style="text-align: right;">b2BodyId</td>
-<td style="text-align: left;"><a href="#function-createbody"><strong>CreateBody</strong></a> (b2BodyDef &amp; Def) <br></td>
+<td style="text-align: left;"><a href="#function-createbody"><strong>CreateBody</strong></a> (b2BodyDef &amp; Def) <br><em>Creates a body in the physics world.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">b2Polygon</td>
-<td style="text-align: left;"><a href="#function-createbox"><strong>CreateBox</strong></a> (float HeightX, float HeightY, const <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> &amp; Scale) <br></td>
+<td style="text-align: left;"><a href="#function-createbox"><strong>CreateBox</strong></a> (float HeightX, float HeightY, const <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> &amp; Scale) <br><em>Creates a box shape with the given dimensions and scale.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">b2Capsule</td>
-<td style="text-align: left;"><a href="#function-createcapsule"><strong>CreateCapsule</strong></a> (const <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> &amp; Offset, const <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> &amp; Scale, const float Radius) <br></td>
+<td style="text-align: left;"><a href="#function-createcapsule"><strong>CreateCapsule</strong></a> (const <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> &amp; Offset, const <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> &amp; Scale, const float Radius) <br><em>Creates a capsule shape with the given parameters.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">b2ShapeId</td>
-<td style="text-align: left;"><a href="#function-createcapsuleshape"><strong>CreateCapsuleShape</strong></a> (const b2BodyId &amp; ID, const b2ShapeDef &amp; Fixture, const b2Capsule &amp; Capsule) <br></td>
+<td style="text-align: left;"><a href="#function-createcapsuleshape"><strong>CreateCapsuleShape</strong></a> (const b2BodyId &amp; ID, const b2ShapeDef &amp; Fixture, const b2Capsule &amp; Capsule) <br><em>Creates a capsule shape in the physics world.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="#function-createnewphysicsworld"><strong>CreateNewPhysicsWorld</strong></a> (Ref&lt; <a href="../class_a_g_e_1_1_scene/"><strong>Scene</strong></a> &gt; scene) <br></td>
+<td style="text-align: left;"><a href="#function-createnewphysicsworld"><strong>CreateNewPhysicsWorld</strong></a> (Ref&lt; <a href="../class_a_g_e_1_1_scene/"><strong>Scene</strong></a> &gt; scene) <br><em>Creates a new physics world for the given scene.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">b2ShapeId</td>
-<td style="text-align: left;"><a href="#function-createpolygonshape"><strong>CreatePolygonShape</strong></a> (const b2BodyId &amp; ID, const b2ShapeDef &amp; Fixture, const b2Polygon &amp; Box) <br></td>
+<td style="text-align: left;"><a href="#function-createpolygonshape"><strong>CreatePolygonShape</strong></a> (const b2BodyId &amp; ID, const b2ShapeDef &amp; Fixture, const b2Polygon &amp; Box) <br><em>Creates a polygon shape for the given body with the specified fixture and box.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">b2Segment</td>
-<td style="text-align: left;"><a href="#function-createsegment"><strong>CreateSegment</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-createsegment"><strong>CreateSegment</strong></a> () <br><em>Creates a segment in the physics world.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">b2ShapeId</td>
-<td style="text-align: left;"><a href="#function-createsegmentshape"><strong>CreateSegmentShape</strong></a> (const b2BodyId &amp; ID, const b2ShapeDef &amp; Fixture, const b2Segment &amp; Segment) <br></td>
+<td style="text-align: left;"><a href="#function-createsegmentshape"><strong>CreateSegmentShape</strong></a> (const b2BodyId &amp; ID, const b2ShapeDef &amp; Fixture, const b2Segment &amp; Segment) <br><em>Creates a segment shape with the given parameters.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-destroyworld"><strong>DestroyWorld</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-destroyworld"><strong>DestroyWorld</strong></a> () <br><em>Destroys the physics world.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">b2BodyId</td>
-<td style="text-align: left;"><a href="#function-getbody"><strong>GetBody</strong></a> (const b2ShapeId &amp; ID) <br></td>
+<td style="text-align: left;"><a href="#function-getbody"><strong>GetBody</strong></a> (const b2ShapeId &amp; ID) <br><em>Retrieves a body from the physics world using its shape id.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"><a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a></td>
-<td style="text-align: left;"><a href="#function-getbodyposition"><strong>GetBodyPosition</strong></a> (const b2BodyId &amp; ID) <br></td>
+<td style="text-align: left;"><a href="#function-getbodyposition"><strong>GetBodyPosition</strong></a> (const b2BodyId &amp; ID) <br><em>Get the position of a body in the 2D physics world.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">b2Capsule</td>
-<td style="text-align: left;"><a href="#function-getcapsule"><strong>GetCapsule</strong></a> (const b2ShapeId &amp; ID) <br></td>
+<td style="text-align: left;"><a href="#function-getcapsule"><strong>GetCapsule</strong></a> (const b2ShapeId &amp; ID) <br><em>Retrieves a capsule with the given shape id.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">b2Polygon</td>
-<td style="text-align: left;"><a href="#function-getpolygon"><strong>GetPolygon</strong></a> (const b2ShapeId &amp; ID) <br></td>
+<td style="text-align: left;"><a href="#function-getpolygon"><strong>GetPolygon</strong></a> (const b2ShapeId &amp; ID) <br><em>Retrieves a polygon from the physics world using its shape id.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">float</td>
-<td style="text-align: left;"><a href="#function-getrotationangle"><strong>GetRotationAngle</strong></a> (const b2BodyId &amp; ID) <br></td>
+<td style="text-align: left;"><a href="#function-getrotationangle"><strong>GetRotationAngle</strong></a> (const b2BodyId &amp; ID) <br><em>This function returns the rotation angle of a body with a given id.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">st atic T</td>
+<td style="text-align: left;"><a href="#function-getshapefromid"><strong>GetShapeFromID</strong></a> (b2ShapeId ID) <br><em>Retrieves a shape from its ID.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void *</td>
-<td style="text-align: left;"><a href="#function-getuserdata"><strong>GetUserData</strong></a> (const b2ShapeId &amp; ID) <br></td>
+<td style="text-align: left;"><a href="#function-getuserdata"><strong>GetUserData</strong></a> (const b2ShapeId &amp; ID) <br><em>Retrieves the user data associated with a given shape id.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;">Ref&lt; <a href="../class_a_g_e_1_1_world/"><strong>World</strong></a> &gt; &amp;</td>
-<td style="text-align: left;"><a href="#function-getworld"><strong>GetWorld</strong></a> () <br></td>
+<td style="text-align: right;">Re f&lt; <a href="../class_a_g_e_1_1_world/"><strong>World</strong></a> &gt; &amp;</td>
+<td style="text-align: left;"><a href="#function-getworld"><strong>GetWorld</strong></a> () <br><em>Returns a reference to the</em> <a href="../class_a_g_e_1_1_world/"><em><strong>World</strong></em></a> <em>object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">b2BodyDef</td>
-<td style="text-align: left;"><a href="#function-makebodydefinition"><strong>MakeBodyDefinition</strong></a> (const BodyType &amp; Type, const <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> &amp; Translation, const <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> &amp; Rotation, bool IsRotationFixed, void * UserData) <br></td>
+<td style="text-align: left;"><a href="#function-makebodydefinition"><strong>MakeBodyDefinition</strong></a> (const BodyType &amp; Type, const <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> &amp; Translation, const <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> &amp; Rotation, bool IsRotationFixed, void * UserData) <br><em>Creates a body definition for the physics world.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">b2Rot</td>
-<td style="text-align: left;"><a href="#function-makerotation"><strong>MakeRotation</strong></a> (float Z) <br></td>
+<td style="text-align: left;"><a href="#function-makerotation"><strong>MakeRotation</strong></a> (float Z) <br><em>Creates a rotation object based on the given angle in radians.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">b2ShapeDef</td>
-<td style="text-align: left;"><a href="#function-makeshapedefinition"><strong>MakeShapeDefinition</strong></a> (float Density, float Friction, float Restitution, bool ShouldGenerateEvents, void * UserData) <br></td>
-</tr>
-<tr>
-<td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-physics2d"><strong>Physics2D</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-makeshapedefinition"><strong>MakeShapeDefinition</strong></a> (float Density, float Friction, float Restitution, bool ShouldGenerateEvents, void * UserData) <br><em>Creates a shape definition with the given parameters.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-queryboxoverlap"><strong>QueryBoxOverlap</strong></a> (const <a href="../struct_a_g_e_1_1_query_params/"><strong>QueryParams</strong></a> &amp; Params) <br></td>
+<td style="text-align: left;"><a href="#function-queryboxoverlap"><strong>QueryBoxOverlap</strong></a> (const <a href="../struct_a_g_e_1_1_query_params/"><strong>QueryParams</strong></a> &amp; Params) <br><em>This function is used to perform a box overlap query in the physics world.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-querycapsuleoverlap"><strong>QueryCapsuleOverlap</strong></a> (const <a href="../struct_a_g_e_1_1_query_params/"><strong>QueryParams</strong></a> &amp; Params) <br></td>
+<td style="text-align: left;"><a href="#function-querycapsuleoverlap"><strong>QueryCapsuleOverlap</strong></a> (const <a href="../struct_a_g_e_1_1_query_params/"><strong>QueryParams</strong></a> &amp; Params) <br><em>This function is used to query for overlapping between a capsule and the physics world.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="#function-queryhit"><strong>QueryHit</strong></a> (const <a href="../struct_a_g_e_1_1_query_params/"><strong>QueryParams</strong></a> &amp; Params) <br></td>
+<td style="text-align: left;"><a href="#function-queryhit"><strong>QueryHit</strong></a> (const <a href="../struct_a_g_e_1_1_query_params/"><strong>QueryParams</strong></a> &amp; Params) <br><em>This function is used to query for a hit in the physics simulation.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-querysegmentoverlap"><strong>QuerySegmentOverlap</strong></a> (const <a href="../struct_a_g_e_1_1_query_params/"><strong>QueryParams</strong></a> &amp; Params) <br></td>
+<td style="text-align: left;"><a href="#function-querysegmentoverlap"><strong>QuerySegmentOverlap</strong></a> (const <a href="../struct_a_g_e_1_1_query_params/"><strong>QueryParams</strong></a> &amp; Params) <br><em>This function is used to query for overlapping segments in the physics world.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-step"><strong>Step</strong></a> (<a href="../class_a_g_e_1_1_time_step/"><strong>TimeStep</strong></a> DeltaTime) <br></td>
+<td style="text-align: left;"><a href="#function-step"><strong>Step</strong></a> (<a href="../class_a_g_e_1_1_time_step/"><strong>TimeStep</strong></a> DeltaTime) <br><em>This function steps the physics simulation by a given time step.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-physics2d"><strong>~Physics2D</strong></a> () = default<br></td>
+<td style="text-align: right;">~P</td>
+<td style="text-align: left;"><a href="#function-hysics2d"><strong>hysics2D</strong></a> () = default<br><em>Default constructor for the</em> <a href="./"><em><strong>Physics2D</strong></em></a> <em>class.</em></td>
 </tr>
-</tbody>
-</table>
-<h2 id="public-static-functions">Public Static Functions</h2>
-<table>
-<thead>
 <tr>
-<th style="text-align: right;">Type</th>
-<th style="text-align: left;">Name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: right;">T</td>
-<td style="text-align: left;"><a href="#function-getshapefromid"><strong>GetShapeFromID</strong></a> (b2ShapeId ID) <br></td>
+<td style="text-align: right;">Ph</td>
+<td style="text-align: left;"><a href="#function-ysics2d"><strong>ysics2D</strong></a> () = default<br><em>Default constructor for the ysics2D class.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-createbody">function CreateBody</h3>
+<p><em>Creates a body in the physics world.</em> </p>
 <pre><code class="language-C++">b2BodyId AGE::Physics2D::CreateBody (
     b2BodyDef &amp; Def
 ) 
 </code></pre>
+<p>This function creates a new body within the physics simulation based on the provided definition. The body is added to the physics world and its ID is returned.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Def</code> A reference to the b2BodyDef that defines the properties of the new body. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>The unique identifier (b2BodyId) for the newly created body. </p>
 <hr>
 
 <h3 id="function-createbox">function CreateBox</h3>
+<p><em>Creates a box shape with the given dimensions and scale.</em> </p>
 <pre><code class="language-C++">b2Polygon AGE::Physics2D::CreateBox (
     float HeightX,
     float HeightY,
     const Vector3 &amp; Scale
 ) 
 </code></pre>
+<p>This function creates a box shape with the specified height in X and Y directions and applies the provided scale to it. The resulting b2Polygon is then returned by the function.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>HeightX</code> The horizontal extent of the box. </li>
+<li><code>HeightY</code> The vertical extent of the box. </li>
+<li><code>Scale</code> The scaling factor for the box shape.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A b2Polygon representing the created box shape. </p>
 <hr>
 
 <h3 id="function-createcapsule">function CreateCapsule</h3>
+<p><em>Creates a capsule shape with the given parameters.</em> </p>
 <pre><code class="language-C++">b2Capsule AGE::Physics2D::CreateCapsule (
     const Vector2 &amp; Offset,
     const Vector3 &amp; Scale,
     const float Radius
 ) 
 </code></pre>
+<p>This function creates and returns a capsule shape using the provided offset, scale, and radius values. The capsule is created in the context of the current world.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Offset</code> A <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> specifying the position of the capsule. </li>
+<li><code>Scale</code> A <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> specifying the scaling factors for the capsule. </li>
+<li><code>Radius</code> The float value representing the radius of the capsule.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>b2Capsule The newly created capsule shape. </p>
 <hr>
 
 <h3 id="function-createcapsuleshape">function CreateCapsuleShape</h3>
+<p><em>Creates a capsule shape in the physics world.</em> </p>
 <pre><code class="language-C++">b2ShapeId AGE::Physics2D::CreateCapsuleShape (
     const b2BodyId &amp; ID,
     const b2ShapeDef &amp; Fixture,
     const b2Capsule &amp; Capsule
 ) 
 </code></pre>
+<p>This function creates a capsule shape with the given parameters and adds it to the specified body. The ID of the body is passed as an argument, along with the fixture definition and the dimensions of the capsule.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>ID</code> The identifier for the body in which the capsule will be added. </li>
+<li><code>Fixture</code> A structure containing the properties of the fixture to be applied to the shape. </li>
+<li><code>Capsule</code> A structure containing the dimensions of the capsule (half-height, radius).</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>The identifier for the newly created capsule shape. </p>
 <hr>
 
 <h3 id="function-createnewphysicsworld">function CreateNewPhysicsWorld</h3>
+<p><em>Creates a new physics world for the given scene.</em> </p>
 <pre><code class="language-C++">bool AGE::Physics2D::CreateNewPhysicsWorld (
     Ref&lt; Scene &gt; scene
 ) 
 </code></pre>
+<p>This function creates a new physics world and assigns it to the member variable <code>m_World</code>. It returns true if the creation was successful, false otherwise.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>scene</code> The scene for which to create the physics world. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>True if the creation was successful, false otherwise. </p>
 <hr>
 
 <h3 id="function-createpolygonshape">function CreatePolygonShape</h3>
+<p><em>Creates a polygon shape for the given body with the specified fixture and box.</em> </p>
 <pre><code class="language-C++">b2ShapeId AGE::Physics2D::CreatePolygonShape (
     const b2BodyId &amp; ID,
     const b2ShapeDef &amp; Fixture,
     const b2Polygon &amp; Box
 ) 
 </code></pre>
+<p>This function creates a polygon shape for the given body using the provided fixture definition and box. The resulting shape is then returned by the function.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>ID</code> The identifier of the body to create the shape for. </li>
+<li><code>Fixture</code> The fixture definition specifying the properties of the shape. </li>
+<li><code>Box</code> The polygon defining the vertices of the shape.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A unique identifier representing the newly created shape. </p>
 <hr>
 
 <h3 id="function-createsegment">function CreateSegment</h3>
+<p><em>Creates a segment in the physics world.</em> </p>
 <pre><code class="language-C++">b2Segment AGE::Physics2D::CreateSegment () 
 </code></pre>
+<p>This function creates and returns a new segment object within the physics world. The specifics of how this is done are not specified as it depends on the implementation of the <a href="../class_a_g_e_1_1_world2_d/"><strong>World2D</strong></a> class.</p>
+<p><strong>Returns:</strong></p>
+<p>A newly created segment object. </p>
 <hr>
 
 <h3 id="function-createsegmentshape">function CreateSegmentShape</h3>
+<p><em>Creates a segment shape with the given parameters.</em> </p>
 <pre><code class="language-C++">b2ShapeId AGE::Physics2D::CreateSegmentShape (
     const b2BodyId &amp; ID,
     const b2ShapeDef &amp; Fixture,
     const b2Segment &amp; Segment
 ) 
 </code></pre>
+<p>This function creates and adds a new segment shape to the physics world of the game engine. The segment is defined by two points in space.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>ID</code> A reference to the body id that this fixture will be attached to. </li>
+<li><code>Fixture</code> A structure containing the definition for the fixture (e.g., density, restitution). </li>
+<li><code>Segment</code> A structure representing the segment of the shape.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>The unique identifier for the newly created segment shape. </p>
 <hr>
 
 <h3 id="function-destroyworld">function DestroyWorld</h3>
+<p><em>Destroys the physics world.</em> </p>
 <pre><code class="language-C++">void AGE::Physics2D::DestroyWorld () 
 </code></pre>
+<p>This function is used to destroy the physics world, freeing up any resources it was using. After calling this function, the physics world should not be used again until a new one has been created.</p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-getbody">function GetBody</h3>
+<p><em>Retrieves a body from the physics world using its shape id.</em> </p>
 <pre><code class="language-C++">b2BodyId AGE::Physics2D::GetBody (
     const b2ShapeId &amp; ID
 ) 
 </code></pre>
+<p>This function takes in a b2ShapeId, which is used to identify a specific shape within the physics world, and returns the corresponding b2BodyId. If no such body exists, it will return an invalid b2BodyId.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>ID</code> The unique identifier of the shape whose associated body we want to retrieve. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>The b2BodyId that corresponds to the given shape id. Returns an invalid b2BodyId if no such body exists in the physics world. </p>
 <hr>
 
 <h3 id="function-getbodyposition">function GetBodyPosition</h3>
+<p><em>Get the position of a body in the 2D physics world.</em> </p>
 <pre><code class="language-C++">Vector2 AGE::Physics2D::GetBodyPosition (
     const b2BodyId &amp; ID
 ) 
 </code></pre>
+<p>This function retrieves the current position of a body with a given ID in the 2D physics world. The position is returned as a <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> object.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>ID</code> The unique identifier for the body whose position you want to retrieve. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> object representing the position of the specified body. </p>
 <hr>
 
 <h3 id="function-getcapsule">function GetCapsule</h3>
+<p><em>Retrieves a capsule with the given shape id.</em> </p>
 <pre><code class="language-C++">b2Capsule AGE::Physics2D::GetCapsule (
     const b2ShapeId &amp; ID
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>ID</code> The unique identifier of the capsule to retrieve. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A b2Capsule object representing the retrieved capsule, or an empty one if no such capsule exists. </p>
 <hr>
 
 <h3 id="function-getpolygon">function GetPolygon</h3>
+<p><em>Retrieves a polygon from the physics world using its shape id.</em> </p>
 <pre><code class="language-C++">b2Polygon AGE::Physics2D::GetPolygon (
     const b2ShapeId &amp; ID
 ) 
 </code></pre>
+<p>This function takes an ID of type b2ShapeId as input and returns a b2Polygon object. It retrieves the polygon data associated with the given ID from the physics world.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>ID</code> The unique identifier for the polygon in the physics world. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A b2Polygon object representing the polygon with the provided ID. </p>
 <hr>
 
 <h3 id="function-getrotationangle">function GetRotationAngle</h3>
+<p><em>This function returns the rotation angle of a body with a given id.</em> </p>
 <pre><code class="language-C++">float AGE::Physics2D::GetRotationAngle (
     const b2BodyId &amp; ID
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>ID</code> The unique identifier for the body whose rotation angle is to be returned. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>The rotation angle in radians. If no such body exists, it will return 0. </p>
+<hr>
+
+<h3 id="function-getshapefromid">function GetShapeFromID</h3>
+<p><em>Retrieves a shape from its ID.</em> </p>
+<pre><code class="language-C++">template&lt;typename T&gt;
+inline st atic T AGE::Physics2D::GetShapeFromID (
+    b2ShapeId ID
+) 
+</code></pre>
+<p>This function retrieves and returns the shape associated with the given ID. The type of the shape is determined by the value returned by b2Shape_GetType(ID). If the type is b2_capsuleShape, it calls b2Shape_GetCapsule(ID) to get the capsule shape. If the type is b2_polygonShape, it calls b2Shape_GetPolygon(ID) to get the polygon shape. If the type is b2_segmentShape, it calls b2Shape_GetSegment(ID) to get the segment shape. In all other cases (including if the function returns a default value), it defaults to returning the polygon shape from b2Shape_GetPolygon(ID).</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>ID</code> The unique identifier of the shape. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>The shape associated with the given ID, or the default shape if no match is found. </p>
 <hr>
 
 <h3 id="function-getuserdata">function GetUserData</h3>
+<p><em>Retrieves the user data associated with a given shape id.</em> </p>
 <pre><code class="language-C++">void * AGE::Physics2D::GetUserData (
     const b2ShapeId &amp; ID
 ) 
 </code></pre>
+<p>This function retrieves the user data that was previously set using SetUserData() for a specific shape in the physics world. The shape's ID is used to identify and retrieve its corresponding user data.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>ID</code> The unique identifier of the shape whose user data needs to be retrieved.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A void pointer to the user data associated with the given shape id, or nullptr if no such user data exists. </p>
 <hr>
 
 <h3 id="function-getworld">function GetWorld</h3>
-<pre><code class="language-C++">inline Ref&lt; World &gt; &amp; AGE::Physics2D::GetWorld () 
+<p><em>Returns a reference to the</em> <a href="../class_a_g_e_1_1_world/"><em><strong>World</strong></em></a> <em>object.</em></p>
+<pre><code class="language-C++">inline Re f&lt; World &gt; &amp; AGE::Physics2D::GetWorld () 
 </code></pre>
+<p>This function returns a reference to the <a href="../class_a_g_e_1_1_world/"><strong>World</strong></a> object that is currently being used by the program. The returned reference can be used to modify or access the state of this object.</p>
+<p><strong>Returns:</strong></p>
+<p>f&lt;World&gt;&amp; A reference to the current <a href="../class_a_g_e_1_1_world/"><strong>World</strong></a> object. </p>
 <hr>
 
 <h3 id="function-makebodydefinition">function MakeBodyDefinition</h3>
+<p><em>Creates a body definition for the physics world.</em> </p>
 <pre><code class="language-C++">b2BodyDef AGE::Physics2D::MakeBodyDefinition (
     const BodyType &amp; Type,
     const Vector3 &amp; Translation,
@@ -333,16 +463,36 @@
     void * UserData
 ) 
 </code></pre>
+<p>This function creates and returns a b2BodyDef object with the given parameters. The body type, translation, rotation, and whether the rotation is fixed are set based on the input parameters. User data can also be provided.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Type</code> The type of the body to create. </li>
+<li><code>Translation</code> The initial position of the body. </li>
+<li><code>Rotation</code> The initial rotation of the body. </li>
+<li><code>IsRotationFixed</code> A flag indicating whether the rotation should be fixed or not. </li>
+<li><code>UserData</code> Pointer to any user data associated with the body.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Returns a b2BodyDef object based on the input parameters. </p>
 <hr>
 
 <h3 id="function-makerotation">function MakeRotation</h3>
+<p><em>Creates a rotation object based on the given angle in radians.</em> </p>
 <pre><code class="language-C++">b2Rot AGE::Physics2D::MakeRotation (
     float Z
 ) 
 </code></pre>
+<p>This function creates and returns a rotation object using the provided angle (in radians). The resulting rotation can be used to rotate objects or perform other transformations.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Z</code> The angle in radians for which to create the rotation. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A rotation object representing the specified angle. </p>
 <hr>
 
 <h3 id="function-makeshapedefinition">function MakeShapeDefinition</h3>
+<p><em>Creates a shape definition with the given parameters.</em> </p>
 <pre><code class="language-C++">b2ShapeDef AGE::Physics2D::MakeShapeDefinition (
     float Density,
     float Friction,
@@ -351,59 +501,105 @@
     void * UserData
 ) 
 </code></pre>
-<hr>
-
-<h3 id="function-physics2d">function Physics2D</h3>
-<pre><code class="language-C++">AGE::Physics2D::Physics2D () = default
-</code></pre>
+<p>This function creates and returns a shape definition using the provided density, friction, restitution, event generation flag, and user data. The resulting shape definition is then used to create a new shape in the physics world.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Density</code> The density of the shape. </li>
+<li><code>Friction</code> The friction coefficient of the shape. </li>
+<li><code>Restitution</code> The restitution coefficient of the shape. </li>
+<li><code>ShouldGenerateEvents</code> A flag indicating whether collision events should be generated for this shape. </li>
+<li><code>UserData</code> Pointer to user-defined data associated with the shape.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>b2ShapeDef The created shape definition. </p>
 <hr>
 
 <h3 id="function-queryboxoverlap">function QueryBoxOverlap</h3>
+<p><em>This function is used to perform a box overlap query in the physics world.</em> </p>
 <pre><code class="language-C++">void AGE::Physics2D::QueryBoxOverlap (
     const QueryParams &amp; Params
 ) 
 </code></pre>
+<p>The function takes as input a <a href="../struct_a_g_e_1_1_query_params/"><strong>QueryParams</strong></a> object which contains all the parameters required for the box overlap query. It then calls the QueryBoxOverlap method on the m_World object, passing it the <a href="../struct_a_g_e_1_1_query_params/"><strong>QueryParams</strong></a> object.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Params</code> A const reference to a <a href="../struct_a_g_e_1_1_query_params/"><strong>QueryParams</strong></a> object containing the parameters for the box overlap query.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void This function does not return any value. </p>
 <hr>
 
 <h3 id="function-querycapsuleoverlap">function QueryCapsuleOverlap</h3>
+<p><em>This function is used to query for overlapping between a capsule and the physics world.</em> </p>
 <pre><code class="language-C++">void AGE::Physics2D::QueryCapsuleOverlap (
     const QueryParams &amp; Params
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Params</code> The parameters of the capsule overlap query, including position, orientation, radius, and height. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-queryhit">function QueryHit</h3>
+<p><em>This function is used to query for a hit in the physics simulation.</em> </p>
 <pre><code class="language-C++">bool AGE::Physics2D::QueryHit (
     const QueryParams &amp; Params
 ) 
 </code></pre>
+<p>The function takes as input a const reference to a <a href="../struct_a_g_e_1_1_query_params/"><strong>QueryParams</strong></a> object, which contains parameters related to the query. It returns a boolean value indicating whether or not a hit occurred based on these parameters.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Params</code> A constant reference to an instance of <a href="../struct_a_g_e_1_1_query_params/"><strong>QueryParams</strong></a> containing information about the query. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Returns true if a hit is detected and false otherwise. </p>
 <hr>
 
 <h3 id="function-querysegmentoverlap">function QuerySegmentOverlap</h3>
+<p><em>This function is used to query for overlapping segments in the physics world.</em> </p>
 <pre><code class="language-C++">void AGE::Physics2D::QuerySegmentOverlap (
     const QueryParams &amp; Params
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Params</code> The parameters of the segment overlap query, including start and end points, layer mask, etc.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-step">function Step</h3>
+<p><em>This function steps the physics simulation by a given time step.</em> </p>
 <pre><code class="language-C++">void AGE::Physics2D::Step (
     TimeStep DeltaTime
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>DeltaTime</code> The amount of time to simulate, in seconds.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
-<h3 id="function-physics2d_1">function ~Physics2D</h3>
-<pre><code class="language-C++">AGE::Physics2D::~Physics2D () = default
+<h3 id="function-hysics2d">function hysics2D</h3>
+<p><em>Default constructor for the</em> <a href="./"><em><strong>Physics2D</strong></em></a> <em>class.</em></p>
+<pre><code class="language-C++">~P AGE::Physics2D::hysics2D () = default
 </code></pre>
+<p>This function initializes a new instance of the <a href="./"><strong>Physics2D</strong></a> class with default values. It does not take any parameters and returns nothing. </p>
 <hr>
-<h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
-<h3 id="function-getshapefromid">function GetShapeFromID</h3>
-<pre><code class="language-C++">template&lt;typename T&gt;
-static inline T AGE::Physics2D::GetShapeFromID (
-    b2ShapeId ID
-) 
+
+<h3 id="function-ysics2d">function ysics2D</h3>
+<p><em>Default constructor for the ysics2D class.</em> </p>
+<pre><code class="language-C++">Ph AGE::Physics2D::ysics2D () = default
 </code></pre>
+<p>This function initializes a new instance of the ysics2D class with default values. It does not take any parameters and returns an object of type ysics2D.</p>
+<p><strong>Returns:</strong></p>
+<p>A new instance of the ysics2D class with default values. </p>
 <hr>
 
 <hr />

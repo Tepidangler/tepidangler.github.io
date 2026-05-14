@@ -16,22 +16,22 @@ namespace AGE
 {
     namespace Utils
     {
-        static GLenum TextureTarget(bool Multisampled)
+static GLenum TextureTarget(bool Multisampled)
         {
             return Multisampled ? GL_TEXTURE_2D_MULTISAMPLE : GL_TEXTURE_2D;
         }
     
-        static void CreateTextures(bool Multisampled, uint32_t* OutID, uint32_t Count)
+static void CreateTextures(bool Multisampled, uint32_t* OutID, uint32_t Count)
         {
             glCreateTextures(TextureTarget(Multisampled), (int)Count, OutID);;
         }
     
-        static void BindTexture(bool Multisampled, uint32_t ID)
+static void BindTexture(bool Multisampled, uint32_t ID)
         {
             glBindTexture(TextureTarget(Multisampled), ID);
         }
     
-        static void AttachColorTexture(uint32_t ID, int Samples, GLenum InternalFormat, GLenum Format, uint32_t Width, uint32_t Height, int Index)
+static void AttachColorTexture(uint32_t ID, int Samples, GLenum InternalFormat, GLenum Format, uint32_t Width, uint32_t Height, int Index)
         {
             bool Multisampled = Samples > 1;
     
@@ -54,7 +54,8 @@ namespace AGE
         }
     
     
-        static void AttachDepthTexture(uint32_t ID, int Samples, GLenum Format, GLenum AttachmentType, uint32_t Width, uint32_t Height)
+        
+static void AttachDepthTexture(uint32_t ID, int Samples, GLenum Format, GLenum AttachmentType, uint32_t Width, uint32_t Height)
         {
             bool Multisampled = Samples > 1;
     
@@ -77,7 +78,7 @@ namespace AGE
         }
     
     
-        static bool IsDepthFormat(FramebufferTextureFormat Format)
+static bool IsDepthFormat(FramebufferTextureFormat Format)
         {
             switch (Format)
             {
@@ -95,7 +96,7 @@ namespace AGE
     
         }
 
-        static GLenum AGETextureFormatToGL(FramebufferTextureFormat Format)
+static GLenum AGETextureFormatToGL(FramebufferTextureFormat Format)
         {
             switch (Format)
             {
@@ -110,7 +111,7 @@ namespace AGE
 
             default:
             {
-                AGE_CORE_ASSERT(false, "Invalid Format");
+                CoreLogger::Assert(false, "Invalid Format");
                 return 0;   
             }
             }
@@ -119,7 +120,7 @@ namespace AGE
     
         static const uint32_t s_MaxFramebufferSize = 8192;
     
-        OpenGLFrameBuffer::OpenGLFrameBuffer(const FrameBufferSpecification& Spec)
+OpenGLFrameBuffer::OpenGLFrameBuffer(const FrameBufferSpecification& Spec)
             :m_Specification(Spec)
         {
             for (auto FBSpec : m_Specification.Attachments.Attachments)
@@ -136,13 +137,15 @@ namespace AGE
 
             Invalidate();
         }
-        OpenGLFrameBuffer::~OpenGLFrameBuffer()
+OpenGLFrameBuffer::~OpenGLFrameBuffer()
         {
             glDeleteFramebuffers(1, &m_RendererID);
             glDeleteTextures((int)m_ColorAttachments.size(), m_ColorAttachments.data());
             glDeleteTextures(1, &m_DepthAttachment);
         }
-        void OpenGLFrameBuffer::Invalidate()
+        
+
+void OpenGLFrameBuffer::Invalidate()
         {
     
             if (m_RendererID)
@@ -209,7 +212,7 @@ namespace AGE
             
             if (m_ColorAttachments.size() > 1)
             {
-                AGE_CORE_ASSERT(m_ColorAttachments.size() <= 4, "Color Attachments is not less than or equal to 4");
+                CoreLogger::Assert(m_ColorAttachments.size() <= 4, "Color Attachments is not less than or equal to 4");
                 GLenum Buffers[4] = { GL_COLOR_ATTACHMENT0, GL_COLOR_ATTACHMENT1, GL_COLOR_ATTACHMENT2, GL_COLOR_ATTACHMENT3 };
                 glDrawBuffers((int)m_ColorAttachments.size(), Buffers);
             }
@@ -221,10 +224,10 @@ namespace AGE
 
             CoreLogger::Error("OpenGL Error: {0}", glGetError());
     
-            AGE_CORE_ASSERT(glCheckFramebufferStatus(GL_FRAMEBUFFER) == GL_FRAMEBUFFER_COMPLETE, "Framebuffer is incomplete");
+            CoreLogger::Assert(glCheckFramebufferStatus(GL_FRAMEBUFFER) == GL_FRAMEBUFFER_COMPLETE, "Framebuffer is incomplete");
             glBindFramebuffer(GL_FRAMEBUFFER, 0);
         }
-        void OpenGLFrameBuffer::Resize(const uint32_t Width, const uint32_t Height)
+void OpenGLFrameBuffer::Resize(const uint32_t Width, const uint32_t Height)
         {
             if (Width == 0 || Height == 0 || Width > s_MaxFramebufferSize || Height > s_MaxFramebufferSize)
             {
@@ -237,21 +240,21 @@ namespace AGE
     
             Invalidate();
         }
-        void OpenGLFrameBuffer::Bind()
+void OpenGLFrameBuffer::Bind()
         {
             glBindFramebuffer(GL_FRAMEBUFFER, m_RendererID);
     
             glViewport(0, 0, (int)m_Specification.Width, (int)m_Specification.Height);
         }
-        void OpenGLFrameBuffer::Unbind()
+void OpenGLFrameBuffer::Unbind()
         {
             glBindFramebuffer(GL_FRAMEBUFFER, 0);
             
         }
 
-        int OpenGLFrameBuffer::ReadPixel(uint32_t AttachmentIndex, int x, int y)
+int OpenGLFrameBuffer::ReadPixel(uint32_t AttachmentIndex, int x, int y)
         {
-            AGE_CORE_ASSERT(AttachmentIndex < m_ColorAttachments.size(), "Attachment Index is larger than number of Elements in Color Attachments array!");
+            CoreLogger::Assert(AttachmentIndex < m_ColorAttachments.size(), "Attachment Index is larger than number of Elements in Color Attachments array!");
 
             glReadBuffer(GL_COLOR_ATTACHMENT0 + AttachmentIndex);
             int PixelData;
@@ -260,16 +263,16 @@ namespace AGE
             return PixelData;
         }
 
-        void OpenGLFrameBuffer::ClearAttachment(uint32_t Index , int Value)
+void OpenGLFrameBuffer::ClearAttachment(uint32_t Index , int Value)
         {
 
-            AGE_CORE_ASSERT(Index < m_ColorAttachments.size(), "Index is greater that number of color attachments!");
+            CoreLogger::Assert(Index < m_ColorAttachments.size(), "Index is greater that number of color attachments!");
 
             auto& Spec = m_ColorAttachmentSpecifications[Index];
             glClearTexImage(m_ColorAttachments[Index], 0, Utils::AGETextureFormatToGL(Spec.TextureFormat), GL_INT, &Value);
         }
 
-        void OpenGLFrameBuffer::OnEvent(Event& E)
+void OpenGLFrameBuffer::OnEvent(Event& E)
         {
         }
     

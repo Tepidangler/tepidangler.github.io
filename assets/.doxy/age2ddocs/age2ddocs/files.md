@@ -80,7 +80,6 @@ Here is a list of all files with brief descriptions:
                         * **file** [**Pointers.h**](_pointers_8h.md)     
                         * **file** [**ScriptableComponentStack.h**](_scriptable_component_stack_8h.md)     
                         * **file** [**Timer.h**](_timer_8h.md)     
-                        * **file** [**Types.h**](_types_8h.md)     
                         * **file** [**UUID.h**](_u_u_i_d_8h.md)     
                         * **file** [**Window.h**](_window_8h.md)     
                         * **file** [**Wwise\_IDs.h**](_wwise___i_ds_8h.md)     

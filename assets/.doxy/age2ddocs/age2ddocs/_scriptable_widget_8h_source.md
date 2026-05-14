@@ -36,35 +36,35 @@ namespace AGE
     class ScriptableWidget : public std::enable_shared_from_this<ScriptableWidget>
     {
     public:
-        virtual ~ScriptableWidget() {}
+virtual ~ScriptableWidget() {}
 
         template<typename T>
-        T& GetComponent()
+T& GetComponent()
         {
             return m_Entity.GetComponent<T>();
         }
 
         template<typename T, typename ... Args>
-        T& AddComponent(Args&& ... args)
+T& AddComponent(Args&& ... args)
         {
             return m_Entity.AddComponent<T>();
         }
 
         virtual void OnEvent(Event& E) {};
-        virtual std::string GetName() { return m_Name; }
-        virtual UUID GetID() { return m_Entity.GetUUID(); }
-        virtual bool IsVisible() {return bIsVisible;}
-        virtual void SetVisibility(bool Visibility) { bIsVisible = Visibility; }
+virtual std::string GetName() { return m_Name; }
+virtual UUID GetID() { return m_Entity.GetUUID(); }
+virtual bool IsVisible() {return bIsVisible;}
+virtual void SetVisibility(bool Visibility) { bIsVisible = Visibility; }
         RTTR_ENABLE()
         RTTR_REGISTRATION_FRIEND
 
     protected:
-        virtual void OnInit() {}
-        virtual void OnConstruct() {}
-        virtual void OnDestroy() {}
-        virtual void OnUpdate(TimeStep DeltaTime) {}
-        virtual void Reset() {}
-        virtual Entity& GetEntityHandle() { return m_Entity; }
+virtual void OnInit() {}
+virtual void OnConstruct() {}
+virtual void OnDestroy() {}
+virtual void OnUpdate(TimeStep DeltaTime) {}
+virtual void Reset() {}
+virtual Entity& GetEntityHandle() { return m_Entity; }
         std::string m_Name = "";
         bool bIsVisible = true;
         ScreenResolution m_Resolution;

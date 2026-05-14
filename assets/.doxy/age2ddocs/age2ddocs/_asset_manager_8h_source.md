@@ -33,17 +33,20 @@ namespace AGE
 
     struct AssetRegistry final
     {
-        AssetRegistry(AudioManager* AudioManagerPtr)
+AssetRegistry(AudioManager* AudioManagerPtr)
         {
             m_ShaderLibrary = CreateRef<ShaderLibrary>();
             m_AespriteManager = CreateScope<Aseprite>();
             m_AudioManager = AudioManagerPtr;
         }
-        ~AssetRegistry() = default;
-        AssetRegistry(const AssetRegistry&) = delete;
-        AssetRegistry(AssetRegistry&&) = delete;
+        COMMENT:
+CONFIDENCE: 1.0;
+
+~AssetRegistry() = default;
+AssetRegistry(const AssetRegistry&) = delete;
+AssetRegistry(AssetRegistry&&) = delete;
         
-        Ref<Texture2D> LoadTexture(const std::filesystem::path& FilePath)
+Ref<Texture2D> LoadTexture(const std::filesystem::path& FilePath)
         {
             UUID ID;
             if (IsTextureLoaded(FilePath, ID))
@@ -69,7 +72,7 @@ namespace AGE
             return GetTexture(Tex->GetAssetID());
         }
 
-        Ref<Texture2D> GetTexture(UUID ID)
+Ref<Texture2D> GetTexture(UUID ID)
         {
             auto it = m_TextureAssets.find(ID);
 
@@ -83,7 +86,7 @@ namespace AGE
                 return Ref<Texture2D>(nullptr);
             }
         }
-        Ref<Texture2D> GetTexture(const std::string& Name)
+Ref<Texture2D> GetTexture(const std::string& Name)
         {
             for (auto& T : m_TextureAssets)
             {
@@ -96,7 +99,7 @@ namespace AGE
             return Ref<Texture2D>(nullptr);
         }
 
-        bool IsTextureLoaded(const std::filesystem::path& Path)
+bool IsTextureLoaded(const std::filesystem::path& Path)
         {
             for (auto& T : m_TextureAssets)
             {
@@ -108,13 +111,13 @@ namespace AGE
             return false;
         }
 
-        bool IsTextureLoaded(const UUID ID)
+bool IsTextureLoaded(const UUID ID)
         {
             return m_TextureAssets[ID] == nullptr;
         }
 
 
-        bool IsTextureLoaded(const std::filesystem::path& Path, UUID& OutID)
+bool IsTextureLoaded(const std::filesystem::path& Path, UUID& OutID)
         {
             for (auto& T : m_TextureAssets)
             {
@@ -127,29 +130,29 @@ namespace AGE
             return false;
         }
 
-        void LoadShader(const std::string& FilePath)
+void LoadShader(const std::string& FilePath)
         {
             m_ShaderLibrary->Load(FilePath);
         }
-        void LoadShader(const std::string& FilePath1, const std::string& FilePath2)
+void LoadShader(const std::string& FilePath1, const std::string& FilePath2)
         {
             m_ShaderLibrary->Load(FilePath1, FilePath2);
         }
-        void LoadShader(const int Name, const std::string& Source)
+void LoadShader(const int Name, const std::string& Source)
         {
             m_ShaderLibrary->Load(Name, Source);
         }
-        Ref<Shader> GetShader(const std::string& Name)
+Ref<Shader> GetShader(const std::string& Name)
         {
             return m_ShaderLibrary->Get(Name);
         }
 
-        bool DoesShaderExist(const std::string& Name)
+bool DoesShaderExist(const std::string& Name)
         {
             return m_ShaderLibrary->Exists(Name);
         }
 
-        Ref<Scene> LoadScene(const std::filesystem::path& Filepath)
+Ref<Scene> LoadScene(const std::filesystem::path& Filepath)
         {
             CoreLogger::Info("Attempting to Load Scene from path {0}", Filepath.string());
             Ref<Scene> Asset = CreateRef<Scene>();
@@ -165,12 +168,12 @@ namespace AGE
             return Ref<Scene>(nullptr);
         }
 
-        Ref<Scene> GetScene(const UUID ID)
+Ref<Scene> GetScene(const UUID ID)
         {
             return m_Scenes[ID];
         }
 
-        Ref<Scene> GetScene(const std::string& Name)
+Ref<Scene> GetScene(const std::string& Name)
         {
             for (auto& S : m_Scenes)
             {
@@ -184,7 +187,7 @@ namespace AGE
             return nullptr;
         }
 
-        std::vector<Ref<Scene>> GetAllScenes()
+std::vector<Ref<Scene>> GetAllScenes()
         {
             std::vector<Ref<Scene>> Scenes;
             for (auto& S : m_Scenes)
@@ -195,7 +198,7 @@ namespace AGE
             return Scenes;
         }
 
-        bool IsSceneLoaded(const std::filesystem::path& Path)
+bool IsSceneLoaded(const std::filesystem::path& Path)
         {
             std::filesystem::path P = Path;
             std::string Name = Utils::EngineStatics::GetFilename(P);
@@ -210,7 +213,7 @@ namespace AGE
             return false;
         }
 
-        Ref<AGEFont> LoadFont(const std::filesystem::path& Filepath)
+Ref<AGEFont> LoadFont(const std::filesystem::path& Filepath)
         {
             Ref<AGEFont> NewFont = CreateRef<AGEFont>(Filepath);
 
@@ -222,7 +225,7 @@ namespace AGE
             return GetFont(ID);
         }
 
-        Ref<AGEFont> GetFont(const UUID& ID)
+Ref<AGEFont> GetFont(const UUID& ID)
         {
             auto it = m_Fonts.find(ID);
 
@@ -233,7 +236,7 @@ namespace AGE
             return Ref<AGEFont>(nullptr);
         }
 
-        Ref<AGEFont> GetFont(const std::string& Name)
+Ref<AGEFont> GetFont(const std::string& Name)
         {
             for (auto& F : m_Fonts)
             {
@@ -245,7 +248,7 @@ namespace AGE
 
             return Ref<AGEFont>(nullptr);
         }
-        const std::vector<std::string>& GetFontNames()
+const std::vector<std::string>& GetFontNames()
         {
             if (m_FontNames.empty())
             {
@@ -257,7 +260,7 @@ namespace AGE
             return m_FontNames;
         }
 
-        bool IsFontLoaded(const std::filesystem::path& Filepath)
+bool IsFontLoaded(const std::filesystem::path& Filepath)
         {
             for (auto& F : m_Fonts)
             {
@@ -270,13 +273,13 @@ namespace AGE
             return false;
         }
 
-        void RegisterFont(const Ref<AGEFont>& font)
+void RegisterFont(const Ref<AGEFont>& font)
         {
             m_Fonts.emplace(font->GetAssetID(), font);
         }
 
 
-        bool LoadSoundbank(const std::filesystem::path& Filepath)
+bool LoadSoundbank(const std::filesystem::path& Filepath)
         {
             std::filesystem::path Path = Filepath;
             switch (m_AudioManager->GetAudioEngineType())
@@ -305,7 +308,7 @@ namespace AGE
             return false;
         }
 
-        bool IsSoundbankLoaded(const std::filesystem::path& Filepath)
+bool IsSoundbankLoaded(const std::filesystem::path& Filepath)
         {
             std::filesystem::path Path = Filepath;
             switch (m_AudioManager->GetAudioEngineType())
@@ -313,7 +316,7 @@ namespace AGE
             case AudioEngineType::WWiseEngine:
             {
 #if WITH_WWISE
-                AGE_CORE_ASSERT(false, "Checking for loaded soundbanks with Wwise is not Implemented yet!");
+                CoreLogger::Assert(false, "Checking for loaded soundbanks with Wwise is not Implemented yet!");
                 return false;
 #else
                 CoreLogger::Error("Engine was not build with Wwise Support! Enable WITH_WWISE and provide a path to the SDK directory in CMake!");
@@ -342,7 +345,7 @@ namespace AGE
 
             return false;
         }
-        Ref<AudioSource> LoadSound(const std::filesystem::path& Filepath)
+Ref<AudioSource> LoadSound(const std::filesystem::path& Filepath)
         {
             Ref<AudioSource> Sound = CreateRef<AudioSource>(Filepath.string());
             UUID ID = UUID();
@@ -353,7 +356,7 @@ namespace AGE
             return GetSound(ID);
         }
 
-        Ref<AudioSource> GetSound(const UUID& ID)
+Ref<AudioSource> GetSound(const UUID& ID)
         {
             auto it = m_Sounds.find(ID);
 
@@ -365,7 +368,7 @@ namespace AGE
             return Ref<AudioSource>(nullptr);
         }
 
-        Ref<AudioSource> GetSound(const std::string& Name)
+Ref<AudioSource> GetSound(const std::string& Name)
         {
             for (auto& S : m_Sounds)
             {
@@ -378,7 +381,7 @@ namespace AGE
             return Ref<AudioSource>(nullptr);
         }
 
-        bool IsSoundLoaded(const std::filesystem::path& Filepath)
+bool IsSoundLoaded(const std::filesystem::path& Filepath)
         {
             for (auto& S : m_Sounds)
             {
@@ -392,27 +395,27 @@ namespace AGE
         }
 
 
-        std::unordered_map<UUID, Ref<Scene>>& GetScenes()
+std::unordered_map<UUID, Ref<Scene>>& GetScenes()
         {
             return m_Scenes;
         }
-        std::unordered_map<UUID, Ref<Texture2D>>& GetTextures()
+std::unordered_map<UUID, Ref<Texture2D>>& GetTextures()
         {
             return m_TextureAssets;
         }
-        std::unordered_map<UUID, Ref<AGEFont>>& GetFonts()
+std::unordered_map<UUID, Ref<AGEFont>>& GetFonts()
         {
             return m_Fonts;
         }
-        std::unordered_map<UUID, Ref<AudioSource>>& GetSounds()
+std::unordered_map<UUID, Ref<AudioSource>>& GetSounds()
         {
             return m_Sounds;
         }
-        std::unordered_map<UUID, Ref<SoundBank>>& GetSoundbanks()
+std::unordered_map<UUID, Ref<SoundBank>>& GetSoundbanks()
         {
             return m_SoundBanks;
         }
-        Ref<ShaderLibrary>& GetShaders()
+Ref<ShaderLibrary>& GetShaders()
         {
             return m_ShaderLibrary;
         }
@@ -431,10 +434,10 @@ namespace AGE
     class AssetPak final
     {
     public:
-        AssetPak() = default;
-        ~AssetPak() = default;
-        AssetPak(const AssetPak&) = delete;
-        AssetPak(AssetPak&&) = delete;
+AssetPak() = default;
+~AssetPak() = default;
+AssetPak(const AssetPak&) = delete;
+AssetPak(AssetPak&&) = delete;
 
     //private:
 
@@ -447,13 +450,13 @@ namespace AGE
     {
     public:
 
-        static AssetManager& Get() { return *s_Instance; }
+static AssetManager& Get() { return *s_Instance; }
 
-        AssetManager() = default;
+AssetManager() = default;
         AssetManager(const std::filesystem::path& GameContentPath);
         AssetManager(void* AddrToPakFile, size_t SizeOfPakFile = 0);
 
-        std::filesystem::path& GetGameContentPath() { return m_GameContentPath; }
+std::filesystem::path& GetGameContentPath() { return m_GameContentPath; }
         bool LoadPakFile(void* AddrToPakFile, size_t SizeOfPakFile = 0);
 
         Ref<Texture2D> LoadTexture(const std::filesystem::path& FilePath);
@@ -497,10 +500,10 @@ namespace AGE
 
         bool IsSoundLoaded(const std::filesystem::path& Filepath);
 
-        Ref<AssetRegistry> GetAssetRegistry() const { return m_Registry; }
+Ref<AssetRegistry> GetAssetRegistry() const { return m_Registry; }
 
         template<typename T>
-        void RegisterAsset(Ref<T> Asset)
+void RegisterAsset(Ref<T> Asset)
         {
             if (std::is_same<T, AudioSource>::value)
             {

@@ -19,7 +19,7 @@ namespace AGE
 {
     FBXParser* FBXParser::s_Instance = nullptr;
 
-    ufbx_scene* FBXParser::LoadFile(const std::filesystem::path& Path)
+ufbx_scene* FBXParser::LoadFile(const std::filesystem::path& Path)
     {
         ufbx_space_conversion Flags = ufbx_space_conversion::UFBX_SPACE_CONVERSION_ADJUST_TRANSFORMS;
         ufbx_load_opts Opts{};
@@ -39,7 +39,7 @@ namespace AGE
         
         return scene;
     }
-    void FBXParser::FreeScene(ufbx_scene* scene)
+void FBXParser::FreeScene(ufbx_scene* scene)
     {
         ufbx_free_scene(scene);
     }

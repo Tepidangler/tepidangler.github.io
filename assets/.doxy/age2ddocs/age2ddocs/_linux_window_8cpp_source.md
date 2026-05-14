@@ -36,37 +36,37 @@ namespace AGE
         static bool s_GLFWInitialized = false;
     LinuxWindow* LinuxWindow::s_Window;
 
-    static void GLFWErrorCallback(int Error, const char* Description)
+static void GLFWErrorCallback(int Error, const char* Description)
     {
         CoreLogger::Error("GLFW Error ({0}): {1}", Error, Description);
     }
 
-    Scope<AGEWindow> AGEWindow::Create(const WindowProps& Props)
+Scope<AGEWindow> AGEWindow::Create(const WindowProps& Props)
     {
         return CreateScope<LinuxWindow>(Props);
     }
 
-    LinuxWindow::LinuxWindow(const WindowProps& Props)
+LinuxWindow::LinuxWindow(const WindowProps& Props)
     {
         AGE_PROFILE_FUNCTION();
         Init(Props);
         s_Window = this;
     }
 
-    LinuxWindow::~LinuxWindow()
+LinuxWindow::~LinuxWindow()
     {
         AGE_PROFILE_FUNCTION();
         Shutdown();
     }
 
-    Vector2 LinuxWindow::GetMousePos()
+Vector2 LinuxWindow::GetMousePos()
     {
         double x, y;
         glfwGetCursorPos(m_Window,&x, &y);
         return {static_cast<float>(x),static_cast<float>(y)};
     }
 
-    void LinuxWindow::JoystickCallback(int jid, int event)
+void LinuxWindow::JoystickCallback(int jid, int event)
     {
 
         if (event == GLFW_CONNECTED)
@@ -82,13 +82,13 @@ namespace AGE
         }
     }
 
-    void LinuxWindow::SwitchRenderer()
+void LinuxWindow::SwitchRenderer()
     {
         RendererChangeEvent Event(this);
         m_RendererCallback(Event);
     }
 
-    void LinuxWindow::RebuildWindow()
+void LinuxWindow::RebuildWindow()
     {
         Shutdown();
         m_Context.reset();
@@ -100,14 +100,14 @@ namespace AGE
         Init(Props);
     }
 
-    void LinuxWindow::SetWindowIcon(const std::filesystem::path& Path)
+void LinuxWindow::SetWindowIcon(const std::filesystem::path& Path)
     {
         m_Images[0].pixels = stbi_load(Path.string().c_str(), &m_Images[0].width, &m_Images[0].height, 0, 4);
         glfwSetWindowIcon(m_Window, 1, m_Images);
         stbi_image_free(m_Images[0].pixels);
     }
 
-    void LinuxWindow::Init(const WindowProps& Props)
+void LinuxWindow::Init(const WindowProps& Props)
     {
         AGE_PROFILE_FUNCTION();
         m_Data.Title = Props.Title;
@@ -122,7 +122,7 @@ namespace AGE
         if (!s_GLFWInitialized)
         {
             int success = glfwInit();
-            AGE_CORE_ASSERT(success, "Could not initialize GLFW!");
+            CoreLogger::Assert(success, "Could not initialize GLFW!");
 
             glfwSetErrorCallback(GLFWErrorCallback);
 
@@ -318,7 +318,7 @@ namespace AGE
 
     }
 
-    void LinuxWindow::Shutdown()
+void LinuxWindow::Shutdown()
     {
         AGE_PROFILE_FUNCTION();
         glfwSetWindowShouldClose(m_Window, true);
@@ -327,7 +327,7 @@ namespace AGE
         s_GLFWInitialized = false;
     }
 
-    void LinuxWindow::OnUpdate()
+void LinuxWindow::OnUpdate()
     {
         AGE_PROFILE_FUNCTION();
         glfwPollEvents();
@@ -335,7 +335,7 @@ namespace AGE
         m_Context->SwapBuffers();
     }
 
-    void LinuxWindow::SetVSync(bool Enabled)
+void LinuxWindow::SetVSync(bool Enabled)
     {
         AGE_PROFILE_FUNCTION();
 
@@ -351,11 +351,11 @@ namespace AGE
         m_Data.VSync = Enabled;
     }
 
-    bool LinuxWindow::IsVSync() const
+bool LinuxWindow::IsVSync() const
     {
         return m_Data.VSync;
     }
-    void LinuxWindow::ProcessJoystickInput()
+void LinuxWindow::ProcessJoystickInput()
     {
     }
 } // AGE

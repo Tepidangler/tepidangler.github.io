@@ -108,10 +108,6 @@
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-drawarrays"><strong>DrawArrays</strong></a> (const Ref&lt; <a href="../class_a_g_e_1_1_vertex_array/"><strong>VertexArray</strong></a> &gt; &amp; VertexArray, uint32_t IndexCount) = 0<br></td>
-</tr>
-<tr>
-<td style="text-align: right;">virtual void</td>
 <td style="text-align: left;"><a href="#function-drawindexed-12"><strong>DrawIndexed</strong></a> (uint32_t IndexCount, uint32_t IndexStart, int VertexStart) = 0<br></td>
 </tr>
 <tr>
@@ -156,7 +152,7 @@
 </tr>
 <tr>
 <td style="text-align: right;">virtual</td>
-<td style="text-align: left;"><a href="#function-rendererapi"><strong>~RendererAPI</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-rendererapi"><strong>~RendererAPI</strong></a> () = default<br><em>Virtual destructor for</em> <a href="./"><em><strong>RendererAPI</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
@@ -171,15 +167,15 @@
 <tbody>
 <tr>
 <td style="text-align: right;">Scope&lt; <a href="./"><strong>RendererAPI</strong></a> &gt;</td>
-<td style="text-align: left;"><a href="#function-create"><strong>Create</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-create"><strong>Create</strong></a> () <br><em>Creates a new instance of the</em> <a href="./"><em><strong>RendererAPI</strong></em></a> <em>based on the current setting.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">API</td>
-<td style="text-align: left;"><a href="#function-getapi"><strong>GetAPI</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getapi"><strong>GetAPI</strong></a> () <br><em>This function returns the current API object used by the application.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setapi"><strong>SetAPI</strong></a> (RendererAPI::API Type) <br></td>
+<td style="text-align: left;"><a href="#function-setapi"><strong>SetAPI</strong></a> (RendererAPI::API Type) <br><em>This function sets the API type for the</em> <a href="./"><em><strong>RendererAPI</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
@@ -194,14 +190,6 @@
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-clear">function Clear</h3>
 <pre><code class="language-C++">virtual void AGE::RendererAPI::Clear () = 0
-</code></pre>
-<hr>
-
-<h3 id="function-drawarrays">function DrawArrays</h3>
-<pre><code class="language-C++">virtual void AGE::RendererAPI::DrawArrays (
-    const Ref&lt; VertexArray &gt; &amp; VertexArray,
-    uint32_t IndexCount
-) = 0
 </code></pre>
 <hr>
 
@@ -283,25 +271,45 @@
 <hr>
 
 <h3 id="function-rendererapi">function ~RendererAPI</h3>
+<p><em>Virtual destructor for</em> <a href="./"><em><strong>RendererAPI</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">virtual AGE::RendererAPI::~RendererAPI () = default
 </code></pre>
+<p>This function is responsible for freeing any resources that the <a href="./"><strong>RendererAPI</strong></a> object may have acquired during its lifetime, such as memory or graphics resources. It does not return a value and has no parameters. </p>
 <hr>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
 <h3 id="function-create">function Create</h3>
+<p><em>Creates a new instance of the</em> <a href="./"><em><strong>RendererAPI</strong></em></a> <em>based on the current setting.</em></p>
 <pre><code class="language-C++">static Scope&lt; RendererAPI &gt; AGE::RendererAPI::Create () 
 </code></pre>
+<p>This function creates and returns an instance of the appropriate <a href="./"><strong>RendererAPI</strong></a> class, depending on the currently set API. If no API is set (i.e., s_API is None), it asserts false with a message "RendererAPI::API::None is currently not supported!". For OpenGL, it returns a new instance of <a href="../class_a_g_e_1_1_open_g_l_renderer_a_p_i/"><strong>OpenGLRendererAPI</strong></a>. In all other cases, it asserts false with the message "Unknown Renderer API!" and returns nullptr.</p>
+<p><strong>Returns:</strong></p>
+<p>Scope&lt;RendererAPI&gt; - The newly created <a href="./"><strong>RendererAPI</strong></a> instance or nullptr if an invalid API is set.</p>
+<p>Creates a new instance of the <a href="./"><strong>RendererAPI</strong></a> based on the current setting.</p>
+<p>This function creates and returns an instance of either <a href="../class_a_g_e_1_1_open_g_l_renderer_a_p_i/"><strong>OpenGLRendererAPI</strong></a> or another type of <a href="./"><strong>RendererAPI</strong></a>, depending on what is currently set as the API. If no valid API is set (i.e., s_API is None), it asserts false with a message indicating that this case is not supported.</p>
+<p><strong>Returns:</strong></p>
+<p>Scope&lt;RendererAPI&gt; A new instance of the <a href="./"><strong>RendererAPI</strong></a>, or nullptr if an invalid API is detected. </p>
 <hr>
 
 <h3 id="function-getapi">function GetAPI</h3>
+<p><em>This function returns the current API object used by the application.</em> </p>
 <pre><code class="language-C++">static inline API AGE::RendererAPI::GetAPI () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>The currently active API object, or "Unknown" if no API is set. </p>
 <hr>
 
 <h3 id="function-setapi">function SetAPI</h3>
+<p><em>This function sets the API type for the</em> <a href="./"><em><strong>RendererAPI</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">static inline void AGE::RendererAPI::SetAPI (
     RendererAPI::API Type
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Type</code> The API type to be set, which can be one of the values defined in the RendererAPI::API enum. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <hr />

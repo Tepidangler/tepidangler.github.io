@@ -37,8 +37,8 @@
 | Type | Name |
 | ---: | :--- |
 | class | [**MouseButtonPressedEvent**](class_a_g_e_1_1_mouse_button_pressed_event.md) <br> |
-| class | [**MouseButtonReleasedEvent**](class_a_g_e_1_1_mouse_button_released_event.md) <br> |
-| class | [**MouseEvent**](class_a_g_e_1_1_mouse_event.md) <br> |
+| class | [**MouseButtonReleasedEvent**](class_a_g_e_1_1_mouse_button_released_event.md) <br>_Represents a mouse button released event._  |
+| class | [**MouseEvent**](class_a_g_e_1_1_mouse_event.md) <br>_Represents a mouse event._  |
 | class | [**MouseMovedEvent**](class_a_g_e_1_1_mouse_moved_event.md) <br> |
 | class | [**MouseScrolledEvent**](class_a_g_e_1_1_mouse_scrolled_event.md) <br> |
 

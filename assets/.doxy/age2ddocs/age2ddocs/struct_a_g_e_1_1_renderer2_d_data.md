@@ -50,7 +50,6 @@
 |  [**CircleVertex**](struct_a_g_e_1_1_circle_vertex.md) \* | [**CircleVertexBufferBase**](#variable-circlevertexbufferbase)   = `nullptr`<br> |
 |  [**CircleVertex**](struct_a_g_e_1_1_circle_vertex.md) \* | [**CircleVertexBufferPtr**](#variable-circlevertexbufferptr)   = `nullptr`<br> |
 |  [**TexCoordData**](struct_a_g_e_1_1_renderer2_d_data_1_1_tex_coord_data.md) | [**CoordBuffer**](#variable-coordbuffer)  <br> |
-|  Ref&lt; class [**Tilemap**](class_a_g_e_1_1_tilemap.md) &gt; | [**CurrentTilemap**](#variable-currenttilemap)  <br> |
 |  std::array&lt; Ref&lt; [**Texture2D**](class_a_g_e_1_1_texture2_d.md) &gt;, MaxTextureSlots &gt; | [**FontAtlasTextures**](#variable-fontatlastextures)  <br> |
 |  [**ShaderLibrary**](class_a_g_e_1_1_shader_library.md) | [**Library**](#variable-library)  <br> |
 |  Ref&lt; [**Shader**](class_a_g_e_1_1_shader.md) &gt; | [**LineShader**](#variable-lineshader)  <br> |
@@ -74,15 +73,12 @@
 |  [**TextVertex**](struct_a_g_e_1_1_text_vertex.md) \* | [**TextVertexBufferPtr**](#variable-textvertexbufferptr)   = `nullptr`<br> |
 |  uint32\_t | [**TextureSlotIndex**](#variable-textureslotindex)   = `1`<br> |
 |  std::array&lt; Ref&lt; [**Texture2D**](class_a_g_e_1_1_texture2_d.md) &gt;, MaxTextureSlots &gt; | [**TextureSlots**](#variable-textureslots)  <br> |
-|  uint32\_t | [**TileIndexCount**](#variable-tileindexcount)   = `0`<br> |
-|  std::array&lt; Ref&lt; [**Texture2D**](class_a_g_e_1_1_texture2_d.md) &gt;, MaxTextureSlots &gt; | [**TileSetTextures**](#variable-tilesettextures)  <br> |
+|  std::vector&lt; uint32\_t &gt; | [**TileIndexCounts**](#variable-tileindexcounts)  <br> |
 |  Ref&lt; [**Shader**](class_a_g_e_1_1_shader.md) &gt; | [**TileShader**](#variable-tileshader)  <br> |
-|  Ref&lt; [**VertexArray**](class_a_g_e_1_1_vertex_array.md) &gt; | [**TileVertexArray**](#variable-tilevertexarray)  <br> |
-|  [**TilemapVertex**](struct_a_g_e_1_1_tilemap_vertex.md) \* | [**TileVertexBufferBase**](#variable-tilevertexbufferbase)  <br> |
-|  [**TilemapVertex**](struct_a_g_e_1_1_tilemap_vertex.md) \* | [**TileVertexBufferPtr**](#variable-tilevertexbufferptr)  <br> |
-|  uint32\_t | [**TileVertexCount**](#variable-tilevertexcount)   = `0`<br> |
-|  [**Vector4**](struct_a_g_e_1_1_vector4.md) | [**TileVertexPositions**](#variable-tilevertexpositions)  <br> |
-|  uint32\_t | [**TilesetSlotIndex**](#variable-tilesetslotindex)   = `1`<br> |
+|  std::vector&lt; Ref&lt; [**VertexArray**](class_a_g_e_1_1_vertex_array.md) &gt; &gt; | [**TileVertexArrays**](#variable-tilevertexarrays)  <br> |
+|  std::vector&lt; [**TileVertex**](struct_a_g_e_1_1_tile_vertex.md) \* &gt; | [**TileVertexBufferBases**](#variable-tilevertexbufferbases)  <br> |
+|  std::vector&lt; [**TileVertex**](struct_a_g_e_1_1_tile_vertex.md) \* &gt; | [**TileVertexBufferPtrs**](#variable-tilevertexbufferptrs)  <br> |
+|  std::vector&lt; Ref&lt; [**VertexBuffer**](class_a_g_e_1_1_vertex_buffer.md) &gt; &gt; | [**TileVertexBuffers**](#variable-tilevertexbuffers)  <br> |
 |  std::unordered\_map&lt; std::string, Ref&lt; [**VertexBuffer**](class_a_g_e_1_1_vertex_buffer.md) &gt; &gt; | [**VertexBuffers**](#variable-vertexbuffers)  <br> |
 |  Ref&lt; [**Texture2D**](class_a_g_e_1_1_texture2_d.md) &gt; | [**WhiteTexture**](#variable-whitetexture)   = `nullptr`<br> |
 
@@ -113,7 +109,7 @@
 
 | Type | Name |
 | ---: | :--- |
-|  Ref&lt; [**VertexBuffer**](class_a_g_e_1_1_vertex_buffer.md) &gt; | [**GetVertexBuffer**](#function-getvertexbuffer) (const std::string & Name) <br> |
+|  Ref&lt; [**VertexBuffer**](class_a_g_e_1_1_vertex_buffer.md) &gt; | [**GetVertexBuffer**](#function-getvertexbuffer) (const std::string & Name) <br>_Retrieves a vertex buffer by its name._  |
 
 
 
@@ -255,19 +251,6 @@ CircleVertex* AGE::Renderer2DData::CircleVertexBufferPtr;
 
 ```C++
 TexCoordData AGE::Renderer2DData::CoordBuffer;
-```
-
-
-
-
-<hr>
-
-
-
-### variable CurrentTilemap 
-
-```C++
-Ref<class Tilemap> AGE::Renderer2DData::CurrentTilemap;
 ```
 
 
@@ -576,23 +559,10 @@ std::array<Ref<Texture2D>, MaxTextureSlots> AGE::Renderer2DData::TextureSlots;
 
 
 
-### variable TileIndexCount 
+### variable TileIndexCounts 
 
 ```C++
-uint32_t AGE::Renderer2DData::TileIndexCount;
-```
-
-
-
-
-<hr>
-
-
-
-### variable TileSetTextures 
-
-```C++
-std::array<Ref<Texture2D>, MaxTextureSlots> AGE::Renderer2DData::TileSetTextures;
+std::vector<uint32_t> AGE::Renderer2DData::TileIndexCounts;
 ```
 
 
@@ -615,10 +585,10 @@ Ref<Shader> AGE::Renderer2DData::TileShader;
 
 
 
-### variable TileVertexArray 
+### variable TileVertexArrays 
 
 ```C++
-Ref<VertexArray> AGE::Renderer2DData::TileVertexArray;
+std::vector<Ref<VertexArray> > AGE::Renderer2DData::TileVertexArrays;
 ```
 
 
@@ -628,10 +598,10 @@ Ref<VertexArray> AGE::Renderer2DData::TileVertexArray;
 
 
 
-### variable TileVertexBufferBase 
+### variable TileVertexBufferBases 
 
 ```C++
-TilemapVertex* AGE::Renderer2DData::TileVertexBufferBase;
+std::vector<TileVertex*> AGE::Renderer2DData::TileVertexBufferBases;
 ```
 
 
@@ -641,10 +611,10 @@ TilemapVertex* AGE::Renderer2DData::TileVertexBufferBase;
 
 
 
-### variable TileVertexBufferPtr 
+### variable TileVertexBufferPtrs 
 
 ```C++
-TilemapVertex* AGE::Renderer2DData::TileVertexBufferPtr;
+std::vector<TileVertex*> AGE::Renderer2DData::TileVertexBufferPtrs;
 ```
 
 
@@ -654,36 +624,10 @@ TilemapVertex* AGE::Renderer2DData::TileVertexBufferPtr;
 
 
 
-### variable TileVertexCount 
+### variable TileVertexBuffers 
 
 ```C++
-uint32_t AGE::Renderer2DData::TileVertexCount;
-```
-
-
-
-
-<hr>
-
-
-
-### variable TileVertexPositions 
-
-```C++
-Vector4 AGE::Renderer2DData::TileVertexPositions[6];
-```
-
-
-
-
-<hr>
-
-
-
-### variable TilesetSlotIndex 
-
-```C++
-uint32_t AGE::Renderer2DData::TilesetSlotIndex;
+std::vector<Ref<VertexBuffer> > AGE::Renderer2DData::TileVertexBuffers;
 ```
 
 
@@ -777,6 +721,7 @@ const uint32_t AGE::Renderer2DData::MaxVertices;
 
 ### function GetVertexBuffer 
 
+_Retrieves a vertex buffer by its name._ 
 ```C++
 inline Ref< VertexBuffer > AGE::Renderer2DData::GetVertexBuffer (
     const std::string & Name
@@ -785,6 +730,47 @@ inline Ref< VertexBuffer > AGE::Renderer2DData::GetVertexBuffer (
 
 
 
+This function takes in the name of a vertex buffer and returns it if it exists. If no such buffer exists, an empty reference is returned.
+
+
+
+
+**Parameters:**
+
+
+* `Name` The name of the vertex buffer to retrieve. 
+
+
+
+**Returns:**
+
+A reference to the requested vertex buffer or an empty reference if no such buffer exists.
+
+
+Retrieves a reference to the vertex buffer with the given name.
+
+
+This function takes in a string parameter 'Name' which is used as an identifier for the desired vertex buffer. It then returns a Ref&lt;VertexBuffer&gt; object, which can be utilized to access and manipulate the vertex buffer data. If no vertex buffer exists with the provided name, this function will return an empty reference.
+
+
+
+
+**Parameters:**
+
+
+* `Name` The name of the vertex buffer to retrieve. 
+
+
+
+**Returns:**
+
+A reference to the desired vertex buffer or an empty reference if no such buffer exists. 
+
+
+
+
+
+        
 
 <hr>
 

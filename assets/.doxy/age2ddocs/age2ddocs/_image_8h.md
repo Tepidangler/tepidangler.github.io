@@ -40,7 +40,7 @@
 | Type | Name |
 | ---: | :--- |
 | class | [**Image**](class_a_g_e_1_1_image.md) <br> |
-| struct | [**ImageSpecification**](struct_a_g_e_1_1_image_specification.md) <br> |
+| struct | [**ImageSpecification**](struct_a_g_e_1_1_image_specification.md) <br>_Constructor for_ [_**ImageSpecification**_](struct_a_g_e_1_1_image_specification.md) _class._ |
 
 
 

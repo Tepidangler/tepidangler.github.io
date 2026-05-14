@@ -63,16 +63,16 @@
 
 | Type | Name |
 | ---: | :--- |
-|   | [**BoxCollider2DComponent**](#function-boxcollider2dcomponent-12) () = default<br> |
-|   | [**BoxCollider2DComponent**](#function-boxcollider2dcomponent-22) (const [**BoxCollider2DComponent**](struct_a_g_e_1_1_box_collider2_d_component.md) &) = default<br> |
+|   | [**BoxCollider2DComponent**](#function-boxcollider2dcomponent-12) () = default<br>_Default constructor for the_ [_**BoxCollider2DComponent**_](struct_a_g_e_1_1_box_collider2_d_component.md) _class._ |
+|   | [**BoxCollider2DComponent**](#function-boxcollider2dcomponent-22) (const [**BoxCollider2DComponent**](struct_a_g_e_1_1_box_collider2_d_component.md) &) = default<br>_Default copy constructor for the_ [_**BoxCollider2DComponent**_](struct_a_g_e_1_1_box_collider2_d_component.md) _class. This function is used to create a new instance of the class by copying an existing one, which can be useful in certain situations like initializing an object with values from another._ |
 
 
 ## Public Static Functions
 
 | Type | Name |
 | ---: | :--- |
-|  void | [**Deserialize**](#function-deserialize) ([**DataReader**](class_a_g_e_1_1_data_reader.md) \* Serializer, [**BoxCollider2DComponent**](struct_a_g_e_1_1_box_collider2_d_component.md) & Data) <br> |
-|  void | [**Serialize**](#function-serialize) ([**DataWriter**](class_a_g_e_1_1_data_writer.md) \* Serializer, const [**BoxCollider2DComponent**](struct_a_g_e_1_1_box_collider2_d_component.md) & Data) <br> |
+|  void | [**Deserialize**](#function-deserialize) ([**DataReader**](class_a_g_e_1_1_data_reader.md) \* Serializer, [**BoxCollider2DComponent**](struct_a_g_e_1_1_box_collider2_d_component.md) & Data) <br>_This function deserializes a_ [_**BoxCollider2DComponent**_](struct_a_g_e_1_1_box_collider2_d_component.md) _from the provided_[_**DataReader**_](class_a_g_e_1_1_data_reader.md) _._ |
+|  void | [**Serialize**](#function-serialize) ([**DataWriter**](class_a_g_e_1_1_data_writer.md) \* Serializer, const [**BoxCollider2DComponent**](struct_a_g_e_1_1_box_collider2_d_component.md) & Data) <br>_This function serializes the data of a_ [_**BoxCollider2DComponent**_](struct_a_g_e_1_1_box_collider2_d_component.md) _into a_[_**DataWriter**_](class_a_g_e_1_1_data_writer.md) _._ |
 
 
 
@@ -212,12 +212,17 @@ bool AGE::BoxCollider2DComponent::bGeneratePhysicsEvents;
 
 ### function BoxCollider2DComponent [1/2]
 
+_Default constructor for the_ [_**BoxCollider2DComponent**_](struct_a_g_e_1_1_box_collider2_d_component.md) _class._
 ```C++
 AGE::BoxCollider2DComponent::BoxCollider2DComponent () = default
 ```
 
 
 
+This function initializes a new instance of the [**BoxCollider2DComponent**](struct_a_g_e_1_1_box_collider2_d_component.md) class with default values. 
+
+
+        
 
 <hr>
 
@@ -225,6 +230,7 @@ AGE::BoxCollider2DComponent::BoxCollider2DComponent () = default
 
 ### function BoxCollider2DComponent [2/2]
 
+_Default copy constructor for the_ [_**BoxCollider2DComponent**_](struct_a_g_e_1_1_box_collider2_d_component.md) _class. This function is used to create a new instance of the class by copying an existing one, which can be useful in certain situations like initializing an object with values from another._
 ```C++
 AGE::BoxCollider2DComponent::BoxCollider2DComponent (
     const BoxCollider2DComponent &
@@ -234,6 +240,17 @@ AGE::BoxCollider2DComponent::BoxCollider2DComponent (
 
 
 
+
+**Parameters:**
+
+
+* `other` The existing instance of the class that will be copied. 
+
+
+
+
+        
+
 <hr>
 ## Public Static Functions Documentation
 
@@ -242,6 +259,7 @@ AGE::BoxCollider2DComponent::BoxCollider2DComponent (
 
 ### function Deserialize 
 
+_This function deserializes a_ [_**BoxCollider2DComponent**_](struct_a_g_e_1_1_box_collider2_d_component.md) _from the provided_[_**DataReader**_](class_a_g_e_1_1_data_reader.md) _._
 ```C++
 static inline void AGE::BoxCollider2DComponent::Deserialize (
     DataReader * Serializer,
@@ -252,12 +270,32 @@ static inline void AGE::BoxCollider2DComponent::Deserialize (
 
 
 
+
+**Parameters:**
+
+
+* `Serializer` A pointer to the [**DataReader**](class_a_g_e_1_1_data_reader.md) instance that contains the serialized data. 
+* `Data` The [**BoxCollider2DComponent**](struct_a_g_e_1_1_box_collider2_d_component.md) to be populated with the deserialized data.
+
+
+
+**Returns:**
+
+void 
+
+
+
+
+
+        
+
 <hr>
 
 
 
 ### function Serialize 
 
+_This function serializes the data of a_ [_**BoxCollider2DComponent**_](struct_a_g_e_1_1_box_collider2_d_component.md) _into a_[_**DataWriter**_](class_a_g_e_1_1_data_writer.md) _._
 ```C++
 static inline void AGE::BoxCollider2DComponent::Serialize (
     DataWriter * Serializer,
@@ -267,6 +305,25 @@ static inline void AGE::BoxCollider2DComponent::Serialize (
 
 
 
+
+
+**Parameters:**
+
+
+* `Serializer` Pointer to the [**DataWriter**](class_a_g_e_1_1_data_writer.md) object where the data will be written. 
+* `Data` The [**BoxCollider2DComponent**](struct_a_g_e_1_1_box_collider2_d_component.md) whose data is being serialized.
+
+
+
+**Returns:**
+
+void 
+
+
+
+
+
+        
 
 <hr>
 

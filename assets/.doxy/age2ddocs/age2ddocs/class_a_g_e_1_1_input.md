@@ -8,8 +8,9 @@
 
 
 
+_This class provides methods for checking the state of input devices._ [More...](#detailed-description)
 
-
+* `#include <Input.h>`
 
 
 
@@ -94,6 +95,19 @@
 
 
 
+## Detailed Description
+
+
+It includes functions to check if a key, mouse button or gamepad button is pressed, as well as getting the position of the mouse and joystick.
+
+
+This class provides methods for checking the state of input devices.
+
+
+It includes functions to check if a key, mouse button or gamepad button is pressed, as well as getting the position of the mouse and joystick. 
+
+
+    
 ## Public Static Functions Documentation
 
 

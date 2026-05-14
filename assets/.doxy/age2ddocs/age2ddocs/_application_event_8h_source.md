@@ -14,17 +14,17 @@
 
 namespace AGE 
 {
-    class AGE_API WindowResizeEvent : public Event
+class AGE_API WindowResizeEvent : public Event
     {
     public:
         WindowResizeEvent(unsigned int Width, unsigned int Height)
             : m_Width(Width), m_Height(Height) {}
 
 
-        inline unsigned int GetWidth() const { return m_Width; }
-        inline unsigned int GetHeight() const { return m_Height; }
+inline unsigned int GetWidth() const { return m_Width; }
+inline unsigned int GetHeight() const { return m_Height; }
 
-        std::string ToString() const override
+std::string ToString() const override
         {
             std::stringstream ss;
             ss << "WindowResizeEvent: " << m_Width << ", " << m_Height;
@@ -38,17 +38,18 @@ namespace AGE
         unsigned int m_Height;
     };
 
-    class AGE_API FramebufferResizeEvent : public Event
+
+class AGE_API FramebufferResizeEvent : public Event
     {
     public:
         FramebufferResizeEvent(unsigned int Width, unsigned int Height)
             : m_Width(Width), m_Height(Height) {}
 
 
-        inline unsigned int GetWidth() const { return m_Width; }
-        inline unsigned int GetHeight() const { return m_Height; }
+inline unsigned int GetWidth() const { return m_Width; }
+inline unsigned int GetHeight() const { return m_Height; }
 
-        std::string ToString() const override
+std::string ToString() const override
         {
             std::stringstream ss;
             ss << "FramebufferResizeEvent: " << m_Width << ", " << m_Height;
@@ -130,16 +131,16 @@ namespace AGE
         EVENT_CLASS_CATEGORY(EventCategoryApplication)
     };
 
-    class AGE_API StringCopyEvent : public Event
+class AGE_API StringCopyEvent : public Event
     {
     public:
         StringCopyEvent(const char* String)
             : m_String(String) {}
 
 
-        inline const char* GetString() { return m_String; }
+inline const char* GetString() { return m_String; }
 
-        std::string ToString() const override
+std::string ToString() const override
         {
             std::stringstream ss;
             ss << "String Copy Event: " << m_String << " was copied to clipboard";
@@ -153,16 +154,16 @@ namespace AGE
 
     };
 
-    class AGE_API StringPasteEvent : public Event
+class AGE_API StringPasteEvent : public Event
     {
     public:
         StringPasteEvent(const char* String)
             : m_String(String) {}
 
 
-        inline const char* GetString() { return m_String; }
+inline const char* GetString() { return m_String; }
 
-        std::string ToString() const override
+std::string ToString() const override
         {
             std::stringstream ss;
             ss << "String Paste Event: " << m_String << " was pasted from clipboard";
@@ -178,7 +179,7 @@ namespace AGE
     class ProjectCreatedEvent : public Event
     {
     public:
-        ProjectCreatedEvent(){}
+ProjectCreatedEvent(){}
 
         EVENT_CLASS_TYPE(ProjectCreated)
         EVENT_CLASS_CATEGORY(EventCategoryApplication)
@@ -186,7 +187,7 @@ namespace AGE
     class ProjectLoadedEvent : public Event
     {
     public:
-        ProjectLoadedEvent(){}
+ProjectLoadedEvent(){}
 
         EVENT_CLASS_TYPE(ProjectLoaded)
         EVENT_CLASS_CATEGORY(EventCategoryApplication)

@@ -16,12 +16,26 @@
           <declname>rhs</declname>
         </param>
         <briefdescription>
+<para>Encodes an audio source into a Node object. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes in a reference to an AudioSource and encodes it into a Node object. The encoded data is then pushed back onto the Node object.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to an AudioSource that needs to be encoded. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns a Node object containing the encoded audio source. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" line="131" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" bodystart="131" bodyend="138"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" line="207" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" bodystart="207" bodyend="214"/>
       </memberdef>
       <memberdef kind="function" id="struct_y_a_m_l_1_1convert_3_01_a_g_e_1_1_ref_3_01_a_g_e_1_1_audio_source_01_4_01_4_1aadbe150775cc1f1c24e0ff89f16672d3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -38,19 +52,41 @@
           <declname>rhs</declname>
         </param>
         <briefdescription>
+<para>Decodes a Node object into an AGE::Ref&lt;AGE::AudioSource&gt;. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes in a const reference to a Node object and attempts to decode it into an instance of AGE::Ref&lt;AGE::AudioSource&gt;. If the node is not a sequence or if it&apos;s empty, the function returns false indicating failure. Otherwise, it sets rhs to the first element in the Node object and returns true.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input Node object to be decoded. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output AGE::Ref&lt;AGE::AudioSource&gt; instance where the decoded data will be stored. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if successful, false otherwise. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" line="140" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" bodystart="140" bodyend="149"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" line="228" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" bodystart="228" bodyend="237"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" line="129" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" bodystart="130" bodyend="150"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" line="197" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" bodystart="198" bodyend="238"/>
     <listofallmembers>
       <member refid="struct_y_a_m_l_1_1convert_3_01_a_g_e_1_1_ref_3_01_a_g_e_1_1_audio_source_01_4_01_4_1aadbe150775cc1f1c24e0ff89f16672d3" prot="public" virt="non-virtual"><scope>YAML::convert&lt; AGE::Ref&lt; AGE::AudioSource &gt; &gt;</scope><name>decode</name></member>
       <member refid="struct_y_a_m_l_1_1convert_3_01_a_g_e_1_1_ref_3_01_a_g_e_1_1_audio_source_01_4_01_4_1ad870d6d0770da0ab0a54e0274f8c5480" prot="public" virt="non-virtual"><scope>YAML::convert&lt; AGE::Ref&lt; AGE::AudioSource &gt; &gt;</scope><name>encode</name></member>

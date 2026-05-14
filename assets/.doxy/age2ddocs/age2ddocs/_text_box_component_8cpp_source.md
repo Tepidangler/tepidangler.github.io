@@ -27,14 +27,14 @@ RTTR_REGISTRATION{
 
 namespace AGE
 {
-    TextBoxComponent::TextBoxComponent(const std::string &Name)
+TextBoxComponent::TextBoxComponent(const std::string &Name)
     {
         m_Name = Name;
         m_Type = UIComponentType::TextBoxComponent;
         m_StringProperties.TextFont = AGEFont::GetDefault();
     }
 
-    void TextBoxComponent::OnUpdate(TimeStep DeltaTime)
+void TextBoxComponent::OnUpdate(TimeStep DeltaTime)
     {
         if (m_CompProperties.Visible)
         {
@@ -46,11 +46,13 @@ namespace AGE
         }
     }
 
-    void TextBoxComponent::OnEvent(Event &Event)
+void TextBoxComponent::OnEvent(Event &Event)
     {
     }
 
-    void TextBoxComponent::DrawFontSelectionComboBox()
+    
+
+void TextBoxComponent::DrawFontSelectionComboBox()
     {
         std::unordered_map<UUID,Ref<AGEFont>> Fonts = AssetManager::Get().GetAssetRegistry()->GetFonts();
         std::vector<std::string> FontNames = AssetManager::Get().GetAssetRegistry()->GetFontNames();
@@ -80,7 +82,8 @@ namespace AGE
         }
     }
 
-    void TextBoxComponent::DrawContent()
+
+void TextBoxComponent::DrawContent()
     {
         ImGui::Text("String Properties");
         ImGui::Text("Text");ImGui::SameLine();
@@ -102,7 +105,7 @@ namespace AGE
     }
 
     template<>
-    TextBoxComponent* UIComponent::As()
+TextBoxComponent* UIComponent::As()
     {
         return (TextBoxComponent*)this;
     }

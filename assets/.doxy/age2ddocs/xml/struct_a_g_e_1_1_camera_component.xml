@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" line="248" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" bodystart="248" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" line="492" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" bodystart="492" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_a_g_e_1_1_camera_component_1a9fa2071b683027abfcc7581dcbf6a0f7" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" line="249" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" bodystart="249" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" line="493" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" bodystart="493" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_a_g_e_1_1_camera_component_1aa0b6e6e4a2acf17da86fdb774d41a18d" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -45,7 +45,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" line="250" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" bodystart="250" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" line="494" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" bodystart="494" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_a_g_e_1_1_camera_component_1a40ef39c6ddd01fa7ec0fb3dc79eb2fba" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -60,7 +60,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" line="251" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" bodystart="251" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" line="495" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" bodystart="495" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -71,12 +71,13 @@
         <name>CameraComponent</name>
         <qualifiedname>AGE::CameraComponent::CameraComponent</qualifiedname>
         <briefdescription>
+<para>Default constructor for the <ref refid="struct_a_g_e_1_1_camera_component" kindref="compound">CameraComponent</ref> class. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" line="253" column="1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" line="500" column="1"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_camera_component_1aae345c7cca30170baae49bb2b05d39be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -88,12 +89,24 @@
           <type>const <ref refid="struct_a_g_e_1_1_camera_component" kindref="compound">CameraComponent</ref> &amp;</type>
         </param>
         <briefdescription>
+<para>Default copy constructor for the <ref refid="struct_a_g_e_1_1_camera_component" kindref="compound">CameraComponent</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is used to create a new instance of the <ref refid="struct_a_g_e_1_1_camera_component" kindref="compound">CameraComponent</ref> class by copying an existing one. It uses the &apos;= default&apos; syntax, which tells the compiler to use its default implementation for this member function.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_camera_component" kindref="compound">CameraComponent</ref> object to be copied. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" line="254" column="1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" line="508" column="1"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_camera_component_1a07e95555ddf6fcc53e91719a8b06eacd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -102,12 +115,16 @@
         <name>Activate</name>
         <qualifiedname>AGE::CameraComponent::Activate</qualifiedname>
         <briefdescription>
+<para>This function is used to activate the object by setting its primary flag to true. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" line="267" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" bodystart="267" bodyend="270"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" line="542" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" bodystart="542" bodyend="545"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_camera_component_1a61f7f1e2a74daf98471df78e584fd385" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -116,12 +133,16 @@
         <name>Deactivate</name>
         <qualifiedname>AGE::CameraComponent::Deactivate</qualifiedname>
         <briefdescription>
+<para>This function deactivates the object by setting bPrimary to false. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" line="272" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" bodystart="272" bodyend="275"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" line="551" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" bodystart="551" bodyend="554"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -140,12 +161,31 @@
           <declname>Data</declname>
         </param>
         <briefdescription>
+<para>This function serializes a camera component into a data writer object. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Serializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the data writer object where the data will be written. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">Data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The camera component that needs to be serialized. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" line="257" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" bodystart="257" bodyend="260"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" line="517" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" bodystart="517" bodyend="520"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_camera_component_1abf5f9b4e9d48be33276c080133f23f82" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -162,12 +202,34 @@
           <declname>Data</declname>
         </param>
         <briefdescription>
+<para>This function deserializes a <ref refid="struct_a_g_e_1_1_camera_component" kindref="compound">CameraComponent</ref> object from the provided <ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref> instance. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function reads data from the serialized format and populates the <ref refid="struct_a_g_e_1_1_camera_component" kindref="compound">CameraComponent</ref> reference with the corresponding values.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Serializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the <ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref> instance that provides the serialized data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to a <ref refid="struct_a_g_e_1_1_camera_component" kindref="compound">CameraComponent</ref> object where the deserialized data will be stored.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" line="262" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" bodystart="262" bodyend="265"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" line="532" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" bodystart="532" bodyend="535"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -223,7 +285,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" line="245" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" bodystart="246" bodyend="278"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" line="489" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Public/Components.h" bodystart="490" bodyend="557"/>
     <listofallmembers>
       <member refid="struct_a_g_e_1_1_camera_component_1a07e95555ddf6fcc53e91719a8b06eacd" prot="public" virt="non-virtual"><scope>AGE::CameraComponent</scope><name>Activate</name></member>
       <member refid="struct_a_g_e_1_1_camera_component_1aa0b6e6e4a2acf17da86fdb774d41a18d" prot="public" virt="non-virtual"><scope>AGE::CameraComponent</scope><name>bFixedAspectRatio</name></member>

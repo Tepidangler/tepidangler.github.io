@@ -15,7 +15,7 @@
 
 namespace AGE
 {
-    Scope<Pipeline> Pipeline::Create()
+Scope<Pipeline> Pipeline::Create()
     {
         switch (RendererAPI::GetAPI())
         {
@@ -32,9 +32,9 @@ namespace AGE
     }
 
     template<typename T>
-    T* Pipeline::As()
+T* Pipeline::As()
     {
-        AGE_CORE_ASSERT(false, "As() Failed!");
+        CoreLogger::Assert(false, "As() Failed!");
         return nullptr;
     }
 }

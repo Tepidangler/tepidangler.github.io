@@ -25,11 +25,11 @@ namespace AGE
         void OnUpdate(TimeStep DeltaTime) override;
         void OnEvent(Event& Event) override;
 
-        void CallSerialize(DataWriter* Serializer) override
+void CallSerialize(DataWriter* Serializer) override
         {
             //Serializer->WriteObject<VerticalBoxComponent>(*this);
         }
-        void CallDeserialize(DataReader* Serializer) override
+void CallDeserialize(DataReader* Serializer) override
         {
             //Serializer->ReadObject<VerticalBoxComponent>(*this);
         }

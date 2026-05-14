@@ -112,6 +112,14 @@
 <td style="text-align: left;"><a href="#variable-val"><strong>Val</strong></a>  <br></td>
 </tr>
 <tr>
+<td style="text-align: right;">COMMENT</td>
+<td style="text-align: left;"><a href="#variable-__pad0__"><strong>__pad0__</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">COMMENT</td>
+<td style="text-align: left;"><a href="#variable-__pad1__"><strong>__pad1__</strong></a>  <br></td>
+</tr>
+<tr>
 <td style="text-align: right;">bool</td>
 <td style="text-align: left;"><a href="#variable-bisutilfunction"><strong>bIsUtilFunction</strong></a>   = <code>false</code><br></td>
 </tr>
@@ -128,11 +136,11 @@
 <tbody>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-agefunction-13"><strong>AGEFunction</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-agefunction-13"><strong>AGEFunction</strong></a> () = default<br><em>Default constructor for the</em> <a href="./"><em><strong>AGEFunction</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-agefunction-23"><strong>AGEFunction</strong></a> (const std::string &amp; Exec, std::vector&lt; rttr::variant &gt; Arguments, E * Value=nullptr, Ref&lt; R &gt; &amp; Ptr=nullptr) <br></td>
+<td style="text-align: left;"><a href="#function-agefunction-23"><strong>AGEFunction</strong></a> (const std::string &amp; Exec, std::vector&lt; rttr::variant &gt; Arguments, E * Value=nullptr, Ref&lt; R &gt; &amp; Ptr=nullptr) <br><em>Constructs an instance of the class with given parameters.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
@@ -140,11 +148,11 @@
 </tr>
 <tr>
 <td style="text-align: right;">rttr::variant</td>
-<td style="text-align: left;"><a href="#function-execute"><strong>Execute</strong></a> (<a href="../class_a_g_e_1_1_time_step/"><strong>TimeStep</strong></a> DeltaTime=0.f) <br></td>
+<td style="text-align: left;"><a href="#function-execute"><strong>Execute</strong></a> (<a href="../class_a_g_e_1_1_time_step/"><strong>TimeStep</strong></a> DeltaTime=0.f) <br><em>Executes the function stored in Reference with optional delta time as input.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual</td>
-<td style="text-align: left;"><a href="#function-agefunction"><strong>~AGEFunction</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-agefunction"><strong>~AGEFunction</strong></a> () = default<br><em>Virtual destructor for the</em> <a href="./"><em><strong>AGEFunction</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
@@ -159,11 +167,11 @@
 <tbody>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-deserialize"><strong>Deserialize</strong></a> (<a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> * Serializer, <a href="./"><strong>AGEFunction</strong></a> &amp; Data) <br></td>
+<td style="text-align: left;"><a href="#function-deserialize"><strong>Deserialize</strong></a> (<a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> * Serializer, <a href="./"><strong>AGEFunction</strong></a> &amp; Data) <br><em>Deserialize function data from a</em> <a href="../class_a_g_e_1_1_data_reader/"><em><strong>DataReader</strong></em></a> <em>into an</em><a href="./"><em><strong>AGEFunction</strong></em></a> <em>object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-serialize"><strong>Serialize</strong></a> (<a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> * Serializer, const <a href="./"><strong>AGEFunction</strong></a> &amp; Data) <br></td>
+<td style="text-align: left;"><a href="#function-serialize"><strong>Serialize</strong></a> (<a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> * Serializer, const <a href="./"><strong>AGEFunction</strong></a> &amp; Data) <br><em>This function serializes the</em> <a href="./"><em><strong>AGEFunction</strong></em></a> <em>data into a</em><a href="../class_a_g_e_1_1_data_writer/"><em><strong>DataWriter</strong></em></a> <em>object.</em></td>
 </tr>
 </tbody>
 </table>
@@ -178,7 +186,7 @@
 <tbody>
 <tr>
 <td style="text-align: right;">rttr::variant</td>
-<td style="text-align: left;"><a href="#function-function"><strong>Function</strong></a> (Ref&lt; R &gt; &amp; Ptr, <a href="../class_a_g_e_1_1_time_step/"><strong>TimeStep</strong></a> DeltaTime=0.f) <br></td>
+<td style="text-align: left;"><a href="#function-function"><strong>Function</strong></a> (Ref&lt; R &gt; &amp; Ptr, <a href="../class_a_g_e_1_1_time_step/"><strong>TimeStep</strong></a> DeltaTime=0.f) <br><em>This function is used to execute a method on an entity. It can be either a utility function or a normal method of the entity's class.</em></td>
 </tr>
 </tbody>
 </table>
@@ -213,17 +221,33 @@
 </code></pre>
 <hr>
 
+<h3 id="variable-__pad0__">variable __pad0__</h3>
+<pre><code class="language-C++">COMMENT AGE::AGEFunction&lt; R, E &gt;::__pad0__;
+</code></pre>
+<hr>
+
+<h3 id="variable-__pad1__">variable __pad1__</h3>
+<pre><code class="language-C++">COMMENT AGE::AGEFunction&lt; R, E &gt;::__pad1__;
+</code></pre>
+<hr>
+
 <h3 id="variable-bisutilfunction">variable bIsUtilFunction</h3>
 <pre><code class="language-C++">bool AGE::AGEFunction&lt; R, E &gt;::bIsUtilFunction;
 </code></pre>
 <hr>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-agefunction-13">function AGEFunction [1/3]</h3>
+<p><em>Default constructor for the</em> <a href="./"><em><strong>AGEFunction</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::AGEFunction::AGEFunction () = default
 </code></pre>
+<p>Default constructor for the AGE class.</p>
+<p>This function initializes an instance of the AGE class with its default values. It is used to create a new object without any specific initialization.</p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-agefunction-23">function AGEFunction [2/3]</h3>
+<p><em>Constructs an instance of the class with given parameters.</em> </p>
 <pre><code class="language-C++">inline AGE::AGEFunction::AGEFunction (
     const std::string &amp; Exec,
     std::vector&lt; rttr::variant &gt; Arguments,
@@ -231,6 +255,21 @@
     Ref&lt; R &gt; &amp; Ptr=nullptr
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Exec</code> A string parameter that is used for some purpose, but not specified in this comment. </li>
+<li><code>Arguments</code> A vector of rttr::variant objects which are used to perform various operations. </li>
+<li><code>Value</code> Pointer to an E object, default value is nullptr. </li>
+<li><code>Ptr</code> Reference to a R object, default value is nullptr.</li>
+</ul>
+<p>Constructs an instance of the class with given parameters. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Exec</code> The string to be stored in the object. </li>
+<li><code>Arguments</code> A vector of rttr::variant objects to be stored in the object. </li>
+<li><code>Value</code> Pointer to an E object, which is copied into the object if not null. Defaults to nullptr. </li>
+<li><code>Ptr</code> Reference to a R object, which can be used to access and modify the object. Defaults to nullptr. </li>
+</ul>
 <hr>
 
 <h3 id="function-agefunction-33">function AGEFunction [3/3]</h3>
@@ -241,39 +280,111 @@
 <hr>
 
 <h3 id="function-execute">function Execute</h3>
+<p><em>Executes the function stored in Reference with optional delta time as input.</em> </p>
 <pre><code class="language-C++">inline rttr::variant AGE::AGEFunction::Execute (
     TimeStep DeltaTime=0.f
 ) 
 </code></pre>
+<p>The function will be executed based on whether a reference to an object is present and if DeltaTime &gt; 0. If only Reference is provided, it assumes that no additional parameters are required for execution.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>DeltaTime</code> Optional parameter representing time elapsed since the last frame. Defaults to 0.f. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>The return value of the function stored in Reference.</p>
+<p>Executes the function stored in Reference with an optional delta time as parameter.</p>
+<p>The function to be executed is determined by the state of Reference. If it's not null, then either Function(Reference) or Function(Reference, DeltaTime) will be called depending on whether DeltaTime &gt; 0. If Reference is null and DeltaTime &gt; 0, then Function(nullptr, DeltaTime) is called.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>DeltaTime</code> The time step to pass into the function (optional). </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>rttr::variant The return value of the executed function. </p>
 <hr>
 
 <h3 id="function-agefunction">function ~AGEFunction</h3>
+<p><em>Virtual destructor for the</em> <a href="./"><em><strong>AGEFunction</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">virtual AGE::AGEFunction::~AGEFunction () = default
 </code></pre>
+<p>This function is responsible for releasing any resources that were acquired by the object during its lifetime. It does not take any parameters and returns void.</p>
+<p>Virtual destructor for the <a href="./"><strong>AGEFunction</strong></a> class.</p>
+<p>This function is responsible for freeing any resources that were allocated by the object during its lifetime. It does not take any parameters and returns void. </p>
 <hr>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
 <h3 id="function-deserialize">function Deserialize</h3>
+<p><em>Deserialize function data from a</em> <a href="../class_a_g_e_1_1_data_reader/"><em><strong>DataReader</strong></em></a> <em>into an</em><a href="./"><em><strong>AGEFunction</strong></em></a> <em>object.</em></p>
 <pre><code class="language-C++">static inline void AGE::AGEFunction::Deserialize (
     DataReader * Serializer,
     AGEFunction &amp; Data
 ) 
 </code></pre>
+<p>This function reads raw data from the provided <a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> and populates an <a href="./"><strong>AGEFunction</strong></a> object with it. The function checks if 'HasEntt' is true, in which case it also reads an EnttID. It then reads a string value for 'Val'. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Serializer</code> Pointer to the <a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> instance that provides raw data. </li>
+<li><code>Data</code> Reference to the <a href="./"><strong>AGEFunction</strong></a> object where the deserialized data will be stored.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Deserializes data from a <a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> into an <a href="./"><strong>AGEFunction</strong></a> object.</p>
+<p>This function reads raw data from the provided <a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> and populates an <a href="./"><strong>AGEFunction</strong></a> object with it. The function checks if 'HasEntt' is true, in which case it also reads an EnttID. It then reads a string value for 'Val'. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Serializer</code> Pointer to the <a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> instance that provides raw data. </li>
+<li><code>Data</code> Reference to the <a href="./"><strong>AGEFunction</strong></a> object where the deserialized data will be stored.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-serialize">function Serialize</h3>
+<p><em>This function serializes the</em> <a href="./"><em><strong>AGEFunction</strong></em></a> <em>data into a</em><a href="../class_a_g_e_1_1_data_writer/"><em><strong>DataWriter</strong></em></a> <em>object.</em></p>
 <pre><code class="language-C++">static inline void AGE::AGEFunction::Serialize (
     DataWriter * Serializer,
     const AGEFunction &amp; Data
 ) 
 </code></pre>
+<p>The function writes the RefID, bIsUtilFunction and Entt status of the <a href="./"><strong>AGEFunction</strong></a> to the <a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a>. If the Entt is present, it also writes the EnttID. It then writes the Val string of the <a href="./"><strong>AGEFunction</strong></a>.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Serializer</code> Pointer to a <a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> object where serialized data will be written into. </li>
+<li><code>Data</code> Reference to an <a href="./"><strong>AGEFunction</strong></a> object that needs to be serialized.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>This function serializes the <a href="./"><strong>AGEFunction</strong></a> data into a <a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> object.</p>
+<p>The function writes the RefID, bIsUtilFunction flag, and Entt status to the Serializer. If an Entt exists, it also writes the EnttID. Finally, it writes the Val string.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Serializer</code> Pointer to a <a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> object where serialized data will be written. </li>
+<li><code>Data</code> Reference to an <a href="./"><strong>AGEFunction</strong></a> object that contains the data to be serialized.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 <h2 id="protected-functions-documentation">Protected Functions Documentation</h2>
 <h3 id="function-function">function Function</h3>
+<p><em>This function is used to execute a method on an entity. It can be either a utility function or a normal method of the entity's class.</em> </p>
 <pre><code class="language-C++">inline rttr::variant AGE::AGEFunction::Function (
     Ref&lt; R &gt; &amp; Ptr,
     TimeStep DeltaTime=0.f
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Ptr</code> Reference to the entity. If it's not valid, the function will return without doing anything. </li>
+<li><code>DeltaTime</code> The time step for the update. Default is 0.f.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Returns a variant containing the result of the method execution if successful, or an invalid variant otherwise.</p>
+<p>This function is used to perform some operation on a given entity. It can be either an update function or any other type of function depending on the input parameters and conditions.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Ptr</code> A reference to an object of class R. </li>
+<li><code>DeltaTime</code> The time elapsed since the last frame, default is 0.f. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>rttr::variant Returns a variant that contains the result of the operation performed on the entity. If no valid operation was performed, it returns an empty variant. </p>
 <hr>
 
 <hr />

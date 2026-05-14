@@ -105,15 +105,15 @@
 <tbody>
 <tr>
 <td style="text-align: right;"><a href="../class_a_g_e_1_1_a_g_e_window/"><strong>AGEWindow</strong></a> *</td>
-<td style="text-align: left;"><a href="#function-getwindow"><strong>GetWindow</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-getwindow"><strong>GetWindow</strong></a> () const<br><em>Returns the window object associated with this class instance.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-rendererchangeevent"><strong>RendererChangeEvent</strong></a> (<a href="../class_a_g_e_1_1_a_g_e_window/"><strong>AGEWindow</strong></a> * Window) <br></td>
+<td style="text-align: left;"><a href="#function-rendererchangeevent"><strong>RendererChangeEvent</strong></a> (<a href="../class_a_g_e_1_1_a_g_e_window/"><strong>AGEWindow</strong></a> * Window) <br><em>Constructor for</em> <a href="./"><em><strong>RendererChangeEvent</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual std::string</td>
-<td style="text-align: left;"><a href="#function-tostring"><strong>ToString</strong></a> () override const<br></td>
+<td style="text-align: left;"><a href="#function-tostring"><strong>ToString</strong></a> () override const<br><em>Converts the</em> <a href="../class_a_g_e_1_1_renderer/"><em><strong>Renderer</strong></em></a> <em>object to a string representation.</em></td>
 </tr>
 </tbody>
 </table>
@@ -141,30 +141,43 @@
 </tr>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-isincategory"><strong>IsInCategory</strong></a> (EventCategory Category) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-isincategory"><strong>IsInCategory</strong></a> (EventCategory Category) <br><em>Checks if an event is in a specific category.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual std::string</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-tostring"><strong>ToString</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-tostring"><strong>ToString</strong></a> () const<br><em>Returns a string representation of the object.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-getwindow">function GetWindow</h3>
+<p><em>Returns the window object associated with this class instance.</em> </p>
 <pre><code class="language-C++">inline AGEWindow * AGE::RendererChangeEvent::GetWindow () const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>Pointer to an <a href="../class_a_g_e_1_1_a_g_e_window/"><strong>AGEWindow</strong></a> object representing the current window. </p>
 <hr>
 
 <h3 id="function-rendererchangeevent">function RendererChangeEvent</h3>
+<p><em>Constructor for</em> <a href="./"><em><strong>RendererChangeEvent</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">inline AGE::RendererChangeEvent::RendererChangeEvent (
     AGEWindow * Window
 ) 
 </code></pre>
+<p>This constructor initializes the <a href="./"><strong>RendererChangeEvent</strong></a> object with a reference to an <a href="../class_a_g_e_1_1_a_g_e_window/"><strong>AGEWindow</strong></a> instance. It is used to handle changes in the renderer of the provided window.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Window</code> Pointer to an <a href="../class_a_g_e_1_1_a_g_e_window/"><strong>AGEWindow</strong></a> instance representing the window whose renderer will be changed. </li>
+</ul>
 <hr>
 
 <h3 id="function-tostring">function ToString</h3>
+<p><em>Converts the</em> <a href="../class_a_g_e_1_1_renderer/"><em><strong>Renderer</strong></em></a> <em>object to a string representation.</em></p>
 <pre><code class="language-C++">inline virtual std::string AGE::RendererChangeEvent::ToString () override const
 </code></pre>
+<p>This function returns a string that represents the current state of the <a href="../class_a_g_e_1_1_renderer/"><strong>Renderer</strong></a> object, including its type and any relevant details. The returned string is formatted as "Renderer Changed: [Utils::ConvertAPIToString()]", where [Utils::ConvertAPIToString()] represents the result of Utils::ConvertAPIToString().</p>
+<p><strong>Returns:</strong></p>
+<p>A string representation of the <a href="../class_a_g_e_1_1_renderer/"><strong>Renderer</strong></a> object. </p>
 <p>Implements <a href="../class_a_g_e_1_1_event/#function-tostring"><em>AGE::Event::ToString</em></a></p>
 <hr>
 

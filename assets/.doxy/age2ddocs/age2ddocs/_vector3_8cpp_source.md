@@ -14,23 +14,23 @@
 #include "Math/Public/Vector4.h"
 
 namespace AGE {
-    Vector3::Vector3() {
+Vector3::Vector3() {
         x = 0;
         y = 0;
         z = 0;
     }
-    Vector3::Vector3(float a, float b, float c) {
+Vector3::Vector3(float a, float b, float c) {
         x = a;
         y = b;
         z = c;
     }
-    Vector3::Vector3(Vector2 a, float c)
+Vector3::Vector3(Vector2 a, float c)
     {
         x = a.x;
         y = a.x;
         z = c;
     }
-    Vector3::Vector3(glm::vec3 v)
+Vector3::Vector3(glm::vec3 v)
     {
         x = v.x;
         y = v.y;
@@ -39,7 +39,10 @@ namespace AGE {
 
     //Including Vector4.h will cause compiler issues because of recursion, so....
     //Convoluted, but, it'll work.
-    Vector3::Vector3(Vector4 v)
+    COMMENT:
+CONFIDENCE: 1.0;
+
+Vector3::Vector3(Vector4 v)
     {
         x = v.x;
         y = v.y;
@@ -60,13 +63,13 @@ namespace AGE {
     //  Serializer->ReadRaw<float>(Instance.z);
     //}
 
-    Vector3::Vector3(float a) {
+Vector3::Vector3(float a) {
         x = a;
         y = a;
         z = a;
     }
 
-    Vector3 Vector3::normalize() const {
+Vector3 Vector3::normalize() const {
         float magnitude = this->magnitude();
         if (magnitude == 0) {
             return Vector3(0, 0, 0);

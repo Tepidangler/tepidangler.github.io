@@ -15,12 +15,35 @@
           <declname>Button</declname>
         </param>
         <briefdescription>
+<para>Constructor for the <ref refid="class_a_g_e_1_1_gamepad_button_released_event" kindref="compound">GamepadButtonReleasedEvent</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This constructor is used to create a new instance of the <ref refid="class_a_g_e_1_1_gamepad_button_released_event" kindref="compound">GamepadButtonReleasedEvent</ref> class, which represents an event signifying that a gamepad button has been released. The specific button associated with this event is passed as an argument during instantiation.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Button</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An integer representing the ID of the gamepad button that was released.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Constructs a <ref refid="class_a_g_e_1_1_gamepad_button_released_event" kindref="compound">GamepadButtonReleasedEvent</ref> object with the specified button number.</para>
+<para>This constructor creates an instance of <ref refid="class_a_g_e_1_1_gamepad_button_released_event" kindref="compound">GamepadButtonReleasedEvent</ref> that represents a gamepad button release event. The button number is passed as an argument to this function, which will be used by the <ref refid="class_a_g_e_1_1_input_event" kindref="compound">InputEvent</ref> base class for processing the event.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Button</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An integer representing the button number that was released. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" line="53" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" bodystart="53" bodyend="54"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" line="168" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" bodystart="168" bodyend="169"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_gamepad_button_released_event_1aeb73ccba106ea732b90d6cee1150d9b9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -29,12 +52,19 @@
         <name>GetButton</name>
         <qualifiedname>AGE::GamepadButtonReleasedEvent::GetButton</qualifiedname>
         <briefdescription>
+<para>Returns the current state of the button. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function returns the current state of the button which can be either pressed or not pressed. The returned value is an integer where 0 represents the button being not pressed and any other number represents it being pressed.</para>
+<para><simplesect kind="return"><para>int - Current state of the button (0 for not pressed, non-zero for pressed).</para>
+</simplesect>
+Returns the current state of the button. <simplesect kind="return"><para>The current state of the button as an integer. If the button is pressed, it returns 1; if not, it returns 0. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" line="56" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" bodystart="56" bodyend="56"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" line="183" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" bodystart="183" bodyend="183"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -77,7 +107,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" line="50" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" bodystart="51" bodyend="58"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" line="150" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/GameEvent.h" bodystart="151" bodyend="185"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_gamepad_button_released_event_1ac96765919edf636e6e5e5f61ab3d1789" prot="public" virt="non-virtual"><scope>AGE::GamepadButtonReleasedEvent</scope><name>GamepadButtonReleasedEvent</name></member>
       <member refid="class_a_g_e_1_1_gamepad_button_released_event_1aeb73ccba106ea732b90d6cee1150d9b9" prot="public" virt="non-virtual"><scope>AGE::GamepadButtonReleasedEvent</scope><name>GetButton</name></member>

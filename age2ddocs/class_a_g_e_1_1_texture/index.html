@@ -149,7 +149,7 @@
 </tr>
 <tr>
 <td style="text-align: right;">virtual</td>
-<td style="text-align: left;"><a href="#function-texture"><strong>~Texture</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-texture"><strong>~Texture</strong></a> () <br><em>Virtual destructor for the</em> <a href="./"><em><strong>Texture</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
@@ -243,8 +243,12 @@
 <hr>
 
 <h3 id="function-texture">function ~Texture</h3>
+<p><em>Virtual destructor for the</em> <a href="./"><em><strong>Texture</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">inline virtual AGE::Texture::~Texture () 
 </code></pre>
+<p>This function is responsible for releasing any resources that were acquired by the <a href="./"><strong>Texture</strong></a> object, such as memory or file handles. It does not return anything and thus has an empty return type (void).</p>
+<p>Virtual destructor for the <a href="./"><strong>Texture</strong></a> class.</p>
+<p>This function is a virtual destructor that cleans up any resources used by an instance of the <a href="./"><strong>Texture</strong></a> class. It does not take any parameters and returns nothing. </p>
 <hr>
 
 <hr />

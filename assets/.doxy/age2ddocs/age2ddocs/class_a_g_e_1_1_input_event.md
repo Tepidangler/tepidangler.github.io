@@ -87,8 +87,8 @@ See [AGE::Event](class_a_g_e_1_1_event.md)
 | virtual int | [**GetCategoryFlags**](class_a_g_e_1_1_event.md#function-getcategoryflags) () const = 0<br> |
 | virtual EventType | [**GetEventType**](class_a_g_e_1_1_event.md#function-geteventtype) () const = 0<br> |
 | virtual const char \* | [**GetName**](class_a_g_e_1_1_event.md#function-getname) () const = 0<br> |
-|  bool | [**IsInCategory**](class_a_g_e_1_1_event.md#function-isincategory) (EventCategory Category) <br> |
-| virtual std::string | [**ToString**](class_a_g_e_1_1_event.md#function-tostring) () const<br> |
+|  bool | [**IsInCategory**](class_a_g_e_1_1_event.md#function-isincategory) (EventCategory Category) <br>_Checks if an event is in a specific category._  |
+| virtual std::string | [**ToString**](class_a_g_e_1_1_event.md#function-tostring) () const<br>_Returns a string representation of the object._  |
 
 
 
@@ -147,8 +147,8 @@ See [AGE::Event](class_a_g_e_1_1_event.md)
 | Type | Name |
 | ---: | :--- |
 |   | [**InputEvent**](#function-inputevent-13) () <br> |
-|   | [**InputEvent**](#function-inputevent-23) (int Axis, float Position) <br> |
-|   | [**InputEvent**](#function-inputevent-33) (int Button) <br> |
+|   | [**InputEvent**](#function-inputevent-23) (int Axis, float Position) <br>_Constructs an_ [_**InputEvent**_](class_a_g_e_1_1_input_event.md) _object with the specified axis and position._ |
+|   | [**InputEvent**](#function-inputevent-33) (int Button) <br>_Constructor for the_ [_**InputEvent**_](class_a_g_e_1_1_input_event.md) _class._ |
 
 
 
@@ -218,6 +218,7 @@ AGE::InputEvent::InputEvent ()
 
 ### function InputEvent [2/3]
 
+_Constructs an_ [_**InputEvent**_](class_a_g_e_1_1_input_event.md) _object with the specified axis and position._
 ```C++
 inline AGE::InputEvent::InputEvent (
     int Axis,
@@ -228,12 +229,33 @@ inline AGE::InputEvent::InputEvent (
 
 
 
+
+**Parameters:**
+
+
+* `Axis` The input event's axis. 
+* `Position` The input event's position on the axis.
+
+Constructs an [**InputEvent**](class_a_g_e_1_1_input_event.md) object with the specified axis and position. 
+
+**Parameters:**
+
+
+* `Axis` The input event's axis. 
+* `Position` The input event's position on the axis. 
+
+
+
+
+        
+
 <hr>
 
 
 
 ### function InputEvent [3/3]
 
+_Constructor for the_ [_**InputEvent**_](class_a_g_e_1_1_input_event.md) _class._
 ```C++
 inline AGE::InputEvent::InputEvent (
     int Button
@@ -242,6 +264,33 @@ inline AGE::InputEvent::InputEvent (
 
 
 
+This constructor initializes an instance of the [**InputEvent**](class_a_g_e_1_1_input_event.md) class with a specific button value.
+
+
+
+
+**Parameters:**
+
+
+* `Button` The integer representation of the input event's button.
+
+Constructor for the [**InputEvent**](class_a_g_e_1_1_input_event.md) class.
+
+
+This constructor initializes an instance of the [**InputEvent**](class_a_g_e_1_1_input_event.md) class with a specific button value.
+
+
+
+
+**Parameters:**
+
+
+* `Button` The integer representation of the input event's button. 
+
+
+
+
+        
 
 <hr>
 

@@ -3,6 +3,35 @@
   <compounddef id="class_a_g_e_1_1_renderer" kind="class" language="C++" prot="public">
     <compoundname>AGE::Renderer</compoundname>
     <innerclass refid="struct_a_g_e_1_1_renderer_1_1_scene_data" prot="private">AGE::Renderer::SceneData</innerclass>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_a_g_e_1_1_renderer_1ac7b5aa68ce719b71cd3d793c6c004e57" prot="public" static="no" mutable="no">
+        <type>COMMENT</type>
+        <definition>COMMENT AGE::Renderer::__pad0__</definition>
+        <argsstring></argsstring>
+        <name>__pad0__</name>
+        <qualifiedname>AGE::Renderer::__pad0__</qualifiedname>
+        <bitfield>CONFIDENCE: 1.0</bitfield>
+        <briefdescription>
+<para>Sets the rendering API to be used by the application. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function sets the API that will be used for rendering operations in the application. The API can be one of three types: OpenGL, DirectX or Vulkan. It is important to note that this function does not handle any errors or exceptions related to invalid APIs. Therefore, it&apos;s crucial to ensure that the input value is a valid one (OpenGL, DirectX or Vulkan).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_a_g_e_1_1_renderer" kindref="compound">Renderer</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The API to be set for rendering operations. It can be either RendererAPI::API::OPENGL, RendererAPI::API::DIRECTX or RendererAPI::API::VULKAN. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" line="42" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
     <sectiondef kind="private-static-attrib">
       <memberdef kind="variable" id="class_a_g_e_1_1_renderer_1aef1eb2da50bf41ba9d200e6fd8d737a8" prot="private" static="yes" mutable="no">
         <type>SceneData *</type>
@@ -17,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" line="35" column="18" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" bodystart="35" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" line="58" column="18" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" bodystart="58" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -28,12 +57,21 @@
         <name>Init</name>
         <qualifiedname>AGE::Renderer::Init</qualifiedname>
         <briefdescription>
+<para>Initializes the renderer. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function initializes various subsystems of the renderer, including <ref refid="class_a_g_e_1_1_render_command" kindref="compound">RenderCommand</ref> and <ref refid="class_a_g_e_1_1_renderer2_d" kindref="compound">Renderer2D</ref>. It uses AGE_PROFILE_FUNCTION to record its performance.</para>
+<para><simplesect kind="return"><para>void</para>
+</simplesect>
+Initializes the renderer.</para>
+<para>This function initializes the renderer by calling the Init function from <ref refid="class_a_g_e_1_1_render_command" kindref="compound">RenderCommand</ref> class. It is used to prepare the renderer for rendering operations.</para>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" line="13" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer.cpp" bodystart="12" bodyend="16"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" line="13" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer.cpp" bodystart="26" bodyend="30"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_renderer_1a20d77570d1c5fc33e6de70a5cb31bec9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -50,12 +88,53 @@
           <declname>Transform</declname>
         </param>
         <briefdescription>
+<para>Begins a 3D scene with the given camera and transformation. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function begins a new 3D scene using the provided camera and transformation matrix. It uses the <ref refid="class_a_g_e_1_1_renderer2_d_1a2a90df58785285da258f35f8f50bb221" kindref="member">Renderer2D::BeginScene()</ref> method to do this, passing in the camera and transform as parameters.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_a_g_e_1_1_camera" kindref="compound">Camera</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The camera used for rendering the scene. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Transform</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The transformation matrix applied to the scene objects.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void No return value is expected.</para>
+</simplesect>
+Begins a new scene with the given camera and transformation.</para>
+<para>This function begins a new rendering scene using the provided camera and transformation matrix. It uses <ref refid="class_a_g_e_1_1_renderer2_d_1a2a90df58785285da258f35f8f50bb221" kindref="member">Renderer2D::BeginScene</ref> to start the scene, which is expected to handle the actual setup of the scene.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_a_g_e_1_1_camera" kindref="compound">Camera</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The camera that will be used for this scene. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Transform</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The transformation matrix that will be applied to everything in this scene. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" line="14" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer.cpp" bodystart="19" bodyend="22"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" line="14" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer.cpp" bodystart="51" bodyend="54"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_renderer_1a051ed5bbe7382a8c02d96cfb480a51ec" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -68,12 +147,35 @@
           <declname>Camera</declname>
         </param>
         <briefdescription>
+<para>Begins a new scene with the specified camera. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function begins a new rendering scene using the provided <ref refid="class_a_g_e_1_1_editor_camera" kindref="compound">EditorCamera</ref> object. It utilizes the <ref refid="class_a_g_e_1_1_renderer2_d" kindref="compound">Renderer2D</ref> class to begin the scene, which allows for efficient rendering of 2D graphics.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_a_g_e_1_1_camera" kindref="compound">Camera</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The editor camera that will be used in this scene.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Begins a new scene with the specified camera.</para>
+<para>This function begins a new rendering scene using the provided <ref refid="class_a_g_e_1_1_editor_camera" kindref="compound">EditorCamera</ref> object. It uses <ref refid="class_a_g_e_1_1_renderer2_d" kindref="compound">Renderer2D</ref>&apos;s BeginScene method to start the scene, passing in the camera as an argument.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_a_g_e_1_1_camera" kindref="compound">Camera</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The editor camera that will be used for this scene. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" line="15" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer.cpp" bodystart="24" bodyend="27"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" line="15" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer.cpp" bodystart="70" bodyend="73"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_renderer_1ad81b53301165b0fd58a81c02ae6452e0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -90,12 +192,48 @@
           <declname>Height</declname>
         </param>
         <briefdescription>
+<para>This function is called when the window size is resized. It sets the viewport to match the new dimensions. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new width of the window in pixels. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new height of the window in pixels.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This function is used to handle the window resize event. It sets the viewport size based on the provided width and height parameters. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new width of the window. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new height of the window. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" line="16" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer.cpp" bodystart="29" bodyend="32"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" line="16" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer.cpp" bodystart="85" bodyend="88"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_renderer_1afa9d271aca73c6095aec27053cd5d2b0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -112,12 +250,48 @@
           <declname>Height</declname>
         </param>
         <briefdescription>
+<para>This function is called when the framebuffer size changes. It sets the viewport to match the new dimensions. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The width of the new framebuffer in pixels. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The height of the new framebuffer in pixels.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This function is called when the framebuffer size changes. It sets the viewport to match the new dimensions. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The width of the new framebuffer in pixels. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The height of the new framebuffer in pixels. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" line="17" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer.cpp" bodystart="34" bodyend="37"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" line="17" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer.cpp" bodystart="100" bodyend="103"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_renderer_1a8f3ef65fed0bb9f32bf69ec4bf2776ee" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -126,12 +300,18 @@
         <name>EndScene</name>
         <qualifiedname>AGE::Renderer::EndScene</qualifiedname>
         <briefdescription>
+<para>Ends the current scene rendering. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is used to end the current scene rendering by calling the <computeroutput>EndScene</computeroutput> method of the <ref refid="class_a_g_e_1_1_renderer2_d" kindref="compound">Renderer2D</ref> class. It does not take any parameters and returns void.</para>
+<para><simplesect kind="return"><para>None</para>
+</simplesect>
+Ends the current scene rendering.</para>
+<para>This function is used to end the current scene rendering by calling the <computeroutput>EndScene</computeroutput> method of the <ref refid="class_a_g_e_1_1_renderer2_d" kindref="compound">Renderer2D</ref> class. It does not take any parameters and returns void. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" line="18" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer.cpp" bodystart="39" bodyend="42"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" line="18" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer.cpp" bodystart="117" bodyend="120"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_renderer_1a1f6f19341385a169cd9d12286517b5c8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -140,12 +320,21 @@
         <name>Shutdown</name>
         <qualifiedname>AGE::Renderer::Shutdown</qualifiedname>
         <briefdescription>
+<para>Shuts down the renderer and its 2D component. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is used to clean up resources held by the <ref refid="class_a_g_e_1_1_renderer" kindref="compound">Renderer</ref> and its associated <ref refid="class_a_g_e_1_1_renderer2_d" kindref="compound">Renderer2D</ref> component. It should be called when shutting down the application or before initializing a new scene.</para>
+<para><simplesect kind="return"><para>void</para>
+</simplesect>
+Shuts down the renderer and its 2D component.</para>
+<para>This function is used to clean up resources held by the <ref refid="class_a_g_e_1_1_renderer" kindref="compound">Renderer</ref> and its associated <ref refid="class_a_g_e_1_1_renderer2_d" kindref="compound">Renderer2D</ref> component. It should be called when shutting down the application or before initializing a new scene.</para>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" line="19" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer.cpp" bodystart="43" bodyend="46"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" line="19" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer.cpp" bodystart="135" bodyend="138"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_renderer_1a730cd2593e6872a71bc21771068457c6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -154,12 +343,21 @@
         <name>Submit</name>
         <qualifiedname>AGE::Renderer::Submit</qualifiedname>
         <briefdescription>
+<para>Submits a render command to the queue. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function submits a render command to the rendering system&apos;s queue, which will be processed and executed at some point in the future. The specific behavior of this function is not specified as it depends on the implementation details of the <ref refid="class_a_g_e_1_1_renderer" kindref="compound">Renderer</ref> class and its associated <ref refid="class_a_g_e_1_1_render_command" kindref="compound">RenderCommand</ref> classes.</para>
+<para><simplesect kind="return"><para>void</para>
+</simplesect>
+Submits the current render command to be processed by the renderer.</para>
+<para>This function submits a render command for processing by the <ref refid="class_a_g_e_1_1_renderer" kindref="compound">Renderer</ref> class. It uses the <ref refid="class_a_g_e_1_1_render_command_1a12b5d045ec2c2627d5aecd4dade5bbb7" kindref="member">RenderCommand::Submit()</ref> method, which is responsible for adding the command to the queue of commands that need to be processed.</para>
+<para><simplesect kind="return"><para>void No return value. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" line="21" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer.cpp" bodystart="48" bodyend="51"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" line="21" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer.cpp" bodystart="155" bodyend="158"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_renderer_1a7a66ea8b73bf5e9917bd9b83d34faae0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -168,12 +366,16 @@
         <name>Flush</name>
         <qualifiedname>AGE::Renderer::Flush</qualifiedname>
         <briefdescription>
+<para>Flushes the rendering queue by calling the <computeroutput>Flush</computeroutput> function of the <computeroutput><ref refid="class_a_g_e_1_1_render_command" kindref="compound">RenderCommand</ref></computeroutput> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is used to clear the rendering queue and ensure that all previous render commands are executed before any new ones are added. It calls the <computeroutput>Flush</computeroutput> function from the <computeroutput><ref refid="class_a_g_e_1_1_render_command" kindref="compound">RenderCommand</ref></computeroutput> class, which should handle the actual flushing process.</para>
+<para>Flushes the rendering queue.</para>
+<para>This function is used to flush the rendering queue by calling the <computeroutput>Flush</computeroutput> method of the <ref refid="class_a_g_e_1_1_render_command" kindref="compound">RenderCommand</ref> class. It ensures that all pending render commands are executed immediately, without waiting for a new command to be added. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" line="23" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer.cpp" bodystart="52" bodyend="55"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" line="23" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Renderer.cpp" bodystart="169" bodyend="172"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_renderer_1ae89681d3feb143fabbf4159825aa84b2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>RendererAPI::API</type>
@@ -182,12 +384,18 @@
         <name>GetAPI</name>
         <qualifiedname>AGE::Renderer::GetAPI</qualifiedname>
         <briefdescription>
+<para>This function returns the current API being used by the renderer. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>The enum value representing the currently active API (RendererAPI::OpenGL, RendererAPI::Vulkan, etc.).</para>
+</simplesect>
+This function returns the current API being used by the renderer. <simplesect kind="return"><para>The enum value representing the current API, which can be either RendererAPI::None, RendererAPI::OpenGL, or RendererAPI::DirectX. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" line="25" column="32" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" bodystart="25" bodyend="25"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" line="33" column="32" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" bodystart="33" bodyend="33"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_renderer_1a3bb0401c7269b12275578be105920d4e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -205,15 +413,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" line="26" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" bodystart="26" bodyend="26"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" line="49" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" bodystart="49" bodyend="49"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" line="9" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" bodystart="10" bodyend="39"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" line="9" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Renderer.h" bodystart="10" bodyend="62"/>
     <listofallmembers>
+      <member refid="class_a_g_e_1_1_renderer_1ac7b5aa68ce719b71cd3d793c6c004e57" prot="public" virt="non-virtual"><scope>AGE::Renderer</scope><name>__pad0__</name></member>
       <member refid="class_a_g_e_1_1_renderer_1a20d77570d1c5fc33e6de70a5cb31bec9" prot="public" virt="non-virtual"><scope>AGE::Renderer</scope><name>BeginScene</name></member>
       <member refid="class_a_g_e_1_1_renderer_1a051ed5bbe7382a8c02d96cfb480a51ec" prot="public" virt="non-virtual"><scope>AGE::Renderer</scope><name>BeginScene</name></member>
       <member refid="class_a_g_e_1_1_renderer_1a8f3ef65fed0bb9f32bf69ec4bf2776ee" prot="public" virt="non-virtual"><scope>AGE::Renderer</scope><name>EndScene</name></member>

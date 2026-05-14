@@ -15,7 +15,8 @@
 
 namespace AGE
 {
-    class AGE_API MouseEvent : public Event
+    
+class AGE_API MouseEvent : public Event
     {
     public:
         inline int GetMouseButton() const { return m_Button; }
@@ -26,10 +27,10 @@ namespace AGE
         MouseEvent(int Button)
             : m_Button(Button) {}
 
-        MouseEvent(float x, float y)
+MouseEvent(float x, float y)
             : m_MouseX(x), m_MouseY(y) {}
 
-        MouseEvent(float xOffset, float yOffset, bool Scrolled) // I can probably figure out a better way to do this, but it'll work for now since I won't ever actually be using the boolean
+MouseEvent(float xOffset, float yOffset, bool Scrolled) // I can probably figure out a better way to do this, but it'll work for now since I won't ever actually be using the boolean
             : m_XOffset(xOffset), m_YOffset(yOffset) {}
 
     protected:
@@ -50,10 +51,10 @@ namespace AGE
         MouseMovedEvent(float x, float y)
             : MouseEvent(x,y) {}
 
-        inline float GetX() const { return m_MouseX; }
-        inline float GetY() const { return m_MouseY; }
+inline float GetX() const { return m_MouseX; }
+inline float GetY() const { return m_MouseY; }
 
-        std::string ToString() const override
+std::string ToString() const override
         {
             std::stringstream ss;
             ss << "MouseMovedEvent: " << m_MouseX << ", " << m_MouseY;
@@ -70,10 +71,10 @@ namespace AGE
         MouseScrolledEvent(float xOffset, float yOffset)
             : MouseEvent(xOffset, yOffset, true) {}
 
-        inline float GetXOffset() const { return m_XOffset; }
-        inline float GetYOffset() const { return m_YOffset; }
+inline float GetXOffset() const { return m_XOffset; }
+inline float GetYOffset() const { return m_YOffset; }
 
-        std::string ToString() const override
+std::string ToString() const override
         {
             std::stringstream ss;
             ss << "MouseScrolledEvent: " << GetXOffset() << ", " << GetYOffset();
@@ -90,7 +91,7 @@ namespace AGE
         MouseButtonPressedEvent(int Button)
             : MouseEvent(Button) {}
 
-        std::string ToString() const override
+std::string ToString() const override
         {
             std::stringstream ss;
             ss << "MouseButtonPressedEvent: " << m_Button;
@@ -100,14 +101,14 @@ namespace AGE
         EVENT_CLASS_TYPE(MouseButtonPressed)
     };
 
-    class AGE_API MouseButtonReleasedEvent : public MouseEvent
+class AGE_API MouseButtonReleasedEvent : public MouseEvent
     {
     public:
 
         MouseButtonReleasedEvent(int Button)
             : MouseEvent(Button) {}
 
-        std::string ToString() const override
+std::string ToString() const override
         {
             std::stringstream ss;
             ss << "MouseButtonReleasedEvent: " << m_Button;

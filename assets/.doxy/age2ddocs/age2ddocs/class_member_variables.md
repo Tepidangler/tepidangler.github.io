@@ -21,7 +21,6 @@
 * **AnimTextures** ([**AGE::SpriteRendererComponent**](struct_a_g_e_1_1_sprite_renderer_component.md))
 * **AsepriteFile** ([**AGE::SpriteRendererComponent**](struct_a_g_e_1_1_sprite_renderer_component.md))
 * **AsepriteName** ([**AGE::SpriteRendererComponent**](struct_a_g_e_1_1_sprite_renderer_component.md))
-* **AtlasTexture** ([**AGE::TilesetData**](struct_a_g_e_1_1_tileset_data.md))
 * **AspectRatio** ([**AGE::\_constantBufferStruct**](struct_a_g_e_1_1__constant_buffer_struct.md))
 * **At** ([**AGE::\_constantBufferStruct**](struct_a_g_e_1_1__constant_buffer_struct.md))
 * **Active** ([**AGE::ParticleSystem::Particle**](struct_a_g_e_1_1_particle_system_1_1_particle.md))
@@ -68,12 +67,12 @@
 * **bInteractable** ([**AGE::RigidBody2DComponent**](struct_a_g_e_1_1_rigid_body2_d_component.md))
 * **bSimulatePhysics** ([**AGE::RigidBody2DComponent**](struct_a_g_e_1_1_rigid_body2_d_component.md))
 * **bIsVisible** ([**AGE::ScriptableWidget**](class_a_g_e_1_1_scriptable_widget.md))
-* **bits** ([**AGE::float16**](struct_a_g_e_1_1float16.md))
+* **bTile** ([**AGE::SpriteRendererComponent**](struct_a_g_e_1_1_sprite_renderer_component.md))
 
 
 ## c
 
-* **Color** ([**AGE::AGENode**](struct_a_g_e_1_1_a_g_e_node.md), [**AGE::AGENodeLink**](struct_a_g_e_1_1_a_g_e_node_link.md), [**AGE::BoxComponent**](struct_a_g_e_1_1_box_component.md), [**AGE::CircleRendererComponent**](struct_a_g_e_1_1_circle_renderer_component.md), [**AGE::QuadProperties**](struct_a_g_e_1_1_quad_properties.md), [**AGE::SpriteRendererComponent**](struct_a_g_e_1_1_sprite_renderer_component.md), [**AGE::StringProperties**](struct_a_g_e_1_1_string_properties.md), [**AGE::TilemapProperties**](struct_a_g_e_1_1_tilemap_properties.md))
+* **Color** ([**AGE::AGENode**](struct_a_g_e_1_1_a_g_e_node.md), [**AGE::AGENodeLink**](struct_a_g_e_1_1_a_g_e_node_link.md), [**AGE::BoxComponent**](struct_a_g_e_1_1_box_component.md), [**AGE::CircleRendererComponent**](struct_a_g_e_1_1_circle_renderer_component.md), [**AGE::QuadProperties**](struct_a_g_e_1_1_quad_properties.md), [**AGE::SpriteRendererComponent**](struct_a_g_e_1_1_sprite_renderer_component.md), [**AGE::StringProperties**](struct_a_g_e_1_1_string_properties.md))
 * **CurrentProjectPath** ([**AGE::AppConfig**](struct_a_g_e_1_1_app_config.md))
 * **Count** ([**AGE::ApplicationCommandLineArgs**](struct_a_g_e_1_1_application_command_line_args.md))
 * **CelType** ([**AGE::AsepriteCelChunk**](struct_a_g_e_1_1_aseprite_cel_chunk.md))
@@ -112,9 +111,10 @@
 * **CircleVertexBufferBase** ([**AGE::Renderer2DData**](struct_a_g_e_1_1_renderer2_d_data.md))
 * **CircleVertexBufferPtr** ([**AGE::Renderer2DData**](struct_a_g_e_1_1_renderer2_d_data.md))
 * **CoordBuffer** ([**AGE::Renderer2DData**](struct_a_g_e_1_1_renderer2_d_data.md))
-* **CurrentTilemap** ([**AGE::Renderer2DData**](struct_a_g_e_1_1_renderer2_d_data.md))
 * **CurrentAnimationID** ([**AGE::SpriteRendererComponent**](struct_a_g_e_1_1_sprite_renderer_component.md))
 * **CircleCount** ([**AGE::Statistics**](struct_a_g_e_1_1_statistics.md))
+* **CubeCount** ([**AGE::Statistics**](struct_a_g_e_1_1_statistics.md))
+* **CylinderCount** ([**AGE::Statistics**](struct_a_g_e_1_1_statistics.md))
 
 
 ## d
@@ -146,7 +146,7 @@
 * **EntryIndex** ([**AGE::AsepriteHeader**](struct_a_g_e_1_1_aseprite_header.md))
 * **ElementsType** ([**AGE::AsepriteUserProps**](struct_a_g_e_1_1_aseprite_user_props.md))
 * **ElapsedTime** ([**AGE::ProfileResult**](struct_a_g_e_1_1_profile_result.md))
-* **EntityID** ([**AGE::QuadProperties**](struct_a_g_e_1_1_quad_properties.md), [**AGE::TextVertex**](struct_a_g_e_1_1_text_vertex.md), [**AGE::TilemapProperties**](struct_a_g_e_1_1_tilemap_properties.md))
+* **EntityID** ([**AGE::QuadProperties**](struct_a_g_e_1_1_quad_properties.md), [**AGE::TextVertex**](struct_a_g_e_1_1_text_vertex.md))
 * **Eye** ([**AGE::\_constantBufferStruct**](struct_a_g_e_1_1__constant_buffer_struct.md))
 
 
@@ -173,7 +173,6 @@
 * **FontName** ([**AGE::StringProperties**](struct_a_g_e_1_1_string_properties.md))
 * **FontSize** ([**AGE::StringProperties**](struct_a_g_e_1_1_string_properties.md))
 * **Format** ([**AGE::TextureSpecification**](struct_a_g_e_1_1_texture_specification.md))
-* **FirstGID** ([**AGE::TilesetData**](struct_a_g_e_1_1_tileset_data.md))
 * **Focused** ([**AGE::UIProperties**](struct_a_g_e_1_1_u_i_properties.md))
 
 
@@ -220,8 +219,6 @@
 * **InstantiateScript** ([**AGE::NativeScriptComponent**](struct_a_g_e_1_1_native_script_component.md), [**AGE::Widget**](struct_a_g_e_1_1_widget.md))
 * **InstigatorID** ([**AGE::QueryParams**](struct_a_g_e_1_1_query_params.md))
 * **iterable\_** ([**AGE::Reverse**](class_a_g_e_1_1_reverse.md))
-* **IsArray** ([**AGE::TextureSpecification**](struct_a_g_e_1_1_texture_specification.md))
-* **IsShaderDataSet** ([**AGE::TileMapRendererComponent**](struct_a_g_e_1_1_tile_map_renderer_component.md))
 
 
 ## k
@@ -233,7 +230,7 @@
 
 * **LogPath** ([**AGE::AppConfig**](struct_a_g_e_1_1_app_config.md))
 * **LayerIndex** ([**AGE::AsepriteCelChunk**](struct_a_g_e_1_1_aseprite_cel_chunk.md))
-* **Layers** ([**AGE::AsepriteFrameData**](struct_a_g_e_1_1_aseprite_frame_data.md))
+* **Layers** ([**AGE::AsepriteFrameData**](struct_a_g_e_1_1_aseprite_frame_data.md), [**AGE::TMXData**](struct_a_g_e_1_1_t_m_x_data.md))
 * **Layerindex** ([**AGE::AsepriteLayer**](struct_a_g_e_1_1_aseprite_layer.md))
 * **LastIndexToChange** ([**AGE::AsepritePaletteChunk**](struct_a_g_e_1_1_aseprite_palette_chunk.md))
 * **LoopDirection** ([**AGE::AsepriteTag**](struct_a_g_e_1_1_aseprite_tag.md))
@@ -258,8 +255,8 @@
 ## m
 
 * **m\_AssetID** ([**AGE::AGEFont**](class_a_g_e_1_1_a_g_e_font.md), [**AGE::AudioSource**](class_a_g_e_1_1_audio_source.md), [**AGE::OpenGLTexture2D**](class_a_g_e_1_1_open_g_l_texture2_d.md), [**AGE::Scene**](class_a_g_e_1_1_scene.md), [**AGE::SoundBank**](class_a_g_e_1_1_sound_bank.md), [**AGE::Tilemap**](class_a_g_e_1_1_tilemap.md))
-* **m\_AtlasTexture** ([**AGE::AGEFont**](class_a_g_e_1_1_a_g_e_font.md))
-* **m\_Data** ([**AGE::AGEFont**](class_a_g_e_1_1_a_g_e_font.md), [**AGE::OpenGLPipeline**](class_a_g_e_1_1_open_g_l_pipeline.md), [**AGE::Tilemap**](class_a_g_e_1_1_tilemap.md))
+* **m\_AtlasTexture** ([**AGE::AGEFont**](class_a_g_e_1_1_a_g_e_font.md), [**AGE::TileMapData**](struct_a_g_e_1_1_tile_map_data.md), [**AGE::Tilemap**](class_a_g_e_1_1_tilemap.md))
+* **m\_Data** ([**AGE::AGEFont**](class_a_g_e_1_1_a_g_e_font.md), [**AGE::OpenGLPipeline**](class_a_g_e_1_1_open_g_l_pipeline.md))
 * **m\_FontName** ([**AGE::AGEFont**](class_a_g_e_1_1_a_g_e_font.md))
 * **m\_AvailableSoundDevices** ([**AGE::AGESound**](class_a_g_e_1_1_a_g_e_sound.md))
 * **m\_Context** ([**AGE::AGESound**](class_a_g_e_1_1_a_g_e_sound.md), [**AGE::ImGuiLayer**](class_a_g_e_1_1_im_gui_layer.md), [**AGE::NodeEditorWindow**](class_a_g_e_1_1_node_editor_window.md))
@@ -348,7 +345,7 @@
 * **m\_EntityHandle** ([**AGE::Entity**](class_a_g_e_1_1_entity.md))
 * **m\_Scene** ([**AGE::Entity**](class_a_g_e_1_1_entity.md), [**AGE::SceneEvent**](class_a_g_e_1_1_scene_event.md), [**AGE::SceneSerializer**](class_a_g_e_1_1_scene_serializer.md), [**AGE::Tilemap**](class_a_g_e_1_1_tilemap.md))
 * **m\_Event** ([**AGE::EventDispatcher**](class_a_g_e_1_1_event_dispatcher.md))
-* **m\_Path** ([**AGE::FileStreamReader**](class_a_g_e_1_1_file_stream_reader.md), [**AGE::FileStreamWriter**](class_a_g_e_1_1_file_stream_writer.md), [**AGE::OpenGLTexture2D**](class_a_g_e_1_1_open_g_l_texture2_d.md), [**AGE::Tilemap**](class_a_g_e_1_1_tilemap.md))
+* **m\_Path** ([**AGE::FileStreamReader**](class_a_g_e_1_1_file_stream_reader.md), [**AGE::FileStreamWriter**](class_a_g_e_1_1_file_stream_writer.md), [**AGE::OpenGLTexture2D**](class_a_g_e_1_1_open_g_l_texture2_d.md), [**AGE::TileMapData**](struct_a_g_e_1_1_tile_map_data.md), [**AGE::Tilemap**](class_a_g_e_1_1_tilemap.md))
 * **MipLevels** ([**AGE::FrameBufferSpecification**](struct_a_g_e_1_1_frame_buffer_specification.md))
 * **MiscFlags** ([**AGE::FrameBufferSpecification**](struct_a_g_e_1_1_frame_buffer_specification.md))
 * **m\_Height** ([**AGE::FramebufferResizeEvent**](class_a_g_e_1_1_framebuffer_resize_event.md), [**AGE::OpenGLTexture2D**](class_a_g_e_1_1_open_g_l_texture2_d.md), [**AGE::SubTexture2D**](class_a_g_e_1_1_sub_texture2_d.md), [**AGE::WindowResizeEvent**](class_a_g_e_1_1_window_resize_event.md))
@@ -451,16 +448,17 @@
 * **m\_Stack** ([**AGE::ScriptableWidget**](class_a_g_e_1_1_scriptable_widget.md), [**AGE::WidgetActivatedEvent**](class_a_g_e_1_1_widget_activated_event.md), [**AGE::WidgetConstructedEvent**](class_a_g_e_1_1_widget_constructed_event.md), [**AGE::WidgetDeactivatedEvent**](class_a_g_e_1_1_widget_deactivated_event.md))
 * **m\_UIComponents** ([**AGE::ScriptableWidget**](class_a_g_e_1_1_scriptable_widget.md))
 * **m\_Shaders** ([**AGE::ShaderLibrary**](class_a_g_e_1_1_shader_library.md))
+* **ModelCount** ([**AGE::Statistics**](struct_a_g_e_1_1_statistics.md))
 * **m\_TexCoords** ([**AGE::SubTexture2D**](class_a_g_e_1_1_sub_texture2_d.md))
 * **m\_Texture** ([**AGE::SubTexture2D**](class_a_g_e_1_1_sub_texture2_d.md))
 * **m\_StringProperties** ([**AGE::TextBoxComponent**](class_a_g_e_1_1_text_box_component.md), [**AGE::TextComponent**](class_a_g_e_1_1_text_component.md))
+* **m\_CurrentTileMap** ([**AGE::TileMapManager**](class_a_g_e_1_1_tile_map_manager.md))
 * **m\_Importer** ([**AGE::TileMapManager**](class_a_g_e_1_1_tile_map_manager.md))
 * **m\_Manager** ([**AGE::TileMapManager**](class_a_g_e_1_1_tile_map_manager.md))
 * **m\_TileMaps** ([**AGE::TileMapManager**](class_a_g_e_1_1_tile_map_manager.md))
 * **m\_Map** ([**AGE::Tilemap**](class_a_g_e_1_1_tilemap.md))
-* **m\_MapHeight** ([**AGE::Tilemap**](class_a_g_e_1_1_tilemap.md))
-* **m\_MapWidth** ([**AGE::Tilemap**](class_a_g_e_1_1_tilemap.md))
-* **m\_UVs** ([**AGE::Tilemap**](class_a_g_e_1_1_tilemap.md))
+* **m\_TMXData** ([**AGE::Tilemap**](class_a_g_e_1_1_tilemap.md))
+* **m\_TilemapTexture** ([**AGE::Tilemap**](class_a_g_e_1_1_tilemap.md))
 * **m\_Time** ([**AGE::TimeStep**](class_a_g_e_1_1_time_step.md))
 * **m\_Start** ([**AGE::Timer**](class_a_g_e_1_1_timer.md))
 * **m\_CompProperties** ([**AGE::UIComponent**](class_a_g_e_1_1_u_i_component.md))
@@ -499,7 +497,6 @@
 * **Navy** ([**AGE::Colors::Color**](struct_a_g_e_1_1_colors_1_1_color.md))
 * **n** ([**AGE::Matrix2D**](struct_a_g_e_1_1_matrix2_d.md), [**AGE::Matrix3D**](struct_a_g_e_1_1_matrix3_d.md), [**AGE::Matrix4D**](struct_a_g_e_1_1_matrix4_d.md))
 * **NodeID** ([**AGE::NodeEditorManager**](class_a_g_e_1_1_node_editor_manager.md))
-* **NumofLayers** ([**AGE::TilemapProperties**](struct_a_g_e_1_1_tilemap_properties.md))
 
 
 ## o
@@ -533,6 +530,7 @@
 * **PixelsPerByte** ([**AGE::ImageSpecification**](struct_a_g_e_1_1_image_specification.md))
 * **Point2D** ([**AGE::QueryParams**](struct_a_g_e_1_1_query_params.md))
 * **Point3D** ([**AGE::QueryParams**](struct_a_g_e_1_1_query_params.md))
+* **PyramidCount** ([**AGE::Statistics**](struct_a_g_e_1_1_statistics.md))
 * **Projection** ([**AGE::UniformBufferObj**](struct_a_g_e_1_1_uniform_buffer_obj.md), [**AGE::\_constantBufferStruct**](struct_a_g_e_1_1__constant_buffer_struct.md))
 
 
@@ -620,7 +618,7 @@
 * **s\_Position** ([**AGE::SquirrelRNG**](class_a_g_e_1_1_squirrel_r_n_g.md))
 * **s\_Rotation** ([**AGE::SquirrelRNG**](class_a_g_e_1_1_squirrel_r_n_g.md))
 * **s\_Seed** ([**AGE::SquirrelRNG**](class_a_g_e_1_1_squirrel_r_n_g.md))
-* **SubTexs** ([**AGE::TilesetData**](struct_a_g_e_1_1_tileset_data.md))
+* **SphereCount** ([**AGE::Statistics**](struct_a_g_e_1_1_statistics.md))
 
 
 ## t
@@ -639,7 +637,7 @@
 * **ThreadID** ([**AGE::ProfileResult**](struct_a_g_e_1_1_profile_result.md))
 * **TextureCoords** ([**AGE::QuadProperties**](struct_a_g_e_1_1_quad_properties.md))
 * **TilingFactor** ([**AGE::QuadProperties**](struct_a_g_e_1_1_quad_properties.md))
-* **Transform** ([**AGE::QuadProperties**](struct_a_g_e_1_1_quad_properties.md), [**AGE::TilemapProperties**](struct_a_g_e_1_1_tilemap_properties.md))
+* **Transform** ([**AGE::QuadProperties**](struct_a_g_e_1_1_quad_properties.md))
 * **TexCoordUniformBuffer** ([**AGE::Renderer2DData**](struct_a_g_e_1_1_renderer2_d_data.md))
 * **TextIndexCount** ([**AGE::Renderer2DData**](struct_a_g_e_1_1_renderer2_d_data.md))
 * **TextShader** ([**AGE::Renderer2DData**](struct_a_g_e_1_1_renderer2_d_data.md))
@@ -648,24 +646,23 @@
 * **TextVertexBufferPtr** ([**AGE::Renderer2DData**](struct_a_g_e_1_1_renderer2_d_data.md))
 * **TextureSlotIndex** ([**AGE::Renderer2DData**](struct_a_g_e_1_1_renderer2_d_data.md))
 * **TextureSlots** ([**AGE::Renderer2DData**](struct_a_g_e_1_1_renderer2_d_data.md))
-* **TileIndexCount** ([**AGE::Renderer2DData**](struct_a_g_e_1_1_renderer2_d_data.md))
-* **TileSetTextures** ([**AGE::Renderer2DData**](struct_a_g_e_1_1_renderer2_d_data.md))
+* **TileIndexCounts** ([**AGE::Renderer2DData**](struct_a_g_e_1_1_renderer2_d_data.md))
 * **TileShader** ([**AGE::Renderer2DData**](struct_a_g_e_1_1_renderer2_d_data.md))
-* **TileVertexArray** ([**AGE::Renderer2DData**](struct_a_g_e_1_1_renderer2_d_data.md))
-* **TileVertexBufferBase** ([**AGE::Renderer2DData**](struct_a_g_e_1_1_renderer2_d_data.md))
-* **TileVertexBufferPtr** ([**AGE::Renderer2DData**](struct_a_g_e_1_1_renderer2_d_data.md))
-* **TileVertexCount** ([**AGE::Renderer2DData**](struct_a_g_e_1_1_renderer2_d_data.md))
-* **TileVertexPositions** ([**AGE::Renderer2DData**](struct_a_g_e_1_1_renderer2_d_data.md))
-* **TilesetSlotIndex** ([**AGE::Renderer2DData**](struct_a_g_e_1_1_renderer2_d_data.md))
+* **TileVertexArrays** ([**AGE::Renderer2DData**](struct_a_g_e_1_1_renderer2_d_data.md))
+* **TileVertexBufferBases** ([**AGE::Renderer2DData**](struct_a_g_e_1_1_renderer2_d_data.md))
+* **TileVertexBufferPtrs** ([**AGE::Renderer2DData**](struct_a_g_e_1_1_renderer2_d_data.md))
+* **TileVertexBuffers** ([**AGE::Renderer2DData**](struct_a_g_e_1_1_renderer2_d_data.md))
+* **TileHeight** ([**AGE::SpriteRendererComponent**](struct_a_g_e_1_1_sprite_renderer_component.md))
+* **TileID** ([**AGE::SpriteRendererComponent**](struct_a_g_e_1_1_sprite_renderer_component.md))
+* **TileLocation** ([**AGE::SpriteRendererComponent**](struct_a_g_e_1_1_sprite_renderer_component.md))
+* **TileWidth** ([**AGE::SpriteRendererComponent**](struct_a_g_e_1_1_sprite_renderer_component.md))
+* **TilesLayer** ([**AGE::SpriteRendererComponent**](struct_a_g_e_1_1_sprite_renderer_component.md))
 * **TextCount** ([**AGE::Statistics**](struct_a_g_e_1_1_statistics.md))
 * **TileCount** ([**AGE::Statistics**](struct_a_g_e_1_1_statistics.md))
 * **TextFont** ([**AGE::StringProperties**](struct_a_g_e_1_1_string_properties.md))
 * **Tag** ([**AGE::TagComponent**](struct_a_g_e_1_1_tag_component.md))
 * **TexID** ([**AGE::TextVertex**](struct_a_g_e_1_1_text_vertex.md))
 * **TileMap** ([**AGE::TileMapRendererComponent**](struct_a_g_e_1_1_tile_map_renderer_component.md))
-* **TileSetID** ([**AGE::TilemapProperties**](struct_a_g_e_1_1_tilemap_properties.md))
-* **TileHeight** ([**AGE::TilesetData**](struct_a_g_e_1_1_tileset_data.md))
-* **TileWidth** ([**AGE::TilesetData**](struct_a_g_e_1_1_tileset_data.md))
 * **Translation** ([**AGE::TransformComponent**](struct_a_g_e_1_1_transform_component.md))
 * **Title** ([**AGE::WindowProps**](struct_a_g_e_1_1_window_props.md))
 
@@ -681,7 +678,6 @@
 * **Uint64** ([**AGE::AsepritePropertyData**](struct_a_g_e_1_1_aseprite_property_data.md))
 * **UserProps** ([**AGE::AsepriteUserData**](struct_a_g_e_1_1_aseprite_user_data.md))
 * **UUID** ([**AGE::AsepriteUserProps**](struct_a_g_e_1_1_aseprite_user_props.md))
-* **UV** ([**AGE::TilemapProperties**](struct_a_g_e_1_1_tilemap_properties.md))
 * **Up** ([**AGE::\_constantBufferStruct**](struct_a_g_e_1_1__constant_buffer_struct.md))
 
 
@@ -693,25 +689,23 @@
 * **Vector3D** ([**AGE::AGEPin**](struct_a_g_e_1_1_a_g_e_pin.md))
 * **Vector4D** ([**AGE::AGEPin**](struct_a_g_e_1_1_a_g_e_pin.md))
 * **Vec** ([**AGE::AsepritePropertyData**](struct_a_g_e_1_1_aseprite_property_data.md))
-* **VertexColor** ([**AGE::CircleVertex**](struct_a_g_e_1_1_circle_vertex.md), [**AGE::LineVertex**](struct_a_g_e_1_1_line_vertex.md), [**AGE::TextVertex**](struct_a_g_e_1_1_text_vertex.md), [**AGE::TilemapVertex**](struct_a_g_e_1_1_tilemap_vertex.md), [**AGE::Vertex**](struct_a_g_e_1_1_vertex.md), [**AGE::\_vertexPositionColor**](struct_a_g_e_1_1__vertex_position_color.md))
+* **VertexColor** ([**AGE::CircleVertex**](struct_a_g_e_1_1_circle_vertex.md), [**AGE::LineVertex**](struct_a_g_e_1_1_line_vertex.md), [**AGE::TextVertex**](struct_a_g_e_1_1_text_vertex.md), [**AGE::TileVertex**](struct_a_g_e_1_1_tile_vertex.md), [**AGE::Vertex**](struct_a_g_e_1_1_vertex.md), [**AGE::\_vertexPositionColor**](struct_a_g_e_1_1__vertex_position_color.md))
 * **VertexFade** ([**AGE::CircleVertex**](struct_a_g_e_1_1_circle_vertex.md))
 * **VertexLocalPosition** ([**AGE::CircleVertex**](struct_a_g_e_1_1_circle_vertex.md))
 * **VertexThickness** ([**AGE::CircleVertex**](struct_a_g_e_1_1_circle_vertex.md))
 * **VertexWorldPosition** ([**AGE::CircleVertex**](struct_a_g_e_1_1_circle_vertex.md))
 * **Violet** ([**AGE::Colors::Color**](struct_a_g_e_1_1_colors_1_1_color.md))
-* **VertexPosition** ([**AGE::LineVertex**](struct_a_g_e_1_1_line_vertex.md), [**AGE::TextVertex**](struct_a_g_e_1_1_text_vertex.md), [**AGE::TilemapVertex**](struct_a_g_e_1_1_tilemap_vertex.md), [**AGE::Vertex**](struct_a_g_e_1_1_vertex.md), [**AGE::\_vertexPositionColor**](struct_a_g_e_1_1__vertex_position_color.md), [**AGE::\_vertexPositionColorTangent**](struct_a_g_e_1_1__vertex_position_color_tangent.md))
+* **VertexPosition** ([**AGE::LineVertex**](struct_a_g_e_1_1_line_vertex.md), [**AGE::TextVertex**](struct_a_g_e_1_1_text_vertex.md), [**AGE::TileVertex**](struct_a_g_e_1_1_tile_vertex.md), [**AGE::Vertex**](struct_a_g_e_1_1_vertex.md), [**AGE::\_vertexPositionColor**](struct_a_g_e_1_1__vertex_position_color.md), [**AGE::\_vertexPositionColorTangent**](struct_a_g_e_1_1__vertex_position_color_tangent.md))
 * **Velocity** ([**AGE::ParticleProps**](struct_a_g_e_1_1_particle_props.md), [**AGE::ParticleSystem::Particle**](struct_a_g_e_1_1_particle_system_1_1_particle.md))
 * **VelocityVariation** ([**AGE::ParticleProps**](struct_a_g_e_1_1_particle_props.md))
 * **VertexBuffers** ([**AGE::Renderer2DData**](struct_a_g_e_1_1_renderer2_d_data.md))
-* **VertexTexCoords** ([**AGE::TextVertex**](struct_a_g_e_1_1_text_vertex.md), [**AGE::Vertex**](struct_a_g_e_1_1_vertex.md))
-* **VertexEntityID** ([**AGE::TilemapVertex**](struct_a_g_e_1_1_tilemap_vertex.md), [**AGE::Vertex**](struct_a_g_e_1_1_vertex.md))
-* **VertexTSID** ([**AGE::TilemapVertex**](struct_a_g_e_1_1_tilemap_vertex.md))
-* **VertexUV** ([**AGE::TilemapVertex**](struct_a_g_e_1_1_tilemap_vertex.md))
+* **VertexTexCoords** ([**AGE::TextVertex**](struct_a_g_e_1_1_text_vertex.md), [**AGE::TileVertex**](struct_a_g_e_1_1_tile_vertex.md), [**AGE::Vertex**](struct_a_g_e_1_1_vertex.md))
+* **VertexEntityID** ([**AGE::TileVertex**](struct_a_g_e_1_1_tile_vertex.md), [**AGE::Vertex**](struct_a_g_e_1_1_vertex.md))
+* **VertexTexID** ([**AGE::TileVertex**](struct_a_g_e_1_1_tile_vertex.md), [**AGE::Vertex**](struct_a_g_e_1_1_vertex.md))
+* **VertexTilingFactor** ([**AGE::TileVertex**](struct_a_g_e_1_1_tile_vertex.md), [**AGE::Vertex**](struct_a_g_e_1_1_vertex.md))
 * **value** ([**AGE::UIComponentType**](struct_a_g_e_1_1_u_i_component_type.md))
 * **Visible** ([**AGE::UIProperties**](struct_a_g_e_1_1_u_i_properties.md))
 * **View** ([**AGE::UniformBufferObj**](struct_a_g_e_1_1_uniform_buffer_obj.md), [**AGE::\_constantBufferStruct**](struct_a_g_e_1_1__constant_buffer_struct.md))
-* **VertexTexID** ([**AGE::Vertex**](struct_a_g_e_1_1_vertex.md))
-* **VertexTilingFactor** ([**AGE::Vertex**](struct_a_g_e_1_1_vertex.md))
 * **ViewProjectionWorldMatrix** ([**AGE::\_constantBufferStruct**](struct_a_g_e_1_1__constant_buffer_struct.md))
 * **ViewMatrixProjection** ([**AGE::\_constantBufferStruct2D**](struct_a_g_e_1_1__constant_buffer_struct2_d.md))
 * **VertexNormal** ([**AGE::\_vertexPositionColorTangent**](struct_a_g_e_1_1__vertex_position_color_tangent.md))
@@ -749,6 +743,15 @@
 
 * **zIndex** ([**AGE::AsepriteCelChunk**](struct_a_g_e_1_1_aseprite_cel_chunk.md), [**AGE::AsepriteLayer**](struct_a_g_e_1_1_aseprite_layer.md))
 * **z** ([**AGE::Plane**](struct_a_g_e_1_1_plane.md), [**AGE::Quaternion**](struct_a_g_e_1_1_quaternion.md), [**AGE::Vector3**](struct_a_g_e_1_1_vector3.md), [**AGE::Vector4**](struct_a_g_e_1_1_vector4.md))
+
+
+## _
+
+* **\_\_pad0\_\_** ([**AGE::AGEFunction**](struct_a_g_e_1_1_a_g_e_function.md), [**AGE::AGEPoint**](struct_a_g_e_1_1_a_g_e_point.md), [**AGE::AGERect**](struct_a_g_e_1_1_a_g_e_rect.md), [**AGE::AssetRegistry**](struct_a_g_e_1_1_asset_registry.md), [**AGE::BufferLayout**](class_a_g_e_1_1_buffer_layout.md), [**AGE::Camera**](class_a_g_e_1_1_camera.md), [**AGE::FramebufferTextureSpecification**](struct_a_g_e_1_1_framebuffer_texture_specification.md), [**AGE::LayerStack**](class_a_g_e_1_1_layer_stack.md), [**AGE::Matrix3D**](struct_a_g_e_1_1_matrix3_d.md), [**AGE::Matrix4D**](struct_a_g_e_1_1_matrix4_d.md), [**AGE::OpenGLFrameBuffer**](class_a_g_e_1_1_open_g_l_frame_buffer.md), [**AGE::Renderer**](class_a_g_e_1_1_renderer.md), [**AGE::Reverse**](class_a_g_e_1_1_reverse.md), [**AGE::ScriptableEntity**](class_a_g_e_1_1_scriptable_entity.md), [**AGE::SpriteRendererComponent**](struct_a_g_e_1_1_sprite_renderer_component.md), [**AGE::SubTexture2D**](class_a_g_e_1_1_sub_texture2_d.md), [**AGE::Transform4D**](struct_a_g_e_1_1_transform4_d.md), [**AGE::TransformComponent**](struct_a_g_e_1_1_transform_component.md), [**AGE::UIComponentType**](struct_a_g_e_1_1_u_i_component_type.md), [**AGE::Vector2**](struct_a_g_e_1_1_vector2.md), [**AGE::Vector4**](struct_a_g_e_1_1_vector4.md))
+* **\_\_pad1\_\_** ([**AGE::AGEFunction**](struct_a_g_e_1_1_a_g_e_function.md), [**AGE::BufferLayout**](class_a_g_e_1_1_buffer_layout.md), [**AGE::Camera**](class_a_g_e_1_1_camera.md), [**AGE::Matrix4D**](struct_a_g_e_1_1_matrix4_d.md), [**AGE::Transform4D**](struct_a_g_e_1_1_transform4_d.md), [**AGE::Vector2**](struct_a_g_e_1_1_vector2.md), [**AGE::Vector4**](struct_a_g_e_1_1_vector4.md))
+* **\_\_pad2\_\_** ([**AGE::Camera**](class_a_g_e_1_1_camera.md), [**AGE::Vector2**](struct_a_g_e_1_1_vector2.md), [**AGE::Vector4**](struct_a_g_e_1_1_vector4.md))
+* **\_\_pad3\_\_** ([**AGE::Vector2**](struct_a_g_e_1_1_vector2.md))
+* **\_\_pad4\_\_** ([**AGE::Vector2**](struct_a_g_e_1_1_vector2.md))
 
 
 

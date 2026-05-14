@@ -77,6 +77,21 @@
               
                 <h1 id="struct-agematrix3d">Struct AGE::Matrix3D</h1>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespace_a_g_e/"><strong>AGE</strong></a> <strong>&gt;</strong> <a href="./"><strong>Matrix3D</strong></a></p>
+<h2 id="public-attributes">Public Attributes</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">COMMENT</td>
+<td style="text-align: left;"><a href="#variable-__pad0__"><strong>__pad0__</strong></a>  <br></td>
+</tr>
+</tbody>
+</table>
 <h2 id="public-functions">Public Functions</h2>
 <table>
 <thead>
@@ -88,53 +103,67 @@
 <tbody>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-matrix3d-14"><strong>Matrix3D</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-matrix3d-14"><strong>Matrix3D</strong></a> () = default<br><em>Default constructor for the</em> <a href="./"><em><strong>Matrix3D</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-matrix3d-24"><strong>Matrix3D</strong></a> (float n00, float n01, float n02, float n10, float n11, float n12, float n20, float n21, float n22) <br></td>
+<td style="text-align: left;"><a href="#function-matrix3d-24"><strong>Matrix3D</strong></a> (float n00, float n01, float n02, float n10, float n11, float n12, float n20, float n21, float n22) <br><em>Constructs a 3x3 Matrix with the given values.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-matrix3d-34"><strong>Matrix3D</strong></a> (const <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> &amp; a, const <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> &amp; b, const <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> &amp; c) <br></td>
+<td style="text-align: left;"><a href="#function-matrix3d-34"><strong>Matrix3D</strong></a> (const <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> &amp; a, const <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> &amp; b, const <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> &amp; c) <br><em>Constructs a 3D Matrix from three</em> <a href="../struct_a_g_e_1_1_vector3/"><em><strong>Vector3</strong></em></a> <em>instances.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-matrix3d-44"><strong>Matrix3D</strong></a> (void * Ptr) <br></td>
+<td style="text-align: left;"><a href="#function-matrix3d-44"><strong>Matrix3D</strong></a> (void * Ptr) <br><em>Constructs a 3D Matrix from a void pointer.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">glm::mat3</td>
-<td style="text-align: left;"><a href="#function-toglm-12"><strong>ToGLM</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-toglm-12"><strong>ToGLM</strong></a> () <br><em>Converts the 3x3 matrix to a GLM mat3.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">glm::mat3</td>
-<td style="text-align: left;"><a href="#function-toglm-22"><strong>ToGLM</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-toglm-22"><strong>ToGLM</strong></a> () const<br><em>Converts the 3x3 matrix to a GLM mat3.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">float &amp;</td>
-<td style="text-align: left;"><a href="#function-operator"><strong>operator()</strong></a> (int i, int j) <br></td>
+<td style="text-align: left;"><a href="#function-operator"><strong>operator()</strong></a> (int i, int j) <br><em>Accesses an element in the matrix using two indices.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">const float &amp;</td>
-<td style="text-align: left;"><a href="#function-operator_1"><strong>operator()</strong></a> (int i, int j) const<br></td>
+<td style="text-align: left;"><a href="#function-operator_1"><strong>operator()</strong></a> (int i, int j) const<br><em>Returns a constant reference to the element at position (i, j).</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"><a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> &amp;</td>
-<td style="text-align: left;"><a href="#function-operator_2"><strong>operator[]</strong></a> (int j) <br></td>
+<td style="text-align: left;"><a href="#function-operator_2"><strong>operator[]</strong></a> (int j) <br><em>This function is an overloaded operator that allows for accessing</em> <a href="../struct_a_g_e_1_1_vector3/"><em><strong>Vector3</strong></em></a> <em>objects in a vector of void pointers. It returns a reference to the jth element in the vector.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">const <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> &amp;</td>
-<td style="text-align: left;"><a href="#function-operator_3"><strong>operator[]</strong></a> (int j) const<br></td>
+<td style="text-align: left;"><a href="#function-operator_3"><strong>operator[]</strong></a> (int j) const<br><em>This function returns a constant reference to the</em> <a href="../struct_a_g_e_1_1_vector3/"><em><strong>Vector3</strong></em></a> <em>object at index 'j' in the array.</em></td>
 </tr>
 </tbody>
 </table>
+<h2 id="public-attributes-documentation">Public Attributes Documentation</h2>
+<h3 id="variable-__pad0__">variable __pad0__</h3>
+<pre><code class="language-C++">COMMENT AGE::Matrix3D::__pad0__;
+</code></pre>
+<hr>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-matrix3d-14">function Matrix3D [1/4]</h3>
+<p><em>Default constructor for the</em> <a href="./"><em><strong>Matrix3D</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::Matrix3D::Matrix3D () = default
 </code></pre>
+<p>This function initializes a new instance of the <a href="./"><strong>Matrix3D</strong></a> class with all elements set to zero.</p>
+<p><strong>Returns:</strong></p>
+<p>A newly initialized <a href="./"><strong>Matrix3D</strong></a> object.</p>
+<p>Default constructor for the <a href="./"><strong>Matrix3D</strong></a> class.</p>
+<p>This function initializes a new instance of the <a href="./"><strong>Matrix3D</strong></a> class with default values. It is used to create an empty matrix object that can be populated with data later on.</p>
+<p><strong>Returns:</strong></p>
+<p>A new instance of the <a href="./"><strong>Matrix3D</strong></a> class with no specific initialization. </p>
 <hr>
 
 <h3 id="function-matrix3d-24">function Matrix3D [2/4]</h3>
+<p><em>Constructs a 3x3 Matrix with the given values.</em> </p>
 <pre><code class="language-C++">inline AGE::Matrix3D::Matrix3D (
     float n00,
     float n01,
@@ -147,62 +176,187 @@
     float n22
 ) 
 </code></pre>
+<p>The function initializes a 3x3 matrix using the provided nine float parameters, each representing an element of the matrix in row-major order (i.e., n[0][0], n[0][1], ..., n[2][2]).</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>n00</code> Value for the first element of the matrix. </li>
+<li><code>n01</code> Value for the second element of the matrix. </li>
+<li><code>n02</code> Value for the third element of the matrix. </li>
+<li><code>n10</code> Value for the fourth element of the matrix. </li>
+<li><code>n11</code> Value for the fifth element of the matrix. </li>
+<li><code>n12</code> Value for the sixth element of the matrix. </li>
+<li><code>n20</code> Value for the seventh element of the matrix. </li>
+<li><code>n21</code> Value for the eighth element of the matrix. </li>
+<li><code>n22</code> Value for the ninth element of the matrix. </li>
+</ul>
 <hr>
 
 <h3 id="function-matrix3d-34">function Matrix3D [3/4]</h3>
+<p><em>Constructs a 3D Matrix from three</em> <a href="../struct_a_g_e_1_1_vector3/"><em><strong>Vector3</strong></em></a> <em>instances.</em></p>
 <pre><code class="language-C++">inline AGE::Matrix3D::Matrix3D (
     const Vector3 &amp; a,
     const Vector3 &amp; b,
     const Vector3 &amp; c
 ) 
 </code></pre>
+<p>The constructor initializes the matrix with the x, y and z components of the input vectors. It sets the first row to correspond to the vector 'a', the second row to 'b' and the third row to 'c'. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>a</code> First <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> instance for initialization. </li>
+<li><code>b</code> Second <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> instance for initialization. </li>
+<li><code>c</code> Third <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> instance for initialization.</li>
+</ul>
+<p>Constructs a 3D Matrix from three <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> instances.</p>
+<p>The constructor initializes the matrix with the x, y and z components of the input vectors. This is used to create a 3D transformation matrix for transformations in 3D space.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>a</code> First vector instance. Contains x, y and z components. </li>
+<li><code>b</code> Second vector instance. Contains x, y and z components. </li>
+<li><code>c</code> Third vector instance. Contains x, y and z components. </li>
+</ul>
 <hr>
 
 <h3 id="function-matrix3d-44">function Matrix3D [4/4]</h3>
+<p><em>Constructs a 3D Matrix from a void pointer.</em> </p>
 <pre><code class="language-C++">inline AGE::Matrix3D::Matrix3D (
     void * Ptr
 ) 
 </code></pre>
+<p>This function takes in a void pointer to an object of type <a href="./"><strong>Matrix3D</strong></a>, casts it to the appropriate type, and then copies its values into this <a href="./"><strong>Matrix3D</strong></a> instance.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Ptr</code> A void pointer to an existing <a href="./"><strong>Matrix3D</strong></a> object.</li>
+</ul>
+<p>Constructs a 3D Matrix from a void pointer.</p>
+<p>This function takes in a void pointer to an object of type <a href="./"><strong>Matrix3D</strong></a>, casts it to the appropriate type and then copies its values into this instance's matrix data members.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Ptr</code> A void pointer to an object of type <a href="./"><strong>Matrix3D</strong></a>. </li>
+</ul>
 <hr>
 
 <h3 id="function-toglm-12">function ToGLM [1/2]</h3>
+<p><em>Converts the 3x3 matrix to a GLM mat3.</em> </p>
 <pre><code class="language-C++">inline glm::mat3 AGE::Matrix3D::ToGLM () 
 </code></pre>
+<p>This function takes no parameters and returns a glm::mat3 object that represents the same data as the current 3x3 matrix. The returned object is constructed by copying the elements of the current matrix into it, in row-major order.</p>
+<p><strong>Returns:</strong></p>
+<p>A glm::mat3 object representing the same data as the current 3x3 matrix.</p>
+<p>Converts the 3x3 matrix to a GLM mat3.</p>
+<p>This function takes no parameters and returns a glm::mat3 object that represents the same 3x3 matrix as this one. The elements of the returned mat3 are identical to those in this matrix, with indices running from 0 to 2 for both rows and columns.</p>
+<p><strong>Returns:</strong></p>
+<p>A glm::mat3 representation of the current 3x3 matrix. </p>
 <hr>
 
 <h3 id="function-toglm-22">function ToGLM [2/2]</h3>
+<p><em>Converts the 3x3 matrix to a GLM mat3.</em> </p>
 <pre><code class="language-C++">inline glm::mat3 AGE::Matrix3D::ToGLM () const
 </code></pre>
+<p>This function converts the current 3x3 matrix into a glm::mat3 by copying its elements directly. The resulting glm::mat3 is returned.</p>
+<p><strong>Returns:</strong></p>
+<p>A glm::mat3 representation of this 3x3 matrix.</p>
+<p>Converts the matrix to a GLM mat3.</p>
+<p>This function converts the current matrix into a glm::mat3 by extracting its elements and returning them in a new glm::mat3 object. The returned glm::mat3 will have the same values as this matrix, but it is guaranteed to be of type glm::mat3.</p>
+<p><strong>Returns:</strong></p>
+<p>A glm::mat3 containing the same data as this matrix. </p>
 <hr>
 
 <h3 id="function-operator">function operator()</h3>
+<p><em>Accesses an element in the matrix using two indices.</em> </p>
 <pre><code class="language-C++">inline float &amp; AGE::Matrix3D::operator() (
     int i,
     int j
 ) 
 </code></pre>
+<p>This function allows access to a single element in the matrix through its two-dimensional indexing scheme. The elements are accessed by their row and column indices, with 0 being the first index for both.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>i</code> The column index of the element to be accessed. Must be within the range [0, size_of_column). </li>
+<li><code>j</code> The row index of the element to be accessed. Must be within the range [0, size_of_row).</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A reference to the float value at position (i,j) in the matrix.</p>
+<p><strong>Exception:</strong></p>
+<ul>
+<li><code>std::out_of_range</code> if either i or j is out of the valid range for their respective dimensions.</li>
+</ul>
+<p>Accesses an element in the matrix using two indices.</p>
+<p>This function allows access to a single element of the matrix through its two-dimensional coordinates (i, j). It returns a reference to the requested element.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>i</code> The first index for accessing the element. </li>
+<li><code>j</code> The second index for accessing the element. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A reference to the accessed element. </p>
 <hr>
 
 <h3 id="function-operator_1">function operator()</h3>
+<p><em>Returns a constant reference to the element at position (i, j).</em> </p>
 <pre><code class="language-C++">inline const float &amp; AGE::Matrix3D::operator() (
     int i,
     int j
 ) const
 </code></pre>
+<p>This function returns a constant reference to the element in the matrix at position (i, j), where i and j are zero-based indices. The returned value cannot be modified by this function. If you need to modify the matrix elements, use other functions provided by the class.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>i</code> Zero-based index for the row of the element to return. </li>
+<li><code>j</code> Zero-based index for the column of the element to return.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Constant reference to the (i, j)-th element in the matrix.</p>
+<p>Access the element at position (i, j) in a two-dimensional array.</p>
+<p>This function allows you to access an element at a specific location in a two-dimensional array using 0-based indexing. The indices i and j represent the row and column of the desired element respectively.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>i</code> The row index of the element to be accessed. </li>
+<li><code>j</code> The column index of the element to be accessed. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A constant reference to the element at position (i, j). </p>
 <hr>
 
 <h3 id="function-operator_2">function operator[]</h3>
+<p><em>This function is an overloaded operator that allows for accessing</em> <a href="../struct_a_g_e_1_1_vector3/"><em><strong>Vector3</strong></em></a> <em>objects in a vector of void pointers. It returns a reference to the jth element in the vector.</em></p>
 <pre><code class="language-C++">inline Vector3 &amp; AGE::Matrix3D::operator[] (
     int j
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>j</code> The index of the element to access. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A reference to the jth <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> object.</p>
+<p>This function returns a reference to the <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> object at index 'j' in the array.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>j</code> The index of the <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> object in the array. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A reference to the <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> object at index 'j'. </p>
 <hr>
 
 <h3 id="function-operator_3">function operator[]</h3>
+<p><em>This function returns a constant reference to the</em> <a href="../struct_a_g_e_1_1_vector3/"><em><strong>Vector3</strong></em></a> <em>object at index 'j' in the array.</em></p>
 <pre><code class="language-C++">inline const Vector3 &amp; AGE::Matrix3D::operator[] (
     int j
 ) const
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>j</code> The index of the <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> object in the array. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A constant reference to the <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> object at index 'j'.</p>
+<p>This function returns a constant reference to the <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> object at index 'j' in the array. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>j</code> The index of the <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> object in the array. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A constant reference to the <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> object at index 'j'. </p>
 <hr>
 
 <hr />

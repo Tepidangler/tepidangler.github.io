@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="66" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" bodystart="66" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="86" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" bodystart="86" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_a_g_e_sound_1ae73767b2abe069a316e3566d797281ae" prot="private" static="no" mutable="no">
         <type>ALCcontext *</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="68" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" bodystart="68" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="88" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" bodystart="88" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_a_g_e_sound_1a725c3689fb42d0dbf1206cc3d487dffe" prot="private" static="no" mutable="no">
         <type>std::vector&lt; std::string &gt;</type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="70" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" bodystart="70" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="90" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" bodystart="90" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_a_g_e_sound_1a6e3514d80f8704bd9e344bcc6ce61122" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -59,7 +59,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="72" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" bodystart="72" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="92" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" bodystart="92" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -70,12 +70,17 @@
         <name>AGESound</name>
         <qualifiedname>AGE::AGESound::AGESound</qualifiedname>
         <briefdescription>
+<para>Constructor for the <ref refid="class_a_g_e_1_1_a_g_e_sound" kindref="compound">AGESound</ref> class. Initializes the sound object with default values. </para>
         </briefdescription>
         <detaileddescription>
+<para>This constructor initializes an instance of the <ref refid="class_a_g_e_1_1_a_g_e_sound" kindref="compound">AGESound</ref> class by calling the Init() function, which sets up any necessary resources or defaults for a sound object.</para>
+<para><simplesect kind="return"><para>void</para>
+</simplesect>
+Constructor for the <ref refid="class_a_g_e_1_1_a_g_e_sound" kindref="compound">AGESound</ref> class. Initializes a new instance of the sound object with default values. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="15" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="117" bodyend="120"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="15" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="170" bodyend="173"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1ac7c399655f6b93b37ad9768f80fef51a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -84,12 +89,14 @@
         <name>~AGESound</name>
         <qualifiedname>AGE::AGESound::~AGESound</qualifiedname>
         <briefdescription>
+<para>Destructor for <ref refid="class_a_g_e_1_1_a_g_e_sound" kindref="compound">AGESound</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is responsible for releasing any resources that the <ref refid="class_a_g_e_1_1_a_g_e_sound" kindref="compound">AGESound</ref> object may have acquired during its lifetime, such as memory or file handles. It does not return anything and has no parameters. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="16" column="1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="21" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1a8e5ebb3330fa88235c1ebdecb4dab39a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -104,7 +111,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="17" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="122" bodyend="143"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="22" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="177" bodyend="198"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1a223cb2c73030f8d5bb33cbc821a223aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -114,12 +121,21 @@
         <qualifiedname>AGE::AGESound::Start</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_audio_engine_1ae3c47184585fce229ff01300add27b94">Start</reimplements>
         <briefdescription>
+<para>Starts the sound playback. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function initiates the sound playback by setting up any necessary resources and starting the audio engine. It does not start the actual playing of the sound, that is done in the <ref refid="class_a_g_e_1_1_a_g_e_sound_1a38cd44063727d2a1849abc2e5e0285e1" kindref="member">Play()</ref> method.</para>
+<para><simplesect kind="return"><para>void</para>
+</simplesect>
+Starts the sound playback.</para>
+<para>This function initiates the sound playback by starting to play the audio data from the beginning of the buffer. It does not reset or rewind the sound, it simply starts playing from where it left off.</para>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="18" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="145" bodyend="147"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="23" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="216" bodyend="218"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1af06a8788f9f2c400b9ae672e81589770" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -129,12 +145,21 @@
         <qualifiedname>AGE::AGESound::Update</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_audio_engine_1ac54c71ca4b76c307a6c3feb01f1d5550">Update</reimplements>
         <briefdescription>
+<para>Updates the sound object. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is responsible for updating the sound object&apos;s state based on its current configuration and any changes in the game world. It does not return a value as it operates by side effects, modifying internal states of the sound object.</para>
+<para><simplesect kind="return"><para>None</para>
+</simplesect>
+Updates the sound object.</para>
+<para>This function is responsible for updating the state of the sound object. It may involve processing audio data, updating sound properties or triggering any other necessary actions based on its current state.</para>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="19" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="149" bodyend="151"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="24" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="236" bodyend="238"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1acb2c61bd9502946e950c4c55b84b5a78" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -144,12 +169,21 @@
         <qualifiedname>AGE::AGESound::Stop</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_audio_engine_1ab144467b0185e2a7b83fabdec98f0ef5">Stop</reimplements>
         <briefdescription>
+<para>Stops the sound from playing. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is used to stop the sound that was previously started using the <ref refid="class_a_g_e_1_1_a_g_e_sound_1a38cd44063727d2a1849abc2e5e0285e1" kindref="member">Play()</ref> method. It will halt any ongoing playback and reset the position of the sound source back to its initial state.</para>
+<para><simplesect kind="return"><para>void</para>
+</simplesect>
+Stops the sound from playing.</para>
+<para>This function is used to stop the sound that was previously started using the <ref refid="class_a_g_e_1_1_a_g_e_sound_1a38cd44063727d2a1849abc2e5e0285e1" kindref="member">Play()</ref> method. It should be called when you want to halt the playback of the sound.</para>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="20" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="153" bodyend="155"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="25" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="256" bodyend="258"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1af5f8adb837115ea2732869ad29072303" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -163,12 +197,35 @@
           <declname>Banks</declname>
         </param>
         <briefdescription>
+<para>Loads a list of Sound Banks into the system. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes in a vector of references to Sound Bank objects and loads them into the sound system. The Sound Banks are expected to be properly initialized before being passed to this function.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Banks</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector of references to Sound Bank objects.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Loads a collection of Sound Banks into the system.</para>
+<para>This function takes in a vector of references to Sound Bank objects and loads them into the system. It does not return anything, so it is void.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Banks</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- A constant reference to a vector of <ref refid="class_a_g_e_1_1_sound_bank" kindref="compound">SoundBank</ref> references. Each <ref refid="class_a_g_e_1_1_sound_bank" kindref="compound">SoundBank</ref> object represents a bank of sounds that can be played by the system. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="22" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="157" bodyend="159"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="27" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="275" bodyend="277"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1a8469c75020afb6597461f07908d50078" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -182,12 +239,35 @@
           <declname>Bank</declname>
         </param>
         <briefdescription>
+<para>Loads a sound bank into the system. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes in a reference to a <ref refid="class_a_g_e_1_1_sound_bank" kindref="compound">SoundBank</ref> object and loads it into the system. It does not return anything, so use void as the return type.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Bank</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to the <ref refid="class_a_g_e_1_1_sound_bank" kindref="compound">SoundBank</ref> object that you want to load.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Loads a sound bank into the system.</para>
+<para>This function takes in a reference to a <ref refid="class_a_g_e_1_1_sound_bank" kindref="compound">SoundBank</ref> object and loads it into the system for use by the <ref refid="class_a_g_e_1_1_a_g_e_sound" kindref="compound">AGESound</ref> class. The exact behavior of this function depends on its implementation, which is not provided here.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Bank</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to the <ref refid="class_a_g_e_1_1_sound_bank" kindref="compound">SoundBank</ref> object to be loaded. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="23" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="161" bodyend="163"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="28" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="294" bodyend="296"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1a9b5aef971fb142e5d62be2c7b89fcc8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>std::string &amp;</type>
@@ -197,12 +277,19 @@
         <qualifiedname>AGE::AGESound::GetCurrentEventName</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_audio_engine_1a11ee1a0e6822c6c1a297e710a925bcec">GetCurrentEventName</reimplements>
         <briefdescription>
+<para>Get the name of the current event. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function returns a reference to the string that holds the name of the currently playing sound event. The returned value is not const, meaning it can be modified.</para>
+<para><simplesect kind="return"><para>A reference to the string holding the name of the current event</para>
+</simplesect>
+Get the name of the current event <simplesect kind="return"><para>A reference to a string containing the name of the current event </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="25" column="21" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="165" bodyend="168"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="30" column="21" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="310" bodyend="313"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1a19385df01ad12e7cb4305bb33c781f17" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -216,12 +303,34 @@
           <declname>Name</declname>
         </param>
         <briefdescription>
+<para>Set the name of the current event. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new name for the current event</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Sets the name of the current event.</para>
+<para>This function sets the name of the current event in the <ref refid="class_a_g_e_1_1_a_g_e_sound" kindref="compound">AGESound</ref> object. The new name is passed as a const reference to avoid unnecessary copying.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A constant reference to the string that will be used as the new name for the current event. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="26" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="170" bodyend="172"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="31" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="326" bodyend="328"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1a7c55a7b4ace491c107879ee1fca37741" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -236,7 +345,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="27" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" bodystart="27" bodyend="27"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="32" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" bodystart="32" bodyend="32"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1a3407f11a4b60101f98d0b1586c770e0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -246,12 +355,18 @@
         <qualifiedname>AGE::AGESound::Shutdown</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_audio_engine_1a12ef15e7d376905f2a17be365180e3d5">Shutdown</reimplements>
         <briefdescription>
+<para>Shuts down the <ref refid="class_a_g_e_1_1_a_g_e_sound" kindref="compound">AGESound</ref> object. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is used to clean up any resources that were allocated during the initialization of the <ref refid="class_a_g_e_1_1_a_g_e_sound" kindref="compound">AGESound</ref> object, such as memory or file handles. It prepares the object for deletion by setting it into a safe state and cleaning up any remaining resources.</para>
+<para><simplesect kind="return"><para>void</para>
+</simplesect>
+Shuts down the <ref refid="class_a_g_e_1_1_a_g_e_sound" kindref="compound">AGESound</ref> object.</para>
+<para>This function is used to clean up any resources that were allocated during the initialization of the <ref refid="class_a_g_e_1_1_a_g_e_sound" kindref="compound">AGESound</ref> object, such as memory or file handles. It prepares the object for deletion or reuse. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="28" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="174" bodyend="176"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="33" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="342" bodyend="344"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1a3be17705d0f540cab81a144e043255dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -265,12 +380,39 @@
           <declname>EventName</declname>
         </param>
         <briefdescription>
+<para>Checks whether the given event name is valid or not. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes an event name as input and checks if it&apos;s a valid event. The validity of the event can be based on various factors such as its length, format etc.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>EventName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string representing the name of the event to validate. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the event is valid, false otherwise.</para>
+</simplesect>
+Checks whether the given event name is valid or not.</para>
+<para>This function takes an event name as input and checks if it&apos;s a valid event by comparing it with a list of known events. If the event name matches any of these, the function returns true; otherwise, it returns false.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>EventName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the event to be checked. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the event is valid, False otherwise. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="29" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="178" bodyend="181"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="34" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="362" bodyend="365"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1a2203ebd82839e88f38d68cd1734e254b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -288,12 +430,51 @@
           <declname>Value</declname>
         </param>
         <briefdescription>
+<para>This function sets a parameter by its name. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function takes two parameters - the name of the parameter and the value to set it to. It does not return anything. If the provided name corresponds to an existing parameter, this function will update that parameter&apos;s value. Otherwise, it will do nothing.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string representing the name of the parameter to be set. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new float value for the parameter.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>None</para>
+</simplesect>
+Set the parameter value by its name <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the parameter to set </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new value for the parameter </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="31" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="183" bodyend="185"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="36" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="383" bodyend="385"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1a58ec988a00b82a15e5d03b7542fb5ef6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -307,12 +488,35 @@
           <declname>Attributes</declname>
         </param>
         <briefdescription>
+<para>Sets the 3D attributes for the sound object. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function sets the 3D attributes of the sound object using a void pointer to the Attributes structure. The exact nature and format of this data is not specified, as it depends on the specific implementation of the <ref refid="class_a_g_e_1_1_a_g_e_sound" kindref="compound">AGESound</ref> class.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Attributes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A void pointer to the Attributes structure.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Sets the 3D attributes for the sound object.</para>
+<para>This function sets the 3D attributes of the sound object using a void pointer to the Attributes structure. The exact nature and format of this data is not specified in the documentation, so it&apos;s assumed to be opaque to Doxygen.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Attributes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A void pointer to the Attributes structure. This parameter is expected to contain specific 3D attributes for the sound object but its content is not defined by this function. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="32" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="187" bodyend="189"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="37" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="401" bodyend="403"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1a38cd44063727d2a1849abc2e5e0285e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -325,12 +529,35 @@
           <declname>Source</declname>
         </param>
         <briefdescription>
+<para>Plays an audio source. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function plays the provided <ref refid="class_a_g_e_1_1_audio_source" kindref="compound">AudioSource</ref> using OpenAL&apos;s alSourcePlay function.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to the <ref refid="class_a_g_e_1_1_audio_source" kindref="compound">AudioSource</ref> that is to be played.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Plays an audio source.</para>
+<para>This function plays the provided <ref refid="class_a_g_e_1_1_audio_source" kindref="compound">AudioSource</ref> using OpenAL&apos;s alSourcePlay function. The function takes a reference to an <ref refid="class_a_g_e_1_1_audio_source" kindref="compound">AudioSource</ref> object which is played by this method.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A const reference to an <ref refid="class_a_g_e_1_1_audio_source" kindref="compound">AudioSource</ref> object that needs to be played. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="34" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="364" bodyend="367"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="39" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="672" bodyend="675"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1a73a24d69103650385a5dd7452dbc3127" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -343,12 +570,35 @@
           <declname>Source</declname>
         </param>
         <briefdescription>
+<para>Stops the audio source from playing. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function stops an audio source from playing by using the OpenAL library&apos;s alSourceStop() function. The audio source to be stopped is passed as a reference to an <ref refid="class_a_g_e_1_1_audio_source" kindref="compound">AudioSource</ref> object.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to the <ref refid="class_a_g_e_1_1_audio_source" kindref="compound">AudioSource</ref> object whose source should be stopped.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Stops an audio source from playing.</para>
+<para>This function stops the audio source specified by the handle provided. It does not check if the source is actually playing, so it should be used with caution.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to the <ref refid="class_a_g_e_1_1_audio_source" kindref="compound">AudioSource</ref> object that you want to stop. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="35" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="368" bodyend="371"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="40" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="691" bodyend="694"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1afcd894a5a9803a806be653384e697be0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -361,12 +611,37 @@
           <declname>Sources</declname>
         </param>
         <briefdescription>
+<para>Stops all the audio sources in a given vector. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function iterates over each element of the provided vector and calls the <ref refid="class_a_g_e_1_1_a_g_e_sound_1acb2c61bd9502946e950c4c55b84b5a78" kindref="member">Stop()</ref> function on it, effectively stopping any ongoing sound playback for each <ref refid="class_a_g_e_1_1_audio_source" kindref="compound">AudioSource</ref> object.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Sources</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A constant reference to a vector of Ref&lt;AudioSource&gt; objects representing the audio sources to be stopped. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void No return value is expected as all operations are performed in-place.</para>
+</simplesect>
+Stops all audio sources in the given vector.</para>
+<para>This function iterates over each element of the provided vector and calls the <ref refid="class_a_g_e_1_1_a_g_e_sound_1acb2c61bd9502946e950c4c55b84b5a78" kindref="member">Stop()</ref> function on it, effectively stopping any ongoing sound playback for that source.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Sources</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A constant reference to a vector of <ref refid="class_a_g_e_1_1_audio_source" kindref="compound">AudioSource</ref> references. Each element represents an individual audio source which will have its playback stopped. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="36" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="372" bodyend="378"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="41" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="710" bodyend="716"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -381,12 +656,39 @@
           <declname>FileName</declname>
         </param>
         <briefdescription>
+<para>Loads an audio source from a file. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function loads an audio source based on the format of the provided filename. It supports WAV and MP3 formats. If the format is not supported, it logs an error message and returns an invalid <ref refid="class_a_g_e_1_1_audio_source" kindref="compound">AudioSource</ref> object.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the file to load from. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="class_a_g_e_1_1_audio_source" kindref="compound">AudioSource</ref> object representing the loaded audio data.</para>
+</simplesect>
+Loads an audio source from a file.</para>
+<para>This function loads an audio source based on the format of the provided filename. It supports WAV and MP3 formats. If the format is not supported, it logs an error message and returns an invalid <ref refid="class_a_g_e_1_1_audio_source" kindref="compound">AudioSource</ref> object.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the file to load from. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="class_a_g_e_1_1_audio_source" kindref="compound">AudioSource</ref> object representing the loaded audio data. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="33" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="341" bodyend="362"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="38" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="634" bodyend="655"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1a97351d66ae1ce2b72874066be46cce7f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -399,12 +701,37 @@
           <declname>Log</declname>
         </param>
         <briefdescription>
+<para>Set the debug logging state for the <ref refid="class_a_g_e_1_1_a_g_e_sound" kindref="compound">AGESound</ref> object. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function sets the debug logging state of the <ref refid="class_a_g_e_1_1_a_g_e_sound" kindref="compound">AGESound</ref> object. When debug logging is enabled, it will provide detailed information about its internal operations.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_a_g_e_1_1_log" kindref="compound">Log</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A boolean value indicating whether to enable (true) or disable (false) debug logging. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void</para>
+</simplesect>
+Set the Debug Logging flag for the <ref refid="class_a_g_e_1_1_a_g_e_sound" kindref="compound">AGESound</ref> object</para>
+<para>This function sets a boolean value that determines whether debug logging is enabled or disabled.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_a_g_e_1_1_log" kindref="compound">Log</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A boolean indicating if debug logging should be enabled (true) or disabled (false). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="41" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="379" bodyend="381"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="46" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="732" bodyend="734"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-static-func">
@@ -423,12 +750,55 @@
           <declname>Length</declname>
         </param>
         <briefdescription>
+<para>Converts the given buffer to an integer. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes in a character buffer and its length, converts it into an integer based on the endianness of the system. If the system is little-endian, the bytes are copied directly into the integer. For big-endian systems, the bytes are reversed before being copied.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to be converted. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the buffer.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An integer representation of the input buffer.</para>
+</simplesect>
+Converts a buffer of bytes to an integer.</para>
+<para>This function takes in a buffer and its length, converts the content of the buffer into an integer based on the endianness of the system. If the system is little-endian, it directly copies the buffer&apos;s content into the integer. If the system is big-endian, it reverses the order of bytes in the buffer and stores them into the integer.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the buffer containing the data to be converted. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the buffer.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An integer representation of the content of the buffer. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="45" column="16" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="383" bodyend="398"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="50" column="16" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="758" bodyend="773"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1a5e082d02f6cd8153fea714b8efda98c7" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="class_a_g_e_1_1_audio_source" kindref="compound">AudioSource</ref></type>
@@ -441,12 +811,45 @@
           <declname>FileName</declname>
         </param>
         <briefdescription>
+<para>Loads an audio source from an MP3 file.<linebreak/>
+ \ This function loads an MP3 file and creates an OpenAL buffer for it, logging details to console.<linebreak/>
+ . </para>
         </briefdescription>
         <detaileddescription>
+<para><linebreak/>
+ \ <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the MP3 file to load.<linebreak/>
+ \ </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="class_a_g_e_1_1_audio_source" kindref="compound">AudioSource</ref> struct containing information about loaded audio source.<linebreak/>
+ \ </para>
+</simplesect>
+<simplesect kind="note"><para>Assumes mp3dec library is already initialized and ready for use.<linebreak/>
+ \</para>
+</simplesect>
+Loads an audio source from an MP3 file.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the MP3 file to load. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An instance of the <computeroutput><ref refid="class_a_g_e_1_1_audio_source" kindref="compound">AudioSource</ref></computeroutput> struct containing the handle to the OpenAL buffer and source, or an empty <computeroutput><ref refid="class_a_g_e_1_1_audio_source" kindref="compound">AudioSource</ref></computeroutput> if the file cannot be loaded. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="46" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="399" bodyend="433"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="51" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="787" bodyend="821"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1aee42b508c7135281b0a1f2a94a38b3e6" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="class_a_g_e_1_1_audio_source" kindref="compound">AudioSource</ref></type>
@@ -459,16 +862,43 @@
           <declname>FileName</declname>
         </param>
         <briefdescription>
+<para>Loads a WAV file and returns an <ref refid="class_a_g_e_1_1_audio_source" kindref="compound">AudioSource</ref> object with sound data. </para>
         </briefdescription>
         <detaileddescription>
+<para>Opens a binary file, checks its openability, reads header for audio format info (channels, sample rate, bits per sample), allocates memory for sound data buffer, reads sound data into this buffer, creates <ref refid="class_a_g_e_1_1_audio_source" kindref="compound">AudioSource</ref> from this data.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the WAV file to load. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="class_a_g_e_1_1_audio_source" kindref="compound">AudioSource</ref> object with loaded audio data or empty if loading failed.</para>
+</simplesect>
+Loads a WAV file and returns an <ref refid="class_a_g_e_1_1_audio_source" kindref="compound">AudioSource</ref> object with the sound data.</para>
+<para>This function opens a binary file to get information about the audio format (channels, sample rate, bits per sample, size), allocates memory for the sound data buffer and reads the actual sound data into this buffer. It then creates an <ref refid="class_a_g_e_1_1_audio_source" kindref="compound">AudioSource</ref> object from the loaded data and returns it.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the WAV file to load. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="class_a_g_e_1_1_audio_source" kindref="compound">AudioSource</ref> object with the sound data, or an empty <ref refid="class_a_g_e_1_1_audio_source" kindref="compound">AudioSource</ref> if the file could not be opened or its header could not be read. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="47" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="434" bodyend="462"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="52" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="838" bodyend="866"/>
       </memberdef>
-      <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1a0b6f8144d16de4af34c1409ad04e59e7" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1a613d6867eb111d3d7a2511a7328810fc" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
-        <definition>bool AGE::AGESound::LoadWavFileHeader</definition>
+        <definition>&lt; doxygen comment &gt; bool AGE::AGESound::LoadWavFileHeader</definition>
         <argsstring>(std::ifstream &amp;File, uint8_t &amp;Channels, int32_t &amp;SampleRate, uint8_t &amp;BitsPerSample, ALsizei &amp;Size)</argsstring>
         <name>LoadWavFileHeader</name>
         <qualifiedname>AGE::AGESound::LoadWavFileHeader</qualifiedname>
@@ -493,12 +923,58 @@
           <declname>Size</declname>
         </param>
         <briefdescription>
+<para>Loads the header of a WAV file. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function reads from an input stream to extract key information about the audio data in the WAV file such as number of channels, sample rate, bits per sample and size of data. The extracted information is stored in output parameters provided by reference.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>File</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input file stream to read from. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Channels</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output parameter for the number of audio channels in the WAV file (1 for mono, 2 for stereo, etc.). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>SampleRate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output parameter for the sample rate of the audio data in the WAV file. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>BitsPerSample</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output parameter for the number of bits per sample in the WAV file. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output parameter for the size of the audio data in the WAV file, measured in bytes.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the header was successfully loaded and parsed, false otherwise. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="48" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="463" bodyend="592"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="53" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="882" bodyend="1011"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1ada18a43387f227f7715ba8734b171a3a" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -511,12 +987,35 @@
           <declname>Source</declname>
         </param>
         <briefdescription>
+<para>Unloads a sound from the specified audio source. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function retrieves and removes any buffers that have been queued for playback by the OpenAL audio source provided as an argument. It does this by querying the number of processed buffers (i.e., those that are ready to be played) from the source, then unqueues them if there are any.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to the <ref refid="class_a_g_e_1_1_audio_source" kindref="compound">AudioSource</ref> object whose sound is to be unloaded.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Unloads a sound from an audio source.</para>
+<para>This function is used to unload or remove a sound from an audio source. It does this by checking if there are any buffers that have been processed and if so, it removes them using the alSourceUnqueueBuffers function.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to the <ref refid="class_a_g_e_1_1_audio_source" kindref="compound">AudioSource</ref> object from which the sound is being removed. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="52" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="195" bodyend="207"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="57" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="436" bodyend="448"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1a6ee37cf7c51908c501af0b8d7e0bee84" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -537,12 +1036,43 @@
           <declname>Error</declname>
         </param>
         <briefdescription>
+<para>Displays OpenAL error codes. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes as input a filename and a line number along with an OpenAL error code. It then logs the appropriate error message to the console using CoreLogger::Error() and asserts that the condition is false. The function returns true if no errors are encountered, otherwise it returns false. </para>
+<para>This function takes in three parameters - the file name where the error occurred, the line number and the type of error that was encountered. It logs appropriate messages for each type of error using CoreLogger::Error() and CoreLogger::Assert(). If an unknown error is detected, it simply returns false.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FN</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the file where the error occurred. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The line number in the file where the error occurred. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of error that was encountered.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if an error is found, false otherwise. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="60" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="286" bodyend="339"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="80" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="563" bodyend="616"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -553,12 +1083,16 @@
         <name>StopSound</name>
         <qualifiedname>AGE::AGESound::StopSound</qualifiedname>
         <briefdescription>
+<para>Stops the sound from playing. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is used to stop any currently playing sounds in the game. It does not take any parameters and returns void.</para>
+<para>Stops the sound from playing.</para>
+<para>This function is used to stop any currently playing sounds in the game. It does not take any parameters and has no return value. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="51" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="191" bodyend="194"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="56" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="416" bodyend="419"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1a00a4ef8182ceda433017d4fe76355d69" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::vector&lt; std::string &gt;</type>
@@ -567,12 +1101,21 @@
         <name>GetAvailableSoundDevices</name>
         <qualifiedname>AGE::AGESound::GetAvailableSoundDevices</qualifiedname>
         <briefdescription>
+<para>Retrieves the list of available sound devices. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function returns a vector containing all the currently available sound devices. The devices are returned in no particular order.</para>
+<para><simplesect kind="return"><para>A std::vector&lt;std::string&gt; containing the names of all available sound devices. If there are no available sound devices, an empty vector is returned.</para>
+</simplesect>
+Retrieves the list of available sound devices.</para>
+<para>This function returns a vector containing all the currently available sound devices in the system. The returned data is populated from internal storage and may not always be up-to-date with the current state of the system.</para>
+<para><simplesect kind="return"><para>A std::vector&lt;std::string&gt; containing the names of all available sound devices. If no sound devices are available, an empty vector is returned. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="58" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" bodystart="58" bodyend="58"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="78" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" bodystart="78" bodyend="78"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_sound_1a056497010d8305cbfcef5a082377f8a5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -589,12 +1132,55 @@
           <declname>Device</declname>
         </param>
         <briefdescription>
+<para>Finds available devices for the given ALCdevice. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function retrieves a list of available audio devices using the OpenAL context provided by the Device parameter. The retrieved device names are stored in the DevicesArray vector.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">DevicesArray</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to a std::vector&lt;std::string&gt; where the device names will be stored. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">Device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An ALCdevice pointer that represents an OpenAL context.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if devices are found, false otherwise. In this implementation, it always returns true as there is no way to fail in retrieving available devices.</para>
+</simplesect>
+Finds available devices for the given ALCdevice.</para>
+<para>This function retrieves a list of available audio devices using the OpenAL context provided by the Device parameter. The retrieved device names are stored in the DevicesArray vector.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">DevicesArray</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to a std::vector&lt;std::string&gt; where the device names will be stored. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">Device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to an ALCdevice that represents the OpenAL context for which available devices should be found.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if at least one device is available, false otherwise. This function does not differentiate between no devices and devices with specific names. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="63" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="265" bodyend="284"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="83" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Private/AGEAudio.cpp" bodystart="528" bodyend="547"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -625,7 +1211,7 @@
         <link refid="class_a_g_e_1_1_audio_engine"/>
       </node>
     </collaborationgraph>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="12" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" bodystart="13" bodyend="73"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" line="12" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Audio/AGESound/Public/AGEAudio.h" bodystart="13" bodyend="93"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_a_g_e_sound_1acf593b094a1e621acb22ae6b4ffe60e2" prot="public" virt="non-virtual"><scope>AGE::AGESound</scope><name>AGESound</name></member>
       <member refid="class_a_g_e_1_1_audio_engine_1ae19f90501824e87fed8925e43bc67c06" prot="public" virt="non-virtual"><scope>AGE::AGESound</scope><name>As</name></member>
@@ -644,7 +1230,7 @@
       <member refid="class_a_g_e_1_1_a_g_e_sound_1af5f8adb837115ea2732869ad29072303" prot="public" virt="virtual"><scope>AGE::AGESound</scope><name>LoadBanks</name></member>
       <member refid="class_a_g_e_1_1_a_g_e_sound_1a7c55a7b4ace491c107879ee1fca37741" prot="public" virt="virtual"><scope>AGE::AGESound</scope><name>LoadEvents</name></member>
       <member refid="class_a_g_e_1_1_a_g_e_sound_1aee42b508c7135281b0a1f2a94a38b3e6" prot="private" virt="non-virtual"><scope>AGE::AGESound</scope><name>LoadWav</name></member>
-      <member refid="class_a_g_e_1_1_a_g_e_sound_1a0b6f8144d16de4af34c1409ad04e59e7" prot="private" virt="non-virtual"><scope>AGE::AGESound</scope><name>LoadWavFileHeader</name></member>
+      <member refid="class_a_g_e_1_1_a_g_e_sound_1a613d6867eb111d3d7a2511a7328810fc" prot="private" virt="non-virtual"><scope>AGE::AGESound</scope><name>LoadWavFileHeader</name></member>
       <member refid="class_a_g_e_1_1_a_g_e_sound_1a725c3689fb42d0dbf1206cc3d487dffe" prot="private" virt="non-virtual"><scope>AGE::AGESound</scope><name>m_AvailableSoundDevices</name></member>
       <member refid="class_a_g_e_1_1_a_g_e_sound_1ae73767b2abe069a316e3566d797281ae" prot="private" virt="non-virtual"><scope>AGE::AGESound</scope><name>m_Context</name></member>
       <member refid="class_a_g_e_1_1_a_g_e_sound_1aa35627b643c3558789cbd26d78d55aa7" prot="private" virt="non-virtual"><scope>AGE::AGESound</scope><name>m_Device</name></member>

@@ -3,6 +3,7 @@
   <compounddef id="class_a_g_e_1_1_string_copy_event" kind="class" language="C++" prot="public">
     <compoundname>AGE::StringCopyEvent</compoundname>
     <basecompoundref refid="class_a_g_e_1_1_event" prot="public" virt="non-virtual">AGE::Event</basecompoundref>
+    <includes local="no">ApplicationEvent.h</includes>
     <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="class_a_g_e_1_1_string_copy_event_1afe4ba7cf82cd3e4b5ec0f1064b9079fd" prot="private" static="no" mutable="no">
         <type>const char *</type>
@@ -16,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" line="142" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" bodystart="142" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" line="263" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" bodystart="263" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -36,7 +37,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" line="126" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" bodystart="126" bodyend="127"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" line="226" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" bodystart="226" bodyend="227"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_string_copy_event_1ab8de65a8fb5298738546f1d2b30fc019" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>const char *</type>
@@ -45,12 +46,18 @@
         <name>GetString</name>
         <qualifiedname>AGE::StringCopyEvent::GetString</qualifiedname>
         <briefdescription>
+<para>This function returns a pointer to the string stored in the object. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>A constant character pointer to the internal string of this object.</para>
+</simplesect>
+This function returns a pointer to the string stored in member variable <computeroutput>m_String</computeroutput>. <simplesect kind="return"><para>A constant pointer to the string stored in <computeroutput>m_String</computeroutput>. If no such string exists, it will return nullptr. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" line="130" column="19" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" bodystart="130" bodyend="130"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" line="238" column="19" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" bodystart="238" bodyend="238"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_string_copy_event_1a7c90aafe37b12f977e723c7dbd8e6886" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type>std::string</type>
@@ -60,17 +67,37 @@
         <qualifiedname>AGE::StringCopyEvent::ToString</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_event_1abb5a1a933883fb8fb99999523e8805a8">ToString</reimplements>
         <briefdescription>
+<para>This function returns a string representation of the event. The returned string includes details about what string was copied to the clipboard, and is formatted as such. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>A string containing information about the copy event.</para>
+</simplesect>
+Converts the event into a string format.</para>
+<para>This function converts the event into a human-readable string format, which includes details about what string was copied to the clipboard and when it happened.</para>
+<para><simplesect kind="return"><para>A string containing information about the copy event. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" line="132" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" bodystart="132" bodyend="137"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" line="253" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" bodystart="253" bodyend="258"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>Represents a string copy event. This event is triggered when a string is copied to the clipboard. </para>
     </briefdescription>
     <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>String</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string that was copied.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This class represents an event that occurs when a string is copied.</para>
+<para>It contains the string that was copied and provides methods to access this string and get a string representation of the event. </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="2">
@@ -96,7 +123,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" line="123" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" bodystart="124" bodyend="144"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" line="223" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/ApplicationEvent.h" bodystart="224" bodyend="265"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_event_1ae76fb834a0ee69601539da677f1333fa" prot="public" virt="pure-virtual"><scope>AGE::StringCopyEvent</scope><name>GetCategoryFlags</name></member>
       <member refid="class_a_g_e_1_1_event_1a4cfb95332801a921e9449a03a34b87b0" prot="public" virt="pure-virtual"><scope>AGE::StringCopyEvent</scope><name>GetEventType</name></member>

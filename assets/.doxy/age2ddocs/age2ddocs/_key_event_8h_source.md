@@ -15,7 +15,7 @@
 
 namespace AGE
 {
-    class AGE_API KeyEvent : public Event
+class AGE_API KeyEvent : public Event
     {
     public:
         
@@ -31,15 +31,16 @@ namespace AGE
         int m_KeyCode;
     };
 
-    class AGE_API KeyPressedEvent : public KeyEvent
+    
+class AGE_API KeyPressedEvent : public KeyEvent
     {
     public:
         KeyPressedEvent(int KeyCode, int RepeatCount)
             : KeyEvent(KeyCode), m_RepeatCount(RepeatCount) {}
 
-        inline int GetRepeatCount() const { return m_RepeatCount; }
+inline int GetRepeatCount() const { return m_RepeatCount; }
 
-        std::string ToString() const override
+std::string ToString() const override
         {
             std::stringstream ss;
             ss << "KeyPressedEvent: " << m_KeyCode << " (" << m_RepeatCount << " repeats)";
@@ -58,7 +59,7 @@ namespace AGE
         KeyReleasedEvent(int KeyCode)
             : KeyEvent(KeyCode) {}
 
-        std::string ToString() const override
+std::string ToString() const override
         {
             std::stringstream ss;
             ss << "KeyReleasedEvent: " << m_KeyCode;
@@ -68,13 +69,13 @@ namespace AGE
             EVENT_CLASS_TYPE(KeyReleased)
     };
 
-    class AGE_API KeyTypedEvent : public KeyEvent
+class AGE_API KeyTypedEvent : public KeyEvent
     {
     public:
         KeyTypedEvent(int KeyCode)
             : KeyEvent(KeyCode) {}
 
-        std::string ToString() const override
+std::string ToString() const override
         {
             std::stringstream ss;
             ss << "KeyTypedEvent: " << m_KeyCode;

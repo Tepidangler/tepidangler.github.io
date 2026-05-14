@@ -77,6 +77,10 @@
               
                 <h1 id="class-ageimguilayer">Class AGE::ImGuiLayer</h1>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespace_a_g_e/"><strong>AGE</strong></a> <strong>&gt;</strong> <a href="./"><strong>ImGuiLayer</strong></a></p>
+<p><em>This class represents the ImGui layer in a system. It is responsible for rendering and handling user interface events.</em> <a href="#detailed-description">More...</a></p>
+<ul>
+<li><code>#include &lt;ImGuiLayer.h&gt;</code></li>
+</ul>
 <p>Inherits the following classes: <a href="../class_a_g_e_1_1_layer/">AGE::Layer</a></p>
 <h2 id="public-functions">Public Functions</h2>
 <table>
@@ -89,39 +93,39 @@
 <tbody>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-begin"><strong>Begin</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-begin"><strong>Begin</strong></a> () <br><em>Begins the ImGui layer. This function prepares for rendering of UI elements by initializing necessary states and setting up frame data based on the current render API in use.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-blockevents"><strong>BlockEvents</strong></a> (bool block) <br></td>
+<td style="text-align: left;"><a href="#function-blockevents"><strong>BlockEvents</strong></a> (bool block) <br><em>This function is used to set the state of event blocking in a system.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-end"><strong>End</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-end"><strong>End</strong></a> () <br><em>This function is responsible for ending the ImGui layer and rendering the GUI. It updates the display size based on the window's width and height, then renders the GUI using either OpenGL or a different API depending on the current</em> <a href="../class_a_g_e_1_1_renderer/"><em><strong>Renderer</strong></em></a> <em>API. If an invalid Render API is selected, it asserts false with a message "Invalid Render API Selected!".</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-imguilayer"><strong>ImGuiLayer</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-imguilayer"><strong>ImGuiLayer</strong></a> () <br><a href="./"><em><strong>ImGuiLayer</strong></em></a> <em>is a class representing the layer for handling user interface elements with ImGui library in our application.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-onattach"><strong>OnAttach</strong></a> () override<br></td>
+<td style="text-align: left;"><a href="#function-onattach"><strong>OnAttach</strong></a> () override<br><em>This function is called when the object is attached to a scene or game world.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-ondetach"><strong>OnDetach</strong></a> () override<br></td>
+<td style="text-align: left;"><a href="#function-ondetach"><strong>OnDetach</strong></a> () override<br><em>This function is called when the</em> <a href="./"><em><strong>ImGuiLayer</strong></em></a> <em>detaches from its attached renderer. It handles cleanup based on which rendering API was selected at runtime.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-onevent"><strong>OnEvent</strong></a> (<a href="../class_a_g_e_1_1_event/"><strong>Event</strong></a> &amp; E) override<br></td>
+<td style="text-align: left;"><a href="#function-onevent"><strong>OnEvent</strong></a> (<a href="../class_a_g_e_1_1_event/"><strong>Event</strong></a> &amp; E) override<br><em>This function is an event handler for the</em> <a href="./"><em><strong>ImGuiLayer</strong></em></a> <em>class. It dispatches events to their respective handlers based on the event type.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-onimguirender"><strong>OnImGuiRender</strong></a> (<a href="../class_a_g_e_1_1_time_step/"><strong>TimeStep</strong></a> DeltaTime) override<br></td>
+<td style="text-align: left;"><a href="#function-onimguirender"><strong>OnImGuiRender</strong></a> (<a href="../class_a_g_e_1_1_time_step/"><strong>TimeStep</strong></a> DeltaTime) override<br><em>This function is responsible for rendering the ImGui interface elements in the application.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-imguilayer"><strong>~ImGuiLayer</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-imguilayer"><strong>~ImGuiLayer</strong></a> () <br><em>Destructor for the</em> <a href="./"><em><strong>ImGuiLayer</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
@@ -137,11 +141,11 @@
 <tbody>
 <tr>
 <td style="text-align: right;">const std::string &amp;</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_layer/#function-getname"><strong>GetName</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_layer/#function-getname"><strong>GetName</strong></a> () const<br><em>Returns the name of this object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">float</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_layer/#function-gettime"><strong>GetTime</strong></a> () <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_layer/#function-gettime"><strong>GetTime</strong></a> () <br><em>Get the current time in seconds since GLFW was initialized.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
@@ -149,31 +153,31 @@
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_layer/#function-layer"><strong>Layer</strong></a> (const std::string &amp; name="Layer") <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_layer/#function-layer"><strong>Layer</strong></a> (const std::string &amp; name="Layer") <br><em>Constructs a</em> <a href="../class_a_g_e_1_1_layer/"><em><strong>Layer</strong></em></a> <em>object with the given debug name.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_layer/#function-onattach"><strong>OnAttach</strong></a> () <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_layer/#function-onattach"><strong>OnAttach</strong></a> () <br><em>This function is called when the object is attached to a scene or game world.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_layer/#function-ondetach"><strong>OnDetach</strong></a> () <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_layer/#function-ondetach"><strong>OnDetach</strong></a> () <br><em>Detaches the component from its parent.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_layer/#function-onevent"><strong>OnEvent</strong></a> (<a href="../class_a_g_e_1_1_event/"><strong>Event</strong></a> &amp; Event) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_layer/#function-onevent"><strong>OnEvent</strong></a> (<a href="../class_a_g_e_1_1_event/"><strong>Event</strong></a> &amp; Event) <br><em>This function is called when an event occurs.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_layer/#function-onimguirender"><strong>OnImGuiRender</strong></a> (<a href="../class_a_g_e_1_1_time_step/"><strong>TimeStep</strong></a> DeltaTime) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_layer/#function-onimguirender"><strong>OnImGuiRender</strong></a> (<a href="../class_a_g_e_1_1_time_step/"><strong>TimeStep</strong></a> DeltaTime) <br><em>This function is called every frame to render the ImGUI interface.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_layer/#function-onupdate"><strong>OnUpdate</strong></a> (<a href="../class_a_g_e_1_1_time_step/"><strong>TimeStep</strong></a> DeltaTime) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_layer/#function-onupdate"><strong>OnUpdate</strong></a> (<a href="../class_a_g_e_1_1_time_step/"><strong>TimeStep</strong></a> DeltaTime) <br><em>This function is called every frame to update the game state.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_layer/#function-layer"><strong>~Layer</strong></a> () <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_layer/#function-layer"><strong>~Layer</strong></a> () <br><em>Destructor for the</em> <a href="../class_a_g_e_1_1_layer/"><em><strong>Layer</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
@@ -193,60 +197,139 @@
 </tr>
 </tbody>
 </table>
+<h2 id="detailed-description">Detailed Description</h2>
+<p>The <a href="./"><strong>ImGuiLayer</strong></a> class provides methods to attach, detach, render GUI elements using ImGui, block or unblock events, start and end the GUI session respectively. </p>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-begin">function Begin</h3>
+<p><em>Begins the ImGui layer. This function prepares for rendering of UI elements by initializing necessary states and setting up frame data based on the current render API in use.</em> </p>
 <pre><code class="language-C++">virtual void AGE::ImGuiLayer::Begin () 
 </code></pre>
+<p>The function first checks the currently selected Render API using <code>Renderer::GetAPI()</code>. Depending on the result, it performs different actions:
+* If the API is OpenGL (0), no action is taken as there are no UI elements to initialize for this case.
+* If the API is DirectX or Vulkan (1), it calls ImGui's NewFrame function and sets up frame data for these APIs using <code>ImGui_ImplOpenGL3_NewFrame()</code>, <code>ImGui_ImplGlfw_NewFrame()</code>, and <code>ImGuizmo::BeginFrame()</code>.
+* If an invalid API is selected (anything else), it asserts false with a message "Invalid Render API Selected!" to halt execution.</p>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Begins the ImGui layer. This function initializes the ImGui context based on the currently selected render API.</p>
+<p>The <a href="../class_a_g_e_1_1_renderer/#function-getapi"><strong>Renderer::GetAPI()</strong></a> function is used to determine which render API is in use. Depending on this, different actions are taken:
+* If the OpenGL API is being used (case 1), then the ImGui_ImplOpenGL3_NewFrame(), ImGui_ImplGlfw_NewFrame(), and ImGui::NewFrame() functions are called to prepare for a new frame. Additionally, if not in distribution mode (AG_DIST), ImGuizmo::BeginFrame() is also called.
+* If an invalid render API is selected (default case), then an assertion failure occurs with the message "Invalid Render API Selected!".</p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-blockevents">function BlockEvents</h3>
+<p><em>This function is used to set the state of event blocking in a system.</em> </p>
 <pre><code class="language-C++">inline void AGE::ImGuiLayer::BlockEvents (
     bool block
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>block</code> A boolean value indicating whether events should be blocked or not. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>None</p>
+<p>This function is used to set the state of event blocking in a system. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>block</code> A boolean value indicating whether events should be blocked or not. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>None </p>
 <hr>
 
 <h3 id="function-end">function End</h3>
+<p><em>This function is responsible for ending the ImGui layer and rendering the GUI. It updates the display size based on the window's width and height, then renders the GUI using either OpenGL or a different API depending on the current</em> <a href="../class_a_g_e_1_1_renderer/"><em><strong>Renderer</strong></em></a> <em>API. If an invalid Render API is selected, it asserts false with a message "Invalid Render API Selected!".</em></p>
 <pre><code class="language-C++">virtual void AGE::ImGuiLayer::End () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>This function is responsible for ending the ImGui layer and rendering it. It also updates the display size based on the window's width and height.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>None</code> </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-imguilayer">function ImGuiLayer</h3>
+<p><a href="./"><em><strong>ImGuiLayer</strong></em></a> <em>is a class representing the layer for handling user interface elements with ImGui library in our application.</em></p>
 <pre><code class="language-C++">AGE::ImGuiLayer::ImGuiLayer () 
 </code></pre>
+<p><a href="./"><strong>ImGuiLayer</strong></a> is a class representing the layer for handling user interface elements with ImGui library in our application. It extends the base <a href="../class_a_g_e_1_1_layer/"><strong>Layer</strong></a> class and provides additional functionality specific to this library. </p>
 <hr>
 
 <h3 id="function-onattach">function OnAttach</h3>
+<p><em>This function is called when the object is attached to a scene or game world.</em> </p>
 <pre><code class="language-C++">virtual void AGE::ImGuiLayer::OnAttach () override
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>This function is called when the component is attached to a scene.</p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <p>Implements <a href="../class_a_g_e_1_1_layer/#function-onattach"><em>AGE::Layer::OnAttach</em></a></p>
 <hr>
 
 <h3 id="function-ondetach">function OnDetach</h3>
+<p><em>This function is called when the</em> <a href="./"><em><strong>ImGuiLayer</strong></em></a> <em>detaches from its attached renderer. It handles cleanup based on which rendering API was selected at runtime.</em></p>
 <pre><code class="language-C++">virtual void AGE::ImGuiLayer::OnDetach () override
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Detaches the ImGui layer.</p>
+<p>This function is responsible for detaching the ImGui layer from the application. It does this by shutting down the necessary components based on the current render API in use.</p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <p>Implements <a href="../class_a_g_e_1_1_layer/#function-ondetach"><em>AGE::Layer::OnDetach</em></a></p>
 <hr>
 
 <h3 id="function-onevent">function OnEvent</h3>
+<p><em>This function is an event handler for the</em> <a href="./"><em><strong>ImGuiLayer</strong></em></a> <em>class. It dispatches events to their respective handlers based on the event type.</em></p>
 <pre><code class="language-C++">virtual void AGE::ImGuiLayer::OnEvent (
     Event &amp; E
 ) override
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>E</code> Reference to the <a href="../class_a_g_e_1_1_event/"><strong>Event</strong></a> object that needs to be handled.</li>
+</ul>
+<p>Handles events dispatched by the application.</p>
+<p>This function is responsible for dispatching events to their respective handlers. It uses an event dispatcher to handle different types of events, such as window resizing events. The function also checks if event blocking is enabled and updates the ImGui IO accordingly.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>E</code> Reference to the <a href="../class_a_g_e_1_1_event/"><strong>Event</strong></a> object that needs to be handled. </li>
+</ul>
 <p>Implements <a href="../class_a_g_e_1_1_layer/#function-onevent"><em>AGE::Layer::OnEvent</em></a></p>
 <hr>
 
 <h3 id="function-onimguirender">function OnImGuiRender</h3>
+<p><em>This function is responsible for rendering the ImGui interface elements in the application.</em> </p>
 <pre><code class="language-C++">virtual void AGE::ImGuiLayer::OnImGuiRender (
     TimeStep DeltaTime
 ) override
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>DeltaTime</code> The time step representing the elapsed time since the last frame.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void No return value expected as this function does not explicitly return anything.</p>
+<p>This function is used to render the ImGui interface elements for a specific layer.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>DeltaTime</code> The time step representing the elapsed time since the last frame. </li>
+</ul>
 <p>Implements <a href="../class_a_g_e_1_1_layer/#function-onimguirender"><em>AGE::Layer::OnImGuiRender</em></a></p>
 <hr>
 
 <h3 id="function-imguilayer_1">function ~ImGuiLayer</h3>
+<p><em>Destructor for the</em> <a href="./"><em><strong>ImGuiLayer</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::ImGuiLayer::~ImGuiLayer () 
 </code></pre>
+<p>Destructor for the <a href="./"><strong>ImGuiLayer</strong></a> class. </p>
 <hr>
 
 <hr />

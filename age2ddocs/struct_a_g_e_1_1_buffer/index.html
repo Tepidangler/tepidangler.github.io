@@ -107,43 +107,43 @@
 <tbody>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-allocate"><strong>Allocate</strong></a> (uint64_t size) <br></td>
+<td style="text-align: left;"><a href="#function-allocate"><strong>Allocate</strong></a> (uint64_t size) <br><em>Allocates memory for an array of characters.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-buffer-12"><strong>Buffer</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-buffer-12"><strong>Buffer</strong></a> () <br><a href="./"><em><strong>Buffer</strong></em></a> <em>constructor initializes the data pointer to nullptr and size to 0.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-buffer-22"><strong>Buffer</strong></a> (const void * data, uint64_t size=0) <br></td>
+<td style="text-align: left;"><a href="#function-buffer-22"><strong>Buffer</strong></a> (const void * data, uint64_t size=0) <br><a href="./"><em><strong>Buffer</strong></em></a> <em>constructor that initializes the buffer with given data and size.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">T &amp;</td>
-<td style="text-align: left;"><a href="#function-read"><strong>Read</strong></a> (uint64_t offset=0) <br></td>
+<td style="text-align: left;"><a href="#function-read"><strong>Read</strong></a> (uint64_t offset=0) <br><em>This function reads a value of type T from the data buffer at a specified offset.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">char *</td>
-<td style="text-align: left;"><a href="#function-readbytes"><strong>ReadBytes</strong></a> (uint64_t size, uint64_t offset) const<br></td>
+<td style="text-align: left;"><a href="#function-readbytes"><strong>ReadBytes</strong></a> (uint64_t size, uint64_t offset) const<br><em>ReadBytes reads a specified number of bytes from the buffer starting at a given offset.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-release"><strong>Release</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-release"><strong>Release</strong></a> () <br><em>Releases the memory allocated for the data.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-write"><strong>Write</strong></a> (const void * data, uint64_t size, uint64_t offset=0) <br></td>
+<td style="text-align: left;"><a href="#function-write"><strong>Write</strong></a> (const void * data, uint64_t size, uint64_t offset=0) <br><em>Writes a block of data to the buffer at a specified offset.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-zeroinitialize"><strong>ZeroInitialize</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-zeroinitialize"><strong>ZeroInitialize</strong></a> () <br><em>This function initializes a block of memory with zeros.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-operator-bool"><strong>operator bool</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-operator-bool"><strong>operator bool</strong></a> () const<br><em>This function returns a boolean value based on the truthiness of Data member.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">char &amp;</td>
-<td style="text-align: left;"><a href="#function-operator"><strong>operator[]</strong></a> (int Index) <br></td>
+<td style="text-align: left;"><a href="#function-operator"><strong>operator[]</strong></a> (int Index) <br><em>This function returns a reference to the character at the specified index in the Data array.</em></td>
 </tr>
 </tbody>
 </table>
@@ -158,19 +158,19 @@
 <tbody>
 <tr>
 <td style="text-align: right;"><a href="./"><strong>Buffer</strong></a></td>
-<td style="text-align: left;"><a href="#function-copy-12"><strong>Copy</strong></a> (const <a href="./"><strong>Buffer</strong></a> &amp; Other) <br></td>
+<td style="text-align: left;"><a href="#function-copy-12"><strong>Copy</strong></a> (const <a href="./"><strong>Buffer</strong></a> &amp; Other) <br><em>Copies a</em> <a href="./"><em><strong>Buffer</strong></em></a> <em>object by allocating the same size and copying data from another</em><a href="./"><em><strong>Buffer</strong></em></a> <em>object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"><a href="./"><strong>Buffer</strong></a></td>
-<td style="text-align: left;"><a href="#function-copy-22"><strong>Copy</strong></a> (const void * data, uint64_t size) <br></td>
+<td style="text-align: left;"><a href="#function-copy-22"><strong>Copy</strong></a> (const void * data, uint64_t size) <br><em>Copies a block of memory into a new</em> <a href="./"><em><strong>Buffer</strong></em></a> <em>object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-deserialize"><strong>Deserialize</strong></a> (<a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> * Deserializer, <a href="./"><strong>Buffer</strong></a> &amp; Instance) <br></td>
+<td style="text-align: left;"><a href="#function-deserialize"><strong>Deserialize</strong></a> (<a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> * Deserializer, <a href="./"><strong>Buffer</strong></a> &amp; Instance) <br><em>Deserialize a</em> <a href="./"><em><strong>Buffer</strong></em></a> <em>instance from a</em><a href="../class_a_g_e_1_1_data_reader/"><em><strong>DataReader</strong></em></a> <em>.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-serialize"><strong>Serialize</strong></a> (<a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> * Serializer, const <a href="./"><strong>Buffer</strong></a> &amp; Instance) <br></td>
+<td style="text-align: left;"><a href="#function-serialize"><strong>Serialize</strong></a> (<a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> * Serializer, const <a href="./"><strong>Buffer</strong></a> &amp; Instance) <br><em>This function serializes a</em> <a href="./"><em><strong>Buffer</strong></em></a> <em>instance into the provided</em><a href="../class_a_g_e_1_1_data_writer/"><em><strong>DataWriter</strong></em></a> <em>.</em></td>
 </tr>
 </tbody>
 </table>
@@ -186,101 +186,283 @@
 <hr>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-allocate">function Allocate</h3>
+<p><em>Allocates memory for an array of characters.</em> </p>
 <pre><code class="language-C++">inline void AGE::Buffer::Allocate (
     uint64_t size
 ) 
 </code></pre>
+<p>This function allocates a block of memory to store an array of characters. If the input size is zero, it simply returns without doing anything. The allocated memory should be deallocated using Free() when it's no longer needed.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>size</code> The number of elements in the array to be allocated.</li>
+</ul>
+<p>Allocates memory for an array of pointers to characters.</p>
+<p>This function allocates a block of memory for an array of <code>char</code> pointers. It first deletes the existing data if any, then it checks if the size is zero. If not, it allocates new memory and sets the <code>Size</code> variable accordingly.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>size</code> The number of elements to be allocated. </li>
+</ul>
 <hr>
 
 <h3 id="function-buffer-12">function Buffer [1/2]</h3>
+<p><a href="./"><em><strong>Buffer</strong></em></a> <em>constructor initializes the data pointer to nullptr and size to 0.</em></p>
 <pre><code class="language-C++">inline AGE::Buffer::Buffer () 
 </code></pre>
+<p>Default constructor for the <a href="./"><strong>Buffer</strong></a> class. Initializes an empty buffer with a data pointer set to nullptr and size set to 0. </p>
 <hr>
 
 <h3 id="function-buffer-22">function Buffer [2/2]</h3>
+<p><a href="./"><em><strong>Buffer</strong></em></a> <em>constructor that initializes the buffer with given data and size.</em></p>
 <pre><code class="language-C++">inline AGE::Buffer::Buffer (
     const void * data,
     uint64_t size=0
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>data</code> Pointer to the data to be stored in the buffer. Can be null. </li>
+<li><code>size</code> Size of the data pointed by 'data'. Defaults to 0 if not provided.</li>
+</ul>
+<p><a href="./"><strong>Buffer</strong></a> constructor that initializes the buffer with a given pointer to data and its size. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>data</code> Pointer to the data to be stored in the buffer. Can be null. </li>
+<li><code>size</code> Size of the data pointed by 'data'. Defaults to 0 if not provided. </li>
+</ul>
 <hr>
 
 <h3 id="function-read">function Read</h3>
+<p><em>This function reads a value of type T from the data buffer at a specified offset.</em> </p>
 <pre><code class="language-C++">template&lt;typename T&gt;
 inline T &amp; AGE::Buffer::Read (
     uint64_t offset=0
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>offset</code> The position in the data buffer to read from, defaults to 0 if not provided. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A reference to the value of type T located at the given offset.</p>
+<p>This function reads a value of type T from the data buffer at a specified offset. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>offset</code> The position in the data buffer to read from, defaults to 0 if not provided. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A reference to the value of type T located at the given offset. </p>
 <hr>
 
 <h3 id="function-readbytes">function ReadBytes</h3>
+<p><em>ReadBytes reads a specified number of bytes from the buffer starting at a given offset.</em> </p>
 <pre><code class="language-C++">inline char * AGE::Buffer::ReadBytes (
     uint64_t size,
     uint64_t offset
 ) const
 </code></pre>
+<p>The function checks if the requested read operation will result in a buffer overflow by comparing the sum of the size and offset with the total size of the buffer. If it's larger, an assertion is triggered to indicate a potential issue. It then allocates memory for a new char array of the specified size using 'new', copies the data from the buffer starting at the given offset into this newly allocated memory, and returns a pointer to this memory.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>size</code> The number of bytes to read. </li>
+<li><code>offset</code> The position in the buffer where reading should start. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A pointer to an array containing the read data. This must be deleted by the caller when it's no longer needed.</p>
+<p><strong>Exception:</strong></p>
+<ul>
+<li><code>std::runtime_error</code> if there is a buffer overflow (i.e., the sum of size and offset exceeds the total size of the buffer).</li>
+</ul>
+<p>ReadBytes reads a specified number of bytes from the buffer starting at a given offset.</p>
+<p>This function is used to read data from the buffer. It takes two parameters - 'size' which specifies the number of bytes to be read and 'offset', which indicates the position in the buffer where reading should start. The function checks if the requested size plus the offset exceeds the total size of the buffer, and throws an error if it does. It then allocates a new character array of the specified size using dynamic memory allocation (new char[size]), copies 'size' bytes from the buffer starting at the given offset to this newly allocated array, and returns this array. The caller is responsible for deallocating the returned pointer with delete[].</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>size</code> Number of bytes to read. </li>
+<li><code>offset</code> Position in the buffer where reading should start. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Pointer to a new character array containing the read data. Caller must free this memory using 'delete[]'.</p>
+<p><strong>Exception:</strong></p>
+<ul>
+<li><code>std::runtime_error</code> if the requested size plus the offset exceeds the total size of the buffer. </li>
+</ul>
 <hr>
 
 <h3 id="function-release">function Release</h3>
+<p><em>Releases the memory allocated for the data.</em> </p>
 <pre><code class="language-C++">inline void AGE::Buffer::Release () 
 </code></pre>
+<p>This function deletes the dynamically allocated array of characters (char*) Data and sets it to null, effectively releasing the memory. It also resets Size to 0 indicating that no more data is present in the object.</p>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Releases the memory allocated for the data.</p>
+<p>This function deletes the dynamically allocated array of characters and sets the Data pointer to null, effectively releasing the memory. It also resets the Size variable to 0 indicating that no more data is present in the object.</p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-write">function Write</h3>
+<p><em>Writes a block of data to the buffer at a specified offset.</em> </p>
 <pre><code class="language-C++">inline void AGE::Buffer::Write (
     const void * data,
     uint64_t size,
     uint64_t offset=0
 ) 
 </code></pre>
+<p>This function copies 'size' bytes from the memory area pointed by 'data' into the buffer starting at 'offset'. The destination buffer is assumed to be large enough to hold the copied data, i.e., it should have been allocated with Size bytes of space beforehand. If the sum of 'size' and 'offset' exceeds the total size of the buffer (Size), a buffer overflow error will occur.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>data</code> Pointer to the source of the data to be copied. </li>
+<li><code>size</code> Number of bytes to copy from the source. </li>
+<li><code>offset</code> The number of bytes in the destination buffer at which copying begins. Defaults to 0 if not specified.</li>
+</ul>
+<p>Writes a block of data to the buffer at a specified offset.</p>
+<p>This function copies 'size' bytes from the memory area pointed by 'data' into the buffer starting at position 'offset'. If the sum of 'offset' and 'size' exceeds the total size of the buffer, it results in a "Buffer Overflow!" error.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>data</code> Pointer to the source of the data to be copied. </li>
+<li><code>size</code> Number of bytes to copy from the source. </li>
+<li><code>offset</code> Position within the buffer at which copying begins. Defaults to 0 if not provided. </li>
+</ul>
 <hr>
 
 <h3 id="function-zeroinitialize">function ZeroInitialize</h3>
+<p><em>This function initializes a block of memory with zeros.</em> </p>
 <pre><code class="language-C++">inline void AGE::Buffer::ZeroInitialize () 
 </code></pre>
+<p>The function takes no parameters and does not return anything. It uses the memset function from the C standard library to fill the Data array with zeros, which is of size Size.</p>
+<p>This function initializes a block of memory with zeros.</p>
+<p>The function takes no parameters and returns void. It uses the memset function from the cstring library to fill the Data array with zeros, which is assumed to be of size Size. If Data is null, nothing happens.</p>
+<p><strong>Returns:</strong></p>
+<p>Void </p>
 <hr>
 
 <h3 id="function-operator-bool">function operator bool</h3>
+<p><em>This function returns a boolean value based on the truthiness of Data member.</em> </p>
 <pre><code class="language-C++">inline AGE::Buffer::operator bool () const
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>None</code> </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Returns true if Data is not null, false otherwise.</p>
+<p>Converts the object to a boolean value.</p>
+<p>This function returns true if Data is not null, and false otherwise. It provides an implicit conversion from the class instance to bool.</p>
+<p><strong>Returns:</strong></p>
+<p>True if Data is not null, False otherwise. </p>
 <hr>
 
 <h3 id="function-operator">function operator[]</h3>
+<p><em>This function returns a reference to the character at the specified index in the Data array.</em> </p>
 <pre><code class="language-C++">inline char &amp; AGE::Buffer::operator[] (
     int Index
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Index</code> The zero-based index of the character to return. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A reference to the character at the given index.</p>
+<p>This function returns a reference to the character at the specified index in the Data array.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Index</code> The zero-based index of the character to return. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A reference to the character at the given index. </p>
 <hr>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
 <h3 id="function-copy-12">function Copy [1/2]</h3>
+<p><em>Copies a</em> <a href="./"><em><strong>Buffer</strong></em></a> <em>object by allocating the same size and copying data from another</em><a href="./"><em><strong>Buffer</strong></em></a> <em>object.</em></p>
 <pre><code class="language-C++">static inline Buffer AGE::Buffer::Copy (
     const Buffer &amp; Other
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Other</code> The <a href="./"><strong>Buffer</strong></a> object to be copied. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A new <a href="./"><strong>Buffer</strong></a> object with the same size as the input and copied data.</p>
+<p>Copies a <a href="./"><strong>Buffer</strong></a> object by allocating the same size and copying data from another <a href="./"><strong>Buffer</strong></a>.</p>
+<p>This function creates a new <a href="./"><strong>Buffer</strong></a> object with the same size as the input <a href="./"><strong>Buffer</strong></a>, then copies the data from the input <a href="./"><strong>Buffer</strong></a> into this new one. The copied data is returned as the result of the function.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Other</code> The <a href="./"><strong>Buffer</strong></a> to be copied. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A copy of the input <a href="./"><strong>Buffer</strong></a>. </p>
 <hr>
 
 <h3 id="function-copy-22">function Copy [2/2]</h3>
+<p><em>Copies a block of memory into a new</em> <a href="./"><em><strong>Buffer</strong></em></a> <em>object.</em></p>
 <pre><code class="language-C++">static inline Buffer AGE::Buffer::Copy (
     const void * data,
     uint64_t size
 ) 
 </code></pre>
+<p>This function creates a new <a href="./"><strong>Buffer</strong></a> object and allocates the necessary memory to hold 'size' bytes. It then uses memcpy() to copy 'data' into this newly allocated memory. The copied data can be accessed through the Data property of the returned <a href="./"><strong>Buffer</strong></a> object.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>data</code> Pointer to the block of memory to copy. </li>
+<li><code>size</code> Size in bytes of the block of memory to copy.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A new <a href="./"><strong>Buffer</strong></a> object containing a copy of 'data'.</p>
+<p>Copies a block of memory into a new <a href="./"><strong>Buffer</strong></a> object.</p>
+<p>This function creates a new <a href="./"><strong>Buffer</strong></a> object and allocates the necessary memory to hold 'size' bytes. It then uses memcpy() to copy the data from the input pointer into this newly allocated memory. The copied buffer is returned as the result.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>data</code> A pointer to the block of memory to be copied. </li>
+<li><code>size</code> The number of bytes to copy from 'data'.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A new <a href="./"><strong>Buffer</strong></a> object containing a copy of the input data. </p>
 <hr>
 
 <h3 id="function-deserialize">function Deserialize</h3>
+<p><em>Deserialize a</em> <a href="./"><em><strong>Buffer</strong></em></a> <em>instance from a</em><a href="../class_a_g_e_1_1_data_reader/"><em><strong>DataReader</strong></em></a> <em>.</em></p>
 <pre><code class="language-C++">static inline void AGE::Buffer::Deserialize (
     DataReader * Deserializer,
     Buffer &amp; Instance
 ) 
 </code></pre>
+<p>This function reads raw data from the provided <a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> and deserializes it into a <a href="./"><strong>Buffer</strong></a> instance. The first byte read is stored in an uint8_t variable, which is then used to allocate memory for the buffer. The size of the buffer is read next as an uint64_t. After these two values are obtained, the buffer's memory is allocated and the bytes from the <a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> are written into it.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Deserializer</code> A pointer to a <a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> instance that provides the raw data for deserialization. </li>
+<li><code>Instance</code> The <a href="./"><strong>Buffer</strong></a> instance where the deserialized data will be stored.</li>
+</ul>
+<p>Deserialize a <a href="./"><strong>Buffer</strong></a> instance from a <a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a>.</p>
+<p>This function reads raw data from the provided <a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> and deserializes it into a <a href="./"><strong>Buffer</strong></a> instance. The first byte read is stored in an uint8_t variable, which is then used to allocate memory for the buffer. The size of the buffer is read next as an uint64_t. After these two values are obtained, the buffer's memory is allocated and the bytes from the <a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> are written into it.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Deserializer</code> Pointer to a <a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> instance that provides raw data for deserialization. </li>
+<li><code>Instance</code> Reference to a <a href="./"><strong>Buffer</strong></a> instance where the deserialized data will be stored. </li>
+</ul>
 <hr>
 
 <h3 id="function-serialize">function Serialize</h3>
+<p><em>This function serializes a</em> <a href="./"><em><strong>Buffer</strong></em></a> <em>instance into the provided</em><a href="../class_a_g_e_1_1_data_writer/"><em><strong>DataWriter</strong></em></a> <em>.</em></p>
 <pre><code class="language-C++">static inline void AGE::Buffer::Serialize (
     DataWriter * Serializer,
     const Buffer &amp; Instance
 ) 
 </code></pre>
+<p>The function writes two pieces of data to the <a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a>: the first byte of the buffer and its size. It uses WriteRaw method for writing raw bytes, which means it directly writes the memory content pointed by the pointer without any conversion or serialization process.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Serializer</code> Pointer to a <a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> instance that will be used for serialization. </li>
+<li><code>Instance</code> The <a href="./"><strong>Buffer</strong></a> instance to be serialized.</li>
+</ul>
+<p>This function serializes a buffer instance into the provided data writer.</p>
+<p>The function writes two pieces of information to the data writer: the first byte of the buffer and its size. It uses raw write operations, meaning it directly accesses the memory pointed by the Instance pointer without any additional processing. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Serializer</code> A pointer to a <a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> object that will be used for serialization. </li>
+<li><code>Instance</code> The <a href="./"><strong>Buffer</strong></a> instance to be serialized. </li>
+</ul>
 <hr>
 
 <hr />

@@ -33,16 +33,16 @@ namespace AGE {
         Vector4(float a, float b, float c, float d);
         Vector4(uint8_t a, uint8_t b, uint8_t c, uint8_t d);
         Vector4(const float* color);
-        Vector4(const Vector4& Other)
+Vector4(const Vector4& Other)
         {
             x = Other.x;
             y = Other.y;
             z = Other.z;
             w = Other.w;
         }
-        ~Vector4() = default;
+~Vector4() = default;
 
-        Vector4& operator=(const Vector4& Other)
+Vector4& operator=(const Vector4& Other)
         {
             x = Other.x;
             y = Other.y;
@@ -55,7 +55,8 @@ namespace AGE {
         //static void Deserialize(DataReader* Serializer, Vector4& Instance);
 
         //https://stackoverflow.com/questions/22244629/efficient-way-to-convert-from-premultiplied-float-rgba-to-8-bit-rgba
-        operator uint32_t()
+
+operator uint32_t()
         {
             //double rgb[4] = { x,y,z, 0};
             //__m128 alpha = _mm_set1_ps(w);
@@ -81,7 +82,9 @@ namespace AGE {
 #endif
         }
 
-        operator uint32_t*()
+        
+<doxygen comment>
+operator uint32_t*()
         {
             double rgb[4] = { x,y,z, 0 };
             __m128 alpha = _mm_set1_ps(w);
@@ -106,15 +109,21 @@ namespace AGE {
             return nullptr;
         }
 
-        float& operator [](int i)
+float& operator [](int i)
         {
             return ((&x)[i]);
         }
-        const float& operator [](int i) const
+        COMMENT:
+CONFIDENCE: 1.0;
+
+const float& operator [](int i) const
         {
             return ((&x)[i]);
         }
-        void operator=(Vector3& vec)
+COMMENT:
+CONFIDENCE: 1.0;
+
+void operator=(Vector3& vec)
         {
             x = vec.x;
             y = vec.y;
@@ -123,51 +132,51 @@ namespace AGE {
         }
 
 #if 0
-        void operator=(const float* color) {
+void operator=(const float* color) {
             x = color[0];
             y = color[1];
             z = color[2];
             w = color[3];
         }
 #endif
-        Vector4 operator+(const Vector4& vec) const {
+Vector4 operator+(const Vector4& vec) const {
             return Vector4(x + vec.x, y + vec.y, z + vec.z, vec.w);
         }
 
-        void operator+=(const Vector4& vec) {
+void operator+=(const Vector4& vec) {
             x += vec.x;
             y += vec.y;
             z += vec.z;
             w += vec.w;
         }
 
-        Vector4 operator-(const Vector4& vec) const {
+Vector4 operator-(const Vector4& vec) const {
             return Vector4(x - vec.x, y - vec.y, z - vec.z, w - vec.w);
         }
 
-        void operator-=(const Vector4& vec) {
+void operator-=(const Vector4& vec) {
             x -= vec.x;
             y -= vec.y;
             z -= vec.z;
             w -= vec.w;
         }
 
-        Vector4 operator*(float scalar) const {
+Vector4 operator*(float scalar) const {
             return Vector4(x * scalar, y * scalar, z * scalar, w * scalar);
         }
 
-        void operator*=(float scalar) {
+void operator*=(float scalar) {
             x *= scalar;
             y *= scalar;
             z *= scalar;
             w *= scalar;
         }
 
-        Vector4 operator/(float scalar) const {
+Vector4 operator/(float scalar) const {
             return Vector4(x / scalar, y / scalar, z / scalar, w / scalar);
         }
 
-        void operator/=(float scalar) {
+void operator/=(float scalar) {
             x /= scalar;
             y /= scalar;
             z /= scalar;
@@ -175,12 +184,12 @@ namespace AGE {
         }
 
 
-        float dot(const Vector4& vec) const {
+float dot(const Vector4& vec) const {
             float DotProduct = (x * vec.x) + (y * vec.y) + (z * vec.z) + (w * vec.w);
             return DotProduct;
         }
 
-        float norm(const Vector4& vec) const {
+float norm(const Vector4& vec) const {
             float Magnitude = sqrtf(
                 powf((x - vec.x), 2.f) +
                 powf((y - vec.y), 2.f) +
@@ -191,22 +200,25 @@ namespace AGE {
             return Magnitude;
         }
 
-        float magnitude() const {
+        COMMENT:
+CONFIDENCE: 1.0;
+
+float magnitude() const {
             return norm(Vector4());
         }
 
         Vector4 normalize() const;
 
 
-        bool operator==(const Vector4& vec) const {
+bool operator==(const Vector4& vec) const {
             return x == vec.x && y == vec.y && z == vec.z && w == vec.w;
         }
 
-        bool operator!=(const Vector4& vec) const {
+bool operator!=(const Vector4& vec) const {
             return x != vec.x || y != vec.y || z != vec.z || w != vec.w;
         }
 
-        operator std::string()
+operator std::string()
         {
             std::stringstream SS;
 

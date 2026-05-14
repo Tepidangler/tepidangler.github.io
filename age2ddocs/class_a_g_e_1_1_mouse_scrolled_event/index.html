@@ -105,11 +105,11 @@
 <tbody>
 <tr>
 <td style="text-align: right;">float</td>
-<td style="text-align: left;"><a href="#function-getxoffset"><strong>GetXOffset</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-getxoffset"><strong>GetXOffset</strong></a> () const<br><em>Returns the X offset value.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">float</td>
-<td style="text-align: left;"><a href="#function-getyoffset"><strong>GetYOffset</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-getyoffset"><strong>GetYOffset</strong></a> () const<br><em>This function returns the Y offset value.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
@@ -117,7 +117,7 @@
 </tr>
 <tr>
 <td style="text-align: right;">virtual std::string</td>
-<td style="text-align: left;"><a href="#function-tostring"><strong>ToString</strong></a> () override const<br></td>
+<td style="text-align: left;"><a href="#function-tostring"><strong>ToString</strong></a> () override const<br><em>This function returns a string representation of the</em> <a href="./"><em><strong>MouseScrolledEvent</strong></em></a> <em>object. The returned string includes the x and y offsets that represent the scroll event.</em></td>
 </tr>
 </tbody>
 </table>
@@ -161,11 +161,11 @@
 </tr>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-isincategory"><strong>IsInCategory</strong></a> (EventCategory Category) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-isincategory"><strong>IsInCategory</strong></a> (EventCategory Category) <br><em>Checks if an event is in a specific category.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual std::string</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-tostring"><strong>ToString</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-tostring"><strong>ToString</strong></a> () const<br><em>Returns a string representation of the object.</em></td>
 </tr>
 </tbody>
 </table>
@@ -217,23 +217,36 @@
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_mouse_event/#function-mouseevent-23"><strong>MouseEvent</strong></a> (float x, float y) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_mouse_event/#function-mouseevent-23"><strong>MouseEvent</strong></a> (float x, float y) <br><em>Constructs a</em> <a href="../class_a_g_e_1_1_mouse_event/"><em><strong>MouseEvent</strong></em></a> <em>object with the given coordinates.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_mouse_event/#function-mouseevent-33"><strong>MouseEvent</strong></a> (float xOffset, float yOffset, bool Scrolled) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_mouse_event/#function-mouseevent-33"><strong>MouseEvent</strong></a> (float xOffset, float yOffset, bool Scrolled) <br><em>Constructs a</em> <a href="../class_a_g_e_1_1_mouse_event/"><em><strong>MouseEvent</strong></em></a> <em>object with given offsets.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-getxoffset">function GetXOffset</h3>
+<p><em>Returns the X offset value.</em> </p>
 <pre><code class="language-C++">inline float AGE::MouseScrolledEvent::GetXOffset () const
 </code></pre>
+<p>This function returns the current X offset value stored in the object. The X offset is used to adjust the position of objects on the x-axis.</p>
+<p><strong>Returns:</strong></p>
+<p>A float representing the current X offset value.</p>
+<p>This function returns the X offset value. </p>
+<p><strong>Returns:</strong></p>
+<p>A floating-point number representing the X offset. </p>
 <hr>
 
 <h3 id="function-getyoffset">function GetYOffset</h3>
+<p><em>This function returns the Y offset value.</em> </p>
 <pre><code class="language-C++">inline float AGE::MouseScrolledEvent::GetYOffset () const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A floating-point number representing the Y offset.</p>
+<p>This function returns the Y offset value. </p>
+<p><strong>Returns:</strong></p>
+<p>A constant float representing the current Y offset value. </p>
 <hr>
 
 <h3 id="function-mousescrolledevent">function MouseScrolledEvent</h3>
@@ -245,8 +258,15 @@
 <hr>
 
 <h3 id="function-tostring">function ToString</h3>
+<p><em>This function returns a string representation of the</em> <a href="./"><em><strong>MouseScrolledEvent</strong></em></a> <em>object. The returned string includes the x and y offsets that represent the scroll event.</em></p>
 <pre><code class="language-C++">inline virtual std::string AGE::MouseScrolledEvent::ToString () override const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A string containing the details about the mouse scrolling event.</p>
+<p>Converts the <a href="./"><strong>MouseScrolledEvent</strong></a> into a string format.</p>
+<p>The function constructs and returns a string representation of the <a href="./"><strong>MouseScrolledEvent</strong></a> object, which includes the x-offset and y-offset values.</p>
+<p><strong>Returns:</strong></p>
+<p>A string containing the details about the <a href="./"><strong>MouseScrolledEvent</strong></a>. </p>
 <p>Implements <a href="../class_a_g_e_1_1_event/#function-tostring"><em>AGE::Event::ToString</em></a></p>
 <hr>
 

@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="384" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="384" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="1157" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="1157" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_a_g_e_1_1_plane_1a7b0dfe8222aa25779939a87dcc3f7b75" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="384" column="8" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="384" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="1157" column="8" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="1157" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_a_g_e_1_1_plane_1ad8bd4ae7fd9cba17504bcc35892b54d7" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="384" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="384" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="1157" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="1157" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_a_g_e_1_1_plane_1a126e85df4957ccdf474f8d375386c9c4" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="384" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="384" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="1157" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="1157" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -68,12 +68,19 @@
         <name>Plane</name>
         <qualifiedname>AGE::Plane::Plane</qualifiedname>
         <briefdescription>
+<para>Default constructor for the <ref refid="struct_a_g_e_1_1_plane" kindref="compound">Plane</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function initializes a new instance of the <ref refid="struct_a_g_e_1_1_plane" kindref="compound">Plane</ref> class with default values. It does not take any parameters and returns no value.</para>
+<para>Default constructor for the <ref refid="struct_a_g_e_1_1_plane" kindref="compound">Plane</ref> class.</para>
+<para>This function initializes a new instance of the <ref refid="struct_a_g_e_1_1_plane" kindref="compound">Plane</ref> class with default values. It is used to create an empty plane object that can be populated with data later.</para>
+<para><simplesect kind="return"><para>A new <ref refid="struct_a_g_e_1_1_plane" kindref="compound">Plane</ref> object with all fields initialized to their default values. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="386" column="1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="1173" column="1"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_plane_1ab2332b64ac90edab5ca23f829959af4e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -98,12 +105,81 @@
           <declname>d</declname>
         </param>
         <briefdescription>
+<para>Constructs a <ref refid="struct_a_g_e_1_1_plane" kindref="compound">Plane</ref> object with the given parameters. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function initializes a <ref refid="struct_a_g_e_1_1_plane" kindref="compound">Plane</ref> object with four floating-point values, which represent the coordinates of a plane in 3D space. The first three parameters (nx, ny, nz) define the normal vector of the plane and the fourth parameter (d) is the distance from the origin to the plane along this direction. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x-coordinate of the normal vector of the plane. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ny</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y-coordinate of the normal vector of the plane. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The z-coordinate of the normal vector of the plane. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The distance from the origin to the plane along its normal direction.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Constructs a <ref refid="struct_a_g_e_1_1_plane" kindref="compound">Plane</ref> object with the given parameters.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x-coordinate of the plane&apos;s normal vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ny</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y-coordinate of the plane&apos;s normal vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The z-coordinate of the plane&apos;s normal vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The distance from the origin to the plane along its normal vector. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="388" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="388" bodyend="394"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="1192" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="1192" bodyend="1198"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_plane_1afb1df22fadf9b4867e582fd2eef363a7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -120,12 +196,50 @@
           <declname>d</declname>
         </param>
         <briefdescription>
+<para>Constructs a <ref refid="struct_a_g_e_1_1_plane" kindref="compound">Plane</ref> object with the given normal vector and distance from origin. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The normal vector of the plane. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The distance from the origin to the plane along its normal direction.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Constructs a <ref refid="struct_a_g_e_1_1_plane" kindref="compound">Plane</ref> object from a <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> and a float.</para>
+<para>The plane is defined by the equation ax + by + cz = w, where (x, y, z) are the components of the input vector and &apos;w&apos; is the input float.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> representing the direction of the plane. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A float representing a point on the plane along the normal from which the distance to the origin is measured. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="396" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="396" bodyend="402"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="1214" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="1214" bodyend="1220"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_plane_1aed883f1584cda7eae250d263223da9cb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> &amp;</type>
@@ -137,19 +251,25 @@
           <type>void</type>
         </param>
         <briefdescription>
+<para>Returns a reference to the normal vector of this object. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>A constant reference to the internal normal vector.</para>
+</simplesect>
+Returns a reference to the normal vector of this object. <simplesect kind="return"><para>A constant reference to the internal normal vector. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="404" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="404" bodyend="407"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="1230" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="1230" bodyend="1233"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="382" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="383" bodyend="409"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="1155" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="1156" bodyend="1235"/>
     <listofallmembers>
       <member refid="struct_a_g_e_1_1_plane_1aed883f1584cda7eae250d263223da9cb" prot="public" virt="non-virtual"><scope>AGE::Plane</scope><name>GetNormal</name></member>
       <member refid="struct_a_g_e_1_1_plane_1a0d351ea9733f971a8963764265e97cec" prot="public" virt="non-virtual"><scope>AGE::Plane</scope><name>Plane</name></member>

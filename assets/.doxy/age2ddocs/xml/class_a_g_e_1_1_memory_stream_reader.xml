@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataReader.h" line="237" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataReader.h" bodystart="237" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataReader.h" line="475" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataReader.h" bodystart="475" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_memory_stream_reader_1a62408ea6ca5b0035219d39256fb88520" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataReader.h" line="238" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataReader.h" bodystart="238" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataReader.h" line="476" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataReader.h" bodystart="476" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_memory_stream_reader_1a74efdd6325824dea1521c419e7b2354c" prot="private" static="no" mutable="no">
         <type>std::istringstream</type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataReader.h" line="239" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataReader.h" bodystart="239" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataReader.h" line="477" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataReader.h" bodystart="477" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -63,12 +63,48 @@
           <declname>Size</declname>
         </param>
         <briefdescription>
+<para>Constructor for <ref refid="class_a_g_e_1_1_memory_stream_reader" kindref="compound">MemoryStreamReader</ref> class. Initializes a memory stream reader with the given address and size. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the start of the data buffer. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the data in bytes.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Constructor for <ref refid="class_a_g_e_1_1_memory_stream_reader" kindref="compound">MemoryStreamReader</ref>. Initializes the object with a given memory address and size. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the memory location to be read from. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the data in bytes at the provided memory location. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataReader.h" line="208" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Private/DataReader.cpp" bodystart="49" bodyend="54"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataReader.h" line="388" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Private/DataReader.cpp" bodystart="140" bodyend="145"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_memory_stream_reader_1a6e0a81320243ac0906dabf5fb31d543f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -80,12 +116,34 @@
           <type>const <ref refid="class_a_g_e_1_1_memory_stream_reader" kindref="compound">MemoryStreamReader</ref> &amp;</type>
         </param>
         <briefdescription>
+<para>Constructs a new instance of the <ref refid="class_a_g_e_1_1_memory_stream_reader" kindref="compound">MemoryStreamReader</ref> class using an existing memory stream. </para>
         </briefdescription>
         <detaileddescription>
+<para>The constructor takes in a reference to an existing memory stream and sets it as the source for reading data. It also initializes the read position to zero.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mem_stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to an existing memory stream that will be used as the source of data.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Constructor for the <ref refid="class_a_g_e_1_1_memory_stream_reader" kindref="compound">MemoryStreamReader</ref> class. It is deleted to prevent copying of objects.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The object to be copied. This parameter is not used in this function as it&apos;s a copy constructor and does nothing. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataReader.h" line="209" column="1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataReader.h" line="401" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_memory_stream_reader_1a2035fd0e4397c783d9a3581085bf651f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -94,12 +152,14 @@
         <name>~MemoryStreamReader</name>
         <qualifiedname>AGE::MemoryStreamReader::~MemoryStreamReader</qualifiedname>
         <briefdescription>
+<para>Destructor for <ref refid="class_a_g_e_1_1_memory_stream_reader" kindref="compound">MemoryStreamReader</ref> class. Clears the stream of any error flags. </para>
         </briefdescription>
         <detaileddescription>
+<para>Destructor for <ref refid="class_a_g_e_1_1_memory_stream_reader" kindref="compound">MemoryStreamReader</ref> class. Clears the stream of any error flags. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataReader.h" line="211" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Private/DataReader.cpp" bodystart="55" bodyend="58"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataReader.h" line="403" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Private/DataReader.cpp" bodystart="152" bodyend="155"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_memory_stream_reader_1af4ba4984610006a0f87da296b7e609a2" prot="public" static="no" const="yes" explicit="no" inline="yes" final="yes" virt="virtual">
         <type>bool</type>
@@ -109,12 +169,21 @@
         <qualifiedname>AGE::MemoryStreamReader::IsStreamGood</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_data_reader_1a401d9bf62ebc1a38a2c737eb1fcf08f3">IsStreamGood</reimplements>
         <briefdescription>
+<para>Checks the state of the stream. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function checks whether the underlying input/output stream is in a good state, i.e., it has no errors or failures that would prevent further operations on it.</para>
+<para><simplesect kind="return"><para>A boolean value indicating if the stream is in a good state (true) or not (false).</para>
+</simplesect>
+Checks the state of the stream.</para>
+<para>This function checks whether the underlying input-output operations on the stream are good or not. It returns true if the stream is in a good state, false otherwise.</para>
+<para><simplesect kind="return"><para>True if the stream is in a good state, false otherwise. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataReader.h" line="214" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataReader.h" bodystart="214" bodyend="214"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataReader.h" line="421" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataReader.h" bodystart="421" bodyend="421"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_memory_stream_reader_1ada600dc665a60d3a1c6c775698d79500" prot="public" static="no" const="no" explicit="no" inline="yes" final="yes" virt="virtual">
         <type>uint64_t</type>
@@ -124,12 +193,21 @@
         <qualifiedname>AGE::MemoryStreamReader::GetStreamPosition</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_data_reader_1a37b131e53f51f0b8e46414465318d0fa">GetStreamPosition</reimplements>
         <briefdescription>
+<para>Get the current position of the stream. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function returns the current position in the stream. If an error occurs while trying to get the position, it will return UINT64_MAX. The behavior is platform-dependent and depends on whether <bold>clang</bold> is defined or not. For Clang, if tellg() fails (returns -1), this function returns UINT64_MAX. Otherwise, it converts the result to uint64_t and returns it. For other platforms, it simply calls tellg(). This means that the return value is always a valid position in the stream.</para>
+<para><simplesect kind="return"><para>The current position of the stream as an unsigned 64-bit integer. If an error occurs while trying to get the position, UINT64_MAX is returned.</para>
+</simplesect>
+Get the current position of the stream</para>
+<para>This function retrieves the current position in the stream. It uses a platform-specific method to do so, and handles any errors that may occur. On platforms where <computeroutput>tellg()</computeroutput> returns -1 on failure (such as Clang), it instead returns UINT64_MAX to indicate an error state.</para>
+<para><simplesect kind="return"><para>uint64_t The current position in the stream, or UINT64_MAX if there was an error getting the position </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataReader.h" line="217" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataReader.h" bodystart="217" bodyend="229"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataReader.h" line="442" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataReader.h" bodystart="442" bodyend="454"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_memory_stream_reader_1a09958a647ee58e797620db3aba1b8e51" prot="public" static="no" const="no" explicit="no" inline="yes" final="yes" virt="virtual">
         <type>void</type>
@@ -143,12 +221,34 @@
           <declname>Pos</declname>
         </param>
         <briefdescription>
+<para>This function sets the stream position to a specified value. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new position in bytes from the beginning of the stream.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Sets the stream position to a specified value.</para>
+<para>This function sets the current read/write position in the stream to a specific byte offset from the beginning of the file. The new position is determined by the input parameter &apos;Pos&apos;.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired position within the stream, measured in bytes from the start of the file. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataReader.h" line="230" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataReader.h" bodystart="230" bodyend="230"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataReader.h" line="468" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataReader.h" bodystart="468" bodyend="468"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_memory_stream_reader_1aeb270f294319cffa66c581e01174d26d" prot="public" static="no" const="no" explicit="no" inline="no" final="yes" virt="virtual">
         <type>bool</type>
@@ -166,12 +266,55 @@
           <declname>Size</declname>
         </param>
         <briefdescription>
+<para>Reads data from the stream into a buffer. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function reads &apos;Size&apos; bytes of data from the stream and stores it in the buffer pointed to by &apos;Data&apos;. The function returns true if successful, false otherwise.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the buffer where the read data will be stored. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to read from the stream. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if successful, false otherwise.</para>
+</simplesect>
+Reads data from the stream into a buffer.</para>
+<para>This function reads &apos;Size&apos; bytes of data from the stream and stores it in the buffer pointed to by &apos;Data&apos;. The function returns true if successful, false otherwise.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the buffer where the read data will be stored. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to read from the stream. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the operation was successful, false otherwise. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataReader.h" line="231" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Private/DataReader.cpp" bodystart="59" bodyend="67"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataReader.h" line="469" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Private/DataReader.cpp" bodystart="175" bodyend="183"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_memory_stream_reader_1ad465be5250926568f2b84f9859579aae" prot="public" static="no" const="no" explicit="no" inline="no" final="yes" virt="virtual">
         <type>bool</type>
@@ -189,12 +332,55 @@
           <declname>Size</declname>
         </param>
         <briefdescription>
+<para>Reads a specified number of bytes from the stream into a vector. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function reads a specified number of bytes from the underlying stream and stores them in a provided vector. The data is read as raw byte values, so it can be used with any type that supports std::byte.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to a vector where the read bytes will be stored. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes to read from the stream. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Always returns true. In future this may change if we decide to add error handling for when not enough data is available in the stream.</para>
+</simplesect>
+Reads a specified number of bytes from the stream into a vector.</para>
+<para>This function reads &apos;Size&apos; bytes from the underlying stream and stores them in the provided vector, &apos;Data&apos;. The data is read as raw byte values (std::byte), so it can be used with any type that supports these operations.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to a std::vector of std::bytes where the read data will be stored. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes to read from the stream. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the operation was successful, false otherwise (e.g., if there is an error in reading or EOF has been reached). </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataReader.h" line="232" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Private/DataReader.cpp" bodystart="69" bodyend="77"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataReader.h" line="470" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Private/DataReader.cpp" bodystart="203" bodyend="211"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_memory_stream_reader_1a6737e8d52b24b52693e3976fcf079889" prot="public" static="no" const="no" explicit="no" inline="no" final="yes" virt="virtual">
         <type>bool</type>
@@ -212,12 +398,55 @@
           <declname>Size</declname>
         </param>
         <briefdescription>
+<para>Reads a specified number of bytes from the stream into a buffer. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function reads a specified number of bytes from the underlying input stream, storing them in a provided buffer. The size of the data read is determined by the &apos;Size&apos; parameter.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the buffer where the read data will be stored. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to read from the stream. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the operation was successful, false otherwise (e.g., end of file).</para>
+</simplesect>
+Reads a specified number of bytes from the stream into a buffer.</para>
+<para>This function reads a specified number of bytes from the underlying input stream into a provided buffer. The size of the data read is determined by the &apos;Size&apos; parameter.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the buffer where the read data will be stored. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes to read from the stream. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the operation was successful, false otherwise. In this case, it always returns true as there are no failure conditions for reading from the stream. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataReader.h" line="233" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Private/DataReader.cpp" bodystart="79" bodyend="87"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataReader.h" line="471" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Private/DataReader.cpp" bodystart="231" bodyend="239"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_memory_stream_reader_1a20c10a212b4781cccb60f7fe8f60fc6e" prot="public" static="no" const="no" explicit="no" inline="no" final="yes" virt="virtual">
         <type>bool</type>
@@ -231,12 +460,39 @@
           <declname>String</declname>
         </param>
         <briefdescription>
+<para>Reads a JSON string from the memory stream. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function attempts to read a JSON string from the memory stream and stores it in the provided string reference parameter. If successful, the function returns true; otherwise, false is returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">String</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to a std::string object where the JSON string will be stored. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool Returns true if the operation was successful, and false otherwise.</para>
+</simplesect>
+Reads a JSON string from the memory stream.</para>
+<para>This function attempts to read a JSON string from the memory stream and stores it in the provided string reference. If successful, it returns true, otherwise it returns false.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>String</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to a std::string where the JSON string will be stored. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool Returns true if the operation was successful, false otherwise. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataReader.h" line="234" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Private/DataReader.cpp" bodystart="89" bodyend="92"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataReader.h" line="472" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Private/DataReader.cpp" bodystart="258" bodyend="261"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -267,7 +523,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataReader.h" line="204" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataReader.h" bodystart="205" bodyend="240"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataReader.h" line="384" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataReader.h" bodystart="385" bodyend="478"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_memory_stream_reader_1ada600dc665a60d3a1c6c775698d79500" prot="public" virt="virtual"><scope>AGE::MemoryStreamReader</scope><name>GetStreamPosition</name></member>
       <member refid="class_a_g_e_1_1_memory_stream_reader_1af4ba4984610006a0f87da296b7e609a2" prot="public" virt="virtual"><scope>AGE::MemoryStreamReader</scope><name>IsStreamGood</name></member>

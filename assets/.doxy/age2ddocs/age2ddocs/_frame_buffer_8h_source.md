@@ -34,8 +34,11 @@ namespace AGE
 
     struct FramebufferTextureSpecification
     {
-        FramebufferTextureSpecification() = default;
-        FramebufferTextureSpecification(FramebufferTextureFormat Format)
+FramebufferTextureSpecification() = default;
+COMMENT:
+CONFIDENCE: 1.0;
+
+FramebufferTextureSpecification(FramebufferTextureFormat Format)
             :TextureFormat(Format) {}
 
         FramebufferTextureFormat TextureFormat = FramebufferTextureFormat::INVALIDFORMAT;
@@ -43,9 +46,9 @@ namespace AGE
 
     struct FramebufferAttachmentSpecification
     {
-        FramebufferAttachmentSpecification() = default;
+FramebufferAttachmentSpecification() = default;
 
-        FramebufferAttachmentSpecification(std::initializer_list<FramebufferTextureSpecification> attachments)
+FramebufferAttachmentSpecification(std::initializer_list<FramebufferTextureSpecification> attachments)
             :Attachments(attachments) {}
 
 
@@ -73,7 +76,7 @@ namespace AGE
     class FrameBuffer
     {
     public:
-        virtual ~FrameBuffer() {}
+virtual ~FrameBuffer() {}
         
         virtual FrameBufferSpecification& GetSpecification()  = 0;
         virtual const FrameBufferSpecification& GetSpecification() const = 0;

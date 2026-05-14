@@ -77,6 +77,10 @@
               
                 <h1 id="class-agekeyevent">Class AGE::KeyEvent</h1>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespace_a_g_e/"><strong>AGE</strong></a> <strong>&gt;</strong> <a href="./"><strong>KeyEvent</strong></a></p>
+<p><em>Represents a keyboard event.</em> <a href="#detailed-description">More...</a></p>
+<ul>
+<li><code>#include &lt;KeyEvent.h&gt;</code></li>
+</ul>
 <p>Inherits the following classes: <a href="../class_a_g_e_1_1_event/">AGE::Event</a></p>
 <p>Inherited by the following classes: <a href="../class_a_g_e_1_1_key_pressed_event/">AGE::KeyPressedEvent</a>,  <a href="../class_a_g_e_1_1_key_released_event/">AGE::KeyReleasedEvent</a>,  <a href="../class_a_g_e_1_1_key_typed_event/">AGE::KeyTypedEvent</a></p>
 <h2 id="public-attributes-inherited-from-ageevent">Public Attributes inherited from AGE::Event</h2>
@@ -134,11 +138,11 @@
 </tr>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-isincategory"><strong>IsInCategory</strong></a> (EventCategory Category) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-isincategory"><strong>IsInCategory</strong></a> (EventCategory Category) <br><em>Checks if an event is in a specific category.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual std::string</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-tostring"><strong>ToString</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-tostring"><strong>ToString</strong></a> () const<br><em>Returns a string representation of the object.</em></td>
 </tr>
 </tbody>
 </table>
@@ -172,6 +176,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="detailed-description">Detailed Description</h2>
+<p>This class is used to represent a keyboard event, which includes the key code associated with the event.</p>
+<p>Represents a keyboard event.</p>
+<p>This class is used to represent a keyboard event, which includes the key code of the pressed key. </p>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-getkeycode">function GetKeyCode</h3>
 <pre><code class="language-C++">inline int AGE::KeyEvent::GetKeyCode () const

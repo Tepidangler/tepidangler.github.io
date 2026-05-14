@@ -22,24 +22,21 @@ namespace AGE
     {
         INVALIDIMAGEFORMAT = 0,
         R8,
-        RG8,
         RGB8,
         RGBA8,
-        RG16F,
-        RGBA32F
+        RBGA32F
     };
 
     struct TextureSpecification
     {
     public:
-        TextureSpecification() = default;
-        virtual ~TextureSpecification() = default;
+TextureSpecification() = default;
+virtual ~TextureSpecification() = default;
 
         uint32_t Width = 1;
         uint32_t Height = 1;
         ImageFormat Format = ImageFormat::RGBA8;
         bool GenerateMips = true;
-        bool IsArray = false;
         static void Serialize(DataWriter* Serializer, const TextureSpecification& Instance);
         static void Deserialize(DataReader* Serializer, TextureSpecification& Instance);
     };
@@ -47,7 +44,7 @@ namespace AGE
     class Texture
     {
     public:
-        virtual ~Texture() {}
+virtual ~Texture() {}
 
         virtual void Bind(uint32_t Slot = 0) const = 0;
 
@@ -78,7 +75,7 @@ namespace AGE
     public:
 
         static Ref<Texture2D> Create(const std::string& Path);
-        static Ref<Texture2D> Create(uint8_t* Image, const TextureSpecification& Spec);
+        static Ref<Texture2D> Create(const tmx_image* Image);
         static Ref<Texture2D> Create(const std::vector<std::string>& Path);
         static Ref<Texture2D> Create(const TextureSpecification& Spec);
         static Ref<Texture2D> Create(const Image* Img, uint32_t Width, uint32_t Height, int Channels, size_t Size);

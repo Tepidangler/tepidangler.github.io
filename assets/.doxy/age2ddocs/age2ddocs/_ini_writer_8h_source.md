@@ -40,7 +40,7 @@ namespace AGE
     {
     public:
         IniWriter(const std::filesystem::path &Path);
-        ~IniWriter() = default;
+~IniWriter() = default;
 
         bool Write(const std::string &Section, const std::string &Key, const std::string &Value);
 

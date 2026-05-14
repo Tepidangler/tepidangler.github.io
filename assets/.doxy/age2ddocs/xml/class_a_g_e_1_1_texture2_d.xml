@@ -16,34 +16,68 @@
           <declname>Path</declname>
         </param>
         <briefdescription>
+<para>Creates a reference to a <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> object. The type of the texture is determined by the current renderer API. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path to the image file for the texture. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to a <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> object, or nullptr if an unsupported <ref refid="class_a_g_e_1_1_renderer_a_p_i" kindref="compound">RendererAPI</ref> is used.</para>
+</simplesect>
+Creates a reference to a <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> object. The type of the texture is determined by the current renderer API. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path to the image file for the texture. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to a <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> object, or nullptr if an unsupported <ref refid="class_a_g_e_1_1_renderer_a_p_i" kindref="compound">RendererAPI</ref> is used. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Texture/Public/Texture.h" line="70" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Texture/Private/Texture.cpp" bodystart="10" bodyend="28"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Texture/Public/Texture.h" line="99" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Texture/Private/Texture.cpp" bodystart="20" bodyend="38"/>
       </memberdef>
-      <memberdef kind="function" id="class_a_g_e_1_1_texture2_d_1aabba8a68d7f00cc91cbe6d1ffef4b09b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_a_g_e_1_1_texture2_d_1acedeb93eaa8974faf81bf005b728c51f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>Ref&lt; <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> &gt;</type>
         <definition>Ref&lt; Texture2D &gt; AGE::Texture2D::Create</definition>
-        <argsstring>(uint8_t *Image, const TextureSpecification &amp;Spec)</argsstring>
+        <argsstring>(const tmx_image *Image)</argsstring>
         <name>Create</name>
         <qualifiedname>AGE::Texture2D::Create</qualifiedname>
         <param>
-          <type>uint8_t *</type>
+          <type>const tmx_image *</type>
           <declname>Image</declname>
         </param>
-        <param>
-          <type>const <ref refid="struct_a_g_e_1_1_texture_specification" kindref="compound">TextureSpecification</ref> &amp;</type>
-          <declname>Spec</declname>
-        </param>
         <briefdescription>
+<para>Creates a new <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> object based on the current Rendering API. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function creates and returns a reference to a <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> object, which is specific to the currently used rendering API. It takes as input a pointer to an image data structure (tmx_image). The type of texture created will depend on the current <ref refid="class_a_g_e_1_1_renderer_a_p_i" kindref="compound">RendererAPI</ref> in use. If no supported Rendering API is found, it asserts false and returns nullptr.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_a_g_e_1_1_image" kindref="compound">Image</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the image data that the <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> object should be based on.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to a <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> object of the appropriate type for the current <ref refid="class_a_g_e_1_1_renderer_a_p_i" kindref="compound">RendererAPI</ref> in use. If no supported API is found, it returns nullptr. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Texture/Public/Texture.h" line="71" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Texture/Private/Texture.cpp" bodystart="30" bodyend="48"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Texture/Public/Texture.h" line="100" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Texture/Private/Texture.cpp" bodystart="52" bodyend="70"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_texture2_d_1a97887280734f562b5d1b2404385a0cc7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>Ref&lt; <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> &gt;</type>
@@ -54,14 +88,40 @@
         <param>
           <type>const std::vector&lt; std::string &gt; &amp;</type>
           <declname>Path</declname>
+          <defname>Paths</defname>
         </param>
         <briefdescription>
+<para>Creates a reference to a <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> object. The type of texture is determined by the current renderer API. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Paths</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector of strings representing the paths to the textures. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to a <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> object, or nullptr if an unsupported <ref refid="class_a_g_e_1_1_renderer_a_p_i" kindref="compound">RendererAPI</ref> is encountered.</para>
+</simplesect>
+Creates a texture from file path(s). The type of the texture depends on the current renderer API.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Paths</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector of strings representing the paths to the textures. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Ref&lt;Texture2D&gt; A reference to the created <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> object. Returns nullptr if the RendererAPI::API is None or Unknown. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Texture/Public/Texture.h" line="72" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Texture/Private/Texture.cpp" bodystart="50" bodyend="68"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Texture/Public/Texture.h" line="101" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Texture/Private/Texture.cpp" bodystart="83" bodyend="101"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_texture2_d_1a72b00e1e30bba53a42c5e85df8fd9b71" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>Ref&lt; <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> &gt;</type>
@@ -74,12 +134,38 @@
           <declname>Spec</declname>
         </param>
         <briefdescription>
+<para>Creates a new <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> object based on the given specification. The type of texture to be created is determined by the current renderer API in use. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Spec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The specification for the texture to be created. This includes things like width, height, format etc. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the newly created <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> object. If no suitable <ref refid="class_a_g_e_1_1_renderer_a_p_i" kindref="compound">RendererAPI</ref> is found or an error occurs during creation, a null reference is returned.</para>
+</simplesect>
+Creates a new <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> based on the specified specification.</para>
+<para>The type of texture is determined by the current <ref refid="class_a_g_e_1_1_renderer" kindref="compound">Renderer</ref> API in use. If no supported API is found, an assertion error will be thrown.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Spec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The specification for the texture to be created. This includes details like width, height, format etc. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the newly created <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> instance. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Texture/Public/Texture.h" line="73" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Texture/Private/Texture.cpp" bodystart="70" bodyend="88"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Texture/Public/Texture.h" line="102" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Texture/Private/Texture.cpp" bodystart="119" bodyend="137"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_texture2_d_1a229ce133d36a74666bb14bced81eede3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>Ref&lt; <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> &gt;</type>
@@ -108,12 +194,101 @@
           <declname>Size</declname>
         </param>
         <briefdescription>
+<para>Creates a new <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> object. The type of the texture is determined by the current renderer API. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Img</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to an <ref refid="class_a_g_e_1_1_image" kindref="compound">Image</ref> object, can be null if only dimensions are specified. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Width of the texture in pixels. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Height of the texture in pixels. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Channels</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of color channels in the image data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Total size of the image data in bytes. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to a <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> object, or nullptr if an unsupported <ref refid="class_a_g_e_1_1_renderer" kindref="compound">Renderer</ref> API is used.</para>
+</simplesect>
+Creates a new <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> object. The type of texture to be created is determined by the current renderer API in use.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Img</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to an <ref refid="class_a_g_e_1_1_image" kindref="compound">Image</ref> object, which may contain pixel data for initializing the texture. Can be nullptr if no image data is provided. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Width of the texture in pixels. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Height of the texture in pixels. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Channels</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of color channels in the texture (e.g., 3 for RGB, 4 for RGBA). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Total size of the image data in bytes.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to a <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> object that has been created based on the current <ref refid="class_a_g_e_1_1_renderer" kindref="compound">Renderer</ref> API. If an unsupported or unknown <ref refid="class_a_g_e_1_1_renderer" kindref="compound">Renderer</ref> API is detected, nullptr is returned instead. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Texture/Public/Texture.h" line="74" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Texture/Private/Texture.cpp" bodystart="89" bodyend="107"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Texture/Public/Texture.h" line="103" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Texture/Private/Texture.cpp" bodystart="158" bodyend="176"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -129,12 +304,19 @@
         <name>As</name>
         <qualifiedname>AGE::Texture2D::As</qualifiedname>
         <briefdescription>
+<para>This function is currently not implemented. It will return a pointer to an object of type T. If called, it will assert and crash the program with the message &quot;As() Failed!&quot;. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>nullptr Always returns nullptr.</para>
+</simplesect>
+This function is currently not implemented. It will return a pointer to an object of type T. If this function is called, it will assert and crash the program with the message &quot;As() Failed!&quot;.</para>
+<para><simplesect kind="return"><para>nullptr Always returns nullptr. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Texture/Public/Texture.h" line="77" column="3" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Texture/Private/Texture.cpp" bodystart="110" bodyend="114"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Texture/Public/Texture.h" line="106" column="3" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Texture/Private/Texture.cpp" bodystart="190" bodyend="194"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -171,12 +353,12 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Texture/Public/Texture.h" line="66" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Texture/Public/Texture.h" bodystart="67" bodyend="79"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Texture/Public/Texture.h" line="95" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Texture/Public/Texture.h" bodystart="96" bodyend="108"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_texture2_d_1ab8fd55a0eebd4242245cfeae338cacfd" prot="public" virt="non-virtual"><scope>AGE::Texture2D</scope><name>As</name></member>
       <member refid="class_a_g_e_1_1_texture_1a9440085f7a00c16aee4faf4b5bd0a143" prot="public" virt="pure-virtual"><scope>AGE::Texture2D</scope><name>Bind</name></member>
       <member refid="class_a_g_e_1_1_texture2_d_1ad2e1593e7f5b0382d34900899928c031" prot="public" virt="non-virtual"><scope>AGE::Texture2D</scope><name>Create</name></member>
-      <member refid="class_a_g_e_1_1_texture2_d_1aabba8a68d7f00cc91cbe6d1ffef4b09b" prot="public" virt="non-virtual"><scope>AGE::Texture2D</scope><name>Create</name></member>
+      <member refid="class_a_g_e_1_1_texture2_d_1acedeb93eaa8974faf81bf005b728c51f" prot="public" virt="non-virtual"><scope>AGE::Texture2D</scope><name>Create</name></member>
       <member refid="class_a_g_e_1_1_texture2_d_1a97887280734f562b5d1b2404385a0cc7" prot="public" virt="non-virtual"><scope>AGE::Texture2D</scope><name>Create</name></member>
       <member refid="class_a_g_e_1_1_texture2_d_1a72b00e1e30bba53a42c5e85df8fd9b71" prot="public" virt="non-virtual"><scope>AGE::Texture2D</scope><name>Create</name></member>
       <member refid="class_a_g_e_1_1_texture2_d_1a229ce133d36a74666bb14bced81eede3" prot="public" virt="non-virtual"><scope>AGE::Texture2D</scope><name>Create</name></member>

@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="40" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="40" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="100" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="100" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -26,12 +26,19 @@
         <name>Matrix2D</name>
         <qualifiedname>AGE::Matrix2D::Matrix2D</qualifiedname>
         <briefdescription>
+<para>Default constructor for the <ref refid="struct_a_g_e_1_1_matrix2_d" kindref="compound">Matrix2D</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>Initializes a new instance of the <ref refid="struct_a_g_e_1_1_matrix2_d" kindref="compound">Matrix2D</ref> class with default values.</para>
+<para>Default constructor for the <ref refid="struct_a_g_e_1_1_matrix2_d" kindref="compound">Matrix2D</ref> class.</para>
+<para>This function initializes a new instance of the <ref refid="struct_a_g_e_1_1_matrix2_d" kindref="compound">Matrix2D</ref> class with default values. It uses the &apos;= default&apos; syntax to delegate construction to the compiler-generated default constructor.</para>
+<para><simplesect kind="return"><para>A newly constructed <ref refid="struct_a_g_e_1_1_matrix2_d" kindref="compound">Matrix2D</ref> object. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="43" column="1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="115" column="1"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_matrix2_d_1afb25e6338c2711d0c4e2d638948fd6cf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -56,13 +63,81 @@
           <declname>n11</declname>
         </param>
         <briefdescription>
+<para>Constructs a 2x2 matrix with the given values. </para>
         </briefdescription>
         <detaileddescription>
-<para>| n00, n01 | | n10, n11 | </para>
+<para>| n00, n01 | | n10, n11 | <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n00</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to be assigned to the element at row 0, column 0. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n01</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to be assigned to the element at row 0, column 1. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n10</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to be assigned to the element at row 1, column 0. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n11</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to be assigned to the element at row 1, column 1.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Constructs a 2x2 matrix with the given values.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n00</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to be assigned to the element at row 0, column 0 of the matrix. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n01</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to be assigned to the element at row 0, column 1 of the matrix. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n10</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to be assigned to the element at row 1, column 0 of the matrix. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n11</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to be assigned to the element at row 1, column 1 of the matrix. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="47" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="47" bodyend="52"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="134" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="134" bodyend="139"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_matrix2_d_1a94d1253de1298950ce6c49cc16676db3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -79,13 +154,50 @@
           <declname>b</declname>
         </param>
         <briefdescription>
+<para>Constructs a 2D Matrix from two <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> objects. </para>
         </briefdescription>
         <detaileddescription>
 <para>| a[0], a[1]| | b[0], b[1]| </para>
+<para>The constructor initializes the matrix with values from two vectors, <computeroutput>a</computeroutput> and <computeroutput>b</computeroutput>. Each vector is represented as an (x, y) pair where x and y are the coordinates of the vector. The first row of the matrix gets the values from vector a and the second row from vector b.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> object representing the first row of the matrix. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> object representing the second row of the matrix.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Constructs a 2x2 matrix from two <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> objects. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first vector to use for the construction of the matrix. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second vector to use for the construction of the matrix. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="57" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="57" bodyend="61"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="159" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="159" bodyend="163"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_matrix2_d_1a74577b2042f4c5fc3db773e24cf3eaae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>float &amp;</type>
@@ -102,12 +214,55 @@
           <declname>j</declname>
         </param>
         <briefdescription>
+<para>Accesses an element in the matrix using two indices. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function allows access to a single element in the matrix through its two-dimensional coordinates (i, j). It returns a reference to the requested element which can be used for read or write operations.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first index of the element to access. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second index of the element to access. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the accessed element.</para>
+</simplesect>
+Accesses an element in the matrix using two indices.</para>
+<para>This function allows access to a single element in the matrix by providing two indices, i and j. It returns a reference to the element at position (i,j) in the matrix. The indices are zero-based.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first index of the element to be accessed. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second index of the element to be accessed. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the element at position (i,j). </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="63" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="63" bodyend="66"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="186" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="186" bodyend="189"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_matrix2_d_1ac22511e16e006982b137c3af0186bf6f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const float &amp;</type>
@@ -124,12 +279,55 @@
           <declname>j</declname>
         </param>
         <briefdescription>
+<para>Accesses the element at position (i, j) in a two-dimensional array. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function allows you to access an element at a specific location in a 2D array using the subscript operator syntax. The indices i and j specify the position of the desired element.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index along the first dimension (row). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index along the second dimension (column).</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A constant reference to the element at position (i, j) in the array.</para>
+</simplesect>
+Access the element at a given position in constant time.</para>
+<para>This function allows for constant-time access to elements in the matrix. It takes two parameters, i and j, which represent the row and column indices of the desired element respectively. The function returns a reference to the requested element.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the row (starting from 0). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the column (starting from 0). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A constant reference to the element at position (i,j) in the matrix. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="68" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="68" bodyend="71"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="210" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="210" bodyend="213"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_matrix2_d_1a1e1cf0a616e38d8e7754fd34d2e204ba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> &amp;</type>
@@ -142,12 +340,36 @@
           <declname>j</declname>
         </param>
         <briefdescription>
+<para>This function is an overloaded operator that allows for accessing <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> objects as if they were arrays. It returns a reference to the jth element of the vector. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the element to access. Must be in the range [0, size-1]. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the jth element of the vector.</para>
+</simplesect>
+This function is an overloaded operator [] that returns a reference to the <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> object at index &apos;j&apos; in the array. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the element to be accessed in the array. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> object at index &apos;j&apos;. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="74" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="74" bodyend="77"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="228" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="228" bodyend="231"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_matrix2_d_1a7bff86677a19de76167650e5546887be" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> &amp;</type>
@@ -160,19 +382,45 @@
           <declname>j</declname>
         </param>
         <briefdescription>
+<para>Returns a constant reference to the element at index &apos;j&apos; in the vector. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function returns a constant reference to the element at index &apos;j&apos;. It is used for accessing elements of the vector without modifying them. The returned value should not be modified as it may lead to undefined behavior if the original data is changed elsewhere.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of the element to return. Must be a valid index within the range of the vector. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A constant reference to the element at index &apos;j&apos;.</para>
+</simplesect>
+This function returns a reference to the <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> object at index &apos;j&apos; in an array of <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> objects.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> object in the array. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A const reference to the <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> object at index &apos;j&apos;. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="79" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="79" bodyend="82"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="248" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="248" bodyend="251"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="37" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="38" bodyend="84"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="97" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="98" bodyend="253"/>
     <listofallmembers>
       <member refid="struct_a_g_e_1_1_matrix2_d_1a0451eee3fc3f02112ca275dbec79bfa9" prot="public" virt="non-virtual"><scope>AGE::Matrix2D</scope><name>Matrix2D</name></member>
       <member refid="struct_a_g_e_1_1_matrix2_d_1afb25e6338c2711d0c4e2d638948fd6cf" prot="public" virt="non-virtual"><scope>AGE::Matrix2D</scope><name>Matrix2D</name></member>

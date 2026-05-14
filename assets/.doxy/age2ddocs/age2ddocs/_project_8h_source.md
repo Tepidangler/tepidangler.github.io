@@ -36,16 +36,16 @@ namespace AGE
         std::vector<Ref<InputBinding>> AxisBindings;
         std::vector<Ref<InputBinding>> ActionBindings;
 
-        void SetQuestFilepath(const std::filesystem::path& Filepath)
+void SetQuestFilepath(const std::filesystem::path& Filepath)
         {
             QuestFilepath = Filepath;
         }
 
-        void UpdateActionBindings(const std::vector<Ref<InputBinding>>& Bindings)
+void UpdateActionBindings(const std::vector<Ref<InputBinding>>& Bindings)
         {
             std::ranges::copy(Bindings, std::back_inserter(ActionBindings));
         }
-        void UpdateAxisBindings(const std::vector<Ref<InputBinding>>& Bindings)
+void UpdateAxisBindings(const std::vector<Ref<InputBinding>>& Bindings)
         {
             std::ranges::copy(Bindings, std::back_inserter(AxisBindings));
         }
@@ -54,42 +54,42 @@ namespace AGE
     class Project
     {
     public:
-        static const std::filesystem::path& GetProjectDirectory()
+static const std::filesystem::path& GetProjectDirectory()
         {
-            AGE_CORE_ASSERT((s_ActiveProject != nullptr), "No Active Project!");
+            CoreLogger::Assert((s_ActiveProject != nullptr), "No Active Project!");
 
             return s_ActiveProject->m_ProjectDirectory;
         }
 
-        static std::filesystem::path GetAssetDirectory()
+static std::filesystem::path GetAssetDirectory()
         {
-            AGE_CORE_ASSERT((s_ActiveProject != nullptr), "No Active Project!");
+            CoreLogger::Assert((s_ActiveProject != nullptr), "No Active Project!");
 
             return GetProjectDirectory() / s_ActiveProject->m_Config.AssetDirectory;
         }
 
-        static std::filesystem::path GetQuestDirectory()
+static std::filesystem::path GetQuestDirectory()
         {
-            AGE_CORE_ASSERT((s_ActiveProject != nullptr), "No Active Project!");
+            CoreLogger::Assert((s_ActiveProject != nullptr), "No Active Project!");
 
             return GetProjectDirectory() / s_ActiveProject->m_Info.QuestFilepath;
         }
 
-        static std::filesystem::path GetConfigDirectory()
+static std::filesystem::path GetConfigDirectory()
         {
-            AGE_CORE_ASSERT((s_ActiveProject != nullptr), "No Active Project!");
+            CoreLogger::Assert((s_ActiveProject != nullptr), "No Active Project!");
 
             return GetProjectDirectory() / s_ActiveProject->m_Info.ConfigFilepath;
         }
 
-        static std::filesystem::path GetAssetFileSystemPath(const std::filesystem::path& Path)
+static std::filesystem::path GetAssetFileSystemPath(const std::filesystem::path& Path)
         {
-            AGE_CORE_ASSERT((s_ActiveProject != nullptr), "No Active Project!");
+            CoreLogger::Assert((s_ActiveProject != nullptr), "No Active Project!");
             return GetAssetDirectory() / Path;
         }
 
-        ProjectConfig& GetConfig() { return m_Config; }
-        ProjectInfo& GetInfo() { return m_Info; }
+ProjectConfig& GetConfig() { return m_Config; }
+ProjectInfo& GetInfo() { return m_Info; }
 
         static void WriteProjectConfig(const std::filesystem::path& Path, const std::string& ProjectName);
         static void WriteEditorConfig(const std::filesystem::path& Path, const std::string& ProjectName);
@@ -99,7 +99,7 @@ namespace AGE
 
         void AddBuiltScenes();
 
-        static Ref<Project> GetActive() { return s_ActiveProject; }
+static Ref<Project> GetActive() { return s_ActiveProject; }
 
         static Ref<Project> New(const std::string& ProjectName);
 

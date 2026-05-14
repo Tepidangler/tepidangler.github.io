@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="216" column="11" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="216" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="385" column="11" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="385" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_a_g_e_1_1_k_b_m_input_binding_1af05cf7e3db96d9cb19f91c45c5f437d0" prot="public" static="no" mutable="no">
         <type>Binding::Type</type>
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="217" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="217" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="386" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="386" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -50,12 +50,32 @@
           <declname>type</declname>
         </param>
         <briefdescription>
+<para>Constructs a new instance of <ref refid="struct_a_g_e_1_1_k_b_m_input_binding" kindref="compound">KBMInputBinding</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para>This constructor initializes the binding with the given name and type, setting default values for other members.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the input binding. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the input binding (Keyboard, Mouse etc.). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="175" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="175" bodyend="184"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="321" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="321" bodyend="330"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_k_b_m_input_binding_1a162a9b2fc6eb954b8b8d6f6aa435e31c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -76,12 +96,40 @@
           <declname>type</declname>
         </param>
         <briefdescription>
+<para>Constructs a new <ref refid="struct_a_g_e_1_1_k_b_m_input_binding" kindref="compound">KBMInputBinding</ref> object. </para>
         </briefdescription>
         <detaileddescription>
+<para>This constructor initializes the binding with a given name, keycode, and type. It also sets some default values for other members of the class.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the binding. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keycode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key code associated with this binding. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the binding (e.g., KeyPress, KeyRelease). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="185" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="185" bodyend="194"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="340" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="340" bodyend="349"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_k_b_m_input_binding_1ac71e88189fac2b284caf2bdcbfe8d257" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -90,12 +138,17 @@
         <name>~KBMInputBinding</name>
         <qualifiedname>AGE::KBMInputBinding::~KBMInputBinding</qualifiedname>
         <briefdescription>
+<para>Destructor for the <ref refid="struct_a_g_e_1_1_k_b_m_input_binding" kindref="compound">KBMInputBinding</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is responsible for releasing any resources that were acquired during the lifetime of this object, such as memory or file handles. It also ensures that all subclasses have a well-defined destructor to follow the Rule of 5 (copy constructor, copy assignment operator, move constructor, move assignment operator and destructor).</para>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="196" column="1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="358" column="1"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_k_b_m_input_binding_1a0947537d5f8caca5f2b28f60b86e4272" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type>uint16_t</type>
@@ -105,12 +158,17 @@
         <qualifiedname>AGE::KBMInputBinding::GetKey</qualifiedname>
         <reimplements refid="struct_a_g_e_1_1_input_binding_1abc4c7f83099bcd471cc58d18f511d38c">GetKey</reimplements>
         <briefdescription>
+<para>This function returns a key code based on the binding type. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function checks the value of m_BindingType and returns different values depending on its state. If it&apos;s an Axis, it returns UINT16_MAX as placeholder for future implementation. If it&apos;s an Action, it returns the value stored in m_Key. For all other cases, it again returns UINT16&lt;｜begin▁of▁sentence｜&gt;MAX.</para>
+<para><simplesect kind="return"><para>uint16_t The key code to be returned based on the binding type. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="198" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="198" bodyend="215"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="367" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="367" bodyend="384"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -121,12 +179,13 @@
         <name>KBMInputBinding</name>
         <qualifiedname>AGE::KBMInputBinding::KBMInputBinding</qualifiedname>
         <briefdescription>
+<para>Default constructor for <ref refid="struct_a_g_e_1_1_k_b_m_input_binding" kindref="compound">KBMInputBinding</ref> class. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="219" column="1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="391" column="1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -157,7 +216,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="173" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="174" bodyend="220"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="311" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="312" bodyend="392"/>
     <listofallmembers>
       <member refid="struct_a_g_e_1_1_input_binding_1a56278a58dd39b9414406b303ae044c7a" prot="public" virt="non-virtual"><scope>AGE::KBMInputBinding</scope><name>ActionCallbackFn</name></member>
       <member refid="struct_a_g_e_1_1_input_binding_1a5f0b234a7b0ebb772d215394602d78ff" prot="public" virt="non-virtual"><scope>AGE::KBMInputBinding</scope><name>ActionExecute</name></member>

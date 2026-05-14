@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Timer.h" line="35" column="25" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Timer.h" bodystart="35" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Timer.h" line="87" column="25" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Timer.h" bodystart="87" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -26,12 +26,14 @@
         <name>Timer</name>
         <qualifiedname>AGE::Timer::Timer</qualifiedname>
         <briefdescription>
+<para>Constructor for the <ref refid="class_a_g_e_1_1_timer" kindref="compound">Timer</ref> class. It initializes a new instance of the <ref refid="class_a_g_e_1_1_timer" kindref="compound">Timer</ref> and resets it. </para>
         </briefdescription>
         <detaileddescription>
+<para>Constructor for the <ref refid="class_a_g_e_1_1_timer" kindref="compound">Timer</ref> class. Initializes a new instance of the timer and resets it to 0. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Timer.h" line="10" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Timer.h" bodystart="10" bodyend="13"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Timer.h" line="16" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Timer.h" bodystart="16" bodyend="19"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_timer_1ac804b5f19df5df7e63fe74e90b36eb26" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -40,12 +42,21 @@
         <name>Reset</name>
         <qualifiedname>AGE::Timer::Reset</qualifiedname>
         <briefdescription>
+<para>This function resets the start time to the current time. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function uses <computeroutput>std::chrono</computeroutput> library to get the current time and store it in m_Start variable. It is typically used at the beginning of a performance measurement session, setting the starting point for timing measurements.</para>
+<para><simplesect kind="return"><para>void</para>
+</simplesect>
+This function resets the start time to the current time.</para>
+<para>The function uses <computeroutput>std::chrono</computeroutput> library to get the current time and assigns it to m_Start variable. It is typically used in timing operations where you want to measure how much time has passed since a certain point.</para>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Timer.h" line="15" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Timer.h" bodystart="15" bodyend="18"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Timer.h" line="37" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Timer.h" bodystart="37" bodyend="40"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_timer_1a70471aff4edfc1b9d5693dbddc720e99" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>float</type>
@@ -54,12 +65,21 @@
         <name>Elapsed</name>
         <qualifiedname>AGE::Timer::Elapsed</qualifiedname>
         <briefdescription>
+<para>This function returns the elapsed time in milliseconds since the start time &apos;m_Start&apos;. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function uses std::chrono to measure the duration between the current time and the start time. It then converts this duration from nanoseconds to milliseconds by dividing by 1,000,000 (since there are 1,000,000 nanoseconds in a millisecond). The result is returned as a float.</para>
+<para><simplesect kind="return"><para>A float representing the elapsed time in milliseconds.</para>
+</simplesect>
+This function returns the elapsed time in milliseconds since the start time &apos;m_Start&apos;.</para>
+<para>The function uses a high resolution clock to measure the elapsed time and then converts it into milliseconds. It does this by first converting the duration into nanoseconds, then dividing by 1 million (to convert from nanoseconds to microseconds) and finally again by 1000 (to convert from microseconds to milliseconds). The result is a float representing the elapsed time in milliseconds.</para>
+<para><simplesect kind="return"><para>A float representing the elapsed time in milliseconds since &apos;m_Start&apos;. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Timer.h" line="20" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Timer.h" bodystart="20" bodyend="26"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Timer.h" line="60" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Timer.h" bodystart="60" bodyend="66"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_timer_1ad0c4e96787590ce62b3ef2a5115964e2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>float</type>
@@ -68,19 +88,27 @@
         <name>ElapsedMillis</name>
         <qualifiedname>AGE::Timer::ElapsedMillis</qualifiedname>
         <briefdescription>
+<para>This function returns the elapsed time in milliseconds since the last reset. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>A float representing the elapsed time in milliseconds. If no timer has been set, it will return 0.0f.</para>
+</simplesect>
+This function returns the elapsed time in milliseconds.</para>
+<para>The function multiplies the result of <computeroutput><ref refid="class_a_g_e_1_1_timer_1a70471aff4edfc1b9d5693dbddc720e99" kindref="member">Elapsed()</ref></computeroutput> by 1000 to convert seconds into milliseconds. It assumes that <computeroutput><ref refid="class_a_g_e_1_1_timer_1a70471aff4edfc1b9d5693dbddc720e99" kindref="member">Elapsed()</ref></computeroutput> is a function returning the elapsed time in seconds.</para>
+<para><simplesect kind="return"><para>A float representing the elapsed time in milliseconds. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Timer.h" line="28" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Timer.h" bodystart="28" bodyend="31"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Timer.h" line="80" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Timer.h" bodystart="80" bodyend="83"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Timer.h" line="6" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Timer.h" bodystart="7" bodyend="36"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Timer.h" line="6" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Timer.h" bodystart="7" bodyend="88"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_timer_1a70471aff4edfc1b9d5693dbddc720e99" prot="public" virt="non-virtual"><scope>AGE::Timer</scope><name>Elapsed</name></member>
       <member refid="class_a_g_e_1_1_timer_1ad0c4e96787590ce62b3ef2a5115964e2" prot="public" virt="non-virtual"><scope>AGE::Timer</scope><name>ElapsedMillis</name></member>

@@ -31,15 +31,11 @@ namespace AGE
         Int2 = 8,
         Int3 = 9,
         Int4 = 10,
-        UInt = 11,
-        UInt2 = 12,
-        UInt3 = 13,
-        UInt4 = 14,
-        Boolean = 15
+        Boolean = 11
 
     };
 
-    static uint32_t ShaderDataTypeSize(ShaderDataType Type)
+static uint32_t ShaderDataTypeSize(ShaderDataType Type)
     {
         switch ((int)Type)
         {
@@ -76,19 +72,11 @@ namespace AGE
             return 4 * sizeof(int);
             break;
         case 11:
-            return sizeof(uint32_t);
-        case 12:
-            return 2 * sizeof(uint32_t);
-        case 13:
-            return 3 * sizeof(uint32_t);
-        case 14:
-            return 4 * sizeof(uint32_t);
-        case 15:
             return sizeof(bool);
             break;
         }
 
-        AGE_CORE_ASSERT(false, "Unknown ShaderDataType!");
+        CoreLogger::Assert(false, "Unknown ShaderDataType!");
         return 0;
     }
 
@@ -103,15 +91,15 @@ namespace AGE
         uint32_t DataStepRate = 0;
         bool Normalized = false;
 
-        BufferElement() {};
+BufferElement() {};
 
-        BufferElement(ShaderDataType Type, const std::string& Name, bool normalized = false)
+BufferElement(ShaderDataType Type, const std::string& Name, bool normalized = false)
             : Name(Name), DataType(Type), Size(ShaderDataTypeSize(Type)), Offset(0), Normalized(normalized)
         {
 
         }
 
-        uint32_t GetComponentCount()  const
+uint32_t GetComponentCount()  const
         {
             switch ((int)DataType)
             {
@@ -149,16 +137,10 @@ namespace AGE
                 break;
             case 11:
                 return 1;
-            case 12:
-                return 2;
-            case 13:
-                return 3;
-            case 14:
-                return 4;
-            case 15:
-                return 1;
+                break;
+            
             }
-            AGE_CORE_ASSERT(false, "Unknown ShaderDataType!");
+            CoreLogger::Assert(false, "Unknown ShaderDataType!");
             return 0;
         }
 
@@ -171,25 +153,31 @@ namespace AGE
 
         BufferLayout();
 
-        BufferLayout(const std::initializer_list<BufferElement>& Elements)
+BufferLayout(const std::initializer_list<BufferElement>& Elements)
             : m_Elements(Elements)
         {
             CalculateOffsetsAndStride();
         }
 
-        inline const std::vector<BufferElement>& GetElements() const { return m_Elements; }
+inline const std::vector<BufferElement>& GetElements() const { return m_Elements; }
 
-        inline uint32_t GetStride() const { return m_Stride; }
+inline uint32_t GetStride() const { return m_Stride; }
 
-        [[nodiscard]] std::vector<BufferElement>::iterator begin() { return m_Elements.begin(); }
+        COMMENT:
+CONFIDENCE: 1.0;
 
-        [[nodiscard]] std::vector<BufferElement>::iterator end() { return m_Elements.end(); }
-        [[nodiscard]] std::vector<BufferElement>::const_iterator begin() const { return m_Elements.begin(); }
+[[nodiscard]] std::vector<BufferElement>::iterator begin() { return m_Elements.begin(); }
 
-        [[nodiscard]] std::vector<BufferElement>::const_iterator end() const { return m_Elements.end(); }
+[[nodiscard]] std::vector<BufferElement>::iterator end() { return m_Elements.end(); }
+        COMMENT:
+CONFIDENCE: 1.0;
+
+[[nodiscard]] std::vector<BufferElement>::const_iterator begin() const { return m_Elements.begin(); }
+
+[[nodiscard]] std::vector<BufferElement>::const_iterator end() const { return m_Elements.end(); }
     private:
 
-        void CalculateOffsetsAndStride()
+void CalculateOffsetsAndStride()
         {
             uint32_t offset = 0;
             m_Stride = 0;
@@ -212,7 +200,7 @@ namespace AGE
     {
     public:
         
-        virtual ~VertexBuffer() {};
+virtual ~VertexBuffer() {};
 
         virtual void Bind() const = 0;
 
@@ -231,7 +219,7 @@ namespace AGE
         virtual CircleVertex* CreateCircle(CircleVertex* Target, Matrix4D Transform, Vector4* Position, Vector4 Color, float Thickness, float Fade, int EntID) = 0;
         virtual LineVertex* CreateLine(LineVertex* Target, Vector4 Color, Vector3 Position0, Vector3 Position1, int EntID = -1) = 0;
         virtual TextVertex* CreateText(TextVertex* Target, Matrix4D Transform, Vector4* Position, Vector4 Color, Vector2* TexCoords, float TexID, int EntID) = 0;
-        virtual TilemapVertex* CreateTile(TilemapVertex* Target, Vector4 Color, Vector4* Position, Matrix4D Transform, const Vector2* UV, uint32_t TSID, int EnttID) = 0;
+        virtual TileVertex* CreateTile(TileVertex* Target, Vector4 Color, Vector4* Position, Vector2 Size, Matrix4D Transform, const Vector2* TexCoords, float TilingFactor, float ID, int EnttID) = 0;
 
 
         static Ref<VertexBuffer> Create(Matrix3D* Vertices, uint32_t Size);
@@ -247,7 +235,7 @@ namespace AGE
     class IndexBuffer
     {
     public:
-        virtual ~IndexBuffer() {};
+virtual ~IndexBuffer() {};
 
         virtual void Bind() const = 0;
 
@@ -266,7 +254,7 @@ namespace AGE
     class UniformBuffer
     {
     public:
-        virtual ~UniformBuffer() {}
+virtual ~UniformBuffer() {}
         virtual void Bind() = 0;
         virtual void Unbind() = 0;
         virtual void SetData(const void* Data, uint32_t Size, uint32_t Offset = 0) = 0;

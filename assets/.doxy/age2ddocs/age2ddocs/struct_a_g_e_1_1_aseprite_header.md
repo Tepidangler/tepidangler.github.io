@@ -73,8 +73,8 @@
 
 | Type | Name |
 | ---: | :--- |
-|   | [**AsepriteHeader**](#function-asepriteheader-12) () = default<br> |
-|   | [**AsepriteHeader**](#function-asepriteheader-22) (const [**AsepriteHeader**](struct_a_g_e_1_1_aseprite_header.md) &) = default<br> |
+|   | [**AsepriteHeader**](#function-asepriteheader-12) () = default<br>_Default constructor for_ [_**AsepriteHeader**_](struct_a_g_e_1_1_aseprite_header.md) _class._ |
+|   | [**AsepriteHeader**](#function-asepriteheader-22) (const [**AsepriteHeader**](struct_a_g_e_1_1_aseprite_header.md) &) = default<br>_Default copy constructor for the_ [_**AsepriteHeader**_](struct_a_g_e_1_1_aseprite_header.md) _class._ |
 
 
 
@@ -346,6 +346,7 @@ int16_t AGE::AsepriteHeader::y;
 
 ### function AsepriteHeader [1/2]
 
+_Default constructor for_ [_**AsepriteHeader**_](struct_a_g_e_1_1_aseprite_header.md) _class._
 ```C++
 AGE::AsepriteHeader::AsepriteHeader () = default
 ```
@@ -359,6 +360,7 @@ AGE::AsepriteHeader::AsepriteHeader () = default
 
 ### function AsepriteHeader [2/2]
 
+_Default copy constructor for the_ [_**AsepriteHeader**_](struct_a_g_e_1_1_aseprite_header.md) _class._
 ```C++
 AGE::AsepriteHeader::AsepriteHeader (
     const AsepriteHeader &
@@ -367,6 +369,20 @@ AGE::AsepriteHeader::AsepriteHeader (
 
 
 
+This function is used to create a new instance of the [**AsepriteHeader**](struct_a_g_e_1_1_aseprite_header.md) class by copying an existing one. It uses the '= default' syntax, which tells the compiler to use the default implementation provided by the compiler.
+
+
+
+
+**Parameters:**
+
+
+* `other` The existing [**AsepriteHeader**](struct_a_g_e_1_1_aseprite_header.md) instance to copy. 
+
+
+
+
+        
 
 <hr>
 

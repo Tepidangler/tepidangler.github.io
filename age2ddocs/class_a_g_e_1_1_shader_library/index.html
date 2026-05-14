@@ -88,94 +88,206 @@
 <tbody>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-add-12"><strong>Add</strong></a> (const std::string &amp; Name, const Ref&lt; <a href="../class_a_g_e_1_1_shader/"><strong>Shader</strong></a> &gt; &amp; Shader) <br></td>
+<td style="text-align: left;"><a href="#function-add-12"><strong>Add</strong></a> (const std::string &amp; Name, const Ref&lt; <a href="../class_a_g_e_1_1_shader/"><strong>Shader</strong></a> &gt; &amp; Shader) <br><em>Adds a shader to the library with a given name and reference.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-add-22"><strong>Add</strong></a> (Ref&lt; <a href="../class_a_g_e_1_1_shader/"><strong>Shader</strong></a> &gt; &amp; Shader) <br></td>
+<td style="text-align: left;"><a href="#function-add-22"><strong>Add</strong></a> (Ref&lt; <a href="../class_a_g_e_1_1_shader/"><strong>Shader</strong></a> &gt; &amp; Shader) <br><em>Adds a shader to the library.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="#function-exists"><strong>Exists</strong></a> (const std::string &amp; Name) <br></td>
+<td style="text-align: left;"><a href="#function-exists"><strong>Exists</strong></a> (const std::string &amp; Name) <br><em>Checks if a shader with the given name exists in the library.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">Ref&lt; <a href="../class_a_g_e_1_1_shader/"><strong>Shader</strong></a> &gt;</td>
-<td style="text-align: left;"><a href="#function-get"><strong>Get</strong></a> (const std::string &amp; Name) <br></td>
+<td style="text-align: left;"><a href="#function-get"><strong>Get</strong></a> (const std::string &amp; Name) <br><em>Retrieves a shader from the library by name.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">std::unordered_map&lt; std::string, Ref&lt; <a href="../class_a_g_e_1_1_shader/"><strong>Shader</strong></a> &gt; &gt;</td>
-<td style="text-align: left;"><a href="#function-getlibrary"><strong>GetLibrary</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getlibrary"><strong>GetLibrary</strong></a> () <br><em>Returns a reference to the shader library.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">Ref&lt; <a href="../class_a_g_e_1_1_shader/"><strong>Shader</strong></a> &gt;</td>
-<td style="text-align: left;"><a href="#function-load-13"><strong>Load</strong></a> (const std::string &amp; FilePath) <br></td>
+<td style="text-align: left;"><a href="#function-load-13"><strong>Load</strong></a> (const std::string &amp; FilePath) <br><em>Loads a shader from the given file path and adds it to the library.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">Ref&lt; <a href="../class_a_g_e_1_1_shader/"><strong>Shader</strong></a> &gt;</td>
-<td style="text-align: left;"><a href="#function-load-23"><strong>Load</strong></a> (const std::string &amp; FilePath1, const std::string &amp; FilePath2) <br></td>
+<td style="text-align: left;"><a href="#function-load-23"><strong>Load</strong></a> (const std::string &amp; FilePath1, const std::string &amp; FilePath2) <br><em>Loads a shader from two file paths and adds it to the library.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">Ref&lt; <a href="../class_a_g_e_1_1_shader/"><strong>Shader</strong></a> &gt;</td>
-<td style="text-align: left;"><a href="#function-load-33"><strong>Load</strong></a> (const int Name, const std::string &amp; Source) <br></td>
+<td style="text-align: left;"><a href="#function-load-33"><strong>Load</strong></a> (const int Name, const std::string &amp; Source) <br><em>Loads a shader into the library. The type of shader is determined by the Name parameter, where 1 represents "Vertex" and any other value represents "Pixel".</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-add-12">function Add [1/2]</h3>
+<p><em>Adds a shader to the library with a given name and reference.</em> </p>
 <pre><code class="language-C++">void AGE::ShaderLibrary::Add (
     const std::string &amp; Name,
     const Ref&lt; Shader &gt; &amp; Shader
 ) 
 </code></pre>
+<p>This function adds a new shader to the library if it does not already exist. If a shader with the same name exists, a warning is logged and the function returns without adding anything.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Name</code> The name of the shader to add. </li>
+<li><a href="../class_a_g_e_1_1_shader/"><strong>Shader</strong></a> A reference to the shader object to be added.</li>
+</ul>
+<p>Adds a shader to the library with a given name and reference.</p>
+<p>This function adds a new shader to the library if it does not already exist. If a shader with the same name exists, a warning is logged and the function returns without adding anything.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Name</code> The name of the shader to add. </li>
+<li><a href="../class_a_g_e_1_1_shader/"><strong>Shader</strong></a> A reference to the shader object to be added. </li>
+</ul>
 <hr>
 
 <h3 id="function-add-22">function Add [2/2]</h3>
+<p><em>Adds a shader to the library.</em> </p>
 <pre><code class="language-C++">void AGE::ShaderLibrary::Add (
     Ref&lt; Shader &gt; &amp; Shader
 ) 
 </code></pre>
+<p>This function takes a reference to a shader object and adds it to the library. The name of the shader is obtained by calling the GetShaderName() method on the <a href="../class_a_g_e_1_1_shader/"><strong>Shader</strong></a> object.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><a href="../class_a_g_e_1_1_shader/"><strong>Shader</strong></a> A reference to the shader object that needs to be added.</li>
+</ul>
+<p>Adds a shader to the library.</p>
+<p>This function adds a reference to a shader object to the library. The name of the shader is obtained from the GetShaderName() method of the <a href="../class_a_g_e_1_1_shader/"><strong>Shader</strong></a> object. If the shader with the same name already exists, it will be replaced by the new one.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><a href="../class_a_g_e_1_1_shader/"><strong>Shader</strong></a> A reference to a <a href="../class_a_g_e_1_1_shader/"><strong>Shader</strong></a> object that needs to be added to the library. </li>
+</ul>
 <hr>
 
 <h3 id="function-exists">function Exists</h3>
+<p><em>Checks if a shader with the given name exists in the library.</em> </p>
 <pre><code class="language-C++">bool AGE::ShaderLibrary::Exists (
     const std::string &amp; Name
 ) 
 </code></pre>
+<p>This function checks whether there is an entry for a shader with the specified name in the <a href="./"><strong>ShaderLibrary</strong></a>'s internal map of shaders. It returns true if such an entry exists, and false otherwise.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Name</code> The name of the shader to check for. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>True if a shader with the given name exists, false otherwise.</p>
+<p>Checks if a shader with the given name exists in the library.</p>
+<p>This function checks whether there is an entry for a shader with the provided name in the <a href="./"><strong>ShaderLibrary</strong></a>'s internal map of shaders. It returns true if such an entry exists and false otherwise.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Name</code> The name of the shader to check for. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>True if a shader with the given name exists, false otherwise. </p>
 <hr>
 
 <h3 id="function-get">function Get</h3>
+<p><em>Retrieves a shader from the library by name.</em> </p>
 <pre><code class="language-C++">Ref&lt; Shader &gt; AGE::ShaderLibrary::Get (
     const std::string &amp; Name
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Name</code> The name of the shader to retrieve. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A reference to the requested shader, or an empty Ref if no such shader exists in the library.</p>
+<p>Retrieves a shader from the library by name. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Name</code> The name of the shader to retrieve. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A reference to the requested shader. If the shader does not exist, an assertion will be triggered and the program will terminate. </p>
 <hr>
 
 <h3 id="function-getlibrary">function GetLibrary</h3>
+<p><em>Returns a reference to the shader library.</em> </p>
 <pre><code class="language-C++">inline std::unordered_map&lt; std::string, Ref&lt; Shader &gt; &gt; AGE::ShaderLibrary::GetLibrary () 
 </code></pre>
+<p>This function returns an unordered map where keys are strings and values are references to <a href="../class_a_g_e_1_1_shader/"><strong>Shader</strong></a> objects. The purpose of this function is to provide access to all currently loaded shaders in the system.</p>
+<p><strong>Returns:</strong></p>
+<p>An unordered_map containing string-Shader pairs representing the names and corresponding shaders of all loaded shaders.</p>
+<p>Returns a reference to the shader library.</p>
+<p>This function returns an unordered map that contains all the shaders in the library. The keys are the names of the shaders and the values are references to the actual <a href="../class_a_g_e_1_1_shader/"><strong>Shader</strong></a> objects.</p>
+<p><strong>Returns:</strong></p>
+<p>An unordered_map containing string-Shader pairs representing the shader library. </p>
 <hr>
 
 <h3 id="function-load-13">function Load [1/3]</h3>
+<p><em>Loads a shader from the given file path and adds it to the library.</em> </p>
 <pre><code class="language-C++">Ref&lt; Shader &gt; AGE::ShaderLibrary::Load (
     const std::string &amp; FilePath
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>FilePath</code> The path of the shader file. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A reference to the loaded shader.</p>
+<p>Loads a shader from the given file path and adds it to the library. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>FilePath</code> The path of the shader file. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A reference to the loaded shader. </p>
 <hr>
 
 <h3 id="function-load-23">function Load [2/3]</h3>
+<p><em>Loads a shader from two file paths and adds it to the library.</em> </p>
 <pre><code class="language-C++">Ref&lt; Shader &gt; AGE::ShaderLibrary::Load (
     const std::string &amp; FilePath1,
     const std::string &amp; FilePath2
 ) 
 </code></pre>
+<p>The function creates a new shader object using <code>Shader::Create</code> with the provided file paths, then adds this shader to the library using <code>Add</code> method. Finally, it returns the created shader.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>FilePath1</code> The path of the first shader file. </li>
+<li><code>FilePath2</code> The path of the second shader file.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A reference to the loaded shader object.</p>
+<p>Loads a shader from the given file paths and adds it to the library.</p>
+<p>The function creates a new shader object using <code>Shader::Create</code> with the provided file paths, then adds this shader to the library using <code>Add</code> method. Finally, it returns the created shader.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>FilePath1</code> The path of the first shader file. </li>
+<li><code>FilePath2</code> The path of the second shader file (optional). </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A reference to the loaded shader object. </p>
 <hr>
 
 <h3 id="function-load-33">function Load [3/3]</h3>
+<p><em>Loads a shader into the library. The type of shader is determined by the Name parameter, where 1 represents "Vertex" and any other value represents "Pixel".</em> </p>
 <pre><code class="language-C++">Ref&lt; Shader &gt; AGE::ShaderLibrary::Load (
     const int Name,
     const std::string &amp; Source
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Name</code> An integer representing the type of shader to be loaded. </li>
+<li><code>Source</code> A string containing the source code for the shader. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Returns a reference to the newly loaded <a href="../class_a_g_e_1_1_shader/"><strong>Shader</strong></a> object.</p>
+<p>Loads a shader into the library. The type of shader is determined by the Name parameter, where 1 represents "Vertex" and any other value represents "Pixel". </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Name</code> An integer representing the type of shader to be loaded (1 for <a href="../struct_a_g_e_1_1_vertex/"><strong>Vertex</strong></a>, anything else for Pixel). </li>
+<li><code>Source</code> A string containing the source code of the shader. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Returns a reference to the newly created <a href="../class_a_g_e_1_1_shader/"><strong>Shader</strong></a> object. </p>
 <hr>
 
 <hr />

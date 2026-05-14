@@ -79,7 +79,7 @@ namespace AGE
         Mp3
     };
 
-    static void PrintAudioDeviceInfo()
+static void PrintAudioDeviceInfo()
     {
         CoreLogger::Info("Audio Device Info:");
         //CoreLogger::Info("\tName: {0}", s_Device->mDeviceName);
@@ -89,7 +89,7 @@ namespace AGE
         //CoreLogger::Info("\t\tStereo: {0}", s_Device->NumStereoSources);
     }
 
-    static AudioFileFormat GetFileFormat(const std::string& FileName)
+static AudioFileFormat GetFileFormat(const std::string& FileName)
     {
         std::filesystem::path Path = FileName;
         std::string Ext = Path.extension().string();
@@ -98,7 +98,7 @@ namespace AGE
         return Format;
     }
 
-    static ALenum GetFormat(uint8_t Channels, uint8_t BitsPerSample)
+static ALenum GetFormat(uint8_t Channels, uint8_t BitsPerSample)
     {
 
         if (Channels == 1 && BitsPerSample == 8)
@@ -124,17 +124,19 @@ namespace AGE
         }
     }
 
-    AGESound::AGESound()
+AGESound::AGESound()
     {
         Init();
     }
 
-    void AGESound::Init()
+    
+
+void AGESound::Init()
     {
         s_Device = al::Device::Create(DeviceType::Playback);
         if (!s_Device) //DeviceType::Playback
         {
-            AGE_CORE_ASSERT(false, "Error Creating Initializing Audio Device!");
+            CoreLogger::Assert(false, "Error Creating Initializing Audio Device!");
             return;
         }
 
@@ -152,57 +154,57 @@ namespace AGE
         alListenerfv(AL_ORIENTATION, ListenerOri);
     }
 
-    void AGESound::Start()
+void AGESound::Start()
     {
     }
 
-    void AGESound::Update()
+void AGESound::Update()
     {
     }
 
-    void AGESound::Stop()
+void AGESound::Stop()
     {
     }
 
-    void AGESound::LoadBanks(const std::vector<Ref<SoundBank>> &Banks)
+void AGESound::LoadBanks(const std::vector<Ref<SoundBank>> &Banks)
     {
     }
 
-    void AGESound::LoadBank(Ref<SoundBank> Bank)
+void AGESound::LoadBank(Ref<SoundBank> Bank)
     {
     }
 
-    std::string & AGESound::GetCurrentEventName()
+std::string & AGESound::GetCurrentEventName()
     {
         return m_EventName;
     }
 
-    void AGESound::SetCurrentEventName(const std::string &Name)
+void AGESound::SetCurrentEventName(const std::string &Name)
     {
     }
 
-    void AGESound::Shutdown()
+void AGESound::Shutdown()
     {
     }
 
-    bool AGESound::IsEventValid(const std::string& EventName)
+bool AGESound::IsEventValid(const std::string& EventName)
     {
         return false;
     }
 
-    void AGESound::SetParameterByName(const std::string &Name, float Value)
+void AGESound::SetParameterByName(const std::string &Name, float Value)
     {
     }
 
-    void AGESound::Set3DAttributes(void *Attributes)
+void AGESound::Set3DAttributes(void *Attributes)
     {
     }
 
-    void AGESound::StopSound()
+void AGESound::StopSound()
     {
 
     }
-    void AGESound::UnloadSound(const Ref<AudioSource>& Source)
+void AGESound::UnloadSound(const Ref<AudioSource>& Source)
     {
         int32_t ProcessedBuffers;
         alGetSourcei(Source->m_SourceHandle, AL_BUFFERS_PROCESSED, &ProcessedBuffers);
@@ -272,7 +274,7 @@ namespace AGE
     //  //  PlaySound();
     //  //}
     //}
-    bool AGESound::FindAvailableDevices(std::vector<std::string>& DevicesArray, ALCdevice* Device)
+bool AGESound::FindAvailableDevices(std::vector<std::string>& DevicesArray, ALCdevice* Device)
     {
         //const ALchar* Devices;
         //if (!alcCall(alcGetString, Devices, Device, nullptr, ALC_DEVICE_SPECIFIER))
@@ -293,7 +295,7 @@ namespace AGE
         return true;
     }
 
-    bool AGESound::DisplayErrorCode(const std::string& FN, const uint32_t line, ALenum Error)
+bool AGESound::DisplayErrorCode(const std::string& FN, const uint32_t line, ALenum Error)
     {
 
 
@@ -306,20 +308,20 @@ namespace AGE
             case AL_OUT_OF_MEMORY:
             {
                 CoreLogger::Error("File: {0}, Line: {1}, The requested operation resulted in OpenAL running out of memory", FN, line);
-                AGE_CORE_ASSERT(false, "Out Of Memory!");
+                CoreLogger::Assert(false, "Out Of Memory!");
                 break;
             }
             case AL_INVALID_VALUE:
             {
                 CoreLogger::Error("File: {0}, Line: {1}, An invalid value was passed to an OpenAL function", FN, line);
-                AGE_CORE_ASSERT(false, "Invalid Value!");
+                CoreLogger::Assert(false, "Invalid Value!");
                 break;
             }
 
             case AL_ILLEGAL_COMMAND:
             {
                 CoreLogger::Error("File: {0}, Line: {1}, The requested operation is not valid", FN, line);
-                AGE_CORE_ASSERT(false, "Illegal Command|Operation");
+                CoreLogger::Assert(false, "Illegal Command|Operation");
                 break;
             }
 
@@ -327,14 +329,14 @@ namespace AGE
             {
 
                 CoreLogger::Error("File: {0}, Line: {1}, An invalid enum value was passed to an OpenAL function", FN, line);
-                AGE_CORE_ASSERT(false, "Invalid Enum");
+                CoreLogger::Assert(false, "Invalid Enum");
                 break;
             }
 
             case AL_INVALID_NAME:
             {
                 CoreLogger::Error("File: {0}, Line: {1}, A bad name (ID) was passed to an OpenAL function", FN, line);
-                AGE_CORE_ASSERT(false, "Invalid Name");
+                CoreLogger::Assert(false, "Invalid Name");
                 break;
             }
 
@@ -348,7 +350,7 @@ namespace AGE
         return true;
     }
 
-    AudioSource AGESound::LoadAudioSource(const std::string& FileName)
+AudioSource AGESound::LoadAudioSource(const std::string& FileName)
     {
         auto Format = GetFileFormat(FileName);
 
@@ -371,26 +373,26 @@ namespace AGE
         return AudioSource();
     }
 
-    void AGESound::Play(const Ref<AudioSource>& Source)
+void AGESound::Play(const Ref<AudioSource>& Source)
     {
         alSourcePlay(Source->m_SourceHandle);
     }
-    void AGESound::Stop(const Ref<AudioSource>& Source)
+void AGESound::Stop(const Ref<AudioSource>& Source)
     {
         alSourceStop(Source->m_SourceHandle);
     }
-    void AGESound::Stop(const std::vector<Ref<AudioSource>>& Sources)
+void AGESound::Stop(const std::vector<Ref<AudioSource>>& Sources)
     {
         for (size_t i = 0; i < Sources.size(); i++)
         {
             Stop(Sources[i]);
         }
     }
-    void AGESound::SetDebugLogging(bool Log)
+void AGESound::SetDebugLogging(bool Log)
     {
     }
 
-    int32_t AGESound::ConvertToInt(char* Buffer, size_t Length)
+int32_t AGESound::ConvertToInt(char* Buffer, size_t Length)
     {
         int32_t a = 0;
         if (!Utils::EngineStatics::IsBigEndian())
@@ -406,7 +408,14 @@ namespace AGE
         }
         return a;
     }
-    AudioSource AGESound::LoadAudioSourceMP3(const std::string& FileName)
+    "/**\n \
+* @brief Loads an audio source from an MP3 file.\n \
+* This function loads an MP3 file and creates an OpenAL buffer for it, logging details to console.\n \
+* @param FileName The name of the MP3 file to load.\n \
+* @return An AudioSource struct containing information about loaded audio source.\n \
+* @note Assumes mp3dec library is already initialized and ready for use.\n \
+*/"
+AudioSource AGESound::LoadAudioSourceMP3(const std::string& FileName)
     {
 
         mp3dec_file_info_t Info;
@@ -437,11 +446,11 @@ namespace AGE
 
         if (alGetError() != AL_NO_ERROR)
         {
-            AGE_CORE_ASSERT(false, "Failed to Setup Sound Source");
+            CoreLogger::Assert(false, "Failed to Setup Sound Source");
         }
         return Audio;
     }
-    AudioSource AGESound::LoadWav(const std::string& FileName)
+AudioSource AGESound::LoadWav(const std::string& FileName)
     {
         uint8_t Channels;
         uint8_t BitsPerSample;
@@ -470,7 +479,8 @@ namespace AGE
 
         return Audio;
     }
-    bool AGESound::LoadWavFileHeader(std::ifstream& File, uint8_t& Channels, int32_t& SampleRate, uint8_t& BitsPerSample, ALsizei& Size)
+    <doxygen comment>
+bool AGESound::LoadWavFileHeader(std::ifstream& File, uint8_t& Channels, int32_t& SampleRate, uint8_t& BitsPerSample, ALsizei& Size)
     {
         char Buffer[4];
         if (!File.is_open())
@@ -602,7 +612,7 @@ namespace AGE
     }
 
     template<>
-    AGESound* AudioEngine::As()
+AGESound* AudioEngine::As()
     {
         return (AGESound*)this;
     }

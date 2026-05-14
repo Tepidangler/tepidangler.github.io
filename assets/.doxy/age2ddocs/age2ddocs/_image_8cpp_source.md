@@ -16,7 +16,8 @@
 //TODO:  Note to Self, we have effectively move pixel data to a buffer which represents an image, now we need to work on flipping the image on the y-axis so that the picture is right side up before we pass it to the graphics renderer
 namespace AGE
 {
-    Image::Image(ImageSpecification& Spec, bool FlipVerticallyOnLoad)
+    Unknown
+Image::Image(ImageSpecification& Spec, bool FlipVerticallyOnLoad)
         :m_Spec(Spec), bShouldFlip(FlipVerticallyOnLoad)
     {
         switch (Spec.GetPixelType())
@@ -98,17 +99,17 @@ namespace AGE
         m_RGBImage = ReadImage(m_RGBImage, m_Spec.GetWidth(), m_RGBRows);
 
     }
-    Image::~Image()
+Image::~Image()
     {
     }
-    void Image::DrawHorizontalLine(int x1, int y, int x2, Vector4 Color)
+void Image::DrawHorizontalLine(int x1, int y, int x2, Vector4 Color)
     {
         uint32_t* Start = GetRGBAddress((uint32_t)x1, (uint32_t)y);
         int Width = x2 - x1 + 1;
 
         std::fill(Start, Start + Width, (uint32_t)Color);
     }
-    void Image::FillRect(int x1, int y1, int x2, int y2, Vector4 Color)
+void Image::FillRect(int x1, int y1, int x2, int y2, Vector4 Color)
     {
 
         DrawHorizontalLine(x1, y1, x2, Color);
@@ -121,17 +122,17 @@ namespace AGE
                 std::copy(FirstPixel, FirstPixel + Width, GetRGBAddress((uint32_t)x1, (uint32_t)y));
             }
     }
-    std::pair<int, int> Image::GetPixelLocation()
+std::pair<int, int> Image::GetPixelLocation()
     {
         return std::pair<int, int>();
     }
 
-    void Image::SetPixel(int x, int y, uint32_t Data)
+void Image::SetPixel(int x, int y, uint32_t Data)
     {
         *GetRGBAddress((uint32_t)x, (uint32_t)y) = Data;
     }
 
-    void Image::ClearImage(Vector4 Color)
+void Image::ClearImage(Vector4 Color)
     {
 
         for (uint32_t y = 0; y < m_Spec.GetHeight(); ++y)
@@ -142,27 +143,28 @@ namespace AGE
 
     }
 
-    uint32_t* Image::GetRGBLineAddress(uint32_t y)
+uint32_t* Image::GetRGBLineAddress(uint32_t y)
     {
         return m_RGBRows[y];
     }
 
-    uint16_t* Image::GetGSLineAddress(uint16_t y)
+uint16_t* Image::GetGSLineAddress(uint16_t y)
     {
         return m_GSRows[y];
     }
 
 
-    uint32_t* Image::GetRGBAddress(uint32_t x, uint32_t y)
+uint32_t* Image::GetRGBAddress(uint32_t x, uint32_t y)
     {
         return GetRGBLineAddress(y) + x;
     }
 
-    uint16_t* Image::GetGSAddress(uint16_t x, uint16_t y)
+uint16_t* Image::GetGSAddress(uint16_t x, uint16_t y)
     {
         return GetGSLineAddress(y) + x;
     }
-    void Image::ReadScanline(uint32_t* Addr, uint32_t Width, uint8_t* Buffer)
+"/**\n * @brief Reads a scanline from the buffer and writes it to the image data.\n *\n * This function reads each pixel's RGBA values from the provided buffer, converts them into an internal color representation (Vector4), checks if the current pixel in the image is the same as the one read from the buffer, and if they are not the same, it writes the new pixel data to the image.\n *\n * @param Addr Pointer to the start of the scanline in the image data.\n * @param Width The width of the scanline.\n * @param Buffer Pointer to the start of the buffer containing the RGBA values for each pixel.\n */"
+void Image::ReadScanline(uint32_t* Addr, uint32_t Width, uint8_t* Buffer)
     {
         for (uint32_t x = 0; x < Width; ++x, ++Addr)
         {
@@ -182,7 +184,7 @@ namespace AGE
         }
     }
     template<typename T>
-    T* Image::ReadImage(T* Addr, uint32_t Width, T** Buffer)
+T* Image::ReadImage(T* Addr, uint32_t Width, T** Buffer)
     {
         T* Img;
 
@@ -218,7 +220,7 @@ namespace AGE
         }
     }
 
-    void Image::ResizeImage(PixelType Type, size_t BufferSize)
+void Image::ResizeImage(PixelType Type, size_t BufferSize)
     {
         switch (Type)
         {
@@ -243,7 +245,7 @@ namespace AGE
     }
 
 
-    std::vector<uint8_t> Image::InflateChunk(std::vector<uint8_t>& Data, int x, int y)
+std::vector<uint8_t> Image::InflateChunk(std::vector<uint8_t>& Data, int x, int y)
     {
         //https://github.com/aseprite/aseprite/blob/8e91d22b704d6d1e95e1482544318cee9f166c4d/src/doc/image_io.cpp
 

@@ -53,8 +53,8 @@
 
 | Type | Name |
 | ---: | :--- |
-|  std::string | [**OpenFile**](#function-openfile) (const std::string & Title, const std::filesystem::path & DefaultPath, std::vector&lt; std::string &gt; Filter) <br> |
-|  std::string | [**SaveFile**](#function-savefile) (const std::string & Title, const std::filesystem::path & DefaultPath, std::vector&lt; std::string &gt; Filter) <br> |
+|  std::string | [**OpenFile**](#function-openfile) (const std::string & Title, const std::filesystem::path & DefaultPath, std::vector&lt; std::string &gt; Filter) <br>_Opens a file dialog and returns the path of the selected file._  |
+|  std::string | [**SaveFile**](#function-savefile) (const std::string & Title, const std::filesystem::path & DefaultPath, std::vector&lt; std::string &gt; Filter) <br>_This function opens a file dialog and allows the user to select a file for saving._  |
 
 
 
@@ -88,6 +88,7 @@
 
 ### function OpenFile 
 
+_Opens a file dialog and returns the path of the selected file._ 
 ```C++
 static std::string AGE::FileDialogs::OpenFile (
     const std::string & Title,
@@ -98,6 +99,29 @@ static std::string AGE::FileDialogs::OpenFile (
 
 
 
+This function opens a file dialog with the given title, default path, and filter. If no file is selected, it returns an empty string. The returned string contains the path of the first selected file.
+
+
+
+
+**Parameters:**
+
+
+* `Title` The title of the file dialog. 
+* `DefaultPath` The default path for the file dialog. 
+* `Filter` A vector of strings representing the filter for the file dialog.
+
+
+
+**Returns:**
+
+Returns a string containing the path of the selected file, or an empty string if no file is selected. 
+
+
+
+
+
+        
 
 <hr>
 
@@ -105,6 +129,7 @@ static std::string AGE::FileDialogs::OpenFile (
 
 ### function SaveFile 
 
+_This function opens a file dialog and allows the user to select a file for saving._ 
 ```C++
 static std::string AGE::FileDialogs::SaveFile (
     const std::string & Title,
@@ -115,6 +140,26 @@ static std::string AGE::FileDialogs::SaveFile (
 
 
 
+
+
+**Parameters:**
+
+
+* `Title` The title of the file dialog. 
+* `DefaultPath` The default path where the file dialog starts from. 
+* `Filter` A vector of strings representing the types of files that can be selected in the dialog.
+
+
+
+**Returns:**
+
+Returns a string containing the path to the selected file, or an empty string if no file was selected. 
+
+
+
+
+
+        
 
 <hr>
 

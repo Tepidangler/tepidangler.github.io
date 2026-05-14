@@ -46,19 +46,45 @@
           <declname>index</declname>
         </param>
         <briefdescription>
+<para>This function returns the argument at a given index. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function takes an integer as input and checks if it is within the valid range of indices for the array. If the index is out of bounds, it logs an error message and returns nullptr. Otherwise, it returns the argument at the specified index.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The zero-based index of the argument to be returned. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pointer to a constant character string representing the argument at the given index. If the index is out of bounds, this function will return nullptr.</para>
+</simplesect>
+This function returns the argument at a given index.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The zero-based index of the argument to return. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pointer to the argument, or nullptr if the index is out of range. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="41" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" bodystart="41" bodyend="51"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="55" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" bodystart="55" bodyend="65"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="36" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" bodystart="37" bodyend="52"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" line="36" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/App.h" bodystart="37" bodyend="66"/>
     <listofallmembers>
       <member refid="struct_a_g_e_1_1_application_command_line_args_1a6b9e5059535bb3bfa3f1ce4f8834f758" prot="public" virt="non-virtual"><scope>AGE::ApplicationCommandLineArgs</scope><name>Args</name></member>
       <member refid="struct_a_g_e_1_1_application_command_line_args_1a77f1088ae593dbfc42a135ce85846b1f" prot="public" virt="non-virtual"><scope>AGE::ApplicationCommandLineArgs</scope><name>Count</name></member>

@@ -88,28 +88,54 @@
 <tbody>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="#function-dispatch"><strong>Dispatch</strong></a> (EventFn&lt; T &gt; func) <br></td>
+<td style="text-align: left;"><a href="#function-dispatch"><strong>Dispatch</strong></a> (EventFn&lt; T &gt; func) <br><em>Dispatches an event of type T to the provided function if its type matches the static type of T.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-eventdispatcher"><strong>EventDispatcher</strong></a> (<a href="../class_a_g_e_1_1_event/"><strong>Event</strong></a> &amp; Event) <br></td>
+<td style="text-align: left;"><a href="#function-eventdispatcher"><strong>EventDispatcher</strong></a> (<a href="../class_a_g_e_1_1_event/"><strong>Event</strong></a> &amp; Event) <br><em>Constructor for the</em> <a href="./"><em><strong>EventDispatcher</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-dispatch">function Dispatch</h3>
+<p><em>Dispatches an event of type T to the provided function if its type matches the static type of T.</em> </p>
 <pre><code class="language-C++">template&lt;typename T&gt;
 inline bool AGE::EventDispatcher::Dispatch (
     EventFn&lt; T &gt; func
 ) 
 </code></pre>
+<p>This function takes a function object (or lambda) that accepts an argument of type T and returns void. It checks if the event's type is equal to the static type of T, then it calls the function with the event casted to type T. The function sets the 'Handled' member variable of the event to true if the event was handled by the provided function.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>func</code> A function object (or lambda) that accepts an argument of type T and returns void. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>True if the event was dispatched, false otherwise.</p>
+<p>Dispatches an event of type T to the provided function if its type matches the static type of T.</p>
+<p>This function takes a function object (func) as input and checks if the event's type is equal to the static type of T. If it is, the function object is invoked with the event casted to type T. The result of this operation is stored in the 'Handled' member of the event.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>func</code> Function object (event handler) that will be called if the event matches the static type of T. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>True if the event was dispatched, false otherwise. </p>
 <hr>
 
 <h3 id="function-eventdispatcher">function EventDispatcher</h3>
+<p><em>Constructor for the</em> <a href="./"><em><strong>EventDispatcher</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">inline AGE::EventDispatcher::EventDispatcher (
     Event &amp; Event
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><a href="../class_a_g_e_1_1_event/"><strong>Event</strong></a> The event to be dispatched.</li>
+</ul>
+<p>Constructs an instance of the <a href="./"><strong>EventDispatcher</strong></a> class with a reference to an event object. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><a href="../class_a_g_e_1_1_event/"><strong>Event</strong></a> The event object that this dispatcher will handle. </li>
+</ul>
 <hr>
 
 <hr />

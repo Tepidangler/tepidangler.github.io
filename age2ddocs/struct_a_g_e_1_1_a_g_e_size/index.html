@@ -107,15 +107,15 @@
 <tbody>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-agesize-12"><strong>AGESize</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-agesize-12"><strong>AGESize</strong></a> () = default<br><em>Default constructor for the</em> <a href="./"><em><strong>AGESize</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-agesize-22"><strong>AGESize</strong></a> (int32_t width, int32_t height) <br></td>
+<td style="text-align: left;"><a href="#function-agesize-22"><strong>AGESize</strong></a> (int32_t width, int32_t height) <br><em>Constructs an instance of</em> <a href="./"><em><strong>AGESize</strong></em></a> <em>with the specified width and height.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-agesize"><strong>~AGESize</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-agesize"><strong>~AGESize</strong></a> () = default<br><em>Default destructor for the</em> <a href="./"><em><strong>AGESize</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
@@ -131,21 +131,32 @@
 <hr>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-agesize-12">function AGESize [1/2]</h3>
+<p><em>Default constructor for the</em> <a href="./"><em><strong>AGESize</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::AGESize::AGESize () = default
 </code></pre>
 <hr>
 
 <h3 id="function-agesize-22">function AGESize [2/2]</h3>
+<p><em>Constructs an instance of</em> <a href="./"><em><strong>AGESize</strong></em></a> <em>with the specified width and height.</em></p>
 <pre><code class="language-C++">inline AGE::AGESize::AGESize (
     int32_t width,
     int32_t height
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>width</code> The width to be set for this <a href="./"><strong>AGESize</strong></a> object. </li>
+<li><code>height</code> The height to be set for this <a href="./"><strong>AGESize</strong></a> object. </li>
+</ul>
 <hr>
 
 <h3 id="function-agesize">function ~AGESize</h3>
+<p><em>Default destructor for the</em> <a href="./"><em><strong>AGESize</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::AGESize::~AGESize () = default
 </code></pre>
+<p>This function is responsible for releasing any resources that were acquired by the object during its lifetime, such as memory or file handles. It's a good practice to provide a default destructor in your classes to ensure proper cleanup when objects are destroyed.</p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <hr />

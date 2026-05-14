@@ -56,9 +56,9 @@
 
 | Type | Name |
 | ---: | :--- |
-|   | [**TagComponent**](#function-tagcomponent-13) () = default<br> |
-|   | [**TagComponent**](#function-tagcomponent-23) (const [**TagComponent**](struct_a_g_e_1_1_tag_component.md) &) = default<br> |
-|   | [**TagComponent**](#function-tagcomponent-33) (const std::string T) <br> |
+|   | [**TagComponent**](#function-tagcomponent-13) () = default<br>_Default constructor for the_ [_**TagComponent**_](struct_a_g_e_1_1_tag_component.md) _class._ |
+|   | [**TagComponent**](#function-tagcomponent-23) (const [**TagComponent**](struct_a_g_e_1_1_tag_component.md) &) = default<br>_Default copy constructor for the_ [_**TagComponent**_](struct_a_g_e_1_1_tag_component.md) _class._ |
+|   | [**TagComponent**](#function-tagcomponent-33) (const std::string T) <br>_Constructor for the_ [_**TagComponent**_](struct_a_g_e_1_1_tag_component.md) _class._ |
 
 
 
@@ -109,6 +109,7 @@ std::string AGE::TagComponent::Tag;
 
 ### function TagComponent [1/3]
 
+_Default constructor for the_ [_**TagComponent**_](struct_a_g_e_1_1_tag_component.md) _class._
 ```C++
 AGE::TagComponent::TagComponent () = default
 ```
@@ -122,6 +123,7 @@ AGE::TagComponent::TagComponent () = default
 
 ### function TagComponent [2/3]
 
+_Default copy constructor for the_ [_**TagComponent**_](struct_a_g_e_1_1_tag_component.md) _class._
 ```C++
 AGE::TagComponent::TagComponent (
     const TagComponent &
@@ -130,6 +132,20 @@ AGE::TagComponent::TagComponent (
 
 
 
+This function is used to create a new instance of the [**TagComponent**](struct_a_g_e_1_1_tag_component.md) class by copying an existing one. It uses the '= default' syntax, which tells the compiler to use the default implementation provided by the compiler.
+
+
+
+
+**Parameters:**
+
+
+* `other` The existing [**TagComponent**](struct_a_g_e_1_1_tag_component.md) instance to copy. 
+
+
+
+
+        
 
 <hr>
 
@@ -137,6 +153,7 @@ AGE::TagComponent::TagComponent (
 
 ### function TagComponent [3/3]
 
+_Constructor for the_ [_**TagComponent**_](struct_a_g_e_1_1_tag_component.md) _class._
 ```C++
 inline AGE::TagComponent::TagComponent (
     const std::string T
@@ -145,6 +162,20 @@ inline AGE::TagComponent::TagComponent (
 
 
 
+This constructor initializes a new instance of the [**TagComponent**](struct_a_g_e_1_1_tag_component.md) class with a given tag string. The tag is set during object creation and cannot be changed afterwards.
+
+
+
+
+**Parameters:**
+
+
+* `T` A const reference to a std::string representing the tag. 
+
+
+
+
+        
 
 <hr>
 

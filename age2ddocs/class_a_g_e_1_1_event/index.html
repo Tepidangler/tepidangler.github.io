@@ -77,6 +77,10 @@
               
                 <h1 id="class-ageevent">Class AGE::Event</h1>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespace_a_g_e/"><strong>AGE</strong></a> <strong>&gt;</strong> <a href="./"><strong>Event</strong></a></p>
+<p><em>Abstract base class for an event.</em> <a href="#detailed-description">More...</a></p>
+<ul>
+<li><code>#include &lt;Event.h&gt;</code></li>
+</ul>
 <p>Inherited by the following classes: <a href="../class_a_g_e_1_1_app_render_event/">AGE::AppRenderEvent</a>,  <a href="../class_a_g_e_1_1_app_tick_event/">AGE::AppTickEvent</a>,  <a href="../class_a_g_e_1_1_app_update_event/">AGE::AppUpdateEvent</a>,  <a href="../class_a_g_e_1_1_framebuffer_resize_event/">AGE::FramebufferResizeEvent</a>,  <a href="../class_a_g_e_1_1_input_event/">AGE::InputEvent</a>,  <a href="../class_a_g_e_1_1_key_event/">AGE::KeyEvent</a>,  <a href="../class_a_g_e_1_1_mouse_event/">AGE::MouseEvent</a>,  <a href="../class_a_g_e_1_1_project_created_event/">AGE::ProjectCreatedEvent</a>,  <a href="../class_a_g_e_1_1_project_loaded_event/">AGE::ProjectLoadedEvent</a>,  <a href="../class_a_g_e_1_1_render_u_i_event/">AGE::RenderUIEvent</a>,  <a href="../class_a_g_e_1_1_renderer_change_event/">AGE::RendererChangeEvent</a>,  <a href="../class_a_g_e_1_1_scene_event/">AGE::SceneEvent</a>,  <a href="../class_a_g_e_1_1_string_copy_event/">AGE::StringCopyEvent</a>,  <a href="../class_a_g_e_1_1_string_paste_event/">AGE::StringPasteEvent</a>,  <a href="../class_a_g_e_1_1_widget_activated_event/">AGE::WidgetActivatedEvent</a>,  <a href="../class_a_g_e_1_1_widget_constructed_event/">AGE::WidgetConstructedEvent</a>,  <a href="../class_a_g_e_1_1_widget_deactivated_event/">AGE::WidgetDeactivatedEvent</a>,  <a href="../class_a_g_e_1_1_window_close_event/">AGE::WindowCloseEvent</a>,  <a href="../class_a_g_e_1_1_window_focus_event/">AGE::WindowFocusEvent</a>,  <a href="../class_a_g_e_1_1_window_lost_focus_event/">AGE::WindowLostFocusEvent</a>,  <a href="../class_a_g_e_1_1_window_moved_event/">AGE::WindowMovedEvent</a>,  <a href="../class_a_g_e_1_1_window_resize_event/">AGE::WindowResizeEvent</a></p>
 <h2 id="public-attributes">Public Attributes</h2>
 <table>
@@ -116,14 +120,18 @@
 </tr>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="#function-isincategory"><strong>IsInCategory</strong></a> (EventCategory Category) <br></td>
+<td style="text-align: left;"><a href="#function-isincategory"><strong>IsInCategory</strong></a> (EventCategory Category) <br><em>Checks if an event is in a specific category.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual std::string</td>
-<td style="text-align: left;"><a href="#function-tostring"><strong>ToString</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-tostring"><strong>ToString</strong></a> () const<br><em>Returns a string representation of the object.</em></td>
 </tr>
 </tbody>
 </table>
+<h2 id="detailed-description">Detailed Description</h2>
+<p>This is the abstract base class that represents a generic event in the system. It provides methods to get information about the type of the event, its category flags and whether it has been handled or not.</p>
+<p>Represents an event in the system.</p>
+<p>This class represents a generic event that can be handled by various components of the system. It provides methods to get information about the type, category and name of the event. The ToString method returns the name of the event as default implementation but subclasses may override it with more meaningful representation. </p>
 <h2 id="public-attributes-documentation">Public Attributes Documentation</h2>
 <h3 id="variable-handled">variable Handled</h3>
 <pre><code class="language-C++">bool AGE::Event::Handled;
@@ -146,15 +154,39 @@
 <hr>
 
 <h3 id="function-isincategory">function IsInCategory</h3>
+<p><em>Checks if an event is in a specific category.</em> </p>
 <pre><code class="language-C++">inline bool AGE::Event::IsInCategory (
     EventCategory Category
 ) 
 </code></pre>
+<p>This function checks whether the provided EventCategory is set within the categories that are currently active. The comparison is done by bitwise AND operation with GetCategoryFlags() and Category.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Category</code> - The category to check against. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>True if the event is in the specified category, false otherwise.</p>
+<p>Checks if an event is in a specific category.</p>
+<p>This function checks whether the given EventCategory (bitmask) is set within the result of GetCategoryFlags(). It uses bitwise AND operation to compare the Category flag with all flags.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Category</code> The category to check against. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>True if the event is in the specified category, false otherwise. </p>
 <hr>
 
 <h3 id="function-tostring">function ToString</h3>
+<p><em>Returns a string representation of the object.</em> </p>
 <pre><code class="language-C++">inline virtual std::string AGE::Event::ToString () const
 </code></pre>
+<p>This function returns a string that represents the current object's state. It does this by calling the <code>GetName</code> method and returning its result.</p>
+<p><strong>Returns:</strong></p>
+<p>A string representing the current object's name.</p>
+<p>Converts the object into a string representation.</p>
+<p>This function returns a string that represents the current object's name. It uses the <code>GetName</code> method to get the name of the object.</p>
+<p><strong>Returns:</strong></p>
+<p>A string representing the current object's name. </p>
 <hr>
 
 <hr />

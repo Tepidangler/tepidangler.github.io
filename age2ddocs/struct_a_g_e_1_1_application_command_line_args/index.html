@@ -107,7 +107,7 @@
 <tbody>
 <tr>
 <td style="text-align: right;">const char *</td>
-<td style="text-align: left;"><a href="#function-operator"><strong>operator[]</strong></a> (int index) const<br></td>
+<td style="text-align: left;"><a href="#function-operator"><strong>operator[]</strong></a> (int index) const<br><em>This function returns the argument at a given index.</em></td>
 </tr>
 </tbody>
 </table>
@@ -123,10 +123,25 @@
 <hr>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-operator">function operator[]</h3>
+<p><em>This function returns the argument at a given index.</em> </p>
 <pre><code class="language-C++">inline const char * AGE::ApplicationCommandLineArgs::operator[] (
     int index
 ) const
 </code></pre>
+<p>The function takes an integer as input and checks if it is within the valid range of indices for the array. If the index is out of bounds, it logs an error message and returns nullptr. Otherwise, it returns the argument at the specified index.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>index</code> The zero-based index of the argument to be returned. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A pointer to a constant character string representing the argument at the given index. If the index is out of bounds, this function will return nullptr.</p>
+<p>This function returns the argument at a given index.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>index</code> The zero-based index of the argument to return. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A pointer to the argument, or nullptr if the index is out of range. </p>
 <hr>
 
 <hr />

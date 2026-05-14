@@ -56,8 +56,8 @@
 
 | Type | Name |
 | ---: | :--- |
-|   | [**IDComponent**](#function-idcomponent-12) () = default<br> |
-|   | [**IDComponent**](#function-idcomponent-22) (const [**IDComponent**](struct_a_g_e_1_1_i_d_component.md) &) = default<br> |
+|   | [**IDComponent**](#function-idcomponent-12) () = default<br>_Default constructor for the_ [_**IDComponent**_](struct_a_g_e_1_1_i_d_component.md) _class._ |
+|   | [**IDComponent**](#function-idcomponent-22) (const [**IDComponent**](struct_a_g_e_1_1_i_d_component.md) &) = default<br>_Default copy constructor for the_ [_**IDComponent**_](struct_a_g_e_1_1_i_d_component.md) _class._ |
 
 
 
@@ -108,6 +108,7 @@ UUID AGE::IDComponent::ID;
 
 ### function IDComponent [1/2]
 
+_Default constructor for the_ [_**IDComponent**_](struct_a_g_e_1_1_i_d_component.md) _class._
 ```C++
 AGE::IDComponent::IDComponent () = default
 ```
@@ -121,6 +122,7 @@ AGE::IDComponent::IDComponent () = default
 
 ### function IDComponent [2/2]
 
+_Default copy constructor for the_ [_**IDComponent**_](struct_a_g_e_1_1_i_d_component.md) _class._
 ```C++
 AGE::IDComponent::IDComponent (
     const IDComponent &
@@ -129,6 +131,20 @@ AGE::IDComponent::IDComponent (
 
 
 
+This function is used to create a new instance of an [**IDComponent**](struct_a_g_e_1_1_i_d_component.md) by copying another existing one. It uses the '= default' syntax, which tells the compiler to use the default implementation provided by the compiler.
+
+
+
+
+**Parameters:**
+
+
+* `other` The existing [**IDComponent**](struct_a_g_e_1_1_i_d_component.md) to copy. 
+
+
+
+
+        
 
 <hr>
 

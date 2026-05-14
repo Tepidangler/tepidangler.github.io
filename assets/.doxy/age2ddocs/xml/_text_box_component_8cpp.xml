@@ -33,7 +33,7 @@
         <initializer>{
 	rttr::registration::class_&lt;<ref refid="class_a_g_e_1_1_text_box_component" kindref="compound">AGE::TextBoxComponent</ref>&gt;(&quot;TextBoxComponent&quot;)
 	.constructor&lt;const std::string&amp;&gt;()
-	.method(&quot;OnUpdate&quot;, &amp;AGE::TextBoxComponent::OnUpdate)
+	.method(&quot;OnUpdate&quot;, &amp;<ref refid="class_a_g_e_1_1_text_box_component_1ae522adc72da5a4c8b0f2b42e6965519a" kindref="member">AGE::TextBoxComponent::OnUpdate</ref>)
 	.property(&quot;BoxProperties&quot;, &amp;AGE::TextBoxComponent::m_BoxProperties)(rttr::metadata(&quot;Description&quot;, &quot;Properties related to box surrounding the text&quot;))</initializer>
         <briefdescription>
         </briefdescription>
@@ -62,92 +62,95 @@
 <codeline lineno="11"><highlight class="normal">RTTR_REGISTRATION{</highlight></codeline>
 <codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>rttr::registration::class_&lt;AGE::TextBoxComponent&gt;(</highlight><highlight class="stringliteral">&quot;TextBoxComponent&quot;</highlight><highlight class="normal">)</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>.constructor&lt;</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;&gt;()</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>.method(</highlight><highlight class="stringliteral">&quot;OnUpdate&quot;</highlight><highlight class="normal">,<sp/>&amp;AGE::TextBoxComponent::OnUpdate)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>.method(</highlight><highlight class="stringliteral">&quot;OnUpdate&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="class_a_g_e_1_1_text_box_component_1ae522adc72da5a4c8b0f2b42e6965519a" kindref="member">AGE::TextBoxComponent::OnUpdate</ref>)</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>.property(</highlight><highlight class="stringliteral">&quot;BoxProperties&quot;</highlight><highlight class="normal">,<sp/>&amp;AGE::TextBoxComponent::m_BoxProperties)(rttr::metadata(</highlight><highlight class="stringliteral">&quot;Description&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Properties<sp/>related<sp/>to<sp/>box<sp/>surrounding<sp/>the<sp/>text&quot;</highlight><highlight class="normal">));</highlight></codeline>
 <codeline lineno="16"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="17"><highlight class="normal"></highlight></codeline>
 <codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">AGE</highlight></codeline>
 <codeline lineno="19"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>TextBoxComponent::TextBoxComponent(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;Name)</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_Name<sp/>=<sp/>Name;</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_Type<sp/>=<sp/>UIComponentType::TextBoxComponent;</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_StringProperties.TextFont<sp/>=<sp/>AGEFont::GetDefault();</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>TextBoxComponent::OnUpdate(<ref refid="class_a_g_e_1_1_time_step" kindref="compound">TimeStep</ref><sp/>DeltaTime)</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_CompProperties.Visible)</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QuadProperties<sp/>QuadProps;</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QuadProps.Transform<sp/>=<sp/>Math::MakeTransform(m_BoxProperties.Position,m_BoxProperties.Rotation,m_BoxProperties.Scale);</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QuadProps.Color<sp/>=<sp/>m_BoxProperties.TintColor;</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Renderer2D::DrawQuad(QuadProps);</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Renderer2D::DrawString(m_StringProperties);</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>TextBoxComponent::OnEvent(<ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref><sp/>&amp;<ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref>)</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>TextBoxComponent::DrawFontSelectionComboBox()</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::unordered_map&lt;UUID,Ref&lt;AGEFont&gt;&gt;<sp/>Fonts<sp/>=<sp/>AssetManager::Get().GetAssetRegistry()-&gt;GetFonts();</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/>FontNames<sp/>=<sp/>AssetManager::Get().GetAssetRegistry()-&gt;GetFontNames();</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_StringProperties.FontName.empty())</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_StringProperties.FontName<sp/>=<sp/>AGEFont::GetDefault()-&gt;GetFontName();</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ImGui::Text(</highlight><highlight class="stringliteral">&quot;Fonts&quot;</highlight><highlight class="normal">);<sp/>ImGui::SameLine();</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ImGui::BeginCombo(</highlight><highlight class="stringliteral">&quot;##Fonts&quot;</highlight><highlight class="normal">,m_StringProperties.FontName.c_str()))</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>F<sp/>:<sp/>FontNames)</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>IsSelected<sp/>=<sp/>F<sp/>==<sp/>m_StringProperties.FontName;</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ImGui::Selectable(F.c_str(),<sp/>IsSelected))</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_StringProperties.FontName<sp/>=<sp/>F;</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"></highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(IsSelected)</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ImGui::SetItemDefaultFocus();</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"></highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ImGui::EndCombo();</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>TextBoxComponent::DrawContent()</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ImGui::Text(</highlight><highlight class="stringliteral">&quot;String<sp/>Properties&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ImGui::Text(</highlight><highlight class="stringliteral">&quot;Text&quot;</highlight><highlight class="normal">);ImGui::SameLine();</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ImGui::InputText(</highlight><highlight class="stringliteral">&quot;##Text&quot;</highlight><highlight class="normal">,<sp/>&amp;m_StringProperties.Text);</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DrawFontSelectionComboBox();</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_StringProperties.TextFont-&gt;GetAtlasTexture()-&gt;GetName()<sp/>!=<sp/>m_StringProperties.FontName)</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_StringProperties<sp/>.TextFont<sp/>=<sp/>AssetManager::Get().GetFont(m_StringProperties.FontName);</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ImGui::ColorEdit4(</highlight><highlight class="stringliteral">&quot;Text<sp/>Color&quot;</highlight><highlight class="normal">,<sp/>&amp;m_StringProperties.Color.x);</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ImGui::InputDouble(</highlight><highlight class="stringliteral">&quot;Font<sp/>Size&quot;</highlight><highlight class="normal">,<sp/>&amp;m_StringProperties.FontSize,<sp/>1.0,<sp/>4.0);</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DrawVec3Control(</highlight><highlight class="stringliteral">&quot;Position&quot;</highlight><highlight class="normal">,<sp/>m_StringProperties.Position);</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DrawVec3Control(</highlight><highlight class="stringliteral">&quot;Rotation&quot;</highlight><highlight class="normal">,<sp/>m_StringProperties.Rotation);</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ImGui::Text(</highlight><highlight class="stringliteral">&quot;Box<sp/>Properties&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DrawVec3Control(</highlight><highlight class="stringliteral">&quot;Screen<sp/>Position&quot;</highlight><highlight class="normal">,<sp/>m_BoxProperties.Position);</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DrawVec3Control(</highlight><highlight class="stringliteral">&quot;Screen<sp/>Rotation&quot;</highlight><highlight class="normal">,<sp/>m_BoxProperties.Rotation);</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DrawVec3Control(</highlight><highlight class="stringliteral">&quot;Screen<sp/>Scale&quot;</highlight><highlight class="normal">,<sp/>m_BoxProperties.Scale);</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ImGui::ColorEdit4(</highlight><highlight class="stringliteral">&quot;Box<sp/>Color&quot;</highlight><highlight class="normal">,<sp/>&amp;m_BoxProperties.TintColor.x);</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"></highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;&gt;</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_a_g_e_1_1_text_box_component" kindref="compound">TextBoxComponent</ref>*<sp/>UIComponent::As()</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(TextBoxComponent*)</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="99"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>AGE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><ref refid="class_a_g_e_1_1_text_box_component_1a593767349751f2bf5b282a7d9a3402db" kindref="member">TextBoxComponent::TextBoxComponent</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;Name)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_Name<sp/>=<sp/>Name;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_Type<sp/>=<sp/>UIComponentType::TextBoxComponent;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_StringProperties.TextFont<sp/>=<sp/><ref refid="class_a_g_e_1_1_a_g_e_font_1ab4000afcb0b0c44f01e19945dba1a49c" kindref="member">AGEFont::GetDefault</ref>();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_text_box_component_1ae522adc72da5a4c8b0f2b42e6965519a" kindref="member">TextBoxComponent::OnUpdate</ref>(<ref refid="class_a_g_e_1_1_time_step" kindref="compound">TimeStep</ref><sp/>DeltaTime)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_CompProperties.Visible)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QuadProperties<sp/>QuadProps;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QuadProps.Transform<sp/>=<sp/><ref refid="class_a_g_e_1_1_math_1a63d9b6d7b019df1aaedd2b06d7e6a0e6" kindref="member">Math::MakeTransform</ref>(m_BoxProperties.Position,m_BoxProperties.Rotation,m_BoxProperties.Scale);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QuadProps.Color<sp/>=<sp/>m_BoxProperties.TintColor;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_a_g_e_1_1_renderer2_d_1a012305ca47d628775a684d8bf730415f" kindref="member">Renderer2D::DrawQuad</ref>(QuadProps);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Renderer2D::DrawString(m_StringProperties);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_text_box_component_1a08b701ac341679f0efa94ad2e8296ce6" kindref="member">TextBoxComponent::OnEvent</ref>(<ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref><sp/>&amp;<ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref>)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_text_box_component_1a4dac8bd00ca9dd8bd5fa76fb9ac47127" kindref="member">TextBoxComponent::DrawFontSelectionComboBox</ref>()</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::unordered_map&lt;UUID,Ref&lt;AGEFont&gt;&gt;<sp/>Fonts<sp/>=<sp/><ref refid="class_a_g_e_1_1_asset_manager_1a79db3b3174c2af8149ad2ac205a77620" kindref="member">AssetManager::Get</ref>().<ref refid="class_a_g_e_1_1_asset_manager_1a7c0ab2f5b3dd228bdacb6efe64f1bfe4" kindref="member">GetAssetRegistry</ref>()-&gt;GetFonts();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/>FontNames<sp/>=<sp/><ref refid="class_a_g_e_1_1_asset_manager_1a79db3b3174c2af8149ad2ac205a77620" kindref="member">AssetManager::Get</ref>().<ref refid="class_a_g_e_1_1_asset_manager_1a7c0ab2f5b3dd228bdacb6efe64f1bfe4" kindref="member">GetAssetRegistry</ref>()-&gt;GetFontNames();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_StringProperties.FontName.empty())</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_StringProperties.FontName<sp/>=<sp/><ref refid="class_a_g_e_1_1_a_g_e_font_1ab4000afcb0b0c44f01e19945dba1a49c" kindref="member">AGEFont::GetDefault</ref>()-&gt;GetFontName();</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ImGui::Text(</highlight><highlight class="stringliteral">&quot;Fonts&quot;</highlight><highlight class="normal">);<sp/>ImGui::SameLine();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ImGui::BeginCombo(</highlight><highlight class="stringliteral">&quot;##Fonts&quot;</highlight><highlight class="normal">,m_StringProperties.FontName.c_str()))</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>F<sp/>:<sp/>FontNames)</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>IsSelected<sp/>=<sp/>F<sp/>==<sp/>m_StringProperties.FontName;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ImGui::Selectable(F.c_str(),<sp/>IsSelected))</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_StringProperties.FontName<sp/>=<sp/>F;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(IsSelected)</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ImGui::SetItemDefaultFocus();</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ImGui::EndCombo();</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_text_box_component_1a7f1226499e5cec0d78d517d6b06b01b7" kindref="member">TextBoxComponent::DrawContent</ref>()</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ImGui::Text(</highlight><highlight class="stringliteral">&quot;String<sp/>Properties&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ImGui::Text(</highlight><highlight class="stringliteral">&quot;Text&quot;</highlight><highlight class="normal">);ImGui::SameLine();</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ImGui::InputText(</highlight><highlight class="stringliteral">&quot;##Text&quot;</highlight><highlight class="normal">,<sp/>&amp;m_StringProperties.Text);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_a_g_e_1_1_text_box_component_1a4dac8bd00ca9dd8bd5fa76fb9ac47127" kindref="member">DrawFontSelectionComboBox</ref>();</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_StringProperties.TextFont-&gt;GetAtlasTexture()-&gt;GetName()<sp/>!=<sp/>m_StringProperties.FontName)</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_StringProperties<sp/>.TextFont<sp/>=<sp/><ref refid="class_a_g_e_1_1_asset_manager_1a79db3b3174c2af8149ad2ac205a77620" kindref="member">AssetManager::Get</ref>().<ref refid="class_a_g_e_1_1_asset_manager_1a9aa311bae0225a674fa673f1195c7f3a" kindref="member">GetFont</ref>(m_StringProperties.FontName);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ImGui::ColorEdit4(</highlight><highlight class="stringliteral">&quot;Text<sp/>Color&quot;</highlight><highlight class="normal">,<sp/>&amp;m_StringProperties.Color.x);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ImGui::InputDouble(</highlight><highlight class="stringliteral">&quot;Font<sp/>Size&quot;</highlight><highlight class="normal">,<sp/>&amp;m_StringProperties.FontSize,<sp/>1.0,<sp/>4.0);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_a_g_e_1_1_u_i_component_1af6baa3f8d5e27906bb0cf5505920323d" kindref="member">DrawVec3Control</ref>(</highlight><highlight class="stringliteral">&quot;Position&quot;</highlight><highlight class="normal">,<sp/>m_StringProperties.Position);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_a_g_e_1_1_u_i_component_1af6baa3f8d5e27906bb0cf5505920323d" kindref="member">DrawVec3Control</ref>(</highlight><highlight class="stringliteral">&quot;Rotation&quot;</highlight><highlight class="normal">,<sp/>m_StringProperties.Rotation);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ImGui::Text(</highlight><highlight class="stringliteral">&quot;Box<sp/>Properties&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_a_g_e_1_1_u_i_component_1af6baa3f8d5e27906bb0cf5505920323d" kindref="member">DrawVec3Control</ref>(</highlight><highlight class="stringliteral">&quot;Screen<sp/>Position&quot;</highlight><highlight class="normal">,<sp/>m_BoxProperties.Position);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_a_g_e_1_1_u_i_component_1af6baa3f8d5e27906bb0cf5505920323d" kindref="member">DrawVec3Control</ref>(</highlight><highlight class="stringliteral">&quot;Screen<sp/>Rotation&quot;</highlight><highlight class="normal">,<sp/>m_BoxProperties.Rotation);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_a_g_e_1_1_u_i_component_1af6baa3f8d5e27906bb0cf5505920323d" kindref="member">DrawVec3Control</ref>(</highlight><highlight class="stringliteral">&quot;Screen<sp/>Scale&quot;</highlight><highlight class="normal">,<sp/>m_BoxProperties.Scale);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ImGui::ColorEdit4(</highlight><highlight class="stringliteral">&quot;Box<sp/>Color&quot;</highlight><highlight class="normal">,<sp/>&amp;m_BoxProperties.TintColor.x);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;&gt;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><ref refid="class_a_g_e_1_1_text_box_component" kindref="compound">TextBoxComponent</ref>*<sp/>UIComponent::As()</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(TextBoxComponent*)</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>AGE</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/TextBoxComponent.cpp"/>
   </compounddef>

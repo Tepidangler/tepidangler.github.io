@@ -57,9 +57,9 @@
 
 | Type | Name |
 | ---: | :--- |
-|   | [**AGESize**](#function-agesize-12) () = default<br> |
-|   | [**AGESize**](#function-agesize-22) (int32\_t width, int32\_t height) <br> |
-|   | [**~AGESize**](#function-agesize) () = default<br> |
+|   | [**AGESize**](#function-agesize-12) () = default<br>_Default constructor for the_ [_**AGESize**_](struct_a_g_e_1_1_a_g_e_size.md) _class._ |
+|   | [**AGESize**](#function-agesize-22) (int32\_t width, int32\_t height) <br>_Constructs an instance of_ [_**AGESize**_](struct_a_g_e_1_1_a_g_e_size.md) _with the specified width and height._ |
+|   | [**~AGESize**](#function-agesize) () = default<br>_Default destructor for the_ [_**AGESize**_](struct_a_g_e_1_1_a_g_e_size.md) _class._ |
 
 
 
@@ -123,6 +123,7 @@ int32_t AGE::AGESize::Width;
 
 ### function AGESize [1/2]
 
+_Default constructor for the_ [_**AGESize**_](struct_a_g_e_1_1_a_g_e_size.md) _class._
 ```C++
 AGE::AGESize::AGESize () = default
 ```
@@ -136,6 +137,7 @@ AGE::AGESize::AGESize () = default
 
 ### function AGESize [2/2]
 
+_Constructs an instance of_ [_**AGESize**_](struct_a_g_e_1_1_a_g_e_size.md) _with the specified width and height._
 ```C++
 inline AGE::AGESize::AGESize (
     int32_t width,
@@ -146,18 +148,45 @@ inline AGE::AGESize::AGESize (
 
 
 
+
+**Parameters:**
+
+
+* `width` The width to be set for this [**AGESize**](struct_a_g_e_1_1_a_g_e_size.md) object. 
+* `height` The height to be set for this [**AGESize**](struct_a_g_e_1_1_a_g_e_size.md) object. 
+
+
+
+
+        
+
 <hr>
 
 
 
 ### function ~AGESize 
 
+_Default destructor for the_ [_**AGESize**_](struct_a_g_e_1_1_a_g_e_size.md) _class._
 ```C++
 AGE::AGESize::~AGESize () = default
 ```
 
 
 
+This function is responsible for releasing any resources that were acquired by the object during its lifetime, such as memory or file handles. It's a good practice to provide a default destructor in your classes to ensure proper cleanup when objects are destroyed.
+
+
+
+
+**Returns:**
+
+void 
+
+
+
+
+
+        
 
 <hr>
 

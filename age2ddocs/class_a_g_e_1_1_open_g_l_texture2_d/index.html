@@ -89,43 +89,43 @@
 <tbody>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-bind"><strong>Bind</strong></a> (uint32_t Slot=0) override const<br></td>
+<td style="text-align: left;"><a href="#function-bind"><strong>Bind</strong></a> (uint32_t Slot=0) override const<br><em>This function binds the texture to a specific slot in the OpenGL context.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual uint64_t</td>
-<td style="text-align: left;"><a href="#function-getassetid"><strong>GetAssetID</strong></a> () override const<br></td>
+<td style="text-align: left;"><a href="#function-getassetid"><strong>GetAssetID</strong></a> () override const<br><em>This function returns the Asset ID of an object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual uint32_t</td>
-<td style="text-align: left;"><a href="#function-getheight"><strong>GetHeight</strong></a> () override const<br></td>
+<td style="text-align: left;"><a href="#function-getheight"><strong>GetHeight</strong></a> () override const<br><em>This function returns the height of an object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual std::string</td>
-<td style="text-align: left;"><a href="#function-getname"><strong>GetName</strong></a> () override const<br></td>
+<td style="text-align: left;"><a href="#function-getname"><strong>GetName</strong></a> () override const<br><em>Returns the name of the object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual uint32_t</td>
-<td style="text-align: left;"><a href="#function-getnrchannels"><strong>GetNrChannels</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-getnrchannels"><strong>GetNrChannels</strong></a> () const<br><em>Returns the number of channels in the system.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual const <a href="../struct_a_g_e_1_1_texture_specification/"><strong>TextureSpecification</strong></a> &amp;</td>
-<td style="text-align: left;"><a href="#function-getspecification"><strong>GetSpecification</strong></a> () override const<br></td>
+<td style="text-align: left;"><a href="#function-getspecification"><strong>GetSpecification</strong></a> () override const<br><em>Returns the texture specification of this object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual std::pair&lt; uint8_t *, size_t &gt;</td>
-<td style="text-align: left;"><a href="#function-gettexturedata"><strong>GetTextureData</strong></a> () override<br></td>
+<td style="text-align: left;"><a href="#function-gettexturedata"><strong>GetTextureData</strong></a> () override<br><em>This function returns the texture data along with its size.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual std::string</td>
-<td style="text-align: left;"><a href="#function-gettexturefilepath"><strong>GetTextureFilePath</strong></a> () override const<br></td>
+<td style="text-align: left;"><a href="#function-gettexturefilepath"><strong>GetTextureFilePath</strong></a> () override const<br><em>Returns the file path of the texture.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual uint32_t</td>
-<td style="text-align: left;"><a href="#function-gettextureid"><strong>GetTextureID</strong></a> () override const<br></td>
+<td style="text-align: left;"><a href="#function-gettextureid"><strong>GetTextureID</strong></a> () override const<br><em>Returns the texture ID of this object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual uint32_t</td>
-<td style="text-align: left;"><a href="#function-getwidth"><strong>GetWidth</strong></a> () override const<br></td>
+<td style="text-align: left;"><a href="#function-getwidth"><strong>GetWidth</strong></a> () override const<br><em>This function returns the width of an object as a uint32_t value.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
@@ -133,7 +133,7 @@
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-opengltexture2d-25"><strong>OpenGLTexture2D</strong></a> (uint8_t * Image, const <a href="../struct_a_g_e_1_1_texture_specification/"><strong>TextureSpecification</strong></a> &amp; Spec) <br></td>
+<td style="text-align: left;"><a href="#function-opengltexture2d-25"><strong>OpenGLTexture2D</strong></a> (const tmx_image * Image) <br></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
@@ -141,7 +141,7 @@
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-opengltexture2d-45"><strong>OpenGLTexture2D</strong></a> (const <a href="../struct_a_g_e_1_1_texture_specification/"><strong>TextureSpecification</strong></a> &amp; Spec) <br></td>
+<td style="text-align: left;"><a href="#function-opengltexture2d-45"><strong>OpenGLTexture2D</strong></a> (const <a href="../struct_a_g_e_1_1_texture_specification/"><strong>TextureSpecification</strong></a> &amp; Spec) <br><em>Constructs an OpenGL 2D texture with the given specification.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
@@ -149,7 +149,7 @@
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-setassetid"><strong>SetAssetID</strong></a> (uint64_t ID) override<br></td>
+<td style="text-align: left;"><a href="#function-setassetid"><strong>SetAssetID</strong></a> (uint64_t ID) override<br><em>Sets the Asset ID of an object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
@@ -157,23 +157,23 @@
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-setname"><strong>SetName</strong></a> (const std::string &amp; Name) override<br></td>
+<td style="text-align: left;"><a href="#function-setname"><strong>SetName</strong></a> (const std::string &amp; Name) override<br><em>Sets the name of the object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-settexturefilepath"><strong>SetTextureFilePath</strong></a> (const std::string &amp; Path) override<br></td>
+<td style="text-align: left;"><a href="#function-settexturefilepath"><strong>SetTextureFilePath</strong></a> (const std::string &amp; Path) override<br><em>Sets the texture file path for rendering.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-unbind"><strong>Unbind</strong></a> () override const<br></td>
+<td style="text-align: left;"><a href="#function-unbind"><strong>Unbind</strong></a> () override const<br><em>Unbinds the texture from the specified texture unit.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual bool</td>
-<td style="text-align: left;"><a href="#function-operator"><strong>operator==</strong></a> (const <a href="../class_a_g_e_1_1_texture/"><strong>Texture</strong></a> &amp; Other) override const<br></td>
+<td style="text-align: left;"><a href="#function-operator"><strong>operator==</strong></a> (const <a href="../class_a_g_e_1_1_texture/"><strong>Texture</strong></a> &amp; Other) override const<br><em>Compares this</em> <a href="./"><em><strong>OpenGLTexture2D</strong></em></a> <em>object with another for equality.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-opengltexture2d"><strong>~OpenGLTexture2D</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-opengltexture2d"><strong>~OpenGLTexture2D</strong></a> () <br><em>Destructor for</em> <a href="./"><em><strong>OpenGLTexture2D</strong></em></a> <em>class. Deletes the texture from GPU memory.</em></td>
 </tr>
 </tbody>
 </table>
@@ -189,7 +189,7 @@
 <tbody>
 <tr>
 <td style="text-align: right;">T *</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_texture2_d/#function-as"><strong>As</strong></a> () <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_texture2_d/#function-as"><strong>As</strong></a> () <br><em>This function is currently not implemented. It will return a pointer to an object of type T. If called, it will assert and crash the program with the message "As() Failed!".</em></td>
 </tr>
 </tbody>
 </table>
@@ -265,7 +265,7 @@
 </tr>
 <tr>
 <td style="text-align: right;">virtual</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_texture/#function-texture"><strong>~Texture</strong></a> () <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_texture/#function-texture"><strong>~Texture</strong></a> () <br><em>Virtual destructor for the</em> <a href="../class_a_g_e_1_1_texture/"><em><strong>Texture</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
@@ -281,85 +281,152 @@
 <tbody>
 <tr>
 <td style="text-align: right;">Ref&lt; <a href="../class_a_g_e_1_1_texture2_d/"><strong>Texture2D</strong></a> &gt;</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_texture2_d/#function-create-15"><strong>Create</strong></a> (const std::string &amp; Path) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_texture2_d/#function-create-15"><strong>Create</strong></a> (const std::string &amp; Path) <br><em>Creates a reference to a</em> <a href="../class_a_g_e_1_1_texture2_d/"><em><strong>Texture2D</strong></em></a> <em>object. The type of the texture is determined by the current renderer API.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">Ref&lt; <a href="../class_a_g_e_1_1_texture2_d/"><strong>Texture2D</strong></a> &gt;</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_texture2_d/#function-create-25"><strong>Create</strong></a> (uint8_t * Image, const <a href="../struct_a_g_e_1_1_texture_specification/"><strong>TextureSpecification</strong></a> &amp; Spec) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_texture2_d/#function-create-25"><strong>Create</strong></a> (const tmx_image * Image) <br><em>Creates a new</em> <a href="../class_a_g_e_1_1_texture2_d/"><em><strong>Texture2D</strong></em></a> <em>object based on the current Rendering API.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">Ref&lt; <a href="../class_a_g_e_1_1_texture2_d/"><strong>Texture2D</strong></a> &gt;</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_texture2_d/#function-create-35"><strong>Create</strong></a> (const std::vector&lt; std::string &gt; &amp; Path) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_texture2_d/#function-create-35"><strong>Create</strong></a> (const std::vector&lt; std::string &gt; &amp; Path) <br><em>Creates a reference to a</em> <a href="../class_a_g_e_1_1_texture2_d/"><em><strong>Texture2D</strong></em></a> <em>object. The type of texture is determined by the current renderer API.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">Ref&lt; <a href="../class_a_g_e_1_1_texture2_d/"><strong>Texture2D</strong></a> &gt;</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_texture2_d/#function-create-45"><strong>Create</strong></a> (const <a href="../struct_a_g_e_1_1_texture_specification/"><strong>TextureSpecification</strong></a> &amp; Spec) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_texture2_d/#function-create-45"><strong>Create</strong></a> (const <a href="../struct_a_g_e_1_1_texture_specification/"><strong>TextureSpecification</strong></a> &amp; Spec) <br><em>Creates a new</em> <a href="../class_a_g_e_1_1_texture2_d/"><em><strong>Texture2D</strong></em></a> <em>object based on the given specification. The type of texture to be created is determined by the current renderer API in use.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">Ref&lt; <a href="../class_a_g_e_1_1_texture2_d/"><strong>Texture2D</strong></a> &gt;</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_texture2_d/#function-create-55"><strong>Create</strong></a> (const <a href="../class_a_g_e_1_1_image/"><strong>Image</strong></a> * Img, uint32_t Width, uint32_t Height, int Channels, size_t Size) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_texture2_d/#function-create-55"><strong>Create</strong></a> (const <a href="../class_a_g_e_1_1_image/"><strong>Image</strong></a> * Img, uint32_t Width, uint32_t Height, int Channels, size_t Size) <br><em>Creates a new</em> <a href="../class_a_g_e_1_1_texture2_d/"><em><strong>Texture2D</strong></em></a> <em>object. The type of the texture is determined by the current renderer API.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-bind">function Bind</h3>
+<p><em>This function binds the texture to a specific slot in the OpenGL context.</em> </p>
 <pre><code class="language-C++">virtual void AGE::OpenGLTexture2D::Bind (
     uint32_t Slot=0
 ) override const
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Slot</code> The index of the texture unit to which the texture should be bound.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <p>Implements <a href="../class_a_g_e_1_1_texture/#function-bind"><em>AGE::Texture::Bind</em></a></p>
 <hr>
 
 <h3 id="function-getassetid">function GetAssetID</h3>
+<p><em>This function returns the Asset ID of an object.</em> </p>
 <pre><code class="language-C++">inline virtual uint64_t AGE::OpenGLTexture2D::GetAssetID () override const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>The asset ID as a uint64_t value.</p>
+<p>This function returns the Asset ID of an object. </p>
+<p><strong>Returns:</strong></p>
+<p>The uint64_t value representing the Asset ID. </p>
 <p>Implements <a href="../class_a_g_e_1_1_texture/#function-getassetid"><em>AGE::Texture::GetAssetID</em></a></p>
 <hr>
 
 <h3 id="function-getheight">function GetHeight</h3>
+<p><em>This function returns the height of an object.</em> </p>
 <pre><code class="language-C++">inline virtual uint32_t AGE::OpenGLTexture2D::GetHeight () override const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>The height as a uint32_t value.</p>
+<p>Returns the height of an object as a uint32_t value.</p>
+<p>This function is used to get the current height of an object in the form of a uint32_t value. It returns the private member variable m_Height, which represents the height of the object.</p>
+<p><strong>Returns:</strong></p>
+<p>The height of the object as a uint32_t value. </p>
 <p>Implements <a href="../class_a_g_e_1_1_texture/#function-getheight"><em>AGE::Texture::GetHeight</em></a></p>
 <hr>
 
 <h3 id="function-getname">function GetName</h3>
+<p><em>Returns the name of the object.</em> </p>
 <pre><code class="language-C++">inline virtual std::string AGE::OpenGLTexture2D::GetName () override const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>The name of the object as a string.</p>
+<p>Returns the name of the object.</p>
+<p>This function returns a string that represents the name of the object. It is implemented as an overridden method in the base class, so it will be used when calling <a href="./#function-getname"><strong>GetName()</strong></a> on any derived classes.</p>
+<p><strong>Returns:</strong></p>
+<p>std::string The name of the object. </p>
 <p>Implements <a href="../class_a_g_e_1_1_texture/#function-getname"><em>AGE::Texture::GetName</em></a></p>
 <hr>
 
 <h3 id="function-getnrchannels">function GetNrChannels</h3>
+<p><em>Returns the number of channels in the system.</em> </p>
 <pre><code class="language-C++">inline virtual uint32_t AGE::OpenGLTexture2D::GetNrChannels () const
 </code></pre>
+<p>This function returns the current number of channels that are active in the system. It does not take any parameters and always returns a uint32_t value representing the number of channels.</p>
+<p><strong>Returns:</strong></p>
+<p>The number of channels as an unsigned 32-bit integer.</p>
+<p>This function returns the number of channels in the system. </p>
+<p><strong>Returns:</strong></p>
+<p>The number of channels as a uint32_t value. </p>
 <hr>
 
 <h3 id="function-getspecification">function GetSpecification</h3>
+<p><em>Returns the texture specification of this object.</em> </p>
 <pre><code class="language-C++">inline virtual const TextureSpecification &amp; AGE::OpenGLTexture2D::GetSpecification () override const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A constant reference to the texture specification (m_Specification).</p>
+<p>Returns the texture specification of this object.</p>
+<p>This function returns a constant reference to the texture specification that is currently set for this object. The returned value cannot be modified by the caller.</p>
+<p><strong>Returns:</strong></p>
+<p>A const reference to the current <a href="../struct_a_g_e_1_1_texture_specification/"><strong>TextureSpecification</strong></a>. </p>
 <p>Implements <a href="../class_a_g_e_1_1_texture/#function-getspecification"><em>AGE::Texture::GetSpecification</em></a></p>
 <hr>
 
 <h3 id="function-gettexturedata">function GetTextureData</h3>
+<p><em>This function returns the texture data along with its size.</em> </p>
 <pre><code class="language-C++">inline virtual std::pair&lt; uint8_t *, size_t &gt; AGE::OpenGLTexture2D::GetTextureData () override
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A pair of uint8 pointer and size_t, representing the texture data and its size respectively.</p>
+<p>Retrieves the texture data along with its size.</p>
+<p>This function returns a pair of uint8_t pointer and size_t value representing the texture data and its size respectively. The returned data is owned by the caller, and should not be freed or modified directly. If no texture data exists (e.g., after clearing the image), the pointer will be null and the size will be 0.</p>
+<p><strong>Returns:</strong></p>
+<p>A pair of uint8_t* and size_t representing the texture data and its size respectively. </p>
 <p>Implements <a href="../class_a_g_e_1_1_texture/#function-gettexturedata"><em>AGE::Texture::GetTextureData</em></a></p>
 <hr>
 
 <h3 id="function-gettexturefilepath">function GetTextureFilePath</h3>
+<p><em>Returns the file path of the texture.</em> </p>
 <pre><code class="language-C++">inline virtual std::string AGE::OpenGLTexture2D::GetTextureFilePath () override const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>The file path as a string. If no path is set, returns an empty string.</p>
+<p>This function returns the path of a texture file. </p>
+<p><strong>Returns:</strong></p>
+<p>std::string The path to the texture file. </p>
 <p>Implements <a href="../class_a_g_e_1_1_texture/#function-gettexturefilepath"><em>AGE::Texture::GetTextureFilePath</em></a></p>
 <hr>
 
 <h3 id="function-gettextureid">function GetTextureID</h3>
+<p><em>Returns the texture ID of this object.</em> </p>
 <pre><code class="language-C++">inline virtual uint32_t AGE::OpenGLTexture2D::GetTextureID () override const
 </code></pre>
+<p>This function returns the unique identifier for the texture associated with this object. The value is constant and does not change over time.</p>
+<p><strong>Returns:</strong></p>
+<p>A uint32_t representing the texture ID.</p>
+<p>Returns the texture ID of this object. </p>
+<p><strong>Returns:</strong></p>
+<p>The texture ID as a uint32_t value. </p>
 <p>Implements <a href="../class_a_g_e_1_1_texture/#function-gettextureid"><em>AGE::Texture::GetTextureID</em></a></p>
 <hr>
 
 <h3 id="function-getwidth">function GetWidth</h3>
+<p><em>This function returns the width of an object as a uint32_t value.</em> </p>
 <pre><code class="language-C++">inline virtual uint32_t AGE::OpenGLTexture2D::GetWidth () override const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>The width of the object represented by a uint32_t.</p>
+<p>Returns the width of the object. </p>
+<p><strong>Returns:</strong></p>
+<p>The width as a uint32_t value. </p>
 <p>Implements <a href="../class_a_g_e_1_1_texture/#function-getwidth"><em>AGE::Texture::GetWidth</em></a></p>
 <hr>
 
@@ -372,8 +439,7 @@
 
 <h3 id="function-opengltexture2d-25">function OpenGLTexture2D [2/5]</h3>
 <pre><code class="language-C++">AGE::OpenGLTexture2D::OpenGLTexture2D (
-    uint8_t * Image,
-    const TextureSpecification &amp; Spec
+    const tmx_image * Image
 ) 
 </code></pre>
 <hr>
@@ -383,13 +449,24 @@
     const std::vector&lt; std::string &gt; &amp; Paths
 ) 
 </code></pre>
+<p>Constructor for <a href="./"><strong>OpenGLTexture2D</strong></a> class. Loads a 2D texture from the given file paths. The constructor iterates over each path in the input vector, loads an image using stbi_load(), and creates an OpenGL texture with the loaded data. It also sets various parameters for the texture such as wrapping mode (GL_REPEAT), minifying/magnifying filter (GL_NEAREST). The constructor assumes that all images are in RGB or RGBA format, and it uses stbi_image_free() to free the loaded image data after creating the OpenGL texture.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Paths</code> A vector of strings representing the file paths to load the textures from. </li>
+</ul>
 <hr>
 
 <h3 id="function-opengltexture2d-45">function OpenGLTexture2D [4/5]</h3>
+<p><em>Constructs an OpenGL 2D texture with the given specification.</em> </p>
 <pre><code class="language-C++">AGE::OpenGLTexture2D::OpenGLTexture2D (
     const TextureSpecification &amp; Spec
 ) 
 </code></pre>
+<p>The function creates a new OpenGL texture object and initializes it with the provided <a href="../struct_a_g_e_1_1_texture_specification/"><strong>TextureSpecification</strong></a>. It sets various parameters such as wrapping and filtering modes for the texture.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Spec</code> The <a href="../struct_a_g_e_1_1_texture_specification/"><strong>TextureSpecification</strong></a> that contains details about the format, width, height etc of the texture to be created. </li>
+</ul>
 <hr>
 
 <h3 id="function-opengltexture2d-55">function OpenGLTexture2D [5/5]</h3>
@@ -404,10 +481,22 @@
 <hr>
 
 <h3 id="function-setassetid">function SetAssetID</h3>
+<p><em>Sets the Asset ID of an object.</em> </p>
 <pre><code class="language-C++">inline virtual void AGE::OpenGLTexture2D::SetAssetID (
     uint64_t ID
 ) override
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>ID</code> The unique identifier for the asset. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Sets the Asset ID for an object. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>ID</code> The unique identifier of the asset. </li>
+</ul>
 <p>Implements <a href="../class_a_g_e_1_1_texture/#function-setassetid"><em>AGE::Texture::SetAssetID</em></a></p>
 <hr>
 
@@ -421,38 +510,85 @@
 <hr>
 
 <h3 id="function-setname">function SetName</h3>
+<p><em>Sets the name of the object.</em> </p>
 <pre><code class="language-C++">inline virtual void AGE::OpenGLTexture2D::SetName (
     const std::string &amp; Name
 ) override
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Name</code> The new name to set for the object.</li>
+</ul>
+<p>Sets the name of the object. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Name</code> The new name to set for the object. </li>
+</ul>
 <p>Implements <a href="../class_a_g_e_1_1_texture/#function-setname"><em>AGE::Texture::SetName</em></a></p>
 <hr>
 
 <h3 id="function-settexturefilepath">function SetTextureFilePath</h3>
+<p><em>Sets the texture file path for rendering.</em> </p>
 <pre><code class="language-C++">inline virtual void AGE::OpenGLTexture2D::SetTextureFilePath (
     const std::string &amp; Path
 ) override
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Path</code> The new file path to be set as a string reference. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>None, void function that directly modifies member variable 'm_Path'.</p>
+<p>Sets the texture file path.</p>
+<p>This function sets the texture file path by taking a constant reference to a string as its argument. The string is then assigned to the member variable 'm_Path'.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Path</code> A constant reference to the new texture file path. </li>
+</ul>
 <p>Implements <a href="../class_a_g_e_1_1_texture/#function-settexturefilepath"><em>AGE::Texture::SetTextureFilePath</em></a></p>
 <hr>
 
 <h3 id="function-unbind">function Unbind</h3>
+<p><em>Unbinds the texture from the specified texture unit.</em> </p>
 <pre><code class="language-C++">virtual void AGE::OpenGLTexture2D::Unbind () override const
 </code></pre>
+<p>This function binds a specific OpenGL texture to the first available texture unit (unit 0). After this operation, no further operations will affect this texture.</p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <p>Implements <a href="../class_a_g_e_1_1_texture/#function-unbind"><em>AGE::Texture::Unbind</em></a></p>
 <hr>
 
 <h3 id="function-operator">function operator==</h3>
+<p><em>Compares this</em> <a href="./"><em><strong>OpenGLTexture2D</strong></em></a> <em>object with another for equality.</em></p>
 <pre><code class="language-C++">inline virtual bool AGE::OpenGLTexture2D::operator== (
     const Texture &amp; Other
 ) override const
 </code></pre>
+<p>This function compares the texture ID of this object with that of the provided <a href="../class_a_g_e_1_1_texture/"><strong>Texture</strong></a> object. It first casts the other object to an <a href="./"><strong>OpenGLTexture2D</strong></a>, then checks if their texture IDs are equal.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Other</code> The <a href="../class_a_g_e_1_1_texture/"><strong>Texture</strong></a> object to compare against. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>True if the texture IDs match; false otherwise.</p>
+<p>Compares this <a href="./"><strong>OpenGLTexture2D</strong></a> with another for equality.</p>
+<p>This function compares the texture ID of this <a href="./"><strong>OpenGLTexture2D</strong></a> instance with that of another <a href="../class_a_g_e_1_1_texture/"><strong>Texture</strong></a> instance. It first casts Other to an <a href="./"><strong>OpenGLTexture2D</strong></a> reference, then checks if their texture IDs are equal. The comparison is case-sensitive and does not take into account any potential differences in the other properties or states of these objects.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Other</code> - Another <a href="../class_a_g_e_1_1_texture/"><strong>Texture</strong></a> instance to compare with this one. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>True if both instances have the same texture ID, false otherwise. </p>
 <p>Implements <a href="../class_a_g_e_1_1_texture/#function-operator"><em>AGE::Texture::operator==</em></a></p>
 <hr>
 
 <h3 id="function-opengltexture2d">function ~OpenGLTexture2D</h3>
+<p><em>Destructor for</em> <a href="./"><em><strong>OpenGLTexture2D</strong></em></a> <em>class. Deletes the texture from GPU memory.</em></p>
 <pre><code class="language-C++">AGE::OpenGLTexture2D::~OpenGLTexture2D () 
 </code></pre>
+<p>This function uses the glDeleteTextures() function to delete a single texture, identified by its ID (m_TextureID). The texture is deleted from the GPU's memory and can no longer be used in rendering operations.</p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <hr />

@@ -89,28 +89,45 @@
 <tbody>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="#function-decode"><strong>decode</strong></a> (const Node &amp; node, std::vector&lt; uint8_t &gt; &amp; rhs) <br></td>
+<td style="text-align: left;"><a href="#function-decode"><strong>decode</strong></a> (const Node &amp; node, std::vector&lt; uint8_t &gt; &amp; rhs) <br><em>Decodes a Node object into an std::vector of uint8_t values.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">Node</td>
-<td style="text-align: left;"><a href="#function-encode"><strong>encode</strong></a> (const std::vector&lt; uint8_t &gt; &amp; rhs) <br></td>
+<td style="text-align: left;"><a href="#function-encode"><strong>encode</strong></a> (const std::vector&lt; uint8_t &gt; &amp; rhs) <br><em>Encodes a vector of uint8_t into a Node object.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
 <h3 id="function-decode">function decode</h3>
+<p><em>Decodes a Node object into an std::vector of uint8_t values.</em> </p>
 <pre><code class="language-C++">static inline bool YAML::convert&lt; std::vector&lt; uint8_t &gt; &gt;::decode (
     const Node &amp; node,
     std::vector&lt; uint8_t &gt; &amp; rhs
 ) 
 </code></pre>
+<p>This function takes in a const reference to a Node object and a reference to an std::vector of unsigned char (uint8_t). It checks if the node is a sequence and its size is greater than zero, returning false otherwise. If the check passes, it resizes the vector to match the size of the node and populates it with uint8_t values obtained by converting each string element in the Node object to an unsigned char. It then returns true indicating successful decoding.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>node</code> The input Node object to be decoded. </li>
+<li><code>rhs</code> The output vector of uint8_t values.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>True if the function successfully decodes the Node, false otherwise. </p>
 <hr>
 
 <h3 id="function-encode">function encode</h3>
+<p><em>Encodes a vector of uint8_t into a Node object.</em> </p>
 <pre><code class="language-C++">static inline Node YAML::convert&lt; std::vector&lt; uint8_t &gt; &gt;::encode (
     const std::vector&lt; uint8_t &gt; &amp; rhs
 ) 
 </code></pre>
+<p>This function takes an input vector of uint8_t and encodes it into a Node object by assigning each element of the vector to a corresponding index in the Node object. The encoding is done using a for loop, where each element from the input vector is assigned to a position in the Node object.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>rhs</code> A const reference to an std::vector&lt;uint8_t&gt; that needs to be encoded into a Node object. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Returns a Node object which contains the encoded data from the input vector. </p>
 <hr>
 
 <hr />

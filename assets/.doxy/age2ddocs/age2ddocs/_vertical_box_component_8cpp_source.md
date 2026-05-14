@@ -23,20 +23,20 @@ RTTR_REGISTRATION{
 
 namespace AGE
 {
-    VerticalBoxComponent::VerticalBoxComponent(const std::string &Name) {
+VerticalBoxComponent::VerticalBoxComponent(const std::string &Name) {
         m_Name = Name;
         m_Type = UIComponentType::VerticalBoxComponent;
     }
 
-    void VerticalBoxComponent::OnUpdate(TimeStep DeltaTime)
+void VerticalBoxComponent::OnUpdate(TimeStep DeltaTime)
     {
         UIComponent::OnUpdate(DeltaTime);
     }
 
-    void VerticalBoxComponent::OnEvent(Event &Event) {
+void VerticalBoxComponent::OnEvent(Event &Event) {
     }
 
-    void VerticalBoxComponent::DrawContent() {
+void VerticalBoxComponent::DrawContent() {
     }
 } // AGE
 ```

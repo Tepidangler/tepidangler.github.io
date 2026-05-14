@@ -19,7 +19,7 @@
 
 namespace AGE
 {
-    IniWriter::IniWriter(const std::filesystem::path &Path)
+IniWriter::IniWriter(const std::filesystem::path &Path)
         :m_IniPath(Path)
     {
         m_Ini.SetUnicode();
@@ -32,14 +32,14 @@ namespace AGE
         }
     }
 
-    bool IniWriter::Write(const std::string &Section, const std::string &Key, const std::string &Value)
+bool IniWriter::Write(const std::string &Section, const std::string &Key, const std::string &Value)
     {
         SI_Error rc = m_Ini.SetValue(Section.c_str(), Key.c_str(), Value.c_str());
 
         return rc == SI_INSERTED || rc == SI_UPDATED;
     }
 
-    bool IniWriter::SaveFile()
+bool IniWriter::SaveFile()
     {
         SI_Error rc = m_Ini.SaveFile(m_IniPath.c_str());
 

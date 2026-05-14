@@ -15,7 +15,7 @@
 
 namespace AGE
 {
-    Animation::Animation()
+Animation::Animation()
     {
         m_CurrentFrame = 0;
         m_MaxFrames = 0;
@@ -30,10 +30,10 @@ namespace AGE
     }
 
 
-    void Animation::OnDestroy()
+void Animation::OnDestroy()
     {
     }
-    void Animation::OnAnimate(TimeStep DeltaTime)
+void Animation::OnAnimate(TimeStep DeltaTime)
     {
         
         if (m_OldTime + (float)m_FrameRate > m_Timer.ElapsedMillis())
@@ -65,7 +65,7 @@ namespace AGE
 
         }
     }
-    void Animation::SetCurrentFrame(int Frame)
+void Animation::SetCurrentFrame(int Frame)
     {
         if (Frame < 0 || Frame >= m_MaxFrames)
         {
@@ -74,18 +74,18 @@ namespace AGE
 
         m_CurrentFrame = Frame;
     }
-    void Animation::LoadAnimation(const AnimationSpecification Anim)
+void Animation::LoadAnimation(const AnimationSpecification Anim)
     {
         m_AnimationTextures.emplace(std::make_pair(Anim.MovementStatus, Anim));
     }
-    void Animation::LoadAnimations(const std::vector<AnimationSpecification>& Anims)
+void Animation::LoadAnimations(const std::vector<AnimationSpecification>& Anims)
     {
         for (auto S : Anims)
         {
             m_AnimationTextures.emplace(std::make_pair(S.MovementStatus,  S));
         }
     }
-    void Animation::SetCurrentTexture(CharMovementStatus status)
+void Animation::SetCurrentTexture(CharMovementStatus status)
     {
         m_CurrentTexture = AGE::SubTexture2D::CreateFromCoords(m_AnimationTextures[status].Texture, AGE::Vector2((float)m_CurrentFrame, 0.f), AGE::Vector2(m_AnimationTextures[status].Width / (float)m_AnimationTextures[status].NumberOfFrames, m_AnimationTextures[status].Height));
     }

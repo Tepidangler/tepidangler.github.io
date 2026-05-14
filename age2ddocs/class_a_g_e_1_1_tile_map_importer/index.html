@@ -88,45 +88,63 @@
 <tbody>
 <tr>
 <td style="text-align: right;">tmx_map *</td>
-<td style="text-align: left;"><a href="#function-importmap"><strong>ImportMap</strong></a> (const std::string &amp; FilePath) <br></td>
+<td style="text-align: left;"><a href="#function-importmap"><strong>ImportMap</strong></a> (const std::string &amp; FilePath) <br><em>Import a tile map from the given file path.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-tilemapimporter-12"><strong>TileMapImporter</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-tilemapimporter-12"><strong>TileMapImporter</strong></a> () = default<br><em>Default constructor for the</em> <a href="./"><em><strong>TileMapImporter</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-tilemapimporter-22"><strong>TileMapImporter</strong></a> (const <a href="./"><strong>TileMapImporter</strong></a> &amp;) = delete<br></td>
+<td style="text-align: left;"><a href="#function-tilemapimporter-22"><strong>TileMapImporter</strong></a> (const <a href="./"><strong>TileMapImporter</strong></a> &amp;) = delete<br><em>This function is a copy constructor for the</em> <a href="./"><em><strong>TileMapImporter</strong></em></a> <em>class and it has been explicitly deleted to prevent copying of objects.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-tilemapimporter"><strong>~TileMapImporter</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-tilemapimporter"><strong>~TileMapImporter</strong></a> () = default<br><em>Destructor for the</em> <a href="./"><em><strong>TileMapImporter</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-importmap">function ImportMap</h3>
+<p><em>Import a tile map from the given file path.</em> </p>
 <pre><code class="language-C++">tmx_map * AGE::TileMapImporter::ImportMap (
     const std::string &amp; FilePath
 ) 
 </code></pre>
+<p>This function attempts to load a tmx_map object from the provided file path. If the file path is empty or if there's an issue with loading the file, it returns nullptr. Otherwise, it logs that the map was loaded successfully and then returns the map.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>FilePath</code> The path of the tile map file to load. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A pointer to a tmx_map object representing the loaded tile map or nullptr if there's an issue with loading the file. </p>
 <hr>
 
 <h3 id="function-tilemapimporter-12">function TileMapImporter [1/2]</h3>
+<p><em>Default constructor for the</em> <a href="./"><em><strong>TileMapImporter</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::TileMapImporter::TileMapImporter () = default
 </code></pre>
 <hr>
 
 <h3 id="function-tilemapimporter-22">function TileMapImporter [2/2]</h3>
+<p><em>This function is a copy constructor for the</em> <a href="./"><em><strong>TileMapImporter</strong></em></a> <em>class and it has been explicitly deleted to prevent copying of objects.</em></p>
 <pre><code class="language-C++">AGE::TileMapImporter::TileMapImporter (
     const TileMapImporter &amp;
 ) = delete
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>other</code> The object to be copied.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>No return value as this function is declared '= delete'. </p>
 <hr>
 
 <h3 id="function-tilemapimporter">function ~TileMapImporter</h3>
+<p><em>Destructor for the</em> <a href="./"><em><strong>TileMapImporter</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::TileMapImporter::~TileMapImporter () = default
 </code></pre>
+<p>This function is responsible for releasing any resources that were acquired during the lifetime of an instance of this class, such as memory or file handles. It does not perform any operations on the actual data contained within the object itself. </p>
 <hr>
 
 <hr />

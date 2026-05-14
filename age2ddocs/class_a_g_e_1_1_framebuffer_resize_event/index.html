@@ -77,6 +77,10 @@
               
                 <h1 id="class-ageframebufferresizeevent">Class AGE::FramebufferResizeEvent</h1>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespace_a_g_e/"><strong>AGE</strong></a> <strong>&gt;</strong> <a href="./"><strong>FramebufferResizeEvent</strong></a></p>
+<p><em>Represents a framebuffer resize event.</em> <a href="#detailed-description">More...</a></p>
+<ul>
+<li><code>#include &lt;ApplicationEvent.h&gt;</code></li>
+</ul>
 <p>Inherits the following classes: <a href="../class_a_g_e_1_1_event/">AGE::Event</a></p>
 <h2 id="public-attributes-inherited-from-ageevent">Public Attributes inherited from AGE::Event</h2>
 <p>See <a href="../class_a_g_e_1_1_event/">AGE::Event</a></p>
@@ -109,15 +113,15 @@
 </tr>
 <tr>
 <td style="text-align: right;">unsigned int</td>
-<td style="text-align: left;"><a href="#function-getheight"><strong>GetHeight</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-getheight"><strong>GetHeight</strong></a> () const<br><em>Returns the height of an object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">unsigned int</td>
-<td style="text-align: left;"><a href="#function-getwidth"><strong>GetWidth</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-getwidth"><strong>GetWidth</strong></a> () const<br><em>Returns the width of the object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual std::string</td>
-<td style="text-align: left;"><a href="#function-tostring"><strong>ToString</strong></a> () override const<br></td>
+<td style="text-align: left;"><a href="#function-tostring"><strong>ToString</strong></a> () override const<br><em>Converts the</em> <a href="./"><em><strong>FramebufferResizeEvent</strong></em></a> <em>into a string format.</em></td>
 </tr>
 </tbody>
 </table>
@@ -145,14 +149,16 @@
 </tr>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-isincategory"><strong>IsInCategory</strong></a> (EventCategory Category) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-isincategory"><strong>IsInCategory</strong></a> (EventCategory Category) <br><em>Checks if an event is in a specific category.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual std::string</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-tostring"><strong>ToString</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-tostring"><strong>ToString</strong></a> () const<br><em>Returns a string representation of the object.</em></td>
 </tr>
 </tbody>
 </table>
+<h2 id="detailed-description">Detailed Description</h2>
+<p>This class is used to represent a framebuffer resize event, which occurs when the size of the framebuffer changes. It contains two parameters - width and height that specify the new dimensions of the framebuffer. </p>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-framebufferresizeevent">function FramebufferResizeEvent</h3>
 <pre><code class="language-C++">inline AGE::FramebufferResizeEvent::FramebufferResizeEvent (
@@ -163,18 +169,39 @@
 <hr>
 
 <h3 id="function-getheight">function GetHeight</h3>
+<p><em>Returns the height of an object.</em> </p>
 <pre><code class="language-C++">inline unsigned int AGE::FramebufferResizeEvent::GetHeight () const
 </code></pre>
+<p>This function is used to get the current height value of an object. It returns an unsigned integer representing the height.</p>
+<p><strong>Returns:</strong></p>
+<p>The current height of the object as an unsigned int.</p>
+<p>Returns the height of an object.</p>
+<p>This function returns the current value of the member variable 'm_Height'. It is a getter method for this variable.</p>
+<p><strong>Returns:</strong></p>
+<p>The current height as an unsigned integer. </p>
 <hr>
 
 <h3 id="function-getwidth">function GetWidth</h3>
+<p><em>Returns the width of the object.</em> </p>
 <pre><code class="language-C++">inline unsigned int AGE::FramebufferResizeEvent::GetWidth () const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>The width as an unsigned integer.</p>
+<p>Returns the width of the object. </p>
+<p><strong>Returns:</strong></p>
+<p>The width as an unsigned integer. </p>
 <hr>
 
 <h3 id="function-tostring">function ToString</h3>
+<p><em>Converts the</em> <a href="./"><em><strong>FramebufferResizeEvent</strong></em></a> <em>into a string format.</em></p>
 <pre><code class="language-C++">inline virtual std::string AGE::FramebufferResizeEvent::ToString () override const
 </code></pre>
+<p>This function converts the <a href="./"><strong>FramebufferResizeEvent</strong></a> object into a string representation, which includes the width and height of the framebuffer that was resized.</p>
+<p><strong>Returns:</strong></p>
+<p>A string containing the details about the event.</p>
+<p>This function returns a string representation of the <a href="./"><strong>FramebufferResizeEvent</strong></a> object. The returned string includes the width and height of the framebuffer that was resized.</p>
+<p><strong>Returns:</strong></p>
+<p>A string containing the details about the event, in the format "FramebufferResizeEvent: &lt;width&gt;, &lt;height&gt;". </p>
 <p>Implements <a href="../class_a_g_e_1_1_event/#function-tostring"><em>AGE::Event::ToString</em></a></p>
 <hr>
 

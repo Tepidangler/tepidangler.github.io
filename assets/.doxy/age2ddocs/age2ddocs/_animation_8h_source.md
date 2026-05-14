@@ -30,7 +30,7 @@ namespace AGE
 
         bool bIsReadyToLoad = false;
 
-        bool IsReadyToLoad()
+bool IsReadyToLoad()
         {
             if (!bIsReadyToLoad)
             {
@@ -57,7 +57,7 @@ namespace AGE
             return true;
         }
 
-        void SetIsReadyToLoad(bool Value)
+void SetIsReadyToLoad(bool Value)
         {
             bIsReadyToLoad = Value;
         }
@@ -68,27 +68,27 @@ namespace AGE
     public:
 
         Animation();
-        Animation(const Animation&) = default;
-        ~Animation() = default;
+Animation(const Animation&) = default;
+~Animation() = default;
 
         void OnDestroy();
 
         void OnAnimate(TimeStep DeltaTime);
 
 
-        int GetFrameRate() { return m_FrameRate; }
-        void SetFrameRate(int Rate) { m_FrameRate = Rate; }
+int GetFrameRate() { return m_FrameRate; }
+void SetFrameRate(int Rate) { m_FrameRate = Rate; }
 
-        int GetMaxFrames() { return m_MaxFrames; }
-        void SetMaxFrames(int Frames) { m_MaxFrames = Frames; }
+int GetMaxFrames() { return m_MaxFrames; }
+void SetMaxFrames(int Frames) { m_MaxFrames = Frames; }
 
-        int GetCurrentFrame() { return m_CurrentFrame; }
+int GetCurrentFrame() { return m_CurrentFrame; }
         void SetCurrentFrame(int Frame);
 
-        bool GetOscillate() { return bOscillate; }
-        void SetOscillate(bool Osc) { bOscillate = Osc; }
+bool GetOscillate() { return bOscillate; }
+void SetOscillate(bool Osc) { bOscillate = Osc; }
 
-        Ref<SubTexture2D> GetCurrentTexture() { return m_CurrentTexture; }
+Ref<SubTexture2D> GetCurrentTexture() { return m_CurrentTexture; }
         void LoadAnimation(const AnimationSpecification Anim);
         void LoadAnimations(const std::vector<AnimationSpecification>& Anims);
         void SetCurrentTexture(CharMovementStatus status);

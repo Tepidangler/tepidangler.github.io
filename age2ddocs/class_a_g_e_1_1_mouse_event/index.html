@@ -77,6 +77,10 @@
               
                 <h1 id="class-agemouseevent">Class AGE::MouseEvent</h1>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespace_a_g_e/"><strong>AGE</strong></a> <strong>&gt;</strong> <a href="./"><strong>MouseEvent</strong></a></p>
+<p><em>Represents a mouse event.</em> <a href="#detailed-description">More...</a></p>
+<ul>
+<li><code>#include &lt;MouseEvent.h&gt;</code></li>
+</ul>
 <p>Inherits the following classes: <a href="../class_a_g_e_1_1_event/">AGE::Event</a></p>
 <p>Inherited by the following classes: <a href="../class_a_g_e_1_1_mouse_button_pressed_event/">AGE::MouseButtonPressedEvent</a>,  <a href="../class_a_g_e_1_1_mouse_button_released_event/">AGE::MouseButtonReleasedEvent</a>,  <a href="../class_a_g_e_1_1_mouse_moved_event/">AGE::MouseMovedEvent</a>,  <a href="../class_a_g_e_1_1_mouse_scrolled_event/">AGE::MouseScrolledEvent</a></p>
 <h2 id="public-attributes-inherited-from-ageevent">Public Attributes inherited from AGE::Event</h2>
@@ -134,11 +138,11 @@
 </tr>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-isincategory"><strong>IsInCategory</strong></a> (EventCategory Category) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-isincategory"><strong>IsInCategory</strong></a> (EventCategory Category) <br><em>Checks if an event is in a specific category.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual std::string</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-tostring"><strong>ToString</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-tostring"><strong>ToString</strong></a> () const<br><em>Returns a string representation of the object.</em></td>
 </tr>
 </tbody>
 </table>
@@ -188,14 +192,16 @@
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-mouseevent-23"><strong>MouseEvent</strong></a> (float x, float y) <br></td>
+<td style="text-align: left;"><a href="#function-mouseevent-23"><strong>MouseEvent</strong></a> (float x, float y) <br><em>Constructs a</em> <a href="./"><em><strong>MouseEvent</strong></em></a> <em>object with the given coordinates.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-mouseevent-33"><strong>MouseEvent</strong></a> (float xOffset, float yOffset, bool Scrolled) <br></td>
+<td style="text-align: left;"><a href="#function-mouseevent-33"><strong>MouseEvent</strong></a> (float xOffset, float yOffset, bool Scrolled) <br><em>Constructs a</em> <a href="./"><em><strong>MouseEvent</strong></em></a> <em>object with given offsets.</em></td>
 </tr>
 </tbody>
 </table>
+<h2 id="detailed-description">Detailed Description</h2>
+<p>This class is used to represent different types of mouse events, such as button presses or scrolls. It provides methods for getting the type and position of the mouse event. </p>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-getmousebutton">function GetMouseButton</h3>
 <pre><code class="language-C++">inline int AGE::MouseEvent::GetMouseButton () const
@@ -235,20 +241,48 @@
 <hr>
 
 <h3 id="function-mouseevent-23">function MouseEvent [2/3]</h3>
+<p><em>Constructs a</em> <a href="./"><em><strong>MouseEvent</strong></em></a> <em>object with the given coordinates.</em></p>
 <pre><code class="language-C++">inline AGE::MouseEvent::MouseEvent (
     float x,
     float y
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>x</code> The x-coordinate of the mouse event. </li>
+<li><code>y</code> The y-coordinate of the mouse event.</li>
+</ul>
+<p>Constructs a <a href="./"><strong>MouseEvent</strong></a> object with the given coordinates.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>x</code> The x-coordinate of the mouse event. </li>
+<li><code>y</code> The y-coordinate of the mouse event. </li>
+</ul>
 <hr>
 
 <h3 id="function-mouseevent-33">function MouseEvent [3/3]</h3>
+<p><em>Constructs a</em> <a href="./"><em><strong>MouseEvent</strong></em></a> <em>object with given offsets.</em></p>
 <pre><code class="language-C++">inline AGE::MouseEvent::MouseEvent (
     float xOffset,
     float yOffset,
     bool Scrolled
 ) 
 </code></pre>
+<p>This function is used to create a new <a href="./"><strong>MouseEvent</strong></a> instance with the specified x and y offsets. The boolean Scrolled parameter is not actually utilized in this function, so it can be safely ignored for now.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>xOffset</code> The horizontal scroll offset. </li>
+<li><code>yOffset</code> The vertical scroll offset. </li>
+<li><code>Scrolled</code> A boolean indicating whether the mouse scrolled or not (not used).</li>
+</ul>
+<p>Constructs a <a href="./"><strong>MouseEvent</strong></a> object with given x and y offset values.</p>
+<p>This constructor is used to create a new <a href="./"><strong>MouseEvent</strong></a> instance with the specified x and y offset values, which are then stored in member variables m_XOffset and m_YOffset respectively. The boolean Scrolled parameter is not utilized as it's not clear what its purpose would be without additional context or information about how this class is intended to be used.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>xOffset</code> The horizontal offset value for the mouse event. </li>
+<li><code>yOffset</code> The vertical offset value for the mouse event. </li>
+<li><code>Scrolled</code> A boolean indicating whether the scroll wheel was moved (not currently utilized). </li>
+</ul>
 <hr>
 
 <hr />

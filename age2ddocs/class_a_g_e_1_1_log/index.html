@@ -88,59 +88,96 @@
 <tbody>
 <tr>
 <td style="text-align: right;">Ref&lt; spdlog::logger &gt; &amp;</td>
-<td style="text-align: left;"><a href="#function-getcorelogger"><strong>GetCoreLogger</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getcorelogger"><strong>GetCoreLogger</strong></a> () <br><em>This function returns a reference to the core logger used by the application.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">Ref&lt; spdlog::logger &gt; &amp;</td>
-<td style="text-align: left;"><a href="#function-getgamelogger"><strong>GetGameLogger</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getgamelogger"><strong>GetGameLogger</strong></a> () <br><em>This function returns a reference to the game logger object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">std::vector&lt; char &gt; &amp;</td>
-<td style="text-align: left;"><a href="#function-getlogs"><strong>GetLogs</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getlogs"><strong>GetLogs</strong></a> () <br><em>This function returns a reference to the vector 's_Logs'. The purpose of this function is to provide access to the logs for other parts of the program.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">std::vector&lt; size_t &gt; &amp;</td>
-<td style="text-align: left;"><a href="#function-getoffsets"><strong>GetOffsets</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getoffsets"><strong>GetOffsets</strong></a> () <br><em>This function returns a reference to the vector</em> <code>s_Offsets</code> <em>which is used for storing offset values.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">std::vector&lt; LogType &gt; &amp;</td>
-<td style="text-align: left;"><a href="#function-gettypes"><strong>GetTypes</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-gettypes"><strong>GetTypes</strong></a> () <br><em>Returns a reference to the internal vector of LogTypes.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-init"><strong>Init</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-init"><strong>Init</strong></a> () <br><em>Initializes the logging system with specific formatting and log levels for two different logger instances, "AGECORE" and "AGEGAME". The pattern used is "[TIME] NAME: MESSAGE", where TIME represents the time at which the message was logged, NAME is the name of the logger instance that produced the message, and MESSAGE is the actual log message.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
 <h3 id="function-getcorelogger">function GetCoreLogger</h3>
+<p><em>This function returns a reference to the core logger used by the application.</em> </p>
 <pre><code class="language-C++">static inline Ref&lt; spdlog::logger &gt; &amp; AGE::Log::GetCoreLogger () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A reference to the core logger.</p>
+<p>This function returns a reference to the core logger of the application. The core logger is used for logging messages that are important and should be visible in all parts of the application. It's implemented as an inline static member function of the Application class, so it can be accessed directly from anywhere within the code without needing to create a new instance every time. </p>
+<p><strong>Returns:</strong></p>
+<p>A reference to the core logger object. </p>
 <hr>
 
 <h3 id="function-getgamelogger">function GetGameLogger</h3>
+<p><em>This function returns a reference to the game logger object.</em> </p>
 <pre><code class="language-C++">static inline Ref&lt; spdlog::logger &gt; &amp; AGE::Log::GetGameLogger () 
 </code></pre>
+<p>The game logger is used for logging messages related to the gameplay. It provides detailed information about what's happening in the game, which can be useful for debugging and performance tuning.</p>
+<p><strong>Returns:</strong></p>
+<p>A reference to the game logger object.</p>
+<p>This function returns a reference to the game logger object. </p>
+<p><strong>Returns:</strong></p>
+<p>A reference to the game logger object. </p>
 <hr>
 
 <h3 id="function-getlogs">function GetLogs</h3>
+<p><em>This function returns a reference to the vector 's_Logs'. The purpose of this function is to provide access to the logs for other parts of the program.</em> </p>
 <pre><code class="language-C++">static inline std::vector&lt; char &gt; &amp; AGE::Log::GetLogs () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A reference to the vector 's_Logs'</p>
+<p>This function returns a reference to the vector 's_Logs'. The purpose of this function is to provide access to the logs for other parts of the program. </p>
+<p><strong>Returns:</strong></p>
+<p>A reference to the vector 's_Logs' </p>
 <hr>
 
 <h3 id="function-getoffsets">function GetOffsets</h3>
+<p><em>This function returns a reference to the vector</em> <code>s_Offsets</code> <em>which is used for storing offset values.</em></p>
 <pre><code class="language-C++">static inline std::vector&lt; size_t &gt; &amp; AGE::Log::GetOffsets () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A reference to the vector <code>s_Offsets</code>.</p>
+<p>This function returns a reference to the vector 's_Offsets'. It is used for storing offset values. </p>
+<p><strong>Returns:</strong></p>
+<p>A reference to the vector 's_Offsets' </p>
 <hr>
 
 <h3 id="function-gettypes">function GetTypes</h3>
+<p><em>Returns a reference to the internal vector of LogTypes.</em> </p>
 <pre><code class="language-C++">static inline std::vector&lt; LogType &gt; &amp; AGE::Log::GetTypes () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>Reference to the internal vector of LogTypes.</p>
+<p>This function returns a reference to the vector <code>s_Type</code> which holds all possible log types. </p>
+<p><strong>Returns:</strong></p>
+<p>A reference to the vector of LogTypes. </p>
 <hr>
 
 <h3 id="function-init">function Init</h3>
+<p><em>Initializes the logging system with specific formatting and log levels for two different logger instances, "AGECORE" and "AGEGAME". The pattern used is "[TIME] NAME: MESSAGE", where TIME represents the time at which the message was logged, NAME is the name of the logger instance that produced the message, and MESSAGE is the actual log message.</em> </p>
 <pre><code class="language-C++">static void AGE::Log::Init () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Initializes the logging system with specific format and log levels for two different logger instances, "AGECORE" and "AGEGAME". The pattern set is "%^[%T] %n: %v%$", which includes timestamp, logger name, and message in color. Both loggers are set to trace level. </p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <hr />

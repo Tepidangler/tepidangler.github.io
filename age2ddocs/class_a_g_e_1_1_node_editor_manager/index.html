@@ -92,7 +92,7 @@
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-deregisterfunctions"><strong>DeregisterFunctions</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-deregisterfunctions"><strong>DeregisterFunctions</strong></a> () <br><em>Deregisters functions from all active windows.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
@@ -100,23 +100,23 @@
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-nodeeditormanager-23"><strong>NodeEditorManager</strong></a> (const <a href="./"><strong>NodeEditorManager</strong></a> &amp;) = delete<br></td>
+<td style="text-align: left;"><a href="#function-nodeeditormanager-23"><strong>NodeEditorManager</strong></a> (const <a href="./"><strong>NodeEditorManager</strong></a> &amp;) = delete<br><em>Deleted copy constructor for the</em> <a href="./"><em><strong>NodeEditorManager</strong></em></a> <em>class to prevent copying.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-nodeeditormanager-33"><strong>NodeEditorManager</strong></a> (<a href="./"><strong>NodeEditorManager</strong></a> &amp;&amp;) = delete<br></td>
+<td style="text-align: left;"><a href="#function-nodeeditormanager-33"><strong>NodeEditorManager</strong></a> (<a href="./"><strong>NodeEditorManager</strong></a> &amp;&amp;) = delete<br><a href="./"><em><strong>NodeEditorManager</strong></em></a> <em>move constructor is deleted to prevent copying of the manager object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-registerfunctions"><strong>RegisterFunctions</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-registerfunctions"><strong>RegisterFunctions</strong></a> () <br><em>This function is used to register functions for all active windows in the</em> <a href="./"><em><strong>NodeEditorManager</strong></em></a> <em>. It iterates over each window (pair of a pointer to a Window and its name) in m_ActiveWindows, and calls</em><a href="./#function-registerfunctions"><em><strong>RegisterFunctions()</strong></em></a> <em>on the Window object pointed to by the first element of the pair.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-renderwindows"><strong>RenderWindows</strong></a> (<a href="../class_a_g_e_1_1_time_step/"><strong>TimeStep</strong></a> DeltaTime) <br></td>
+<td style="text-align: left;"><a href="#function-renderwindows"><strong>RenderWindows</strong></a> (<a href="../class_a_g_e_1_1_time_step/"><strong>TimeStep</strong></a> DeltaTime) <br><em>Render all active windows in the</em> <a href="./"><em><strong>NodeEditorManager</strong></em></a> <em>.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual</td>
-<td style="text-align: left;"><a href="#function-nodeeditormanager"><strong>~NodeEditorManager</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-nodeeditormanager"><strong>~NodeEditorManager</strong></a> () <br><em>Destructor for</em> <a href="./"><em><strong>NodeEditorManager</strong></em></a> <em>class. It iterates over all active windows and destroys each editor instance using ax::NodeEditor::DestroyEditor function.</em></td>
 </tr>
 </tbody>
 </table>
@@ -131,7 +131,7 @@
 <tbody>
 <tr>
 <td style="text-align: right;">uint32_t</td>
-<td style="text-align: left;"><a href="#function-getnewnodeid"><strong>GetNewNodeID</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getnewnodeid"><strong>GetNewNodeID</strong></a> () <br><em>Generates a new unique node ID.</em></td>
 </tr>
 </tbody>
 </table>
@@ -146,8 +146,14 @@
 <hr>
 
 <h3 id="function-deregisterfunctions">function DeregisterFunctions</h3>
+<p><em>Deregisters functions from all active windows.</em> </p>
 <pre><code class="language-C++">void AGE::NodeEditorManager::DeregisterFunctions () 
 </code></pre>
+<p>This function iterates over the list of active windows (m_ActiveWindows) and calls the <a href="./#function-deregisterfunctions"><strong>DeregisterFunctions()</strong></a> method on each window's node editor. It is used to remove any registered functions that are no longer needed or relevant.</p>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Deregisters all functions from the active windows.</p>
+<p>This function iterates over each active window and calls the <code>DeregisterFunctions</code> method on that window's node editor instance. It does not return anything, so it has a void return type. </p>
 <hr>
 
 <h3 id="function-nodeeditormanager-13">function NodeEditorManager [1/3]</h3>
@@ -156,39 +162,96 @@
 <hr>
 
 <h3 id="function-nodeeditormanager-23">function NodeEditorManager [2/3]</h3>
+<p><em>Deleted copy constructor for the</em> <a href="./"><em><strong>NodeEditorManager</strong></em></a> <em>class to prevent copying.</em></p>
 <pre><code class="language-C++">AGE::NodeEditorManager::NodeEditorManager (
     const NodeEditorManager &amp;
 ) = delete
 </code></pre>
+<p>This function is marked as deleted because we do not want any copies of this object. It's a good practice in C++ to avoid unnecessary copying and wasting memory resources, especially when dealing with complex objects like this one.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>other</code> The <a href="./"><strong>NodeEditorManager</strong></a> instance to be copied. This parameter is ignored as the copy constructor is marked as deleted.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Nothing. As a result of being marked as deleted, attempting to use it will lead to a compile-time error.</p>
+<p>Deleted copy constructor for the <a href="./"><strong>NodeEditorManager</strong></a> class to prevent copying.</p>
+<p>This function is marked as deleted because we do not want any copies of this object. It's a good practice to avoid unnecessary copying and duplication in our code, which can lead to performance issues or memory leaks.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>other</code> The <a href="./"><strong>NodeEditorManager</strong></a> instance to be copied. This parameter is not used as the copy constructor is marked as deleted.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Nothing as this function does not return any value. </p>
 <hr>
 
 <h3 id="function-nodeeditormanager-33">function NodeEditorManager [3/3]</h3>
+<p><a href="./"><em><strong>NodeEditorManager</strong></em></a> <em>move constructor is deleted to prevent copying of the manager object.</em></p>
 <pre><code class="language-C++">AGE::NodeEditorManager::NodeEditorManager (
     NodeEditorManager &amp;&amp;
 ) = delete
 </code></pre>
+<p>This function is marked as deleted because we do not want to allow copying of the <a href="./"><strong>NodeEditorManager</strong></a> object. We only allow moving semantics, which means transferring ownership of resources from one object to another.</p>
+<p><strong>Returns:</strong></p>
+<p>The move constructor does not return anything since it's a deleted function.</p>
+<p><a href="./"><strong>NodeEditorManager</strong></a> move constructor is deleted to prevent copying of the manager object.</p>
+<p>This function is marked as deleted because we do not want to allow copying of this class's objects. We only allow moving semantics, which means transferring ownership of resources from one object to another.</p>
+<p><strong>Returns:</strong></p>
+<p>The move constructor does not return anything. It simply takes the resources from an existing object and moves them into a new one. </p>
 <hr>
 
 <h3 id="function-registerfunctions">function RegisterFunctions</h3>
+<p><em>This function is used to register functions for all active windows in the</em> <a href="./"><em><strong>NodeEditorManager</strong></em></a> <em>. It iterates over each window (pair of a pointer to a Window and its name) in m_ActiveWindows, and calls</em><a href="./#function-registerfunctions"><em><strong>RegisterFunctions()</strong></em></a> <em>on the Window object pointed to by the first element of the pair.</em></p>
 <pre><code class="language-C++">void AGE::NodeEditorManager::RegisterFunctions () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>This function registers functions for all active windows in the <a href="./"><strong>NodeEditorManager</strong></a>.</p>
+<p>The function iterates over each window (pair of a pointer to a Window and its name) stored in m_ActiveWindows, and calls the <a href="./#function-registerfunctions"><strong>RegisterFunctions()</strong></a> method on that window's node editor. It does not return anything.</p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-renderwindows">function RenderWindows</h3>
+<p><em>Render all active windows in the</em> <a href="./"><em><strong>NodeEditorManager</strong></em></a> <em>.</em></p>
 <pre><code class="language-C++">void AGE::NodeEditorManager::RenderWindows (
     TimeStep DeltaTime
 ) 
 </code></pre>
+<p>This function iterates over all active windows and calls their OnImGuiRender method, passing in the provided <a href="../class_a_g_e_1_1_time_step/"><strong>TimeStep</strong></a> value. It is used to update and render each window during the main application loop.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>DeltaTime</code> The time step for rendering and updating the windows.</li>
+</ul>
+<p>Renders all active windows in the <a href="./"><strong>NodeEditorManager</strong></a>.</p>
+<p>This function iterates over each window stored in m_ActiveWindows and calls OnImGuiRender on it, passing DeltaTime as an argument. It is used to update and render all GUI elements associated with the windows.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>DeltaTime</code> The time step for rendering. </li>
+</ul>
 <hr>
 
 <h3 id="function-nodeeditormanager">function ~NodeEditorManager</h3>
+<p><em>Destructor for</em> <a href="./"><em><strong>NodeEditorManager</strong></em></a> <em>class. It iterates over all active windows and destroys each editor instance using ax::NodeEditor::DestroyEditor function.</em></p>
 <pre><code class="language-C++">virtual AGE::NodeEditorManager::~NodeEditorManager () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>None</p>
+<p>Destructor for <a href="./"><strong>NodeEditorManager</strong></a> class. It iterates over all active windows and destroys each editor instance using ax::NodeEditor::DestroyEditor function.</p>
+<p><strong>Returns:</strong></p>
+<p>None </p>
 <hr>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
 <h3 id="function-getnewnodeid">function GetNewNodeID</h3>
+<p><em>Generates a new unique node ID.</em> </p>
 <pre><code class="language-C++">static inline uint32_t AGE::NodeEditorManager::GetNewNodeID () 
 </code></pre>
+<p>This function increments the global NodeID variable and returns it, effectively generating a new unique identifier for each call.</p>
+<p><strong>Returns:</strong></p>
+<p>The newly generated node ID as a uint32_t.</p>
+<p>Generates a new unique node ID for use in the system.</p>
+<p>This function increments the static variable NodeID and returns its value, effectively generating a new unique ID each time it is called.</p>
+<p><strong>Returns:</strong></p>
+<p>The newly generated node ID as a uint32_t. </p>
 <hr>
 
 <hr />

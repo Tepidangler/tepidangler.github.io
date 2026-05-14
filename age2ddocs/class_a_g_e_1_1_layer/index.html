@@ -89,11 +89,11 @@
 <tbody>
 <tr>
 <td style="text-align: right;">const std::string &amp;</td>
-<td style="text-align: left;"><a href="#function-getname"><strong>GetName</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-getname"><strong>GetName</strong></a> () const<br><em>Returns the name of this object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">float</td>
-<td style="text-align: left;"><a href="#function-gettime"><strong>GetTime</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-gettime"><strong>GetTime</strong></a> () <br><em>Get the current time in seconds since GLFW was initialized.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
@@ -101,31 +101,31 @@
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-layer"><strong>Layer</strong></a> (const std::string &amp; name="Layer") <br></td>
+<td style="text-align: left;"><a href="#function-layer"><strong>Layer</strong></a> (const std::string &amp; name="Layer") <br><em>Constructs a</em> <a href="./"><em><strong>Layer</strong></em></a> <em>object with the given debug name.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-onattach"><strong>OnAttach</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-onattach"><strong>OnAttach</strong></a> () <br><em>This function is called when the object is attached to a scene or game world.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-ondetach"><strong>OnDetach</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-ondetach"><strong>OnDetach</strong></a> () <br><em>Detaches the component from its parent.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-onevent"><strong>OnEvent</strong></a> (<a href="../class_a_g_e_1_1_event/"><strong>Event</strong></a> &amp; Event) <br></td>
+<td style="text-align: left;"><a href="#function-onevent"><strong>OnEvent</strong></a> (<a href="../class_a_g_e_1_1_event/"><strong>Event</strong></a> &amp; Event) <br><em>This function is called when an event occurs.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-onimguirender"><strong>OnImGuiRender</strong></a> (<a href="../class_a_g_e_1_1_time_step/"><strong>TimeStep</strong></a> DeltaTime) <br></td>
+<td style="text-align: left;"><a href="#function-onimguirender"><strong>OnImGuiRender</strong></a> (<a href="../class_a_g_e_1_1_time_step/"><strong>TimeStep</strong></a> DeltaTime) <br><em>This function is called every frame to render the ImGUI interface.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-onupdate"><strong>OnUpdate</strong></a> (<a href="../class_a_g_e_1_1_time_step/"><strong>TimeStep</strong></a> DeltaTime) <br></td>
+<td style="text-align: left;"><a href="#function-onupdate"><strong>OnUpdate</strong></a> (<a href="../class_a_g_e_1_1_time_step/"><strong>TimeStep</strong></a> DeltaTime) <br><em>This function is called every frame to update the game state.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual</td>
-<td style="text-align: left;"><a href="#function-layer"><strong>~Layer</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-layer"><strong>~Layer</strong></a> () <br><em>Destructor for the</em> <a href="./"><em><strong>Layer</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
@@ -146,13 +146,27 @@
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-getname">function GetName</h3>
+<p><em>Returns the name of this object.</em> </p>
 <pre><code class="language-C++">inline const std::string &amp; AGE::Layer::GetName () const
 </code></pre>
+<p>This function returns a reference to a string that represents the name of this object. The returned value is constant and does not allow modification.</p>
+<p><strong>Returns:</strong></p>
+<p>A const reference to the debug name of this object.</p>
+<p>Returns the name of this object. </p>
+<p><strong>Returns:</strong></p>
+<p>A constant reference to a string containing the debug name. </p>
 <hr>
 
 <h3 id="function-gettime">function GetTime</h3>
+<p><em>Get the current time in seconds since GLFW was initialized.</em> </p>
 <pre><code class="language-C++">float AGE::Layer::GetTime () 
 </code></pre>
+<p>This function uses glfwGetTime(), which returns the time in seconds since GLFW was initialized. The returned value is a double precision floating point number, so it can be used for more precise timing measurements.</p>
+<p><strong>Returns:</strong></p>
+<p>A float representing the current time in seconds.</p>
+<p>This function returns the time in seconds since GLFW was initialized, as a floating-point number. </p>
+<p><strong>Returns:</strong></p>
+<p>A float representing the current time in seconds. </p>
 <hr>
 
 <h3 id="function-init">function Init</h3>
@@ -161,46 +175,112 @@
 <hr>
 
 <h3 id="function-layer">function Layer</h3>
+<p><em>Constructs a</em> <a href="./"><em><strong>Layer</strong></em></a> <em>object with the given debug name.</em></p>
 <pre><code class="language-C++">AGE::Layer::Layer (
     const std::string &amp; name=&quot;Layer&quot;
 ) 
 </code></pre>
+<p>This function is used to create a new <a href="./"><strong>Layer</strong></a> object, which can be used for various purposes such as logging or debugging. The debug name provided will be stored and can be accessed later using getDebugName() method.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>DebugName</code> A string representing the debug name of the layer.</li>
+</ul>
+<p>Constructs a <a href="./"><strong>Layer</strong></a> object with the given debug name.</p>
+<p>This function is used to create a new <a href="./"><strong>Layer</strong></a> object with a specific debug name. The debug name can be used for debugging purposes and provides context about the layer's purpose or functionality.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>DebugName</code> A string representing the debug name of the layer. </li>
+</ul>
 <hr>
 
 <h3 id="function-onattach">function OnAttach</h3>
+<p><em>This function is called when the object is attached to a scene or game world.</em> </p>
 <pre><code class="language-C++">inline virtual void AGE::Layer::OnAttach () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>This function is called when the component is attached to a scene.</p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-ondetach">function OnDetach</h3>
+<p><em>Detaches the component from its parent.</em> </p>
 <pre><code class="language-C++">inline virtual void AGE::Layer::OnDetach () 
 </code></pre>
+<p>This function is called when a component is detached from its parent. It provides an opportunity for any necessary cleanup or notification to be done before the component is completely removed from use.</p>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Detaches the component from its parent.</p>
+<p>This function is called when a component is detached from its parent. It provides an opportunity for any necessary cleanup or notification to be done.</p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-onevent">function OnEvent</h3>
+<p><em>This function is called when an event occurs.</em> </p>
 <pre><code class="language-C++">inline virtual void AGE::Layer::OnEvent (
     Event &amp; Event
 ) 
 </code></pre>
+<p>The function takes a reference to an <a href="../class_a_g_e_1_1_event/"><strong>Event</strong></a> object as its parameter, which contains information about the event that occurred. It does not return anything (void).</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><a href="../class_a_g_e_1_1_event/"><strong>Event</strong></a> - A reference to an <a href="../class_a_g_e_1_1_event/"><strong>Event</strong></a> object containing details about the event.</li>
+</ul>
+<p>This function is called when an event occurs.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><a href="../class_a_g_e_1_1_event/"><strong>Event</strong></a> The event that has occurred. </li>
+</ul>
 <hr>
 
 <h3 id="function-onimguirender">function OnImGuiRender</h3>
+<p><em>This function is called every frame to render the ImGUI interface.</em> </p>
 <pre><code class="language-C++">inline virtual void AGE::Layer::OnImGuiRender (
     TimeStep DeltaTime
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>DeltaTime</code> The time step for the current frame, indicating how much time has passed since the last frame. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void No return value expected as this function does not return any result.</p>
+<p>This function is called every frame to render the ImGui interface.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>DeltaTime</code> The time step for the current frame, indicating how much time has passed since the last frame. </li>
+</ul>
 <hr>
 
 <h3 id="function-onupdate">function OnUpdate</h3>
+<p><em>This function is called every frame to update the game state.</em> </p>
 <pre><code class="language-C++">inline virtual void AGE::Layer::OnUpdate (
     TimeStep DeltaTime
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>DeltaTime</code> The time elapsed since the last frame, used for smooth movement and animation. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void No return value expected as this function does not have a return statement.</p>
+<p>This function is called every frame to update the game state based on the elapsed time since the last call.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>DeltaTime</code> The time step between the current and previous frames, used to calculate how much of an effect should be applied. </li>
+</ul>
 <hr>
 
 <h3 id="function-layer_1">function ~Layer</h3>
+<p><em>Destructor for the</em> <a href="./"><em><strong>Layer</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">virtual AGE::Layer::~Layer () 
 </code></pre>
+<p>This destructor does not perform any specific actions when called, but it is a necessary part of the class's interface as it releases any resources that were acquired during the lifetime of an object of this class.</p>
+<p><strong>Returns:</strong></p>
+<p>None.</p>
+<p>Destructor for the <a href="./"><strong>Layer</strong></a> class. </p>
 <hr>
 <h2 id="protected-attributes-documentation">Protected Attributes Documentation</h2>
 <h3 id="variable-m_debugname">variable m_DebugName</h3>

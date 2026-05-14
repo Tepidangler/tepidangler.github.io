@@ -22,8 +22,8 @@ namespace AGE
     {
     public:
         NodeEditorManager();
-        NodeEditorManager(const NodeEditorManager&) = delete;
-        NodeEditorManager(NodeEditorManager&&) = delete;
+NodeEditorManager(const NodeEditorManager&) = delete;
+NodeEditorManager(NodeEditorManager&&) = delete;
         virtual ~NodeEditorManager();
 
         void RegisterFunctions();
@@ -32,7 +32,7 @@ namespace AGE
         void CreateContextAndWindow(const std::filesystem::path& Filepath, const std::string& WindowName, void* Target = nullptr);
         void RenderWindows(TimeStep DeltaTime);
 
-        static uint32_t GetNewNodeID() {return ++NodeID;}
+static uint32_t GetNewNodeID() {return ++NodeID;}
 
     private:
         void CreateNewWindow(const std::string& WindowName, ax::NodeEditor::EditorContext* Context, void* Target = nullptr, bool LoadingExisting = false);

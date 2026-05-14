@@ -22,12 +22,42 @@
           <declname>Filter</declname>
         </param>
         <briefdescription>
+<para>Opens a file dialog and returns the path of the selected file. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function opens a file dialog with the given title, default path, and filter. If no file is selected, it returns an empty string. The returned string contains the path of the first selected file.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The title of the file dialog. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>DefaultPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The default path for the file dialog. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Filter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector of strings representing the filter for the file dialog.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns a string containing the path of the selected file, or an empty string if no file is selected. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Utils/Public/WindowsUtils.h" line="12" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/WindowsUtils.cpp" bodystart="24" bodyend="35"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Utils/Public/WindowsUtils.h" line="12" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/WindowsUtils.cpp" bodystart="36" bodyend="47"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_file_dialogs_1a29953e69b6e7cf80ad72242907710aeb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -48,12 +78,41 @@
           <declname>Filter</declname>
         </param>
         <briefdescription>
+<para>This function opens a file dialog and allows the user to select a file for saving. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The title of the file dialog. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>DefaultPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The default path where the file dialog starts from. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Filter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector of strings representing the types of files that can be selected in the dialog.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns a string containing the path to the selected file, or an empty string if no file was selected. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Utils/Public/WindowsUtils.h" line="13" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/WindowsUtils.cpp" bodystart="37" bodyend="49"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Utils/Public/WindowsUtils.h" line="13" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/WindowsUtils.cpp" bodystart="58" bodyend="70"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

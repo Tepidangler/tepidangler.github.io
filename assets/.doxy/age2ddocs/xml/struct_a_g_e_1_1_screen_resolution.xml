@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="313" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="313" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="373" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="373" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_a_g_e_1_1_screen_resolution_1af70056270e2404490138d7c26b77c66d" prot="public" static="no" mutable="no">
         <type>uint32_t</type>
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="314" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="314" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="374" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="374" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -42,12 +42,16 @@
         <name>GetResolution</name>
         <qualifiedname>AGE::ScreenResolution::GetResolution</qualifiedname>
         <briefdescription>
+<para>Returns the resolution of the screen in pixels as a pair of uint32_t values. The first value is the width and the second one is the height. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>A pair containing two uint32_t values representing the resolution of the screen. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="316" column="11" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="316" bodyend="316"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="382" column="11" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="382" bodyend="382"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_screen_resolution_1ad8c3f9a0f67f86a9c9cf1f72bb9dbee3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -64,12 +68,33 @@
           <declname>Y</declname>
         </param>
         <briefdescription>
+<para>Sets the resolution of the display to a specified width and height. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>X</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new width of the display in pixels. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new height of the display in pixels. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="317" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="317" bodyend="317"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="389" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="389" bodyend="389"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_screen_resolution_1af4fff175abbc9735e8f75c5271c51ae6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint32_t</type>
@@ -78,12 +103,16 @@
         <name>GetWidth</name>
         <qualifiedname>AGE::ScreenResolution::GetWidth</qualifiedname>
         <briefdescription>
+<para>This function returns the width of an object. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>The width as a uint32_t value. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="319" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="319" bodyend="319"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="395" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="395" bodyend="395"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_screen_resolution_1a1100b3ef86b5c534ba07b3f91b2debc7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint32_t</type>
@@ -92,19 +121,23 @@
         <name>GetHeight</name>
         <qualifiedname>AGE::ScreenResolution::GetHeight</qualifiedname>
         <briefdescription>
+<para>This function returns the height of an object. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>uint32_t The height of the object in units not specified by the function. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="320" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="320" bodyend="320"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="400" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="400" bodyend="400"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="311" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="312" bodyend="323"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" line="371" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Structs/Public/DataStructures.h" bodystart="372" bodyend="403"/>
     <listofallmembers>
       <member refid="struct_a_g_e_1_1_screen_resolution_1a1100b3ef86b5c534ba07b3f91b2debc7" prot="public" virt="non-virtual"><scope>AGE::ScreenResolution</scope><name>GetHeight</name></member>
       <member refid="struct_a_g_e_1_1_screen_resolution_1a467acee62eee220adf5e51a7fdf17853" prot="public" virt="non-virtual"><scope>AGE::ScreenResolution</scope><name>GetResolution</name></member>

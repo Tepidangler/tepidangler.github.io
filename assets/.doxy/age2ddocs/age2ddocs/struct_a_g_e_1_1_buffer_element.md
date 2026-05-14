@@ -63,9 +63,9 @@
 
 | Type | Name |
 | ---: | :--- |
-|   | [**BufferElement**](#function-bufferelement-12) () <br> |
-|   | [**BufferElement**](#function-bufferelement-22) (ShaderDataType Type, const std::string & Name, bool normalized=false) <br> |
-|  uint32\_t | [**GetComponentCount**](#function-getcomponentcount) () const<br> |
+|   | [**BufferElement**](#function-bufferelement-12) () <br>_Default constructor for_ [_**BufferElement**_](struct_a_g_e_1_1_buffer_element.md) _class._ |
+|   | [**BufferElement**](#function-bufferelement-22) (ShaderDataType Type, const std::string & Name, bool normalized=false) <br>[_**BufferElement**_](struct_a_g_e_1_1_buffer_element.md) _is a class representing an element in a buffer. It holds information about the name, type of data, size and offset of the data, as well as whether it's normalized or not._ |
+|  uint32\_t | [**GetComponentCount**](#function-getcomponentcount) () const<br>_GetComponentCount returns the number of components in a shader data type._  |
 
 
 
@@ -207,6 +207,7 @@ uint32_t AGE::BufferElement::Slot;
 
 ### function BufferElement [1/2]
 
+_Default constructor for_ [_**BufferElement**_](struct_a_g_e_1_1_buffer_element.md) _class._
 ```C++
 inline AGE::BufferElement::BufferElement () 
 ```
@@ -220,6 +221,7 @@ inline AGE::BufferElement::BufferElement ()
 
 ### function BufferElement [2/2]
 
+[_**BufferElement**_](struct_a_g_e_1_1_buffer_element.md) _is a class representing an element in a buffer. It holds information about the name, type of data, size and offset of the data, as well as whether it's normalized or not._
 ```C++
 inline AGE::BufferElement::BufferElement (
     ShaderDataType Type,
@@ -231,18 +233,54 @@ inline AGE::BufferElement::BufferElement (
 
 
 
+
+**Parameters:**
+
+
+* `Type` The type of shader data (e.g., float, int). 
+* `Name` The name of the buffer element. 
+* `normalized` A boolean indicating if the data is normalized. Default value is false. 
+
+
+
+
+        
+
 <hr>
 
 
 
 ### function GetComponentCount 
 
+_GetComponentCount returns the number of components in a shader data type._ 
 ```C++
 inline uint32_t AGE::BufferElement::GetComponentCount () const
 ```
 
 
 
+This function takes into account the current value of DataType and returns the appropriate number of components. The return values are as follows:
+* For DataType = 0, it returns 1 (Unknown ShaderDataType).
+* For DataType = 1 to 4 inclusive, it returns 1.
+* For DataType = 5 to 6 inclusive, it returns 9.
+* For DataType = 7 to 8 inclusive, it returns 2.
+* For DataType = 9 to 10 inclusive, it returns 3.
+* For DataType = 11, it returns 4 (Unknown ShaderDataType).
+
+
+
+
+
+
+**Returns:**
+
+uint32\_t The number of components in the shader data type. 
+
+
+
+
+
+        
 
 <hr>
 

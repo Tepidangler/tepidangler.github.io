@@ -10,7 +10,7 @@
         <argsstring>()=0</argsstring>
         <name>DestroyWorld</name>
         <qualifiedname>AGE::World::DestroyWorld</qualifiedname>
-        <reimplementedby refid="class_a_g_e_1_1_world2_d_1a456417b914233e37e3d0fed06f1c7f9f">DestroyWorld</reimplementedby>
+        <reimplementedby refid="class_a_g_e_1_1_world2_d_1a00988ed61fbd9fc25d660798f0cb6ded">DestroyWorld</reimplementedby>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -25,7 +25,7 @@
         <argsstring>(TimeStep DeltaTime)=0</argsstring>
         <name>Step</name>
         <qualifiedname>AGE::World::Step</qualifiedname>
-        <reimplementedby refid="class_a_g_e_1_1_world2_d_1acda054e395bf8e52d8dd34c74202a10c">Step</reimplementedby>
+        <reimplementedby refid="class_a_g_e_1_1_world2_d_1ac176cc75622b9bb7ebe20ac7f768dddc">Step</reimplementedby>
         <param>
           <type><ref refid="class_a_g_e_1_1_time_step" kindref="compound">TimeStep</ref></type>
           <declname>DeltaTime</declname>
@@ -44,7 +44,7 @@
         <argsstring>()=0</argsstring>
         <name>MakeDefaultQueryFilter</name>
         <qualifiedname>AGE::World::MakeDefaultQueryFilter</qualifiedname>
-        <reimplementedby refid="class_a_g_e_1_1_world2_d_1a35da7e9326fc23079d919eefa59f24bb">MakeDefaultQueryFilter</reimplementedby>
+        <reimplementedby refid="class_a_g_e_1_1_world2_d_1abc107bd5d134178b4c7efffc1d7730f1">MakeDefaultQueryFilter</reimplementedby>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -78,7 +78,7 @@
         <argsstring>(const QueryParams &amp;Params)=0</argsstring>
         <name>QueryCapsuleOverlap</name>
         <qualifiedname>AGE::World::QueryCapsuleOverlap</qualifiedname>
-        <reimplementedby refid="class_a_g_e_1_1_world2_d_1a429def84e8092b08687b3535089a0eaf">QueryCapsuleOverlap</reimplementedby>
+        <reimplementedby refid="class_a_g_e_1_1_world2_d_1a4eabf31fb55222b909d95d88205b3823">QueryCapsuleOverlap</reimplementedby>
         <param>
           <type>const <ref refid="struct_a_g_e_1_1_query_params" kindref="compound">QueryParams</ref> &amp;</type>
           <declname>Params</declname>
@@ -97,7 +97,7 @@
         <argsstring>(const QueryParams &amp;Params)=0</argsstring>
         <name>QuerySegmentOverlap</name>
         <qualifiedname>AGE::World::QuerySegmentOverlap</qualifiedname>
-        <reimplementedby refid="class_a_g_e_1_1_world2_d_1a9ef6c6eaed4624bec2e602e2db7ea05a">QuerySegmentOverlap</reimplementedby>
+        <reimplementedby refid="class_a_g_e_1_1_world2_d_1ac37e44165247aec77faca3f48a4b305f">QuerySegmentOverlap</reimplementedby>
         <param>
           <type>const <ref refid="struct_a_g_e_1_1_query_params" kindref="compound">QueryParams</ref> &amp;</type>
           <declname>Params</declname>
@@ -116,7 +116,7 @@
         <argsstring>(const QueryParams &amp;Params)=0</argsstring>
         <name>QueryHit</name>
         <qualifiedname>AGE::World::QueryHit</qualifiedname>
-        <reimplementedby refid="class_a_g_e_1_1_world2_d_1a3f7a9a98ac4b1c32feaf2aea24e7c18d">QueryHit</reimplementedby>
+        <reimplementedby refid="class_a_g_e_1_1_world2_d_1aa5260047abae2c43867b88a5c6a46dff">QueryHit</reimplementedby>
         <param>
           <type>const <ref refid="struct_a_g_e_1_1_query_params" kindref="compound">QueryParams</ref> &amp;</type>
           <declname>Params</declname>
@@ -141,34 +141,45 @@
         <name>As</name>
         <qualifiedname>AGE::World::As</qualifiedname>
         <briefdescription>
+<para>This function is currently not implemented and will always assert false. It returns a null pointer. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>nullptr Always.</para>
+</simplesect>
+This function is currently not implemented and will always assert false. It returns a null pointer.</para>
+<para><simplesect kind="return"><para>nullptr Always. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/World.h" line="22" column="11" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/World.cpp" bodystart="24" bodyend="28"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/World.h" line="22" column="11" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/World.cpp" bodystart="52" bodyend="56"/>
       </memberdef>
-      <memberdef kind="function" id="class_a_g_e_1_1_world_1a14ac2624ff43ff707f2fe2d8cfaed74a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_a_g_e_1_1_world_1a087fcd36b9c54ea5981dfc3d3338244a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
         </templateparamlist>
-        <type><ref refid="class_a_g_e_1_1_world2_d" kindref="compound">World2D</ref> *</type>
-        <definition>World2D * AGE::World::As</definition>
+        <type>Wo rld2D *</type>
+        <definition>Wo rld2D * AGE::World::As</definition>
         <argsstring>()</argsstring>
         <name>As</name>
         <qualifiedname>AGE::World::As</qualifiedname>
         <briefdescription>
+<para>This function returns a pointer to the derived class &apos;<ref refid="class_a_g_e_1_1_world2_d" kindref="compound">World2D</ref>&apos; from the base class &apos;<ref refid="class_a_g_e_1_1_world" kindref="compound">World</ref>&apos;. It is used for polymorphism and dynamic binding. The returned object can be treated as an instance of <ref refid="class_a_g_e_1_1_world2_d" kindref="compound">World2D</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>A pointer to the derived class &apos;<ref refid="class_a_g_e_1_1_world2_d" kindref="compound">World2D</ref>&apos;. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/World2D.cpp" line="236" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/World2D.cpp" bodystart="236" bodyend="239"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/World2D.cpp" line="479" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/World2D.cpp" bodystart="479" bodyend="482"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
-      <memberdef kind="function" id="class_a_g_e_1_1_world_1a8f40e954ee2cd31e5a8dc6a7edf0299e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_a_g_e_1_1_world_1abfcbd43bd0dc443e1e4fae65c42515f4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>Ref&lt; <ref refid="class_a_g_e_1_1_world" kindref="compound">World</ref> &gt;</type>
-        <definition>Ref&lt; World &gt; AGE::World::Create</definition>
+        <definition>Re f&lt; World &gt; AGE::World::Create</definition>
         <argsstring>(Ref&lt; Scene &gt; scene)</argsstring>
         <name>Create</name>
         <qualifiedname>AGE::World::Create</qualifiedname>
@@ -177,12 +188,39 @@
           <declname>scene</declname>
         </param>
         <briefdescription>
+<para>Creates a new instance of the <ref refid="class_a_g_e_1_1_world" kindref="compound">World</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function creates and returns a new instance of the <ref refid="class_a_g_e_1_1_world" kindref="compound">World</ref> class, which is specialized for handling 2D scenes. The scene parameter specifies the <ref refid="class_a_g_e_1_1_scene" kindref="compound">Scene</ref> that this world will be associated with.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scene</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to the <ref refid="class_a_g_e_1_1_scene" kindref="compound">Scene</ref> object that this world will be associated with. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the newly created <ref refid="class_a_g_e_1_1_world" kindref="compound">World</ref> instance.</para>
+</simplesect>
+Creates a new instance of the <ref refid="class_a_g_e_1_1_world" kindref="compound">World</ref> class.</para>
+<para>This function creates and returns a new instance of the <ref refid="class_a_g_e_1_1_world" kindref="compound">World</ref> class, which is specialized for handling 2D scenes. The scene parameter specifies the <ref refid="class_a_g_e_1_1_scene" kindref="compound">Scene</ref> that this world will be associated with.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scene</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to the <ref refid="class_a_g_e_1_1_scene" kindref="compound">Scene</ref> object that this world will be associated with. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the newly created <ref refid="class_a_g_e_1_1_world" kindref="compound">World</ref> instance. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/World.h" line="24" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/World.cpp" bodystart="18" bodyend="21"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/World.h" line="24" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/World.cpp" bodystart="34" bodyend="37"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -204,8 +242,8 @@
     <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/World.h" line="9" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Physics/Public/World.h" bodystart="10" bodyend="27"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_world_1ade8d460d0a500a0912f20cfc2dc230fd" prot="public" virt="non-virtual"><scope>AGE::World</scope><name>As</name></member>
-      <member refid="class_a_g_e_1_1_world_1a14ac2624ff43ff707f2fe2d8cfaed74a" prot="public" virt="non-virtual"><scope>AGE::World</scope><name>As</name></member>
-      <member refid="class_a_g_e_1_1_world_1a8f40e954ee2cd31e5a8dc6a7edf0299e" prot="public" virt="non-virtual"><scope>AGE::World</scope><name>Create</name></member>
+      <member refid="class_a_g_e_1_1_world_1a087fcd36b9c54ea5981dfc3d3338244a" prot="public" virt="non-virtual"><scope>AGE::World</scope><name>As</name></member>
+      <member refid="class_a_g_e_1_1_world_1abfcbd43bd0dc443e1e4fae65c42515f4" prot="public" virt="non-virtual"><scope>AGE::World</scope><name>Create</name></member>
       <member refid="class_a_g_e_1_1_world_1a83ac11981d9a953f50b061312ed046a3" prot="public" virt="pure-virtual"><scope>AGE::World</scope><name>DestroyWorld</name></member>
       <member refid="class_a_g_e_1_1_world_1a04a89cccaaef7710c14a46804849c937" prot="public" virt="pure-virtual"><scope>AGE::World</scope><name>MakeDefaultQueryFilter</name></member>
       <member refid="class_a_g_e_1_1_world_1ad1e0ba0995962dc6bb728a5c86e0dafe" prot="public" virt="pure-virtual"><scope>AGE::World</scope><name>QueryBoxOverlap</name></member>

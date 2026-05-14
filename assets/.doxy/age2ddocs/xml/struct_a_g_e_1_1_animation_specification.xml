@@ -114,12 +114,21 @@
         <name>IsReadyToLoad</name>
         <qualifiedname>AGE::AnimationSpecification::IsReadyToLoad</qualifiedname>
         <briefdescription>
+<para>Checks if the animation is ready to be loaded. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function checks several conditions to determine if an animation is ready to be loaded. It first checks if <computeroutput>bIsReadyToLoad</computeroutput> is true, then verifies that the Name of the animation is not empty and that it has more than one frame. Finally, it ensures that the movement status of the character is defined. If any of these conditions are not met, an error message is logged and <computeroutput>bIsReadyToLoad</computeroutput> is set to false.</para>
+<para><simplesect kind="return"><para>True if the animation is ready to be loaded, false otherwise.</para>
+</simplesect>
+Checks if the animation is ready to be loaded.</para>
+<para>This function checks several conditions to determine if an animation can be loaded. It first checks if <computeroutput>bIsReadyToLoad</computeroutput> is false, in which case it returns false. If <computeroutput>Name</computeroutput> is empty, it logs an error and sets <computeroutput>bIsReadyToLoad</computeroutput> to false before returning false. If the number of frames is not greater than 1, it also logs an error and sets <computeroutput>bIsReadyToLoad</computeroutput> to false. Finally, if <computeroutput>MovementStatus</computeroutput> is undefined, it logs an error and sets <computeroutput>bIsReadyToLoad</computeroutput> to false. In all other cases, it returns true.</para>
+<para><simplesect kind="return"><para>True if the animation can be loaded, false otherwise. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Animation/Public/Animation.h" line="23" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Animation/Public/Animation.h" bodystart="23" bodyend="48"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Animation/Public/Animation.h" line="39" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Animation/Public/Animation.h" bodystart="39" bodyend="64"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_animation_specification_1aed3e659c6d2114d11a8df621c56d469d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -132,19 +141,42 @@
           <declname>Value</declname>
         </param>
         <briefdescription>
+<para>Sets the value of bIsReadyToLoad variable. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function sets the boolean variable &apos;bIsReadyToLoad&apos; to a given value. It is used to indicate whether the system is ready to load data or not.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new value for bIsReadyToLoad, which can be either true (indicating readiness) or false (indicating non-readiness).</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Sets the state of Ready to Load.</para>
+<para>This function sets the value of bIsReadyToLoad variable, which indicates whether the system is ready to load data or not.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new boolean value for bIsReadyToLoad. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Animation/Public/Animation.h" line="50" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Animation/Public/Animation.h" bodystart="50" bodyend="53"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Animation/Public/Animation.h" line="80" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Animation/Public/Animation.h" bodystart="80" bodyend="83"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Animation/Public/Animation.h" line="11" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Animation/Public/Animation.h" bodystart="12" bodyend="54"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Animation/Public/Animation.h" line="11" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Animation/Public/Animation.h" bodystart="12" bodyend="84"/>
     <listofallmembers>
       <member refid="struct_a_g_e_1_1_animation_specification_1ae398b5e4c9fa8a151a406a71e53d700d" prot="public" virt="non-virtual"><scope>AGE::AnimationSpecification</scope><name>bIsReadyToLoad</name></member>
       <member refid="struct_a_g_e_1_1_animation_specification_1a640ff4142e20f623ee957ef29ee42e2b" prot="public" virt="non-virtual"><scope>AGE::AnimationSpecification</scope><name>Height</name></member>

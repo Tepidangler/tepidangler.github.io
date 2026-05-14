@@ -88,19 +88,19 @@
 <tbody>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-aseprite-13"><strong>Aseprite</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-aseprite-13"><strong>Aseprite</strong></a> () = default<br><em>Default constructor for</em> <a href="./"><em><strong>Aseprite</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-aseprite-23"><strong>Aseprite</strong></a> (const <a href="./"><strong>Aseprite</strong></a> &amp;) = delete<br></td>
+<td style="text-align: left;"><a href="#function-aseprite-23"><strong>Aseprite</strong></a> (const <a href="./"><strong>Aseprite</strong></a> &amp;) = delete<br><em>Copy constructor for class</em> <a href="./"><em><strong>Aseprite</strong></em></a> <em>is deleted to prevent copying of objects.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-aseprite-33"><strong>Aseprite</strong></a> (const <a href="./"><strong>Aseprite</strong></a> &amp;&amp;) = delete<br></td>
+<td style="text-align: left;"><a href="#function-aseprite-33"><strong>Aseprite</strong></a> (const <a href="./"><strong>Aseprite</strong></a> &amp;&amp;) = delete<br><em>This function is a move constructor for the class</em> <a href="./"><em><strong>Aseprite</strong></em></a> <em>and it's marked as deleted to prevent copying of objects.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">Ref&lt; <a href="../class_a_g_e_1_1_texture2_d/"><strong>Texture2D</strong></a> &gt;</td>
-<td style="text-align: left;"><a href="#function-createimage"><strong>CreateImage</strong></a> (const std::string &amp; Filename, bool ShouldCreateTexture, bool ShouldFlipOnLoad=false) <br></td>
+<td style="text-align: left;"><a href="#function-createimage"><strong>CreateImage</strong></a> (const std::string &amp; Filename, bool ShouldCreateTexture, bool ShouldFlipOnLoad=false) <br><em>Creates an image from the given</em> <a href="./"><em><strong>Aseprite</strong></em></a> <em>file.</em> <em>\ This function reads data from a specified</em><a href="./"><em><strong>Aseprite</strong></em></a> <em>file, processes it and creates an image object. The created image can optionally be converted into a texture.</em> <em>.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
@@ -119,37 +119,79 @@
 <tbody>
 <tr>
 <td style="text-align: right;">std::vector&lt; <a href="../struct_a_g_e_1_1_aseprite_frame_data/"><strong>AsepriteFrameData</strong></a> &gt; &amp;</td>
-<td style="text-align: left;"><a href="#function-getspriteframedata"><strong>GetSpriteFrameData</strong></a> (const std::string &amp; SpriteName) <br></td>
+<td style="text-align: left;"><a href="#function-getspriteframedata"><strong>GetSpriteFrameData</strong></a> (const std::string &amp; SpriteName) <br><em>Get the frame data of a specific sprite.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-aseprite-13">function Aseprite [1/3]</h3>
+<p><em>Default constructor for</em> <a href="./"><em><strong>Aseprite</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::Aseprite::Aseprite () = default
 </code></pre>
+<p>This function initializes an instance of the <a href="./"><strong>Aseprite</strong></a> class with its default values. It does not take any parameters and returns nothing.</p>
+<p>Default constructor for <a href="./"><strong>Aseprite</strong></a> class.</p>
+<p>This function initializes an instance of the <a href="./"><strong>Aseprite</strong></a> class with its default values. </p>
 <hr>
 
 <h3 id="function-aseprite-23">function Aseprite [2/3]</h3>
+<p><em>Copy constructor for class</em> <a href="./"><em><strong>Aseprite</strong></em></a> <em>is deleted to prevent copying of objects.</em></p>
 <pre><code class="language-C++">AGE::Aseprite::Aseprite (
     const Aseprite &amp;
 ) = delete
 </code></pre>
+<p>The copy constructor is implicitly provided by the compiler, but it's not needed in this context as we don't want to allow copies of our <a href="./"><strong>Aseprite</strong></a> objects. This function simply throws a compilation error if someone tries to use it.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>other</code> The object being copied. Not used because copying is disabled.</li>
+</ul>
+<p>Copy constructor for class <a href="./"><strong>Aseprite</strong></a> is deleted to prevent copying.</p>
+<p>This function is marked as deleted in the C++11 standard, which means that if an attempt is made to copy an object of this type, a compile-time error will be generated instead of a run-time exception.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>other</code> The instance of <a href="./"><strong>Aseprite</strong></a> to be copied. This parameter is named 'other' for clarity and it represents the instance being copied.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>No return value as this function does not provide any meaningful output. It simply prevents copying of objects of class <a href="./"><strong>Aseprite</strong></a>. </p>
 <hr>
 
 <h3 id="function-aseprite-33">function Aseprite [3/3]</h3>
+<p><em>This function is a move constructor for the class</em> <a href="./"><em><strong>Aseprite</strong></em></a> <em>and it's marked as deleted to prevent copying of objects.</em></p>
 <pre><code class="language-C++">AGE::Aseprite::Aseprite (
     const Aseprite &amp;&amp;
 ) = delete
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>other</code> The object to be moved from.</li>
+</ul>
+<p>This is a deleted copy constructor for the class <a href="./"><strong>Aseprite</strong></a>. It prevents copying of objects of this type. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>other</code> The object to be copied. </li>
+</ul>
 <hr>
 
 <h3 id="function-createimage">function CreateImage</h3>
+<p><em>Creates an image from the given</em> <a href="./"><em><strong>Aseprite</strong></em></a> <em>file.</em> <em>\ This function reads data from a specified</em><a href="./"><em><strong>Aseprite</strong></em></a> <em>file, processes it and creates an image object. The created image can optionally be converted into a texture.</em> <em>.</em></p>
 <pre><code class="language-C++">Ref&lt; Texture2D &gt; AGE::Aseprite::CreateImage (
     const std::string &amp; Filename,
     bool ShouldCreateTexture,
     bool ShouldFlipOnLoad=false
 ) 
 </code></pre>
+<p>\ </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Filename</code> The name of the <a href="./"><strong>Aseprite</strong></a> file to read from.
+ \ </li>
+<li><code>ShouldCreateTexture</code> If true, a texture will be created from the image data. Otherwise, only the image object is returned.
+ \ </li>
+<li><code>ShouldFlipOnLoad</code> If true, the loaded image will be flipped vertically.
+ \ </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A reference to the created image or texture (if any). Returns nullptr if no image was created and the function should not create a texture.
+ \ </p>
 <hr>
 
 <h3 id="function-readdata">function ReadData</h3>
@@ -160,10 +202,30 @@
 <hr>
 <h2 id="protected-functions-documentation">Protected Functions Documentation</h2>
 <h3 id="function-getspriteframedata">function GetSpriteFrameData</h3>
+<p><em>Get the frame data of a specific sprite.</em> </p>
 <pre><code class="language-C++">std::vector&lt; AsepriteFrameData &gt; &amp; AGE::Aseprite::GetSpriteFrameData (
     const std::string &amp; SpriteName
 ) 
 </code></pre>
+<p>This function retrieves the frame data for a given sprite name from the <a href="./"><strong>Aseprite</strong></a> data map. If the sprite does not exist in the map, an exception is thrown.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>SpriteName</code> The name of the sprite to retrieve the frame data for. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Reference to the vector of frames associated with the given sprite name. </p>
+<p><strong>Exception:</strong></p>
+<ul>
+<li><code>std::out_of_range</code> If the provided sprite name does not exist in the <a href="./"><strong>Aseprite</strong></a> data map.</li>
+</ul>
+<p>Get the frame data of a specific sprite.</p>
+<p>This function retrieves the frame data for a given sprite name from the <a href="./"><strong>Aseprite</strong></a> data map. If the sprite does not exist, it will return an empty vector.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>SpriteName</code> The name of the sprite to retrieve the frame data for. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>std::vector&lt;AsepriteFrameData&gt;&amp; Reference to the frame data vector of the specified sprite. If the sprite does not exist, it will return an empty vector. </p>
 <hr>
 
 <hr />

@@ -104,7 +104,7 @@ See [AGE::QuadProperties](struct_a_g_e_1_1_quad_properties.md)
 
 | Type | Name |
 | ---: | :--- |
-|  void | [**ResetProperties**](struct_a_g_e_1_1_quad_properties.md#function-resetproperties) () <br> |
+|  void | [**ResetProperties**](struct_a_g_e_1_1_quad_properties.md#function-resetproperties) () <br>_Resets all properties of the object to default values._  |
 
 
 

@@ -175,19 +175,19 @@
 <tbody>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-agepin-12"><strong>AGEPin</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-agepin-12"><strong>AGEPin</strong></a> () = default<br><em>Default constructor for the</em> <a href="./"><em><strong>AGEPin</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-agepin-22"><strong>AGEPin</strong></a> (<a href="../class_a_g_e_1_1_u_u_i_d/"><strong>UUID</strong></a> id, const char * name, AGEPinType type) <br></td>
+<td style="text-align: left;"><a href="#function-agepin-22"><strong>AGEPin</strong></a> (<a href="../class_a_g_e_1_1_u_u_i_d/"><strong>UUID</strong></a> id, const char * name, AGEPinType type) <br><em>Constructs an instance of</em> <a href="./"><em><strong>AGEPin</strong></em></a> <em>with the given parameters.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">rttr::variant</td>
-<td style="text-align: left;"><a href="#function-getvalue"><strong>GetValue</strong></a> (AGEPinType Type) <br></td>
+<td style="text-align: left;"><a href="#function-getvalue"><strong>GetValue</strong></a> (AGEPinType Type) <br><em>GetValue is a function that returns an rttr::variant based on the input AGEPinType.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual</td>
-<td style="text-align: left;"><a href="#function-agepin"><strong>~AGEPin</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-agepin"><strong>~AGEPin</strong></a> () = default<br><em>Virtual destructor for the</em> <a href="./"><em><strong>AGEPin</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
@@ -202,11 +202,11 @@
 <tbody>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-deserialize"><strong>Deserialize</strong></a> (<a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> * Serializer, <a href="./"><strong>AGEPin</strong></a> &amp; Data) <br></td>
+<td style="text-align: left;"><a href="#function-deserialize"><strong>Deserialize</strong></a> (<a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> * Serializer, <a href="./"><strong>AGEPin</strong></a> &amp; Data) <br><em>Deserialize function for the</em> <a href="./"><em><strong>AGEPin</strong></em></a> <em>structure. This function reads data from a</em><a href="../class_a_g_e_1_1_data_reader/"><em><strong>DataReader</strong></em></a> <em>object and populates an</em><a href="./"><em><strong>AGEPin</strong></em></a> <em>object with it. The function assumes that the</em><a href="../class_a_g_e_1_1_data_reader/"><em><strong>DataReader</strong></em></a> <em>is correctly initialized and ready to read data.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-serialize"><strong>Serialize</strong></a> (<a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> * Serializer, const <a href="./"><strong>AGEPin</strong></a> &amp; Data) <br></td>
+<td style="text-align: left;"><a href="#function-serialize"><strong>Serialize</strong></a> (<a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> * Serializer, const <a href="./"><strong>AGEPin</strong></a> &amp; Data) <br><em>This function serializes an</em> <a href="./"><em><strong>AGEPin</strong></em></a> <em>object into a</em><a href="../class_a_g_e_1_1_data_writer/"><em><strong>DataWriter</strong></em></a> <em>.</em></td>
 </tr>
 </tbody>
 </table>
@@ -307,45 +307,117 @@
 <hr>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-agepin-12">function AGEPin [1/2]</h3>
+<p><em>Default constructor for the</em> <a href="./"><em><strong>AGEPin</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::AGEPin::AGEPin () = default
 </code></pre>
+<p>This function initializes an instance of the <a href="./"><strong>AGEPin</strong></a> class with its default values. It does not take any parameters and returns nothing.</p>
+<p>Default constructor for the <a href="./"><strong>AGEPin</strong></a> class. </p>
 <hr>
 
 <h3 id="function-agepin-22">function AGEPin [2/2]</h3>
+<p><em>Constructs an instance of</em> <a href="./"><em><strong>AGEPin</strong></em></a> <em>with the given parameters.</em></p>
 <pre><code class="language-C++">inline AGE::AGEPin::AGEPin (
     UUID id,
     const char * name,
     AGEPinType type
 ) 
 </code></pre>
+<p>This constructor initializes a new instance of <a href="./"><strong>AGEPin</strong></a> with the provided <a href="../class_a_g_e_1_1_u_u_i_d/"><strong>UUID</strong></a>, name, and type. The Node pointer is initialized to nullptr, Kind is set to <a href="../class_a_g_e_1_1_input/"><strong>Input</strong></a>, and other members are assigned their respective values. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>id</code> Unique identifier for this pin. </li>
+<li><code>name</code> Name or label associated with this pin. </li>
+<li><code>type</code> Specifies the kind of data that this pin can handle.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p><a href="./"><strong>AGEPin</strong></a></p>
+<p>Constructs an instance of <a href="./"><strong>AGEPin</strong></a> with the given parameters.</p>
+<p>This constructor initializes a new instance of <a href="./"><strong>AGEPin</strong></a> with the provided <a href="../class_a_g_e_1_1_u_u_i_d/"><strong>UUID</strong></a>, name, and type. The Node pointer is set to nullptr, Kind is initialized as <a href="../class_a_g_e_1_1_input/"><strong>Input</strong></a>.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>id</code> Unique identifier for this pin. </li>
+<li><code>name</code> Name or label associated with this pin. </li>
+<li><code>type</code> Specifies the type of the pin (<a href="../class_a_g_e_1_1_input/"><strong>Input</strong></a>, Output, etc.). </li>
+</ul>
 <hr>
 
 <h3 id="function-getvalue">function GetValue</h3>
+<p><em>GetValue is a function that returns an rttr::variant based on the input AGEPinType.</em> </p>
 <pre><code class="language-C++">inline rttr::variant AGE::AGEPin::GetValue (
     AGEPinType Type
 ) 
 </code></pre>
+<p>The function takes one parameter, Type of type AGEPinType and returns an rttr::variant. It uses a switch statement to determine which variant to return based on the integer value of Type.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Type</code> An enumeration that specifies the type of variant to be returned. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>The function returns an rttr::variant corresponding to the input AGEPinType. If no matching case is found, it returns nullptr.</p>
+<p>GetValue is a function that returns an rttr::variant based on the input AGEPinType.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Type</code> The type of pin to get the value for. This can be one of several types defined in AGEPinType, including Boolean, Integer, Integer16, etc. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>rttr::variant The variant corresponding to the input type. If the type is not recognized, nullptr is returned. </p>
 <hr>
 
 <h3 id="function-agepin">function ~AGEPin</h3>
+<p><em>Virtual destructor for the</em> <a href="./"><em><strong>AGEPin</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">virtual AGE::AGEPin::~AGEPin () = default
 </code></pre>
+<p>This function is responsible for freeing any resources that were allocated by the object, such as memory or file handles. It's a virtual function because it can be overridden in derived classes to provide specific cleanup behavior.</p>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Virtual destructor for the <a href="./"><strong>AGEPin</strong></a> class.</p>
+<p>This function is responsible for releasing any resources that were acquired by the object during its lifetime, such as memory or file handles. It does not perform any specific actions related to the AGEPIN object itself.</p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
 <h3 id="function-deserialize">function Deserialize</h3>
+<p><em>Deserialize function for the</em> <a href="./"><em><strong>AGEPin</strong></em></a> <em>structure. This function reads data from a</em><a href="../class_a_g_e_1_1_data_reader/"><em><strong>DataReader</strong></em></a> <em>object and populates an</em><a href="./"><em><strong>AGEPin</strong></em></a> <em>object with it. The function assumes that the</em><a href="../class_a_g_e_1_1_data_reader/"><em><strong>DataReader</strong></em></a> <em>is correctly initialized and ready to read data.</em></p>
 <pre><code class="language-C++">static inline void AGE::AGEPin::Deserialize (
     DataReader * Serializer,
     AGEPin &amp; Data
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Serializer</code> Pointer to the <a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> object which provides the serialized data. </li>
+<li><code>Data</code> Reference to the <a href="./"><strong>AGEPin</strong></a> object where the deserialized data will be stored.</li>
+</ul>
+<p>Deserialize function for <a href="./"><strong>AGEPin</strong></a> data.</p>
+<p>This function reads various types of data from a <a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> object and assigns them to an <a href="./"><strong>AGEPin</strong></a> object. It handles different types such as uint64_t, <a href="../class_a_g_e_1_1_u_u_i_d/"><strong>UUID</strong></a>, bool, int, int16_t, int64_t, uint16_t, uint32_t, uint64_t, float, <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a>, <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a>, and <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a>.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Serializer</code> Pointer to the <a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> object that provides serialized data. </li>
+<li><code>Data</code> Reference to the <a href="./"><strong>AGEPin</strong></a> object where the deserialized data will be stored. </li>
+</ul>
 <hr>
 
 <h3 id="function-serialize">function Serialize</h3>
+<p><em>This function serializes an</em> <a href="./"><em><strong>AGEPin</strong></em></a> <em>object into a</em><a href="../class_a_g_e_1_1_data_writer/"><em><strong>DataWriter</strong></em></a> <em>.</em></p>
 <pre><code class="language-C++">static inline void AGE::AGEPin::Serialize (
     DataWriter * Serializer,
     const AGEPin &amp; Data
 ) 
 </code></pre>
+<p>The function writes various properties of the <a href="./"><strong>AGEPin</strong></a>, including its ID, NextNodeID, Name, Type, Kind, String, Boolean, Integer, Integer16, Integer64, UInteger16, UInteger32, UInteger64, Value, Vector2D, Vector3D, and Vector4D. It also handles the case where an object pointer is present in the <a href="./"><strong>AGEPin</strong></a>. If it exists, a boolean value of true is written to indicate that an object is being serialized, followed by its <a href="../class_a_g_e_1_1_u_u_i_d/"><strong>UUID</strong></a>. Otherwise, a boolean value of false is written.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Serializer</code> Pointer to the <a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> instance which will be used for serialization. </li>
+<li><code>Data</code> Const reference to the <a href="./"><strong>AGEPin</strong></a> object that needs to be serialized.</li>
+</ul>
+<p>This function serializes an <a href="./"><strong>AGEPin</strong></a> object into a <a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a>.</p>
+<p>The function writes various properties of the <a href="./"><strong>AGEPin</strong></a> to the provided <a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a>, including its ID, NextNodeID, Name, Type, Kind, String, Boolean, Integer, Integer16, Integer64, UInteger16, UInteger32, UInteger64, Value, Vector2D, Vector3D, and Vector4D.</p>
+<p>It also checks if the <a href="./"><strong>AGEPin</strong></a> has an associated <a href="../class_a_g_e_1_1_scriptable_entity/"><strong>ScriptableEntity</strong></a> object (ObjPtr). If it does, it writes a true flag followed by the <a href="../class_a_g_e_1_1_u_u_i_d/"><strong>UUID</strong></a> of the associated entity; otherwise, it writes a false flag.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Serializer</code> Pointer to the <a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> where the serialized data will be written. </li>
+<li><code>Data</code> The <a href="./"><strong>AGEPin</strong></a> object that needs to be serialized. </li>
+</ul>
 <hr>
 
 <hr />

@@ -58,16 +58,16 @@
 
 | Type | Name |
 | ---: | :--- |
-|   | [**CircleRendererComponent**](#function-circlerenderercomponent-12) () = default<br> |
-|   | [**CircleRendererComponent**](#function-circlerenderercomponent-22) (const [**CircleRendererComponent**](struct_a_g_e_1_1_circle_renderer_component.md) &) = default<br> |
+|   | [**CircleRendererComponent**](#function-circlerenderercomponent-12) () = default<br>_Default constructor for the_ [_**CircleRendererComponent**_](struct_a_g_e_1_1_circle_renderer_component.md) _class._ |
+|   | [**CircleRendererComponent**](#function-circlerenderercomponent-22) (const [**CircleRendererComponent**](struct_a_g_e_1_1_circle_renderer_component.md) &) = default<br>_Default copy constructor for the_ [_**CircleRendererComponent**_](struct_a_g_e_1_1_circle_renderer_component.md) _class. This function is used to create a new instance of the class by copying an existing one, which can be useful in certain situations such as when you need to pass objects around by value or return them from functions._ |
 
 
 ## Public Static Functions
 
 | Type | Name |
 | ---: | :--- |
-|  void | [**Deserialize**](#function-deserialize) ([**DataReader**](class_a_g_e_1_1_data_reader.md) \* Serializer, [**CircleRendererComponent**](struct_a_g_e_1_1_circle_renderer_component.md) & Data) <br> |
-|  void | [**Serialize**](#function-serialize) ([**DataWriter**](class_a_g_e_1_1_data_writer.md) \* Serializer, const [**CircleRendererComponent**](struct_a_g_e_1_1_circle_renderer_component.md) & Data) <br> |
+|  void | [**Deserialize**](#function-deserialize) ([**DataReader**](class_a_g_e_1_1_data_reader.md) \* Serializer, [**CircleRendererComponent**](struct_a_g_e_1_1_circle_renderer_component.md) & Data) <br>_This function deserializes a_ [_**CircleRendererComponent**_](struct_a_g_e_1_1_circle_renderer_component.md) _from the provided_[_**DataReader**_](class_a_g_e_1_1_data_reader.md) _object._ |
+|  void | [**Serialize**](#function-serialize) ([**DataWriter**](class_a_g_e_1_1_data_writer.md) \* Serializer, const [**CircleRendererComponent**](struct_a_g_e_1_1_circle_renderer_component.md) & Data) <br>_This function serializes the data of a circle renderer component into a_ [_**DataWriter**_](class_a_g_e_1_1_data_writer.md) _object._ |
 
 
 
@@ -142,6 +142,7 @@ float AGE::CircleRendererComponent::Thickness;
 
 ### function CircleRendererComponent [1/2]
 
+_Default constructor for the_ [_**CircleRendererComponent**_](struct_a_g_e_1_1_circle_renderer_component.md) _class._
 ```C++
 AGE::CircleRendererComponent::CircleRendererComponent () = default
 ```
@@ -155,6 +156,7 @@ AGE::CircleRendererComponent::CircleRendererComponent () = default
 
 ### function CircleRendererComponent [2/2]
 
+_Default copy constructor for the_ [_**CircleRendererComponent**_](struct_a_g_e_1_1_circle_renderer_component.md) _class. This function is used to create a new instance of the class by copying an existing one, which can be useful in certain situations such as when you need to pass objects around by value or return them from functions._
 ```C++
 AGE::CircleRendererComponent::CircleRendererComponent (
     const CircleRendererComponent &
@@ -164,6 +166,17 @@ AGE::CircleRendererComponent::CircleRendererComponent (
 
 
 
+
+**Parameters:**
+
+
+* `other` The existing instance of the class that will be copied. 
+
+
+
+
+        
+
 <hr>
 ## Public Static Functions Documentation
 
@@ -172,6 +185,7 @@ AGE::CircleRendererComponent::CircleRendererComponent (
 
 ### function Deserialize 
 
+_This function deserializes a_ [_**CircleRendererComponent**_](struct_a_g_e_1_1_circle_renderer_component.md) _from the provided_[_**DataReader**_](class_a_g_e_1_1_data_reader.md) _object._
 ```C++
 static inline void AGE::CircleRendererComponent::Deserialize (
     DataReader * Serializer,
@@ -181,6 +195,28 @@ static inline void AGE::CircleRendererComponent::Deserialize (
 
 
 
+The function reads data from the serialized format and populates the given [**CircleRendererComponent**](struct_a_g_e_1_1_circle_renderer_component.md) with this data.
+
+
+
+
+**Parameters:**
+
+
+* `Serializer` A pointer to the [**DataReader**](class_a_g_e_1_1_data_reader.md) object that contains the serialized data. 
+* `Data` Reference to the [**CircleRendererComponent**](struct_a_g_e_1_1_circle_renderer_component.md) where the deserialized data will be stored.
+
+
+
+**Returns:**
+
+void 
+
+
+
+
+
+        
 
 <hr>
 
@@ -188,6 +224,7 @@ static inline void AGE::CircleRendererComponent::Deserialize (
 
 ### function Serialize 
 
+_This function serializes the data of a circle renderer component into a_ [_**DataWriter**_](class_a_g_e_1_1_data_writer.md) _object._
 ```C++
 static inline void AGE::CircleRendererComponent::Serialize (
     DataWriter * Serializer,
@@ -197,6 +234,18 @@ static inline void AGE::CircleRendererComponent::Serialize (
 
 
 
+
+
+**Parameters:**
+
+
+* `Serializer` A pointer to the [**DataWriter**](class_a_g_e_1_1_data_writer.md) object where the data will be written. 
+* `Data` The [**CircleRendererComponent**](struct_a_g_e_1_1_circle_renderer_component.md) whose data is being serialized. 
+
+
+
+
+        
 
 <hr>
 

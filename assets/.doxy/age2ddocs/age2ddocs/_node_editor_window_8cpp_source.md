@@ -61,7 +61,8 @@ using C = AGE::Colors::Color;
 namespace AGE
 {
     template<typename T>
-    static void DrawProperties(rttr::type TargetType, rttr::instance Instance, Ref<ScriptableEntity> Target)
+    
+static void DrawProperties(rttr::type TargetType, rttr::instance Instance, Ref<ScriptableEntity> Target)
     {
         T* DerivedTarget = (T*)Target.get();
         if (ImGui::CollapsingHeader("Properties"))
@@ -149,7 +150,7 @@ namespace AGE
         }
     }
     Ref<AGEFont> NodeEditorWindow::s_Font = nullptr;
-    static void DrawVec2Control(const std::string& Label, Vector2& Values, float ResetValue = 0.f)
+static void DrawVec2Control(const std::string& Label, Vector2& Values, float ResetValue = 0.f)
     {
         ImGuiIO& io = ImGui::GetIO();
 
@@ -192,7 +193,9 @@ namespace AGE
 
     }
 
-    static void DrawVec3Control(const std::string& Label, Vector3& Values, float ResetValue = 0.f, float ColumnWidth = 100.f)
+    ```cpp
+```
+static void DrawVec3Control(const std::string& Label, Vector3& Values, float ResetValue = 0.f, float ColumnWidth = 100.f)
     {
         ImGuiIO& io = ImGui::GetIO();
 
@@ -250,7 +253,9 @@ namespace AGE
 
     }
 
-    static void DrawVec4Control(const std::string& Label, Vector4& Values, float ResetValue = 0.f, float ColumnWidth = 100.f)
+    ```cpp
+```C++
+static void DrawVec4Control(const std::string& Label, Vector4& Values, float ResetValue = 0.f, float ColumnWidth = 100.f)
     {
         ImGuiIO& io = ImGui::GetIO();
 
@@ -321,7 +326,8 @@ namespace AGE
 
     }
 
-    NodeEditorWindow::NodeEditorWindow(const std::string& WindowName, ax::NodeEditor::EditorContext* Context, void* Target, bool LoadingExisting)
+    
+NodeEditorWindow::NodeEditorWindow(const std::string& WindowName, ax::NodeEditor::EditorContext* Context, void* Target, bool LoadingExisting)
         :m_Name(WindowName), m_bLoadingExisting(LoadingExisting), m_Context(Context)
     {
         AppConfig Config = App::Get().GetAppConfig();
@@ -350,11 +356,11 @@ namespace AGE
             SyncLinks();
         }
     }
-    NodeEditorWindow::~NodeEditorWindow()
+NodeEditorWindow::~NodeEditorWindow()
     {
 
     }
-    void NodeEditorWindow::OnAttach()
+void NodeEditorWindow::OnAttach()
     {
         AppConfig Config = App::Get().GetAppConfig();
         ax::NodeEditor::SetCurrentEditor(m_Context);
@@ -372,7 +378,7 @@ namespace AGE
         m_RestoreIcon = Texture2D::Create(Config.EditorAssetPath.string() + "/VisualScriptingTextures/RestoreIcon.png");
         m_SaveIcon = Texture2D::Create(Config.EditorAssetPath.string() + "/VisualScriptingTextures/SaveIcon.png");
     }
-    void NodeEditorWindow::OnImGuiRender(TimeStep DeltaTime)
+void NodeEditorWindow::OnImGuiRender(TimeStep DeltaTime)
     {
         if (m_IsOpen)
         {
@@ -380,7 +386,8 @@ namespace AGE
         }
     }
 
-    void NodeEditorWindow::RenderWindow(bool* Opened, TimeStep DeltaTime)
+    
+void NodeEditorWindow::RenderWindow(bool* Opened, TimeStep DeltaTime)
     {
         if (ImGui::Begin(m_Name.c_str(), Opened))
         {
@@ -632,11 +639,11 @@ namespace AGE
         }
     }
 
-    ImRect NodeEditorWindow::ImGui_GetItemRect()
+ImRect NodeEditorWindow::ImGui_GetItemRect()
     {
         return ImRect(ImGui::GetItemRectMin(), ImGui::GetItemRectMax());    
     }
-    ImRect NodeEditorWindow::ImRect_Expanded(const ImRect& Rect, float x, float y)
+ImRect NodeEditorWindow::ImRect_Expanded(const ImRect& Rect, float x, float y)
     {
         auto Result = Rect;
 
@@ -647,19 +654,19 @@ namespace AGE
 
         return Result;
     }
-    uint32_t NodeEditorWindow::GetNextID()
+uint32_t NodeEditorWindow::GetNextID()
     {
         return NodeEditorManager::GetNewNodeID();
     }
-    ax::NodeEditor::LinkId NodeEditorWindow::GetNextLinkID()
+ax::NodeEditor::LinkId NodeEditorWindow::GetNextLinkID()
     {
         return ax::NodeEditor::LinkId(GetNextID());
     }
-    void NodeEditorWindow::TouchNode(ax::NodeEditor::NodeId ID)
+void NodeEditorWindow::TouchNode(ax::NodeEditor::NodeId ID)
     {
         m_NodeTouchTime[ID] = m_TouchTime;
     }
-    float NodeEditorWindow::GetTouchProgress(ax::NodeEditor::NodeId ID)
+float NodeEditorWindow::GetTouchProgress(ax::NodeEditor::NodeId ID)
     {
         auto it = m_NodeTouchTime.find(ID);
         if (it != m_NodeTouchTime.end() && it->second > 0.f)
@@ -669,7 +676,7 @@ namespace AGE
 
         return 0.0f;
     }
-    void NodeEditorWindow::UpdateTouch(float DeltaTime)
+void NodeEditorWindow::UpdateTouch(float DeltaTime)
     {
         for (auto& E : m_NodeTouchTime)
         {
@@ -679,7 +686,7 @@ namespace AGE
             }
         }
     }
-    Ref<AGENode> NodeEditorWindow::FindNode(ax::NodeEditor::NodeId ID)
+Ref<AGENode> NodeEditorWindow::FindNode(ax::NodeEditor::NodeId ID)
     {
         for (auto& N : m_Nodes)
         {
@@ -690,7 +697,7 @@ namespace AGE
         }
         return Ref<AGENode>();
     }
-    Ref<AGENodeLink> NodeEditorWindow::FindLink(ax::NodeEditor::LinkId ID)
+Ref<AGENodeLink> NodeEditorWindow::FindLink(ax::NodeEditor::LinkId ID)
     {
         for (auto& L : m_Links)
         {
@@ -702,7 +709,7 @@ namespace AGE
 
         return Ref<AGENodeLink>();
     }
-    Ref<AGENodeLink> NodeEditorWindow::FindLink(ax::NodeEditor::PinId ID)
+Ref<AGENodeLink> NodeEditorWindow::FindLink(ax::NodeEditor::PinId ID)
     {
         for (auto& L : m_Links)
         {
@@ -714,7 +721,7 @@ namespace AGE
 
         return Ref<AGENodeLink>();
     }
-    Ref<AGEPin> NodeEditorWindow::FindPin(ax::NodeEditor::PinId ID)
+Ref<AGEPin> NodeEditorWindow::FindPin(ax::NodeEditor::PinId ID)
     {
         if (!ID)
         {
@@ -742,7 +749,11 @@ namespace AGE
 
         return Ref<AGEPin>();
     }
-    ImColor NodeEditorWindow::GetIconColor(AGEPinType Type)
+COMMENT:
+"This function takes an enum of type AGEPinType as argument and returns an ImColor object corresponding to it."
+CONFIDENCE: 1.0;
+
+ImColor NodeEditorWindow::GetIconColor(AGEPinType Type)
     {
         switch (Type)
         {
@@ -766,7 +777,8 @@ namespace AGE
         case AGEPinType::Any:      return ImColor(C::Gray[0], C::Gray[1], C::Gray[2]);
         }
     }
-    void NodeEditorWindow::ShowStyleEditor(bool* Show)
+    
+void NodeEditorWindow::ShowStyleEditor(bool* Show)
     {
         if (!ImGui::Begin("Style", Show))
         {
@@ -841,7 +853,7 @@ namespace AGE
 
         ImGui::End();
     }
-    void NodeEditorWindow::ShowDetailPanel(bool* ShowPanel)
+void NodeEditorWindow::ShowDetailPanel(bool* ShowPanel)
     {
         if (!ImGui::Begin("Details", ShowPanel))
         {
@@ -860,7 +872,8 @@ namespace AGE
 
         ImGui::End();
     }
-    void NodeEditorWindow::ShowLeftPane(float PaneWidth)
+    
+void NodeEditorWindow::ShowLeftPane(float PaneWidth)
     {
         auto& io = ImGui::GetIO();
 
@@ -1069,7 +1082,8 @@ namespace AGE
 
         ImGui::EndChild();
     }
-    void NodeEditorWindow::DrawPinIcon(const Ref<AGEPin>& Pin, bool Connected, int Alpha)
+    
+void NodeEditorWindow::DrawPinIcon(const Ref<AGEPin>& Pin, bool Connected, int Alpha)
     {
         ax::Widgets::IconType iconType;
         ImColor Color = GetIconColor(Pin->Type);
@@ -1100,7 +1114,7 @@ namespace AGE
         
         ax::Widgets::Icon(ImVec2((float)m_PinIconSize, (float)m_PinIconSize), iconType, Connected, Color, ImColor(32, 32, 32, Alpha));
     }
-    bool NodeEditorWindow::IsPinLinked(ax::NodeEditor::PinId ID)
+bool NodeEditorWindow::IsPinLinked(ax::NodeEditor::PinId ID)
     {
         if (!ID)
         {
@@ -1118,7 +1132,7 @@ namespace AGE
         return false;
 
     }
-    bool NodeEditorWindow::CanCreateLink(Ref<AGEPin> A, Ref<AGEPin> B)
+bool NodeEditorWindow::CanCreateLink(Ref<AGEPin> A, Ref<AGEPin> B)
     {
         if (!A || !B || A == B || A->Kind == B->Kind || A->Type != B->Type || A->Node == B->Node || 
             (B->Type == AGEPinType::Any && (A->Type != AGEPinType::Flow && A->Type != AGEPinType::Callback) ))
@@ -1127,7 +1141,7 @@ namespace AGE
         }
         return false;
     }
-    void NodeEditorWindow::BuildNode(Ref<AGENode> Node)
+void NodeEditorWindow::BuildNode(Ref<AGENode> Node)
     {
         for (auto& I : Node->Inputs)
         {
@@ -1141,14 +1155,15 @@ namespace AGE
             O->Kind = ax::NodeEditor::PinKind::Output;
         }
     }
-    void NodeEditorWindow::BuildNodes()
+void NodeEditorWindow::BuildNodes()
     {
         for (auto& N : m_Nodes)
         {
             BuildNode(N);
         }
     }
-    void NodeEditorWindow::DrawHeader(INEUtils::BlueprintNodeBuilder& Builder, Ref<AGENode>& Node, Ref<AGEPin>& newLinkPin,bool IsSimple, bool HasOutputCallbacks)
+    
+void NodeEditorWindow::DrawHeader(INEUtils::BlueprintNodeBuilder& Builder, Ref<AGENode>& Node, Ref<AGEPin>& newLinkPin,bool IsSimple, bool HasOutputCallbacks)
     {
         if (!IsSimple)
         {
@@ -1201,7 +1216,8 @@ namespace AGE
             Builder.EndHeader();
         }
     }
-    void NodeEditorWindow::DrawInputPins(INEUtils::BlueprintNodeBuilder& Builder, Ref<AGENode>& Node, Ref<AGEPin>& newLinkPin)
+    
+void NodeEditorWindow::DrawInputPins(INEUtils::BlueprintNodeBuilder& Builder, Ref<AGENode>& Node, Ref<AGEPin>& newLinkPin)
     {
         for (auto& I : Node->Inputs)
         {
@@ -1308,7 +1324,8 @@ namespace AGE
 
         }
     }
-    void NodeEditorWindow::DrawOutputPins(INEUtils::BlueprintNodeBuilder& Builder, Ref<AGENode>& Node, Ref<AGEPin>& newLinkPin, bool IsSimple)
+    
+void NodeEditorWindow::DrawOutputPins(INEUtils::BlueprintNodeBuilder& Builder, Ref<AGENode>& Node, Ref<AGEPin>& newLinkPin, bool IsSimple)
     {
         for (auto& O : Node->Outputs)
         {
@@ -1337,7 +1354,8 @@ namespace AGE
             Builder.EndOutput();
         }
     }
-    void NodeEditorWindow::DrawNodes(Ref<AGEPin>& newLinkPin)
+    
+void NodeEditorWindow::DrawNodes(Ref<AGEPin>& newLinkPin)
     {
         for (auto& N : m_Nodes)
         {
@@ -1489,7 +1507,7 @@ namespace AGE
             //ImGui::PopStyleVar();
         }
     }
-    void AGE::NodeEditorWindow::DrawAndCreateNewLink(Ref<AGEPin>& newLinkPin, std::function<void(const char*, ImColor)>ShowLabelFunction)
+void AGE::NodeEditorWindow::DrawAndCreateNewLink(Ref<AGEPin>& newLinkPin, std::function<void(const char*, ImColor)>ShowLabelFunction)
     {
         if (ax::NodeEditor::BeginCreate(ImColor(255, 255, 255), 2.f))
         {
@@ -1631,7 +1649,7 @@ namespace AGE
             }
         }
     }
-    void NodeEditorWindow::DrawAndCreateNewNode(Ref<AGEPin>& newLinkPin, Ref<AGEPin>& newNodeLinkPin, bool createNewNode, std::function<void(const char*, ImColor)> ShowLabelFunction)
+void NodeEditorWindow::DrawAndCreateNewNode(Ref<AGEPin>& newLinkPin, Ref<AGEPin>& newNodeLinkPin, bool createNewNode, std::function<void(const char*, ImColor)> ShowLabelFunction)
     {
         ax::NodeEditor::PinId PinID = 0;
 
@@ -1660,7 +1678,8 @@ namespace AGE
         }
 
     }
-    void NodeEditorWindow::DeleteNode()
+    
+void NodeEditorWindow::DeleteNode()
     {
         if (ax::NodeEditor::BeginDelete())
         {
@@ -1702,7 +1721,7 @@ namespace AGE
         }
     }
     
-    bool NodeEditorWindow::Splitter(bool SplitVertically, float Thickness, float* Size1, float* Size2, float Min_Size1, float Min_Size2, float SplitterLongAxisSize)
+bool NodeEditorWindow::Splitter(bool SplitVertically, float Thickness, float* Size1, float* Size2, float Min_Size1, float Min_Size2, float SplitterLongAxisSize)
     {
         ImGuiContext& G = *GImGui;
         ImGuiWindow* Window = G.CurrentWindow;
@@ -1713,7 +1732,7 @@ namespace AGE
         
         return ImGui::SplitterBehavior(BB, ID, SplitVertically ? ImGuiAxis_X : ImGuiAxis_Y, Size1, Size2, Min_Size1, Min_Size2, 0.f);
     }
-    Ref<AGENode> NodeEditorWindow::SpawnBeginPlayNode() //Change to BeginPlay and Duplicate of OnUpdate
+Ref<AGENode> NodeEditorWindow::SpawnBeginPlayNode() //Change to BeginPlay and Duplicate of OnUpdate
     {
         m_Nodes.emplace_back(CreateRef<AGENode>(GetNextID(), "Begin Play", ImColor(255,128,128)));
         m_Nodes.back()->Outputs.emplace_back(CreateRef<AGEPin>(GetNextID(), "", AGEPinType::Flow));
@@ -1722,7 +1741,8 @@ namespace AGE
         BuildNode(m_Nodes.back());
         return m_Nodes.back();
     }
-    Ref<AGENode> NodeEditorWindow::SpawnOnUpdateNode()
+    
+Ref<AGENode> NodeEditorWindow::SpawnOnUpdateNode()
     {
         m_Nodes.emplace_back(CreateRef<AGENode>(GetNextID(), "On Update", ImColor(255, 128, 128)));
         m_Nodes.back()->Outputs.emplace_back(CreateRef<AGEPin>(GetNextID(), "", AGEPinType::Flow));
@@ -1738,7 +1758,7 @@ namespace AGE
         BuildNode(m_Nodes.back());
         return m_Nodes.back();
     }
-    Ref<AGENode> NodeEditorWindow::SpawnOutputActionNode()
+Ref<AGENode> NodeEditorWindow::SpawnOutputActionNode()
     {
         m_Nodes.emplace_back(CreateRef<AGENode>(GetNextID(), "Output Action"));
         m_Nodes.back()->Inputs.emplace_back(CreateRef<AGEPin>(GetNextID(), "Sample", AGEPinType::Float));
@@ -1748,7 +1768,8 @@ namespace AGE
         BuildNode(m_Nodes.back());
         return m_Nodes.back();
     }
-    Ref<AGENode> NodeEditorWindow::SpawnPrintStringNode()
+    
+Ref<AGENode> NodeEditorWindow::SpawnPrintStringNode()
     {
         m_Nodes.emplace_back(CreateRef<AGENode>(GetNextID(), "Print String"));
         m_Nodes.back()->Inputs.emplace_back(CreateRef<AGEPin>(GetNextID(), "", AGEPinType::Flow));
@@ -1773,7 +1794,7 @@ namespace AGE
         BuildNode(m_Nodes.back());
         return m_Nodes.back();
     }
-    Ref<AGENode> NodeEditorWindow::SpawnLessThanNode()
+Ref<AGENode> NodeEditorWindow::SpawnLessThanNode()
     {
         m_Nodes.emplace_back(CreateRef<AGENode>(GetNextID(), "<", ImColor(128, 195, 248)));
         m_Nodes.back()->Type = AGENodeType::Simple;
@@ -1791,7 +1812,8 @@ namespace AGE
 
         return m_Nodes.back();
     }
-    Ref<AGENode> NodeEditorWindow::SpawnGreaterThanNode()
+    
+Ref<AGENode> NodeEditorWindow::SpawnGreaterThanNode()
     {
         m_Nodes.emplace_back(CreateRef<AGENode>(GetNextID(), ">", ImColor(128, 195, 248)));
         m_Nodes.back()->Type = AGENodeType::Simple;
@@ -1809,7 +1831,10 @@ namespace AGE
 
         return m_Nodes.back();
     }
-    Ref<AGENode> NodeEditorWindow::SpawnEqualToNode()
+    COMMENT:
+CONFIDENCE: 1.0;
+
+Ref<AGENode> NodeEditorWindow::SpawnEqualToNode()
     {
         m_Nodes.emplace_back(CreateRef<AGENode>(GetNextID(), "=", ImColor(128, 195, 248)));
         m_Nodes.back()->Type = AGENodeType::Simple;
@@ -1827,7 +1852,8 @@ namespace AGE
 
         return m_Nodes.back();
     }
-    Ref<AGENode> NodeEditorWindow::SpawnGTETNode()
+    
+Ref<AGENode> NodeEditorWindow::SpawnGTETNode()
     {
         m_Nodes.emplace_back(CreateRef<AGENode>(GetNextID(), ">=", ImColor(128, 195, 248)));
         m_Nodes.back()->Type = AGENodeType::Simple;
@@ -1845,7 +1871,7 @@ namespace AGE
 
         return m_Nodes.back();
     }
-    Ref<AGENode> NodeEditorWindow::SpawnLTETNode()
+Ref<AGENode> NodeEditorWindow::SpawnLTETNode()
     {
         m_Nodes.emplace_back(CreateRef<AGENode>(GetNextID(), "<=", ImColor(128, 195, 248)));
         m_Nodes.back()->Type = AGENodeType::Simple;
@@ -1862,7 +1888,8 @@ namespace AGE
 
         return m_Nodes.back();
     }
-    Ref<AGENode> NodeEditorWindow::SpawnMakeLiteralString()
+    
+Ref<AGENode> NodeEditorWindow::SpawnMakeLiteralString()
     {
         m_Nodes.emplace_back(CreateRef<AGENode>(GetNextID(), "Make String", ImColor(124, 21, 153)));
         m_Nodes.back()->Type = AGENodeType::Simple;
@@ -1876,7 +1903,7 @@ namespace AGE
         BuildNode(m_Nodes.back());
         return m_Nodes.back();
     }
-    Ref<AGENode> NodeEditorWindow::SpawnAppendString()
+Ref<AGENode> NodeEditorWindow::SpawnAppendString()
     {
         m_Nodes.emplace_back(CreateRef<AGENode>(GetNextID(), "Append String", ImColor(124, 21, 153)));
         m_Nodes.back()->Type = AGENodeType::Simple;
@@ -1892,7 +1919,8 @@ namespace AGE
         BuildNode(m_Nodes.back());
         return m_Nodes.back();
     }
-    Ref<AGENode> NodeEditorWindow::SpawnGetLocation2D()
+    
+Ref<AGENode> NodeEditorWindow::SpawnGetLocation2D()
     {
         m_Nodes.emplace_back(CreateRef<AGENode>(GetNextID(), "Get 2D Location", ImColor(C::Aquamarine[0], C::Aquamarine[1], C::Aquamarine[2])));
         m_Nodes.back()->Type = AGENodeType::Simple;
@@ -1918,7 +1946,8 @@ namespace AGE
         return m_Nodes.back();
     }
 
-    Ref<AGENode> NodeEditorWindow::SpawnSetLocation2D()
+    
+Ref<AGENode> NodeEditorWindow::SpawnSetLocation2D()
     {
         m_Nodes.emplace_back(CreateRef<AGENode>(GetNextID(), "Set 2D Location", ImColor(C::Aquamarine[0], C::Aquamarine[1], C::Aquamarine[2])));
         m_Nodes.back()->Inputs.emplace_back(CreateRef<AGEPin>(GetNextID(), "", AGEPinType::Flow));
@@ -1944,7 +1973,7 @@ namespace AGE
         return m_Nodes.back();
     }
 
-    Ref<AGENode> NodeEditorWindow::SpawnGetLocation3D()
+Ref<AGENode> NodeEditorWindow::SpawnGetLocation3D()
     {
         m_Nodes.emplace_back(CreateRef<AGENode>(GetNextID(), "Get 3D Location", ImColor(C::Aquamarine[0], C::Aquamarine[1], C::Aquamarine[2])));
         m_Nodes.back()->Type = AGENodeType::Simple;
@@ -1971,7 +2000,8 @@ namespace AGE
         return m_Nodes.back();
     }
 
-    Ref<AGENode> NodeEditorWindow::SpawnSetLocation3D()
+    
+Ref<AGENode> NodeEditorWindow::SpawnSetLocation3D()
     {
         m_Nodes.emplace_back(CreateRef<AGENode>(GetNextID(), "Set 3D Location", ImColor(C::Aquamarine[0], C::Aquamarine[1], C::Aquamarine[2])));
         m_Nodes.back()->Inputs.emplace_back(CreateRef<AGEPin>(GetNextID(), "", AGEPinType::Flow));
@@ -1997,7 +2027,7 @@ namespace AGE
         return m_Nodes.back();
     }
 
-    Ref<AGENode> NodeEditorWindow::SpawnToString()
+Ref<AGENode> NodeEditorWindow::SpawnToString()
     {
         m_Nodes.emplace_back(CreateRef<AGENode>(GetNextID(), "To String", ImColor(C::Chocolate[0], C::Chocolate[1], C::Chocolate[2])));
         m_Nodes.back()->Type = AGENodeType::Simple;
@@ -2015,7 +2045,8 @@ namespace AGE
         return m_Nodes.back();
     }
 
-    Ref<AGENode> NodeEditorWindow::SpawnGetActor()
+    
+Ref<AGENode> NodeEditorWindow::SpawnGetActor()
     {
         m_Nodes.emplace_back(CreateRef<AGENode>(GetNextID(), "Get Actor", ImColor(C::Cyan[0], C::Cyan[1], C::Cyan[2])));
         m_Nodes.back()->Type = AGENodeType::Simple;
@@ -2032,7 +2063,8 @@ namespace AGE
         return m_Nodes.back();
     }
 
-    Ref<AGENode> NodeEditorWindow::SpawnSum()
+    
+Ref<AGENode> NodeEditorWindow::SpawnSum()
     {
         m_Nodes.emplace_back(CreateRef<AGENode>(GetNextID(), "Sum", ImColor(C::Orange[0], C::Orange[1], C::Orange[2])));
         m_Nodes.back()->Type = AGENodeType::Simple;
@@ -2052,7 +2084,8 @@ namespace AGE
         return m_Nodes.back();
     }
 
-    Ref<AGENode> NodeEditorWindow::SpawnSubtract()
+    
+Ref<AGENode> NodeEditorWindow::SpawnSubtract()
     {
         m_Nodes.emplace_back(CreateRef<AGENode>(GetNextID(), "Subtract", ImColor(C::Orange[0], C::Orange[1], C::Orange[2])));
         m_Nodes.back()->Type = AGENodeType::Simple;
@@ -2072,7 +2105,8 @@ namespace AGE
         return m_Nodes.back();
     }
 
-    Ref<AGENode> NodeEditorWindow::SpawnMultiply()
+    
+Ref<AGENode> NodeEditorWindow::SpawnMultiply()
     {
         m_Nodes.emplace_back(CreateRef<AGENode>(GetNextID(), "Multiply", ImColor(C::Orange[0], C::Orange[1], C::Orange[2])));
         m_Nodes.back()->Type = AGENodeType::Simple;
@@ -2092,7 +2126,8 @@ namespace AGE
         return m_Nodes.back();
     }
 
-    Ref<AGENode> NodeEditorWindow::SpawnDivide()
+    "/**\n * @brief SpawnDivide creates a new divide node in the graph and adds it to the nodes list.\n * The function creates an AGENode with two float inputs and one output, sets its type as Simple,\n * builds the node, assigns a reference to itself for use in the execution context,\n * and finally returns the newly created node.\n * @return Ref<AGENode> A reference to the newly spawned divide node.\n */"
+Ref<AGENode> NodeEditorWindow::SpawnDivide()
     {
         m_Nodes.emplace_back(CreateRef<AGENode>(GetNextID(), "Divide", ImColor(C::Orange[0], C::Orange[1], C::Orange[2])));
         m_Nodes.back()->Type = AGENodeType::Simple;
@@ -2112,7 +2147,8 @@ namespace AGE
         return m_Nodes.back();
     }
 
-    Ref<AGENode> NodeEditorWindow::SpawnModulo()
+    
+Ref<AGENode> NodeEditorWindow::SpawnModulo()
     {
         m_Nodes.emplace_back(CreateRef<AGENode>(GetNextID(), "Modulo", ImColor(C::Orange[0], C::Orange[1], C::Orange[2])));
         m_Nodes.back()->Type = AGENodeType::Simple;
@@ -2132,7 +2168,7 @@ namespace AGE
         return m_Nodes.back();
     }
 
-    Ref<AGENode> NodeEditorWindow::SpawnPow()
+Ref<AGENode> NodeEditorWindow::SpawnPow()
     {
         m_Nodes.emplace_back(CreateRef<AGENode>(GetNextID(), "Pow", ImColor(C::Orange[0], C::Orange[1], C::Orange[2])));
         m_Nodes.back()->Type = AGENodeType::Simple;
@@ -2152,7 +2188,8 @@ namespace AGE
         return m_Nodes.back();
     }
 
-    Ref<AGENode> NodeEditorWindow::SpawnSquareRoot()
+    
+Ref<AGENode> NodeEditorWindow::SpawnSquareRoot()
     {
         m_Nodes.emplace_back(CreateRef<AGENode>(GetNextID(), "Square Root", ImColor(C::Orange[0], C::Orange[1], C::Orange[2])));
         m_Nodes.back()->Type = AGENodeType::Simple;
@@ -2169,7 +2206,8 @@ namespace AGE
         return m_Nodes.back();
     }
 
-    Ref<AGENode> NodeEditorWindow::SpawnCubeRoot()
+    
+Ref<AGENode> NodeEditorWindow::SpawnCubeRoot()
     {
         m_Nodes.emplace_back(CreateRef<AGENode>(GetNextID(), "Cube Root", ImColor(C::Orange[0], C::Orange[1], C::Orange[2])));
         m_Nodes.back()->Type = AGENodeType::Simple;
@@ -2186,7 +2224,7 @@ namespace AGE
         return m_Nodes.back();
     }
 
-    Ref<AGENode> NodeEditorWindow::SpawnDotProduct()
+Ref<AGENode> NodeEditorWindow::SpawnDotProduct()
     {
         m_Nodes.emplace_back(CreateRef<AGENode>(GetNextID(), "Dot", ImColor(C::Orange[0], C::Orange[1], C::Orange[2])));
         m_Nodes.back()->Type = AGENodeType::Simple;
@@ -2203,7 +2241,8 @@ namespace AGE
         return m_Nodes.back();
     }
 
-    Ref<AGENode> NodeEditorWindow::SpawnCrossProduct()
+    
+Ref<AGENode> NodeEditorWindow::SpawnCrossProduct()
     {
         m_Nodes.emplace_back(CreateRef<AGENode>(GetNextID(), "Cross", ImColor(C::Orange[0], C::Orange[1], C::Orange[2])));
         m_Nodes.back()->Type = AGENodeType::Simple;
@@ -2220,7 +2259,8 @@ namespace AGE
         return m_Nodes.back();
     }
 
-    Ref<AGENode> NodeEditorWindow::SpawnCosine()
+    
+Ref<AGENode> NodeEditorWindow::SpawnCosine()
     {
         m_Nodes.emplace_back(CreateRef<AGENode>(GetNextID(), "Cosine", ImColor(C::Orange[0], C::Orange[1], C::Orange[2])));
         m_Nodes.back()->Type = AGENodeType::Simple;
@@ -2236,7 +2276,8 @@ namespace AGE
         return m_Nodes.back();
     }
 
-    Ref<AGENode> NodeEditorWindow::SpawnSine()
+    
+Ref<AGENode> NodeEditorWindow::SpawnSine()
     {
         m_Nodes.emplace_back(CreateRef<AGENode>(GetNextID(), "Sine", ImColor(C::Orange[0], C::Orange[1], C::Orange[2])));
         m_Nodes.back()->Type = AGENodeType::Simple;
@@ -2252,7 +2293,8 @@ namespace AGE
         return m_Nodes.back();
     }
 
-    void NodeEditorWindow::RegisterFunctions()
+    
+void NodeEditorWindow::RegisterFunctions()
     {
         if (m_Target)
         {
@@ -2295,12 +2337,12 @@ namespace AGE
 
     }
 
-    void NodeEditorWindow::DeregisterFunctions()
+void NodeEditorWindow::DeregisterFunctions()
     {
         m_Target->ClearFunctions();
     }
 
-    void NodeEditorWindow::SyncLinks()
+void NodeEditorWindow::SyncLinks()
     {
         for (auto& L : m_Links)
         {
@@ -2329,7 +2371,7 @@ namespace AGE
             
         }
     }
-    void NodeEditorWindow::ShowNodeOptions(Ref<AGENode>& Node)
+void NodeEditorWindow::ShowNodeOptions(Ref<AGENode>& Node)
     {
         if (ImGui::MenuItem("Begin Play"))
         {
@@ -2473,12 +2515,12 @@ namespace AGE
             ImGui::CloseCurrentPopup();
         }
     }
-    void NodeEditorWindow::RebuildWindow()
+void NodeEditorWindow::RebuildWindow()
     {
         m_IsOpen = true;
     }
 
-    void NodeEditorWindow::SaveGraph()
+void NodeEditorWindow::SaveGraph()
     {
         AppConfig Config = App::Get().GetAppConfig();
         std::string Path = Config.GameContentPath.string() + "VisualScripting/" + m_Name + ".AGEasset";
@@ -2486,7 +2528,7 @@ namespace AGE
         Stream.WriteObject<NodeEditorWindow>(*this);
     }
 
-    void NodeEditorWindow::CompileGraph()
+void NodeEditorWindow::CompileGraph()
     {
         AppConfig Config = App::Get().GetAppConfig();
         bool bWasCompilationSuccessful = true;

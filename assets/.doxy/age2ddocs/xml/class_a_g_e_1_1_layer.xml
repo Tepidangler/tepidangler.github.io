@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Layer.h" line="36" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Layer.h" bodystart="36" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Layer.h" line="108" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Layer.h" bodystart="108" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -30,15 +30,39 @@
         <param>
           <type>const std::string &amp;</type>
           <declname>name</declname>
+          <defname>DebugName</defname>
           <defval>&quot;Layer&quot;</defval>
         </param>
         <briefdescription>
+<para>Constructs a <ref refid="class_a_g_e_1_1_layer" kindref="compound">Layer</ref> object with the given debug name. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is used to create a new <ref refid="class_a_g_e_1_1_layer" kindref="compound">Layer</ref> object, which can be used for various purposes such as logging or debugging. The debug name provided will be stored and can be accessed later using getDebugName() method.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>DebugName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string representing the debug name of the layer.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Constructs a <ref refid="class_a_g_e_1_1_layer" kindref="compound">Layer</ref> object with the given debug name.</para>
+<para>This function is used to create a new <ref refid="class_a_g_e_1_1_layer" kindref="compound">Layer</ref> object with a specific debug name. The debug name can be used for debugging purposes and provides context about the layer&apos;s purpose or functionality.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>DebugName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string representing the debug name of the layer. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Layer.h" line="15" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/Layer.cpp" bodystart="8" bodyend="13"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Layer.h" line="17" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/Layer.cpp" bodystart="22" bodyend="27"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_layer_1a73cc05425ad6d9489ea0df7f8e05aaad" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -47,12 +71,17 @@
         <name>~Layer</name>
         <qualifiedname>AGE::Layer::~Layer</qualifiedname>
         <briefdescription>
+<para>Destructor for the <ref refid="class_a_g_e_1_1_layer" kindref="compound">Layer</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This destructor does not perform any specific actions when called, but it is a necessary part of the class&apos;s interface as it releases any resources that were acquired during the lifetime of an object of this class.</para>
+<para><simplesect kind="return"><para>None.</para>
+</simplesect>
+Destructor for the <ref refid="class_a_g_e_1_1_layer" kindref="compound">Layer</ref> class. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Layer.h" line="17" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/Layer.cpp" bodystart="15" bodyend="18"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Layer.h" line="19" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/Layer.cpp" bodystart="39" bodyend="42"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_layer_1af893477a0d7c0f8c2091b354cc2e9c60" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -66,7 +95,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Layer.h" line="19" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Layer.h" bodystart="19" bodyend="19"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Layer.h" line="21" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Layer.h" bodystart="21" bodyend="21"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_layer_1a4105c08e49574db12903ee96ca6b2b40" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -77,12 +106,19 @@
         <reimplementedby refid="class_a_g_e_1_1_im_gui_layer_1aadd9ae8e8a05694a5cf5417267e1511e">OnAttach</reimplementedby>
         <reimplementedby refid="class_a_g_e_1_1_node_editor_window_1acbb626696acf0ae5d37967c1349dce03">OnAttach</reimplementedby>
         <briefdescription>
+<para>This function is called when the object is attached to a scene or game world. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>void</para>
+</simplesect>
+This function is called when the component is attached to a scene.</para>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Layer.h" line="21" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Layer.h" bodystart="21" bodyend="21"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Layer.h" line="33" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Layer.h" bodystart="33" bodyend="33"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_layer_1a2beda3c697aa711a2ee89242159b7286" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -92,12 +128,21 @@
         <qualifiedname>AGE::Layer::OnDetach</qualifiedname>
         <reimplementedby refid="class_a_g_e_1_1_im_gui_layer_1ae002d0a7d4e5642851027b49134705a1">OnDetach</reimplementedby>
         <briefdescription>
+<para>Detaches the component from its parent. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is called when a component is detached from its parent. It provides an opportunity for any necessary cleanup or notification to be done before the component is completely removed from use.</para>
+<para><simplesect kind="return"><para>void</para>
+</simplesect>
+Detaches the component from its parent.</para>
+<para>This function is called when a component is detached from its parent. It provides an opportunity for any necessary cleanup or notification to be done.</para>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Layer.h" line="23" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Layer.h" bodystart="23" bodyend="23"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Layer.h" line="49" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Layer.h" bodystart="49" bodyend="49"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_layer_1acfa8dc9b4fb5fe3da3abfd45b72af124" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -110,12 +155,35 @@
           <declname>DeltaTime</declname>
         </param>
         <briefdescription>
+<para>This function is called every frame to update the game state. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>DeltaTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time elapsed since the last frame, used for smooth movement and animation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void No return value expected as this function does not have a return statement.</para>
+</simplesect>
+This function is called every frame to update the game state based on the elapsed time since the last call.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>DeltaTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time step between the current and previous frames, used to calculate how much of an effect should be applied. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Layer.h" line="25" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Layer.h" bodystart="25" bodyend="25"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Layer.h" line="62" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Layer.h" bodystart="62" bodyend="62"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_layer_1acece7427764fe9b886043cbca5f3a158" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -130,12 +198,35 @@
           <declname>DeltaTime</declname>
         </param>
         <briefdescription>
+<para>This function is called every frame to render the ImGUI interface. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">DeltaTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time step for the current frame, indicating how much time has passed since the last frame. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void No return value expected as this function does not return any result.</para>
+</simplesect>
+This function is called every frame to render the ImGui interface.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">DeltaTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time step for the current frame, indicating how much time has passed since the last frame. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Layer.h" line="27" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Layer.h" bodystart="27" bodyend="27"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Layer.h" line="75" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Layer.h" bodystart="75" bodyend="75"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_layer_1a51c392ed96691b8419ac149ccab2f680" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -149,12 +240,34 @@
           <declname>Event</declname>
         </param>
         <briefdescription>
+<para>This function is called when an event occurs. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function takes a reference to an <ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref> object as its parameter, which contains information about the event that occurred. It does not return anything (void).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in"><ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- A reference to an <ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref> object containing details about the event.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This function is called when an event occurs.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The event that has occurred. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Layer.h" line="29" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Layer.h" bodystart="29" bodyend="29"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Layer.h" line="90" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Layer.h" bodystart="90" bodyend="90"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_layer_1a974e7a0816be4186a68c0e9b4e3312c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -163,12 +276,19 @@
         <name>GetTime</name>
         <qualifiedname>AGE::Layer::GetTime</qualifiedname>
         <briefdescription>
+<para>Get the current time in seconds since GLFW was initialized. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function uses glfwGetTime(), which returns the time in seconds since GLFW was initialized. The returned value is a double precision floating point number, so it can be used for more precise timing measurements.</para>
+<para><simplesect kind="return"><para>A float representing the current time in seconds.</para>
+</simplesect>
+This function returns the time in seconds since GLFW was initialized, as a floating-point number. <simplesect kind="return"><para>A float representing the current time in seconds. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Layer.h" line="31" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/Layer.cpp" bodystart="19" bodyend="22"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Layer.h" line="92" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/Layer.cpp" bodystart="55" bodyend="58"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_layer_1aae3edc05253c18359508874c06ee0463" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const std::string &amp;</type>
@@ -177,12 +297,19 @@
         <name>GetName</name>
         <qualifiedname>AGE::Layer::GetName</qualifiedname>
         <briefdescription>
+<para>Returns the name of this object. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function returns a reference to a string that represents the name of this object. The returned value is constant and does not allow modification.</para>
+<para><simplesect kind="return"><para>A const reference to the debug name of this object.</para>
+</simplesect>
+Returns the name of this object. <simplesect kind="return"><para>A constant reference to a string containing the debug name. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Layer.h" line="33" column="26" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Layer.h" bodystart="33" bodyend="33"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Layer.h" line="105" column="26" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Layer.h" bodystart="105" bodyend="105"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -207,7 +334,7 @@
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Layer.h" line="11" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Layer.h" bodystart="12" bodyend="37"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Layer.h" line="13" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Layer.h" bodystart="14" bodyend="109"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_layer_1aae3edc05253c18359508874c06ee0463" prot="public" virt="non-virtual"><scope>AGE::Layer</scope><name>GetName</name></member>
       <member refid="class_a_g_e_1_1_layer_1a974e7a0816be4186a68c0e9b4e3312c1" prot="public" virt="non-virtual"><scope>AGE::Layer</scope><name>GetTime</name></member>

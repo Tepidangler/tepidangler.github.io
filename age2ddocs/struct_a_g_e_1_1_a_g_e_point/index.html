@@ -94,6 +94,10 @@
 <td style="text-align: right;">int32_t</td>
 <td style="text-align: left;"><a href="#variable-y"><strong>Y</strong></a>  <br></td>
 </tr>
+<tr>
+<td style="text-align: right;">COMMENT</td>
+<td style="text-align: left;"><a href="#variable-__pad0__"><strong>__pad0__</strong></a>  <br></td>
+</tr>
 </tbody>
 </table>
 <h2 id="public-functions">Public Functions</h2>
@@ -107,7 +111,7 @@
 <tbody>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-agepoint-12"><strong>AGEPoint</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-agepoint-12"><strong>AGEPoint</strong></a> () = default<br><em>Default constructor for the</em> <a href="./"><em><strong>AGEPoint</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
@@ -115,15 +119,15 @@
 </tr>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="#function-operator"><strong>operator!=</strong></a> (const <a href="./"><strong>AGEPoint</strong></a> &amp; Other) <br></td>
+<td style="text-align: left;"><a href="#function-operator"><strong>operator!=</strong></a> (const <a href="./"><strong>AGEPoint</strong></a> &amp; Other) <br><em>Compares two</em> <a href="./"><em><strong>AGEPoint</strong></em></a> <em>objects for inequality.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="#function-operator_1"><strong>operator==</strong></a> (const <a href="./"><strong>AGEPoint</strong></a> &amp; Other) <br></td>
+<td style="text-align: left;"><a href="#function-operator_1"><strong>operator==</strong></a> (const <a href="./"><strong>AGEPoint</strong></a> &amp; Other) <br><em>Compares two</em> <a href="./"><em><strong>AGEPoint</strong></em></a> <em>objects for equality based on their X and Y coordinates.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-agepoint"><strong>~AGEPoint</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-agepoint"><strong>~AGEPoint</strong></a> () = default<br><em>Default destructor for the</em> <a href="./"><em><strong>AGEPoint</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
@@ -137,8 +141,14 @@
 <pre><code class="language-C++">int32_t AGE::AGEPoint::Y;
 </code></pre>
 <hr>
+
+<h3 id="variable-__pad0__">variable __pad0__</h3>
+<pre><code class="language-C++">COMMENT AGE::AGEPoint::__pad0__;
+</code></pre>
+<hr>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-agepoint-12">function AGEPoint [1/2]</h3>
+<p><em>Default constructor for the</em> <a href="./"><em><strong>AGEPoint</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::AGEPoint::AGEPoint () = default
 </code></pre>
 <hr>
@@ -152,22 +162,42 @@
 <hr>
 
 <h3 id="function-operator">function operator!=</h3>
+<p><em>Compares two</em> <a href="./"><em><strong>AGEPoint</strong></em></a> <em>objects for inequality.</em></p>
 <pre><code class="language-C++">inline bool AGE::AGEPoint::operator!= (
     const AGEPoint &amp; Other
 ) 
 </code></pre>
+<p>This function compares the X and Y coordinates of two <a href="./"><strong>AGEPoint</strong></a> objects for inequality. It returns true if either or both the X and Y coordinates are not equal, otherwise it returns false.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Other</code> The <a href="./"><strong>AGEPoint</strong></a> object to compare with this one. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>True if the X and Y coordinates of the two <a href="./"><strong>AGEPoint</strong></a> objects are not equal, false otherwise. </p>
 <hr>
 
 <h3 id="function-operator_1">function operator==</h3>
+<p><em>Compares two</em> <a href="./"><em><strong>AGEPoint</strong></em></a> <em>objects for equality based on their X and Y coordinates.</em></p>
 <pre><code class="language-C++">inline bool AGE::AGEPoint::operator== (
     const AGEPoint &amp; Other
 ) 
 </code></pre>
+<p>This function compares the X and Y coordinates of two <a href="./"><strong>AGEPoint</strong></a> objects for exact match. It returns true if both the X and Y coordinates are equal, otherwise it returns false.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Other</code> The other <a href="./"><strong>AGEPoint</strong></a> object to compare with. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>True if this object's X and Y coordinates are exactly equal to the Other object's X and Y coordinates; False otherwise. </p>
 <hr>
 
 <h3 id="function-agepoint">function ~AGEPoint</h3>
+<p><em>Default destructor for the</em> <a href="./"><em><strong>AGEPoint</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::AGEPoint::~AGEPoint () = default
 </code></pre>
+<p>This function is used to clean up any resources that the object may be using, such as memory or file handles. It's important to ensure that all resources are properly released when an object is destroyed to prevent memory leaks or other issues.</p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <hr />

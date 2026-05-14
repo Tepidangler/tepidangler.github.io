@@ -58,23 +58,22 @@ namespace AGE
         TextVertex* TextVertexBufferBase = nullptr;
         TextVertex* TextVertexBufferPtr = nullptr;
 
-        Ref<VertexArray> TileVertexArray;
-        TilemapVertex* TileVertexBufferBase;
-        TilemapVertex* TileVertexBufferPtr;
-        uint32_t TileVertexCount = 0;
-        uint32_t TileIndexCount = 0;
-        Ref<Shader> TileShader;
-        Ref<class Tilemap> CurrentTilemap;
         std::array<Ref<Texture2D>, MaxTextureSlots> FontAtlasTextures;
-        std::array<Ref<Texture2D>, MaxTextureSlots> TileSetTextures;
+
+        std::vector<Ref<VertexArray>> TileVertexArrays;
+        std::vector<Ref<VertexBuffer>> TileVertexBuffers;
+        Ref<Shader> TileShader;
+
+        std::vector<uint32_t> TileIndexCounts;
+        std::vector<TileVertex*> TileVertexBufferBases;
+        std::vector<TileVertex*> TileVertexBufferPtrs;
+
 
         std::array<Ref<Texture2D>, MaxTextureSlots> TextureSlots;
         uint32_t TextureSlotIndex = 1; //0 Should ALWAYS be the white texture
         uint32_t AtlusSlotIndex = 1; //0 Should ALWAYS be the Default Atlus
-        uint32_t TilesetSlotIndex = 1; //0 Should ALWAYS be the Default Atlus
 
         Vector4 QuadVertexPositions[4];
-        Vector4 TileVertexPositions[6];
 
 
         struct CameraData
@@ -95,7 +94,7 @@ namespace AGE
 
 
         std::unordered_map<std::string, Ref<VertexBuffer>> VertexBuffers;
-        Ref<VertexBuffer> GetVertexBuffer(const std::string& Name)
+Ref<VertexBuffer> GetVertexBuffer(const std::string& Name)
         {
             return VertexBuffers[Name]; 
         }
@@ -108,7 +107,7 @@ namespace AGE
     {
     public:
 
-        virtual ~Pipeline() = default;
+virtual ~Pipeline() = default;
 
         virtual void Init() = 0;
         virtual void StartBatch2D() = 0;

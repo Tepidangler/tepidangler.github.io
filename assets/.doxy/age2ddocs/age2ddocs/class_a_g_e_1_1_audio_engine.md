@@ -52,8 +52,8 @@ Inherited by the following classes: [AGE::AGESound](class_a_g_e_1_1_a_g_e_sound.
 
 | Type | Name |
 | ---: | :--- |
-|  T \* | [**As**](#function-as-12) () <br> |
-|  [**AGESound**](class_a_g_e_1_1_a_g_e_sound.md) \* | [**As**](#function-as-22) () <br> |
+|  T \* | [**As**](#function-as-12) () <br>_This function is a placeholder and will always fail an assertion. It's used as a stub for future development._  |
+|  [**AGESound**](class_a_g_e_1_1_a_g_e_sound.md) \* | [**As**](#function-as-22) () <br>_This function returns a pointer to the_ [_**AGESound**_](class_a_g_e_1_1_a_g_e_sound.md) _object._ |
 | virtual std::string & | [**GetCurrentEventName**](#function-getcurrenteventname) () = 0<br> |
 | virtual void | [**Init**](#function-init) () = 0<br> |
 | virtual bool | [**IsEventValid**](#function-iseventvalid) (const std::string & EventName) = 0<br> |
@@ -67,7 +67,7 @@ Inherited by the following classes: [AGE::AGESound](class_a_g_e_1_1_a_g_e_sound.
 | virtual void | [**Start**](#function-start) () = 0<br> |
 | virtual void | [**Stop**](#function-stop) () = 0<br> |
 | virtual void | [**Update**](#function-update) () = 0<br> |
-| virtual  | [**~AudioEngine**](#function-audioengine) () = default<br> |
+| virtual  | [**~AudioEngine**](#function-audioengine) () = default<br>_Virtual destructor for the_ [_**AudioEngine**_](class_a_g_e_1_1_audio_engine.md) _class._ |
 
 
 ## Public Static Functions
@@ -108,6 +108,7 @@ Inherited by the following classes: [AGE::AGESound](class_a_g_e_1_1_a_g_e_sound.
 
 ### function As [1/2]
 
+_This function is a placeholder and will always fail an assertion. It's used as a stub for future development._ 
 ```C++
 template<typename T>
 T * AGE::AudioEngine::As () 
@@ -116,12 +117,31 @@ T * AGE::AudioEngine::As ()
 
 
 
+
+**Returns:**
+
+Unknown
+
+
+This function is a placeholder and should not be called directly. It always asserts false with an error message indicating that the [**As()**](class_a_g_e_1_1_audio_engine.md#function-as-12) function has failed. 
+
+**Returns:**
+
+Unknown 
+
+
+
+
+
+        
+
 <hr>
 
 
 
 ### function As [2/2]
 
+_This function returns a pointer to the_ [_**AGESound**_](class_a_g_e_1_1_a_g_e_sound.md) _object._
 ```C++
 template<>
 AGESound * AGE::AudioEngine::As () 
@@ -129,6 +149,27 @@ AGESound * AGE::AudioEngine::As ()
 
 
 
+The function is used to obtain an instance of [**AGESound**](class_a_g_e_1_1_a_g_e_sound.md) that can be cast back into its original class type using dynamic\_cast. It does this by returning 'this' as a pointer to [**AGESound**](class_a_g_e_1_1_a_g_e_sound.md), which allows it to be treated as if it were an instance of the [**AGESound**](class_a_g_e_1_1_a_g_e_sound.md) class.
+
+
+
+
+**Returns:**
+
+A pointer to the [**AGESound**](class_a_g_e_1_1_a_g_e_sound.md) object.
+
+
+This function returns a pointer to [**AGESound**](class_a_g_e_1_1_a_g_e_sound.md) object casted from the current instance of [**AudioEngine**](class_a_g_e_1_1_audio_engine.md). 
+
+**Returns:**
+
+A pointer to an [**AGESound**](class_a_g_e_1_1_a_g_e_sound.md) object, or nullptr if this is not an [**AGESound**](class_a_g_e_1_1_a_g_e_sound.md) instance. 
+
+
+
+
+
+        
 
 <hr>
 
@@ -318,12 +359,17 @@ virtual void AGE::AudioEngine::Update () = 0
 
 ### function ~AudioEngine 
 
+_Virtual destructor for the_ [_**AudioEngine**_](class_a_g_e_1_1_audio_engine.md) _class._
 ```C++
 virtual AGE::AudioEngine::~AudioEngine () = default
 ```
 
 
 
+This function is responsible for releasing any resources that were acquired by the [**AudioEngine**](class_a_g_e_1_1_audio_engine.md) instance, such as memory or file handles. It does not return anything (void) and thus it doesn't need a Doxygen comment to specify its return type. 
+
+
+        
 
 <hr>
 ## Public Static Functions Documentation

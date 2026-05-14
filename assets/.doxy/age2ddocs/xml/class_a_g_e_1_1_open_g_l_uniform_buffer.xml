@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="93" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" bodystart="93" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="112" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" bodystart="112" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -35,12 +35,49 @@
           <declname>Binding</declname>
         </param>
         <briefdescription>
+<para>Constructor for <ref refid="class_a_g_e_1_1_open_g_l_uniform_buffer" kindref="compound">OpenGLUniformBuffer</ref>. Creates a new uniform buffer object with the specified size and binding point. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the buffer in bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Binding</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The binding point for this buffer, which determines its location in the shader program.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Constructor for <ref refid="class_a_g_e_1_1_open_g_l_uniform_buffer" kindref="compound">OpenGLUniformBuffer</ref>. Initializes an OpenGL uniform buffer object with the specified size and binding point.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the buffer in bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Binding</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The binding point for this buffer, which determines its location in the shader program. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="83" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="230" bodyend="235"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="102" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="619" bodyend="624"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_uniform_buffer_1ad81c6a50305df7417b5006a058b9fa77" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -49,12 +86,16 @@
         <name>~OpenGLUniformBuffer</name>
         <qualifiedname>AGE::OpenGLUniformBuffer::~OpenGLUniformBuffer</qualifiedname>
         <briefdescription>
+<para>Destructor for the <ref refid="class_a_g_e_1_1_open_g_l_uniform_buffer" kindref="compound">OpenGLUniformBuffer</ref> class. This function deletes a buffer object from OpenGL using glDeleteBuffers(). The buffer to be deleted is specified by its ID, which is stored in m_RendererID member variable of this instance. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>void</para>
+</simplesect>
+Destructor for the <ref refid="class_a_g_e_1_1_open_g_l_uniform_buffer" kindref="compound">OpenGLUniformBuffer</ref> class. This function deletes a buffer object from OpenGL using glDeleteBuffers(). The buffer to be deleted is specified by its ID, which is stored in m_RendererID member variable of this instance. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="85" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="236" bodyend="239"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="104" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="637" bodyend="640"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_uniform_buffer_1a98f99ea274ac8f581bcaa4e81c0d6b42" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -64,12 +105,28 @@
         <qualifiedname>AGE::OpenGLUniformBuffer::Bind</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_uniform_buffer_1ae6f018a0fc8ed1824f898fd9dcb6a12f">Bind</reimplements>
         <briefdescription>
+<para>Bind the uniform buffer to a specific binding point in the GPU&apos;s memory. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function binds the uniform buffer object (UBO) to a specific binding point in the OpenGL context. The UBO is essentially an array of uniform variables that can be accessed by shaders.</para>
+<para><simplesect kind="return"><para>void No return value.</para>
+</simplesect>
+Bind the uniform buffer to a specific binding point in the GPU&apos;s memory.</para>
+<para>This function binds the uniform buffer object (UBO) to a specific binding point in the GPU&apos;s memory. The binding point is specified by an integer argument, &apos;bindingPoint&apos;. It allows data to be sent to shaders for rendering without having to re-upload it every frame.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">bindingPoint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An integer specifying the binding point in the GPU&apos;s memory where the UBO should be bound. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="87" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="240" bodyend="242"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="106" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="655" bodyend="657"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_uniform_buffer_1a88526944903546f6a39f9349d6e10d89" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -79,12 +136,19 @@
         <qualifiedname>AGE::OpenGLUniformBuffer::Unbind</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_uniform_buffer_1a56568838877758ba500a7eb780571bb4">Unbind</reimplements>
         <briefdescription>
+<para>Unbind function for the <ref refid="class_a_g_e_1_1_open_g_l_uniform_buffer" kindref="compound">OpenGLUniformBuffer</ref> class. This function sets the buffer to an unbound state, meaning it is no longer bound to a target. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>void</para>
+</simplesect>
+Unbind function for the <ref refid="class_a_g_e_1_1_open_g_l_uniform_buffer" kindref="compound">OpenGLUniformBuffer</ref> class. This function is used to unbind any buffer that has been bound in the current context. It sets the uniform binding point back to its default state, which is zero.</para>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="88" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="243" bodyend="245"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="107" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="669" bodyend="671"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_uniform_buffer_1a4dbe203380e4585a8639d470b13fb59d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -107,12 +171,67 @@
           <defval>0</defval>
         </param>
         <briefdescription>
+<para>This function sets the data of an OpenGL uniform buffer. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the data that will be copied into the named buffer&apos;s data store. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size in bytes of the data being uploaded. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The offset in bytes from the beginning of the buffer where the new data will be placed.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void</para>
+</simplesect>
+This function sets the data of an OpenGL uniform buffer.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the data that will be copied into the named buffer&apos;s data store. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size in bytes of the region of the buffer object that is being replaced. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The offset, in basic machine units, within the buffer object where the replacement will begin. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="89" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="246" bodyend="249"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="108" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLBuffer.cpp" bodystart="688" bodyend="691"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -143,7 +262,7 @@
         <link refid="class_a_g_e_1_1_uniform_buffer"/>
       </node>
     </collaborationgraph>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="79" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" bodystart="80" bodyend="94"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" line="98" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGLBuffer.h" bodystart="99" bodyend="113"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_uniform_buffer_1a903928c01ee11960debc6f49c4450803" prot="public" virt="non-virtual"><scope>AGE::OpenGLUniformBuffer</scope><name>As</name></member>
       <member refid="class_a_g_e_1_1_open_g_l_uniform_buffer_1a98f99ea274ac8f581bcaa4e81c0d6b42" prot="public" virt="virtual"><scope>AGE::OpenGLUniformBuffer</scope><name>Bind</name></member>

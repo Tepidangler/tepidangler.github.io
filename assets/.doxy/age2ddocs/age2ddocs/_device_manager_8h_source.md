@@ -22,8 +22,8 @@ namespace AGE
 
         AudioManager(AudioEngineType Type);
 
-        Ref<AudioEngine> GetAudioEngine() { return m_AudioEngine; }
-        AudioEngineType GetAudioEngineType() { return m_Type; }
+Ref<AudioEngine> GetAudioEngine() { return m_AudioEngine; }
+AudioEngineType GetAudioEngineType() { return m_Type; }
 
         void SwitchAudioEngine(AudioEngineType Type);
 
@@ -39,16 +39,16 @@ namespace AGE
     public:
 
         DeviceManager(AudioEngineType AudioEngine, bool UseXInput = false);
-        virtual ~DeviceManager() = default;
+virtual ~DeviceManager() = default;
 
-        inline AGEWindow& GetWindow() { return *m_Window; }
-        inline AudioManager& GetAudioManager() { return *m_AudioManager; }
+inline AGEWindow& GetWindow() { return *m_Window; }
+inline AudioManager& GetAudioManager() { return *m_AudioManager; }
 #ifdef AG_PLATFORM_WINDOWS
-        inline XInput& GetXInput() { return *m_XInput; }
+inline XInput& GetXInput() { return *m_XInput; }
 #endif
-        inline void UpdateWindow() { m_Window->OnUpdate(); }
+inline void UpdateWindow() { m_Window->OnUpdate(); }
 #ifdef AG_PLATFORM_WINDOWS
-        inline void PollInput() { m_XInput->PollControllers(); }
+inline void PollInput() { m_XInput->PollControllers(); }
 #endif
 
     private:

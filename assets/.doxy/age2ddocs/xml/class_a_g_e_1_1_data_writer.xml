@@ -12,12 +12,16 @@
         <name>~DataWriter</name>
         <qualifiedname>AGE::DataWriter::~DataWriter</qualifiedname>
         <briefdescription>
+<para>Virtual destructor for the <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is responsible for freeing any resources that were allocated by the <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref> object, such as memory or file handles. It does not return anything (void) and thus it doesn&apos;t need a Doxygen comment to explain its behavior.</para>
+<para>Virtual destructor for the <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref> class.</para>
+<para>This function is responsible for releasing any resources that were acquired by the object during its lifetime, such as memory or file handles. It does not return anything and has no parameters. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="13" column="9"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="23" column="9"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_data_writer_1ab2adde183d93b4ebd8f692512584dc72" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -33,7 +37,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="15" column="14"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="25" column="14"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_data_writer_1a4bff8ad0e0762dc50d0ba96e66498f1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>uint64_t</type>
@@ -49,7 +53,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="16" column="18"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="26" column="18"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_data_writer_1a9412692ac45ae08701bf5315b5aa9c07" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -69,7 +73,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="17" column="14"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="27" column="14"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_data_writer_1a523968a2786e5d90138df74e101f9365" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -93,7 +97,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="18" column="14"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="28" column="14"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_data_writer_1a3f96ae39ec061203c9c8ebfcfc7902bd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -102,12 +106,21 @@
         <name>operator bool</name>
         <qualifiedname>AGE::DataWriter::operator bool</qualifiedname>
         <briefdescription>
+<para>Checks the state of the stream. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function returns a boolean value indicating whether or not the underlying stream is in a good state. It does this by calling the private method <computeroutput>IsStreamGood()</computeroutput>, which should be implemented elsewhere in the class.</para>
+<para><simplesect kind="return"><para>A boolean value indicating if the stream is in a good state.</para>
+</simplesect>
+Checks the state of the stream.</para>
+<para>This function returns a boolean value indicating whether or not the stream is in a good state. It does this by calling the private method <computeroutput>IsStreamGood()</computeroutput>, which should be implemented elsewhere in the class.</para>
+<para><simplesect kind="return"><para>bool - Returns true if the stream is in a good state, false otherwise. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="20" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" bodystart="20" bodyend="20"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="44" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" bodystart="44" bodyend="44"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_data_writer_1a452f60aa620efbb975387570a3b247b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -125,12 +138,51 @@
           <defval>true</defval>
         </param>
         <briefdescription>
+<para>Writes a buffer to the data stream. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function writes a given buffer to the data stream. If the WriteSize parameter is true, it will first write the size of the buffer to the stream. The buffer&apos;s data and its size are then written to the stream. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to be written. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>WriteSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A flag indicating whether or not to write the size of the buffer to the stream.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void</para>
+</simplesect>
+Writes a buffer to the data stream.</para>
+<para>This function writes a given buffer to the data stream. It first checks if the WriteSize parameter is true and if so, it writes the size of the buffer as a uint64_t. Then it writes the actual data of the buffer. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to be written. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>WriteSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A flag indicating whether or not to write the size of the buffer. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="22" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Private/DataWriter.cpp" bodystart="25" bodyend="33"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="46" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Private/DataWriter.cpp" bodystart="81" bodyend="89"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_data_writer_1a9515ea3ee2bfbefaadb38955a72315b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -143,12 +195,35 @@
           <declname>Size</declname>
         </param>
         <briefdescription>
+<para>Writes a block of zeros to the data stream. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function writes a specified number of zero bytes to the data stream. It uses a loop to write each byte individually.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of zero bytes to write.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Writes a block of zeros to the data stream.</para>
+<para>This function writes a specified number of zero bytes to the data stream. The size of the block is determined by the input parameter &apos;Size&apos;.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of zero bytes to write to the data stream. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="23" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Private/DataWriter.cpp" bodystart="34" bodyend="41"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="47" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Private/DataWriter.cpp" bodystart="104" bodyend="111"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_data_writer_1a0aaef37101d4b2768cbd38211802032a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -161,12 +236,34 @@
           <declname>String</declname>
         </param>
         <briefdescription>
+<para>Writes a string to the data stream, including its length prefix. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>String</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to write. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>None.</para>
+</simplesect>
+Writes a string to the data stream, including its length prefix. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>String</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to write. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="24" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Private/DataWriter.cpp" bodystart="42" bodyend="48"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="48" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Private/DataWriter.cpp" bodystart="121" bodyend="127"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_data_writer_1a102599be50dde474a4338b4cf326fa61" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -184,12 +281,39 @@
           <declname>Type</declname>
         </param>
         <briefdescription>
+<para>Writes raw data of a specific type. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function writes raw data into the game file using the <computeroutput>WriteData</computeroutput> method. It takes an object of any type as input and converts it to a byte array before writing it. The size of this byte array is determined by the sizeof operator, which allows for different types to be handled uniformly.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An object of any type that can be converted into raw data. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void</para>
+</simplesect>
+Writes raw data of a specific type.</para>
+<para>This function writes raw data into the game file using the provided data and its size. It ensures that all data is written correctly by checking if the write operation was successful.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The reference to the data to be written. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="28" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" bodystart="28" bodyend="32"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="69" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" bodystart="69" bodyend="73"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_data_writer_1a8895c1fa7eb43eea981ce27c75df6b63" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -207,12 +331,33 @@
           <declname>Obj</declname>
         </param>
         <briefdescription>
+<para>This function writes an object to the stream by serializing it. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>T&amp; Obj - The reference to the object that needs to be written.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This function writes an object to the stream by serializing it using a static method.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>T&amp; Obj - A constant reference to the object that needs to be written. The type of this object must have a Serialize() method defined for it. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="35" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" bodystart="35" bodyend="38"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="86" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" bodystart="86" bodyend="89"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_data_writer_1a8ca73e32092bd6dbe55f37f7a4209457" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -238,12 +383,51 @@
           <defval>true</defval>
         </param>
         <briefdescription>
+<para>Writes a map to the underlying storage. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function writes a given map to the underlying storage. If WriteSize is true, it first writes the size of the map. Then for each key-value pair in the map, it checks if the Key and Value types are trivial (i.e., they can be copied using memcpy). If so, it directly writes them; otherwise, it uses a more complex serialization method.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Map</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The map to write. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>WriteSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Whether or not to write the size of the map first. Defaults to true.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void</para>
+</simplesect>
+Writes a map to the stream. If WriteSize is true, it writes the size of the map first. Then for each pair in the map, if Key and Value are trivial types, they are written directly; otherwise, WriteObject function is used. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Map</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The map to be written. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>WriteSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If true, write the size of the map before writing pairs. Defaults to true. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="41" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" bodystart="41" bodyend="68"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="108" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" bodystart="108" bodyend="135"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_data_writer_1afa8eb2ea4149c5aaeb42e00ef612cb0e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -269,12 +453,52 @@
           <defval>true</defval>
         </param>
         <briefdescription>
+<para>This function writes an unordered map to a data stream. It can optionally write the size of the map as well. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Map</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unordered map to be written. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>WriteSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A flag indicating whether or not to write the size of the map. Defaults to true.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Writes a map to the underlying storage.</para>
+<para>This function writes an unordered_map to the underlying storage. If WriteSize is true, it first writes the size of the map. Then for each key-value pair in the map, if the key and value types are trivial (i.e., they can be copied using memcpy), it directly writes them; otherwise, it uses a more complex serialization method.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Map</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unordered_map to write. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>WriteSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Whether or not to write the size of the map first. Defaults to true. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="71" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" bodystart="71" bodyend="98"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="153" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" bodystart="153" bodyend="180"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_data_writer_1a6e2db11307f941fd7ec89326e9a65382" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -297,12 +521,52 @@
           <defval>true</defval>
         </param>
         <briefdescription>
+<para>Writes a map to the stream. If WriteSize is true, it writes the size of the map first. Then for each key-value pair in the map, it writes the key as a string and the value. For trivial types, it directly writes the value using WriteRaw. For non-trivial types, it uses WriteObject. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Map</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unordered_map to write. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>WriteSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Whether or not to write the size of the map first. Defaults to true. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>None</para>
+</simplesect>
+Writes a map to the stream. If WriteSize is true, it writes the size of the map first. Then for each key-value pair in the map, it writes the key and value. For non-trivial types, it uses WriteObject function, otherwise it directly writes the value using WriteRaw function. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Map</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unordered_map to be written. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>WriteSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A flag indicating whether or not to write the size of the map first. Defaults to true. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>None </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="101" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" bodystart="101" bodyend="121"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="197" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" bodystart="197" bodyend="217"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_data_writer_1abce1cda67fe6ea10e28465418400d8ae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -325,12 +589,51 @@
           <defval>true</defval>
         </param>
         <briefdescription>
+<para>Writes an array to a stream. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function writes the elements of an array to a stream, optionally also writing its size. The type T must be trivially serializable or have a custom serialization method.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The array to write. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>WriteSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If true, the size of the array will be written first. Defaults to true.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Writes an array to a data stream.</para>
+<para>This function writes the elements of an array to a data stream, optionally including its size as well. The type <computeroutput>T</computeroutput> is expected to be trivially copyable or serializable. If it&apos;s not, then the object-specific write method (WriteObject&lt;T&gt;) will be used instead.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A const reference to the array that should be written. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>WriteSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An optional boolean indicating whether the size of the array should also be written. Default is true. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="124" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" bodystart="124" bodyend="143"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="236" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" bodystart="236" bodyend="255"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -355,7 +658,7 @@
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="9" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" bodystart="10" bodyend="144"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" line="9" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/DataWriter.h" bodystart="10" bodyend="256"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_data_writer_1a4bff8ad0e0762dc50d0ba96e66498f1b" prot="public" virt="pure-virtual"><scope>AGE::DataWriter</scope><name>GetStreamPosition</name></member>
       <member refid="class_a_g_e_1_1_data_writer_1ab2adde183d93b4ebd8f692512584dc72" prot="public" virt="pure-virtual"><scope>AGE::DataWriter</scope><name>IsStreamGood</name></member>

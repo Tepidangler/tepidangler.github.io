@@ -10,12 +10,14 @@
         <name>JsonParser</name>
         <qualifiedname>AGE::JsonParser::JsonParser</qualifiedname>
         <briefdescription>
+<para>Default constructor for <ref refid="class_a_g_e_1_1_json_parser" kindref="compound">JsonParser</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>Default constructor for <ref refid="class_a_g_e_1_1_json_parser" kindref="compound">JsonParser</ref> class. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/JsonParser.h" line="13" column="1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/JsonParser.h" line="19" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_json_parser_1a5cf2ecf5f3c0c0a3d21023827c590935" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -28,12 +30,34 @@
           <declname>FilePath</declname>
         </param>
         <briefdescription>
+<para>Constructor for <ref refid="class_a_g_e_1_1_json_parser" kindref="compound">JsonParser</ref> class. Initializes the object with a JSON file path to parse. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FilePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path of the JSON file to be parsed.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Constructs a <ref refid="class_a_g_e_1_1_json_parser" kindref="compound">JsonParser</ref> object with the given file path.</para>
+<para>This function initializes a new instance of the <ref refid="class_a_g_e_1_1_json_parser" kindref="compound">JsonParser</ref> class, which is used to parse JSON files. The file path provided should point to a valid JSON file.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FilePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string representing the path to the JSON file that will be parsed by this object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/JsonParser.h" line="14" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Parser/Private/JsonParser.cpp" bodystart="8" bodyend="11"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/JsonParser.h" line="20" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Parser/Private/JsonParser.cpp" bodystart="21" bodyend="24"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_json_parser_1af1cda4fed351c9994917e35b3341e6c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -60,7 +84,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/JsonParser.h" line="17" column="6"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/JsonParser.h" line="23" column="6"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -75,12 +99,39 @@
           <declname>Filepath</declname>
         </param>
         <briefdescription>
+<para>Loads a JSON file from the given path. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function attempts to load a JSON file at the provided path and returns its content as a nlohmann::json object. If the file does not exist, it logs an error message and returns an empty json object. If the file is empty or corrupted, it also logs a warning message and returns an empty json object.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Filepath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path to the JSON file to load. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>nlohmann::json An object containing the content of the loaded JSON file. Returns an empty json object if the file does not exist or is empty/corrupted.</para>
+</simplesect>
+Loads a JSON file from the given path.</para>
+<para>This function attempts to load a JSON file at the specified location and parse it into a nlohmann::json object. If the file does not exist, an empty json object is returned with a warning message. If the file exists but is empty or corrupted, another warning message is returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Filepath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path to the JSON file to load. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A nlohmann::json object containing the data from the loaded file, or an empty json object if the file does not exist or is empty/corrupted. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/JsonParser.h" line="19" column="23" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Parser/Private/JsonParser.cpp" bodystart="151" bodyend="175"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/JsonParser.h" line="25" column="23" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Parser/Private/JsonParser.cpp" bodystart="222" bodyend="246"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_json_parser_1a032c1f23831e5328f398a7be659ce328" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -93,12 +144,36 @@
           <declname>FilePath</declname>
         </param>
         <briefdescription>
+<para>Parses a JSON file and returns its content as a string. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FilePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path to the JSON file that should be parsed. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A string containing the contents of the JSON file, or an empty string if the file could not be opened or parsed.</para>
+</simplesect>
+Parses a JSON file and returns its content as a string. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FilePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path to the JSON file that should be parsed. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A string containing the contents of the JSON file, or an empty string if the file could not be opened or parsed. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/JsonParser.h" line="21" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Parser/Private/JsonParser.cpp" bodystart="176" bodyend="184"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/JsonParser.h" line="27" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Parser/Private/JsonParser.cpp" bodystart="257" bodyend="265"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_json_parser_1ac67c46ecc5338b81830e577187d6492b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -111,19 +186,46 @@
           <declname>String</declname>
         </param>
         <briefdescription>
+<para>Parses a JSON string and returns its array representation. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes in a JSON string, parses it using the nlohmann::json library, converts it to an array (if possible), and then returns this array as a string.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>String</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input JSON string to be parsed. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A string representation of the parsed JSON data&apos;s array. If the JSON data is not an array, &quot;Unknown&quot; will be returned.</para>
+</simplesect>
+Parses a JSON string and returns its array representation.</para>
+<para>This function takes in a JSON string, parses it using the nlohmann::json library, converts it to an array (if possible), and then returns this array as a string.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>String</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input JSON string that needs to be parsed. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A string representation of the parsed JSON data&apos;s array part. If the JSON data is not an array, or if it cannot be converted into a string, &quot;Unknown&quot; will be returned. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/JsonParser.h" line="23" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Parser/Private/JsonParser.cpp" bodystart="185" bodyend="191"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/JsonParser.h" line="29" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Parser/Private/JsonParser.cpp" bodystart="285" bodyend="291"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/JsonParser.h" line="9" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/JsonParser.h" bodystart="10" bodyend="25"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/JsonParser.h" line="9" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/JsonParser.h" bodystart="10" bodyend="31"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_json_parser_1a906375a59c60c02d40d6d206f9c1b2e1" prot="public" virt="non-virtual"><scope>AGE::JsonParser</scope><name>JsonParser</name></member>
       <member refid="class_a_g_e_1_1_json_parser_1a5cf2ecf5f3c0c0a3d21023827c590935" prot="public" virt="non-virtual"><scope>AGE::JsonParser</scope><name>JsonParser</name></member>

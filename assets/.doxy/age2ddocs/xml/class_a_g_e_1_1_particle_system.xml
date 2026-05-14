@@ -46,12 +46,34 @@
           <defval>100000</defval>
         </param>
         <briefdescription>
+<para>Constructs a <ref refid="class_a_g_e_1_1_particle_system" kindref="compound">ParticleSystem</ref> object with the specified maximum number of particles. </para>
         </briefdescription>
         <detaileddescription>
+<para>This constructor initializes the particle pool to the given size and sets up the random number generator for the indices. The m_PoolIndex is initialized as MaxParticles - 1, ensuring that the first call to GetNextFreeParticle() will return 0. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>MaxParticles</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The maximum number of particles that can be stored in the particle pool.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Constructs a <ref refid="class_a_g_e_1_1_particle_system" kindref="compound">ParticleSystem</ref> object with the specified maximum number of particles.</para>
+<para>Initializes the particle pool to the given size and sets up the random number generator for the indices.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>MaxParticles</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The maximum number of particles that can be in the system at any one time. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Particles/Public/ParticleSystem.h" line="28" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Particles/Private/ParticleSystem.cpp" bodystart="16" bodyend="22"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Particles/Public/ParticleSystem.h" line="28" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Particles/Private/ParticleSystem.cpp" bodystart="30" bodyend="36"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_particle_system_1ab00bdbdd5d6275a80902b3d29791feea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -62,14 +84,38 @@
         <param>
           <type><ref refid="class_a_g_e_1_1_time_step" kindref="compound">TimeStep</ref></type>
           <declname>DeltaTime</declname>
+          <defname>ts</defname>
         </param>
         <briefdescription>
+<para>This function updates the state of each particle in the system over a given time step. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function iterates through all particles in the system and performs several operations on them based on their current state. If a particle is not active, it will be skipped. For active particles, if their life remaining is less than or equal to zero, they are deactivated. Otherwise, their lifespan is reduced by the time step and their position is updated by adding their velocity times the time step. The rotation of the particle remains unaffected in this case.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time step over which to update the particles.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This function updates the state of each particle in the system over a given time step.</para>
+<para>The function iterates through all particles in the pool and performs several operations on them based on their current status. If a particle is not active, it is skipped. For active particles, if their life remaining is less than or equal to zero, they are deactivated. Otherwise, their lifespan is reduced by the time step size, and their position is updated by adding their velocity times the time step size. The rotation of each particle also increases over time.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The duration of the time step for which the particles should be updated. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Particles/Public/ParticleSystem.h" line="30" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Particles/Private/ParticleSystem.cpp" bodystart="24" bodyend="41"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Particles/Public/ParticleSystem.h" line="30" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Particles/Private/ParticleSystem.cpp" bodystart="54" bodyend="71"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_particle_system_1a45980ff6a4a0f4aba6ff47af1b562385" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -91,7 +137,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Particles/Public/ParticleSystem.h" line="31" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Particles/Private/ParticleSystem.cpp" bodystart="43" bodyend="62"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Particles/Public/ParticleSystem.h" line="31" column="6"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_particle_system_1af19a0ba9d783cafcc37e33e6aefec5a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -102,14 +148,38 @@
         <param>
           <type>const <ref refid="struct_a_g_e_1_1_particle_props" kindref="compound">ParticleProps</ref> &amp;</type>
           <declname>Properties</declname>
+          <defname>particleProps</defname>
         </param>
         <briefdescription>
+<para>Emit a new particle with the given properties. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function creates a new particle and initializes its properties based on the provided <ref refid="struct_a_g_e_1_1_particle_props" kindref="compound">ParticleProps</ref> object. The position, rotation, velocity, color, lifetime, size of the particle are set according to the values in the <ref refid="struct_a_g_e_1_1_particle_props" kindref="compound">ParticleProps</ref> object.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">particleProps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Properties for the new particle.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Emits a new particle with given properties.</para>
+<para>This function creates a new particle and initializes its properties based on the provided <ref refid="struct_a_g_e_1_1_particle_props" kindref="compound">ParticleProps</ref> object. The position, rotation, velocity, color, lifetime, size of the particle are set according to the values in the <ref refid="struct_a_g_e_1_1_particle_props" kindref="compound">ParticleProps</ref> object. The particle is then added to the pool of particles.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">particleProps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Properties for the new particle. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Particles/Public/ParticleSystem.h" line="33" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Particles/Private/ParticleSystem.cpp" bodystart="64" bodyend="86"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Particles/Public/ParticleSystem.h" line="33" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Particles/Private/ParticleSystem.cpp" bodystart="119" bodyend="141"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

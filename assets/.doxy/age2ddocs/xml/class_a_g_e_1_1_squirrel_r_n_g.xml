@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="85" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" bodystart="85" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="133" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" bodystart="133" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_squirrel_r_n_g_1afea46f161c5795912316f26e7d8c1559" prot="private" static="yes" mutable="no">
         <type>uint32_t</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="87" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" bodystart="87" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="135" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" bodystart="135" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_squirrel_r_n_g_1a64655ce51f958015879d5284d031177a" prot="private" static="yes" mutable="no">
         <type>int</type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="89" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" bodystart="89" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="137" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" bodystart="137" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_squirrel_r_n_g_1aea07152fbd841d94ef45e5be9b7b56d9" prot="private" static="yes" mutable="no">
         <type>int</type>
@@ -58,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="90" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" bodystart="90" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="138" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" bodystart="138" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -74,12 +74,35 @@
           <defval>0</defval>
         </param>
         <briefdescription>
+<para>Initializes the <ref refid="class_a_g_e_1_1_squirrel_r_n_g" kindref="compound">SquirrelRNG</ref> with a given seed. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function sets the initial seed for the random number generator and resets all other variables to their default state. The generated noise object is also created here.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Seed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The initial seed value for the RNG.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Initializes the <ref refid="class_a_g_e_1_1_squirrel_r_n_g" kindref="compound">SquirrelRNG</ref> with a given seed.</para>
+<para>This function sets the initial seed value for the random number generator, resets the position and rotation values to 0, creates a new instance of <ref refid="class_a_g_e_1_1_squirrel_noise" kindref="compound">SquirrelNoise</ref>, and assigns it to s_NoiseObj.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Seed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The initial seed value for the RNG. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="49" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="18" bodyend="24"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="49" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="33" bodyend="39"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_squirrel_r_n_g_1a4af143f270b477b9aaf9844e9d2b95bd" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -97,12 +120,53 @@
           <defval>0</defval>
         </param>
         <briefdescription>
+<para>Resets the seed and position for a pseudo-random number generator. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function sets the global variables <computeroutput>s_Seed</computeroutput> and <computeroutput>s_Position</computeroutput> to the provided values. The new seed is used as the starting point for generating pseudo-random numbers, while the position indicates the current position in the sequence of generated numbers.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Seed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A 32-bit unsigned integer that will be used as the new seed value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An optional parameter indicating the start position for generating pseudo-random numbers. Defaults to 0 if not provided. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void</para>
+</simplesect>
+Resets the seed value and position for a pseudo-random number generator.</para>
+<para>This function sets the global variables <computeroutput>s_Seed</computeroutput> and <computeroutput>s_Position</computeroutput> to the provided values, which are used by other functions in this class for generating pseudo-random numbers.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Seed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new seed value to use. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new position value to use (default is 0). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="52" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" bodystart="52" bodyend="56"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="69" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" bodystart="69" bodyend="73"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_squirrel_r_n_g_1a559c36d20dbe95faee77e38a10e4021f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint32_t</type>
@@ -111,12 +175,18 @@
         <name>GetSeed</name>
         <qualifiedname>AGE::SquirrelRNG::GetSeed</qualifiedname>
         <briefdescription>
+<para>This function returns the current seed value used for random number generation. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>The current seed value as a uint32_t.</para>
+</simplesect>
+This function returns the current seed value used for random number generation. <simplesect kind="return"><para>The current seed value as a uint32_t. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="58" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" bodystart="58" bodyend="58"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="83" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" bodystart="83" bodyend="83"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_squirrel_r_n_g_1a8d99814c0bb037123c39b46258da21f8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -129,12 +199,35 @@
           <declname>Position</declname>
         </param>
         <briefdescription>
+<para>Sets the current position value. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function sets the &apos;s_Position&apos; variable to a new integer value provided as an argument. It does not return anything, so it is void.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new integer value that will be set for &apos;s_Position&apos;.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Sets the current position to a given integer value.</para>
+<para>This function sets the static variable &apos;s_Position&apos; to the input parameter &apos;Position&apos;. It does not return anything, so it is void type.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new position to be set for s_Position. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="60" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" bodystart="60" bodyend="60"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="99" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" bodystart="99" bodyend="99"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_squirrel_r_n_g_1a3bb5a40e5820a2415933e651713ebd40" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -143,12 +236,19 @@
         <name>GetCurrentPosition</name>
         <qualifiedname>AGE::SquirrelRNG::GetCurrentPosition</qualifiedname>
         <briefdescription>
+<para>This function returns the current position value stored in &apos;s_Position&apos;. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>The integer value of the current position. If no such variable exists, it will return a default value of 0.</para>
+</simplesect>
+This function returns the current position.</para>
+<para><simplesect kind="return"><para>The integer value of the current position. If there is no such position, it will return -1. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="62" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" bodystart="62" bodyend="62"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="110" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" bodystart="110" bodyend="110"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_squirrel_r_n_g_1af3cf0a16de3e7a9099e6786a8d6a6251" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint32_t</type>
@@ -157,12 +257,21 @@
         <name>RollRandomUint32</name>
         <qualifiedname>AGE::SquirrelRNG::RollRandomUint32</qualifiedname>
         <briefdescription>
+<para>Generates a random uint32 number. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function generates and returns a pseudo-random unsigned integer of type uint32_t. The actual values returned are not truly random, but rather determined by the internal state of the <ref refid="class_a_g_e_1_1_squirrel_r_n_g" kindref="compound">SquirrelRNG</ref> object.</para>
+<para><simplesect kind="return"><para>A randomly generated uint32_t number. In this case, it always returns 0 as per the current implementation.</para>
+</simplesect>
+Generates a random uint32 number.</para>
+<para>This function uses the internal state of the Squirrel RNG to generate a random uint32 number. The generated value is deterministic and depends on the initial seed of the RNG.</para>
+<para><simplesect kind="return"><para>A pseudo-random 32-bit unsigned integer. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="66" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="26" bodyend="29"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="114" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="55" bodyend="58"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_squirrel_r_n_g_1acef70099eb67701ffb261e76f424e43f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint16_t</type>
@@ -171,12 +280,21 @@
         <name>RollRandomUint16</name>
         <qualifiedname>AGE::SquirrelRNG::RollRandomUint16</qualifiedname>
         <briefdescription>
+<para>Generates a random uint16_t value. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function generates and returns a pseudo-random uint16_t number using the <ref refid="class_a_g_e_1_1_squirrel_r_n_g" kindref="compound">SquirrelRNG</ref> algorithm. The returned value is uniformly distributed over its entire range of possible values, from 0 to 65535 (inclusive).</para>
+<para><simplesect kind="return"><para>A random uint16_t value.</para>
+</simplesect>
+Generates a random uint16 number between 0 and UINT16_MAX.</para>
+<para>This function uses the <ref refid="class_a_g_e_1_1_squirrel_r_n_g" kindref="compound">SquirrelRNG</ref> algorithm to generate a pseudorandom number in the range of uint16. The generated value is then returned as an unsigned 16-bit integer.</para>
+<para><simplesect kind="return"><para>An unsigned 16-bit integer representing the random number. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="68" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="31" bodyend="34"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="116" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="74" bodyend="77"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_squirrel_r_n_g_1a58b24459938d540372029f84231829f5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint8_t</type>
@@ -185,12 +303,21 @@
         <name>RollRandomByte</name>
         <qualifiedname>AGE::SquirrelRNG::RollRandomByte</qualifiedname>
         <briefdescription>
+<para>Generates a random byte using the Squirrel RNG algorithm. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function uses the Squirrel RNG algorithm to generate a random byte. The output is deterministic and can be used for cryptographic purposes if necessary.</para>
+<para><simplesect kind="return"><para>A randomly generated uint8_t value.</para>
+</simplesect>
+Generates a random byte using the Squirrel RNG algorithm.</para>
+<para>This function uses the Squirrel RNG algorithm to generate a random byte. It returns a constant value of 0, as per the implementation.</para>
+<para><simplesect kind="return"><para>A randomly generated byte (uint8_t). In this case, it always returns 0. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="70" column="16" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="36" bodyend="39"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="118" column="16" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="93" bodyend="96"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_squirrel_r_n_g_1a0510b51dcf3d590506ed83d092c078b1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint32_t</type>
@@ -203,12 +330,39 @@
           <declname>MaxValueNotInclusive</declname>
         </param>
         <briefdescription>
+<para>Generates a random integer less than the provided maximum value. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function generates a pseudo-random number using <ref refid="class_a_g_e_1_1_squirrel_r_n_g" kindref="compound">SquirrelRNG</ref> algorithm, which is then returned as an unsigned 32-bit integer. The generated number will be less than the provided MaxValueNotInclusive parameter. If this value is zero or negative, the behavior of this function is undefined.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>MaxValueNotInclusive</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An unsigned 32-bit integer specifying the upper limit for the random number to be generated (exclusive). Must be greater than zero. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pseudo-randomly generated unsigned 32-bit integer less than MaxValueNotInclusive.</para>
+</simplesect>
+Generates a random integer less than the provided maximum value.</para>
+<para>This function generates a pseudo-random number using <ref refid="class_a_g_e_1_1_squirrel_r_n_g" kindref="compound">SquirrelRNG</ref> algorithm and returns it. The returned number is guaranteed to be less than the provided MaxValueNotInclusive parameter. If MaxValueNotInclusive is zero, the function will return zero as well.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>MaxValueNotInclusive</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The upper limit of the random integer (exclusive). Must be greater than or equal to zero. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pseudo-random number less than MaxValueNotInclusive. If MaxValueNotInclusive is zero, returns zero. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="72" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="41" bodyend="44"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="120" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="115" bodyend="118"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_squirrel_r_n_g_1a45d767ce1ca779fbb6c8f1efb531d79d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -225,12 +379,55 @@
           <declname>MaxValueInclusive</declname>
         </param>
         <briefdescription>
+<para>Generates a random integer within the specified range. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function generates and returns a pseudo-random number between two given integers (inclusive). The generated number will be in the range [MinValueInclusive, MaxValueInclusive]. If MinValueInclusive &gt; MaxValueInclusive, an empty range is assumed which always returns MinValueInclusive.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>MinValueInclusive</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lower bound of the range (inclusive). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>MaxValueInclusive</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Upper bound of the range (inclusive).</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pseudo-random integer within the specified range.</para>
+</simplesect>
+Generates a random integer within the specified range.</para>
+<para>This function generates and returns a random integer between two given values (inclusive). The minimum value is inclusive, while the maximum value is also inclusive. If the provided min and max are equal, it will return that number as the result.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>MinValueInclusive</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The lower limit of the range from which to generate a random integer. Must be less than or equal to MaxValueInclusive. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>MaxValueInclusive</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The upper limit of the range from which to generate a random integer. Must be greater than or equal to MinValueInclusive.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A random integer within the specified range. If both min and max are equal, returns that number. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="73" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="46" bodyend="49"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="121" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="142" bodyend="145"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_squirrel_r_n_g_1a07c831c9d2b9fabf3a8ff9a6f583bfd4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -239,12 +436,19 @@
         <name>RollRandomFloatZeroToOne</name>
         <qualifiedname>AGE::SquirrelRNG::RollRandomFloatZeroToOne</qualifiedname>
         <briefdescription>
+<para>This function generates a random float between 0 and 1. </para>
         </briefdescription>
         <detaileddescription>
+<para>The generated number is obtained from the noise object associated with <ref refid="class_a_g_e_1_1_squirrel_r_n_g" kindref="compound">SquirrelRNG</ref> class. It uses Get1dNoiseZeroToOne method of the noise object to generate the number, which takes in two parameters: current position (s_Position) and a seed value (s_Seed). The s_Position is incremented after each call to this function to ensure uniqueness of the generated numbers.</para>
+<para><simplesect kind="return"><para>A float between 0 and 1 representing the random number.</para>
+</simplesect>
+This function generates a random float between 0 and 1. <simplesect kind="return"><para>A floating-point number in the range [0, 1). </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="74" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="51" bodyend="54"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="122" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="160" bodyend="163"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_squirrel_r_n_g_1af6fcf7987cfe7cc2d2b2a183d29d708d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -261,12 +465,55 @@
           <declname>MaxValueInclusive</declname>
         </param>
         <briefdescription>
+<para>RollRandomFloatInRange generates a random float within the specified range. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function uses a <ref refid="class_a_g_e_1_1_squirrel_r_n_g" kindref="compound">SquirrelRNG</ref> to generate a random float between two given values (MinValueInclusive and MaxValueInclusive). The generated number will be inclusive of both end points, meaning it could return either MinValueInclusive or MaxValueInclusive with equal probability.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>MinValueInclusive</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the lower limit of the range from which to generate a random float. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>MaxValueInclusive</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the upper limit of the range from which to generate a random float.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A random float within the specified range (MinValueInclusive, MaxValueInclusive]. The return value will be greater than or equal to MinValueInclusive and less than or equal to MaxValueInclusive with equal probability. If MinValueInclusive is greater than MaxValueInclusive, &quot;Unknown&quot; is returned.</para>
+</simplesect>
+Generates a random float within the specified range.</para>
+<para>This function generates a pseudo-random floating point number between two given values (inclusive). The generated value is determined by applying noise to the current position and seed, then scaling it to fit within the provided range.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>MinValueInclusive</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The lower limit of the range from which to generate the random float. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>MaxValueInclusive</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The upper limit of the range from which to generate the random float.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pseudo-random floating point number within the specified range. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="75" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="56" bodyend="61"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="123" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="186" bodyend="191"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_squirrel_r_n_g_1a02145e4b6cdf061fa2983de565bfc6fd" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -279,12 +526,37 @@
           <declname>ProbabilityofReturnTrue</declname>
         </param>
         <briefdescription>
+<para>This function rolls a random chance based on the given probability. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ProbabilityofReturnTrue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The probability of returning true, should be between 0 and 1. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool Returns true with the provided probability, false otherwise. If the input is not within [0,1], it returns false.</para>
+</simplesect>
+This function is used to roll a random chance based on the provided probability.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ProbabilityofReturnTrue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The probability of returning true, should be between 0 and 1.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool Returns true with the given probability, false otherwise. If the input probability is not within the range [0, 1], it will return false. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="76" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="63" bodyend="66"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="124" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="206" bodyend="209"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_squirrel_r_n_g_1a9065672ab7f0587b504d0505bbf26ade" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -301,12 +573,53 @@
           <declname>out_y</declname>
         </param>
         <briefdescription>
+<para>RollRandomDirection2D generates a random direction in two dimensions. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function uses the noise object to generate two values between 0 and 1 for x and y coordinates respectively. The generated values are stored in out_x and out_y.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">out_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to a float where the x coordinate will be stored. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">out_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to a float where the y coordinate will be stored.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void</para>
+</simplesect>
+Generates a random direction in 2D space.</para>
+<para>This function generates two random numbers using the noise object <computeroutput>s_NoiseObj</computeroutput> and assigns them to the output parameters <computeroutput>out_x</computeroutput> and <computeroutput>out_y</computeroutput>, respectively. The generated values are between 0 and 1.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">out_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to a float that will receive the x-coordinate of the random direction. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">out_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to a float that will receive the y-coordinate of the random direction. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="77" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="68" bodyend="72"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="125" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="229" bodyend="233"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_squirrel_r_n_g_1a35be0a204ed8949f3cd442203749e5ce" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -315,19 +628,27 @@
         <name>RollRandomRotationFloat</name>
         <qualifiedname>AGE::SquirrelRNG::RollRandomRotationFloat</qualifiedname>
         <briefdescription>
+<para>RollRandomRotationFloat generates a random float value for rotation. The function uses Perlin noise to generate a pseudo-random number and cast it to float. This is used as a means of generating a random float value that can be used for rotation purposes. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>A floating point number between 0 and 1 representing the generated random rotation.</para>
+</simplesect>
+This function returns a random float value.</para>
+<para>The function uses the Perlin noise algorithm to generate a pseudo-random number between 0 and 1. It increments the seed for each call, providing different values on subsequent calls.</para>
+<para><simplesect kind="return"><para>A floating point number in the range [0, 1]. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="78" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="74" bodyend="77"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="126" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Private/RNG.cpp" bodystart="249" bodyend="252"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="45" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" bodystart="46" bodyend="92"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" line="45" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/RNG/Public/RNG.h" bodystart="46" bodyend="140"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_squirrel_r_n_g_1a3bb5a40e5820a2415933e651713ebd40" prot="public" virt="non-virtual"><scope>AGE::SquirrelRNG</scope><name>GetCurrentPosition</name></member>
       <member refid="class_a_g_e_1_1_squirrel_r_n_g_1a559c36d20dbe95faee77e38a10e4021f" prot="public" virt="non-virtual"><scope>AGE::SquirrelRNG</scope><name>GetSeed</name></member>

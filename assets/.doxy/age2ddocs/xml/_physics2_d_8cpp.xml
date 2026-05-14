@@ -21,178 +21,178 @@
 <codeline lineno="6"><highlight class="normal"></highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">AGE</highlight></codeline>
 <codeline lineno="8"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Physics2D::CreateNewPhysicsWorld(Ref&lt;Scene&gt;<sp/>scene)</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_World<sp/>=<sp/>World::Create(scene);</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_World<sp/>==<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Physics2D::DestroyWorld()</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_World-&gt;DestroyWorld();</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_physics2_d_1aa946f6a04682792de0513006b5ac48b2" kindref="member">Physics2D::CreateNewPhysicsWorld</ref>(Ref&lt;Scene&gt;<sp/>scene)</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_World<sp/>=<sp/><ref refid="class_a_g_e_1_1_world_1abfcbd43bd0dc443e1e4fae65c42515f4" kindref="member">World::Create</ref>(scene);</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Physics2D::Step(<ref refid="class_a_g_e_1_1_time_step" kindref="compound">TimeStep</ref><sp/>DeltaTime)</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_World-&gt;Step(DeltaTime);</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>b2BodyId<sp/>Physics2D::CreateBody(b2BodyDef&amp;<sp/>Def)</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_World-&gt;As&lt;World2D&gt;()-&gt;CreateBody(Def);</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>b2BodyDef<sp/>Physics2D::MakeBodyDefinition(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BodyType&amp;<sp/>Type,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref>&amp;<sp/>Translation,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref>&amp;<sp/>Rotation,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>IsRotationFixed,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>UserData)</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_World-&gt;As&lt;World2D&gt;()-&gt;MakeBodyDefinition(Type,Translation,Rotation,IsRotationFixed,UserData);</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>b2ShapeDef<sp/>Physics2D::MakeShapeDefinition(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Density,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Friction,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Restitution,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ShouldGenerateEvents,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>UserData)</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_World-&gt;As&lt;World2D&gt;()-&gt;MakeShapeDefinition(Density,Friction,Restitution,ShouldGenerateEvents,UserData);</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>b2Rot<sp/>Physics2D::MakeRotation(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Z)</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_World-&gt;As&lt;World2D&gt;()-&gt;MakeRotation(Z);</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>b2Polygon<sp/>Physics2D::CreateBox(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>HeightX,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>HeightY,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref>&amp;<sp/>Scale)</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_World-&gt;As&lt;World2D&gt;()-&gt;CreateBox(HeightX,HeightY,Scale);</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>b2ShapeId<sp/>Physics2D::CreatePolygonShape(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>b2BodyId&amp;<sp/>ID,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>b2ShapeDef&amp;<sp/>Fixture,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>b2Polygon&amp;<sp/>Box)</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_World-&gt;As&lt;World2D&gt;()-&gt;CreatePolygonShape(ID,Fixture,Box);</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>b2Capsule<sp/>Physics2D::CreateCapsule(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref>&amp;<sp/>Offset,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref>&amp;<sp/>Scale,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Radius)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_World<sp/>==<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_physics2_d_1a1da615ee461b4a00fbfaa677ed7a4da9" kindref="member">Physics2D::DestroyWorld</ref>()</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_World-&gt;DestroyWorld();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_physics2_d_1aab2e4d5046befe7a103abf19c1a00ae6" kindref="member">Physics2D::Step</ref>(<ref refid="class_a_g_e_1_1_time_step" kindref="compound">TimeStep</ref><sp/>DeltaTime)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_World-&gt;Step(DeltaTime);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">b2BodyId<sp/><ref refid="class_a_g_e_1_1_physics2_d_1a7ca9eb4ef92b4f99aeb6dec5145d74c8" kindref="member">Physics2D::CreateBody</ref>(b2BodyDef&amp;<sp/>Def)</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_World-&gt;As&lt;World2D&gt;()-&gt;CreateCapsule(Offset,Scale,Radius);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_World-&gt;As&lt;World2D&gt;()-&gt;<ref refid="class_a_g_e_1_1_physics2_d_1a7ca9eb4ef92b4f99aeb6dec5145d74c8" kindref="member">CreateBody</ref>(Def);</highlight></codeline>
 <codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="61"><highlight class="normal"></highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>b2ShapeId<sp/>Physics2D::CreateCapsuleShape(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>b2BodyId&amp;<sp/>ID,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>b2ShapeDef&amp;<sp/>Fixture,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>b2Capsule&amp;<sp/>Capsule)</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_World-&gt;As&lt;World2D&gt;()-&gt;CreateCapsuleShape(ID,Fixture,Capsule);</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"></highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>b2Segment<sp/>Physics2D::CreateSegment()</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_World-&gt;As&lt;World2D&gt;()-&gt;CreateSegment();</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"></highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>b2ShapeId<sp/>Physics2D::CreateSegmentShape(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>b2BodyId&amp;<sp/>ID,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>b2ShapeDef&amp;<sp/>Fixture,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>b2Segment&amp;<sp/>Segment)</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_World-&gt;As&lt;World2D&gt;()-&gt;CreateSegmentShape(ID,Fixture,Segment);</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"></highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>b2BodyId<sp/>Physics2D::GetBody(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>b2ShapeId&amp;<sp/>ID)</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_World-&gt;As&lt;World2D&gt;()-&gt;GetBody(ID);</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref><sp/>Physics2D::GetBodyPosition(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>b2BodyId&amp;<sp/>ID)</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_World-&gt;As&lt;World2D&gt;()-&gt;GetBodyPosition(ID);</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"></highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>b2Polygon<sp/>Physics2D::GetPolygon(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>b2ShapeId&amp;<sp/>ID)</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_World-&gt;As&lt;World2D&gt;()-&gt;GetPolygon(ID);</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"></highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>b2Capsule<sp/>Physics2D::GetCapsule(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>b2ShapeId&amp;<sp/>ID)</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_World-&gt;As&lt;World2D&gt;()-&gt;GetCapsule(ID);</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"></highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>Physics2D::GetUserData(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>b2ShapeId&amp;<sp/>ID)</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_World-&gt;As&lt;World2D&gt;()-&gt;GetUserData(ID);</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"></highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Physics2D::GetRotationAngle(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>b2BodyId&amp;<sp/>ID)</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_World-&gt;As&lt;World2D&gt;()-&gt;GetRotationAngle(ID);</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"></highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Physics2D::QueryBoxOverlap(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_a_g_e_1_1_query_params" kindref="compound">QueryParams</ref>&amp;<sp/>Params)</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_World-&gt;QueryBoxOverlap(Params);</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"></highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Physics2D::QueryCapsuleOverlap(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_a_g_e_1_1_query_params" kindref="compound">QueryParams</ref>&amp;<sp/>Params)</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_World-&gt;QueryCapsuleOverlap(Params);</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"></highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Physics2D::QuerySegmentOverlap(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_a_g_e_1_1_query_params" kindref="compound">QueryParams</ref>&amp;<sp/>Params)</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_World-&gt;QuerySegmentOverlap(Params);</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Physics2D::QueryHit(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_a_g_e_1_1_query_params" kindref="compound">QueryParams</ref>&amp;<sp/>Params)</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//bool<sp/>Physics2D::QueryCallback(b2ShapeId<sp/>ShapeID,<sp/>void*<sp/>context)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//{</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>Box2DQueryContext*<sp/>queryContext<sp/>=<sp/>static_cast&lt;Box2DQueryContext*&gt;(context);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>b2BodyId<sp/>bodyId<sp/>=<sp/>b2Shape_GetBody(ShapeID);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>b2BodyType<sp/>bodyType<sp/>=<sp/>b2Body_GetType(bodyId);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>if<sp/>(bodyType<sp/>!=<sp/>b2_dynamicBody)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>{</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>continue<sp/>query</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>true;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>b2Vec2<sp/>P{<sp/>queryContext-&gt;Point.x<sp/>,queryContext-&gt;Point.y<sp/>};</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>bool<sp/>overlap<sp/>=<sp/>b2Shape_TestPoint(ShapeID,<sp/>P);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>if<sp/>(overlap)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>{</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>found<sp/>shape</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>queryContext-&gt;BodyID<sp/>=<sp/>bodyId;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>false;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>return<sp/>true;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//}</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//bool<sp/>Physics2D::OverlapCallback(b2ShapeId<sp/>shapeID,<sp/>void*<sp/>context)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//{</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>//add<sp/>custom<sp/>functionality</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>//Entity<sp/>userData<sp/>=<sp/>Entity(*(entt::entity*)(int*)b2Shape_GetUserData(shapeID),<sp/>g_PhysicsData-&gt;SceneRef.get());</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>//if<sp/>(userData<sp/>&amp;&amp;<sp/>!userData.GetComponent&lt;RigidBody2DComponent&gt;().bInteractable)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>//{</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>//<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>//<sp/><sp/>//<sp/>continue<sp/>the<sp/>query</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>//}</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>//else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>//{</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>//<sp/><sp/>return<sp/>true;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>//</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>//}</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>Scene*<sp/>sample<sp/>=<sp/>(Scene*)context;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>//if<sp/>(sample-&gt;)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>//{</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>//<sp/><sp/>int<sp/>index<sp/>=<sp/>sample-&gt;m_doomCount;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>//<sp/><sp/>sample-&gt;m_doomIds[index]<sp/>=<sp/>shapeId;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>//<sp/><sp/>sample-&gt;m_doomCount<sp/>+=<sp/>1;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>//}</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>//<sp/>continue<sp/>the<sp/>query</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>return<sp/>true;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//}</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="180"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">b2BodyDef<sp/><ref refid="class_a_g_e_1_1_physics2_d_1a0d3ea824190894f0351ce3e3d1bab6a6" kindref="member">Physics2D::MakeBodyDefinition</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BodyType&amp;<sp/>Type,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref>&amp;<sp/>Translation,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref>&amp;<sp/>Rotation,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>IsRotationFixed,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>UserData)</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_World-&gt;As&lt;World2D&gt;()-&gt;<ref refid="class_a_g_e_1_1_physics2_d_1a0d3ea824190894f0351ce3e3d1bab6a6" kindref="member">MakeBodyDefinition</ref>(Type,Translation,Rotation,IsRotationFixed,UserData);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal">b2ShapeDef<sp/><ref refid="class_a_g_e_1_1_physics2_d_1a78ea4e0c6124d7e8dd37fbcfe611fd4a" kindref="member">Physics2D::MakeShapeDefinition</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Density,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Friction,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Restitution,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ShouldGenerateEvents,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>UserData)</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_World-&gt;As&lt;World2D&gt;()-&gt;<ref refid="class_a_g_e_1_1_physics2_d_1a78ea4e0c6124d7e8dd37fbcfe611fd4a" kindref="member">MakeShapeDefinition</ref>(Density,Friction,Restitution,ShouldGenerateEvents,UserData);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal">b2Rot<sp/><ref refid="class_a_g_e_1_1_physics2_d_1a89852b176be5aded9168e8bb42c68b6a" kindref="member">Physics2D::MakeRotation</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Z)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_World-&gt;As&lt;World2D&gt;()-&gt;<ref refid="class_a_g_e_1_1_physics2_d_1a89852b176be5aded9168e8bb42c68b6a" kindref="member">MakeRotation</ref>(Z);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal">b2Polygon<sp/><ref refid="class_a_g_e_1_1_physics2_d_1aa7812f887b022c7109f39cb6663d5bfd" kindref="member">Physics2D::CreateBox</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>HeightX,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>HeightY,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref>&amp;<sp/>Scale)</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_World-&gt;As&lt;World2D&gt;()-&gt;<ref refid="class_a_g_e_1_1_physics2_d_1aa7812f887b022c7109f39cb6663d5bfd" kindref="member">CreateBox</ref>(HeightX,HeightY,Scale);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal">b2ShapeId<sp/><ref refid="class_a_g_e_1_1_physics2_d_1a09288cbc0be113f9d356d730e2b2348a" kindref="member">Physics2D::CreatePolygonShape</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>b2BodyId&amp;<sp/>ID,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>b2ShapeDef&amp;<sp/>Fixture,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>b2Polygon&amp;<sp/>Box)</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_World-&gt;As&lt;World2D&gt;()-&gt;<ref refid="class_a_g_e_1_1_physics2_d_1a09288cbc0be113f9d356d730e2b2348a" kindref="member">CreatePolygonShape</ref>(ID,Fixture,Box);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal">b2Capsule<sp/><ref refid="class_a_g_e_1_1_physics2_d_1a5ddbde137d8a60e89347371184146238" kindref="member">Physics2D::CreateCapsule</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref>&amp;<sp/>Offset,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref>&amp;<sp/>Scale,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Radius)</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_World-&gt;As&lt;World2D&gt;()-&gt;<ref refid="class_a_g_e_1_1_physics2_d_1a5ddbde137d8a60e89347371184146238" kindref="member">CreateCapsule</ref>(Offset,Scale,Radius);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal">b2ShapeId<sp/><ref refid="class_a_g_e_1_1_physics2_d_1a4d0008a402acfdd194fded0badb193f5" kindref="member">Physics2D::CreateCapsuleShape</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>b2BodyId&amp;<sp/>ID,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>b2ShapeDef&amp;<sp/>Fixture,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>b2Capsule&amp;<sp/>Capsule)</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_World-&gt;As&lt;World2D&gt;()-&gt;<ref refid="class_a_g_e_1_1_physics2_d_1a4d0008a402acfdd194fded0badb193f5" kindref="member">CreateCapsuleShape</ref>(ID,Fixture,Capsule);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal">b2Segment<sp/><ref refid="class_a_g_e_1_1_physics2_d_1af0a7c9f196572e4486910f42cedde798" kindref="member">Physics2D::CreateSegment</ref>()</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_World-&gt;As&lt;World2D&gt;()-&gt;<ref refid="class_a_g_e_1_1_physics2_d_1af0a7c9f196572e4486910f42cedde798" kindref="member">CreateSegment</ref>();</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal">b2ShapeId<sp/><ref refid="class_a_g_e_1_1_physics2_d_1a667aa9a767046869cd8e4e1cbbe2c153" kindref="member">Physics2D::CreateSegmentShape</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>b2BodyId&amp;<sp/>ID,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>b2ShapeDef&amp;<sp/>Fixture,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>b2Segment&amp;<sp/>Segment)</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_World-&gt;As&lt;World2D&gt;()-&gt;<ref refid="class_a_g_e_1_1_physics2_d_1a667aa9a767046869cd8e4e1cbbe2c153" kindref="member">CreateSegmentShape</ref>(ID,Fixture,Segment);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal">b2BodyId<sp/><ref refid="class_a_g_e_1_1_physics2_d_1a01a3ed94bda0b004e73eeeee91877c8b" kindref="member">Physics2D::GetBody</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>b2ShapeId&amp;<sp/>ID)</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_World-&gt;As&lt;World2D&gt;()-&gt;<ref refid="class_a_g_e_1_1_physics2_d_1a01a3ed94bda0b004e73eeeee91877c8b" kindref="member">GetBody</ref>(ID);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref><sp/><ref refid="class_a_g_e_1_1_physics2_d_1ac4a1b85b35458eacc61bd0a37e3c05ef" kindref="member">Physics2D::GetBodyPosition</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>b2BodyId&amp;<sp/>ID)</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_World-&gt;As&lt;World2D&gt;()-&gt;<ref refid="class_a_g_e_1_1_physics2_d_1ac4a1b85b35458eacc61bd0a37e3c05ef" kindref="member">GetBodyPosition</ref>(ID);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal">b2Polygon<sp/><ref refid="class_a_g_e_1_1_physics2_d_1a36327e8fe7645a27c5e238304125aba7" kindref="member">Physics2D::GetPolygon</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>b2ShapeId&amp;<sp/>ID)</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_World-&gt;As&lt;World2D&gt;()-&gt;<ref refid="class_a_g_e_1_1_physics2_d_1a36327e8fe7645a27c5e238304125aba7" kindref="member">GetPolygon</ref>(ID);</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal">b2Capsule<sp/><ref refid="class_a_g_e_1_1_physics2_d_1aea9cfd3b1e69cfe440b062e12bbcff46" kindref="member">Physics2D::GetCapsule</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>b2ShapeId&amp;<sp/>ID)</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_World-&gt;As&lt;World2D&gt;()-&gt;<ref refid="class_a_g_e_1_1_physics2_d_1aea9cfd3b1e69cfe440b062e12bbcff46" kindref="member">GetCapsule</ref>(ID);</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="class_a_g_e_1_1_physics2_d_1a55bfb348e08983085fc747aa28499571" kindref="member">Physics2D::GetUserData</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>b2ShapeId&amp;<sp/>ID)</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_World-&gt;As&lt;World2D&gt;()-&gt;<ref refid="class_a_g_e_1_1_physics2_d_1a55bfb348e08983085fc747aa28499571" kindref="member">GetUserData</ref>(ID);</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_physics2_d_1a903130e45dbe5679c2b6dd2b64c58923" kindref="member">Physics2D::GetRotationAngle</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>b2BodyId&amp;<sp/>ID)</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_World-&gt;As&lt;World2D&gt;()-&gt;<ref refid="class_a_g_e_1_1_physics2_d_1a903130e45dbe5679c2b6dd2b64c58923" kindref="member">GetRotationAngle</ref>(ID);</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_physics2_d_1a5417d4ab9a1556f28a78aaa46f12b86d" kindref="member">Physics2D::QueryBoxOverlap</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_a_g_e_1_1_query_params" kindref="compound">QueryParams</ref>&amp;<sp/>Params)</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_World-&gt;QueryBoxOverlap(Params);</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_physics2_d_1a7be165cc6655cf354ae3dbb8f50aaf2c" kindref="member">Physics2D::QueryCapsuleOverlap</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_a_g_e_1_1_query_params" kindref="compound">QueryParams</ref>&amp;<sp/>Params)</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_World-&gt;QueryCapsuleOverlap(Params);</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_physics2_d_1a26a1bc372105af780d3cf124cf5ae58b" kindref="member">Physics2D::QuerySegmentOverlap</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_a_g_e_1_1_query_params" kindref="compound">QueryParams</ref>&amp;<sp/>Params)</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_World-&gt;QuerySegmentOverlap(Params);</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_physics2_d_1a31b2194fb719f3994818f6414ea3c697" kindref="member">Physics2D::QueryHit</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_a_g_e_1_1_query_params" kindref="compound">QueryParams</ref>&amp;<sp/>Params)</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//bool<sp/>Physics2D::QueryCallback(b2ShapeId<sp/>ShapeID,<sp/>void*<sp/>context)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>Box2DQueryContext*<sp/>queryContext<sp/>=<sp/>static_cast&lt;Box2DQueryContext*&gt;(context);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>b2BodyId<sp/>bodyId<sp/>=<sp/>b2Shape_GetBody(ShapeID);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>b2BodyType<sp/>bodyType<sp/>=<sp/>b2Body_GetType(bodyId);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>if<sp/>(bodyType<sp/>!=<sp/>b2_dynamicBody)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>continue<sp/>query</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>true;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>b2Vec2<sp/>P{<sp/>queryContext-&gt;Point.x<sp/>,queryContext-&gt;Point.y<sp/>};</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>bool<sp/>overlap<sp/>=<sp/>b2Shape_TestPoint(ShapeID,<sp/>P);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>if<sp/>(overlap)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>found<sp/>shape</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>queryContext-&gt;BodyID<sp/>=<sp/>bodyId;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>false;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>return<sp/>true;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//bool<sp/>Physics2D::OverlapCallback(b2ShapeId<sp/>shapeID,<sp/>void*<sp/>context)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>//add<sp/>custom<sp/>functionality</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>//Entity<sp/>userData<sp/>=<sp/>Entity(*(entt::entity*)(int*)b2Shape_GetUserData(shapeID),<sp/>g_PhysicsData-&gt;SceneRef.get());</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>//if<sp/>(userData<sp/>&amp;&amp;<sp/>!userData.GetComponent&lt;RigidBody2DComponent&gt;().bInteractable)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>//{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>//<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>//<sp/><sp/>//<sp/>continue<sp/>the<sp/>query</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>//}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>//else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>//{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>//<sp/><sp/>return<sp/>true;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>//}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>Scene*<sp/>sample<sp/>=<sp/>(Scene*)context;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>//if<sp/>(sample-&gt;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>//{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>//<sp/><sp/>int<sp/>index<sp/>=<sp/>sample-&gt;m_doomCount;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>//<sp/><sp/>sample-&gt;m_doomIds[index]<sp/>=<sp/>shapeId;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>//<sp/><sp/>sample-&gt;m_doomCount<sp/>+=<sp/>1;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>//}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>//<sp/>continue<sp/>the<sp/>query</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>return<sp/>true;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="382"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="C:/Programming/AGE2D/Engine/src/AGE/Physics/Private/Physics2D.cpp"/>
   </compounddef>

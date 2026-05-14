@@ -13,11 +13,11 @@
 
 namespace AGE
 {
-    LayerStack::LayerStack()
+LayerStack::LayerStack()
     {
     }
 
-    LayerStack::~LayerStack()
+LayerStack::~LayerStack()
     {
         for (Layer* L : m_Layers)
         {
@@ -27,16 +27,16 @@ namespace AGE
     }
 
 
-    void LayerStack::PushLayer(Layer* Layer)
+void LayerStack::PushLayer(Layer* Layer)
     {
         m_Layers.emplace(m_Layers.begin() + m_LayerInsertIndex, Layer);
         m_LayerInsertIndex++;
     }
-    void LayerStack::PushOverlay(Layer* Overlay)
+void LayerStack::PushOverlay(Layer* Overlay)
     {
         m_Layers.emplace_back(Overlay);
     }
-    void LayerStack::PopLayer(Layer* Layer)
+void LayerStack::PopLayer(Layer* Layer)
     {
         Layer->OnDetach();
         auto it = std::find(m_Layers.begin(), m_Layers.end(), Layer);
@@ -48,7 +48,7 @@ namespace AGE
             m_LayerInsertIndex--;
         }
     }
-    void LayerStack::PopOverlay(Layer* Overlay)
+void LayerStack::PopOverlay(Layer* Overlay)
     {
         auto it = std::find(m_Layers.begin(), m_Layers.end(), Overlay);
         
@@ -58,7 +58,7 @@ namespace AGE
         }
     }
 
-    Layer * LayerStack::GetLayerByName(const std::string &LayerName)
+Layer * LayerStack::GetLayerByName(const std::string &LayerName)
     {
         auto it = std::find_if(m_Layers.begin(), m_Layers.end(), [LayerName](const Layer* Layer)
         {

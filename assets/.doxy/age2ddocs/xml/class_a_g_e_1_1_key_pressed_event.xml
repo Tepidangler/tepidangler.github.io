@@ -3,6 +3,7 @@
   <compounddef id="class_a_g_e_1_1_key_pressed_event" kind="class" language="C++" prot="public">
     <compoundname>AGE::KeyPressedEvent</compoundname>
     <basecompoundref refid="class_a_g_e_1_1_key_event" prot="public" virt="non-virtual">AGE::KeyEvent</basecompoundref>
+    <includes local="no">KeyEvent.h</includes>
     <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="class_a_g_e_1_1_key_pressed_event_1a53a1a29c7222c9c8096a4f547cd9382f" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -16,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/KeyEvent.h" line="42" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/KeyEvent.h" bodystart="42" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/KeyEvent.h" line="87" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/KeyEvent.h" bodystart="87" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -40,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/KeyEvent.h" line="27" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/KeyEvent.h" bodystart="27" bodyend="28"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/KeyEvent.h" line="45" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/KeyEvent.h" bodystart="45" bodyend="46"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_key_pressed_event_1ad4aca1241fa6a6600f87198b844ae956" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -49,12 +50,20 @@
         <name>GetRepeatCount</name>
         <qualifiedname>AGE::KeyPressedEvent::GetRepeatCount</qualifiedname>
         <briefdescription>
+<para>Returns the repeat count of a certain process or operation. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>The number of times the process or operation is repeated, as an integer value. If the function fails to retrieve the data, it returns -1.</para>
+</simplesect>
+Returns the repeat count of a sequence.</para>
+<para>This function retrieves the current value of the member variable <computeroutput>m_RepeatCount</computeroutput>, which represents the number of times a sequence should be repeated.</para>
+<para><simplesect kind="return"><para>The current repeat count as an integer. If no sequence is set or if the sequence has not been processed yet, this will return 0. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/KeyEvent.h" line="30" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/KeyEvent.h" bodystart="30" bodyend="30"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/KeyEvent.h" line="59" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/KeyEvent.h" bodystart="59" bodyend="59"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_key_pressed_event_1a9dad6f758de6048aaa587c1bbedca5d5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type>std::string</type>
@@ -64,17 +73,31 @@
         <qualifiedname>AGE::KeyPressedEvent::ToString</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_event_1abb5a1a933883fb8fb99999523e8805a8">ToString</reimplements>
         <briefdescription>
+<para>Converts the event into a string representation. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function converts the <ref refid="class_a_g_e_1_1_key_pressed_event" kindref="compound">KeyPressedEvent</ref> object into a string format that includes the key code and repeat count of the event. The resulting string is returned by this method.</para>
+<para><simplesect kind="return"><para>A string in the format &quot;KeyPressedEvent: [keycode] ([repeatcount] repeats)&quot;.</para>
+</simplesect>
+Converts the event into a string representation.</para>
+<para>This function converts the <ref refid="class_a_g_e_1_1_key_pressed_event" kindref="compound">KeyPressedEvent</ref> object into a human-readable string format. It includes details about the key code and repeat count of the event.</para>
+<para><simplesect kind="return"><para>A string containing the details of the event in a readable format. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/KeyEvent.h" line="32" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/KeyEvent.h" bodystart="32" bodyend="37"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/KeyEvent.h" line="77" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/KeyEvent.h" bodystart="77" bodyend="82"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>Returns the repeat count of a certain process or operation. </para>
     </briefdescription>
     <detaileddescription>
+<para>This function returns the number of times a specific process or operation is repeated, as an integer value. If it fails to retrieve the data, it will return -1.</para>
+<para><simplesect kind="return"><para>The repeat count as an integer. </para>
+</simplesect>
+</para>
     </detaileddescription>
     <inheritancegraph>
       <node id="3">
@@ -112,7 +135,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/KeyEvent.h" line="24" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/KeyEvent.h" bodystart="25" bodyend="43"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/KeyEvent.h" line="42" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/KeyEvent.h" bodystart="43" bodyend="88"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_event_1ae76fb834a0ee69601539da677f1333fa" prot="public" virt="pure-virtual"><scope>AGE::KeyPressedEvent</scope><name>GetCategoryFlags</name></member>
       <member refid="class_a_g_e_1_1_event_1a4cfb95332801a921e9449a03a34b87b0" prot="public" virt="pure-virtual"><scope>AGE::KeyPressedEvent</scope><name>GetEventType</name></member>

@@ -88,160 +88,332 @@
 <tbody>
 <tr>
 <td style="text-align: right;">int</td>
-<td style="text-align: left;"><a href="#function-getcurrentposition"><strong>GetCurrentPosition</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getcurrentposition"><strong>GetCurrentPosition</strong></a> () <br><em>This function returns the current position value stored in 's_Position'.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">uint32_t</td>
-<td style="text-align: left;"><a href="#function-getseed"><strong>GetSeed</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getseed"><strong>GetSeed</strong></a> () <br><em>This function returns the current seed value used for random number generation.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-init"><strong>Init</strong></a> (uint32_t Seed=0) <br></td>
+<td style="text-align: left;"><a href="#function-init"><strong>Init</strong></a> (uint32_t Seed=0) <br><em>Initializes the</em> <a href="./"><em><strong>SquirrelRNG</strong></em></a> <em>with a given seed.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-resetseed"><strong>ResetSeed</strong></a> (uint32_t Seed, int Position=0) <br></td>
+<td style="text-align: left;"><a href="#function-resetseed"><strong>ResetSeed</strong></a> (uint32_t Seed, int Position=0) <br><em>Resets the seed and position for a pseudo-random number generator.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">uint8_t</td>
-<td style="text-align: left;"><a href="#function-rollrandombyte"><strong>RollRandomByte</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-rollrandombyte"><strong>RollRandomByte</strong></a> () <br><em>Generates a random byte using the Squirrel RNG algorithm.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="#function-rollrandomchance"><strong>RollRandomChance</strong></a> (float ProbabilityofReturnTrue) <br></td>
+<td style="text-align: left;"><a href="#function-rollrandomchance"><strong>RollRandomChance</strong></a> (float ProbabilityofReturnTrue) <br><em>This function rolls a random chance based on the given probability.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-rollrandomdirection2d"><strong>RollRandomDirection2D</strong></a> (float &amp; out_x, float &amp; out_y) <br></td>
+<td style="text-align: left;"><a href="#function-rollrandomdirection2d"><strong>RollRandomDirection2D</strong></a> (float &amp; out_x, float &amp; out_y) <br><em>RollRandomDirection2D generates a random direction in two dimensions.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">float</td>
-<td style="text-align: left;"><a href="#function-rollrandomfloatinrange"><strong>RollRandomFloatInRange</strong></a> (float MinValueInclusive, float MaxValueInclusive) <br></td>
+<td style="text-align: left;"><a href="#function-rollrandomfloatinrange"><strong>RollRandomFloatInRange</strong></a> (float MinValueInclusive, float MaxValueInclusive) <br><em>RollRandomFloatInRange generates a random float within the specified range.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">float</td>
-<td style="text-align: left;"><a href="#function-rollrandomfloatzerotoone"><strong>RollRandomFloatZeroToOne</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-rollrandomfloatzerotoone"><strong>RollRandomFloatZeroToOne</strong></a> () <br><em>This function generates a random float between 0 and 1.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">int</td>
-<td style="text-align: left;"><a href="#function-rollrandomintinrange"><strong>RollRandomIntInRange</strong></a> (int MinValueInclusive, int MaxValueInclusive) <br></td>
+<td style="text-align: left;"><a href="#function-rollrandomintinrange"><strong>RollRandomIntInRange</strong></a> (int MinValueInclusive, int MaxValueInclusive) <br><em>Generates a random integer within the specified range.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">uint32_t</td>
-<td style="text-align: left;"><a href="#function-rollrandomintlessthan"><strong>RollRandomIntLessThan</strong></a> (uint32_t MaxValueNotInclusive) <br></td>
+<td style="text-align: left;"><a href="#function-rollrandomintlessthan"><strong>RollRandomIntLessThan</strong></a> (uint32_t MaxValueNotInclusive) <br><em>Generates a random integer less than the provided maximum value.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">float</td>
-<td style="text-align: left;"><a href="#function-rollrandomrotationfloat"><strong>RollRandomRotationFloat</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-rollrandomrotationfloat"><strong>RollRandomRotationFloat</strong></a> () <br><em>RollRandomRotationFloat generates a random float value for rotation. The function uses Perlin noise to generate a pseudo-random number and cast it to float. This is used as a means of generating a random float value that can be used for rotation purposes.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">uint16_t</td>
-<td style="text-align: left;"><a href="#function-rollrandomuint16"><strong>RollRandomUint16</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-rollrandomuint16"><strong>RollRandomUint16</strong></a> () <br><em>Generates a random uint16_t value.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">uint32_t</td>
-<td style="text-align: left;"><a href="#function-rollrandomuint32"><strong>RollRandomUint32</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-rollrandomuint32"><strong>RollRandomUint32</strong></a> () <br><em>Generates a random uint32 number.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setcurrentposition"><strong>SetCurrentPosition</strong></a> (int Position) <br></td>
+<td style="text-align: left;"><a href="#function-setcurrentposition"><strong>SetCurrentPosition</strong></a> (int Position) <br><em>Sets the current position value.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
 <h3 id="function-getcurrentposition">function GetCurrentPosition</h3>
+<p><em>This function returns the current position value stored in 's_Position'.</em> </p>
 <pre><code class="language-C++">static inline int AGE::SquirrelRNG::GetCurrentPosition () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>The integer value of the current position. If no such variable exists, it will return a default value of 0.</p>
+<p>This function returns the current position.</p>
+<p><strong>Returns:</strong></p>
+<p>The integer value of the current position. If there is no such position, it will return -1. </p>
 <hr>
 
 <h3 id="function-getseed">function GetSeed</h3>
+<p><em>This function returns the current seed value used for random number generation.</em> </p>
 <pre><code class="language-C++">static inline uint32_t AGE::SquirrelRNG::GetSeed () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>The current seed value as a uint32_t.</p>
+<p>This function returns the current seed value used for random number generation. </p>
+<p><strong>Returns:</strong></p>
+<p>The current seed value as a uint32_t. </p>
 <hr>
 
 <h3 id="function-init">function Init</h3>
+<p><em>Initializes the</em> <a href="./"><em><strong>SquirrelRNG</strong></em></a> <em>with a given seed.</em></p>
 <pre><code class="language-C++">static void AGE::SquirrelRNG::Init (
     uint32_t Seed=0
 ) 
 </code></pre>
+<p>This function sets the initial seed for the random number generator and resets all other variables to their default state. The generated noise object is also created here.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Seed</code> The initial seed value for the RNG.</li>
+</ul>
+<p>Initializes the <a href="./"><strong>SquirrelRNG</strong></a> with a given seed.</p>
+<p>This function sets the initial seed value for the random number generator, resets the position and rotation values to 0, creates a new instance of <a href="../class_a_g_e_1_1_squirrel_noise/"><strong>SquirrelNoise</strong></a>, and assigns it to s_NoiseObj.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Seed</code> The initial seed value for the RNG. </li>
+</ul>
 <hr>
 
 <h3 id="function-resetseed">function ResetSeed</h3>
+<p><em>Resets the seed and position for a pseudo-random number generator.</em> </p>
 <pre><code class="language-C++">static inline void AGE::SquirrelRNG::ResetSeed (
     uint32_t Seed,
     int Position=0
 ) 
 </code></pre>
+<p>This function sets the global variables <code>s_Seed</code> and <code>s_Position</code> to the provided values. The new seed is used as the starting point for generating pseudo-random numbers, while the position indicates the current position in the sequence of generated numbers.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Seed</code> A 32-bit unsigned integer that will be used as the new seed value. </li>
+<li><code>Position</code> An optional parameter indicating the start position for generating pseudo-random numbers. Defaults to 0 if not provided. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Resets the seed value and position for a pseudo-random number generator.</p>
+<p>This function sets the global variables <code>s_Seed</code> and <code>s_Position</code> to the provided values, which are used by other functions in this class for generating pseudo-random numbers.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Seed</code> The new seed value to use. </li>
+<li><code>Position</code> The new position value to use (default is 0). </li>
+</ul>
 <hr>
 
 <h3 id="function-rollrandombyte">function RollRandomByte</h3>
+<p><em>Generates a random byte using the Squirrel RNG algorithm.</em> </p>
 <pre><code class="language-C++">static uint8_t AGE::SquirrelRNG::RollRandomByte () 
 </code></pre>
+<p>This function uses the Squirrel RNG algorithm to generate a random byte. The output is deterministic and can be used for cryptographic purposes if necessary.</p>
+<p><strong>Returns:</strong></p>
+<p>A randomly generated uint8_t value.</p>
+<p>Generates a random byte using the Squirrel RNG algorithm.</p>
+<p>This function uses the Squirrel RNG algorithm to generate a random byte. It returns a constant value of 0, as per the implementation.</p>
+<p><strong>Returns:</strong></p>
+<p>A randomly generated byte (uint8_t). In this case, it always returns 0. </p>
 <hr>
 
 <h3 id="function-rollrandomchance">function RollRandomChance</h3>
+<p><em>This function rolls a random chance based on the given probability.</em> </p>
 <pre><code class="language-C++">static bool AGE::SquirrelRNG::RollRandomChance (
     float ProbabilityofReturnTrue
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>ProbabilityofReturnTrue</code> The probability of returning true, should be between 0 and 1. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>bool Returns true with the provided probability, false otherwise. If the input is not within [0,1], it returns false.</p>
+<p>This function is used to roll a random chance based on the provided probability.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>ProbabilityofReturnTrue</code> The probability of returning true, should be between 0 and 1.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>bool Returns true with the given probability, false otherwise. If the input probability is not within the range [0, 1], it will return false. </p>
 <hr>
 
 <h3 id="function-rollrandomdirection2d">function RollRandomDirection2D</h3>
+<p><em>RollRandomDirection2D generates a random direction in two dimensions.</em> </p>
 <pre><code class="language-C++">static void AGE::SquirrelRNG::RollRandomDirection2D (
     float &amp; out_x,
     float &amp; out_y
 ) 
 </code></pre>
+<p>This function uses the noise object to generate two values between 0 and 1 for x and y coordinates respectively. The generated values are stored in out_x and out_y.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>out_x</code> Reference to a float where the x coordinate will be stored. </li>
+<li><code>out_y</code> Reference to a float where the y coordinate will be stored.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Generates a random direction in 2D space.</p>
+<p>This function generates two random numbers using the noise object <code>s_NoiseObj</code> and assigns them to the output parameters <code>out_x</code> and <code>out_y</code>, respectively. The generated values are between 0 and 1.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>out_x</code> A reference to a float that will receive the x-coordinate of the random direction. </li>
+<li><code>out_y</code> A reference to a float that will receive the y-coordinate of the random direction. </li>
+</ul>
 <hr>
 
 <h3 id="function-rollrandomfloatinrange">function RollRandomFloatInRange</h3>
+<p><em>RollRandomFloatInRange generates a random float within the specified range.</em> </p>
 <pre><code class="language-C++">static float AGE::SquirrelRNG::RollRandomFloatInRange (
     float MinValueInclusive,
     float MaxValueInclusive
 ) 
 </code></pre>
+<p>This function uses a <a href="./"><strong>SquirrelRNG</strong></a> to generate a random float between two given values (MinValueInclusive and MaxValueInclusive). The generated number will be inclusive of both end points, meaning it could return either MinValueInclusive or MaxValueInclusive with equal probability.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>MinValueInclusive</code> the lower limit of the range from which to generate a random float. </li>
+<li><code>MaxValueInclusive</code> the upper limit of the range from which to generate a random float.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A random float within the specified range (MinValueInclusive, MaxValueInclusive]. The return value will be greater than or equal to MinValueInclusive and less than or equal to MaxValueInclusive with equal probability. If MinValueInclusive is greater than MaxValueInclusive, "Unknown" is returned.</p>
+<p>Generates a random float within the specified range.</p>
+<p>This function generates a pseudo-random floating point number between two given values (inclusive). The generated value is determined by applying noise to the current position and seed, then scaling it to fit within the provided range.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>MinValueInclusive</code> The lower limit of the range from which to generate the random float. </li>
+<li><code>MaxValueInclusive</code> The upper limit of the range from which to generate the random float.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A pseudo-random floating point number within the specified range. </p>
 <hr>
 
 <h3 id="function-rollrandomfloatzerotoone">function RollRandomFloatZeroToOne</h3>
+<p><em>This function generates a random float between 0 and 1.</em> </p>
 <pre><code class="language-C++">static float AGE::SquirrelRNG::RollRandomFloatZeroToOne () 
 </code></pre>
+<p>The generated number is obtained from the noise object associated with <a href="./"><strong>SquirrelRNG</strong></a> class. It uses Get1dNoiseZeroToOne method of the noise object to generate the number, which takes in two parameters: current position (s_Position) and a seed value (s_Seed). The s_Position is incremented after each call to this function to ensure uniqueness of the generated numbers.</p>
+<p><strong>Returns:</strong></p>
+<p>A float between 0 and 1 representing the random number.</p>
+<p>This function generates a random float between 0 and 1. </p>
+<p><strong>Returns:</strong></p>
+<p>A floating-point number in the range [0, 1). </p>
 <hr>
 
 <h3 id="function-rollrandomintinrange">function RollRandomIntInRange</h3>
+<p><em>Generates a random integer within the specified range.</em> </p>
 <pre><code class="language-C++">static int AGE::SquirrelRNG::RollRandomIntInRange (
     int MinValueInclusive,
     int MaxValueInclusive
 ) 
 </code></pre>
+<p>This function generates and returns a pseudo-random number between two given integers (inclusive). The generated number will be in the range [MinValueInclusive, MaxValueInclusive]. If MinValueInclusive &gt; MaxValueInclusive, an empty range is assumed which always returns MinValueInclusive.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>MinValueInclusive</code> Lower bound of the range (inclusive). </li>
+<li><code>MaxValueInclusive</code> Upper bound of the range (inclusive).</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A pseudo-random integer within the specified range.</p>
+<p>Generates a random integer within the specified range.</p>
+<p>This function generates and returns a random integer between two given values (inclusive). The minimum value is inclusive, while the maximum value is also inclusive. If the provided min and max are equal, it will return that number as the result.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>MinValueInclusive</code> The lower limit of the range from which to generate a random integer. Must be less than or equal to MaxValueInclusive. </li>
+<li><code>MaxValueInclusive</code> The upper limit of the range from which to generate a random integer. Must be greater than or equal to MinValueInclusive.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A random integer within the specified range. If both min and max are equal, returns that number. </p>
 <hr>
 
 <h3 id="function-rollrandomintlessthan">function RollRandomIntLessThan</h3>
+<p><em>Generates a random integer less than the provided maximum value.</em> </p>
 <pre><code class="language-C++">static uint32_t AGE::SquirrelRNG::RollRandomIntLessThan (
     uint32_t MaxValueNotInclusive
 ) 
 </code></pre>
+<p>This function generates a pseudo-random number using <a href="./"><strong>SquirrelRNG</strong></a> algorithm, which is then returned as an unsigned 32-bit integer. The generated number will be less than the provided MaxValueNotInclusive parameter. If this value is zero or negative, the behavior of this function is undefined.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>MaxValueNotInclusive</code> An unsigned 32-bit integer specifying the upper limit for the random number to be generated (exclusive). Must be greater than zero. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A pseudo-randomly generated unsigned 32-bit integer less than MaxValueNotInclusive.</p>
+<p>Generates a random integer less than the provided maximum value.</p>
+<p>This function generates a pseudo-random number using <a href="./"><strong>SquirrelRNG</strong></a> algorithm and returns it. The returned number is guaranteed to be less than the provided MaxValueNotInclusive parameter. If MaxValueNotInclusive is zero, the function will return zero as well.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>MaxValueNotInclusive</code> The upper limit of the random integer (exclusive). Must be greater than or equal to zero. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A pseudo-random number less than MaxValueNotInclusive. If MaxValueNotInclusive is zero, returns zero. </p>
 <hr>
 
 <h3 id="function-rollrandomrotationfloat">function RollRandomRotationFloat</h3>
+<p><em>RollRandomRotationFloat generates a random float value for rotation. The function uses Perlin noise to generate a pseudo-random number and cast it to float. This is used as a means of generating a random float value that can be used for rotation purposes.</em> </p>
 <pre><code class="language-C++">static float AGE::SquirrelRNG::RollRandomRotationFloat () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A floating point number between 0 and 1 representing the generated random rotation.</p>
+<p>This function returns a random float value.</p>
+<p>The function uses the Perlin noise algorithm to generate a pseudo-random number between 0 and 1. It increments the seed for each call, providing different values on subsequent calls.</p>
+<p><strong>Returns:</strong></p>
+<p>A floating point number in the range [0, 1]. </p>
 <hr>
 
 <h3 id="function-rollrandomuint16">function RollRandomUint16</h3>
+<p><em>Generates a random uint16_t value.</em> </p>
 <pre><code class="language-C++">static uint16_t AGE::SquirrelRNG::RollRandomUint16 () 
 </code></pre>
+<p>This function generates and returns a pseudo-random uint16_t number using the <a href="./"><strong>SquirrelRNG</strong></a> algorithm. The returned value is uniformly distributed over its entire range of possible values, from 0 to 65535 (inclusive).</p>
+<p><strong>Returns:</strong></p>
+<p>A random uint16_t value.</p>
+<p>Generates a random uint16 number between 0 and UINT16_MAX.</p>
+<p>This function uses the <a href="./"><strong>SquirrelRNG</strong></a> algorithm to generate a pseudorandom number in the range of uint16. The generated value is then returned as an unsigned 16-bit integer.</p>
+<p><strong>Returns:</strong></p>
+<p>An unsigned 16-bit integer representing the random number. </p>
 <hr>
 
 <h3 id="function-rollrandomuint32">function RollRandomUint32</h3>
+<p><em>Generates a random uint32 number.</em> </p>
 <pre><code class="language-C++">static uint32_t AGE::SquirrelRNG::RollRandomUint32 () 
 </code></pre>
+<p>This function generates and returns a pseudo-random unsigned integer of type uint32_t. The actual values returned are not truly random, but rather determined by the internal state of the <a href="./"><strong>SquirrelRNG</strong></a> object.</p>
+<p><strong>Returns:</strong></p>
+<p>A randomly generated uint32_t number. In this case, it always returns 0 as per the current implementation.</p>
+<p>Generates a random uint32 number.</p>
+<p>This function uses the internal state of the Squirrel RNG to generate a random uint32 number. The generated value is deterministic and depends on the initial seed of the RNG.</p>
+<p><strong>Returns:</strong></p>
+<p>A pseudo-random 32-bit unsigned integer. </p>
 <hr>
 
 <h3 id="function-setcurrentposition">function SetCurrentPosition</h3>
+<p><em>Sets the current position value.</em> </p>
 <pre><code class="language-C++">static inline void AGE::SquirrelRNG::SetCurrentPosition (
     int Position
 ) 
 </code></pre>
+<p>This function sets the 's_Position' variable to a new integer value provided as an argument. It does not return anything, so it is void.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Position</code> The new integer value that will be set for 's_Position'.</li>
+</ul>
+<p>Sets the current position to a given integer value.</p>
+<p>This function sets the static variable 's_Position' to the input parameter 'Position'. It does not return anything, so it is void type.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Position</code> The new position to be set for s_Position. </li>
+</ul>
 <hr>
 
 <hr />

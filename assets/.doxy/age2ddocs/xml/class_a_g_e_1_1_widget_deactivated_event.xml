@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/UIEvent.h" line="55" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/UIEvent.h" bodystart="55" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/UIEvent.h" line="147" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/UIEvent.h" bodystart="147" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_widget_deactivated_event_1ad2f1171b3767a45d660451185a21512f" prot="private" static="no" mutable="no">
         <type>Ref&lt; <ref refid="class_a_g_e_1_1_scriptable_widget" kindref="compound">ScriptableWidget</ref> &gt;</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/UIEvent.h" line="56" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/UIEvent.h" bodystart="56" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/UIEvent.h" line="148" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/UIEvent.h" bodystart="148" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -49,12 +49,51 @@
           <declname>Stack</declname>
         </param>
         <briefdescription>
+<para>Constructs a new instance of <ref refid="class_a_g_e_1_1_widget_deactivated_event" kindref="compound">WidgetDeactivatedEvent</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para>This constructor initializes the object with the given parameters. It sets the stack level and the scriptable widget reference.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>UIWidget</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to the <ref refid="class_a_g_e_1_1_scriptable_widget" kindref="compound">ScriptableWidget</ref> that is deactivating. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Stack</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The stack level of the deactivated widget.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Constructs a new instance of <ref refid="struct_a_g_e_1_1_widget" kindref="compound">Widget</ref> Deactivated <ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref>.</para>
+<para>This constructor initializes the event with a reference to the Scriptable <ref refid="struct_a_g_e_1_1_widget" kindref="compound">Widget</ref> and the stack number.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>UIWidget</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A const reference to the Scriptable <ref refid="struct_a_g_e_1_1_widget" kindref="compound">Widget</ref> that is deactivating. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Stack</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The stack number of the widget being deactivated. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/UIEvent.h" line="46" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/UIEvent.h" bodystart="46" bodyend="47"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/UIEvent.h" line="122" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/UIEvent.h" bodystart="122" bodyend="123"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_widget_deactivated_event_1a96a6f660160b7a24d1cb8e157dcba0b7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>uint8_t</type>
@@ -63,12 +102,18 @@
         <name>GetStack</name>
         <qualifiedname>AGE::WidgetDeactivatedEvent::GetStack</qualifiedname>
         <briefdescription>
+<para>This function returns the current value of the stack variable. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>uint8_t Returns the current value of the stack variable as a uint8_t type.</para>
+</simplesect>
+This function returns the current value of the stack variable. <simplesect kind="return"><para>uint8_t The current value of the stack variable. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/UIEvent.h" line="49" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/UIEvent.h" bodystart="49" bodyend="49"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/UIEvent.h" line="133" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/UIEvent.h" bodystart="133" bodyend="133"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_widget_deactivated_event_1ad0f68aa1932c96a3c5c27d371da1ca5d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>Ref&lt; <ref refid="class_a_g_e_1_1_scriptable_widget" kindref="compound">ScriptableWidget</ref> &gt;</type>
@@ -77,12 +122,18 @@
         <name>GetWidget</name>
         <qualifiedname>AGE::WidgetDeactivatedEvent::GetWidget</qualifiedname>
         <briefdescription>
+<para>Returns the <ref refid="class_a_g_e_1_1_scriptable_widget" kindref="compound">ScriptableWidget</ref> object associated with this instance. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>A reference to the <ref refid="class_a_g_e_1_1_scriptable_widget" kindref="compound">ScriptableWidget</ref> object. If no such object exists, returns an empty Ref&lt;ScriptableWidget&gt;.</para>
+</simplesect>
+Returns the <ref refid="class_a_g_e_1_1_scriptable_widget" kindref="compound">ScriptableWidget</ref> object associated with this instance. <simplesect kind="return"><para>A reference to the <ref refid="class_a_g_e_1_1_scriptable_widget" kindref="compound">ScriptableWidget</ref> object. If no such object exists, an empty Ref will be returned. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/UIEvent.h" line="50" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/UIEvent.h" bodystart="50" bodyend="50"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/UIEvent.h" line="142" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/UIEvent.h" bodystart="142" bodyend="142"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -113,7 +164,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/UIEvent.h" line="43" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/UIEvent.h" bodystart="44" bodyend="57"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/UIEvent.h" line="103" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/UIEvent.h" bodystart="104" bodyend="149"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_event_1ae76fb834a0ee69601539da677f1333fa" prot="public" virt="pure-virtual"><scope>AGE::WidgetDeactivatedEvent</scope><name>GetCategoryFlags</name></member>
       <member refid="class_a_g_e_1_1_event_1a4cfb95332801a921e9449a03a34b87b0" prot="public" virt="pure-virtual"><scope>AGE::WidgetDeactivatedEvent</scope><name>GetEventType</name></member>

@@ -30,12 +30,24 @@
           <declname>S</declname>
         </param>
         <briefdescription>
+<para>Constructs a <ref refid="class_a_g_e_1_1_scene_serializer" kindref="compound">SceneSerializer</ref> object with the given scene reference. </para>
         </briefdescription>
         <detaileddescription>
+<para>This constructor initializes the m_Scene member variable with the provided scene reference.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>S</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A const reference to a Ref&lt;Scene&gt; object representing the scene to be serialized. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Utils/Public/Serializers.h" line="10" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" bodystart="386" bodyend="389"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Utils/Public/Serializers.h" line="10" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" bodystart="616" bodyend="619"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_scene_serializer_1a6f2cbef0f49287d3eecedfed5624c2b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -48,12 +60,26 @@
           <declname>FilePath</declname>
         </param>
         <briefdescription>
+<para>This function serializes the current scene into a YAML file at the specified path. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function extracts the filename from the provided filepath, sets this as the name of the scene, and then writes out the scene data to the file in YAML format. Each entity in the scene is represented by an entry in the &quot;Entities&quot; sequence.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FilePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string representing the path where the serialized scene should be saved.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Utils/Public/Serializers.h" line="12" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" bodystart="590" bodyend="619"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Utils/Public/Serializers.h" line="12" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" bodystart="855" bodyend="884"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_scene_serializer_1a807987ad12881bfe4bae77e97f52e5b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -71,7 +97,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Utils/Public/Serializers.h" line="14" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" bodystart="621" bodyend="821"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Utils/Public/Serializers.h" line="14" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Utils/Private/Serializers.cpp" bodystart="887" bodyend="1101"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

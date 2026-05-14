@@ -20,7 +20,7 @@ namespace AGE
     std::array<std::string, 14> Project::m_DirectoryNames = { "/Assets", "/Assets/Quests", "/Assets/InventoryDatabase", "/Assets/VisualScripting", "/Scenes", "/Shaders", "/Saves","/Config", "/src","/src/Base","/src/Base/Private","/src/Base/Public","/src/UI/Private","/src/UI/Public"};
     std::array<std::string, 6> Project::m_GameContDirNames = { "/Textures", "Sounds/Banks", "/Aesprite", "/Shaders", "/UI", "/Fonts"};
 
-    void Project::WriteProjectConfig(const std::filesystem::path& Path, const std::string& ProjectName)
+void Project::WriteProjectConfig(const std::filesystem::path& Path, const std::string& ProjectName)
     {
         IniWriter Writer(Path.string() + "/ProjectConfig.ini");
         Writer.Write("Paths", "GameContentPath", std::vformat("/{}/GameContent/Assets/", std::make_format_args(ProjectName)));
@@ -31,7 +31,7 @@ namespace AGE
 
     }
 
-    void Project::WriteEditorConfig(const std::filesystem::path& Path, const std::string& ProjectName)
+void Project::WriteEditorConfig(const std::filesystem::path& Path, const std::string& ProjectName)
     {
         std::string CWD = std::filesystem::current_path().string();
 
@@ -41,7 +41,7 @@ namespace AGE
         Writer.SaveFile();
     }
 
-    void Project::ReadProjectConfig(const std::filesystem::path &Path)
+void Project::ReadProjectConfig(const std::filesystem::path &Path)
     {
         AppConfig& Config = App::Get().GetAppConfig();
         IniReader Reader(Path.string() + "/ProjectConfig.ini");
@@ -88,7 +88,7 @@ namespace AGE
 
     }
 
-    void Project::ReadEditorConfig(const std::filesystem::path &Path)
+void Project::ReadEditorConfig(const std::filesystem::path &Path)
     {
         AppConfig& Config = App::Get().GetAppConfig();
         IniReader Reader(Path.string() + "/EditorConfig.ini");
@@ -117,7 +117,9 @@ namespace AGE
 
     }
 
-    void Project::AddBuiltScenes()
+    
+
+void Project::AddBuiltScenes()
     {
         AppConfig Config = App::Get().GetAppConfig();
         if (std::filesystem::is_directory(Config.CurrentProjectPath.string() + "/"+s_ActiveProject->GetConfig().Name + "/BuiltScenes/"))
@@ -161,7 +163,9 @@ namespace AGE
 
     }
 
-    Ref<Project> AGE::Project::New(const std::string& ProjectName)
+    
+
+Ref<Project> AGE::Project::New(const std::string& ProjectName)
     {
         AppConfig Config = App::Get().GetAppConfig();
         if (ProjectName == "Untitled")
@@ -194,7 +198,9 @@ namespace AGE
         }
         return s_ActiveProject;
     }
-    Ref<Project> Project::Load(const std::filesystem::path& Path)
+    
+
+Ref<Project> Project::Load(const std::filesystem::path& Path)
     {
         AppConfig& Config = App::Get().GetAppConfig();
         if (Path.string().find("GAMENAMEHERE",0) != std::string::npos)
@@ -216,7 +222,8 @@ namespace AGE
         CoreLogger::Info("Could not Load Project!\n\tProject File Path {0}", Path.string());
         return nullptr;
     }
-    bool Project::SaveActive(const std::filesystem::path& Path, uint16_t AudioEngine, int Renderer, const std::filesystem::path& ScenePath, const std::filesystem::path& QuestPath, const std::filesystem::path& ConfigPath)
+
+bool Project::SaveActive(const std::filesystem::path& Path, uint16_t AudioEngine, int Renderer, const std::filesystem::path& ScenePath, const std::filesystem::path& QuestPath, const std::filesystem::path& ConfigPath)
     {
         ProjectSerializer Serializer(s_ActiveProject);
         s_ActiveProject->m_ProjectDirectory = Path;
@@ -241,7 +248,9 @@ namespace AGE
         }
         return false;
     }
-    bool Project::Package(const std::filesystem::path& Path, int TargetPlatform)
+    
+
+bool Project::Package(const std::filesystem::path& Path, int TargetPlatform)
     {
         switch (TargetPlatform)
         {
@@ -294,7 +303,9 @@ namespace AGE
         }
         return false;
     }
-    void Project::CompileProject()
+    
+
+void Project::CompileProject()
     {
         AppConfig Config = App::Get().GetAppConfig();
 #ifdef AG_PLATFORM_WINDOWS

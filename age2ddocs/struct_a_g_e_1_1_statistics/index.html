@@ -92,6 +92,14 @@
 </tr>
 <tr>
 <td style="text-align: right;">uint32_t</td>
+<td style="text-align: left;"><a href="#variable-cubecount"><strong>CubeCount</strong></a>   = <code>0</code><br></td>
+</tr>
+<tr>
+<td style="text-align: right;">uint32_t</td>
+<td style="text-align: left;"><a href="#variable-cylindercount"><strong>CylinderCount</strong></a>   = <code>0</code><br></td>
+</tr>
+<tr>
+<td style="text-align: right;">uint32_t</td>
 <td style="text-align: left;"><a href="#variable-drawcalls"><strong>DrawCalls</strong></a>   = <code>0</code><br></td>
 </tr>
 <tr>
@@ -100,7 +108,19 @@
 </tr>
 <tr>
 <td style="text-align: right;">uint32_t</td>
+<td style="text-align: left;"><a href="#variable-modelcount"><strong>ModelCount</strong></a>   = <code>0</code><br></td>
+</tr>
+<tr>
+<td style="text-align: right;">uint32_t</td>
+<td style="text-align: left;"><a href="#variable-pyramidcount"><strong>PyramidCount</strong></a>   = <code>0</code><br></td>
+</tr>
+<tr>
+<td style="text-align: right;">uint32_t</td>
 <td style="text-align: left;"><a href="#variable-quadcount"><strong>QuadCount</strong></a>   = <code>0</code><br></td>
+</tr>
+<tr>
+<td style="text-align: right;">uint32_t</td>
+<td style="text-align: left;"><a href="#variable-spherecount"><strong>SphereCount</strong></a>   = <code>0</code><br></td>
 </tr>
 <tr>
 <td style="text-align: right;">uint32_t</td>
@@ -123,25 +143,67 @@
 <tbody>
 <tr>
 <td style="text-align: right;">uint32_t</td>
-<td style="text-align: left;"><a href="#function-gettotalquadindexcount"><strong>GetTotalQuadIndexCount</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-gettotalcubeindexcount"><strong>GetTotalCubeIndexCount</strong></a> () <br><em>This function returns the total count of cube indices in the scene. The count is calculated by multiplying the number of cubes (</em> <code>CubeCount</code> <em>) by 36 (the number of indices per cube).</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">uint32_t</td>
-<td style="text-align: left;"><a href="#function-gettotalquadvertexcount"><strong>GetTotalQuadVertexCount</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-gettotalcubevertexcount"><strong>GetTotalCubeVertexCount</strong></a> () <br><em>Calculates the total number of vertices in a cube.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">uint32_t</td>
-<td style="text-align: left;"><a href="#function-gettotaltileindexcount"><strong>GetTotalTileIndexCount</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-gettotalcylinderindexcount"><strong>GetTotalCylinderIndexCount</strong></a> () <br><em>This function returns the total number of cylinders in the system, multiplied by 18.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">uint32_t</td>
-<td style="text-align: left;"><a href="#function-gettotaltilevertexcount"><strong>GetTotalTileVertexCount</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-gettotalcylindervertexcount"><strong>GetTotalCylinderVertexCount</strong></a> () <br><em>This function returns the total number of vertices in all cylinders. The calculation is based on each cylinder having 8 vertices.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">uint32_t</td>
+<td style="text-align: left;"><a href="#function-gettotalpyramidindexcount"><strong>GetTotalPyramidIndexCount</strong></a> () <br><em>This function calculates the total number of indices in a pyramid. The pyramid is represented as an array where each element represents a cube. Each cube has 6 faces, so to get the total number of indices, we multiply the number of cubes by 6.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">uint32_t</td>
+<td style="text-align: left;"><a href="#function-gettotalpyramidvertexcount"><strong>GetTotalPyramidVertexCount</strong></a> () <br><em>Calculates the total number of vertices in a pyramid.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">uint32_t</td>
+<td style="text-align: left;"><a href="#function-gettotalquadindexcount"><strong>GetTotalQuadIndexCount</strong></a> () <br><em>This function returns the total number of indices used by all quads in the scene. Each quad is composed of four vertices and each vertex has three coordinates, so a quad uses 24 indices. The function multiplies the number of quads (QuadCount) by 6 to get the total index count.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">uint32_t</td>
+<td style="text-align: left;"><a href="#function-gettotalquadvertexcount"><strong>GetTotalQuadVertexCount</strong></a> () <br><em>This function returns the total number of vertices in all quads.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">uint32_t</td>
+<td style="text-align: left;"><a href="#function-gettotalsphereindexcount"><strong>GetTotalSphereIndexCount</strong></a> () <br><em>This function returns the total number of sphere indices in the scene. Each sphere is represented by 36 indices (12 for each face). The count of spheres is multiplied by 36 to get the total index count.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">uint32_t</td>
+<td style="text-align: left;"><a href="#function-gettotalspherevertexcount"><strong>GetTotalSphereVertexCount</strong></a> () <br><em>Calculates the total number of vertices in all spheres.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">uint32_t</td>
+<td style="text-align: left;"><a href="#function-gettotaltileindexcount"><strong>GetTotalTileIndexCount</strong></a> () <br><em>This function returns the total number of tile indices in the game world. The count is calculated by multiplying the total number of tiles (TileCount) with 6.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">uint32_t</td>
+<td style="text-align: left;"><a href="#function-gettotaltilevertexcount"><strong>GetTotalTileVertexCount</strong></a> () <br><em>Calculates the total number of vertices in all tiles.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-attributes-documentation">Public Attributes Documentation</h2>
 <h3 id="variable-circlecount">variable CircleCount</h3>
 <pre><code class="language-C++">uint32_t AGE::Statistics::CircleCount;
+</code></pre>
+<hr>
+
+<h3 id="variable-cubecount">variable CubeCount</h3>
+<pre><code class="language-C++">uint32_t AGE::Statistics::CubeCount;
+</code></pre>
+<hr>
+
+<h3 id="variable-cylindercount">variable CylinderCount</h3>
+<pre><code class="language-C++">uint32_t AGE::Statistics::CylinderCount;
 </code></pre>
 <hr>
 
@@ -155,8 +217,23 @@
 </code></pre>
 <hr>
 
+<h3 id="variable-modelcount">variable ModelCount</h3>
+<pre><code class="language-C++">uint32_t AGE::Statistics::ModelCount;
+</code></pre>
+<hr>
+
+<h3 id="variable-pyramidcount">variable PyramidCount</h3>
+<pre><code class="language-C++">uint32_t AGE::Statistics::PyramidCount;
+</code></pre>
+<hr>
+
 <h3 id="variable-quadcount">variable QuadCount</h3>
 <pre><code class="language-C++">uint32_t AGE::Statistics::QuadCount;
+</code></pre>
+<hr>
+
+<h3 id="variable-spherecount">variable SphereCount</h3>
+<pre><code class="language-C++">uint32_t AGE::Statistics::SphereCount;
 </code></pre>
 <hr>
 
@@ -170,24 +247,144 @@
 </code></pre>
 <hr>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
+<h3 id="function-gettotalcubeindexcount">function GetTotalCubeIndexCount</h3>
+<p><em>This function returns the total count of cube indices in the scene. The count is calculated by multiplying the number of cubes (</em> <code>CubeCount</code> <em>) by 36 (the number of indices per cube).</em></p>
+<pre><code class="language-C++">inline uint32_t AGE::Statistics::GetTotalCubeIndexCount () 
+</code></pre>
+<p><strong>Returns:</strong></p>
+<p>Total count of cube indices in the scene.</p>
+<p>This function returns the total count of cube indices in the scene. Each cube has 36 indices (2 for each of its 18 edges). </p>
+<p><strong>Returns:</strong></p>
+<p>The total number of cube indices in the scene. </p>
+<hr>
+
+<h3 id="function-gettotalcubevertexcount">function GetTotalCubeVertexCount</h3>
+<p><em>Calculates the total number of vertices in a cube.</em> </p>
+<pre><code class="language-C++">inline uint32_t AGE::Statistics::GetTotalCubeVertexCount () 
+</code></pre>
+<p>The function multiplies the number of cubes by 8 to get the total vertex count. This is because each cube has 8 vertices.</p>
+<p><strong>Returns:</strong></p>
+<p>uint32_t Total number of vertices in all cubes.</p>
+<p>Calculates the total number of vertices in a cube.</p>
+<p>The function multiplies the number of cubes by 8 to get the total vertex count. This is because each cube has 8 vertices.</p>
+<p><strong>Returns:</strong></p>
+<p>uint32_t Total number of vertices in all cubes. </p>
+<hr>
+
+<h3 id="function-gettotalcylinderindexcount">function GetTotalCylinderIndexCount</h3>
+<p><em>This function returns the total number of cylinders in the system, multiplied by 18.</em> </p>
+<pre><code class="language-C++">inline uint32_t AGE::Statistics::GetTotalCylinderIndexCount () 
+</code></pre>
+<p><strong>Returns:</strong></p>
+<p>The total count of cylinders in the system.</p>
+<p>This function returns the total count of cylinder indices based on the number of cylinders. </p>
+<p><strong>Returns:</strong></p>
+<p>The total count of cylinder indices as a uint32_t value. </p>
+<hr>
+
+<h3 id="function-gettotalcylindervertexcount">function GetTotalCylinderVertexCount</h3>
+<p><em>This function returns the total number of vertices in all cylinders. The calculation is based on each cylinder having 8 vertices.</em> </p>
+<pre><code class="language-C++">inline uint32_t AGE::Statistics::GetTotalCylinderVertexCount () 
+</code></pre>
+<p><strong>Returns:</strong></p>
+<p>uint32_t Total number of vertices in all cylinders.</p>
+<p>This function returns the total number of vertices in all cylinders. The calculation is based on each cylinder having 8 vertices. </p>
+<p><strong>Returns:</strong></p>
+<p>uint32_t Total count of vertices in all cylinders. </p>
+<hr>
+
+<h3 id="function-gettotalpyramidindexcount">function GetTotalPyramidIndexCount</h3>
+<p><em>This function calculates the total number of indices in a pyramid. The pyramid is represented as an array where each element represents a cube. Each cube has 6 faces, so to get the total number of indices, we multiply the number of cubes by 6.</em> </p>
+<pre><code class="language-C++">inline uint32_t AGE::Statistics::GetTotalPyramidIndexCount () 
+</code></pre>
+<p><strong>Returns:</strong></p>
+<p>uint32_t Total number of indices in the pyramid.</p>
+<p>This function calculates the total number of indices in a pyramid. The pyramid is represented as an equilateral triangle and each face of the triangle is a cube, so the total number of cubes that make up the pyramid is multiplied by 6 to get the total number of indices. </p>
+<p><strong>Returns:</strong></p>
+<p>uint32_t This function returns the total number of indices in the pyramid as an unsigned 32-bit integer. </p>
+<hr>
+
+<h3 id="function-gettotalpyramidvertexcount">function GetTotalPyramidVertexCount</h3>
+<p><em>Calculates the total number of vertices in a pyramid.</em> </p>
+<pre><code class="language-C++">inline uint32_t AGE::Statistics::GetTotalPyramidVertexCount () 
+</code></pre>
+<p>The function multiplies the number of pyramids by 5 to get the total vertex count.</p>
+<p><strong>Returns:</strong></p>
+<p>uint32_t Total number of vertices in all pyramids.</p>
+<p>Calculates the total number of vertices in a pyramid.</p>
+<p>The function multiplies the number of pyramids by 5 to get the total vertex count.</p>
+<p><strong>Returns:</strong></p>
+<p>uint32_t Total number of vertices in all pyramids. </p>
+<hr>
+
 <h3 id="function-gettotalquadindexcount">function GetTotalQuadIndexCount</h3>
+<p><em>This function returns the total number of indices used by all quads in the scene. Each quad is composed of four vertices and each vertex has three coordinates, so a quad uses 24 indices. The function multiplies the number of quads (QuadCount) by 6 to get the total index count.</em> </p>
 <pre><code class="language-C++">inline uint32_t AGE::Statistics::GetTotalQuadIndexCount () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>uint32_t Total number of indices used by all quads in the scene.</p>
+<p>This function returns the total number of indices used by all quads in the system. The count is calculated as the product of the quad count and 6, representing each quad's four triangles (2 triangles per face) and three vertices per triangle.</p>
+<p><strong>Returns:</strong></p>
+<p>uint32_t Total index count for all quads. </p>
 <hr>
 
 <h3 id="function-gettotalquadvertexcount">function GetTotalQuadVertexCount</h3>
+<p><em>This function returns the total number of vertices in all quads.</em> </p>
 <pre><code class="language-C++">inline uint32_t AGE::Statistics::GetTotalQuadVertexCount () 
 </code></pre>
+<p>The function multiplies the number of quads by 4 to get the total vertex count.</p>
+<p><strong>Returns:</strong></p>
+<p>uint32_t Total number of vertices in all quads.</p>
+<p>This function returns the total number of vertices in all quads. It multiplies the count of quads by 4 to get the total vertex count.</p>
+<p><strong>Returns:</strong></p>
+<p>The total number of vertices in all quads. </p>
+<hr>
+
+<h3 id="function-gettotalsphereindexcount">function GetTotalSphereIndexCount</h3>
+<p><em>This function returns the total number of sphere indices in the scene. Each sphere is represented by 36 indices (12 for each face). The count of spheres is multiplied by 36 to get the total index count.</em> </p>
+<pre><code class="language-C++">inline uint32_t AGE::Statistics::GetTotalSphereIndexCount () 
+</code></pre>
+<p><strong>Returns:</strong></p>
+<p>uint32_t Total number of sphere indices in the scene.</p>
+<p>This function returns the total number of sphere indices in the scene. The calculation is based on the assumption that each sphere has 36 indices (vertices, normals and texture coordinates). </p>
+<p><strong>Returns:</strong></p>
+<p>uint32_t Total number of sphere indices. </p>
+<hr>
+
+<h3 id="function-gettotalspherevertexcount">function GetTotalSphereVertexCount</h3>
+<p><em>Calculates the total number of vertices in all spheres.</em> </p>
+<pre><code class="language-C++">inline uint32_t AGE::Statistics::GetTotalSphereVertexCount () 
+</code></pre>
+<p>This function multiplies the number of spheres by 8 to get the total vertex count. It assumes that each sphere has 8 vertices.</p>
+<p><strong>Returns:</strong></p>
+<p>The total number of vertices in all spheres.</p>
+<p>Calculates the total number of vertices in all spheres.</p>
+<p>This function multiplies the count of spheres by 8 to get the total vertex count. It assumes that each sphere has 8 vertices.</p>
+<p><strong>Returns:</strong></p>
+<p>The total number of vertices in all spheres. </p>
 <hr>
 
 <h3 id="function-gettotaltileindexcount">function GetTotalTileIndexCount</h3>
+<p><em>This function returns the total number of tile indices in the game world. The count is calculated by multiplying the total number of tiles (TileCount) with 6.</em> </p>
 <pre><code class="language-C++">inline uint32_t AGE::Statistics::GetTotalTileIndexCount () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>uint32_t Total number of tile indices in the game world.</p>
+<p>This function returns the total number of tile indices in the game world. The count is calculated by multiplying the total number of tiles (TileCount) with 6. </p>
+<p><strong>Returns:</strong></p>
+<p>uint32_t Total number of tile indices in the game world. </p>
 <hr>
 
 <h3 id="function-gettotaltilevertexcount">function GetTotalTileVertexCount</h3>
+<p><em>Calculates the total number of vertices in all tiles.</em> </p>
 <pre><code class="language-C++">inline uint32_t AGE::Statistics::GetTotalTileVertexCount () 
 </code></pre>
+<p>This function multiplies the number of tiles by 4 to get the total vertex count. The assumption is that each tile has 4 vertices.</p>
+<p><strong>Returns:</strong></p>
+<p>Total number of vertices across all tiles.</p>
+<p>This function returns the total number of vertices in all tiles. The calculation is based on each tile having 4 vertices. Therefore, it multiplies the number of tiles by 4 to get the total vertex count.</p>
+<p><strong>Returns:</strong></p>
+<p>uint32_t Total number of vertices across all tiles. </p>
 <hr>
 
 <hr />

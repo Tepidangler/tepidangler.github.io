@@ -115,19 +115,19 @@
 <tbody>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-activate"><strong>Activate</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-activate"><strong>Activate</strong></a> () <br><em>This function is used to activate the object by setting its primary flag to true.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-cameracomponent-12"><strong>CameraComponent</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-cameracomponent-12"><strong>CameraComponent</strong></a> () = default<br><em>Default constructor for the</em> <a href="./"><em><strong>CameraComponent</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-cameracomponent-22"><strong>CameraComponent</strong></a> (const <a href="./"><strong>CameraComponent</strong></a> &amp;) = default<br></td>
+<td style="text-align: left;"><a href="#function-cameracomponent-22"><strong>CameraComponent</strong></a> (const <a href="./"><strong>CameraComponent</strong></a> &amp;) = default<br><em>Default copy constructor for the</em> <a href="./"><em><strong>CameraComponent</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-deactivate"><strong>Deactivate</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-deactivate"><strong>Deactivate</strong></a> () <br><em>This function deactivates the object by setting bPrimary to false.</em></td>
 </tr>
 </tbody>
 </table>
@@ -142,11 +142,11 @@
 <tbody>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-deserialize"><strong>Deserialize</strong></a> (<a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> * Serializer, <a href="./"><strong>CameraComponent</strong></a> &amp; Data) <br></td>
+<td style="text-align: left;"><a href="#function-deserialize"><strong>Deserialize</strong></a> (<a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> * Serializer, <a href="./"><strong>CameraComponent</strong></a> &amp; Data) <br><em>This function deserializes a</em> <a href="./"><em><strong>CameraComponent</strong></em></a> <em>object from the provided</em><a href="../class_a_g_e_1_1_data_reader/"><em><strong>DataReader</strong></em></a> <em>instance.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-serialize"><strong>Serialize</strong></a> (<a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> * Serializer, const <a href="./"><strong>CameraComponent</strong></a> &amp; Data) <br></td>
+<td style="text-align: left;"><a href="#function-serialize"><strong>Serialize</strong></a> (<a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> * Serializer, const <a href="./"><strong>CameraComponent</strong></a> &amp; Data) <br><em>This function serializes a camera component into a data writer object.</em></td>
 </tr>
 </tbody>
 </table>
@@ -172,41 +172,69 @@
 <hr>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-activate">function Activate</h3>
+<p><em>This function is used to activate the object by setting its primary flag to true.</em> </p>
 <pre><code class="language-C++">inline void AGE::CameraComponent::Activate () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-cameracomponent-12">function CameraComponent [1/2]</h3>
+<p><em>Default constructor for the</em> <a href="./"><em><strong>CameraComponent</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::CameraComponent::CameraComponent () = default
 </code></pre>
 <hr>
 
 <h3 id="function-cameracomponent-22">function CameraComponent [2/2]</h3>
+<p><em>Default copy constructor for the</em> <a href="./"><em><strong>CameraComponent</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::CameraComponent::CameraComponent (
     const CameraComponent &amp;
 ) = default
 </code></pre>
+<p>This function is used to create a new instance of the <a href="./"><strong>CameraComponent</strong></a> class by copying an existing one. It uses the '= default' syntax, which tells the compiler to use its default implementation for this member function.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>other</code> The <a href="./"><strong>CameraComponent</strong></a> object to be copied. </li>
+</ul>
 <hr>
 
 <h3 id="function-deactivate">function Deactivate</h3>
+<p><em>This function deactivates the object by setting bPrimary to false.</em> </p>
 <pre><code class="language-C++">inline void AGE::CameraComponent::Deactivate () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
 <h3 id="function-deserialize">function Deserialize</h3>
+<p><em>This function deserializes a</em> <a href="./"><em><strong>CameraComponent</strong></em></a> <em>object from the provided</em><a href="../class_a_g_e_1_1_data_reader/"><em><strong>DataReader</strong></em></a> <em>instance.</em></p>
 <pre><code class="language-C++">static inline void AGE::CameraComponent::Deserialize (
     DataReader * Serializer,
     CameraComponent &amp; Data
 ) 
 </code></pre>
+<p>The function reads data from the serialized format and populates the <a href="./"><strong>CameraComponent</strong></a> reference with the corresponding values.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Serializer</code> A pointer to the <a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> instance that provides the serialized data. </li>
+<li><code>Data</code> Reference to a <a href="./"><strong>CameraComponent</strong></a> object where the deserialized data will be stored.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-serialize">function Serialize</h3>
+<p><em>This function serializes a camera component into a data writer object.</em> </p>
 <pre><code class="language-C++">static inline void AGE::CameraComponent::Serialize (
     DataWriter * Serializer,
     const CameraComponent &amp; Data
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Serializer</code> A pointer to the data writer object where the data will be written. </li>
+<li><code>Data</code> The camera component that needs to be serialized. </li>
+</ul>
 <hr>
 
 <hr />

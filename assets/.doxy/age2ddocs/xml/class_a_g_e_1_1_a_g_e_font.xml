@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" line="29" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" bodystart="29" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" line="56" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" bodystart="56" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_a_g_e_font_1a687136904c103c51d27672478edc0634" prot="private" static="no" mutable="no">
         <type>Ref&lt; <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> &gt;</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" line="30" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" bodystart="30" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" line="57" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" bodystart="57" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_a_g_e_font_1a64b9001f1d10545e26fbbb18f6224cc9" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" line="31" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" bodystart="31" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" line="58" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" bodystart="58" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_a_g_e_font_1a18d01cdd4ecaa69abdf635a214816766" prot="private" static="no" mutable="no">
         <type>uint64_t</type>
@@ -58,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" line="32" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" bodystart="32" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" line="59" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" bodystart="59" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -71,6 +71,7 @@
         <param>
           <type>const std::filesystem::path &amp;</type>
           <declname>Font</declname>
+          <defname>FontPath</defname>
         </param>
         <param>
           <type>bool</type>
@@ -80,10 +81,28 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para>Constructor for <ref refid="class_a_g_e_1_1_a_g_e_font" kindref="compound">AGEFont</ref> class. It loads a font from the given path and initializes <ref refid="struct_a_g_e_1_1_m_s_d_f_data" kindref="compound">MSDFData</ref> object with it. The function checks if the provided file exists, initializes FreeType library, loads the font using FreeType, generates glyphs for each character in the charset, packs them into an atlas, applies edge coloring to them, creates a texture from the packed glyphs and caches it. If LoadingDefault is true, it saves the default fonts; otherwise, it saves the custom ones. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FontPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filesystem path to the font file. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>LoadingDefault</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flag indicating whether we are loading default fonts or not. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" line="12" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Font.cpp" bodystart="67" bodyend="179"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" line="12" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Font.cpp" bodystart="76" bodyend="188"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_font_1a52b52f4c50ce9e17564d104c41ae07f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -92,12 +111,14 @@
         <name>~AGEFont</name>
         <qualifiedname>AGE::AGEFont::~AGEFont</qualifiedname>
         <briefdescription>
+<para>Destructor for <ref refid="class_a_g_e_1_1_a_g_e_font" kindref="compound">AGEFont</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is responsible for releasing the memory allocated to the data member &apos;m_Data&apos; which holds the font data. It does this by deleting the pointer, effectively freeing up the memory space it was using. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" line="13" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Font.cpp" bodystart="180" bodyend="183"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" line="13" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Font.cpp" bodystart="194" bodyend="197"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_font_1a30365124c304aa702ebb3bfbf5231244" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const <ref refid="struct_a_g_e_1_1_m_s_d_f_data" kindref="compound">MSDFData</ref> *</type>
@@ -106,12 +127,18 @@
         <name>GetMSDFData</name>
         <qualifiedname>AGE::AGEFont::GetMSDFData</qualifiedname>
         <briefdescription>
+<para>Retrieves the MSDF data associated with this object. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>A pointer to the MSDF data, or nullptr if no data is available.</para>
+</simplesect>
+Returns the MSDF data associated with this object. <simplesect kind="return"><para>Pointer to an immutable <ref refid="struct_a_g_e_1_1_m_s_d_f_data" kindref="compound">MSDFData</ref> instance, or nullptr if no data is available. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" line="15" column="16" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" bodystart="15" bodyend="15"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" line="23" column="16" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" bodystart="23" bodyend="23"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_font_1a6b9f0c281518c19af310ddf4264cc88c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>Ref&lt; <ref refid="class_a_g_e_1_1_texture2_d" kindref="compound">Texture2D</ref> &gt;</type>
@@ -120,12 +147,19 @@
         <name>GetAtlasTexture</name>
         <qualifiedname>AGE::AGEFont::GetAtlasTexture</qualifiedname>
         <briefdescription>
+<para>Returns the atlas texture reference. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function returns a constant reference to the atlas texture stored in the object. The returned reference can be used to access and manipulate the atlas texture data.</para>
+<para><simplesect kind="return"><para>A constant reference to the atlas texture.</para>
+</simplesect>
+Returns the atlas texture reference. <simplesect kind="return"><para>The atlas texture reference. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" line="16" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" bodystart="16" bodyend="16"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" line="35" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" bodystart="35" bodyend="35"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_font_1a0267bb87f7ffd0e4f087030d6eb15408" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -139,7 +173,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" line="18" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Font.cpp" bodystart="185" bodyend="198"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" line="37" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Font.cpp" bodystart="200" bodyend="213"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_font_1a712459e8466ba211932f764788c4f99f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -157,7 +191,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" line="19" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Font.cpp" bodystart="200" bodyend="229"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" line="38" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Font.cpp" bodystart="216" bodyend="245"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_font_1acf02f3d4a3c935ce7010c49e820a7c7d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const std::string &amp;</type>
@@ -166,12 +200,16 @@
         <name>GetFontName</name>
         <qualifiedname>AGE::AGEFont::GetFontName</qualifiedname>
         <briefdescription>
+<para>Returns the name of the font used in this object. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>A constant reference to a string containing the font name. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" line="23" column="19" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" bodystart="23" bodyend="23"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" line="46" column="19" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" bodystart="46" bodyend="46"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_font_1a3606f2b0f527fbd481e35ecb045c1db7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>uint64_t</type>
@@ -180,12 +218,16 @@
         <name>GetAssetID</name>
         <qualifiedname>AGE::AGEFont::GetAssetID</qualifiedname>
         <briefdescription>
+<para>Returns the Asset ID of the object. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>The unique identifier for this asset. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" line="24" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" bodystart="24" bodyend="24"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" line="51" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" bodystart="51" bodyend="51"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -196,12 +238,16 @@
         <name>GetDefault</name>
         <qualifiedname>AGE::AGEFont::GetDefault</qualifiedname>
         <briefdescription>
+<para>Get the default font instance. If it doesn&apos;t exist, create a new one and register it in <ref refid="class_a_g_e_1_1_asset_manager" kindref="compound">AssetManager</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Ref&lt;AGEFont&gt; A reference to the default font instance. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" line="21" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Font.cpp" bodystart="231" bodyend="244"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" line="40" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Font.cpp" bodystart="252" bodyend="265"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -212,12 +258,17 @@
         <name>SaveDefaultFont</name>
         <qualifiedname>AGE::AGEFont::SaveDefaultFont</qualifiedname>
         <briefdescription>
+<para>Saves the default font to a file in the editor&apos;s asset path. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function writes various details about the current font, including its type (always &quot;AGEFont&quot;), version number (1), texture ID, and texture specification, into a file named after the font&apos;s texture name located in the &apos;Fonts/AGEFonts/&apos; directory of the editor&apos;s asset path. The texture data itself is also written to the file.</para>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" line="27" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Font.cpp" bodystart="246" bodyend="259"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" line="54" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Font.cpp" bodystart="274" bodyend="287"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_a_g_e_font_1a7ecf7d88fa2191c4994bcf31926e63fb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -230,12 +281,26 @@
           <declname>FontName</declname>
         </param>
         <briefdescription>
+<para>Loads a default font from the specified file. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function reads in a font file and populates the atlas texture with its data. The font file should be in the <ref refid="class_a_g_e_1_1_a_g_e_font" kindref="compound">AGEFont</ref> format, which includes information about the font name, version number, asset ID, texture specification, and raw bytes of the texture data. If the header does not match &quot;AGEFont&quot;, an error message is logged and the function returns early.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FontName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the font file to load (without extension).</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" line="28" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Font.cpp" bodystart="261" bodyend="290"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" line="55" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Private/Font.cpp" bodystart="298" bodyend="327"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -264,7 +329,7 @@
         <label>std::enable_shared_from_this&lt; AGEFont &gt;</label>
       </node>
     </collaborationgraph>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" line="9" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" bodystart="10" bodyend="33"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" line="9" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/Font.h" bodystart="10" bodyend="60"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_a_g_e_font_1a6b8ccb4103068e4b1a98f9a022257f7f" prot="public" virt="non-virtual"><scope>AGE::AGEFont</scope><name>AGEFont</name></member>
       <member refid="class_a_g_e_1_1_a_g_e_font_1a3606f2b0f527fbd481e35ecb045c1db7" prot="public" virt="non-virtual"><scope>AGE::AGEFont</scope><name>GetAssetID</name></member>

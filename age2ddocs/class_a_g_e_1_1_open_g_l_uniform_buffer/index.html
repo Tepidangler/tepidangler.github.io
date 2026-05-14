@@ -89,23 +89,23 @@
 <tbody>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-bind"><strong>Bind</strong></a> () override<br></td>
+<td style="text-align: left;"><a href="#function-bind"><strong>Bind</strong></a> () override<br><em>Bind the uniform buffer to a specific binding point in the GPU's memory.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-opengluniformbuffer"><strong>OpenGLUniformBuffer</strong></a> (uint32_t Size, uint32_t Binding) <br></td>
+<td style="text-align: left;"><a href="#function-opengluniformbuffer"><strong>OpenGLUniformBuffer</strong></a> (uint32_t Size, uint32_t Binding) <br><em>Constructor for</em> <a href="./"><em><strong>OpenGLUniformBuffer</strong></em></a> <em>. Creates a new uniform buffer object with the specified size and binding point.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-setdata"><strong>SetData</strong></a> (const void * Data, uint32_t Size, uint32_t Offset=0) override<br></td>
+<td style="text-align: left;"><a href="#function-setdata"><strong>SetData</strong></a> (const void * Data, uint32_t Size, uint32_t Offset=0) override<br><em>This function sets the data of an OpenGL uniform buffer.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-unbind"><strong>Unbind</strong></a> () override<br></td>
+<td style="text-align: left;"><a href="#function-unbind"><strong>Unbind</strong></a> () override<br><em>Unbind function for the</em> <a href="./"><em><strong>OpenGLUniformBuffer</strong></em></a> <em>class. This function sets the buffer to an unbound state, meaning it is no longer bound to a target.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual</td>
-<td style="text-align: left;"><a href="#function-opengluniformbuffer"><strong>~OpenGLUniformBuffer</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-opengluniformbuffer"><strong>~OpenGLUniformBuffer</strong></a> () <br><em>Destructor for the</em> <a href="./"><em><strong>OpenGLUniformBuffer</strong></em></a> <em>class. This function deletes a buffer object from OpenGL using glDeleteBuffers(). The buffer to be deleted is specified by its ID, which is stored in m_RendererID member variable of this instance.</em></td>
 </tr>
 </tbody>
 </table>
@@ -121,7 +121,7 @@
 <tbody>
 <tr>
 <td style="text-align: right;">T *</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_uniform_buffer/#function-as"><strong>As</strong></a> () <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_uniform_buffer/#function-as"><strong>As</strong></a> () <br><em>This function is currently not implemented and will always throw an assertion. It returns a null pointer of type T*. The purpose of this function is unknown.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
@@ -137,7 +137,7 @@
 </tr>
 <tr>
 <td style="text-align: right;">virtual</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_uniform_buffer/#function-uniformbuffer"><strong>~UniformBuffer</strong></a> () <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_uniform_buffer/#function-uniformbuffer"><strong>~UniformBuffer</strong></a> () <br><em>Virtual destructor for the</em> <a href="../class_a_g_e_1_1_uniform_buffer/"><em><strong>UniformBuffer</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
@@ -153,44 +153,92 @@
 <tbody>
 <tr>
 <td style="text-align: right;">Ref&lt; <a href="../class_a_g_e_1_1_uniform_buffer/"><strong>UniformBuffer</strong></a> &gt;</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_uniform_buffer/#function-create"><strong>Create</strong></a> (uint32_t Size, uint32_t Binding) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_uniform_buffer/#function-create"><strong>Create</strong></a> (uint32_t Size, uint32_t Binding) <br><em>Creates a new</em> <a href="../class_a_g_e_1_1_uniform_buffer/"><em><strong>UniformBuffer</strong></em></a> <em>instance.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-bind">function Bind</h3>
+<p><em>Bind the uniform buffer to a specific binding point in the GPU's memory.</em> </p>
 <pre><code class="language-C++">virtual void AGE::OpenGLUniformBuffer::Bind () override
 </code></pre>
+<p>This function binds the uniform buffer object (UBO) to a specific binding point in the OpenGL context. The UBO is essentially an array of uniform variables that can be accessed by shaders.</p>
+<p><strong>Returns:</strong></p>
+<p>void No return value.</p>
+<p>Bind the uniform buffer to a specific binding point in the GPU's memory.</p>
+<p>This function binds the uniform buffer object (UBO) to a specific binding point in the GPU's memory. The binding point is specified by an integer argument, 'bindingPoint'. It allows data to be sent to shaders for rendering without having to re-upload it every frame.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>bindingPoint</code> An integer specifying the binding point in the GPU's memory where the UBO should be bound. </li>
+</ul>
 <p>Implements <a href="../class_a_g_e_1_1_uniform_buffer/#function-bind"><em>AGE::UniformBuffer::Bind</em></a></p>
 <hr>
 
 <h3 id="function-opengluniformbuffer">function OpenGLUniformBuffer</h3>
+<p><em>Constructor for</em> <a href="./"><em><strong>OpenGLUniformBuffer</strong></em></a> <em>. Creates a new uniform buffer object with the specified size and binding point.</em></p>
 <pre><code class="language-C++">AGE::OpenGLUniformBuffer::OpenGLUniformBuffer (
     uint32_t Size,
     uint32_t Binding
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Size</code> The size of the buffer in bytes. </li>
+<li><code>Binding</code> The binding point for this buffer, which determines its location in the shader program.</li>
+</ul>
+<p>Constructor for <a href="./"><strong>OpenGLUniformBuffer</strong></a>. Initializes an OpenGL uniform buffer object with the specified size and binding point.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Size</code> The size of the buffer in bytes. </li>
+<li><code>Binding</code> The binding point for this buffer, which determines its location in the shader program. </li>
+</ul>
 <hr>
 
 <h3 id="function-setdata">function SetData</h3>
+<p><em>This function sets the data of an OpenGL uniform buffer.</em> </p>
 <pre><code class="language-C++">virtual void AGE::OpenGLUniformBuffer::SetData (
     const void * Data,
     uint32_t Size,
     uint32_t Offset=0
 ) override
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Data</code> A pointer to the data that will be copied into the named buffer's data store. </li>
+<li><code>Size</code> The size in bytes of the data being uploaded. </li>
+<li><code>Offset</code> The offset in bytes from the beginning of the buffer where the new data will be placed.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>This function sets the data of an OpenGL uniform buffer.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Data</code> A pointer to the data that will be copied into the named buffer's data store. </li>
+<li><code>Size</code> The size in bytes of the region of the buffer object that is being replaced. </li>
+<li><code>Offset</code> The offset, in basic machine units, within the buffer object where the replacement will begin. </li>
+</ul>
 <p>Implements <a href="../class_a_g_e_1_1_uniform_buffer/#function-setdata"><em>AGE::UniformBuffer::SetData</em></a></p>
 <hr>
 
 <h3 id="function-unbind">function Unbind</h3>
+<p><em>Unbind function for the</em> <a href="./"><em><strong>OpenGLUniformBuffer</strong></em></a> <em>class. This function sets the buffer to an unbound state, meaning it is no longer bound to a target.</em></p>
 <pre><code class="language-C++">virtual void AGE::OpenGLUniformBuffer::Unbind () override
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Unbind function for the <a href="./"><strong>OpenGLUniformBuffer</strong></a> class. This function is used to unbind any buffer that has been bound in the current context. It sets the uniform binding point back to its default state, which is zero.</p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <p>Implements <a href="../class_a_g_e_1_1_uniform_buffer/#function-unbind"><em>AGE::UniformBuffer::Unbind</em></a></p>
 <hr>
 
 <h3 id="function-opengluniformbuffer_1">function ~OpenGLUniformBuffer</h3>
+<p><em>Destructor for the</em> <a href="./"><em><strong>OpenGLUniformBuffer</strong></em></a> <em>class. This function deletes a buffer object from OpenGL using glDeleteBuffers(). The buffer to be deleted is specified by its ID, which is stored in m_RendererID member variable of this instance.</em></p>
 <pre><code class="language-C++">virtual AGE::OpenGLUniformBuffer::~OpenGLUniformBuffer () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Destructor for the <a href="./"><strong>OpenGLUniformBuffer</strong></a> class. This function deletes a buffer object from OpenGL using glDeleteBuffers(). The buffer to be deleted is specified by its ID, which is stored in m_RendererID member variable of this instance. </p>
 <hr>
 
 <hr />

@@ -107,15 +107,15 @@
 <tbody>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-line-13"><strong>Line</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-line-13"><strong>Line</strong></a> () = default<br><em>Default constructor for the</em> <a href="./"><em><strong>Line</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-line-23"><strong>Line</strong></a> (float vx, float vy, float vz, float mx, float my, float mz) <br></td>
+<td style="text-align: left;"><a href="#function-line-23"><strong>Line</strong></a> (float vx, float vy, float vz, float mx, float my, float mz) <br><em>Constructs a</em> <a href="./"><em><strong>Line</strong></em></a> <em>object with given direction and moment vectors.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-line-33"><strong>Line</strong></a> (const <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> &amp; v, const <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> &amp; m) <br></td>
+<td style="text-align: left;"><a href="#function-line-33"><strong>Line</strong></a> (const <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> &amp; v, const <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> &amp; m) <br><em>Constructs a</em> <a href="./"><em><strong>Line</strong></em></a> <em>object with given direction and moment vectors.</em></td>
 </tr>
 </tbody>
 </table>
@@ -131,11 +131,15 @@
 <hr>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-line-13">function Line [1/3]</h3>
+<p><em>Default constructor for the</em> <a href="./"><em><strong>Line</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::Line::Line () = default
 </code></pre>
+<p>This function initializes a new instance of the <a href="./"><strong>Line</strong></a> class with default values. It does not take any parameters and returns no value.</p>
+<p>Default constructor for the <a href="./"><strong>Line</strong></a> class. </p>
 <hr>
 
 <h3 id="function-line-23">function Line [2/3]</h3>
+<p><em>Constructs a</em> <a href="./"><em><strong>Line</strong></em></a> <em>object with given direction and moment vectors.</em></p>
 <pre><code class="language-C++">inline AGE::Line::Line (
     float vx,
     float vy,
@@ -145,14 +149,45 @@
     float mz
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>vx</code> The x component of the direction vector. </li>
+<li><code>vy</code> The y component of the direction vector. </li>
+<li><code>vz</code> The z component of the direction vector. </li>
+<li><code>mx</code> The x component of the moment vector. </li>
+<li><code>my</code> The y component of the moment vector. </li>
+<li><code>mz</code> The z component of the moment vector.</li>
+</ul>
+<p>Constructs a <a href="./"><strong>Line</strong></a> object with given direction and moment vectors.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>vx</code> The x component of the direction vector. </li>
+<li><code>vy</code> The y component of the direction vector. </li>
+<li><code>vz</code> The z component of the direction vector. </li>
+<li><code>mx</code> The x component of the moment vector. </li>
+<li><code>my</code> The y component of the moment vector. </li>
+<li><code>mz</code> The z component of the moment vector. </li>
+</ul>
 <hr>
 
 <h3 id="function-line-33">function Line [3/3]</h3>
+<p><em>Constructs a</em> <a href="./"><em><strong>Line</strong></em></a> <em>object with given direction and moment vectors.</em></p>
 <pre><code class="language-C++">inline AGE::Line::Line (
     const Vector3 &amp; v,
     const Vector3 &amp; m
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>v</code> The direction vector of the line. </li>
+<li><code>m</code> The moment vector of the line.</li>
+</ul>
+<p>Constructs a <a href="./"><strong>Line</strong></a> object with given direction and moment vectors.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>v</code> The direction vector of the line. </li>
+<li><code>m</code> The moment vector of the line. </li>
+</ul>
 <hr>
 
 <hr />

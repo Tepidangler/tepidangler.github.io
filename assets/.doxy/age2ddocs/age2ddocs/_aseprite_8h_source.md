@@ -28,9 +28,9 @@ namespace AGE
     class Aseprite
     {
     public:
-        Aseprite() = default;
-        Aseprite(const Aseprite&) = delete; // Despite not wanting a bunch of objects floating around we might still need to copy the data from place to place idk yet though.
-        Aseprite(const Aseprite&&) = delete;
+Aseprite() = default;
+Aseprite(const Aseprite&) = delete; // Despite not wanting a bunch of objects floating around we might still need to copy the data from place to place idk yet though.
+Aseprite(const Aseprite&&) = delete;
 
         void ReadData(const std::filesystem::path& Filepath);
 
@@ -53,7 +53,7 @@ namespace AGE
         void ReadNewPaletteChunk( AsepriteFileData& Data);
         void ReadUserDataChunk( AsepriteFileData& Data);
         void ReadSliceChunk( AsepriteFileData& Data);
-        void ReadTilesetChunk( AsepriteFileData& Data) { CoreLogger::Error("AGE does not support Tilesets made in Aseprite!"); }
+void ReadTilesetChunk( AsepriteFileData& Data) { CoreLogger::Error("AGE does not support Tilesets made in Aseprite!"); }
 
         void ReorderLayers(const std::string& Filename);
         Ref<Texture2D> CreateTexture(std::string ImageName);
@@ -64,7 +64,7 @@ namespace AGE
         AsepritePropertyTypes ConvertToType(uint16_t T);
         void ProcessElement(MemoryStreamReader* Stream, AsepritePropertyTypes T, AsepriteUserProps& Data);
 
-        void operator=(const Aseprite& Other)
+void operator=(const Aseprite& Other)
         {
 
         }

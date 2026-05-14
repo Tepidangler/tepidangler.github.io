@@ -88,43 +88,73 @@
 <tbody>
 <tr>
 <td style="text-align: right;">float</td>
-<td style="text-align: left;"><a href="#function-getmilliseconds"><strong>GetMilliseconds</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-getmilliseconds"><strong>GetMilliseconds</strong></a> () const<br><em>This function returns the time value in milliseconds.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">float</td>
-<td style="text-align: left;"><a href="#function-getseconds"><strong>GetSeconds</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-getseconds"><strong>GetSeconds</strong></a> () const<br><em>This function returns the time value in seconds.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-timestep"><strong>TimeStep</strong></a> (float time=0.f) <br></td>
+<td style="text-align: left;"><a href="#function-timestep"><strong>TimeStep</strong></a> (float time=0.f) <br><em>Constructs a</em> <a href="./"><em><strong>TimeStep</strong></em></a> <em>object with the given time value. If no argument is provided, it defaults to 0.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-operator-float"><strong>operator float</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-operator-float"><strong>operator float</strong></a> () const<br><em>Converts the object into a floating-point number representing time.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-getmilliseconds">function GetMilliseconds</h3>
+<p><em>This function returns the time value in milliseconds.</em> </p>
 <pre><code class="language-C++">inline float AGE::TimeStep::GetMilliseconds () const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>The time value multiplied by 1000 to convert it into milliseconds.</p>
+<p>This function returns the time value in milliseconds. </p>
+<p><strong>Returns:</strong></p>
+<p>The time value multiplied by 1000 to convert it into milliseconds. </p>
 <hr>
 
 <h3 id="function-getseconds">function GetSeconds</h3>
+<p><em>This function returns the time value in seconds.</em> </p>
 <pre><code class="language-C++">inline float AGE::TimeStep::GetSeconds () const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A float representing the time in seconds.</p>
+<p>This function returns the time value in seconds. </p>
+<p><strong>Returns:</strong></p>
+<p>A float representing the time in seconds. </p>
 <hr>
 
 <h3 id="function-timestep">function TimeStep</h3>
+<p><em>Constructs a</em> <a href="./"><em><strong>TimeStep</strong></em></a> <em>object with the given time value. If no argument is provided, it defaults to 0.</em></p>
 <pre><code class="language-C++">inline AGE::TimeStep::TimeStep (
     float time=0.f
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>time</code> The time value for this <a href="./"><strong>TimeStep</strong></a>. Defaults to 0 if not specified.</li>
+</ul>
+<p>Constructs a <a href="./"><strong>TimeStep</strong></a> object with the given time value. If no argument is provided, it defaults to 0. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>time</code> The time value for this <a href="./"><strong>TimeStep</strong></a>. Defaults to 0 if not specified. </li>
+</ul>
 <hr>
 
 <h3 id="function-operator-float">function operator float</h3>
+<p><em>Converts the object into a floating-point number representing time.</em> </p>
 <pre><code class="language-C++">inline AGE::TimeStep::operator float () const
 </code></pre>
+<p>This function returns the value of 'm_Time' which is a private member variable of this class. It provides an implicit conversion to float, allowing it to be used in arithmetic expressions where a float is expected.</p>
+<p><strong>Returns:</strong></p>
+<p>A floating-point number representing the time stored in 'm_Time'.</p>
+<p>Converts the object to a floating-point number representing time.</p>
+<p>This function returns the value of the 'm_Time' member variable, which represents time in some unit. The exact meaning and interpretation of this value is not specified here.</p>
+<p><strong>Returns:</strong></p>
+<p>A float representing the current time value. </p>
 <hr>
 
 <hr />

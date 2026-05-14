@@ -60,8 +60,8 @@
 
 | Type | Name |
 | ---: | :--- |
-|  void | [**Deserialize**](#function-deserialize) ([**DataReader**](class_a_g_e_1_1_data_reader.md) \* Deserializer, [**SceneInfo**](struct_a_g_e_1_1_scene_info.md) & Data) <br> |
-|  void | [**Serialize**](#function-serialize) ([**DataWriter**](class_a_g_e_1_1_data_writer.md) \* Serializer, const [**SceneInfo**](struct_a_g_e_1_1_scene_info.md) & Data) <br> |
+|  void | [**Deserialize**](#function-deserialize) ([**DataReader**](class_a_g_e_1_1_data_reader.md) \* Deserializer, [**SceneInfo**](struct_a_g_e_1_1_scene_info.md) & Data) <br>_Deserialize function for_ [_**SceneInfo**_](struct_a_g_e_1_1_scene_info.md) _class._ |
+|  void | [**Serialize**](#function-serialize) ([**DataWriter**](class_a_g_e_1_1_data_writer.md) \* Serializer, const [**SceneInfo**](struct_a_g_e_1_1_scene_info.md) & Data) <br>_Serializes the_ [_**SceneInfo**_](struct_a_g_e_1_1_scene_info.md) _data into a_[_**DataWriter**_](class_a_g_e_1_1_data_writer.md) _object._ |
 
 
 
@@ -136,6 +136,7 @@ size_t AGE::SceneInfo::Size;
 
 ### function Deserialize 
 
+_Deserialize function for_ [_**SceneInfo**_](struct_a_g_e_1_1_scene_info.md) _class._
 ```C++
 static void AGE::SceneInfo::Deserialize (
     DataReader * Deserializer,
@@ -145,6 +146,35 @@ static void AGE::SceneInfo::Deserialize (
 
 
 
+This function reads raw data from a [**DataReader**](class_a_g_e_1_1_data_reader.md) object and populates the provided [**SceneInfo**](struct_a_g_e_1_1_scene_info.md) object with it.
+
+
+
+
+**Parameters:**
+
+
+* `Deserializer` Pointer to the [**DataReader**](class_a_g_e_1_1_data_reader.md) object that provides the serialized data. 
+* `Data` Reference to the [**SceneInfo**](struct_a_g_e_1_1_scene_info.md) object where the deserialized data will be stored.
+
+Deserialize function for [**SceneInfo**](struct_a_g_e_1_1_scene_info.md) class.
+
+
+This function reads raw data from a [**DataReader**](class_a_g_e_1_1_data_reader.md) object and populates the provided [**SceneInfo**](struct_a_g_e_1_1_scene_info.md) object with it.
+
+
+
+
+**Parameters:**
+
+
+* `Deserializer` Pointer to the [**DataReader**](class_a_g_e_1_1_data_reader.md) object that provides the serialized data. 
+* `Data` Reference to the [**SceneInfo**](struct_a_g_e_1_1_scene_info.md) object where the deserialized data will be stored. 
+
+
+
+
+        
 
 <hr>
 
@@ -152,6 +182,7 @@ static void AGE::SceneInfo::Deserialize (
 
 ### function Serialize 
 
+_Serializes the_ [_**SceneInfo**_](struct_a_g_e_1_1_scene_info.md) _data into a_[_**DataWriter**_](class_a_g_e_1_1_data_writer.md) _object._
 ```C++
 static void AGE::SceneInfo::Serialize (
     DataWriter * Serializer,
@@ -161,6 +192,32 @@ static void AGE::SceneInfo::Serialize (
 
 
 
+This function serializes various parts of the [**SceneInfo**](struct_a_g_e_1_1_scene_info.md) data structure, including the size of AssetMap and the Flags string. It also writes the raw pointer to AssetMap.
+
+
+
+
+**Parameters:**
+
+
+* `Serializer` The [**DataWriter**](class_a_g_e_1_1_data_writer.md) object where the serialized data will be written into. 
+* `Data` The [**SceneInfo**](struct_a_g_e_1_1_scene_info.md) instance that contains the data to be serialized.
+
+This function serializes the [**SceneInfo**](struct_a_g_e_1_1_scene_info.md) object into a [**DataWriter**](class_a_g_e_1_1_data_writer.md).
+
+
+
+
+**Parameters:**
+
+
+* `Serializer` Pointer to the [**DataWriter**](class_a_g_e_1_1_data_writer.md) that will be used for serialization. 
+* `Data` The [**SceneInfo**](struct_a_g_e_1_1_scene_info.md) object that is being serialized. 
+
+
+
+
+        
 
 <hr>
 

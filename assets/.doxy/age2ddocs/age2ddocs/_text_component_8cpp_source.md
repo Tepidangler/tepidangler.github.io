@@ -22,13 +22,16 @@
 
 namespace AGE
 {
-    TextComponent::TextComponent(const std::string& Name)
+COMMENT:
+CONFIDENCE: 1.0;
+
+TextComponent::TextComponent(const std::string& Name)
     {
         m_Name = Name;
         m_Type = UIComponentType::TextComponent;
         m_StringProperties.TextFont = AGEFont::GetDefault();
     }
-    void TextComponent::OnUpdate(TimeStep DeltaTime)
+void TextComponent::OnUpdate(TimeStep DeltaTime)
     {
         if (m_CompProperties.Visible)
         {
@@ -36,11 +39,12 @@ namespace AGE
         }
     }
 
-    void TextComponent::OnEvent(Event &Event)
+void TextComponent::OnEvent(Event &Event)
     {
     }
 
-    void TextComponent::DrawFontSelectionComboBox()
+    
+void TextComponent::DrawFontSelectionComboBox()
     {
         std::unordered_map<UUID,Ref<AGEFont>> Fonts = AssetManager::Get().GetAssetRegistry()->GetFonts();
         std::vector<std::string> FontNames = AssetManager::Get().GetAssetRegistry()->GetFontNames();
@@ -71,7 +75,7 @@ namespace AGE
 
     }
 
-    void TextComponent::DrawContent()
+void TextComponent::DrawContent()
     {
         ImGui::Text("String Properties");
         ImGui::Text("Text");ImGui::SameLine();
@@ -88,7 +92,7 @@ namespace AGE
     }
 
     template<>
-    TextComponent* UIComponent::As()
+TextComponent* UIComponent::As()
     {
         return (TextComponent*)this;
     }

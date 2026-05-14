@@ -78,6 +78,21 @@
                 <h1 id="class-agereverse">Class AGE::Reverse</h1>
 <p><strong>template &lt;typename T&gt;</strong></p>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespace_a_g_e/"><strong>AGE</strong></a> <strong>&gt;</strong> <a href="./"><strong>Reverse</strong></a></p>
+<h2 id="public-attributes">Public Attributes</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">COMMENT</td>
+<td style="text-align: left;"><a href="#variable-__pad0__"><strong>__pad0__</strong></a>  <br></td>
+</tr>
+</tbody>
+</table>
 <h2 id="public-functions">Public Functions</h2>
 <table>
 <thead>
@@ -89,34 +104,58 @@
 <tbody>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-reverse"><strong>Reverse</strong></a> (T &amp; iterable) <br></td>
+<td style="text-align: left;"><a href="#function-reverse"><strong>Reverse</strong></a> (T &amp; iterable) <br><em>Constructs a new instance of the</em> <a href="./"><em><strong>Reverse</strong></em></a> <em>class with an iterable object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">auto</td>
-<td style="text-align: left;"><a href="#function-begin"><strong>begin</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-begin"><strong>begin</strong></a> () const<br><em>Returns a reverse iterator pointing to the last element of the container (i.e., its reverse beginning).</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">auto</td>
-<td style="text-align: left;"><a href="#function-end"><strong>end</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-end"><strong>end</strong></a> () const<br><em>Returns a reverse iterator pointing to the theoretical element past the last element of the sequence.</em></td>
 </tr>
 </tbody>
 </table>
+<h2 id="public-attributes-documentation">Public Attributes Documentation</h2>
+<h3 id="variable-__pad0__">variable __pad0__</h3>
+<pre><code class="language-C++">COMMENT AGE::Reverse&lt; T &gt;::__pad0__;
+</code></pre>
+<hr>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-reverse">function Reverse</h3>
+<p><em>Constructs a new instance of the</em> <a href="./"><em><strong>Reverse</strong></em></a> <em>class with an iterable object.</em></p>
 <pre><code class="language-C++">inline explicit AGE::Reverse::Reverse (
     T &amp; iterable
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>iterable</code> A reference to the iterable object that will be reversed.</li>
+</ul>
+<p>Constructs a new instance of the <a href="./"><strong>Reverse</strong></a> class with the provided iterable object. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>iterable</code> The reference to an iterable object (like vector, list etc.) that needs to be reversed. </li>
+</ul>
 <hr>
 
 <h3 id="function-begin">function begin</h3>
+<p><em>Returns a reverse iterator pointing to the last element of the container (i.e., its reverse beginning).</em> </p>
 <pre><code class="language-C++">inline auto AGE::Reverse::begin () const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A reverse iterator which points to the end of the sequence of numbers in the container.</p>
+<p>Returns a reverse iterator pointing to the last element of the container (i.e., its reverse beginning). </p>
+<p><strong>Returns:</strong></p>
+<p>A reverse iterator which points to the end of the sequence of numbers in the container. </p>
 <hr>
 
 <h3 id="function-end">function end</h3>
+<p><em>Returns a reverse iterator pointing to the theoretical element past the last element of the sequence.</em> </p>
 <pre><code class="language-C++">inline auto AGE::Reverse::end () const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A reverse iterator that points to the theoretical element past the last element of the sequence. </p>
 <hr>
 
 <hr />

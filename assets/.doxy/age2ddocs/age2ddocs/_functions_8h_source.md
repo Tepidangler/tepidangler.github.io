@@ -82,15 +82,21 @@ namespace AGE
     struct AGEFunction final
     {
     public:
-        AGEFunction() = default;
+AGEFunction() = default;
 
-        AGEFunction(const std::string& Exec,  std::vector<rttr::variant> Arguments, E* Value = nullptr, Ref<R>& Ptr = nullptr)
+AGEFunction(const std::string& Exec,  std::vector<rttr::variant> Arguments, E* Value = nullptr, Ref<R>& Ptr = nullptr)
             : Entt(Value), Val(Exec), Reference(Ptr), Args(Arguments)
         {
         }
 
-        AGEFunction(const AGEFunction&) = default;
-        virtual ~AGEFunction() = default;
+        COMMENT:
+CONFIDENCE: 1.0;
+
+COMMENT:
+CONFIDENCE: 1.0;
+
+AGEFunction(const AGEFunction&) = default;
+virtual ~AGEFunction() = default;
 
 
         Ref<R> Reference;
@@ -101,7 +107,7 @@ namespace AGE
         uint64_t EnttID;
         bool bIsUtilFunction = false;
 
-        rttr::variant Execute(TimeStep DeltaTime = 0.f)
+rttr::variant Execute(TimeStep DeltaTime = 0.f)
         {
             if (Reference && DeltaTime > 0.f)
             {
@@ -124,7 +130,7 @@ namespace AGE
 
         }
 
-        static void Serialize(DataWriter* Serializer, const AGEFunction& Data)
+static void Serialize(DataWriter* Serializer, const AGEFunction& Data)
         {
             Serializer->WriteRaw<uint64_t>((uint64_t)Data.RefID);
             Serializer->WriteRaw<bool>(Data.bIsUtilFunction);
@@ -142,7 +148,7 @@ namespace AGE
             Serializer->WriteString(Data.Val);
         }
 
-        static void Deserialize(DataReader* Serializer, AGEFunction& Data)
+static void Deserialize(DataReader* Serializer, AGEFunction& Data)
         {
             bool HasEntt = false;
 
@@ -159,7 +165,7 @@ namespace AGE
 
     protected:
 
-        rttr::variant Function(Ref<R>& Ptr, TimeStep DeltaTime = 0.f)
+rttr::variant Function(Ref<R>& Ptr, TimeStep DeltaTime = 0.f)
         {
             rttr::variant RetVal;
             if (Val == "OnUpdate")

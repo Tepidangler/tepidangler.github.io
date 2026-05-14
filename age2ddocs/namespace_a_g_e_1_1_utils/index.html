@@ -103,19 +103,19 @@
 <tbody>
 <tr>
 <td style="text-align: right;">GLenum</td>
-<td style="text-align: left;"><a href="#function-ageimageformattogldataformat"><strong>AGEImageFormatToGLDataFormat</strong></a> (ImageFormat Format) <br></td>
+<td style="text-align: left;"><a href="#function-ageimageformattogldataformat"><strong>AGEImageFormatToGLDataFormat</strong></a> (ImageFormat Format) <br><em>Converts an ImageFormat to a GLenum data format.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">GLenum</td>
-<td style="text-align: left;"><a href="#function-ageimageformattoglinternalformat"><strong>AGEImageFormatToGLInternalFormat</strong></a> (ImageFormat Format) <br></td>
+<td style="text-align: left;"><a href="#function-ageimageformattoglinternalformat"><strong>AGEImageFormatToGLInternalFormat</strong></a> (ImageFormat Format) <br><em>Converts an ImageFormat to its corresponding GL internal format.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">GLenum</td>
-<td style="text-align: left;"><a href="#function-agetextureformattogl"><strong>AGETextureFormatToGL</strong></a> (FramebufferTextureFormat Format) <br></td>
+<td style="text-align: left;"><a href="#function-agetextureformattogl"><strong>AGETextureFormatToGL</strong></a> (FramebufferTextureFormat Format) <br><em>Converts a FramebufferTextureFormat to its corresponding GLenum.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-attachcolortexture"><strong>AttachColorTexture</strong></a> (uint32_t ID, int Samples, GLenum InternalFormat, GLenum Format, uint32_t Width, uint32_t Height, int Index) <br></td>
+<td style="text-align: left;"><a href="#function-attachcolortexture"><strong>AttachColorTexture</strong></a> (uint32_t ID, int Samples, GLenum InternalFormat, GLenum Format, uint32_t Width, uint32_t Height, int Index) <br><em>Attaches a color texture to the framebuffer.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
@@ -123,93 +123,126 @@
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-bindtexture"><strong>BindTexture</strong></a> (bool Multisampled, uint32_t ID) <br></td>
+<td style="text-align: left;"><a href="#function-bindtexture"><strong>BindTexture</strong></a> (bool Multisampled, uint32_t ID) <br><em>This function binds a texture to the OpenGL context.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">std::string</td>
-<td style="text-align: left;"><a href="#function-convertapitostring"><strong>ConvertAPIToString</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-convertapitostring"><strong>ConvertAPIToString</strong></a> () <br><em>Converts the current</em> <a href="../class_a_g_e_1_1_renderer_a_p_i/"><em><strong>RendererAPI</strong></em></a> <em>to a string.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">std::string</td>
-<td style="text-align: left;"><a href="#function-converttostring"><strong>ConvertToString</strong></a> (AGEPinType Type, bool Value) <br></td>
+<td style="text-align: left;"><a href="#function-converttostring"><strong>ConvertToString</strong></a> (AGEPinType Type, bool Value) <br><em>Converts a boolean value to its string representation.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">std::string</td>
-<td style="text-align: left;"><a href="#function-converttostring"><strong>ConvertToString</strong></a> (AGEPinType Type, int Value) <br></td>
+<td style="text-align: left;"><a href="#function-converttostring"><strong>ConvertToString</strong></a> (AGEPinType Type, int Value) <br><em>Converts an integer value to a string.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">std::string</td>
-<td style="text-align: left;"><a href="#function-converttostring"><strong>ConvertToString</strong></a> (AGEPinType Type, int16_t Value) <br></td>
+<td style="text-align: left;"><a href="#function-converttostring"><strong>ConvertToString</strong></a> (AGEPinType Type, int16_t Value) <br><em>Converts a numeric value to string.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">std::string</td>
-<td style="text-align: left;"><a href="#function-converttostring"><strong>ConvertToString</strong></a> (AGEPinType Type, int64_t Value) <br></td>
+<td style="text-align: left;"><a href="#function-converttostring"><strong>ConvertToString</strong></a> (AGEPinType Type, int64_t Value) <br><em>Converts a numeric value to string.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">std::string</td>
-<td style="text-align: left;"><a href="#function-converttostring"><strong>ConvertToString</strong></a> (AGEPinType Type, uint16_t Value) <br></td>
+<td style="text-align: left;"><a href="#function-converttostring"><strong>ConvertToString</strong></a> (AGEPinType Type, uint16_t Value) <br><em>Converts a numeric value to string.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">std::string</td>
-<td style="text-align: left;"><a href="#function-converttostring"><strong>ConvertToString</strong></a> (AGEPinType Type, uint32_t Value) <br></td>
+<td style="text-align: left;"><a href="#function-converttostring"><strong>ConvertToString</strong></a> (AGEPinType Type, uint32_t Value) <br><em>Converts a value of an AGE pin type to its string representation.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">std::string</td>
-<td style="text-align: left;"><a href="#function-converttostring"><strong>ConvertToString</strong></a> (AGEPinType Type, uint64_t Value) <br></td>
+<td style="text-align: left;"><a href="#function-converttostring"><strong>ConvertToString</strong></a> (AGEPinType Type, uint64_t Value) <br><em>Converts a value of any type to string.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">std::string</td>
-<td style="text-align: left;"><a href="#function-converttostring"><strong>ConvertToString</strong></a> (AGEPinType Type, <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> Value) <br></td>
+<td style="text-align: left;"><a href="#function-converttostring"><strong>ConvertToString</strong></a> (AGEPinType Type, <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> Value) <br><em>Converts an AGEPinType and a</em> <a href="../struct_a_g_e_1_1_vector2/"><em><strong>Vector2</strong></em></a> <em>to a string.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">std::string</td>
-<td style="text-align: left;"><a href="#function-converttostring"><strong>ConvertToString</strong></a> (AGEPinType Type, <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> Value) <br></td>
+<td style="text-align: left;"><a href="#function-converttostring"><strong>ConvertToString</strong></a> (AGEPinType Type, <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> Value) <br><em>Converts an AGEPinType and a</em> <a href="../struct_a_g_e_1_1_vector3/"><em><strong>Vector3</strong></em></a> <em>to a string.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">std::string</td>
-<td style="text-align: left;"><a href="#function-converttostring"><strong>ConvertToString</strong></a> (AGEPinType Type, <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> Value) <br></td>
+<td style="text-align: left;"><a href="#function-converttostring"><strong>ConvertToString</strong></a> (AGEPinType Type, <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> Value) <br><em>Converts a given AGEPinType and</em> <a href="../struct_a_g_e_1_1_vector4/"><em><strong>Vector4</strong></em></a> <em>to string.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">std::string</td>
-<td style="text-align: left;"><a href="#function-converttostring"><strong>ConvertToString</strong></a> (AGEPinType Type, float Value) <br></td>
+<td style="text-align: left;"><a href="#function-converttostring"><strong>ConvertToString</strong></a> (AGEPinType Type, float Value) <br><em>Converts a floating-point value to a string.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-createtextures"><strong>CreateTextures</strong></a> (bool Multisampled, uint32_t * OutID, uint32_t Count) <br></td>
+<td style="text-align: left;"><a href="#function-createtextures"><strong>CreateTextures</strong></a> (bool Multisampled, uint32_t * OutID, uint32_t Count) <br><em>Creates a set of textures.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="#function-isdepthformat"><strong>IsDepthFormat</strong></a> (FramebufferTextureFormat Format) <br></td>
+<td style="text-align: left;"><a href="#function-isdepthformat"><strong>IsDepthFormat</strong></a> (FramebufferTextureFormat Format) <br><em>Checks if the given format is a depth format.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">GLenum</td>
-<td style="text-align: left;"><a href="#function-texturetarget"><strong>TextureTarget</strong></a> (bool Multisampled) <br></td>
+<td style="text-align: left;"><a href="#function-texturetarget"><strong>TextureTarget</strong></a> (bool Multisampled) <br><em>Determines the OpenGL texture target based on whether multisampling is enabled.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
 <h3 id="function-ageimageformattogldataformat">function AGEImageFormatToGLDataFormat</h3>
+<p><em>Converts an ImageFormat to a GLenum data format.</em> </p>
 <pre><code class="language-C++">static GLenum AGE::Utils::AGEImageFormatToGLDataFormat (
     ImageFormat Format
 ) 
 </code></pre>
+<p>This function takes in an ImageFormat and returns the corresponding GLenum data format. It uses a switch-case statement to handle different ImageFormats, returning GL_RGB for RGB8 and GL_RGBA for RGBA8. If the ImageFormat is not supported by AGE (which should never happen), it asserts false and returns 0.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Format</code> The ImageFormat to convert. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>The corresponding GLenum data format. </p>
 <hr>
 
 <h3 id="function-ageimageformattoglinternalformat">function AGEImageFormatToGLInternalFormat</h3>
+<p><em>Converts an ImageFormat to its corresponding GL internal format.</em> </p>
 <pre><code class="language-C++">static GLenum AGE::Utils::AGEImageFormatToGLInternalFormat (
     ImageFormat Format
 ) 
 </code></pre>
+<p>This function takes in an ImageFormat and returns the equivalent GL internal format. It uses a switch-case statement to handle different ImageFormats, returning the appropriate GL_RGB8 or GL_RGBA8 based on the input. If the input is not supported by AGE (which should never happen as we only have two defined formats), it asserts false and returns 0.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Format</code> The ImageFormat to convert. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>The corresponding GL internal format, or 0 if the ImageFormat is not supported. </p>
 <hr>
 
 <h3 id="function-agetextureformattogl">function AGETextureFormatToGL</h3>
+<p><em>Converts a FramebufferTextureFormat to its corresponding GLenum.</em> </p>
 <pre><code class="language-C++">static GLenum AGE::Utils::AGETextureFormatToGL (
     FramebufferTextureFormat Format
 ) 
 </code></pre>
+<p>This function takes in a FramebufferTextureFormat and returns the equivalent GLenum value. It handles four formats: RGBA8, RED_INTEGER. For any other format, it asserts false and returns 0.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Format</code> The FramebufferTextureFormat to convert. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>The corresponding GLenum for the input FramebufferTextureFormat. If the input is not a recognized format, it will return 0.</p>
+<p>Converts a FramebufferTextureFormat to its corresponding GLenum.</p>
+<p>This function takes in a FramebufferTextureFormat and returns the equivalent GLenum value. It handles four cases: RGBA8, which corresponds to GL_RGBA8, RED_INTEGER, which corresponds to GL_RED_INTEGER, and any other format that is not handled by this function results in an assertion failure with a message "Invalid Format".</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Format</code> The FramebufferTextureFormat to convert. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>The corresponding GLenum value for the given FramebufferTextureFormat. </p>
 <hr>
 
 <h3 id="function-attachcolortexture">function AttachColorTexture</h3>
+<p><em>Attaches a color texture to the framebuffer.</em> </p>
 <pre><code class="language-C++">static void AGE::Utils::AttachColorTexture (
     uint32_t ID,
     int Samples,
@@ -220,6 +253,19 @@
     int Index
 ) 
 </code></pre>
+<p>This function sets up and attaches a color texture to the OpenGL framebuffer object. The texture can be either multisampled or regular, depending on the 'Samples' parameter. It then binds this texture as a color attachment point for rendering.</p>
+<p>Attach a color texture to the framebuffer.</p>
+<p>This function attaches a color texture to the OpenGL framebuffer. The texture can be either multisampled or regular. If it's multisampled, we use glTexImage2DMultisample to create the texture with specified samples and internal format. Otherwise, we use glTexImage2D to create a 2D texture with given width, height, and format. We then set various texture parameters such as minification and magnification filters, wrapping modes etc., before attaching it to the framebuffer using glFramebufferTexture2D.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>ID</code> The OpenGL ID of the texture to attach. </li>
+<li><code>Samples</code> Number of samples for multisampling (if any). </li>
+<li><code>InternalFormat</code> The internal format of the texture. </li>
+<li><code>Format</code> The format of the pixel data. </li>
+<li><code>Width</code> The width of the texture. </li>
+<li><code>Height</code> The height of the texture. </li>
+<li><code>Index</code> The index for color attachment point in framebuffer object. </li>
+</ul>
 <hr>
 
 <h3 id="function-attachdepthtexture">function AttachDepthTexture</h3>
@@ -232,130 +278,401 @@
     uint32_t Height
 ) 
 </code></pre>
+<p>This function is used to attach a depth texture to the frame buffer. It takes in several parameters including the OpenGL ID, number of samples for multisampling, format of the texture data, type of attachment and dimensions of the texture. The function first checks if the texture should be multisampled based on the provided sample count. If it is, a multisample texture image is created using glTexImage2DMultisample. Otherwise, a regular 2D texture storage is created with glTexStorage2D and some basic parameters are set for the texture. Finally, the function attaches the texture to the frame buffer using glFramebufferTexture2D. </p>
 <hr>
 
 <h3 id="function-bindtexture">function BindTexture</h3>
+<p><em>This function binds a texture to the OpenGL context.</em> </p>
 <pre><code class="language-C++">static void AGE::Utils::BindTexture (
     bool Multisampled,
     uint32_t ID
 ) 
 </code></pre>
+<p>The function takes two parameters, a boolean indicating whether the texture is multisampled and an unsigned integer representing the ID of the texture. It uses these values to determine the appropriate target for binding the texture with glBindTexture().</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Multisampled</code> A boolean value that indicates if the texture is multisampled or not. </li>
+<li><code>ID</code> An unsigned integer representing the ID of the texture to be bound.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>This function binds a texture to the OpenGL context.</p>
+<p>It takes two parameters, one boolean and one unsigned integer. The boolean indicates whether the texture is multisampled or not, while the unsigned integer represents the ID of the texture. The function uses these inputs to determine the correct target for binding the texture using glBindTexture().</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Multisampled</code> A boolean indicating if the texture is multisampled (true) or not (false). </li>
+<li><code>ID</code> An unsigned integer representing the ID of the texture.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-convertapitostring">function ConvertAPIToString</h3>
+<p><em>Converts the current</em> <a href="../class_a_g_e_1_1_renderer_a_p_i/"><em><strong>RendererAPI</strong></em></a> <em>to a string.</em></p>
 <pre><code class="language-C++">static std::string AGE::Utils::ConvertAPIToString () 
 </code></pre>
+<p>This function converts the enum value of <a href="../class_a_g_e_1_1_renderer_a_p_i/"><strong>RendererAPI</strong></a> into a human-readable string representation. It uses a switch statement to check the integer equivalent of the <a href="../class_a_g_e_1_1_renderer_a_p_i/"><strong>RendererAPI</strong></a> and returns a corresponding string. If the <a href="../class_a_g_e_1_1_renderer_a_p_i/"><strong>RendererAPI</strong></a> is not recognized, it defaults to "UNDEFINED".</p>
+<p><strong>Returns:</strong></p>
+<p>A string representing the current <a href="../class_a_g_e_1_1_renderer_a_p_i/"><strong>RendererAPI</strong></a>. Possible values are: "Headless", "OpenGL", or "UNDEFINED" if the API is unknown. </p>
 <hr>
 
 <h3 id="function-converttostring">function ConvertToString</h3>
+<p><em>Converts a boolean value to its string representation.</em> </p>
 <pre><code class="language-C++">static std::string AGE::Utils::ConvertToString (
     AGEPinType Type,
     bool Value
 ) 
 </code></pre>
+<p>This function takes an AGEPinType and a boolean value as input, converts the boolean value into its string representation ("True" or "False"), and returns it along with the AGEPinType in a formatted string.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Type</code> The type of pin to be converted. </li>
+<li><code>Value</code> The boolean value to be converted. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>The string representation of the input boolean value.</p>
+<p>Converts a boolean value to its string representation.</p>
+<p>This function takes an AGEPinType and a boolean value as input, converts the boolean value into its string representation ("True" or "False"), and returns it as a std::string.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Type</code> The type of pin that is being converted. This parameter does not contribute to the function's output but is included for context. </li>
+<li><code>Value</code> The boolean value to be converted into its string representation. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A std::string containing "True" if Value is true, and "False" otherwise. </p>
 <hr>
 
 <h3 id="function-converttostring_1">function ConvertToString</h3>
+<p><em>Converts an integer value to a string.</em> </p>
 <pre><code class="language-C++">static std::string AGE::Utils::ConvertToString (
     AGEPinType Type,
     int Value
 ) 
 </code></pre>
+<p>This function takes in two parameters, an AGEPinType and an int Value. It converts the int Value into a string using std::to_string() and returns it as a std::string. The purpose of this function is to provide a standardized way of converting integer values to strings for use in various parts of the AGE system.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Type</code> This parameter represents the type of pin that we are working with, but its actual meaning or functionality within the context of the AGE system is not specified here as it's beyond the scope of this function's documentation. </li>
+<li><code>Value</code> The integer value to be converted into a string.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Returns a std::string that represents the input integer Value in textual form. If the conversion fails, an empty string ("") is returned.</p>
+<p>Converts an integer value to a string.</p>
+<p>This function takes in two parameters, an enumeration of type AGEPinType and an integer Value. It converts the integer into a string representation using std::to_string() and returns it. The purpose of this conversion is typically for logging or debugging purposes where you might want to display the value as a string instead of its numeric representation.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Type</code> An enumeration representing different types of pins. This parameter does not contribute to the functionality of the function, but it provides context about what kind of pin the Value represents. </li>
+<li><code>Value</code> The integer value that will be converted into a string.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Returns a std::string representation of the input integer Value. </p>
 <hr>
 
 <h3 id="function-converttostring_2">function ConvertToString</h3>
+<p><em>Converts a numeric value to string.</em> </p>
 <pre><code class="language-C++">static std::string AGE::Utils::ConvertToString (
     AGEPinType Type,
     int16_t Value
 ) 
 </code></pre>
+<p>This function takes an AGEPinType and an int16_t as input, converts the int16_t to a string using std::to_string(), and returns it. The purpose of this conversion is unknown at present.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Type</code> An enumeration value representing the type of pin being processed. This parameter's role in the function is not clear from the context provided, so its documentation has been left as "Unknown". </li>
+<li><code>Value</code> A numeric value to be converted to a string.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>The input int16_t value as a string.</p>
+<p>Converts a numeric value to string.</p>
+<p>This function takes an AGEPinType and an int16_t as input, converts the int16_t to a string using std::to_string(), and returns this string. The purpose of this conversion is unknown at present.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Type</code> An enumeration value representing the type of pin being processed. This parameter's role in the function is not clear. </li>
+<li><code>Value</code> A numeric value to be converted to a string.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Returns a string representation of the input int16_t Value. </p>
 <hr>
 
 <h3 id="function-converttostring_3">function ConvertToString</h3>
+<p><em>Converts a numeric value to string.</em> </p>
 <pre><code class="language-C++">static std::string AGE::Utils::ConvertToString (
     AGEPinType Type,
     int64_t Value
 ) 
 </code></pre>
+<p>This function takes an AGEPinType and an int64_t as input, converts the int64_t to a string representation, and returns it. The purpose of this conversion is unknown at present.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Type</code> - The type of pin being converted. It's not clear what this parameter represents or its significance. </li>
+<li><code>Value</code> - The numeric value to be converted into a string.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Returns the string representation of the input int64_t Value.</p>
+<p>Converts a value to string.</p>
+<p>This function takes an AGEPinType and an int64_t as input, converts the int64_t to a string representation, and returns it. The purpose of this conversion is unknown at present.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Type</code> - The type of pin being converted. </li>
+<li><code>Value</code> - The value to be converted to a string. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A string representation of the input value. </p>
 <hr>
 
 <h3 id="function-converttostring_4">function ConvertToString</h3>
+<p><em>Converts a numeric value to string.</em> </p>
 <pre><code class="language-C++">static std::string AGE::Utils::ConvertToString (
     AGEPinType Type,
     uint16_t Value
 ) 
 </code></pre>
+<p>This function takes an AGEPinType and a uint16_t as input, converts the uint16_t to a string representation, and returns it. The purpose of this conversion is unknown at present.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Type</code> - The type of pin being converted. Not used in the conversion process. </li>
+<li><code>Value</code> - The numeric value to be converted to a string.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A string representation of the input uint16_t value.</p>
+<p>Converts a numeric value to string.</p>
+<p>This function takes an AGEPinType and a uint16_t as input, converts the uint16_t to a string representation, and returns it. The purpose of this conversion is unknown at present.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Type</code> - The type of pin being converted. It's not clear what this parameter represents or its significance. </li>
+<li><code>Value</code> - The numeric value to be converted to a string.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Returns the string representation of the input uint16_t value. </p>
 <hr>
 
 <h3 id="function-converttostring_5">function ConvertToString</h3>
+<p><em>Converts a value of an AGE pin type to its string representation.</em> </p>
 <pre><code class="language-C++">static std::string AGE::Utils::ConvertToString (
     AGEPinType Type,
     uint32_t Value
 ) 
 </code></pre>
+<p>This function takes in the type of the AGE pin and its corresponding value, converts the value into a string representation using std::to_string() and returns it.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Type</code> The type of the AGE pin (not used in this conversion but included for completeness). </li>
+<li><code>Value</code> The value to be converted to a string. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Returns the string representation of the input value.</p>
+<p>Converts a numeric value to string.</p>
+<p>This function takes an AGEPinType and a uint32_t as input, converts the latter to a string representation, and returns it. The conversion is done using std::to_string() function from C++ standard library.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Type</code> - The type of pin being converted. This parameter does not contribute to the functionality of this function. </li>
+<li><code>Value</code> - The numeric value to be converted to a string.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Returns a string representation of the input uint32_t value. </p>
 <hr>
 
 <h3 id="function-converttostring_6">function ConvertToString</h3>
+<p><em>Converts a value of any type to string.</em> </p>
 <pre><code class="language-C++">static std::string AGE::Utils::ConvertToString (
     AGEPinType Type,
     uint64_t Value
 ) 
 </code></pre>
+<p>This function takes an AGEPinType and a uint64_t as input, converts the uint64_t to a string representation, and returns it. The conversion is done based on the provided AGEPinType which can be used for further processing or presentation of the value.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Type</code> - The type of pin that needs to be converted. This parameter does not contribute to the actual conversion but provides context about what kind of representation is expected from the function. </li>
+<li><code>Value</code> - The uint64_t value which needs to be converted to string.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Returns a string representation of the input uint64_t value.</p>
+<p>Converts a value to string.</p>
+<p>This function takes an AGEPinType and a uint64_t as input, converts the uint64_t to a string representation, and returns it. The conversion is done based on the provided AGEPinType which can be used for further processing or display purposes.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Type</code> - The type of pin that we are converting from. </li>
+<li><code>Value</code> - The value of the pin that we want to convert into a string.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Returns a string representation of the input uint64_t value. </p>
 <hr>
 
 <h3 id="function-converttostring_7">function ConvertToString</h3>
+<p><em>Converts an AGEPinType and a</em> <a href="../struct_a_g_e_1_1_vector2/"><em><strong>Vector2</strong></em></a> <em>to a string.</em></p>
 <pre><code class="language-C++">static std::string AGE::Utils::ConvertToString (
     AGEPinType Type,
     Vector2 Value
 ) 
 </code></pre>
+<p>This function takes in an AGEPinType and a <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> as parameters, converts the <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> to a string using static_cast, then returns this string. The purpose of this conversion is unknown at present.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Type</code> The type of pin being converted. </li>
+<li><code>Value</code> The value of the pin being converted. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A string representation of the input parameters.</p>
+<p>Converts a given AGEPinType and <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> value to string.</p>
+<p>This function takes an AGEPinType and a <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> as input, converts the <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> value to string format using static_cast, then returns this converted string. The returned string is empty if the conversion fails.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Type</code> The type of pin that needs to be converted. </li>
+<li><code>Value</code> The value of the pin that needs to be converted. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A string representation of the input <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> value, or an empty string if the conversion failed. </p>
 <hr>
 
 <h3 id="function-converttostring_8">function ConvertToString</h3>
+<p><em>Converts an AGEPinType and a</em> <a href="../struct_a_g_e_1_1_vector3/"><em><strong>Vector3</strong></em></a> <em>to a string.</em></p>
 <pre><code class="language-C++">static std::string AGE::Utils::ConvertToString (
     AGEPinType Type,
     Vector3 Value
 ) 
 </code></pre>
+<p>This function takes in two parameters, an AGEPinType and a <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a>. It converts the <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> to a string using the <code>std::string</code> constructor and returns it. The conversion is done by simply casting the <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> object to a std::string.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Type</code> The type of pin that we are converting. </li>
+<li><code>Value</code> The value of the pin, represented as a <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a>.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A string representation of the input parameters.</p>
+<p>Converts a given AGEPinType and <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> value to string.</p>
+<p>This function takes an AGEPinType and a <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> as input, converts the <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> into a string representation, and returns it along with the AGEPinType in string format.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Type</code> The type of pin that needs to be converted to string. </li>
+<li><code>Value</code> The value of the pin that needs to be converted to string. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Returns the string representation of the input values. </p>
 <hr>
 
 <h3 id="function-converttostring_9">function ConvertToString</h3>
+<p><em>Converts a given AGEPinType and</em> <a href="../struct_a_g_e_1_1_vector4/"><em><strong>Vector4</strong></em></a> <em>to string.</em></p>
 <pre><code class="language-C++">static std::string AGE::Utils::ConvertToString (
     AGEPinType Type,
     Vector4 Value
 ) 
 </code></pre>
+<p>This function takes an AGEPinType and a <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> as input, converts the <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> to a string representation, and returns it along with the AGEPinType. The conversion is done by simply casting the <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> to a std::string.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Type</code> The type of pin that we are converting. </li>
+<li><code>Value</code> The value of the pin in <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> format. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Returns the string representation of the input <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> along with the AGEPinType.</p>
+<p>Converts a given AGEPinType and <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> to string.</p>
+<p>This function takes an AGEPinType and a <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> as input, converts the <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> to a string using static_cast, and returns this string. The purpose of this conversion is unknown at present.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Type</code> The type of pin that we are converting. </li>
+<li><code>Value</code> The value of the pin that we are converting.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Returns the converted string representation of the <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> input. </p>
 <hr>
 
 <h3 id="function-converttostring_10">function ConvertToString</h3>
+<p><em>Converts a floating-point value to a string.</em> </p>
 <pre><code class="language-C++">static std::string AGE::Utils::ConvertToString (
     AGEPinType Type,
     float Value
 ) 
 </code></pre>
+<p>This function takes an AGEPinType and a float as input, converts the float to a string using std::to_string(), and returns this string. The purpose of this conversion is unknown at present.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Type</code> An enumeration value representing the type of pin being processed. This parameter's role in the function is not clear from the context provided. </li>
+<li><code>Value</code> A floating-point number to be converted to a string.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>The float value as a string. If an error occurs during conversion, it returns an empty string.</p>
+<p>Converts a floating-point value to a string.</p>
+<p>This function takes an AGEPinType and a float as input, converts the float to a string using std::to_string(), and returns this string. The purpose of this conversion is unknown at present.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Type</code> An enum representing different types of pins in the system. It's not clear what this parameter represents or its significance. </li>
+<li><code>Value</code> A floating-point value to be converted to a string.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>The float value as a string. </p>
 <hr>
 
 <h3 id="function-createtextures">function CreateTextures</h3>
+<p><em>Creates a set of textures.</em> </p>
 <pre><code class="language-C++">static void AGE::Utils::CreateTextures (
     bool Multisampled,
     uint32_t * OutID,
     uint32_t Count
 ) 
 </code></pre>
+<p>This function creates a set of OpenGL textures using the glCreateTextures function. The number of textures to be created is specified by 'Count'. The parameter 'Multisampled' determines whether the textures are multisampled or not, and 'OutID' is an array that will hold the IDs of the newly created textures.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Multisampled</code> A boolean value indicating if the textures should be multisampled. </li>
+<li><code>OutID</code> An array to store the IDs of the newly created textures. </li>
+<li><code>Count</code> The number of textures to create.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Creates a set of textures.</p>
+<p>This function creates a set of OpenGL textures with the specified parameters. The number of textures to be created is given by 'Count'. If 'Multisampled' is true, multisampling will be used for the textures; otherwise, they won't. The IDs of the newly created textures are stored in the array pointed to by 'OutID'.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Multisampled</code> A boolean indicating whether or not to use multisampling. </li>
+<li><code>OutID</code> An array that will store the IDs of the newly created textures. </li>
+<li><code>Count</code> The number of textures to be created. </li>
+</ul>
 <hr>
 
 <h3 id="function-isdepthformat">function IsDepthFormat</h3>
+<p><em>Checks if the given format is a depth format.</em> </p>
 <pre><code class="language-C++">static bool AGE::Utils::IsDepthFormat (
     FramebufferTextureFormat Format
 ) 
 </code></pre>
+<p>This function checks whether the provided FramebufferTextureFormat is one of the depth formats. It returns true for DEPTH24STENCIL8 and false otherwise.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Format</code> The format to check. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>True if the format is a depth format, false otherwise.</p>
+<p>Checks if the given format is a depth format.</p>
+<p>This function checks whether the provided FramebufferTextureFormat is one of the depth formats. The only depth format currently supported by this application is DEPTH24STENCIL8.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Format</code> The format to check. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>True if the format is a depth format, false otherwise. </p>
 <hr>
 
 <h3 id="function-texturetarget">function TextureTarget</h3>
+<p><em>Determines the OpenGL texture target based on whether multisampling is enabled.</em> </p>
 <pre><code class="language-C++">static GLenum AGE::Utils::TextureTarget (
     bool Multisampled
 ) 
 </code></pre>
+<p>This function takes a boolean parameter indicating if multisampling should be used. If true, it returns GL_TEXTURE_2D_MULTISAMPLE; otherwise, it returns GL_TEXTURE_2D.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Multisampled</code> A boolean value indicating whether to use multisampling or not. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>The OpenGL texture target corresponding to the input parameter.</p>
+<p>Determines the OpenGL texture target based on whether multisampling is enabled.</p>
+<p>This function takes a boolean parameter indicating if multisampling should be used. If true, it returns GL_TEXTURE_2D_MULTISAMPLE; otherwise, it returns GL_TEXTURE_2D.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Multisampled</code> A boolean value indicating whether to use multisampling or not. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>The OpenGL texture target based on the input parameter. Returns GL_TEXTURE_2D if false is passed and GL_TEXTURE_2D_MULTISAMPLE if true is passed. </p>
 <hr>
 
 <hr />

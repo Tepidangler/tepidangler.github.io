@@ -45,7 +45,8 @@
 namespace AGE
 {
     template<typename T, typename S, int N, msdf_atlas::GeneratorFunction<S, N> GenFunc>
-    static Ref<Texture2D> CreateAndCacheAtlas(const std::string& FontName, float FontSize, const std::vector<msdf_atlas::GlyphGeometry>& Glyphs,
+    "Creates and caches an atlas from a font with specified parameters."
+static Ref<Texture2D> CreateAndCacheAtlas(const std::string& FontName, float FontSize, const std::vector<msdf_atlas::GlyphGeometry>& Glyphs,
         const msdf_atlas::FontGeometry& FontGeometry, uint32_t Width, uint32_t Height)
     {
         msdf_atlas::GeneratorAttributes Attributes;
@@ -74,7 +75,7 @@ namespace AGE
 
 
 
-    AGEFont::AGEFont(const std::filesystem::path& FontPath, bool LoadingDefault)
+AGEFont::AGEFont(const std::filesystem::path& FontPath, bool LoadingDefault)
         :m_Data(new MSDFData()), m_AssetID(UUID())
     {
         std::filesystem::path Path = FontPath;
@@ -102,7 +103,7 @@ namespace AGE
 
         msdfgen::FreetypeHandle* FT = msdfgen::initializeFreetype();
 
-        AGE_CORE_ASSERT(FT, "Unable to Initialize FreeType!");
+        CoreLogger::Assert(FT, "Unable to Initialize FreeType!");
 
         std::string FileString = FontPath.string();
         msdfgen::FontHandle* Font = msdfgen::loadFont(FT, FileString.c_str());
@@ -141,7 +142,7 @@ namespace AGE
         //AtlasPacker.setPadding(0); // Find Alternative
         AtlasPacker.setScale(EmSize);
         int Remaining = AtlasPacker.pack(m_Data->Glyphs.data(), (int)m_Data->Glyphs.size());
-        AGE_CORE_ASSERT(Remaining == 0, "{} Glyphs remaining", Remaining);
+        CoreLogger::Assert(Remaining == 0, "{} Glyphs remaining", Remaining);
         int width, height;
         AtlasPacker.getDimensions(width, height);
         EmSize = AtlasPacker.getScale();
@@ -187,12 +188,13 @@ namespace AGE
         msdfgen::destroyFont(Font);
         msdfgen::deinitializeFreetype(FT);
     }
-    AGEFont::~AGEFont()
+AGEFont::~AGEFont()
     {
         delete m_Data;
     }
 
-    void AGEFont::SaveFont()
+    
+void AGEFont::SaveFont()
     {
         const AppConfig& Config = App::Get().GetAppConfig();
         const std::string& FileName = m_AtlasTexture->GetName();
@@ -207,7 +209,8 @@ namespace AGE
         FontData.WriteBuffer(TextureBytes);
     }
 
-    void AGEFont::LoadFont(const std::string& FontName)
+    
+void AGEFont::LoadFont(const std::string& FontName)
     {
         const AppConfig& Config = App::Get().GetAppConfig();
         const std::string& FileName = FontName;
@@ -238,7 +241,7 @@ namespace AGE
         CoreLogger::Info("Loaded Font {}", FontName);
     }
 
-    Ref<AGEFont> AGEFont::GetDefault()
+Ref<AGEFont> AGEFont::GetDefault()
     {
         static Ref<AGEFont> DefaultFont;
 
@@ -253,7 +256,7 @@ namespace AGE
         return DefaultFont;
     }
 
-    void AGEFont::SaveDefaultFont()
+void AGEFont::SaveDefaultFont()
     {
         const AppConfig& Config = App::Get().GetAppConfig();
         const std::string& FileName = m_AtlasTexture->GetName();
@@ -268,7 +271,7 @@ namespace AGE
         FontData.WriteBuffer(TextureBytes);
     }
 
-    void AGEFont::LoadDefaultFont(const std::string &FontName)
+void AGEFont::LoadDefaultFont(const std::string &FontName)
     {
         const AppConfig& Config = App::Get().GetAppConfig();
         const std::string& FileName = FontName;

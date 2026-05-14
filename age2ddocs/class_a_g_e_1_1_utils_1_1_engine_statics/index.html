@@ -88,40 +88,81 @@
 <tbody>
 <tr>
 <td style="text-align: right;">std::string</td>
-<td style="text-align: left;"><a href="#function-getfilename"><strong>GetFilename</strong></a> (std::filesystem::path &amp; Name) <br></td>
+<td style="text-align: left;"><a href="#function-getfilename"><strong>GetFilename</strong></a> (std::filesystem::path &amp; Name) <br><em>This function returns the filename from a given filesystem path.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="#function-isbigendian"><strong>IsBigEndian</strong></a> (void) <br></td>
+<td style="text-align: left;"><a href="#function-isbigendian"><strong>IsBigEndian</strong></a> (void) <br><em>This function checks if the system is big endian or not.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="#function-isbitset"><strong>IsBitSet</strong></a> (T Num, T Pos) <br></td>
+<td style="text-align: left;"><a href="#function-isbitset"><strong>IsBitSet</strong></a> (T Num, T Pos) <br><em>This function checks if a specific bit is set in the given number.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
 <h3 id="function-getfilename">function GetFilename</h3>
+<p><em>This function returns the filename from a given filesystem path.</em> </p>
 <pre><code class="language-C++">static inline std::string AGE::Utils::EngineStatics::GetFilename (
     std::filesystem::path &amp; Name
 ) 
 </code></pre>
+<p>The function takes in a std::filesystem::path object and uses it to extract the filename by replacing any extension with an empty string, then returning the resultant filename as a std::string.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Name</code> A reference to a std::filesystem::path object representing the path from which we want to extract the filename. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>The function returns a std::string containing the name of the file represented by the input path, without any extension. If the provided path does not represent a valid file, an empty string is returned.</p>
+<p>This function returns the filename from a given filesystem path.</p>
+<p>The function takes in a std::filesystem::path object and uses it to extract the filename by replacing any extension with an empty string, then returning the resultant filename as a std::string.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Name</code> A reference to a std::filesystem::path object representing the path from which we want to extract the filename. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>The function returns a std::string containing the filename extracted from the provided filesystem path. </p>
 <hr>
 
 <h3 id="function-isbigendian">function IsBigEndian</h3>
+<p><em>This function checks if the system is big endian or not.</em> </p>
 <pre><code class="language-C++">static inline bool AGE::Utils::EngineStatics::IsBigEndian (
     void
 ) 
 </code></pre>
+<p>It does this by creating a union that contains an unsigned integer and four characters. The integer is initialized with a value of 0x01020304. If the first character in the union (c[0]) equals to 1, then it means that the system is little endian. Otherwise, it's big endian.</p>
+<p><strong>Returns:</strong></p>
+<p>Returns true if the system is big endian and false otherwise.</p>
+<p>This function checks if the system is big endian or not.</p>
+<p>The function uses a union to create an instance of a uint32_t and a char array. It then assigns the value 0x01020304 to the uint32_t member, which represents the bytes in memory as 01 02 03 04. The function returns true if the first byte of this union (representing the most significant byte) is equal to 1, indicating a big endian system. Otherwise, it returns false.</p>
+<p><strong>Returns:</strong></p>
+<p>bool - Returns true if the system is big endian, false otherwise. </p>
 <hr>
 
 <h3 id="function-isbitset">function IsBitSet</h3>
+<p><em>This function checks if a specific bit is set in the given number.</em> </p>
 <pre><code class="language-C++">template&lt;typename T&gt;
 static inline bool AGE::Utils::EngineStatics::IsBitSet (
     T Num,
     T Pos
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Num</code> The number to check for the bit being set. </li>
+<li><code>Pos</code> The position of the bit to be checked, starting from 0 at the least significant bit. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>True if the specified bit is set (i.e., equals 1), false otherwise.</p>
+<p>Checks if a specific bit is set in the given number.</p>
+<p>This function takes two parameters, Num and Pos. It creates a mask by shifting the value 1 to the left by 'Pos' places. Then it checks if any of the bits in the result are set in the binary representation of 'Num'. If so, it returns true; otherwise, false.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Num</code> The number whose bit is being checked. </li>
+<li><code>Pos</code> The position of the bit to check from least significant bit (LSB) onwards.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>True if the specified bit in 'Num' is set, false otherwise. </p>
 <hr>
 
 <hr />

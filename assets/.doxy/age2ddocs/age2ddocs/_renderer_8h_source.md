@@ -32,8 +32,11 @@ namespace AGE
 
             static void Flush();
 
-            static inline RendererAPI::API GetAPI() { return RendererAPI::GetAPI(); }
-            static inline void SetAPI(RendererAPI::API Renderer) { RendererAPI::SetAPI(Renderer); }
+static inline RendererAPI::API GetAPI() { return RendererAPI::GetAPI(); }
+COMMENT:
+CONFIDENCE: 1.0;
+
+static inline void SetAPI(RendererAPI::API Renderer) { RendererAPI::SetAPI(Renderer); }
         private:
             struct SceneData
             {

@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/ScriptableComponentStack.h" line="29" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/ScriptableComponentStack.h" bodystart="29" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/ScriptableComponentStack.h" line="63" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/ScriptableComponentStack.h" bodystart="63" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_game_framework_1_1_scriptable_comp_stack_1af108ac726b5ecc95999a283602125b60" prot="private" static="no" mutable="no">
         <type>unsigned int</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/ScriptableComponentStack.h" line="30" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/ScriptableComponentStack.h" bodystart="30" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/ScriptableComponentStack.h" line="64" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/ScriptableComponentStack.h" bodystart="64" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -41,12 +41,14 @@
         <name>ScriptableCompStack</name>
         <qualifiedname>GameFramework::ScriptableCompStack::ScriptableCompStack</qualifiedname>
         <briefdescription>
+<para>Constructor for the <ref refid="class_game_framework_1_1_scriptable_comp_stack" kindref="compound">ScriptableCompStack</ref> class. Initializes an empty stack of components. </para>
         </briefdescription>
         <detaileddescription>
+<para>Constructor for the <ref refid="class_game_framework_1_1_scriptable_comp_stack" kindref="compound">ScriptableCompStack</ref> class. Initializes an empty stack of components. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/ScriptableComponentStack.h" line="10" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/ScriptableComponentStack.cpp" bodystart="7" bodyend="9"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/ScriptableComponentStack.h" line="10" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/ScriptableComponentStack.cpp" bodystart="15" bodyend="17"/>
       </memberdef>
       <memberdef kind="function" id="class_game_framework_1_1_scriptable_comp_stack_1a8c0bbd2a6423cc6785984c9509eb3197" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -55,12 +57,14 @@
         <name>~ScriptableCompStack</name>
         <qualifiedname>GameFramework::ScriptableCompStack::~ScriptableCompStack</qualifiedname>
         <briefdescription>
+<para>Destructor for the <ref refid="class_game_framework_1_1_scriptable_comp_stack" kindref="compound">ScriptableCompStack</ref> class. It iterates over all elements in the vector &apos;m_Entitys&apos; and deletes each one using the destructor of the ScriptableEntity class. </para>
         </briefdescription>
         <detaileddescription>
+<para>Destructor for the <ref refid="class_game_framework_1_1_scriptable_comp_stack" kindref="compound">ScriptableCompStack</ref> class. It iterates over all elements in the &apos;m_Entitys&apos; vector and deletes each one using the destructor of the ScriptableEntity class. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/ScriptableComponentStack.h" line="11" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/ScriptableComponentStack.cpp" bodystart="10" bodyend="16"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/ScriptableComponentStack.h" line="11" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/ScriptableComponentStack.cpp" bodystart="24" bodyend="30"/>
       </memberdef>
       <memberdef kind="function" id="class_game_framework_1_1_scriptable_comp_stack_1a353ab307723f307b6204602586f2f896" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -73,12 +77,39 @@
           <declname>Entt</declname>
         </param>
         <briefdescription>
+<para>Pushes a ScriptableEntity onto the stack at the specified index. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function inserts a new ScriptableEntity into the m_Entitys vector at the position indicated by m_EntityInsertIndex. The entity is then incremented for the next push operation.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Entt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the ScriptableEntity that will be pushed onto the stack. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void No return value.</para>
+</simplesect>
+Pushes a ScriptableEntity onto the stack at the specified index.</para>
+<para>This function inserts the given ScriptableEntity into the m_Entitys vector at the position indicated by m_EntityInsertIndex. The entity is then incremented for future use.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Entt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the ScriptableEntity that will be pushed onto the stack.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void No return value. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/ScriptableComponentStack.h" line="13" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/ScriptableComponentStack.cpp" bodystart="17" bodyend="21"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/ScriptableComponentStack.h" line="13" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/ScriptableComponentStack.cpp" bodystart="48" bodyend="52"/>
       </memberdef>
       <memberdef kind="function" id="class_game_framework_1_1_scriptable_comp_stack_1a29f68da3e964f6eff2e018a8e3dd68aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -91,12 +122,37 @@
           <declname>Entt</declname>
         </param>
         <briefdescription>
+<para>Removes a ScriptableEntity from the stack of components. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function searches for the provided ScriptableEntity in the m_Entitys vector and removes it if found. It also decrements the m_EntityInsertIndex by one to ensure that new entities are inserted at the correct position.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Entt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the ScriptableEntity to be removed from the stack.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void</para>
+</simplesect>
+Removes a ScriptableEntity from the stack of components.</para>
+<para>This function searches for the provided entity in the m_Entitys vector and if it is found, removes it along with its associated data. The iterator &apos;it&apos; is used to find the position of the entity within the vector. If the entity is not found, nothing happens.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Entt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the ScriptableEntity that needs to be removed from the stack. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/ScriptableComponentStack.h" line="16" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/ScriptableComponentStack.cpp" bodystart="22" bodyend="31"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/ScriptableComponentStack.h" line="16" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/ScriptableComponentStack.cpp" bodystart="70" bodyend="79"/>
       </memberdef>
       <memberdef kind="function" id="class_game_framework_1_1_scriptable_comp_stack_1a675a048f3708d9ce077d7ed786b9ee99" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::vector&lt; <ref refid="class_a_g_e_1_1_scriptable_entity" kindref="compound">AGE::ScriptableEntity</ref> * &gt;::iterator</type>
@@ -105,12 +161,18 @@
         <name>begin</name>
         <qualifiedname>GameFramework::ScriptableCompStack::begin</qualifiedname>
         <briefdescription>
+<para>Returns an iterator pointing to the beginning of the &apos;m_Entitys&apos; vector. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>An iterator to the start of the &apos;m_Entitys&apos; vector.</para>
+</simplesect>
+Returns an iterator pointing to the beginning of the &apos;m_Entitys&apos; vector. <simplesect kind="return"><para>An iterator to the start of the &apos;m_Entitys&apos; vector. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/ScriptableComponentStack.h" line="20" column="24" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/ScriptableComponentStack.h" bodystart="20" bodyend="20"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/ScriptableComponentStack.h" line="28" column="24" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/ScriptableComponentStack.h" bodystart="28" bodyend="28"/>
       </memberdef>
       <memberdef kind="function" id="class_game_framework_1_1_scriptable_comp_stack_1a118a6e18479174b4ec39c59c33cb6dec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::vector&lt; <ref refid="class_a_g_e_1_1_scriptable_entity" kindref="compound">AGE::ScriptableEntity</ref> * &gt;::iterator</type>
@@ -119,12 +181,18 @@
         <name>end</name>
         <qualifiedname>GameFramework::ScriptableCompStack::end</qualifiedname>
         <briefdescription>
+<para>Returns an iterator pointing to the theoretical element that follows the last element of the container. This function returns an iterator pointing to one past the last element in the vector, which is considered as a valid position for insertion but does not point to any real data. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>An iterator to the theoretical element that follows the end of the sequence.</para>
+</simplesect>
+Returns an iterator pointing to the theoretical element that follows the last element of the vector. <simplesect kind="return"><para>An iterator to the theoretical element following the last element of the vector. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/ScriptableComponentStack.h" line="22" column="24" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/ScriptableComponentStack.h" bodystart="22" bodyend="22"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/ScriptableComponentStack.h" line="40" column="24" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/ScriptableComponentStack.h" bodystart="40" bodyend="40"/>
       </memberdef>
       <memberdef kind="function" id="class_game_framework_1_1_scriptable_comp_stack_1ac8934dfb8be22e81781cee8fac2294c9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>std::vector&lt; <ref refid="class_a_g_e_1_1_scriptable_entity" kindref="compound">AGE::ScriptableEntity</ref> * &gt;::const_iterator</type>
@@ -133,12 +201,18 @@
         <name>begin</name>
         <qualifiedname>GameFramework::ScriptableCompStack::begin</qualifiedname>
         <briefdescription>
+<para>Returns a constant iterator pointing to the beginning of the &apos;m_Entitys&apos; vector. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>A constant iterator to the beginning of the &apos;m_Entitys&apos; vector. If the vector is empty, past-the-end (cend) iterator is returned.</para>
+</simplesect>
+Returns a constant iterator pointing to the beginning of the &apos;m_Entitys&apos; vector. <simplesect kind="return"><para>A constant iterator to the beginning of the &apos;m_Entitys&apos; vector. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/ScriptableComponentStack.h" line="24" column="30" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/ScriptableComponentStack.h" bodystart="24" bodyend="24"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/ScriptableComponentStack.h" line="50" column="30" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/ScriptableComponentStack.h" bodystart="50" bodyend="50"/>
       </memberdef>
       <memberdef kind="function" id="class_game_framework_1_1_scriptable_comp_stack_1a4f87bbbec2ae594f29108a56ce7747cb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>std::vector&lt; <ref refid="class_a_g_e_1_1_scriptable_entity" kindref="compound">AGE::ScriptableEntity</ref> * &gt;::const_iterator</type>
@@ -147,19 +221,25 @@
         <name>end</name>
         <qualifiedname>GameFramework::ScriptableCompStack::end</qualifiedname>
         <briefdescription>
+<para>Returns a constant iterator pointing to the past-the-end element of the container. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>A constant iterator pointing to the past-the-end element in the container.</para>
+</simplesect>
+Returns a constant iterator pointing to the past-the-end element of the container. <simplesect kind="return"><para>A constant iterator pointing to the past-the-end element in the container. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/ScriptableComponentStack.h" line="26" column="30" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/ScriptableComponentStack.h" bodystart="26" bodyend="26"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/ScriptableComponentStack.h" line="60" column="30" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/ScriptableComponentStack.h" bodystart="60" bodyend="60"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/ScriptableComponentStack.h" line="7" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/ScriptableComponentStack.h" bodystart="8" bodyend="31"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/ScriptableComponentStack.h" line="7" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/ScriptableComponentStack.h" bodystart="8" bodyend="65"/>
     <listofallmembers>
       <member refid="class_game_framework_1_1_scriptable_comp_stack_1a675a048f3708d9ce077d7ed786b9ee99" prot="public" virt="non-virtual"><scope>GameFramework::ScriptableCompStack</scope><name>begin</name></member>
       <member refid="class_game_framework_1_1_scriptable_comp_stack_1ac8934dfb8be22e81781cee8fac2294c9" prot="public" virt="non-virtual"><scope>GameFramework::ScriptableCompStack</scope><name>begin</name></member>

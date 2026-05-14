@@ -93,23 +93,23 @@
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-bind"><strong>Bind</strong></a> () override const<br></td>
+<td style="text-align: left;"><a href="#function-bind"><strong>Bind</strong></a> () override const<br><em>This function binds the vertex array object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-enablevertexattribarray"><strong>EnableVertexAttribArray</strong></a> (uint32_t ArrayID) override const<br></td>
+<td style="text-align: left;"><a href="#function-enablevertexattribarray"><strong>EnableVertexAttribArray</strong></a> (uint32_t ArrayID) override const<br><em>This function enables a vertex attribute array.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual const Ref&lt; <a href="../class_a_g_e_1_1_index_buffer/"><strong>IndexBuffer</strong></a> &gt; &amp;</td>
-<td style="text-align: left;"><a href="#function-getindexbuffer"><strong>GetIndexBuffer</strong></a> () override const<br></td>
+<td style="text-align: left;"><a href="#function-getindexbuffer"><strong>GetIndexBuffer</strong></a> () override const<br><em>Returns the index buffer associated with this object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual const std::vector&lt; Ref&lt; <a href="../class_a_g_e_1_1_vertex_buffer/"><strong>VertexBuffer</strong></a> &gt; &gt; &amp;</td>
-<td style="text-align: left;"><a href="#function-getvertexbuffers"><strong>GetVertexBuffers</strong></a> () override const<br></td>
+<td style="text-align: left;"><a href="#function-getvertexbuffers"><strong>GetVertexBuffers</strong></a> () override const<br><em>Returns a constant reference to the vertex buffers associated with this object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-makevertexattribptr"><strong>MakeVertexAttribPtr</strong></a> (uint32_t index, int size, uint32_t type, uint8_t normalized, int stride, const void * pointer) override const<br></td>
+<td style="text-align: left;"><a href="#function-makevertexattribptr"><strong>MakeVertexAttribPtr</strong></a> (uint32_t index, int size, uint32_t type, uint8_t normalized, int stride, const void * pointer) override const<br><em>This function sets up the vertex attribute pointer for a specific index. It takes in parameters such as size of data, type of data (GL_FLOAT or GL_INT), whether the data is normalized, stride and pointer to the data. The function uses glVertexAttribPointer OpenGL function to set up the vertex attribute pointer.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
@@ -117,31 +117,31 @@
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-setindexbuffer"><strong>SetIndexBuffer</strong></a> (Ref&lt; <a href="../class_a_g_e_1_1_index_buffer/"><strong>IndexBuffer</strong></a> &gt; &amp; IndexBuffer) override<br></td>
+<td style="text-align: left;"><a href="#function-setindexbuffer"><strong>SetIndexBuffer</strong></a> (Ref&lt; <a href="../class_a_g_e_1_1_index_buffer/"><strong>IndexBuffer</strong></a> &gt; &amp; IndexBuffer) override<br><em>This function sets the index buffer for the OpenGL</em> <a href="../struct_a_g_e_1_1_vertex/"><em><strong>Vertex</strong></em></a> <em>Array.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-unbind"><strong>Unbind</strong></a> () override const<br></td>
+<td style="text-align: left;"><a href="#function-unbind"><strong>Unbind</strong></a> () override const<br><em>This function unbinds the current vertex array object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual std::vector&lt; Ref&lt; <a href="../class_a_g_e_1_1_vertex_buffer/"><strong>VertexBuffer</strong></a> &gt; &gt;::iterator</td>
-<td style="text-align: left;"><a href="#function-begin-12"><strong>begin</strong></a> () override<br></td>
+<td style="text-align: left;"><a href="#function-begin-12"><strong>begin</strong></a> () override<br><em>Returns an iterator pointing to the beginning of the vertex buffer list.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual std::vector&lt; Ref&lt; <a href="../class_a_g_e_1_1_vertex_buffer/"><strong>VertexBuffer</strong></a> &gt; &gt;::const_iterator</td>
-<td style="text-align: left;"><a href="#function-begin-22"><strong>begin</strong></a> () override const<br></td>
+<td style="text-align: left;"><a href="#function-begin-22"><strong>begin</strong></a> () override const<br><em>Returns a constant iterator pointing to the beginning of the vertex buffer list.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual std::vector&lt; Ref&lt; <a href="../class_a_g_e_1_1_vertex_buffer/"><strong>VertexBuffer</strong></a> &gt; &gt;::iterator</td>
-<td style="text-align: left;"><a href="#function-end-12"><strong>end</strong></a> () override<br></td>
+<td style="text-align: left;"><a href="#function-end-12"><strong>end</strong></a> () override<br><em>Returns an iterator pointing to the theoretical element that follows the last element of the container. This function is used in range-based for loops and similar contexts where a sentinel value is needed.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual std::vector&lt; Ref&lt; <a href="../class_a_g_e_1_1_vertex_buffer/"><strong>VertexBuffer</strong></a> &gt; &gt;::const_iterator</td>
-<td style="text-align: left;"><a href="#function-end-22"><strong>end</strong></a> () override const<br></td>
+<td style="text-align: left;"><a href="#function-end-22"><strong>end</strong></a> () override const<br><em>Returns a constant iterator pointing to the theoretical element past the last element of the vertex buffer vector.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-openglvertexarray"><strong>~OpenGLVertexArray</strong></a> () override<br></td>
+<td style="text-align: left;"><a href="#function-openglvertexarray"><strong>~OpenGLVertexArray</strong></a> () override<br><em>Destructor for</em> <a href="./"><em><strong>OpenGLVertexArray</strong></em></a> <em>class. Deletes the vertex array object from GPU memory.</em></td>
 </tr>
 </tbody>
 </table>
@@ -205,7 +205,7 @@
 </tr>
 <tr>
 <td style="text-align: right;">virtual</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_vertex_array/#function-vertexarray"><strong>~VertexArray</strong></a> () <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_vertex_array/#function-vertexarray"><strong>~VertexArray</strong></a> () <br><em>Virtual destructor for the</em> <a href="../class_a_g_e_1_1_vertex_array/"><em><strong>VertexArray</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
@@ -221,7 +221,7 @@
 <tbody>
 <tr>
 <td style="text-align: right;">Ref&lt; <a href="../class_a_g_e_1_1_vertex_array/"><strong>VertexArray</strong></a> &gt;</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_vertex_array/#function-create"><strong>Create</strong></a> () <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_vertex_array/#function-create"><strong>Create</strong></a> () <br><em>Creates a new</em> <a href="../class_a_g_e_1_1_vertex_array/"><em><strong>VertexArray</strong></em></a> <em>object based on the current</em><a href="../class_a_g_e_1_1_renderer_a_p_i/"><em><strong>RendererAPI</strong></em></a> <em>.</em></td>
 </tr>
 </tbody>
 </table>
@@ -235,32 +235,56 @@
 <hr>
 
 <h3 id="function-bind">function Bind</h3>
+<p><em>This function binds the vertex array object.</em> </p>
 <pre><code class="language-C++">virtual void AGE::OpenGLVertexArray::Bind () override const
 </code></pre>
+<p>It uses OpenGL's glBindVertexArray() function to bind this <a href="../struct_a_g_e_1_1_vertex/"><strong>Vertex</strong></a> Array Object (VAO). The VAO is an object that contains all of the state needed to supply vertex data, such as what vertex arrays to use, how to interpret them, and how to render them.</p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <p>Implements <a href="../class_a_g_e_1_1_vertex_array/#function-bind"><em>AGE::VertexArray::Bind</em></a></p>
 <hr>
 
 <h3 id="function-enablevertexattribarray">function EnableVertexAttribArray</h3>
+<p><em>This function enables a vertex attribute array.</em> </p>
 <pre><code class="language-C++">virtual void AGE::OpenGLVertexArray::EnableVertexAttribArray (
     uint32_t ArrayID
 ) override const
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>ArrayID</code> The ID of the vertex attribute array to be enabled. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <p>Implements <a href="../class_a_g_e_1_1_vertex_array/#function-enablevertexattribarray"><em>AGE::VertexArray::EnableVertexAttribArray</em></a></p>
 <hr>
 
 <h3 id="function-getindexbuffer">function GetIndexBuffer</h3>
+<p><em>Returns the index buffer associated with this object.</em> </p>
 <pre><code class="language-C++">inline virtual const Ref&lt; IndexBuffer &gt; &amp; AGE::OpenGLVertexArray::GetIndexBuffer () override const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A constant reference to the index buffer.</p>
+<p>Returns the index buffer associated with this object. </p>
+<p><strong>Returns:</strong></p>
+<p>A constant reference to the index buffer. </p>
 <p>Implements <a href="../class_a_g_e_1_1_vertex_array/#function-getindexbuffer"><em>AGE::VertexArray::GetIndexBuffer</em></a></p>
 <hr>
 
 <h3 id="function-getvertexbuffers">function GetVertexBuffers</h3>
+<p><em>Returns a constant reference to the vertex buffers associated with this object.</em> </p>
 <pre><code class="language-C++">inline virtual const std::vector&lt; Ref&lt; VertexBuffer &gt; &gt; &amp; AGE::OpenGLVertexArray::GetVertexBuffers () override const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A constant reference to the vector of <a href="../class_a_g_e_1_1_vertex_buffer/"><strong>VertexBuffer</strong></a> objects.</p>
+<p>Returns a constant reference to the vertex buffers of this object. </p>
+<p><strong>Returns:</strong></p>
+<p>A constant reference to the vector of vertex buffers (m_VertexBuffers). </p>
 <p>Implements <a href="../class_a_g_e_1_1_vertex_array/#function-getvertexbuffers"><em>AGE::VertexArray::GetVertexBuffers</em></a></p>
 <hr>
 
 <h3 id="function-makevertexattribptr">function MakeVertexAttribPtr</h3>
+<p><em>This function sets up the vertex attribute pointer for a specific index. It takes in parameters such as size of data, type of data (GL_FLOAT or GL_INT), whether the data is normalized, stride and pointer to the data. The function uses glVertexAttribPointer OpenGL function to set up the vertex attribute pointer.</em> </p>
 <pre><code class="language-C++">virtual void AGE::OpenGLVertexArray::MakeVertexAttribPtr (
     uint32_t index,
     int size,
@@ -270,6 +294,17 @@
     const void * pointer
 ) override const
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>index</code> The index of the generic vertex attribute to be modified. </li>
+<li><code>size</code> Specifies the number of components per generic vertex attribute. Must be 1, 2, 3, or 4. </li>
+<li><code>type</code> Specifies the data type of each component in the array. Must be GL_FLOAT or GL_INT. </li>
+<li><code>normalized</code> If true, the integer values are treated as a stream of normalized fixed-point values. </li>
+<li><code>stride</code> The byte offset between consecutive generic vertex attributes. </li>
+<li><code>pointer</code> Specifies a pointer to the first component of the array. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <p>Implements <a href="../class_a_g_e_1_1_vertex_array/#function-makevertexattribptr"><em>AGE::VertexArray::MakeVertexAttribPtr</em></a></p>
 <hr>
 
@@ -279,46 +314,88 @@
 <hr>
 
 <h3 id="function-setindexbuffer">function SetIndexBuffer</h3>
+<p><em>This function sets the index buffer for the OpenGL</em> <a href="../struct_a_g_e_1_1_vertex/"><em><strong>Vertex</strong></em></a> <em>Array.</em></p>
 <pre><code class="language-C++">virtual void AGE::OpenGLVertexArray::SetIndexBuffer (
     Ref&lt; IndexBuffer &gt; &amp; IndexBuffer
 ) override
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><a href="../class_a_g_e_1_1_index_buffer/"><strong>IndexBuffer</strong></a> A reference to an Index <a href="../struct_a_g_e_1_1_buffer/"><strong>Buffer</strong></a> object. </li>
+</ul>
 <p>Implements <a href="../class_a_g_e_1_1_vertex_array/#function-setindexbuffer"><em>AGE::VertexArray::SetIndexBuffer</em></a></p>
 <hr>
 
 <h3 id="function-unbind">function Unbind</h3>
+<p><em>This function unbinds the current vertex array object.</em> </p>
 <pre><code class="language-C++">virtual void AGE::OpenGLVertexArray::Unbind () override const
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>None</code> </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <p>Implements <a href="../class_a_g_e_1_1_vertex_array/#function-unbind"><em>AGE::VertexArray::Unbind</em></a></p>
 <hr>
 
 <h3 id="function-begin-12">function begin [1/2]</h3>
+<p><em>Returns an iterator pointing to the beginning of the vertex buffer list.</em> </p>
 <pre><code class="language-C++">inline virtual std::vector&lt; Ref&lt; VertexBuffer &gt; &gt;::iterator AGE::OpenGLVertexArray::begin () override
 </code></pre>
+<p>This function returns an iterator that points to the first element in the vector of vertex buffers. If there are no elements, the returned iterator will be equal to <a href="./#function-end-12"><strong>end()</strong></a>.</p>
+<p><strong>Returns:</strong></p>
+<p>An iterator pointing to the start of the vertex buffer list.</p>
+<p>Returns an iterator pointing to the first element in the vertex buffer list. </p>
+<p><strong>Returns:</strong></p>
+<p>An iterator pointing to the first element in the vertex buffer list. If the container is empty, the returned iterator will be equal to <a href="./#function-end-12"><strong>end()</strong></a>. </p>
 <p>Implements <a href="../class_a_g_e_1_1_vertex_array/#function-begin-12"><em>AGE::VertexArray::begin</em></a></p>
 <hr>
 
 <h3 id="function-begin-22">function begin [2/2]</h3>
+<p><em>Returns a constant iterator pointing to the beginning of the vertex buffer list.</em> </p>
 <pre><code class="language-C++">inline virtual std::vector&lt; Ref&lt; VertexBuffer &gt; &gt;::const_iterator AGE::OpenGLVertexArray::begin () override const
 </code></pre>
+<p>This function returns an iterator that points to the first element in the vector of <a href="../class_a_g_e_1_1_vertex_buffer/"><strong>VertexBuffer</strong></a> objects, which represents the start of the vertex buffers collection. The returned iterator can be used with standard container functions like std::advance or std::next to move through the collection.</p>
+<p><strong>Returns:</strong></p>
+<p>A constant iterator pointing to the beginning of the vertex buffer list. If no elements exist in the vector, the returned iterator will equal <a href="./#function-end-12"><strong>end()</strong></a>.</p>
+<p>Returns a constant iterator pointing to the beginning of the vertex buffer list. </p>
+<p><strong>Returns:</strong></p>
+<p>A constant iterator pointing to the first element in the vertex buffer list. If the container is empty, the returned iterator will be equal to <a href="./#function-end-12"><strong>end()</strong></a>. </p>
 <p>Implements <a href="../class_a_g_e_1_1_vertex_array/#function-begin-22"><em>AGE::VertexArray::begin</em></a></p>
 <hr>
 
 <h3 id="function-end-12">function end [1/2]</h3>
+<p><em>Returns an iterator pointing to the theoretical element that follows the last element of the container. This function is used in range-based for loops and similar contexts where a sentinel value is needed.</em> </p>
 <pre><code class="language-C++">inline virtual std::vector&lt; Ref&lt; VertexBuffer &gt; &gt;::iterator AGE::OpenGLVertexArray::end () override
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>An iterator to the theoretical element that follows the last element of the container.</p>
+<p>Returns an iterator pointing to the theoretical element that follows the last element of the container. This function returns an iterator to an imaginary element following the last actual element in the vector, which is valid but does not point to any real data (as vectors are sparse containers).</p>
+<p><strong>Returns:</strong></p>
+<p>An iterator to the theoretical element that follows the end of the sequence controlled by the container. </p>
 <p>Implements <a href="../class_a_g_e_1_1_vertex_array/#function-end-12"><em>AGE::VertexArray::end</em></a></p>
 <hr>
 
 <h3 id="function-end-22">function end [2/2]</h3>
+<p><em>Returns a constant iterator pointing to the theoretical element past the last element of the vertex buffer vector.</em> </p>
 <pre><code class="language-C++">inline virtual std::vector&lt; Ref&lt; VertexBuffer &gt; &gt;::const_iterator AGE::OpenGLVertexArray::end () override const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A constant iterator pointing to the theoretical element past the end of the vertex buffer vector.</p>
+<p>Returns an iterator pointing to the past-the-end element in the container. </p>
+<p><strong>Returns:</strong></p>
+<p>A constant iterator pointing to the past-the-end element of the container. </p>
 <p>Implements <a href="../class_a_g_e_1_1_vertex_array/#function-end-22"><em>AGE::VertexArray::end</em></a></p>
 <hr>
 
 <h3 id="function-openglvertexarray_1">function ~OpenGLVertexArray</h3>
+<p><em>Destructor for</em> <a href="./"><em><strong>OpenGLVertexArray</strong></em></a> <em>class. Deletes the vertex array object from GPU memory.</em></p>
 <pre><code class="language-C++">AGE::OpenGLVertexArray::~OpenGLVertexArray () override
 </code></pre>
+<p>This function is responsible for deleting a <a href="../struct_a_g_e_1_1_vertex/"><strong>Vertex</strong></a> Array Object (VAO) from GPU memory. The VAO was created during initialization and holds references to other data such as buffers, attributes etc. that are used in rendering operations. After deletion, this VAO can no longer be used by the OpenGL context.</p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <hr />

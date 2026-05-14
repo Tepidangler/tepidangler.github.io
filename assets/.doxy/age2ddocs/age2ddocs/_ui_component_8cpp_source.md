@@ -25,7 +25,7 @@
 
 namespace AGE
 {
-    Ref<UIComponent> UIComponent::Create(const std::string &Name, UIComponentType Type)
+Ref<UIComponent> UIComponent::Create(const std::string &Name, UIComponentType Type)
     {
         // For the record I don't like this, and I don't know what else to do. Also, I'm tired of being stuck on this
         switch (Type)
@@ -58,7 +58,7 @@ namespace AGE
             }
             default:
             {
-                AGE_CORE_ASSERT(false, "Unsupported UIComponent Type");
+                CoreLogger::Assert(false, "Unsupported UIComponent Type");
                 return nullptr;
             }
         }
@@ -66,7 +66,7 @@ namespace AGE
         return nullptr;
     }
 
-    void UIComponent::DrawVec3Control(const std::string& Label, Vector3 &Values, float ResetValue, float ColumnWidth)
+void UIComponent::DrawVec3Control(const std::string& Label, Vector3 &Values, float ResetValue, float ColumnWidth)
     {
         ImGuiIO& io = ImGui::GetIO();
 
@@ -130,12 +130,12 @@ namespace AGE
     }
 
     //Semi-Dummy Constructor that needs to be here so this class can become visible to RTTR
-    UIComponent::UIComponent(const std::string& Name)
+UIComponent::UIComponent(const std::string& Name)
     {
         m_Name = Name;
     }
 
-    void UIComponent::OnEvent(Event &Event)
+void UIComponent::OnEvent(Event &Event)
     {
         AGE::EventDispatcher Dispatcher(Event);
     }

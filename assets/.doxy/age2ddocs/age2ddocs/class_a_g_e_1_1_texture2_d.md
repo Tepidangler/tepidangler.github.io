@@ -73,7 +73,7 @@ Inherited by the following classes: [AGE::OpenGLTexture2D](class_a_g_e_1_1_open_
 
 | Type | Name |
 | ---: | :--- |
-|  T \* | [**As**](#function-as) () <br> |
+|  T \* | [**As**](#function-as) () <br>_This function is currently not implemented. It will return a pointer to an object of type T. If called, it will assert and crash the program with the message "As() Failed!"._  |
 
 
 ## Public Functions inherited from AGE::Texture
@@ -97,18 +97,18 @@ See [AGE::Texture](class_a_g_e_1_1_texture.md)
 | virtual void | [**SetTextureFilePath**](class_a_g_e_1_1_texture.md#function-settexturefilepath) (const std::string & Path) = 0<br> |
 | virtual void | [**Unbind**](class_a_g_e_1_1_texture.md#function-unbind) () const = 0<br> |
 | virtual bool | [**operator==**](class_a_g_e_1_1_texture.md#function-operator) (const [**Texture**](class_a_g_e_1_1_texture.md) & Other) const = 0<br> |
-| virtual  | [**~Texture**](class_a_g_e_1_1_texture.md#function-texture) () <br> |
+| virtual  | [**~Texture**](class_a_g_e_1_1_texture.md#function-texture) () <br>_Virtual destructor for the_ [_**Texture**_](class_a_g_e_1_1_texture.md) _class._ |
 
 
 ## Public Static Functions
 
 | Type | Name |
 | ---: | :--- |
-|  Ref&lt; [**Texture2D**](class_a_g_e_1_1_texture2_d.md) &gt; | [**Create**](#function-create-15) (const std::string & Path) <br> |
-|  Ref&lt; [**Texture2D**](class_a_g_e_1_1_texture2_d.md) &gt; | [**Create**](#function-create-25) (uint8\_t \* Image, const [**TextureSpecification**](struct_a_g_e_1_1_texture_specification.md) & Spec) <br> |
-|  Ref&lt; [**Texture2D**](class_a_g_e_1_1_texture2_d.md) &gt; | [**Create**](#function-create-35) (const std::vector&lt; std::string &gt; & Path) <br> |
-|  Ref&lt; [**Texture2D**](class_a_g_e_1_1_texture2_d.md) &gt; | [**Create**](#function-create-45) (const [**TextureSpecification**](struct_a_g_e_1_1_texture_specification.md) & Spec) <br> |
-|  Ref&lt; [**Texture2D**](class_a_g_e_1_1_texture2_d.md) &gt; | [**Create**](#function-create-55) (const [**Image**](class_a_g_e_1_1_image.md) \* Img, uint32\_t Width, uint32\_t Height, int Channels, size\_t Size) <br> |
+|  Ref&lt; [**Texture2D**](class_a_g_e_1_1_texture2_d.md) &gt; | [**Create**](#function-create-15) (const std::string & Path) <br>_Creates a reference to a_ [_**Texture2D**_](class_a_g_e_1_1_texture2_d.md) _object. The type of the texture is determined by the current renderer API._ |
+|  Ref&lt; [**Texture2D**](class_a_g_e_1_1_texture2_d.md) &gt; | [**Create**](#function-create-25) (const tmx\_image \* Image) <br>_Creates a new_ [_**Texture2D**_](class_a_g_e_1_1_texture2_d.md) _object based on the current Rendering API._ |
+|  Ref&lt; [**Texture2D**](class_a_g_e_1_1_texture2_d.md) &gt; | [**Create**](#function-create-35) (const std::vector&lt; std::string &gt; & Path) <br>_Creates a reference to a_ [_**Texture2D**_](class_a_g_e_1_1_texture2_d.md) _object. The type of texture is determined by the current renderer API._ |
+|  Ref&lt; [**Texture2D**](class_a_g_e_1_1_texture2_d.md) &gt; | [**Create**](#function-create-45) (const [**TextureSpecification**](struct_a_g_e_1_1_texture_specification.md) & Spec) <br>_Creates a new_ [_**Texture2D**_](class_a_g_e_1_1_texture2_d.md) _object based on the given specification. The type of texture to be created is determined by the current renderer API in use._ |
+|  Ref&lt; [**Texture2D**](class_a_g_e_1_1_texture2_d.md) &gt; | [**Create**](#function-create-55) (const [**Image**](class_a_g_e_1_1_image.md) \* Img, uint32\_t Width, uint32\_t Height, int Channels, size\_t Size) <br>_Creates a new_ [_**Texture2D**_](class_a_g_e_1_1_texture2_d.md) _object. The type of the texture is determined by the current renderer API._ |
 
 
 
@@ -168,6 +168,7 @@ See [AGE::Texture](class_a_g_e_1_1_texture.md)
 
 ### function As 
 
+_This function is currently not implemented. It will return a pointer to an object of type T. If called, it will assert and crash the program with the message "As() Failed!"._ 
 ```C++
 template<typename T>
 T * AGE::Texture2D::As () 
@@ -175,6 +176,27 @@ T * AGE::Texture2D::As ()
 
 
 
+
+
+**Returns:**
+
+nullptr Always returns nullptr.
+
+
+This function is currently not implemented. It will return a pointer to an object of type T. If this function is called, it will assert and crash the program with the message "As() Failed!".
+
+
+
+
+**Returns:**
+
+nullptr Always returns nullptr. 
+
+
+
+
+
+        
 
 <hr>
 ## Public Static Functions Documentation
@@ -184,6 +206,7 @@ T * AGE::Texture2D::As ()
 
 ### function Create [1/5]
 
+_Creates a reference to a_ [_**Texture2D**_](class_a_g_e_1_1_texture2_d.md) _object. The type of the texture is determined by the current renderer API._
 ```C++
 static Ref< Texture2D > AGE::Texture2D::Create (
     const std::string & Path
@@ -193,21 +216,74 @@ static Ref< Texture2D > AGE::Texture2D::Create (
 
 
 
+
+**Parameters:**
+
+
+* `Path` The path to the image file for the texture. 
+
+
+
+**Returns:**
+
+A reference to a [**Texture2D**](class_a_g_e_1_1_texture2_d.md) object, or nullptr if an unsupported [**RendererAPI**](class_a_g_e_1_1_renderer_a_p_i.md) is used.
+
+
+Creates a reference to a [**Texture2D**](class_a_g_e_1_1_texture2_d.md) object. The type of the texture is determined by the current renderer API. 
+
+**Parameters:**
+
+
+* `Path` The path to the image file for the texture. 
+
+
+
+**Returns:**
+
+A reference to a [**Texture2D**](class_a_g_e_1_1_texture2_d.md) object, or nullptr if an unsupported [**RendererAPI**](class_a_g_e_1_1_renderer_a_p_i.md) is used. 
+
+
+
+
+
+        
+
 <hr>
 
 
 
 ### function Create [2/5]
 
+_Creates a new_ [_**Texture2D**_](class_a_g_e_1_1_texture2_d.md) _object based on the current Rendering API._
 ```C++
 static Ref< Texture2D > AGE::Texture2D::Create (
-    uint8_t * Image,
-    const TextureSpecification & Spec
+    const tmx_image * Image
 ) 
 ```
 
 
 
+This function creates and returns a reference to a [**Texture2D**](class_a_g_e_1_1_texture2_d.md) object, which is specific to the currently used rendering API. It takes as input a pointer to an image data structure (tmx\_image). The type of texture created will depend on the current [**RendererAPI**](class_a_g_e_1_1_renderer_a_p_i.md) in use. If no supported Rendering API is found, it asserts false and returns nullptr.
+
+
+
+
+**Parameters:**
+
+
+* [**Image**](class_a_g_e_1_1_image.md) Pointer to the image data that the [**Texture2D**](class_a_g_e_1_1_texture2_d.md) object should be based on.
+
+
+
+**Returns:**
+
+A reference to a [**Texture2D**](class_a_g_e_1_1_texture2_d.md) object of the appropriate type for the current [**RendererAPI**](class_a_g_e_1_1_renderer_a_p_i.md) in use. If no supported API is found, it returns nullptr. 
+
+
+
+
+
+        
 
 <hr>
 
@@ -215,6 +291,7 @@ static Ref< Texture2D > AGE::Texture2D::Create (
 
 ### function Create [3/5]
 
+_Creates a reference to a_ [_**Texture2D**_](class_a_g_e_1_1_texture2_d.md) _object. The type of texture is determined by the current renderer API._
 ```C++
 static Ref< Texture2D > AGE::Texture2D::Create (
     const std::vector< std::string > & Path
@@ -224,12 +301,48 @@ static Ref< Texture2D > AGE::Texture2D::Create (
 
 
 
+
+**Parameters:**
+
+
+* `Paths` A vector of strings representing the paths to the textures. 
+
+
+
+**Returns:**
+
+A reference to a [**Texture2D**](class_a_g_e_1_1_texture2_d.md) object, or nullptr if an unsupported [**RendererAPI**](class_a_g_e_1_1_renderer_a_p_i.md) is encountered.
+
+
+Creates a texture from file path(s). The type of the texture depends on the current renderer API.
+
+
+
+
+**Parameters:**
+
+
+* `Paths` A vector of strings representing the paths to the textures. 
+
+
+
+**Returns:**
+
+Ref&lt;Texture2D&gt; A reference to the created [**Texture2D**](class_a_g_e_1_1_texture2_d.md) object. Returns nullptr if the RendererAPI::API is None or Unknown. 
+
+
+
+
+
+        
+
 <hr>
 
 
 
 ### function Create [4/5]
 
+_Creates a new_ [_**Texture2D**_](class_a_g_e_1_1_texture2_d.md) _object based on the given specification. The type of texture to be created is determined by the current renderer API in use._
 ```C++
 static Ref< Texture2D > AGE::Texture2D::Create (
     const TextureSpecification & Spec
@@ -239,12 +352,51 @@ static Ref< Texture2D > AGE::Texture2D::Create (
 
 
 
+
+**Parameters:**
+
+
+* `Spec` The specification for the texture to be created. This includes things like width, height, format etc. 
+
+
+
+**Returns:**
+
+A reference to the newly created [**Texture2D**](class_a_g_e_1_1_texture2_d.md) object. If no suitable [**RendererAPI**](class_a_g_e_1_1_renderer_a_p_i.md) is found or an error occurs during creation, a null reference is returned.
+
+
+Creates a new [**Texture2D**](class_a_g_e_1_1_texture2_d.md) based on the specified specification.
+
+
+The type of texture is determined by the current [**Renderer**](class_a_g_e_1_1_renderer.md) API in use. If no supported API is found, an assertion error will be thrown.
+
+
+
+
+**Parameters:**
+
+
+* `Spec` The specification for the texture to be created. This includes details like width, height, format etc. 
+
+
+
+**Returns:**
+
+A reference to the newly created [**Texture2D**](class_a_g_e_1_1_texture2_d.md) instance. 
+
+
+
+
+
+        
+
 <hr>
 
 
 
 ### function Create [5/5]
 
+_Creates a new_ [_**Texture2D**_](class_a_g_e_1_1_texture2_d.md) _object. The type of the texture is determined by the current renderer API._
 ```C++
 static Ref< Texture2D > AGE::Texture2D::Create (
     const Image * Img,
@@ -257,6 +409,49 @@ static Ref< Texture2D > AGE::Texture2D::Create (
 
 
 
+
+
+**Parameters:**
+
+
+* `Img` Pointer to an [**Image**](class_a_g_e_1_1_image.md) object, can be null if only dimensions are specified. 
+* `Width` Width of the texture in pixels. 
+* `Height` Height of the texture in pixels. 
+* `Channels` Number of color channels in the image data. 
+* `Size` Total size of the image data in bytes. 
+
+
+
+**Returns:**
+
+A reference to a [**Texture2D**](class_a_g_e_1_1_texture2_d.md) object, or nullptr if an unsupported [**Renderer**](class_a_g_e_1_1_renderer.md) API is used.
+
+
+Creates a new [**Texture2D**](class_a_g_e_1_1_texture2_d.md) object. The type of texture to be created is determined by the current renderer API in use.
+
+
+
+
+**Parameters:**
+
+
+* `Img` Pointer to an [**Image**](class_a_g_e_1_1_image.md) object, which may contain pixel data for initializing the texture. Can be nullptr if no image data is provided. 
+* `Width` Width of the texture in pixels. 
+* `Height` Height of the texture in pixels. 
+* `Channels` Number of color channels in the texture (e.g., 3 for RGB, 4 for RGBA). 
+* `Size` Total size of the image data in bytes.
+
+
+
+**Returns:**
+
+A reference to a [**Texture2D**](class_a_g_e_1_1_texture2_d.md) object that has been created based on the current [**Renderer**](class_a_g_e_1_1_renderer.md) API. If an unsupported or unknown [**Renderer**](class_a_g_e_1_1_renderer.md) API is detected, nullptr is returned instead. 
+
+
+
+
+
+        
 
 <hr>
 

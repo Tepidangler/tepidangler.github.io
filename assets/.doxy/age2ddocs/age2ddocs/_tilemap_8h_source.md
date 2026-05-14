@@ -20,49 +20,40 @@
 #include "Core/Public/UUID.h"
 #include <tmx.h>
 
-#include "Core/Public/Types.h"
-
 namespace AGE
 {
-    class SubTexture2D;
-    struct TilesetData
+
+    struct TMXData
     {
-        Ref<Texture2D> AtlasTexture;
-        uint32_t FirstGID;
-        uint32_t TileWidth, TileHeight = 0;
-        std::vector<Ref<SubTexture2D>> SubTexs;
+        std::vector<tmx_layer*> Layers;
     };
-    class Tilemap : public std::enable_shared_from_this<Tilemap>
+    class Tilemap
     {
     public:
         Tilemap(tmx_map* Map);
         ~Tilemap();
 
-        Ref<Scene> GetScene() { return m_Scene; }
-        std::vector<TilesetData>& GetData() { return m_Data; }
-        [[nodiscard]] std::filesystem::path GetPath() const { return m_Path; }
-        std::pair<uint32_t,uint32_t> GetMapDimensions() {return {m_MapWidth,m_MapHeight}; }
-        std::map<uint32_t, std::vector<Vector2*>>& GetUVs() {return m_UVs;}
-        UUID GetAssetID() { return m_AssetID; }
-        void SetScene(Ref<Scene>& scene);
-        void SetPath(const std::filesystem::path &Path) {m_Path = Path;}
-        void SetShaderData();
-        void SetTileLocations();
-        void BuildTilemapData();
-        void BindData();
-        const uint32_t GetNumberOfLayers();
+Ref<Texture> GetTexture() {return m_TilemapTexture;}
+Ref<Scene> GetScene() { return m_Scene; }
+std::filesystem::path GetPath() const { return m_Path; }
+UUID GetAssetID() { return m_AssetID; }
+        void SetData(Ref<Texture> Atlas, std::filesystem::path& path);
+        void SetScene(Ref<Scene> scene);
+
+
 
     private:
         Ref<Scene> m_Scene;
-        std::vector<TilesetData> m_Data;
+        Ref<Texture> m_AtlasTexture;
+        Ref<Texture> m_TilemapTexture;
         std::filesystem::path m_Path;
         tmx_map* m_Map = nullptr;
+        TMXData m_TMXData;
         UUID m_AssetID;
-        uint32_t m_MapWidth = 0, m_MapHeight = 0;
-        std::map<uint32_t, std::vector<Vector2*>> m_UVs;
+
+        void BuildTilemap();
+        void SetTileLocations();
         int ProcessLayers(tmx_layer* Head);
-        void ProcessTilesets(tmx_tileset_list* Head);
-        void SetTileData();
     };
 } // AGE
 

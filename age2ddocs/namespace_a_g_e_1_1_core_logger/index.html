@@ -88,70 +88,170 @@
 <tbody>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-critical"><strong>Critical</strong></a> (std::string_view fmt, Args &amp;&amp;... args) <br></td>
+<td style="text-align: left;"><a href="#function-assert"><strong>Assert</strong></a> (bool Condition, std::string_view fmt, Args &amp;&amp;... args) <br><em>This function is used for asserting conditions in the code. If the condition is false, it throws an exception with a formatted message.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-error"><strong>Error</strong></a> (std::string_view fmt, Args &amp;&amp;... args) <br></td>
+<td style="text-align: left;"><a href="#function-critical"><strong>Critical</strong></a> (std::string_view fmt, Args &amp;&amp;... args) <br><em>This function logs a critical message to the system. The message is formatted using fmt::format and includes the prefix "[AGECORE] ". It also pushes each character of the logged string into</em> <a href="../class_a_g_e_1_1_log/#function-getlogs"><em><strong>Log::GetLogs()</strong></em></a> <em>for later analysis, increments the offset by the size of the logged string, and sets the log type to Critical. The function supports both Windows and Linux platforms via preprocessor directives.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-info"><strong>Info</strong></a> (std::string_view fmt, Args &amp;&amp;... args) <br></td>
+<td style="text-align: left;"><a href="#function-error"><strong>Error</strong></a> (std::string_view fmt, Args &amp;&amp;... args) <br><em>This function logs an error message to the core logger and various other logging systems. The error message is formatted using a variadic template, allowing for flexible formatting of the error message.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-trace"><strong>Trace</strong></a> (std::string_view fmt, Args &amp;&amp;... args) <br></td>
+<td style="text-align: left;"><a href="#function-info"><strong>Info</strong></a> (std::string_view fmt, Args &amp;&amp;... args) <br><em>This function logs informational messages to the console and a debug log file.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-warn"><strong>Warn</strong></a> (std::string_view fmt, Args &amp;&amp;... args) <br></td>
+<td style="text-align: left;"><a href="#function-trace"><strong>Trace</strong></a> (std::string_view fmt, Args &amp;&amp;... args) <br><em>This function logs a trace message with the specified format and arguments. The formatted string is prefixed with "[AGECORE] ". It also adds each character of the log line to</em> <a href="../class_a_g_e_1_1_log/#function-getlogs"><em><strong>Log::GetLogs()</strong></em></a> <em>and updates</em><a href="../class_a_g_e_1_1_log/#function-getoffsets"><em><strong>Log::GetOffsets()</strong></em></a> <em>.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">void</td>
+<td style="text-align: left;"><a href="#function-warn"><strong>Warn</strong></a> (std::string_view fmt, Args &amp;&amp;... args) <br><em>This function logs a warning message to the console and stores it in the log buffer for later retrieval.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
+<h3 id="function-assert">function Assert</h3>
+<p><em>This function is used for asserting conditions in the code. If the condition is false, it throws an exception with a formatted message.</em> </p>
+<pre><code class="language-C++">template&lt;typename ... Args&gt;
+void AGE::CoreLogger::Assert (
+    bool Condition,
+    std::string_view fmt,
+    Args &amp;&amp;... args
+) 
+</code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Condition</code> The condition to be checked. It should evaluate to true if the program state is valid and false otherwise. </li>
+<li><code>fmt</code> A format string that describes how the arguments should be formatted when included into the error message. </li>
+<li><code>args</code> Variadic arguments representing values to include in the error message. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void This function does not return a value. It throws an exception if the condition is false.</p>
+<p>This function is used for asserting a condition in the code. If the condition is not met, it throws an exception with a formatted message. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Condition</code> The boolean condition to be checked. </li>
+<li><code>fmt</code> A format string that will be used to create the error message if the condition is false. </li>
+<li><code>args</code> Arguments for the format string. </li>
+</ul>
+<hr>
+
 <h3 id="function-critical">function Critical</h3>
+<p><em>This function logs a critical message to the system. The message is formatted using fmt::format and includes the prefix "[AGECORE] ". It also pushes each character of the logged string into</em> <a href="../class_a_g_e_1_1_log/#function-getlogs"><em><strong>Log::GetLogs()</strong></em></a> <em>for later analysis, increments the offset by the size of the logged string, and sets the log type to Critical. The function supports both Windows and Linux platforms via preprocessor directives.</em></p>
 <pre><code class="language-C++">template&lt;typename ... Args&gt;
 void AGE::CoreLogger::Critical (
     std::string_view fmt,
     Args &amp;&amp;... args
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>fmt</code> A std::string_view representing the format string for the message. </li>
+<li><code>args</code> Variadic arguments representing the values to be formatted into the message. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>This function logs a critical message to the system. The log includes the formatted string and arguments, along with additional information such as timestamp and log level. It also pushes each character of the log line into <a href="../class_a_g_e_1_1_log/#function-getlogs"><strong>Log::GetLogs()</strong></a>.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>fmt</code> A std::string_view representing the format string for the message to be logged. </li>
+<li><code>args</code> Variadic arguments representing the values to be formatted into the message.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-error">function Error</h3>
+<p><em>This function logs an error message to the core logger and various other logging systems. The error message is formatted using a variadic template, allowing for flexible formatting of the error message.</em> </p>
 <pre><code class="language-C++">template&lt;typename ... Args&gt;
 void AGE::CoreLogger::Error (
     std::string_view fmt,
     Args &amp;&amp;... args
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>fmt</code> A string_view representing the format string for the error message. </li>
+<li><code>args</code> Variadic arguments representing the values to be inserted into the format string.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void This function does not return a value.</p>
+<p>This function logs an error message to the core logger, appending "[AGECORE]" before it. It also pushes each character of the logged string into <a href="../class_a_g_e_1_1_log/#function-getlogs"><strong>Log::GetLogs()</strong></a> and updates <a href="../class_a_g_e_1_1_log/#function-getoffsets"><strong>Log::GetOffsets()</strong></a>. The log type is set as Error using LogType::Error. If AG_PLATFORM_WINDOWS is defined, it uses OutputDebugString to output the error message; if not, printf is used instead. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>fmt</code> A string_view representing the format of the error message. </li>
+<li><code>args</code> Variadic arguments for the format string. </li>
+</ul>
 <hr>
 
 <h3 id="function-info">function Info</h3>
+<p><em>This function logs informational messages to the console and a debug log file.</em> </p>
 <pre><code class="language-C++">template&lt;typename ... Args&gt;
 void AGE::CoreLogger::Info (
     std::string_view fmt,
     Args &amp;&amp;... args
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>fmt</code> A format string that specifies how subsequent arguments are converted for output. </li>
+<li><code>args</code> Arguments referenced by the format specifiers in the format string.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-trace">function Trace</h3>
+<p><em>This function logs a trace message with the specified format and arguments. The formatted string is prefixed with "[AGECORE] ". It also adds each character of the log line to</em> <a href="../class_a_g_e_1_1_log/#function-getlogs"><em><strong>Log::GetLogs()</strong></em></a> <em>and updates</em><a href="../class_a_g_e_1_1_log/#function-getoffsets"><em><strong>Log::GetOffsets()</strong></em></a> <em>.</em></p>
 <pre><code class="language-C++">template&lt;typename ... Args&gt;
 void AGE::CoreLogger::Trace (
     std::string_view fmt,
     Args &amp;&amp;... args
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>fmt</code> A std::string_view representing the format string for the trace message. </li>
+<li><code>args</code> Variadic arguments representing the values to be formatted into the trace message.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>This function logs a trace message to the system's debug output and also stores it in the log buffer for later retrieval.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>fmt</code> The format string used to create the logged message. It should follow the same syntax as printf/scanf functions. </li>
+<li><code>args</code> Variadic arguments that correspond to the placeholders in the format string.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-warn">function Warn</h3>
+<p><em>This function logs a warning message to the console and stores it in the log buffer for later retrieval.</em> </p>
 <pre><code class="language-C++">template&lt;typename ... Args&gt;
 void AGE::CoreLogger::Warn (
     std::string_view fmt,
     Args &amp;&amp;... args
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>fmt</code> The format string used to create the warning message. It should follow the same syntax as printf or std::format. </li>
+<li><code>args</code> The arguments that will be substituted into the format string.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>None</p>
+<p>This function logs a warning message to the console and stores it for later retrieval.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>fmt</code> The format string used to create the warning message. It should follow the same syntax as printf/scanf functions in C++. </li>
+<li><code>args</code> Variadic arguments that correspond to the placeholders in the format string.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <hr />

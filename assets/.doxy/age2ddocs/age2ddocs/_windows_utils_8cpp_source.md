@@ -31,7 +31,7 @@
 
 namespace AGE
 {
-    std::string FileDialogs::OpenFile(const std::string& Title, const std::filesystem::path& DefaultPath, std::vector<std::string> Filter)
+std::string FileDialogs::OpenFile(const std::string& Title, const std::filesystem::path& DefaultPath, std::vector<std::string> Filter)
     {
         auto f = pfd::open_file(Title.c_str(), DefaultPath.generic_string(),
             Filter);
@@ -41,12 +41,12 @@ namespace AGE
             return {};
         }
 
-        return f.result()[0];
+        return {f.result().front()};
     }
 
-    std::string FileDialogs::SaveFile(const std::string& Title, const std::filesystem::path& DefaultPath, std::vector<std::string> Filter)
+std::string FileDialogs::SaveFile(const std::string& Title, const std::filesystem::path& DefaultPath, std::vector<std::string> Filter)
     {
-        auto f = pfd::save_file(Title.c_str(), DefaultPath.generic_string(),
+        auto f = pfd::open_file(Title.c_str(), DefaultPath.generic_string(),
             Filter
             ,pfd::opt::force_overwrite);
 
@@ -55,7 +55,7 @@ namespace AGE
             return {};
         }
 
-        return f.result();
+        return {f.result().front()};
     }
 }
 ```

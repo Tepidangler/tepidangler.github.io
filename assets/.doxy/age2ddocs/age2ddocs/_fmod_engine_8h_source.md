@@ -33,22 +33,22 @@ namespace AGE
         virtual void LoadBanks(const std::vector<Ref<SoundBank>>& Banks) override;
         virtual void LoadBank(Ref<SoundBank> Bank) override;
         virtual void LoadEvents() override;
-        virtual std::string& GetCurrentEventName() override {return m_CurrentEventInstanceName;}
+virtual std::string& GetCurrentEventName() override {return m_CurrentEventInstanceName;}
         virtual void SetCurrentEventName(const std::string& Name) override;
         virtual bool IsEventValid(const std::string& EventName) override;
 
         virtual void SetParameterByName(const std::string& Name, float Value) override;
         virtual void Set3DAttributes(void* Attributes) override;
 
-        FMOD::Studio::EventInstance* GetCurrentEvent() {return m_CurrentEventInstance;}
+FMOD::Studio::EventInstance* GetCurrentEvent() {return m_CurrentEventInstance;}
 
         void LoadBankFromFile(const std::string& FileName);
         void LoadBankFromMemory(const char* Data);
 
-        FMOD::Studio::System* GetSystem() { return m_System; }
-        std::map<std::string, FMOD::Studio::Bank*>& GetBanks() { return m_Banks; }
-        std::map<std::string, FMOD::Studio::EventInstance*>& GetEvents() { return m_Events; }
-        std::map<std::string, FMOD::Sound*>& GetSounds() { return m_Sounds; }
+FMOD::Studio::System* GetSystem() { return m_System; }
+std::map<std::string, FMOD::Studio::Bank*>& GetBanks() { return m_Banks; }
+std::map<std::string, FMOD::Studio::EventInstance*>& GetEvents() { return m_Events; }
+std::map<std::string, FMOD::Sound*>& GetSounds() { return m_Sounds; }
 
     private:
         void CreateFmodEvent(const std::string& EventString);

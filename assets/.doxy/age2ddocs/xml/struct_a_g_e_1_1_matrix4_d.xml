@@ -16,7 +16,39 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="164" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="164" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="499" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="499" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_a_g_e_1_1_matrix4_d_1abc1889840bb7e717dc56a6d02179317f" prot="public" static="no" mutable="no">
+        <type>COMMENT</type>
+        <definition>COMMENT AGE::Matrix4D::__pad0__</definition>
+        <argsstring></argsstring>
+        <name>__pad0__</name>
+        <qualifiedname>AGE::Matrix4D::__pad0__</qualifiedname>
+        <bitfield>CONFIDENCE: 1.0</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="548" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="556" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_matrix4_d_1a42f83e2fcdf8509a61f7110cce410869" prot="public" static="no" mutable="no">
+        <type>COMMENT</type>
+        <definition>COMMENT AGE::Matrix4D::__pad1__</definition>
+        <argsstring></argsstring>
+        <name>__pad1__</name>
+        <qualifiedname>AGE::Matrix4D::__pad1__</qualifiedname>
+        <bitfield>CONFIDENCE: 1.0</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="558" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="564" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -27,12 +59,16 @@
         <name>Matrix4D</name>
         <qualifiedname>AGE::Matrix4D::Matrix4D</qualifiedname>
         <briefdescription>
+<para>Default constructor for the <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>Initializes a new instance of the <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> class with all elements set to zero.</para>
+<para>Default constructor for the <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> class.</para>
+<para>Initializes a new instance of the <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> class with all elements set to zero. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="168" column="1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="513" column="1"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_matrix4_d_1aa6bb8605698dbe53c2d14ac83838c9e0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -110,7 +146,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="170" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="170" bodyend="179"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="517" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="517" bodyend="526"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_matrix4_d_1a5073e9f9165603483123c3e59be1de68" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -123,12 +159,34 @@
           <declname>f</declname>
         </param>
         <briefdescription>
+<para>Constructs a 4x4 matrix with the given value on the diagonal and zeros elsewhere. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to be placed on the diagonal of the matrix.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This constructor initializes a 4x4 matrix where all elements are zero except for the main diagonal, which contains &apos;f&apos;.</para>
+<para>Constructs a 4x4 matrix with the given value on the diagonal and zero elsewhere.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to be placed on the diagonal of the matrix. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="181" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="181" bodyend="187"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="540" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="540" bodyend="546"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_matrix4_d_1ab54b6898e6446ea866a225bd9e2fce6b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -146,7 +204,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="189" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="189" bodyend="195"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="566" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="566" bodyend="572"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_matrix4_d_1af9199f41c20631aa3f292559c30ca200" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -171,12 +229,83 @@
           <declname>d</declname>
         </param>
         <briefdescription>
+<para>Constructs a 4D Matrix from four <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> instances. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function takes in four <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> instances, each representing one row of the matrix. It assigns the x, y, z and w components of these vectors to the corresponding elements in the matrix.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> instance representing the first row of the matrix. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> instance representing the second row of the matrix. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Third <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> instance representing the third row of the matrix. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Fourth <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> instance representing the fourth row of the matrix.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Constructs a 4D matrix using four vectors.</para>
+<para>The constructor initializes the 4x4 matrix with values from four <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> objects, each representing one row of the matrix.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First vector to initialize the first row of the matrix. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second vector to initialize the second row of the matrix. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Third vector to initialize the third row of the matrix. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Fourth vector to initialize the fourth row of the matrix. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="219" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="219" bodyend="225"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="656" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="656" bodyend="662"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_matrix4_d_1a6cb1141e4558542f315511641c046931" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -189,12 +318,35 @@
           <declname>Ptr</declname>
         </param>
         <briefdescription>
+<para>Constructs a <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> object from an existing pointer to another <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para>This constructor creates a new <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> object that is initialized with the values of the <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> pointed to by Ptr. The matrix elements are copied one-by-one, ensuring accurate copying of all data.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to an existing <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> object.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Constructs a <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> object from a void pointer.</para>
+<para>This function takes in a void pointer to an existing <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> object, and copies its values into the new <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> object. The input is expected to be of type <computeroutput>void*</computeroutput> which can hold any data type but should point to a valid <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> object. If the provided pointer does not point to a valid <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> object, the behavior is undefined.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A void pointer to an existing <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="227" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="227" bodyend="235"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="681" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="681" bodyend="689"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_matrix4_d_1a66692e99e6c1c6a6fde5d897afe173e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -207,12 +359,35 @@
           <declname>other</declname>
         </param>
         <briefdescription>
+<para>Copy constructor for the <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function creates a new instance of the <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> class by copying all data from another existing <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> object.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> object to copy from.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Copy constructor for a 4x4 matrix class.</para>
+<para>This function creates a deep copy of the input matrix, copying all elements to the newly created object.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_matrix4_d" kindref="compound">Matrix4D</ref> instance to be copied. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="237" column="1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="705" column="1"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_matrix4_d_1a43f9077b075ee8b8763a96cef338972b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>float &amp;</type>
@@ -229,12 +404,55 @@
           <declname>j</declname>
         </param>
         <briefdescription>
+<para>Accesses the element at position (i, j) in a two-dimensional array. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function allows for accessing and modifying elements of a two-dimensional array using the subscript operator syntax. The indices i and j specify the location of the desired element within the array.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first index, representing the row in the two-dimensional array. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second index, representing the column in the two-dimensional array.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the float value at position (i, j) in the array.</para>
+</simplesect>
+Accesses an element in the matrix using two indices.</para>
+<para>This function allows access to a specific element in the matrix by providing two indices, i and j. It returns a reference to this element. The returned value can be used for reading or writing the value of the specified element.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first index. Must be within the range [0, size1). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second index. Must be within the range [0, size2).</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the matrix element at position (i,j). </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="239" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="239" bodyend="242"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="729" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="729" bodyend="732"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_matrix4_d_1ad17bffe48b188f653b7bd2bed32abb08" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const float &amp;</type>
@@ -251,12 +469,54 @@
           <declname>j</declname>
         </param>
         <briefdescription>
+<para>This function returns a constant reference to the element at position (i, j) in the matrix. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The row index of the element to return. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The column index of the element to return. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A constant reference to the element at position (i, j).</para>
+</simplesect>
+Access the element at position (i, j) in a two-dimensional array.</para>
+<para>This function allows for constant access to an element at position (i, j) in a 2D array. The indices i and j should be within the valid range of the array.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The row index of the element to access. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The column index of the element to access. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A constant reference to the accessed element. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="244" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="244" bodyend="247"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="750" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="750" bodyend="753"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_matrix4_d_1afbcd2b717e579267ae9c4c8635288534" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> &amp;</type>
@@ -269,12 +529,37 @@
           <declname>j</declname>
         </param>
         <briefdescription>
+<para>This function returns a reference to the <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object at index &apos;j&apos; in the array. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object in the array. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object at index &apos;j&apos;.</para>
+</simplesect>
+This function returns a reference to the <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object at index &apos;j&apos; in the array.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object in the array. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object at index &apos;j&apos;. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="249" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="249" bodyend="252"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="767" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="767" bodyend="770"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_matrix4_d_1a2f721df95c30781bc76f0f87fb4bc072" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> &amp;</type>
@@ -287,12 +572,37 @@
           <declname>j</declname>
         </param>
         <briefdescription>
+<para>This function returns a constant reference to the <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> at index &apos;j&apos; in the array. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> in the array. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A constant reference to the <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> at index &apos;j&apos;.</para>
+</simplesect>
+This function returns a constant reference to the <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> at index &apos;j&apos; in the array.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> element to return. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A constant reference to the <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> at index &apos;j&apos;. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="254" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="254" bodyend="257"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="784" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="784" bodyend="787"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_matrix4_d_1ab9e8635a2e208b994b3837e6bf65fb81" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>glm::mat4</type>
@@ -301,12 +611,27 @@
         <name>ToGLM</name>
         <qualifiedname>AGE::Matrix4D::ToGLM</qualifiedname>
         <briefdescription>
+<para>Converts the current matrix to a GLM mat4. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function converts the current matrix into a glm::mat4 by directly copying its values into the new object. The order of elements is as follows:<itemizedlist>
+<listitem><para>n[0][0] through n[0][3]</para>
+</listitem><listitem><para>n[1][0] through n[1][3]</para>
+</listitem><listitem><para>n[2][0] through n[2][3]</para>
+</listitem><listitem><para>n[3][0] through n[3][3]</para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="return"><para>glm::mat4 The converted matrix.</para>
+</simplesect>
+Converts the current matrix to a GLM mat4.</para>
+<para>This function converts the current matrix into a glm::mat4 by directly copying each element from the original matrix to the new one. The resulting matrix will have the same values as the original, but it is in the format used by GLM (OpenGL Mathematics).</para>
+<para><simplesect kind="return"><para>A glm::mat4 containing the same data as the current matrix. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="280" column="18" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="280" bodyend="287"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="863" column="18" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="863" bodyend="870"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_matrix4_d_1a8401b76f59228e7ba29439f38fb9d2e2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>glm::mat4</type>
@@ -315,12 +640,21 @@
         <name>ToGLM</name>
         <qualifiedname>AGE::Matrix4D::ToGLM</qualifiedname>
         <briefdescription>
+<para>Converts the matrix to a GLM mat4. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function converts the current matrix into a glm::mat4 by directly copying each element from the original matrix to the new one. The order of elements is maintained in row-major order (i.e., n[0][0] through n[3][3]).</para>
+<para><simplesect kind="return"><para>A glm::mat4 with the same values as this matrix, but in a format compatible with GLM.</para>
+</simplesect>
+Converts the matrix to a GLM mat4.</para>
+<para>This function converts the current matrix into a glm::mat4 by directly copying each element from the original matrix to the new one. The order of elements is as follows: [0][0], [0][1], [0][2], [0][3], [1][0], [1][1], [1][2], [1][3], [2][0], [2][1], [2][2], [2][3], [3][0], [3][1], [3][2], [3][3].</para>
+<para><simplesect kind="return"><para>glm::mat4 The converted matrix. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="288" column="18" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="288" bodyend="295"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="887" column="18" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="887" bodyend="894"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -339,8 +673,10 @@
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="160" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="161" bodyend="296"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" line="495" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/MathStructures.h" bodystart="496" bodyend="895"/>
     <listofallmembers>
+      <member refid="struct_a_g_e_1_1_matrix4_d_1abc1889840bb7e717dc56a6d02179317f" prot="public" virt="non-virtual"><scope>AGE::Matrix4D</scope><name>__pad0__</name></member>
+      <member refid="struct_a_g_e_1_1_matrix4_d_1a42f83e2fcdf8509a61f7110cce410869" prot="public" virt="non-virtual"><scope>AGE::Matrix4D</scope><name>__pad1__</name></member>
       <member refid="struct_a_g_e_1_1_matrix4_d_1ac5e0d70aad26254f837a88355149700e" prot="public" virt="non-virtual"><scope>AGE::Matrix4D</scope><name>Matrix4D</name></member>
       <member refid="struct_a_g_e_1_1_matrix4_d_1aa6bb8605698dbe53c2d14ac83838c9e0" prot="public" virt="non-virtual"><scope>AGE::Matrix4D</scope><name>Matrix4D</name></member>
       <member refid="struct_a_g_e_1_1_matrix4_d_1a5073e9f9165603483123c3e59be1de68" prot="public" virt="non-virtual"><scope>AGE::Matrix4D</scope><name>Matrix4D</name></member>

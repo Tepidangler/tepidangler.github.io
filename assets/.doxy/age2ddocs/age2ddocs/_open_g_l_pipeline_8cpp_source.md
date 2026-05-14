@@ -20,10 +20,13 @@ namespace AGE
 {
     extern std::filesystem::path g_EditorAssetPath;
 
-    OpenGLPipeline::OpenGLPipeline()
+    COMMENT:
+CONFIDENCE: 1.0;
+
+OpenGLPipeline::OpenGLPipeline()
     {
     }
-    OpenGLPipeline::~OpenGLPipeline()
+OpenGLPipeline::~OpenGLPipeline()
     {
         AGE_PROFILE_FUNCTION();
 
@@ -31,8 +34,11 @@ namespace AGE
         delete[] m_Data.CircleVertexBufferBase;
         delete[] m_Data.LineVertexBufferBase;
         delete[] m_Data.TextVertexBufferBase;
+        m_Data.TileVertexBufferBases.clear();
     }
-    void OpenGLPipeline::Init()
+    
+
+void OpenGLPipeline::Init()
     {
         //2D Init
 
@@ -125,35 +131,17 @@ namespace AGE
         m_Data.TextVertexArray->AddVertexBuffer(m_Data.VertexBuffers["Text"]);
         m_Data.TextVertexArray->SetIndexBuffer(PrimIB);
         m_Data.TextVertexBufferBase = new TextVertex[m_Data.MaxVertices];
-
-        m_Data.TileVertexArray = VertexArray::Create();
-
-        m_Data.VertexBuffers["Tilemap"] = VertexBuffer::Create(m_Data.MaxVertices * sizeof(TilemapVertex));
-        m_Data.VertexBuffers["Tilemap"]->SetLayout(
-        {
-            {ShaderDataType::Float3, "a_Position"},
-            {ShaderDataType::Float4, "a_Color"},
-            {ShaderDataType::Float2, "a_UV"},
-            {ShaderDataType::UInt, "a_TilesetID"},
-            {ShaderDataType::Int, "a_EntityID"},
-        });
-        m_Data.TileVertexArray->AddVertexBuffer(m_Data.VertexBuffers["Tilemap"]);
-        m_Data.TileVertexBufferBase = new TilemapVertex[m_Data.MaxVertices];
-
-        m_Data.TileVertexArray->SetIndexBuffer(PrimIB);
+        
         GenerateDefaultTextures();
 
 #ifdef __clang__
         int32_t Samplers[32];
-        int32_t TSSamplers[32];
 #else
         int32_t Samplers[m_Data.MaxTextureSlots];
-        int32_t TSSamplers[m_Data.MaxTextureSlots];
 #endif
         for (int i = 0; i < m_Data.MaxTextureSlots; i++)
         {
             Samplers[i] = i;
-            TSSamplers[i] = i;
         }
         AppConfig& AppConfigRef = App::Get().GetAppConfig();
         AssetManager::Get().LoadShader(AppConfigRef.EditorAssetPath.string() +"Shaders/GLSL/Vertex/QuadShader.glsl");
@@ -168,8 +156,7 @@ namespace AGE
         m_Data.TextShader = AssetManager::Get().GetShader("TextShader");
         m_Data.TileShader = AssetManager::Get().GetShader("TileShader");
         m_Data.QuadShader->SetInt("u_Textures", 0, Samplers, m_Data.MaxTextureSlots);
-        m_Data.TileShader->SetInt("u_Tilesets", 0, TSSamplers, m_Data.MaxTextureSlots);
-
+        m_Data.TileShader->SetInt("u_Textures", 0, Samplers, m_Data.MaxTextureSlots);
 
         m_Data.TextureSlots[0] = m_Data.WhiteTexture;
         m_Data.FontAtlasTextures[0] = AGEFont::GetDefault()->GetAtlasTexture();
@@ -179,15 +166,9 @@ namespace AGE
         m_Data.QuadVertexPositions[1] = { .5f, -.5f, 0.f, 1.f };
         m_Data.QuadVertexPositions[2] = { -.5f, -.5f, 0.f, 1.f };
         m_Data.QuadVertexPositions[3] = { -.5f, .5f, 0.f, 1.f };
-
-        m_Data.TileVertexPositions[0] = { .5f, .5f, 0.f, 1.f };
-        m_Data.TileVertexPositions[1] = { .5f, -.5f, 0.f, 1.f };
-        m_Data.TileVertexPositions[2] = { -.5f, -.5f, 0.f, 1.f };
-        m_Data.TileVertexPositions[3] = { -.5f, -.5f, 0.f, 1.f };
-        m_Data.TileVertexPositions[4] = { .5f, .5f, 0.f, 1.f };
-        m_Data.TileVertexPositions[5] = { -.5f, .5f, 0.f, 1.f };
     }
-    void OpenGLPipeline::StartBatch2D()
+    
+void OpenGLPipeline::StartBatch2D()
     {
         m_Data.QuadIndexCount = 0;
         m_Data.QuadVertexBufferPtr = m_Data.QuadVertexBufferBase;
@@ -201,20 +182,26 @@ namespace AGE
         m_Data.TextIndexCount = 0;
         m_Data.TextVertexBufferPtr = m_Data.TextVertexBufferBase;
 
-        m_Data.TileIndexCount = 0;
-        m_Data.TileVertexCount = 0;
-        m_Data.TileVertexBufferPtr = m_Data.TileVertexBufferBase;
+        if (m_Data.TileVertexBufferBases.size() > 0)
+        {
+            for (size_t i = 0; i < m_Data.TileVertexBufferBases.size(); i++)
+            {
+                m_Data.TileIndexCounts[i] = 0;
+                m_Data.TileVertexBufferPtrs[i] = m_Data.TileVertexBufferBases[i];
+            }
+        }
 
         m_Data.TextureSlotIndex = 1;
         m_Data.AtlusSlotIndex = 1;
-        m_Data.TilesetSlotIndex = 0;
     }
-    void OpenGLPipeline::NextBatch2D()
+void OpenGLPipeline::NextBatch2D()
     {
         Flush2D();
         StartBatch2D();
     }
-    void OpenGLPipeline::Flush2D()
+    
+
+void OpenGLPipeline::Flush2D()
     {
         if (m_Data.QuadIndexCount)
         {
@@ -260,7 +247,7 @@ namespace AGE
             uint32_t DataSize = (uint32_t)((uint8_t*)m_Data.TextVertexBufferPtr - (uint8_t*)m_Data.TextVertexBufferBase);
             m_Data.VertexBuffers["Text"]->AddDataToBuffer(m_Data.TextVertexBufferBase, DataSize);
 
-            //[[maybe_unused]] auto Buffer = m_Data.TextVertexBufferBase;
+            [[maybe_unused]] auto Buffer = m_Data.TextVertexBufferBase;
             for (size_t i = 0; i < m_Data.FontAtlasTextures.size(); i++)
             {
                 if (m_Data.FontAtlasTextures[i])
@@ -275,43 +262,49 @@ namespace AGE
             RenderCommand::DrawIndexed(m_Data.TextVertexArray, m_Data.TextIndexCount);
             m_Data.Stats.DrawCalls++;
         }
-        if (m_Data.TileVertexCount)
+        for (size_t i = 0; i < m_Data.TileVertexArrays.size(); i++)
         {
-            auto DataSize = (uint32_t)((uint8_t*)m_Data.TileVertexBufferPtr - (uint8_t*)m_Data.TileVertexBufferBase);
-
-            m_Data.VertexBuffers["Tilemap"]->AddDataToBuffer(m_Data.TileVertexBufferBase, DataSize);
-            uint32_t texindex = 0;
-
-            for (auto t : m_Data.TileSetTextures)
+            if (m_Data.TileIndexCounts[i])
             {
-                if (t)
+                uint32_t DataSize = (uint32_t)((uint8_t*)m_Data.TileVertexBufferPtrs[i] - (uint8_t*)m_Data.TileVertexBufferBases[i]);
+                m_Data.TileVertexBuffers[i]->AddDataToBuffer(m_Data.TileVertexBufferBases[i], DataSize);
+
+
+
+                for (uint32_t j = 0; j < m_Data.TextureSlotIndex; j++)
                 {
-                    t->Bind(texindex);
+                    if (m_Data.TextureSlots[j])
+                    {
+                        m_Data.TextureSlots[j]->Bind(j);
+                    }
                 }
-                texindex++;
+                RenderCommand::DrawIndexed(m_Data.TileVertexArrays[i], m_Data.TileIndexCounts[i]);
+                m_Data.Stats.DrawCalls++;
+
+
 
             }
-            m_Data.TileShader->Bind();
-            m_Data.CurrentTilemap->BindData();
-            RenderCommand::DrawArray(m_Data.TileVertexArray, m_Data.TileVertexCount);
-            m_Data.Stats.DrawCalls++;
         }
+        m_Data.TileShader->Bind();
     }
 
-    Renderer2DData& OpenGLPipeline::GetData()
+COMMENT:
+CONFIDENCE: 1.0;
+
+Renderer2DData& OpenGLPipeline::GetData()
     {
         return m_Data;
     }
-    void OpenGLPipeline::ResetStats()
+void OpenGLPipeline::ResetStats()
     {
         memset(&m_Data.Stats, 0, sizeof(Statistics));
     }
-    Statistics& OpenGLPipeline::GetStats()
+Statistics& OpenGLPipeline::GetStats()
     {
         return m_Data.Stats;
     }
 
-    void OpenGLPipeline::GenerateDefaultTextures()
+void OpenGLPipeline::GenerateDefaultTextures()
     {
         uint32_t WhiteTexData = 0xffffffff;
         m_Data.WhiteTexture = Texture2D::Create(TextureSpecification());
@@ -319,7 +312,7 @@ namespace AGE
     }
 
     template<>
-    OpenGLPipeline* Pipeline::As()
+OpenGLPipeline* Pipeline::As()
     {
         return (OpenGLPipeline*)this;
     }

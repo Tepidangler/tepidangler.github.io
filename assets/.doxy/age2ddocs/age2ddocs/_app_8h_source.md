@@ -48,7 +48,7 @@ namespace AGE
         int Count = 0;
         char** Args = nullptr;
 
-        const char* operator[](int index) const
+const char* operator[](int index) const
         {
             CoreLogger::Info("Argument Count: {}", Count);
             if (index > Count)
@@ -75,7 +75,8 @@ namespace AGE
 
     };
 
-    class AGE_API App
+    
+class AGE_API App
     {
 
     public:
@@ -101,24 +102,24 @@ namespace AGE
         void PushScriptableComp(ScriptableEntity* Comp);
 
 
-        inline DeviceManager& GetDeviceManager() { return *m_DeviceManager; }
+inline DeviceManager& GetDeviceManager() { return *m_DeviceManager; }
 
-        inline static App& Get() { return *s_Instance; }
+inline static App& Get() { return *s_Instance; }
         
-        ApplicationCommandLineArgs GetCommandLineArgs() const { return m_CommandLineArgs; }
+ApplicationCommandLineArgs GetCommandLineArgs() const { return m_CommandLineArgs; }
 
-        inline ImGuiLayer* GetImGuiLayer() { return m_ImGuiLayer; }
+inline ImGuiLayer* GetImGuiLayer() { return m_ImGuiLayer; }
 
-        uint16_t GetTargetPlatform() { return m_Target; }
-        void SetTargetPlatform(uint16_t Target) { m_Target = (TargetPlatform)Target; }
+uint16_t GetTargetPlatform() { return m_Target; }
+void SetTargetPlatform(uint16_t Target) { m_Target = (TargetPlatform)Target; }
 
-        AppConfig& GetAppConfig() {return m_AppConfig;}
+AppConfig& GetAppConfig() {return m_AppConfig;}
 
-        Ref<Project>& GetProject() { return m_Project; }
+Ref<Project>& GetProject() { return m_Project; }
 
-        const Vector2& GetFramebufferSize() {return m_FramebufferSize; }
+const Vector2& GetFramebufferSize() {return m_FramebufferSize; }
 
-        void SetProject(Ref<Project> Proj) { m_Project = Proj; }
+void SetProject(Ref<Project> Proj) { m_Project = Proj; }
 
         void GetDirectXErrorMessages();
     private:

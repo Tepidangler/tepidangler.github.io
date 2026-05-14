@@ -6,6 +6,7 @@
 ## a
 
 * **AseVector** ([**AGE**](namespace_a_g_e.md))
+* **a** ([**AGE**](namespace_a_g_e.md))
 
 
 ## c
@@ -24,6 +25,11 @@
 * **GamePadCode** ([**AGE**](namespace_a_g_e.md))
 
 
+## i
+
+* **id** ([**AGE**](namespace_a_g_e.md))
+
+
 ## j
 
 * **JoyStickCode** ([**AGE**](namespace_a_g_e.md))
@@ -38,6 +44,11 @@
 ## m
 
 * **MouseCode** ([**AGE**](namespace_a_g_e.md))
+
+
+## q
+
+* **QC** ([**AGE**](namespace_a_g_e.md))
 
 
 ## r

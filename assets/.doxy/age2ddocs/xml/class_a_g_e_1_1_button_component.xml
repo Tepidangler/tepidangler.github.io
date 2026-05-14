@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="42" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" bodystart="42" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="83" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" bodystart="83" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_button_component_1a4c4b91b3f530a1bf4bb8615b041fbfc8" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="43" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" bodystart="43" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="84" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" bodystart="84" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_button_component_1a84fe6f1afd368be678eec72b66a41401" prot="private" static="no" mutable="no">
         <type><ref refid="struct_a_g_e_1_1_box_properties" kindref="compound">BoxProperties</ref></type>
@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="45" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" bodystart="45" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="86" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" bodystart="86" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_button_component_1a8bcb162efaa917017df24c1c16ce7329" prot="private" static="no" mutable="no">
         <type><ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref></type>
@@ -60,7 +60,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="46" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" bodystart="46" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="87" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" bodystart="87" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_button_component_1a18f4a25afece09b97973d50d070b1ac3" prot="private" static="no" mutable="no">
         <type>std::function&lt; void()&gt;</type>
@@ -74,7 +74,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="48" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" bodystart="48" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="89" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" bodystart="89" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -89,12 +89,33 @@
           <declname>Name</declname>
         </param>
         <briefdescription>
+<para>Constructs a <ref refid="class_a_g_e_1_1_button_component" kindref="compound">ButtonComponent</ref> with the given name. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function initializes a new instance of the <ref refid="class_a_g_e_1_1_button_component" kindref="compound">ButtonComponent</ref> class, setting its name and type. It also sets up an anonymous lambda function as the onClick event handler that logs &quot;Button Clicked!&quot; to the console when invoked. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name for this button component.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Constructs a <ref refid="class_a_g_e_1_1_button_component" kindref="compound">ButtonComponent</ref> with the given name.</para>
+<para>This function initializes a new instance of the <ref refid="class_a_g_e_1_1_button_component" kindref="compound">ButtonComponent</ref> class, setting its name and type. It also sets up an anonymous lambda function as the onClick event handler that logs &quot;Button Clicked!&quot; to the console when triggered. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name for the button component. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="17" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/ButtonComponent.cpp" bodystart="20" bodyend="27"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="17" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/ButtonComponent.cpp" bodystart="32" bodyend="39"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_button_component_1ae3d6bf628ce87f47af1103aaa9198156" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -104,12 +125,21 @@
         <qualifiedname>AGE::ButtonComponent::DrawContent</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_u_i_component_1ab7694d7df5410816a9fa16f17e4dbe42">DrawContent</reimplements>
         <briefdescription>
+<para>Draws the content of the <ref refid="class_a_g_e_1_1_button_component" kindref="compound">ButtonComponent</ref>, including properties like position, rotation, scale and color. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function uses ImGui to draw a series of controls for modifying the <ref refid="struct_a_g_e_1_1_box_properties" kindref="compound">BoxProperties</ref> of the <ref refid="class_a_g_e_1_1_button_component" kindref="compound">ButtonComponent</ref>. It includes fields for Screen Position, Screen Rotation, Screen Scale and Box Color. The <ref refid="class_a_g_e_1_1_u_i_component_1af6baa3f8d5e27906bb0cf5505920323d" kindref="member">DrawVec3Control</ref> is used to handle <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> properties.</para>
+<para><simplesect kind="return"><para>void</para>
+</simplesect>
+Draws the content of the <ref refid="class_a_g_e_1_1_button_component" kindref="compound">ButtonComponent</ref>, including box properties like position, rotation, scale and color.</para>
+<para>This function uses ImGui to draw text fields for each property, a vector control for editing position, rotation and scale vectors, and a color edit control for setting the tint color of the box. The <computeroutput>DrawVec3Control</computeroutput> function is used to handle the drawing and input of these properties.</para>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="19" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/ButtonComponent.cpp" bodystart="29" bodyend="35"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="19" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/ButtonComponent.cpp" bodystart="57" bodyend="63"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_button_component_1a2abd07eb02072e41ced466ef9bcc0355" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -123,12 +153,35 @@
           <declname>DeltaTime</declname>
         </param>
         <briefdescription>
+<para>Updates the <ref refid="class_a_g_e_1_1_button_component" kindref="compound">ButtonComponent</ref> based on the provided <ref refid="class_a_g_e_1_1_time_step" kindref="compound">TimeStep</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function updates the <ref refid="class_a_g_e_1_1_button_component" kindref="compound">ButtonComponent</ref> by calling <ref refid="class_a_g_e_1_1_u_i_component" kindref="compound">UIComponent</ref>&apos;s OnUpdate method with the given DeltaTime. If the component is visible, it creates a <ref refid="struct_a_g_e_1_1_quad_properties" kindref="compound">QuadProperties</ref> object and sets its properties accordingly before passing it to <ref refid="class_a_g_e_1_1_renderer2_d_1a012305ca47d628775a684d8bf730415f" kindref="member">Renderer2D::DrawQuad</ref> for rendering.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>DeltaTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time step since the last frame.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Updates the button component based on the provided time step.</para>
+<para>This function updates the button component by calling the base class&apos;s <ref refid="class_a_g_e_1_1_button_component_1a2abd07eb02072e41ced466ef9bcc0355" kindref="member">OnUpdate()</ref> method, then checks if the component is visible. If it is, a <ref refid="struct_a_g_e_1_1_quad_properties" kindref="compound">QuadProperties</ref> object is created to hold properties for rendering a quad (like its transform, color etc.). The properties are set based on the button component&apos;s box properties and then used with <ref refid="class_a_g_e_1_1_renderer2_d_1a012305ca47d628775a684d8bf730415f" kindref="member">Renderer2D::DrawQuad()</ref> to render the button.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>DeltaTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time step since the last frame. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="20" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/ButtonComponent.cpp" bodystart="37" bodyend="47"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="20" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/ButtonComponent.cpp" bodystart="82" bodyend="92"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_button_component_1af83679edef87b696c95bd38768b3529d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -142,12 +195,34 @@
           <declname>Event</declname>
         </param>
         <briefdescription>
+<para>This function handles events related to the button component. It dispatches different types of events based on the current state of the button and the event that has occurred. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The event object which contains information about the event that has occurred.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Handles events related to the button component.</para>
+<para>This function processes various types of events such as key presses and mouse clicks, which are dispatched based on certain conditions (like if the button is focused or if it&apos;s being hovered over).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The event object that contains information about the event. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="21" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/ButtonComponent.cpp" bodystart="49" bodyend="60"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="21" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/ButtonComponent.cpp" bodystart="106" bodyend="117"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_button_component_1acf9558a828a3274d9843291b8fd287c6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -161,12 +236,36 @@
           <declname>Serializer</declname>
         </param>
         <briefdescription>
+<para>This function is used to serialize the <ref refid="class_a_g_e_1_1_vertical_box_component" kindref="compound">VerticalBoxComponent</ref> object. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Serializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to a <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref> object, which provides methods for writing data. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void No return value expected.</para>
+</simplesect>
+This function serializes the <ref refid="class_a_g_e_1_1_vertical_box_component" kindref="compound">VerticalBoxComponent</ref> object.</para>
+<para>The function writes the data of this object into a <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref>, which can be used for further processing or storage. It uses the WriteObject method to write the specific type (<ref refid="class_a_g_e_1_1_vertical_box_component" kindref="compound">VerticalBoxComponent</ref>) and the instance of this class (*this).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Serializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to an instance of <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref> that will handle the serialization process. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="22" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" bodystart="22" bodyend="25"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="36" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" bodystart="36" bodyend="39"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_button_component_1aae2c06d51774e4c4a843edca8f8f0337" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -180,12 +279,34 @@
           <declname>Serializer</declname>
         </param>
         <briefdescription>
+<para>This function is used to deserialize data from a <ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref> object. It reads an object of type <ref refid="class_a_g_e_1_1_vertical_box_component" kindref="compound">VerticalBoxComponent</ref> using the provided serializer. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Serializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the <ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref> object that will be used for deserialization.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This function is used to deserialize data from a <ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref> object. It reads an object of type <ref refid="class_a_g_e_1_1_vertical_box_component" kindref="compound">VerticalBoxComponent</ref> into the current instance of this class. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Serializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the <ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref> object that contains the serialized data. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>None </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="26" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" bodystart="26" bodyend="29"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="51" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" bodystart="51" bodyend="54"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_button_component_1a5f8d876c64cadb91bf33a95463298176" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -198,12 +319,37 @@
           <declname>func</declname>
         </param>
         <briefdescription>
+<para>Sets the on-click function for this object. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function sets a new function to be called when the object is clicked. The provided function should take no arguments and return void.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>func</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A std::function that will be set as the new click handler. It should have no parameters and return nothing.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>None</para>
+</simplesect>
+Sets the on-click function for this object.</para>
+<para>This function sets a new function to be called when the object is clicked. The provided function should take no arguments and return void.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>func</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A std::function that will be set as the new click handler. It should have no parameters and return nothing. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="30" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" bodystart="30" bodyend="30"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="71" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" bodystart="71" bodyend="71"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="protected-func">
@@ -214,12 +360,21 @@
         <name>IsButtonHovered</name>
         <qualifiedname>AGE::ButtonComponent::IsButtonHovered</qualifiedname>
         <briefdescription>
+<para>Checks if the button is hovered by the mouse cursor. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function calculates the normalized position of the mouse cursor relative to the window size, and then checks whether this position falls within the bounds defined by the button&apos;s dimensions. The bounds are calculated as half the width and height of the button, with the center point being at (m_Bounds[0].x, m_Bounds[0].y).</para>
+<para><simplesect kind="return"><para>True if the mouse cursor is hovering over the button, false otherwise.</para>
+</simplesect>
+Checks if the button is hovered by the mouse cursor.</para>
+<para>This function calculates the normalized position of the mouse cursor relative to the framebuffer size, then checks if this position lies within the bounds defined by <computeroutput>m_Bounds</computeroutput>. If it does, the function returns true; otherwise, it returns false.</para>
+<para><simplesect kind="return"><para>A boolean value indicating whether or not the button is hovered by the mouse cursor. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="36" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/ButtonComponent.cpp" bodystart="62" bodyend="70"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="77" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/ButtonComponent.cpp" bodystart="134" bodyend="142"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -234,12 +389,39 @@
           <declname>E</declname>
         </param>
         <briefdescription>
+<para>Handles key press events. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is responsible for handling the <ref refid="class_a_g_e_1_1_key_pressed_event" kindref="compound">KeyPressedEvent</ref>, specifically when a certain key (currently ENTER) has been pressed. If the component is currently focused and the event&apos;s key code matches the &apos;ENTER&apos;, it triggers an action defined by m_OnClick().</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>E</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_a_g_e_1_1_key_pressed_event" kindref="compound">KeyPressedEvent</ref> to be handled. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool Returns false if no special actions were taken, true otherwise. In this case, we only return true when ENTER is pressed and m_OnClick() is triggered, so it&apos;s always false.</para>
+</simplesect>
+Handles key press events for the <ref refid="class_a_g_e_1_1_button_component" kindref="compound">ButtonComponent</ref>.</para>
+<para>This function is responsible for handling key press events and determining if they should be processed or ignored. The component only processes key presses when it has focus, indicated by <computeroutput>m_CompProperties.Focused</computeroutput>. If a key other than ENTER (Key::ENTER) is pressed, the function returns false without doing anything else.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>E</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to the <ref refid="class_a_g_e_1_1_key_pressed_event" kindref="compound">KeyPressedEvent</ref> that was triggered. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the event was processed and should not be passed on to other components; False otherwise. In this case, it will return true only when ENTER key is pressed (Key::ENTER). </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="39" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/ButtonComponent.cpp" bodystart="72" bodyend="87"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="80" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/ButtonComponent.cpp" bodystart="160" bodyend="175"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_button_component_1aa029a066cb8d801b487ddba5995c6b2d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -252,12 +434,39 @@
           <declname>E</declname>
         </param>
         <briefdescription>
+<para>Handles the click event of the button. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is triggered when a mouse button is pressed on this component. It executes the callback function associated with the button.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>E</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to the <ref refid="class_a_g_e_1_1_mouse_button_pressed_event" kindref="compound">MouseButtonPressedEvent</ref> object containing information about the event. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Always returns false, as no further action needs to be taken after clicking the button.</para>
+</simplesect>
+Handles the OnClicked event.</para>
+<para>This function is triggered when a mouse button is pressed on this <ref refid="class_a_g_e_1_1_button_component" kindref="compound">ButtonComponent</ref>. It executes the stored callback function, m_OnClick(), and returns false.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>E</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to the <ref refid="class_a_g_e_1_1_mouse_button_pressed_event" kindref="compound">MouseButtonPressedEvent</ref> that was fired. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Always returns false. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="40" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/ButtonComponent.cpp" bodystart="89" bodyend="93"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="81" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/ButtonComponent.cpp" bodystart="194" bodyend="198"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -311,7 +520,7 @@
         <link refid="struct_a_g_e_1_1_vector3"/>
       </node>
     </collaborationgraph>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="14" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" bodystart="15" bodyend="50"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" line="14" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Public/ButtonComponent.h" bodystart="15" bodyend="91"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_u_i_component_1a98e1aaddee431d6b3b7ff6f5e5536de4" prot="public" virt="non-virtual"><scope>AGE::ButtonComponent</scope><name>As</name></member>
       <member refid="class_a_g_e_1_1_u_i_component_1a3dfa8952db40b83e29831b76352fa8e5" prot="public" virt="non-virtual"><scope>AGE::ButtonComponent</scope><name>As</name></member>

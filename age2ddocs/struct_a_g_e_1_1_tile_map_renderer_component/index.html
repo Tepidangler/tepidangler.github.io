@@ -87,10 +87,6 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="#variable-isshaderdataset"><strong>IsShaderDataSet</strong></a>   = <code>false</code><br></td>
-</tr>
-<tr>
 <td style="text-align: right;">std::string</td>
 <td style="text-align: left;"><a href="#variable-name"><strong>Name</strong></a>  <br></td>
 </tr>
@@ -111,32 +107,27 @@
 <tbody>
 <tr>
 <td style="text-align: right;">Ref&lt; <a href="../class_a_g_e_1_1_tilemap/"><strong>Tilemap</strong></a> &gt;</td>
-<td style="text-align: left;"><a href="#function-gettilemap"><strong>GetTileMap</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-gettilemap"><strong>GetTileMap</strong></a> () <br><em>Returns the tile map object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-settilemap"><strong>SetTileMap</strong></a> (Ref&lt; <a href="../class_a_g_e_1_1_tilemap/"><strong>Tilemap</strong></a> &gt; Map) <br></td>
+<td style="text-align: left;"><a href="#function-settilemap"><strong>SetTileMap</strong></a> (Ref&lt; <a href="../class_a_g_e_1_1_tilemap/"><strong>Tilemap</strong></a> &gt; Map) <br><em>Sets the TileMap for this object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-tilemaprenderercomponent-13"><strong>TileMapRendererComponent</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-tilemaprenderercomponent-13"><strong>TileMapRendererComponent</strong></a> () = default<br><em>Default constructor for</em> <a href="./"><em><strong>TileMapRendererComponent</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-tilemaprenderercomponent-23"><strong>TileMapRendererComponent</strong></a> (const <a href="./"><strong>TileMapRendererComponent</strong></a> &amp;) = default<br></td>
+<td style="text-align: left;"><a href="#function-tilemaprenderercomponent-23"><strong>TileMapRendererComponent</strong></a> (const <a href="./"><strong>TileMapRendererComponent</strong></a> &amp;) = default<br><em>Default copy constructor for the</em> <a href="./"><em><strong>TileMapRendererComponent</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-tilemaprenderercomponent-33"><strong>TileMapRendererComponent</strong></a> (const std::string &amp; N) <br></td>
+<td style="text-align: left;"><a href="#function-tilemaprenderercomponent-33"><strong>TileMapRendererComponent</strong></a> (const std::string &amp; N) <br><em>Constructs a</em> <a href="./"><em><strong>TileMapRendererComponent</strong></em></a> <em>with the given name.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-attributes-documentation">Public Attributes Documentation</h2>
-<h3 id="variable-isshaderdataset">variable IsShaderDataSet</h3>
-<pre><code class="language-C++">bool AGE::TileMapRendererComponent::IsShaderDataSet;
-</code></pre>
-<hr>
-
 <h3 id="variable-name">variable Name</h3>
 <pre><code class="language-C++">std::string AGE::TileMapRendererComponent::Name;
 </code></pre>
@@ -148,34 +139,56 @@
 <hr>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-gettilemap">function GetTileMap</h3>
+<p><em>Returns the tile map object.</em> </p>
 <pre><code class="language-C++">inline Ref&lt; Tilemap &gt; AGE::TileMapRendererComponent::GetTileMap () 
 </code></pre>
+<p>This function retrieves and returns the tile map object stored in the game state. The returned object can be used to access and manipulate the tile map data.</p>
+<p><strong>Returns:</strong></p>
+<p>Ref&lt;Tilemap&gt; A reference to the tile map object. </p>
 <hr>
 
 <h3 id="function-settilemap">function SetTileMap</h3>
+<p><em>Sets the TileMap for this object.</em> </p>
 <pre><code class="language-C++">inline void AGE::TileMapRendererComponent::SetTileMap (
     Ref&lt; Tilemap &gt; Map
 ) 
 </code></pre>
+<p>This function sets the TileMap property of the current object to a new value. The new map is passed as an argument.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Map</code> A reference to the new <a href="../class_a_g_e_1_1_tilemap/"><strong>Tilemap</strong></a> that will replace the old one. </li>
+</ul>
 <hr>
 
 <h3 id="function-tilemaprenderercomponent-13">function TileMapRendererComponent [1/3]</h3>
+<p><em>Default constructor for</em> <a href="./"><em><strong>TileMapRendererComponent</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::TileMapRendererComponent::TileMapRendererComponent () = default
 </code></pre>
 <hr>
 
 <h3 id="function-tilemaprenderercomponent-23">function TileMapRendererComponent [2/3]</h3>
+<p><em>Default copy constructor for the</em> <a href="./"><em><strong>TileMapRendererComponent</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::TileMapRendererComponent::TileMapRendererComponent (
     const TileMapRendererComponent &amp;
 ) = default
 </code></pre>
+<p>This function is used to create a new instance of the <a href="./"><strong>TileMapRendererComponent</strong></a> class by copying an existing one. It uses the '= default' syntax, which tells the compiler to use the default implementation provided by the compiler.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>other</code> The existing <a href="./"><strong>TileMapRendererComponent</strong></a> instance to copy. </li>
+</ul>
 <hr>
 
 <h3 id="function-tilemaprenderercomponent-33">function TileMapRendererComponent [3/3]</h3>
+<p><em>Constructs a</em> <a href="./"><em><strong>TileMapRendererComponent</strong></em></a> <em>with the given name.</em></p>
 <pre><code class="language-C++">inline AGE::TileMapRendererComponent::TileMapRendererComponent (
     const std::string &amp; N
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>N</code> The name of the component. </li>
+</ul>
 <hr>
 
 <hr />

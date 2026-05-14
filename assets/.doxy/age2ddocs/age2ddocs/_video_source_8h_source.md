@@ -25,15 +25,15 @@ namespace AGE
     public:
          VideoSource(const std::string& FilePath);
 
-        std::string GetFileName() { return m_FilePath; }
+std::string GetFileName() { return m_FilePath; }
 
-        uint32_t GetNumberOfFrames() { return m_NumberOfFrames; }
-        int GetNumberOfFramesPlayed() { return m_FrameCount; }
-        double GetFramesPerSecond() { return m_FramesPerSecond; }
-        uint32_t GetWidth() { return m_Width; }
-        uint32_t GetHeight() { return m_Height; }
-        int GetChannels() { return m_Channels; }
-        Ref<Texture2D>& GetTexture() { return m_Texture; }
+uint32_t GetNumberOfFrames() { return m_NumberOfFrames; }
+int GetNumberOfFramesPlayed() { return m_FrameCount; }
+double GetFramesPerSecond() { return m_FramesPerSecond; }
+uint32_t GetWidth() { return m_Width; }
+uint32_t GetHeight() { return m_Height; }
+int GetChannels() { return m_Channels; }
+Ref<Texture2D>& GetTexture() { return m_Texture; }
 
 
 
@@ -43,18 +43,21 @@ namespace AGE
         void IncrementFrameCount();
 
 
-        void SetTextureData(uint8_t* Data)
+void SetTextureData(uint8_t* Data)
         {
             m_Texture->SetData(Data, (m_Width * m_Height * m_Channels));
         }
 
-        bool IsLoaded() { return bLoaded && m_Texture; }
+bool IsLoaded() { return bLoaded && m_Texture; }
         ~VideoSource();
 
     private:
 
-        VideoSource() = default;
-        VideoSource(const VideoSource&) = default;
+        COMMENT:
+CONFIDENCE: 1.0;
+
+VideoSource() = default;
+VideoSource(const VideoSource&) = default;
 
     private:
         std::string m_FilePath;

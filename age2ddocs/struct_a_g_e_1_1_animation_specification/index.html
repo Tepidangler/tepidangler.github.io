@@ -127,11 +127,11 @@
 <tbody>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="#function-isreadytoload"><strong>IsReadyToLoad</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-isreadytoload"><strong>IsReadyToLoad</strong></a> () <br><em>Checks if the animation is ready to be loaded.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setisreadytoload"><strong>SetIsReadyToLoad</strong></a> (bool Value) <br></td>
+<td style="text-align: left;"><a href="#function-setisreadytoload"><strong>SetIsReadyToLoad</strong></a> (bool Value) <br><em>Sets the value of bIsReadyToLoad variable.</em></td>
 </tr>
 </tbody>
 </table>
@@ -172,15 +172,35 @@
 <hr>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-isreadytoload">function IsReadyToLoad</h3>
+<p><em>Checks if the animation is ready to be loaded.</em> </p>
 <pre><code class="language-C++">inline bool AGE::AnimationSpecification::IsReadyToLoad () 
 </code></pre>
+<p>This function checks several conditions to determine if an animation is ready to be loaded. It first checks if <code>bIsReadyToLoad</code> is true, then verifies that the Name of the animation is not empty and that it has more than one frame. Finally, it ensures that the movement status of the character is defined. If any of these conditions are not met, an error message is logged and <code>bIsReadyToLoad</code> is set to false.</p>
+<p><strong>Returns:</strong></p>
+<p>True if the animation is ready to be loaded, false otherwise.</p>
+<p>Checks if the animation is ready to be loaded.</p>
+<p>This function checks several conditions to determine if an animation can be loaded. It first checks if <code>bIsReadyToLoad</code> is false, in which case it returns false. If <code>Name</code> is empty, it logs an error and sets <code>bIsReadyToLoad</code> to false before returning false. If the number of frames is not greater than 1, it also logs an error and sets <code>bIsReadyToLoad</code> to false. Finally, if <code>MovementStatus</code> is undefined, it logs an error and sets <code>bIsReadyToLoad</code> to false. In all other cases, it returns true.</p>
+<p><strong>Returns:</strong></p>
+<p>True if the animation can be loaded, false otherwise. </p>
 <hr>
 
 <h3 id="function-setisreadytoload">function SetIsReadyToLoad</h3>
+<p><em>Sets the value of bIsReadyToLoad variable.</em> </p>
 <pre><code class="language-C++">inline void AGE::AnimationSpecification::SetIsReadyToLoad (
     bool Value
 ) 
 </code></pre>
+<p>This function sets the boolean variable 'bIsReadyToLoad' to a given value. It is used to indicate whether the system is ready to load data or not.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Value</code> The new value for bIsReadyToLoad, which can be either true (indicating readiness) or false (indicating non-readiness).</li>
+</ul>
+<p>Sets the state of Ready to Load.</p>
+<p>This function sets the value of bIsReadyToLoad variable, which indicates whether the system is ready to load data or not.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Value</code> The new boolean value for bIsReadyToLoad. </li>
+</ul>
 <hr>
 
 <hr />

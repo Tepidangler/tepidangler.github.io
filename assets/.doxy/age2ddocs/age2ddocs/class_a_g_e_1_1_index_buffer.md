@@ -52,12 +52,12 @@ Inherited by the following classes: [AGE::OpenGLIndexBuffer](class_a_g_e_1_1_ope
 
 | Type | Name |
 | ---: | :--- |
-|  T \* | [**As**](#function-as) () <br> |
+|  T \* | [**As**](#function-as) () <br>_This function is currently not implemented and will always return a null pointer. It's intended to provide the ability to cast this_ [_**IndexBuffer**_](class_a_g_e_1_1_index_buffer.md) _instance to another type, but it's not yet supported. The function will assert false with an error message indicating that_[_**As()**_](class_a_g_e_1_1_index_buffer.md#function-as) _Failed!_ |
 | virtual void | [**Bind**](#function-bind) () const = 0<br> |
 | virtual uint32\_t | [**GetCount**](#function-getcount) () = 0<br> |
 | virtual void | [**InvalidateBuffer**](#function-invalidatebuffer) () const = 0<br> |
 | virtual void | [**Unbind**](#function-unbind) () const = 0<br> |
-| virtual  | [**~IndexBuffer**](#function-indexbuffer) () <br> |
+| virtual  | [**~IndexBuffer**](#function-indexbuffer) () <br>_Virtual destructor for the_ [_**IndexBuffer**_](class_a_g_e_1_1_index_buffer.md) _class._ |
 
 
 ## Public Static Functions
@@ -98,6 +98,7 @@ Inherited by the following classes: [AGE::OpenGLIndexBuffer](class_a_g_e_1_1_ope
 
 ### function As 
 
+_This function is currently not implemented and will always return a null pointer. It's intended to provide the ability to cast this_ [_**IndexBuffer**_](class_a_g_e_1_1_index_buffer.md) _instance to another type, but it's not yet supported. The function will assert false with an error message indicating that_[_**As()**_](class_a_g_e_1_1_index_buffer.md#function-as) _Failed!_
 ```C++
 template<typename T>
 T * AGE::IndexBuffer::As () 
@@ -105,6 +106,27 @@ T * AGE::IndexBuffer::As ()
 
 
 
+
+
+**Returns:**
+
+nullptr Always returns nullptr.
+
+
+This function is currently not implemented and will always throw an assertion. It returns a null pointer of type T\*. The purpose of this function is unknown.
+
+
+
+
+**Returns:**
+
+A null pointer of type T\* 
+
+
+
+
+
+        
 
 <hr>
 
@@ -164,12 +186,17 @@ virtual void AGE::IndexBuffer::Unbind () const = 0
 
 ### function ~IndexBuffer 
 
+_Virtual destructor for the_ [_**IndexBuffer**_](class_a_g_e_1_1_index_buffer.md) _class._
 ```C++
 inline virtual AGE::IndexBuffer::~IndexBuffer () 
 ```
 
 
 
+This function is responsible for releasing any resources that were acquired by the object during its lifetime, such as memory or file handles. It does not return anything and has no parameters. 
+
+
+        
 
 <hr>
 ## Public Static Functions Documentation

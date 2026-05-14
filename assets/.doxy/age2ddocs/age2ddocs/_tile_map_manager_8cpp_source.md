@@ -17,7 +17,7 @@
 
 namespace AGE
 {
-    TileMapManager::TileMapManager()
+TileMapManager::TileMapManager()
     {
         m_Manager = tmx_make_resource_manager();
         m_Importer = CreateRef<TileMapImporter>();
@@ -26,35 +26,38 @@ namespace AGE
 
     }
 
-    Ref<Tilemap> TileMapManager::LoadTileMap(const std::filesystem::path &Path)
+void TileMapManager::LoadTileMap(const std::filesystem::path &Path)
     {
-        Ref<Tilemap> NewMap = CreateRef<Tilemap>(m_Importer->ImportMap(Path.string()));
+        Tilemap NewMap(m_Importer->ImportMap(Path.string()));
+
+        NewMap.SetData(m_CurrentTileMap.m_AtlasTexture,m_CurrentTileMap.m_Path);
         m_TileMaps.emplace_back(NewMap);
-        m_TileMaps.back()->SetPath(Path);
-        m_TileMaps.back()->BuildTilemapData();
-        return m_TileMaps.back();
     }
 
-    void TileMapManager::LoadTileMaps(const std::vector<std::filesystem::path> &Paths)
+void TileMapManager::LoadTileMaps(const std::vector<std::filesystem::path> &Paths)
     {
         std::ranges::for_each(Paths, [&](const std::filesystem::path &Path)
         {
-            Ref<Tilemap> NewMap = CreateRef<Tilemap>(m_Importer->ImportMap(Path.string()));
+            Tilemap NewMap(m_Importer->ImportMap(Path.string()));
+
+            NewMap.SetData(m_CurrentTileMap.m_AtlasTexture,m_CurrentTileMap.m_Path);
             m_TileMaps.emplace_back(NewMap);
-            m_TileMaps.back()->BuildTilemapData();
         });
     }
 
-    void TileMapManager::LoadTileMaps(void *Addr)
+void TileMapManager::LoadTileMaps(void *Addr)
     {
     }
 
-    void* TileMapManager::ImageLoad(const char* Path)
+void* TileMapManager::ImageLoad(const char* Path)
     {
-        Ref<Texture2D> tex = Texture2D::Create(Path);
-        return tex->GetTextureData().first; // need to store bytes, as texture gets destroyed
+        AGE_PROFILE_FUNCTION();
+
+        Get().m_CurrentTileMap.m_AtlasTexture = Texture2D::Create(Path);
+        Get().m_CurrentTileMap.m_Path = Path;
+        return (void*)(uintptr_t)Get().m_CurrentTileMap.m_AtlasTexture.get();
     }
-    void TileMapManager::ImageFree(void* Address)
+void TileMapManager::ImageFree(void* Address)
     {
         // Here we'll convert the void* to a Texture and then just delete it
         memset(Address, 0, sizeof(Texture2D));

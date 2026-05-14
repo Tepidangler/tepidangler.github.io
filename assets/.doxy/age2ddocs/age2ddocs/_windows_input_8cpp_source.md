@@ -17,7 +17,7 @@
 namespace AGE
 {
 
-    bool Input::IsKeyPressed(int Keycode)
+bool Input::IsKeyPressed(int Keycode)
     {
 
         auto Window = static_cast<GLFWwindow*>(App::Get().GetDeviceManager().GetWindow().GetNativeWindow());
@@ -27,7 +27,7 @@ namespace AGE
         return state == GLFW_PRESS || state == GLFW_REPEAT;
     }
 
-    bool Input::IsMouseButtonPressed(int Button)
+bool Input::IsMouseButtonPressed(int Button)
     {
         auto Window = static_cast<GLFWwindow*>(App::Get().GetDeviceManager().GetWindow().GetNativeWindow());
 
@@ -36,7 +36,7 @@ namespace AGE
         return state == GLFW_PRESS;
     }
 
-    bool Input::IsGamepadButtonPressed(uint16_t ID, uint8_t Button)
+bool Input::IsGamepadButtonPressed(uint16_t ID, uint8_t Button)
     {
         GLFWgamepadstate State;
         if (IsJoyStickPresent(ID))
@@ -57,7 +57,7 @@ namespace AGE
         return false;
     }
 
-    std::pair<float, float> Input::GetMouseXY()
+std::pair<float, float> Input::GetMouseXY()
     {
         auto Window = static_cast<GLFWwindow*>(App::Get().GetDeviceManager().GetWindow().GetNativeWindow());
 
@@ -68,24 +68,24 @@ namespace AGE
         return { (float)x, (float)y };
     }
 
-    bool Input::IsJoyStickConnected(uint16_t ID)
+bool Input::IsJoyStickConnected(uint16_t ID)
     {
         return IsJoyStickPresent(ID);
     }
 
-    float Input::GetJoyStickLeftX(uint16_t ID)
+float Input::GetJoyStickLeftX(uint16_t ID)
     {
         auto [x, y] = GetJoyStickLeftXY(ID);
         return x;
     }
 
-    float Input::GetJoyStickLeftY(uint16_t ID)
+float Input::GetJoyStickLeftY(uint16_t ID)
     {
         auto [x, y] = GetJoyStickLeftXY(ID);
         return y;
     }
 
-    std::pair<float, float> Input::GetJoyStickLeftXY(uint16_t ID)
+std::pair<float, float> Input::GetJoyStickLeftXY(uint16_t ID)
     {
         int count;
         const float* Axes;
@@ -99,19 +99,19 @@ namespace AGE
         return {-2.f,-2.f};
     }
 
-    float Input::GetJoyStickRightX(uint16_t ID)
+float Input::GetJoyStickRightX(uint16_t ID)
     {
         auto [x, y] = GetJoyStickRightXY(ID);
         return x;
     }
 
-    float Input::GetJoyStickRightY(uint16_t ID)
+float Input::GetJoyStickRightY(uint16_t ID)
     {
         auto [x, y] = GetJoyStickRightXY(ID);
         return y;
     }
 
-    std::pair<float, float> Input::GetJoyStickRightXY(uint16_t ID)
+std::pair<float, float> Input::GetJoyStickRightXY(uint16_t ID)
     {
         int count;
         const float* Axes;
@@ -125,7 +125,7 @@ namespace AGE
         return { -2.f, -2.f };
     }
 
-    float Input::GetJoyStickLeftTrigger(uint16_t ID)
+float Input::GetJoyStickLeftTrigger(uint16_t ID)
     {
         int count;
         const float* Axes;
@@ -139,7 +139,7 @@ namespace AGE
         return -2.f;
     }
 
-    float Input::GetJoyStickRightTrigger(uint16_t ID)
+float Input::GetJoyStickRightTrigger(uint16_t ID)
     {
         int count;
         const float* Axes;
@@ -153,17 +153,17 @@ namespace AGE
         return -2.f;
     }
 
-    bool Input::IsJoyStickPresent(uint16_t ID)
+bool Input::IsJoyStickPresent(uint16_t ID)
     {
         return glfwJoystickPresent(ID) == 1 ? true : false;
     }
 
-    float Input::GetMouseX()
+float Input::GetMouseX()
     {
         auto [x, y] = GetMouseXY();
         return x;
     }
-    float Input::GetMouseY()
+float Input::GetMouseY()
     {
         auto [x, y] = GetMouseXY();
 

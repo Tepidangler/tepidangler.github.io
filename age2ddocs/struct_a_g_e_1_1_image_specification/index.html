@@ -77,6 +77,10 @@
               
                 <h1 id="struct-ageimagespecification">Struct AGE::ImageSpecification</h1>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespace_a_g_e/"><strong>AGE</strong></a> <strong>&gt;</strong> <a href="./"><strong>ImageSpecification</strong></a></p>
+<p><em>Constructor for</em> <a href="./"><em><strong>ImageSpecification</strong></em></a> <em>class.</em><a href="#detailed-description">More...</a></p>
+<ul>
+<li><code>#include &lt;Image.h&gt;</code></li>
+</ul>
 <h2 id="public-functions">Public Functions</h2>
 <table>
 <thead>
@@ -88,190 +92,295 @@
 <tbody>
 <tr>
 <td style="text-align: right;"><a href="../struct_a_g_e_1_1_a_g_e_rect/"><strong>AGERect</strong></a> &amp;</td>
-<td style="text-align: left;"><a href="#function-getbounds"><strong>GetBounds</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getbounds"><strong>GetBounds</strong></a> () <br><em>Gets the bounds of an object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">int</td>
-<td style="text-align: left;"><a href="#function-getchannels"><strong>GetChannels</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getchannels"><strong>GetChannels</strong></a> () <br><em>Returns the number of channels in use by the system.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"><a href="../struct_a_g_e_1_1_aseprite_file_data/"><strong>AsepriteFileData</strong></a> &amp;</td>
-<td style="text-align: left;"><a href="#function-getfiledata"><strong>GetFileData</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getfiledata"><strong>GetFileData</strong></a> () <br><em>Returns the</em> <a href="../class_a_g_e_1_1_aseprite/"><em><strong>Aseprite</strong></em></a> <em>file data.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">uint32_t</td>
-<td style="text-align: left;"><a href="#function-getheight-12"><strong>GetHeight</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getheight-12"><strong>GetHeight</strong></a> () <br><em>This function returns the height of an object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">uint32_t</td>
-<td style="text-align: left;"><a href="#function-getheight-22"><strong>GetHeight</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-getheight-22"><strong>GetHeight</strong></a> () const<br><em>Returns the height of an object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">PixelType</td>
-<td style="text-align: left;"><a href="#function-getpixeltype-12"><strong>GetPixelType</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getpixeltype-12"><strong>GetPixelType</strong></a> () <br><em>This function returns the type of a pixel.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">PixelType</td>
-<td style="text-align: left;"><a href="#function-getpixeltype-22"><strong>GetPixelType</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-getpixeltype-22"><strong>GetPixelType</strong></a> () const<br><em>Returns the type of pixel represented by this object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">int</td>
-<td style="text-align: left;"><a href="#function-getpixelsperbyte"><strong>GetPixelsPerByte</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getpixelsperbyte"><strong>GetPixelsPerByte</strong></a> () <br><em>This function returns the number of pixels per byte.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"><a href="../struct_a_g_e_1_1_a_g_e_size/"><strong>AGESize</strong></a> &amp;</td>
-<td style="text-align: left;"><a href="#function-getsize"><strong>GetSize</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getsize"><strong>GetSize</strong></a> () <br><em>This function returns the size of an object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">uint32_t</td>
-<td style="text-align: left;"><a href="#function-getwidth-12"><strong>GetWidth</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-getwidth-12"><strong>GetWidth</strong></a> () const<br><em>Returns the width of an object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">uint32_t</td>
-<td style="text-align: left;"><a href="#function-getwidth-22"><strong>GetWidth</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getwidth-22"><strong>GetWidth</strong></a> () <br><em>Returns the width of an object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">uint32_t</td>
-<td style="text-align: left;"><a href="#function-getwidthbytes"><strong>GetWidthBytes</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getwidthbytes"><strong>GetWidthBytes</strong></a> () <br><em>This function returns the width of an image in bytes. The bit depth (bpp) is determined by the PixelType of the image. If the PixelType is RGBA, then bpp is 32; if it's RGB, then bpp is 24; for Greyscale and Indexed pixel types, bpp is 8. For any other unrecognized PixelType, a warning message is logged to inform user that the default value of bpp (RGBA) is being used.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">std::pair&lt; uint32_t, uint32_t &gt;</td>
-<td style="text-align: left;"><a href="#function-getwidthheight"><strong>GetWidthHeight</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getwidthheight"><strong>GetWidthHeight</strong></a> () <br><em>This function returns a pair of integers representing the width and height.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-imagespecification-14"><strong>ImageSpecification</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-imagespecification-14"><strong>ImageSpecification</strong></a> () = default<br><em>Default constructor for</em> <a href="./"><em><strong>ImageSpecification</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-imagespecification-24"><strong>ImageSpecification</strong></a> (const <a href="./"><strong>ImageSpecification</strong></a> &amp;) = default<br></td>
+<td style="text-align: left;"><a href="#function-imagespecification-24"><strong>ImageSpecification</strong></a> (const <a href="./"><strong>ImageSpecification</strong></a> &amp;) = default<br><em>Default copy constructor for the</em> <a href="./"><em><strong>ImageSpecification</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;"></td>
+<td style="text-align: right;">Unknown</td>
 <td style="text-align: left;"><a href="#function-imagespecification-34"><strong>ImageSpecification</strong></a> (uint32_t width, uint32_t height, int channels, uint8_t type, <a href="../struct_a_g_e_1_1_aseprite_file_data/"><strong>AsepriteFileData</strong></a> Data) <br></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-imagespecification-44"><strong>ImageSpecification</strong></a> (uint32_t width, uint32_t height, uint8_t type, <a href="../struct_a_g_e_1_1_aseprite_file_data/"><strong>AsepriteFileData</strong></a> Data) <br></td>
+<td style="text-align: left;"><a href="#function-imagespecification-44"><strong>ImageSpecification</strong></a> (uint32_t width, uint32_t height, uint8_t type, <a href="../struct_a_g_e_1_1_aseprite_file_data/"><strong>AsepriteFileData</strong></a> Data) <br><em>Constructs an</em> <a href="./"><em><strong>ImageSpecification</strong></em></a> <em>object with the given parameters.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setbounds"><strong>SetBounds</strong></a> (const <a href="../struct_a_g_e_1_1_a_g_e_rect/"><strong>AGERect</strong></a> &amp; bounds) <br></td>
+<td style="text-align: left;"><a href="#function-setbounds"><strong>SetBounds</strong></a> (const <a href="../struct_a_g_e_1_1_a_g_e_rect/"><strong>AGERect</strong></a> &amp; bounds) <br><em>Sets the bounds of an object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setchannels"><strong>SetChannels</strong></a> (int channels) <br></td>
+<td style="text-align: left;"><a href="#function-setchannels"><strong>SetChannels</strong></a> (int channels) <br><em>Sets the number of audio channels to be processed by the system.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setfiledata"><strong>SetFileData</strong></a> (const <a href="../struct_a_g_e_1_1_aseprite_file_data/"><strong>AsepriteFileData</strong></a> &amp; Data) <br></td>
+<td style="text-align: left;"><a href="#function-setfiledata"><strong>SetFileData</strong></a> (const <a href="../struct_a_g_e_1_1_aseprite_file_data/"><strong>AsepriteFileData</strong></a> &amp; Data) <br><em>Sets the file data for the</em> <a href="../class_a_g_e_1_1_aseprite/"><em><strong>Aseprite</strong></em></a> <em>object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setheight"><strong>SetHeight</strong></a> (const uint32_t height) <br></td>
+<td style="text-align: left;"><a href="#function-setheight"><strong>SetHeight</strong></a> (const uint32_t height) <br><em>Sets the height of an object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setpixeltype"><strong>SetPixelType</strong></a> (const PixelType &amp; type) <br></td>
+<td style="text-align: left;"><a href="#function-setpixeltype"><strong>SetPixelType</strong></a> (const PixelType &amp; type) <br><em>Sets the pixel type of an object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setsize"><strong>SetSize</strong></a> (const <a href="../struct_a_g_e_1_1_a_g_e_size/"><strong>AGESize</strong></a> &amp; size) <br></td>
+<td style="text-align: left;"><a href="#function-setsize"><strong>SetSize</strong></a> (const <a href="../struct_a_g_e_1_1_a_g_e_size/"><strong>AGESize</strong></a> &amp; size) <br><em>Sets the size of an object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setwidth"><strong>SetWidth</strong></a> (const uint32_t width) <br></td>
+<td style="text-align: left;"><a href="#function-setwidth"><strong>SetWidth</strong></a> (const uint32_t width) <br><em>Sets the width of an object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setwidthheight"><strong>SetWidthHeight</strong></a> (const std::pair&lt; uint32_t, uint32_t &gt; &amp; WidthHeight) <br></td>
+<td style="text-align: left;"><a href="#function-setwidthheight"><strong>SetWidthHeight</strong></a> (const std::pair&lt; uint32_t, uint32_t &gt; &amp; WidthHeight) <br><em>Sets the width and height of an object using a pair of unsigned integers.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-imagespecification"><strong>~ImageSpecification</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-imagespecification"><strong>~ImageSpecification</strong></a> () = default<br><em>Destructor for the</em> <a href="./"><em><strong>ImageSpecification</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
+<h2 id="detailed-description">Detailed Description</h2>
+<p>This function initializes an instance of the <a href="./"><strong>ImageSpecification</strong></a> class with given width, height, channels, type and data. It takes in five parameters - width (uint32_t), height (uint32_t), channels (int), type (uint8_t) and Data (<a href="../struct_a_g_e_1_1_aseprite_file_data/"><strong>AsepriteFileData</strong></a>). The function sets the Width, Height, Channels, Type, Size and FileData accordingly. It also handles the initialization of PixelsPerByte based on the type. </p>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-getbounds">function GetBounds</h3>
+<p><em>Gets the bounds of an object.</em> </p>
 <pre><code class="language-C++">inline AGERect &amp; AGE::ImageSpecification::GetBounds () 
 </code></pre>
+<p>This function returns a reference to the 'Bounds' variable, which represents the boundaries of the object. The returned value can be modified using assignment operators if required.</p>
+<p><strong>Returns:</strong></p>
+<p>A reference to the Bounds variable.</p>
+<p>Gets the bounds of an object.</p>
+<p>This function returns a reference to the 'Bounds' variable, which represents the boundaries of the object. The returned value can be modified using assignment operators if required.</p>
+<p><strong>Returns:</strong></p>
+<p>A reference to the Bounds object. </p>
 <hr>
 
 <h3 id="function-getchannels">function GetChannels</h3>
+<p><em>Returns the number of channels in use by the system.</em> </p>
 <pre><code class="language-C++">inline int AGE::ImageSpecification::GetChannels () 
 </code></pre>
+<p>This function retrieves the current count of active channels in the system. It is used to manage resources and ensure efficient operation.</p>
+<p><strong>Returns:</strong></p>
+<p>int - The number of active channels. If no channels are available, it returns 0.</p>
+<p>Returns the number of channels in use by the system.</p>
+<p>This function returns an integer representing the current number of channels being used by the system. It does not take any parameters and has no side effects.</p>
+<p><strong>Returns:</strong></p>
+<p>int The number of active channels. If there are no active channels, it will return 0. </p>
 <hr>
 
 <h3 id="function-getfiledata">function GetFileData</h3>
+<p><em>Returns the</em> <a href="../class_a_g_e_1_1_aseprite/"><em><strong>Aseprite</strong></em></a> <em>file data.</em></p>
 <pre><code class="language-C++">inline AsepriteFileData &amp; AGE::ImageSpecification::GetFileData () 
 </code></pre>
+<p>This function returns a reference to the <a href="../class_a_g_e_1_1_aseprite/"><strong>Aseprite</strong></a> file data object, which contains all the information about the loaded <a href="../class_a_g_e_1_1_aseprite/"><strong>Aseprite</strong></a> file.</p>
+<p><strong>Returns:</strong></p>
+<p>A reference to the <a href="../struct_a_g_e_1_1_aseprite_file_data/"><strong>AsepriteFileData</strong></a> object.</p>
+<p>Returns the <a href="../class_a_g_e_1_1_aseprite/"><strong>Aseprite</strong></a> file data.</p>
+<p>This function returns a reference to the <a href="../class_a_g_e_1_1_aseprite/"><strong>Aseprite</strong></a> file data object, which contains all the information about the loaded <a href="../class_a_g_e_1_1_aseprite/"><strong>Aseprite</strong></a> file.</p>
+<p><strong>Returns:</strong></p>
+<p>A reference to the <a href="../struct_a_g_e_1_1_aseprite_file_data/"><strong>AsepriteFileData</strong></a> object. </p>
 <hr>
 
 <h3 id="function-getheight-12">function GetHeight [1/2]</h3>
+<p><em>This function returns the height of an object.</em> </p>
 <pre><code class="language-C++">inline uint32_t AGE::ImageSpecification::GetHeight () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>The current height value as a uint32_t.</p>
+<p>Returns the height of an object.</p>
+<p>This function retrieves and returns the current height value stored in the 'Height' variable. It does not take any parameters and has no side effects.</p>
+<p><strong>Returns:</strong></p>
+<p>The current height as a 32-bit unsigned integer. </p>
 <hr>
 
 <h3 id="function-getheight-22">function GetHeight [2/2]</h3>
+<p><em>Returns the height of an object.</em> </p>
 <pre><code class="language-C++">inline uint32_t AGE::ImageSpecification::GetHeight () const
 </code></pre>
+<p>This function is used to get the current height value of an object. It does not take any parameters and returns a uint32_t representing the height.</p>
+<p><strong>Returns:</strong></p>
+<p>The current height as a uint32_t. If no height has been set, it will return 0.</p>
+<p>This function returns the height of an object. </p>
+<p><strong>Returns:</strong></p>
+<p>uint32_t The height of the object in units as per the scale defined by the implementation. </p>
 <hr>
 
 <h3 id="function-getpixeltype-12">function GetPixelType [1/2]</h3>
+<p><em>This function returns the type of a pixel.</em> </p>
 <pre><code class="language-C++">inline PixelType AGE::ImageSpecification::GetPixelType () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>PixelType The type of the pixel (e.g., RGB, Grayscale).</p>
+<p>Returns the type of pixel represented by this object. </p>
+<p><strong>Returns:</strong></p>
+<p>The PixelType enum value representing the type of pixel. </p>
 <hr>
 
 <h3 id="function-getpixeltype-22">function GetPixelType [2/2]</h3>
+<p><em>Returns the type of pixel represented by this object.</em> </p>
 <pre><code class="language-C++">inline PixelType AGE::ImageSpecification::GetPixelType () const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>The PixelType enum value representing the type of pixel.</p>
+<p>Returns the type of pixel represented by this object. </p>
+<p><strong>Returns:</strong></p>
+<p>The PixelType enum value representing the type of pixel. </p>
 <hr>
 
 <h3 id="function-getpixelsperbyte">function GetPixelsPerByte</h3>
+<p><em>This function returns the number of pixels per byte.</em> </p>
 <pre><code class="language-C++">inline int AGE::ImageSpecification::GetPixelsPerByte () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>int The number of pixels per byte. If no value is set, it will return -1.</p>
+<p>This function returns the number of pixels per byte. </p>
+<p><strong>Returns:</strong></p>
+<p>The number of pixels per byte as an integer. </p>
 <hr>
 
 <h3 id="function-getsize">function GetSize</h3>
+<p><em>This function returns the size of an object.</em> </p>
 <pre><code class="language-C++">inline AGESize &amp; AGE::ImageSpecification::GetSize () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A reference to the Size variable.</p>
+<p>Gets the size of an object.</p>
+<p>This function returns a reference to the 'Size' variable, which represents the size of an object. The returned value can be modified using other functions if necessary.</p>
+<p><strong>Returns:</strong></p>
+<p>A reference to the Size variable. </p>
 <hr>
 
 <h3 id="function-getwidth-12">function GetWidth [1/2]</h3>
+<p><em>Returns the width of an object.</em> </p>
 <pre><code class="language-C++">inline uint32_t AGE::ImageSpecification::GetWidth () const
 </code></pre>
+<p>This function returns the current width value stored in the 'Width' variable. It is a getter method for the 'Width' attribute.</p>
+<p><strong>Returns:</strong></p>
+<p>uint32_t The current width of the object.</p>
+<p>Returns the width of an object. </p>
+<p><strong>Returns:</strong></p>
+<p>The width as a uint32_t value. </p>
 <hr>
 
 <h3 id="function-getwidth-22">function GetWidth [2/2]</h3>
+<p><em>Returns the width of an object.</em> </p>
 <pre><code class="language-C++">inline uint32_t AGE::ImageSpecification::GetWidth () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>The width as a uint32_t value.</p>
+<p>This function returns the width of an object. </p>
+<p><strong>Returns:</strong></p>
+<p>The width as a uint32_t value. </p>
 <hr>
 
 <h3 id="function-getwidthbytes">function GetWidthBytes</h3>
+<p><em>This function returns the width of an image in bytes. The bit depth (bpp) is determined by the PixelType of the image. If the PixelType is RGBA, then bpp is 32; if it's RGB, then bpp is 24; for Greyscale and Indexed pixel types, bpp is 8. For any other unrecognized PixelType, a warning message is logged to inform user that the default value of bpp (RGBA) is being used.</em> </p>
 <pre><code class="language-C++">inline uint32_t AGE::ImageSpecification::GetWidthBytes () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>The width of the image in bytes. This is calculated by multiplying the Width of the image with its bit depth per pixel (bpp).</p>
+<p>This function returns the width of an image in bytes. The bits per pixel (bpp) is determined by the PixelType of the image. </p>
+<p><strong>Returns:</strong></p>
+<p>uint32_t Returns the width of the image in bytes. </p>
 <hr>
 
 <h3 id="function-getwidthheight">function GetWidthHeight</h3>
+<p><em>This function returns a pair of integers representing the width and height.</em> </p>
 <pre><code class="language-C++">inline std::pair&lt; uint32_t, uint32_t &gt; AGE::ImageSpecification::GetWidthHeight () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A std::pair&lt;uint32_t, uint32_t&gt; object containing the width and height.</p>
+<p>This function returns a pair of integers representing the width and height. </p>
+<p><strong>Returns:</strong></p>
+<p>A std::pair&lt;uint32_t, uint32_t&gt; where first element is the width and second is the height. </p>
 <hr>
 
 <h3 id="function-imagespecification-14">function ImageSpecification [1/4]</h3>
+<p><em>Default constructor for</em> <a href="./"><em><strong>ImageSpecification</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::ImageSpecification::ImageSpecification () = default
 </code></pre>
+<p>This function initializes an instance of the <a href="./"><strong>ImageSpecification</strong></a> class with its default values. It does not take any parameters and returns nothing.</p>
+<p>Default constructor for <a href="./"><strong>ImageSpecification</strong></a> class. </p>
 <hr>
 
 <h3 id="function-imagespecification-24">function ImageSpecification [2/4]</h3>
+<p><em>Default copy constructor for the</em> <a href="./"><em><strong>ImageSpecification</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::ImageSpecification::ImageSpecification (
     const ImageSpecification &amp;
 ) = default
 </code></pre>
+<p>This function is used to create a new instance of an <a href="./"><strong>ImageSpecification</strong></a> object by copying another existing one. It uses the '= default' syntax, which instructs the compiler to generate a default implementation for this member function.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>other</code> The <a href="./"><strong>ImageSpecification</strong></a> object to be copied.</li>
+</ul>
+<p>Copy constructor for the <a href="./"><strong>ImageSpecification</strong></a> class.</p>
+<p>This function creates a new instance of the <a href="./"><strong>ImageSpecification</strong></a> class by copying all data from an existing instance. It uses the '= default' syntax to allow the compiler to generate its own copy constructor.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>other</code> The existing <a href="./"><strong>ImageSpecification</strong></a> instance to be copied. </li>
+</ul>
 <hr>
 
 <h3 id="function-imagespecification-34">function ImageSpecification [3/4]</h3>
-<pre><code class="language-C++">inline AGE::ImageSpecification::ImageSpecification (
+<pre><code class="language-C++">inline Unknown AGE::ImageSpecification::ImageSpecification (
     uint32_t width,
     uint32_t height,
     int channels,
@@ -282,6 +391,7 @@
 <hr>
 
 <h3 id="function-imagespecification-44">function ImageSpecification [4/4]</h3>
+<p><em>Constructs an</em> <a href="./"><em><strong>ImageSpecification</strong></em></a> <em>object with the given parameters.</em></p>
 <pre><code class="language-C++">inline AGE::ImageSpecification::ImageSpecification (
     uint32_t width,
     uint32_t height,
@@ -289,67 +399,180 @@
     AsepriteFileData Data
 ) 
 </code></pre>
+<p>The constructor initializes the image specification based on the provided width, height, type and data. It sets the number of channels and pixels per byte according to the pixel type. If the pixel type is invalid, it logs an error message. For greyscale images, a warning message is logged as there's currently no implementation for 2-channel textures.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>width</code> The width of the image in pixels. </li>
+<li><code>height</code> The height of the image in pixels. </li>
+<li><code>type</code> The pixel type of the image (RGBA, RGB or Greyscale). </li>
+<li><code>Data</code> The <a href="../struct_a_g_e_1_1_aseprite_file_data/"><strong>AsepriteFileData</strong></a> associated with this <a href="./"><strong>ImageSpecification</strong></a>.</li>
+</ul>
+<p>Constructs an <a href="./"><strong>ImageSpecification</strong></a> object with the given parameters.</p>
+<p>This function initializes an <a href="./"><strong>ImageSpecification</strong></a> object with a specified width, height, type and data. It sets up various properties based on the provided inputs such as Channels, PixelsPerByte, Bounds etc. The function also handles different pixel types (RGBA, RGB, Greyscale) by setting appropriate values for Channels and PixelsPerByte.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>width</code> Width of the image in pixels. </li>
+<li><code>height</code> Height of the image in pixels. </li>
+<li><code>type</code> Type of the pixel data. It can be one of the following: RGBA, RGB or Greyscale. </li>
+<li><code>Data</code> <a href="../struct_a_g_e_1_1_aseprite_file_data/"><strong>AsepriteFileData</strong></a> containing the raw pixel data. </li>
+</ul>
 <hr>
 
 <h3 id="function-setbounds">function SetBounds</h3>
+<p><em>Sets the bounds of an object.</em> </p>
 <pre><code class="language-C++">inline void AGE::ImageSpecification::SetBounds (
     const AGERect &amp; bounds
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>bounds</code> The new bounds to set for the object.</li>
+</ul>
+<p>Sets the bounds of an object. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>bounds</code> The new bounds to set for the object. </li>
+</ul>
 <hr>
 
 <h3 id="function-setchannels">function SetChannels</h3>
+<p><em>Sets the number of audio channels to be processed by the system.</em> </p>
 <pre><code class="language-C++">inline void AGE::ImageSpecification::SetChannels (
     int channels
 ) 
 </code></pre>
+<p>This function sets the 'Channels' variable, which represents the number of audio channels in the system. It takes an integer parameter 'channels', which is used to set the value of Channels.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>channels</code> The new number of audio channels.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Sets the number of audio channels to be processed by the system.</p>
+<p>This function sets the 'Channels' variable, which represents the number of audio channels in the system. The parameter 'channels' should be a positive integer representing the desired number of channels. If it is not, or if there are any issues with setting this value (e.g., an invalid argument), no action will be taken and the function will return immediately.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>channels</code> The new number of audio channels to set. Must be a positive integer. </li>
+</ul>
 <hr>
 
 <h3 id="function-setfiledata">function SetFileData</h3>
+<p><em>Sets the file data for the</em> <a href="../class_a_g_e_1_1_aseprite/"><em><strong>Aseprite</strong></em></a> <em>object.</em></p>
 <pre><code class="language-C++">inline void AGE::ImageSpecification::SetFileData (
     const AsepriteFileData &amp; Data
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Data</code> The new file data to be set.</li>
+</ul>
+<p>Sets the file data for the <a href="../class_a_g_e_1_1_aseprite/"><strong>Aseprite</strong></a> object. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Data</code> The new file data to be set. </li>
+</ul>
 <hr>
 
 <h3 id="function-setheight">function SetHeight</h3>
+<p><em>Sets the height of an object.</em> </p>
 <pre><code class="language-C++">inline void AGE::ImageSpecification::SetHeight (
     const uint32_t height
 ) 
 </code></pre>
+<p>This function sets the 'Height' member variable to a specified value. It takes one parameter, which is the new height value. The function does not return anything (void).</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>height</code> - The new height value for the object. Must be less than or equal to 4294967295. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Sets the height of an object. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>height</code> The new height value to be set. </li>
+</ul>
 <hr>
 
 <h3 id="function-setpixeltype">function SetPixelType</h3>
+<p><em>Sets the pixel type of an object.</em> </p>
 <pre><code class="language-C++">inline void AGE::ImageSpecification::SetPixelType (
     const PixelType &amp; type
 ) 
 </code></pre>
+<p>This function sets the pixel type for an object, which can be used to determine how the object should be rendered in a graphics context.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>type</code> The new PixelType value to set. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Sets the pixel type of an object. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>type</code> The new pixel type to be set. </li>
+</ul>
 <hr>
 
 <h3 id="function-setsize">function SetSize</h3>
+<p><em>Sets the size of an object.</em> </p>
 <pre><code class="language-C++">inline void AGE::ImageSpecification::SetSize (
     const AGESize &amp; size
 ) 
 </code></pre>
+<p>This function sets the size attribute of an object to a given value. The size is expected to be in the form of an <a href="../struct_a_g_e_1_1_a_g_e_size/"><strong>AGESize</strong></a> object.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>size</code> - The new size for the object.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Sets the size of an object. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>size</code> The new size to set for the object. </li>
+</ul>
 <hr>
 
 <h3 id="function-setwidth">function SetWidth</h3>
+<p><em>Sets the width of an object.</em> </p>
 <pre><code class="language-C++">inline void AGE::ImageSpecification::SetWidth (
     const uint32_t width
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>width</code> The new width to be set for the object.</li>
+</ul>
+<p>This function sets the width of an object. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>width</code> The new width to be set for the object. </li>
+</ul>
 <hr>
 
 <h3 id="function-setwidthheight">function SetWidthHeight</h3>
+<p><em>Sets the width and height of an object using a pair of unsigned integers.</em> </p>
 <pre><code class="language-C++">inline void AGE::ImageSpecification::SetWidthHeight (
     const std::pair&lt; uint32_t, uint32_t &gt; &amp; WidthHeight
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>WidthHeight</code> A pair of unsigned integers representing the new width and height.</li>
+</ul>
+<p>Sets the width and height of an object using a pair of unsigned integers. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>WidthHeight</code> A pair containing the new width and height values. </li>
+</ul>
 <hr>
 
 <h3 id="function-imagespecification">function ~ImageSpecification</h3>
+<p><em>Destructor for the</em> <a href="./"><em><strong>ImageSpecification</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::ImageSpecification::~ImageSpecification () = default
 </code></pre>
+<p>This function is responsible for freeing any resources that were allocated during the lifetime of an instance of this class.</p>
+<p>Default destructor for the <a href="./"><strong>ImageSpecification</strong></a> class. </p>
 <hr>
 
 <hr />

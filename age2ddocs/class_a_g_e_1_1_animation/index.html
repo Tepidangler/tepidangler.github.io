@@ -88,176 +88,345 @@
 <tbody>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-animation-12"><strong>Animation</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-animation-12"><strong>Animation</strong></a> () <br><em>Default constructor for the</em> <a href="./"><em><strong>Animation</strong></em></a> <em>class. Initializes all member variables to default values.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-animation-22"><strong>Animation</strong></a> (const <a href="./"><strong>Animation</strong></a> &amp;) = default<br></td>
+<td style="text-align: left;"><a href="#function-animation-22"><strong>Animation</strong></a> (const <a href="./"><strong>Animation</strong></a> &amp;) = default<br><em>Copy constructor for the</em> <a href="./"><em><strong>Animation</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">int</td>
-<td style="text-align: left;"><a href="#function-getcurrentframe"><strong>GetCurrentFrame</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getcurrentframe"><strong>GetCurrentFrame</strong></a> () <br><em>Returns the current frame number.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">Ref&lt; <a href="../class_a_g_e_1_1_sub_texture2_d/"><strong>SubTexture2D</strong></a> &gt;</td>
-<td style="text-align: left;"><a href="#function-getcurrenttexture"><strong>GetCurrentTexture</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getcurrenttexture"><strong>GetCurrentTexture</strong></a> () <br><em>Gets the current texture.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">int</td>
-<td style="text-align: left;"><a href="#function-getframerate"><strong>GetFrameRate</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getframerate"><strong>GetFrameRate</strong></a> () <br><em>Returns the current frame rate.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">int</td>
-<td style="text-align: left;"><a href="#function-getmaxframes"><strong>GetMaxFrames</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getmaxframes"><strong>GetMaxFrames</strong></a> () <br><em>This function returns the maximum number of frames that can be processed by the system.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="#function-getoscillate"><strong>GetOscillate</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getoscillate"><strong>GetOscillate</strong></a> () <br><em>Returns the oscillation state of the system.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-loadanimation"><strong>LoadAnimation</strong></a> (const <a href="../struct_a_g_e_1_1_animation_specification/"><strong>AnimationSpecification</strong></a> Anim) <br></td>
+<td style="text-align: left;"><a href="#function-loadanimation"><strong>LoadAnimation</strong></a> (const <a href="../struct_a_g_e_1_1_animation_specification/"><strong>AnimationSpecification</strong></a> Anim) <br><em>Loads an animation into the system based on the provided specification.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-loadanimations"><strong>LoadAnimations</strong></a> (const std::vector&lt; <a href="../struct_a_g_e_1_1_animation_specification/"><strong>AnimationSpecification</strong></a> &gt; &amp; Anims) <br></td>
+<td style="text-align: left;"><a href="#function-loadanimations"><strong>LoadAnimations</strong></a> (const std::vector&lt; <a href="../struct_a_g_e_1_1_animation_specification/"><strong>AnimationSpecification</strong></a> &gt; &amp; Anims) <br><em>Loads a set of animations into the animation system.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-onanimate"><strong>OnAnimate</strong></a> (<a href="../class_a_g_e_1_1_time_step/"><strong>TimeStep</strong></a> DeltaTime) <br></td>
+<td style="text-align: left;"><a href="#function-onanimate"><strong>OnAnimate</strong></a> (<a href="../class_a_g_e_1_1_time_step/"><strong>TimeStep</strong></a> DeltaTime) <br><em>Updates the object's animation based on elapsed time.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-ondestroy"><strong>OnDestroy</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-ondestroy"><strong>OnDestroy</strong></a> () <br><em>This function is called when the object is being destroyed.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setcurrentframe"><strong>SetCurrentFrame</strong></a> (int Frame) <br></td>
+<td style="text-align: left;"><a href="#function-setcurrentframe"><strong>SetCurrentFrame</strong></a> (int Frame) <br><em>Set the Current</em> <a href="./"><em><strong>Animation</strong></em></a> <em>Frame.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setcurrenttexture"><strong>SetCurrentTexture</strong></a> (CharMovementStatus status) <br></td>
+<td style="text-align: left;"><a href="#function-setcurrenttexture"><strong>SetCurrentTexture</strong></a> (CharMovementStatus status) <br><em>Sets the current texture based on the character movement status.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setframerate"><strong>SetFrameRate</strong></a> (int Rate) <br></td>
+<td style="text-align: left;"><a href="#function-setframerate"><strong>SetFrameRate</strong></a> (int Rate) <br><em>Sets the frame rate for a video processing system.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setmaxframes"><strong>SetMaxFrames</strong></a> (int Frames) <br></td>
+<td style="text-align: left;"><a href="#function-setmaxframes"><strong>SetMaxFrames</strong></a> (int Frames) <br><em>Sets the maximum number of frames allowed in a video sequence.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setoscillate"><strong>SetOscillate</strong></a> (bool Osc) <br></td>
+<td style="text-align: left;"><a href="#function-setoscillate"><strong>SetOscillate</strong></a> (bool Osc) <br><em>Sets the oscillation state of an object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-animation"><strong>~Animation</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-animation"><strong>~Animation</strong></a> () = default<br><em>Destructor for the</em> <a href="./"><em><strong>Animation</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-animation-12">function Animation [1/2]</h3>
+<p><em>Default constructor for the</em> <a href="./"><em><strong>Animation</strong></em></a> <em>class. Initializes all member variables to default values.</em></p>
 <pre><code class="language-C++">AGE::Animation::Animation () 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>None</code> </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>None</p>
+<p>Constructor for the <a href="./"><strong>Animation</strong></a> class. Initializes all member variables to default values.</p>
+<p>This constructor initializes m_CurrentFrame, m_MaxFrames, and m_FrameInc to 0 and 1 respectively. It also sets m_FrameRate to 100 and m_OldTime to 0. The boolean variable bOscillate is set to false. A <a href="../class_a_g_e_1_1_timer/"><strong>Timer</strong></a> object is created and assigned to m_Timer.</p>
+<p><strong>Returns:</strong></p>
+<p><a href="./"><strong>Animation</strong></a> object with all member variables initialized to default values. </p>
 <hr>
 
 <h3 id="function-animation-22">function Animation [2/2]</h3>
+<p><em>Copy constructor for the</em> <a href="./"><em><strong>Animation</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::Animation::Animation (
     const Animation &amp;
 ) = default
 </code></pre>
+<p>This function creates a new instance of <a href="./"><strong>Animation</strong></a> that is an exact copy of the provided one. It uses the '= default' directive to delegate the work to the compiler, which means it simply calls the copy constructor of the base class (if any) and then copies all non-static data members.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>other</code> The instance of <a href="./"><strong>Animation</strong></a> to be copied.</li>
+</ul>
+<p>Copy constructor for the <a href="./"><strong>Animation</strong></a> class.</p>
+<p>This function creates a new instance of an <a href="./"><strong>Animation</strong></a> object by copying all its attributes from another existing <a href="./"><strong>Animation</strong></a> object. The copy is done using the '= default' directive, which uses the compiler-generated copy constructor.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>other</code> The existing <a href="./"><strong>Animation</strong></a> object to be copied. </li>
+</ul>
 <hr>
 
 <h3 id="function-getcurrentframe">function GetCurrentFrame</h3>
+<p><em>Returns the current frame number.</em> </p>
 <pre><code class="language-C++">inline int AGE::Animation::GetCurrentFrame () 
 </code></pre>
+<p>This function retrieves and returns the value of the member variable 'm_CurrentFrame'. It represents the current frame in a sequence or animation, for instance.</p>
+<p><strong>Returns:</strong></p>
+<p>The current frame number as an integer. If no specific frame is set, it may return 0 or some default value indicating that there's currently no active frame.</p>
+<p>This function returns the current frame number.</p>
+<p><strong>Returns:</strong></p>
+<p>The current frame number as an integer. If no frame is currently set, it will return -1. </p>
 <hr>
 
 <h3 id="function-getcurrenttexture">function GetCurrentTexture</h3>
+<p><em>Gets the current texture.</em> </p>
 <pre><code class="language-C++">inline Ref&lt; SubTexture2D &gt; AGE::Animation::GetCurrentTexture () 
 </code></pre>
+<p>This function returns a reference to the currently active subtexture in the sprite sheet. The returned value is a const reference, meaning that it cannot be modified by this function.</p>
+<p><strong>Returns:</strong></p>
+<p>A constant reference to the current texture.</p>
+<p>Gets the current texture being used in the game. </p>
+<p><strong>Returns:</strong></p>
+<p>A reference to the <a href="../class_a_g_e_1_1_sub_texture2_d/"><strong>SubTexture2D</strong></a> object representing the current texture. </p>
 <hr>
 
 <h3 id="function-getframerate">function GetFrameRate</h3>
+<p><em>Returns the current frame rate.</em> </p>
 <pre><code class="language-C++">inline int AGE::Animation::GetFrameRate () 
 </code></pre>
+<p>This function retrieves and returns the current frame rate of the application. The returned value is an integer representing the number of frames per second.</p>
+<p><strong>Returns:</strong></p>
+<p>int - Current frame rate in frames per second. If no frame rate has been set, it will return 0.</p>
+<p>Returns the current frame rate.</p>
+<p>This function retrieves and returns the current frame rate of the system. The returned value is an integer representing the number of frames per second.</p>
+<p><strong>Returns:</strong></p>
+<p>int - Current frame rate in frames per second. </p>
 <hr>
 
 <h3 id="function-getmaxframes">function GetMaxFrames</h3>
+<p><em>This function returns the maximum number of frames that can be processed by the system.</em> </p>
 <pre><code class="language-C++">inline int AGE::Animation::GetMaxFrames () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>int The maximum number of frames. If no limit is set, it will return -1.</p>
+<p>This function returns the maximum number of frames that can be processed by the system. </p>
+<p><strong>Returns:</strong></p>
+<p>int The maximum number of frames. If no limit is set, it will return a large value (e.g., INT_MAX). </p>
 <hr>
 
 <h3 id="function-getoscillate">function GetOscillate</h3>
+<p><em>Returns the oscillation state of the system.</em> </p>
 <pre><code class="language-C++">inline bool AGE::Animation::GetOscillate () 
 </code></pre>
+<p>This function returns a boolean value indicating whether or not the system is in an oscillating mode. The actual behavior and meaning of this flag would depend on how it's implemented within the specific context of your codebase.</p>
+<p><strong>Returns:</strong></p>
+<p>True if the system is oscillating, false otherwise.</p>
+<p>Returns the oscillation state of the system.</p>
+<p>This function returns a boolean value indicating whether or not the system is in an oscillating mode. The actual implementation and meaning of this flag are specific to the application, so it's important to refer to the documentation for that context.</p>
+<p><strong>Returns:</strong></p>
+<p>True if the system is in oscillation mode, false otherwise. </p>
 <hr>
 
 <h3 id="function-loadanimation">function LoadAnimation</h3>
+<p><em>Loads an animation into the system based on the provided specification.</em> </p>
 <pre><code class="language-C++">void AGE::Animation::LoadAnimation (
     const AnimationSpecification Anim
 ) 
 </code></pre>
+<p>This function takes in a constant reference to an object of type <code>AnimationSpecification</code> and uses it to load an animation into the system. The animation is added to the member variable <code>m_AnimationTextures</code> as a pair with the key being the movement status from the <a href="../struct_a_g_e_1_1_animation_specification/"><strong>AnimationSpecification</strong></a>.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Anim</code> A constant reference to an object of type <code>AnimationSpecification</code> that contains all necessary information for loading an animation.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void No return value is expected.</p>
+<p>Loads an animation into the system based on the provided specification. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Anim</code> The <a href="../struct_a_g_e_1_1_animation_specification/"><strong>AnimationSpecification</strong></a> containing details about the animation to be loaded. </li>
+</ul>
 <hr>
 
 <h3 id="function-loadanimations">function LoadAnimations</h3>
+<p><em>Loads a set of animations into the animation system.</em> </p>
 <pre><code class="language-C++">void AGE::Animation::LoadAnimations (
     const std::vector&lt; AnimationSpecification &gt; &amp; Anims
 ) 
 </code></pre>
+<p>This function takes in a vector of <a href="../struct_a_g_e_1_1_animation_specification/"><strong>AnimationSpecification</strong></a> objects and loads them into the m_AnimationTextures map. Each element in the vector is added as a pair to the map, with the key being the MovementStatus from each <a href="../struct_a_g_e_1_1_animation_specification/"><strong>AnimationSpecification</strong></a> object.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Anims</code> - A const reference to a vector of <a href="../struct_a_g_e_1_1_animation_specification/"><strong>AnimationSpecification</strong></a> objects. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Loads a list of animation specifications into the m_AnimationTextures map.</p>
+<p>This function takes in a vector of <a href="../struct_a_g_e_1_1_animation_specification/"><strong>AnimationSpecification</strong></a> objects and adds them to the m_AnimationTextures map, using the MovementStatus field as the key for each entry. The <a href="../struct_a_g_e_1_1_animation_specification/"><strong>AnimationSpecification</strong></a> object is then stored as the value associated with its corresponding MovementStatus key.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Anims</code> A vector of <a href="../struct_a_g_e_1_1_animation_specification/"><strong>AnimationSpecification</strong></a> objects to be loaded into the m_AnimationTextures map. </li>
+</ul>
 <hr>
 
 <h3 id="function-onanimate">function OnAnimate</h3>
+<p><em>Updates the object's animation based on elapsed time.</em> </p>
 <pre><code class="language-C++">void AGE::Animation::OnAnimate (
     TimeStep DeltaTime
 ) 
 </code></pre>
+<p>This function checks if enough time has passed to move to the next frame of the animation. If it has, the current frame index is updated and oscillates between min and max frames if the animation should be oscillating.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>DeltaTime</code> The amount of time that has passed since the last update.</li>
+</ul>
+<p>This function is used to animate the object based on a time step.</p>
+<p>The function checks if enough time has passed since the last frame update. If it has, the current frame index is updated and oscillates between min and max frames if the 'bOscillate' flag is set. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>DeltaTime</code> The time elapsed since the last frame in seconds. </li>
+</ul>
 <hr>
 
 <h3 id="function-ondestroy">function OnDestroy</h3>
+<p><em>This function is called when the object is being destroyed.</em> </p>
 <pre><code class="language-C++">void AGE::Animation::OnDestroy () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>void No return value.</p>
+<p>This function is called when the object is being destroyed.</p>
+<p><strong>Returns:</strong></p>
+<p>void No return value. </p>
 <hr>
 
 <h3 id="function-setcurrentframe">function SetCurrentFrame</h3>
+<p><em>Set the Current</em> <a href="./"><em><strong>Animation</strong></em></a> <em>Frame.</em></p>
 <pre><code class="language-C++">void AGE::Animation::SetCurrentFrame (
     int Frame
 ) 
 </code></pre>
+<p>This function sets the current frame of an animation. The frame number should be between 0 and m_MaxFrames - 1, inclusive. If the provided frame is outside this range, the function does nothing.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Frame</code> The new frame to set as the current frame.</li>
+</ul>
+<p>Set the Current Frame of <a href="./"><strong>Animation</strong></a>.</p>
+<p>This function sets the current frame of an animation to a specified value. If the provided frame number is negative or larger than or equal to the maximum frames, it will return without doing anything.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Frame</code> The new frame number to set as the current frame. </li>
+</ul>
 <hr>
 
 <h3 id="function-setcurrenttexture">function SetCurrentTexture</h3>
+<p><em>Sets the current texture based on the character movement status.</em> </p>
 <pre><code class="language-C++">void AGE::Animation::SetCurrentTexture (
     CharMovementStatus status
 ) 
 </code></pre>
+<p>This function sets the current texture of the animation object to a subtexture corresponding to the provided CharMovementStatus. The subtexture is chosen from the set of animation textures stored in m_AnimationTextures, and it's determined by the status parameter.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>status</code> The current movement status of the character. This determines which texture to use for rendering the animation.</li>
+</ul>
+<p>Sets the current texture based on the character movement status.</p>
+<p>This function sets the current texture of an animation object by taking a CharMovementStatus parameter which indicates the current state of the character. It uses this information to select and set the correct subtexture from the m_AnimationTextures array. The selected subtexture is then assigned to m_CurrentTexture.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>status</code> The current movement status of the character. This can be any value defined in CharMovementStatus enum. </li>
+</ul>
 <hr>
 
 <h3 id="function-setframerate">function SetFrameRate</h3>
+<p><em>Sets the frame rate for a video processing system.</em> </p>
 <pre><code class="language-C++">inline void AGE::Animation::SetFrameRate (
     int Rate
 ) 
 </code></pre>
+<p>This function sets the frame rate of the video processing system to the specified value. The frame rate is an integer representing the number of frames processed per second.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Rate</code> An integer representing the desired frame rate. Must be greater than 0 and less than or equal to 60. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Sets the frame rate for a video processing system.</p>
+<p>This function sets the frame rate of the video processing system to the specified value. The frame rate is an integer representing the number of frames processed per second.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Rate</code> An integer representing the desired frame rate. </li>
+</ul>
 <hr>
 
 <h3 id="function-setmaxframes">function SetMaxFrames</h3>
+<p><em>Sets the maximum number of frames allowed in a video sequence.</em> </p>
 <pre><code class="language-C++">inline void AGE::Animation::SetMaxFrames (
     int Frames
 ) 
 </code></pre>
+<p>This function sets the value for the member variable <code>m_MaxFrames</code> to the input parameter <code>Frames</code>. It is used to set the upper limit on the number of frames that can be processed in a video sequence.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Frames</code> The new maximum number of frames allowed. Must be greater than or equal to zero.</li>
+</ul>
+<p>Sets the maximum number of frames allowed in a video sequence.</p>
+<p>This function sets the value of the member variable <code>m_MaxFrames</code> to the input parameter <code>Frames</code>. It is used to limit the length of video sequences processed by other functions in the class.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Frames</code> The new maximum number of frames allowed. Must be a positive integer. </li>
+</ul>
 <hr>
 
 <h3 id="function-setoscillate">function SetOscillate</h3>
+<p><em>Sets the oscillation state of an object.</em> </p>
 <pre><code class="language-C++">inline void AGE::Animation::SetOscillate (
     bool Osc
 ) 
 </code></pre>
+<p>This function sets the 'bOscillate' variable to a specified boolean value, which determines whether or not the object should oscillate.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Osc</code> A boolean value indicating if the object should oscillate (true) or not (false).</li>
+</ul>
+<p>Sets the oscillation state of an object. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Osc</code> A boolean value indicating whether to oscillate or not. </li>
+</ul>
 <hr>
 
 <h3 id="function-animation">function ~Animation</h3>
+<p><em>Destructor for the</em> <a href="./"><em><strong>Animation</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::Animation::~Animation () = default
 </code></pre>
+<p>This function is responsible for releasing any resources that were acquired by the animation object, such as memory or file handles. It does not return anything and has no parameters.</p>
+<p>Destructor for the <a href="./"><strong>Animation</strong></a> class.</p>
+<p>This function is responsible for releasing any resources that were acquired by the animation object, such as memory or file handles. It does not return anything and has no parameters. </p>
 <hr>
 
 <hr />

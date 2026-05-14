@@ -31,11 +31,11 @@ namespace AGE
     std::atomic_bool Scene_Flag = false;
     static std::atomic<bool> bProgramRunning = true;
 
-    App::App(const std::string& name, ApplicationCommandLineArgs Args)
+App::App(const std::string& name, ApplicationCommandLineArgs Args)
     {
         AGE_PROFILE_FUNCTION();
 
-        AGE_CORE_ASSERT(!s_Instance, "Application already exists!");
+        CoreLogger::Assert(!s_Instance, "Application already exists!");
         s_Instance = this;
         m_CommandLineArgs = Args;
 #ifdef AG_PLATFORM_WINDOWS
@@ -80,12 +80,13 @@ namespace AGE
 
 
 
-    App::~App()
+App::~App()
     {
         Shutdown();
     }
 
-    void App::Init()
+
+void App::Init()
     {
         m_DeviceManager = CreateScope<DeviceManager>(AudioEngineType::AGESoundEngine);
         m_DeviceManager->GetWindow().SetEventCallback(BIND_EVENT_FN(App::OnEvent));
@@ -112,12 +113,12 @@ namespace AGE
         m_Running = true;
     }
 
-    void App::InitRenderer()
+void App::InitRenderer()
     {
         Renderer::Init();
     }
 
-    void App::InitLayers()
+void App::InitLayers()
     {
         for (auto& L : m_LayerStack)
         {
@@ -131,7 +132,7 @@ namespace AGE
         bBlockThisFrame  = false;
     }
 
-    void App::LoadAssets()
+void App::LoadAssets()
     {
         m_AssetLoadThreads.emplace_back(std::thread(&App::LoadScenes, this));
         m_AssetLoadThreads.emplace_back(std::thread(&App::LoadSoundBanks, this));
@@ -144,7 +145,7 @@ namespace AGE
         LoadShaders();
     }
 
-    void App::Shutdown()
+void App::Shutdown()
     {
         bProgramRunning.store(false);
         std::unique_lock<std::mutex> Lock(Mutex);
@@ -152,7 +153,7 @@ namespace AGE
         Renderer::Shutdown();
     }
 
-    void App::OnEvent(Event& E)
+void App::OnEvent(Event& E)
     {
 
         AGE_PROFILE_FUNCTION();
@@ -199,31 +200,33 @@ namespace AGE
 
     }
 
-    void App::PushLayer(Layer* Layer)
+void App::PushLayer(Layer* Layer)
     {
         AGE_PROFILE_FUNCTION();
         m_LayerStack.PushLayer(Layer);
         //Layer->OnAttach();
     }
 
-    void App::PushOverlay(Layer* Layer)
+void App::PushOverlay(Layer* Layer)
     {
         AGE_PROFILE_FUNCTION();
         m_LayerStack.PushOverlay(Layer);
         Layer->OnAttach();
     }
 
-    void App::PushScriptableComp(ScriptableEntity* Comp)
+void App::PushScriptableComp(ScriptableEntity* Comp)
     {
         m_CompStack.PushComponent(Comp);
     }
 
-    void App::GetDirectXErrorMessages()
+void App::GetDirectXErrorMessages()
     {
 
     }
 
-    void App::Run()
+    
+
+void App::Run()
     {
         Init();
         Layer* NewProjLayer = m_LayerStack.GetLayerByName("NewProjectLayer");
@@ -271,7 +274,9 @@ namespace AGE
         }
     }
 
-    void App::LoadScenes()
+    
+
+void App::LoadScenes()
     {
         std::filesystem::path ScenesPath = m_AppConfig.CurrentProjectPath.string() + "/Scenes";
         if (!std::filesystem::is_directory(ScenesPath))
@@ -292,7 +297,7 @@ namespace AGE
             }
         }
     }
-    void App::LoadShaders()
+void App::LoadShaders()
     {
         switch (Renderer::GetAPI())
         {
@@ -310,11 +315,11 @@ namespace AGE
         }
         default:
         {
-            AGE_CORE_ASSERT(false, "Renderer is not currently Implemented!");
+            CoreLogger::Assert(false, "Renderer is not currently Implemented!");
         }
         }
     }
-    void App::LoadTextures()
+void App::LoadTextures()
     {
         for (auto& T : std::filesystem::recursive_directory_iterator(AssetManager::Get().GetGameContentPath().string() + "/Textures"))
         {
@@ -331,7 +336,9 @@ namespace AGE
             }
         }
     }
-    void App::LoadSoundBanks()
+    
+
+void App::LoadSoundBanks()
     {
         switch (App::Get().GetDeviceManager().GetAudioManager().GetAudioEngineType())
         {
@@ -400,7 +407,7 @@ namespace AGE
         }
 
     }
-    void App::LoadAsepriteFiles()
+void App::LoadAsepriteFiles()
     {
         //for (auto& A : std::filesystem::recursive_directory_iterator(AssetManager::Get().GetGameContentPath().string() + "/Aesprite"))
         //{
@@ -411,12 +418,12 @@ namespace AGE
         //}
     }
 
-    void App::Close()
+void App::Close()
     {
         m_Running = false;
     }
 
-    bool App::OnWindowClose(WindowCloseEvent& E)
+bool App::OnWindowClose(WindowCloseEvent& E)
     {
         m_Running = false;
         //WwiseObj->UnregisterGameObj((uint64_t)10);
@@ -425,7 +432,7 @@ namespace AGE
         //WwiseObj->~Wwise();
         return true;
     }
-    bool App::OnWindowResize(WindowResizeEvent& E)
+bool App::OnWindowResize(WindowResizeEvent& E)
     {
         AGE_PROFILE_FUNCTION();
         if (E.GetWidth() == 0 || E.GetHeight() == 0)
@@ -439,19 +446,19 @@ namespace AGE
         Renderer::OnWindowResize(E.GetWidth(), E.GetHeight());
         return false;
     }
-    bool App::OnFramebufferResize(FramebufferResizeEvent& E)
+bool App::OnFramebufferResize(FramebufferResizeEvent& E)
     {
         Renderer::OnFramebufferResize(E.GetWidth(), E.GetHeight());
         m_FramebufferSize = {static_cast<float>(E.GetWidth()), static_cast<float>(E.GetHeight())};
         return false;
     }
 
-    bool App::OnRendererChanged(RendererChangeEvent& E)
+bool App::OnRendererChanged(RendererChangeEvent& E)
     {
         return false;
     }
 
-    bool App::OnProjectCreated(ProjectCreatedEvent &E)
+bool App::OnProjectCreated(ProjectCreatedEvent &E)
     {
         m_AssetManager = CreateScope<AssetManager>(m_AppConfig.GameContentPath);
         bBlockThisFrame = true;
@@ -462,7 +469,7 @@ namespace AGE
         return false;
     }
 
-    bool App::OnProjectLoaded(ProjectLoadedEvent &E)
+bool App::OnProjectLoaded(ProjectLoadedEvent &E)
     {
         m_AssetManager = CreateScope<AssetManager>(m_AppConfig.GameContentPath);
         bBlockThisFrame = true;

@@ -101,11 +101,11 @@
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-writearray"><strong>WriteArray</strong></a> (const std::vector&lt; T &gt; &amp; Array, bool WriteSize=true) <br></td>
+<td style="text-align: left;"><a href="#function-writearray"><strong>WriteArray</strong></a> (const std::vector&lt; T &gt; &amp; Array, bool WriteSize=true) <br><em>Writes an array to a stream.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-writebuffer"><strong>WriteBuffer</strong></a> (<a href="../struct_a_g_e_1_1_buffer/"><strong>Buffer</strong></a> buffer, bool WriteSize=true) <br></td>
+<td style="text-align: left;"><a href="#function-writebuffer"><strong>WriteBuffer</strong></a> (<a href="../struct_a_g_e_1_1_buffer/"><strong>Buffer</strong></a> buffer, bool WriteSize=true) <br><em>Writes a buffer to the data stream.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual bool</td>
@@ -113,39 +113,39 @@
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-writemap-13"><strong>WriteMap</strong></a> (const std::map&lt; Key, Value &gt; &amp; Map, bool WriteSize=true) <br></td>
+<td style="text-align: left;"><a href="#function-writemap-13"><strong>WriteMap</strong></a> (const std::map&lt; Key, Value &gt; &amp; Map, bool WriteSize=true) <br><em>Writes a map to the underlying storage.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-writemap-23"><strong>WriteMap</strong></a> (const std::unordered_map&lt; Key, Value &gt; &amp; Map, bool WriteSize=true) <br></td>
+<td style="text-align: left;"><a href="#function-writemap-23"><strong>WriteMap</strong></a> (const std::unordered_map&lt; Key, Value &gt; &amp; Map, bool WriteSize=true) <br><em>This function writes an unordered map to a data stream. It can optionally write the size of the map as well.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-writemap-33"><strong>WriteMap</strong></a> (const std::unordered_map&lt; std::string, Value &gt; &amp; Map, bool WriteSize=true) <br></td>
+<td style="text-align: left;"><a href="#function-writemap-33"><strong>WriteMap</strong></a> (const std::unordered_map&lt; std::string, Value &gt; &amp; Map, bool WriteSize=true) <br><em>Writes a map to the stream. If WriteSize is true, it writes the size of the map first. Then for each key-value pair in the map, it writes the key as a string and the value. For trivial types, it directly writes the value using WriteRaw. For non-trivial types, it uses WriteObject.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-writeobject"><strong>WriteObject</strong></a> (const T &amp; Obj) <br></td>
+<td style="text-align: left;"><a href="#function-writeobject"><strong>WriteObject</strong></a> (const T &amp; Obj) <br><em>This function writes an object to the stream by serializing it.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-writeraw"><strong>WriteRaw</strong></a> (const T &amp; Type) <br></td>
+<td style="text-align: left;"><a href="#function-writeraw"><strong>WriteRaw</strong></a> (const T &amp; Type) <br><em>Writes raw data of a specific type.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-writestring"><strong>WriteString</strong></a> (const std::string &amp; String) <br></td>
+<td style="text-align: left;"><a href="#function-writestring"><strong>WriteString</strong></a> (const std::string &amp; String) <br><em>Writes a string to the data stream, including its length prefix.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-writezero"><strong>WriteZero</strong></a> (uint64_t Size) <br></td>
+<td style="text-align: left;"><a href="#function-writezero"><strong>WriteZero</strong></a> (uint64_t Size) <br><em>Writes a block of zeros to the data stream.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-operator-bool"><strong>operator bool</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-operator-bool"><strong>operator bool</strong></a> () const<br><em>Checks the state of the stream.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual</td>
-<td style="text-align: left;"><a href="#function-datawriter"><strong>~DataWriter</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-datawriter"><strong>~DataWriter</strong></a> () = default<br><em>Virtual destructor for the</em> <a href="./"><em><strong>DataWriter</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
@@ -168,20 +168,50 @@
 <hr>
 
 <h3 id="function-writearray">function WriteArray</h3>
+<p><em>Writes an array to a stream.</em> </p>
 <pre><code class="language-C++">template&lt;typename T&gt;
 inline void AGE::DataWriter::WriteArray (
     const std::vector&lt; T &gt; &amp; Array,
     bool WriteSize=true
 ) 
 </code></pre>
+<p>This function writes the elements of an array to a stream, optionally also writing its size. The type T must be trivially serializable or have a custom serialization method.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Array</code> The array to write. </li>
+<li><code>WriteSize</code> If true, the size of the array will be written first. Defaults to true.</li>
+</ul>
+<p>Writes an array to a data stream.</p>
+<p>This function writes the elements of an array to a data stream, optionally including its size as well. The type <code>T</code> is expected to be trivially copyable or serializable. If it's not, then the object-specific write method (WriteObject&lt;T&gt;) will be used instead.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Array</code> A const reference to the array that should be written. </li>
+<li><code>WriteSize</code> An optional boolean indicating whether the size of the array should also be written. Default is true. </li>
+</ul>
 <hr>
 
 <h3 id="function-writebuffer">function WriteBuffer</h3>
+<p><em>Writes a buffer to the data stream.</em> </p>
 <pre><code class="language-C++">void AGE::DataWriter::WriteBuffer (
     Buffer buffer,
     bool WriteSize=true
 ) 
 </code></pre>
+<p>This function writes a given buffer to the data stream. If the WriteSize parameter is true, it will first write the size of the buffer to the stream. The buffer's data and its size are then written to the stream. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>buffer</code> The buffer to be written. </li>
+<li><code>WriteSize</code> A flag indicating whether or not to write the size of the buffer to the stream.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Writes a buffer to the data stream.</p>
+<p>This function writes a given buffer to the data stream. It first checks if the WriteSize parameter is true and if so, it writes the size of the buffer as a uint64_t. Then it writes the actual data of the buffer. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>buffer</code> The buffer to be written. </li>
+<li><code>WriteSize</code> A flag indicating whether or not to write the size of the buffer. </li>
+</ul>
 <hr>
 
 <h3 id="function-writedata">function WriteData</h3>
@@ -193,70 +223,178 @@ inline void AGE::DataWriter::WriteArray (
 <hr>
 
 <h3 id="function-writemap-13">function WriteMap [1/3]</h3>
+<p><em>Writes a map to the underlying storage.</em> </p>
 <pre><code class="language-C++">template&lt;typename Key, typename Value&gt;
 inline void AGE::DataWriter::WriteMap (
     const std::map&lt; Key, Value &gt; &amp; Map,
     bool WriteSize=true
 ) 
 </code></pre>
+<p>This function writes a given map to the underlying storage. If WriteSize is true, it first writes the size of the map. Then for each key-value pair in the map, it checks if the Key and Value types are trivial (i.e., they can be copied using memcpy). If so, it directly writes them; otherwise, it uses a more complex serialization method.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Map</code> The map to write. </li>
+<li><code>WriteSize</code> Whether or not to write the size of the map first. Defaults to true.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Writes a map to the stream. If WriteSize is true, it writes the size of the map first. Then for each pair in the map, if Key and Value are trivial types, they are written directly; otherwise, WriteObject function is used. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Map</code> The map to be written. </li>
+<li><code>WriteSize</code> If true, write the size of the map before writing pairs. Defaults to true. </li>
+</ul>
 <hr>
 
 <h3 id="function-writemap-23">function WriteMap [2/3]</h3>
+<p><em>This function writes an unordered map to a data stream. It can optionally write the size of the map as well.</em> </p>
 <pre><code class="language-C++">template&lt;typename Key, typename Value&gt;
 inline void AGE::DataWriter::WriteMap (
     const std::unordered_map&lt; Key, Value &gt; &amp; Map,
     bool WriteSize=true
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Map</code> The unordered map to be written. </li>
+<li><code>WriteSize</code> A flag indicating whether or not to write the size of the map. Defaults to true.</li>
+</ul>
+<p>Writes a map to the underlying storage.</p>
+<p>This function writes an unordered_map to the underlying storage. If WriteSize is true, it first writes the size of the map. Then for each key-value pair in the map, if the key and value types are trivial (i.e., they can be copied using memcpy), it directly writes them; otherwise, it uses a more complex serialization method.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Map</code> The unordered_map to write. </li>
+<li><code>WriteSize</code> Whether or not to write the size of the map first. Defaults to true. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-writemap-33">function WriteMap [3/3]</h3>
+<p><em>Writes a map to the stream. If WriteSize is true, it writes the size of the map first. Then for each key-value pair in the map, it writes the key as a string and the value. For trivial types, it directly writes the value using WriteRaw. For non-trivial types, it uses WriteObject.</em> </p>
 <pre><code class="language-C++">template&lt;typename Value&gt;
 inline void AGE::DataWriter::WriteMap (
     const std::unordered_map&lt; std::string, Value &gt; &amp; Map,
     bool WriteSize=true
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Map</code> The unordered_map to write. </li>
+<li><code>WriteSize</code> Whether or not to write the size of the map first. Defaults to true. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>None</p>
+<p>Writes a map to the stream. If WriteSize is true, it writes the size of the map first. Then for each key-value pair in the map, it writes the key and value. For non-trivial types, it uses WriteObject function, otherwise it directly writes the value using WriteRaw function. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Map</code> The unordered_map to be written. </li>
+<li><code>WriteSize</code> A flag indicating whether or not to write the size of the map first. Defaults to true. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>None </p>
 <hr>
 
 <h3 id="function-writeobject">function WriteObject</h3>
+<p><em>This function writes an object to the stream by serializing it.</em> </p>
 <pre><code class="language-C++">template&lt;typename T&gt;
 inline void AGE::DataWriter::WriteObject (
     const T &amp; Obj
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>const</code> T&amp; Obj - The reference to the object that needs to be written.</li>
+</ul>
+<p>This function writes an object to the stream by serializing it using a static method.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>const</code> T&amp; Obj - A constant reference to the object that needs to be written. The type of this object must have a Serialize() method defined for it. </li>
+</ul>
 <hr>
 
 <h3 id="function-writeraw">function WriteRaw</h3>
+<p><em>Writes raw data of a specific type.</em> </p>
 <pre><code class="language-C++">template&lt;typename T&gt;
 inline void AGE::DataWriter::WriteRaw (
     const T &amp; Type
 ) 
 </code></pre>
+<p>This function writes raw data into the game file using the <code>WriteData</code> method. It takes an object of any type as input and converts it to a byte array before writing it. The size of this byte array is determined by the sizeof operator, which allows for different types to be handled uniformly.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Type</code> An object of any type that can be converted into raw data. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Writes raw data of a specific type.</p>
+<p>This function writes raw data into the game file using the provided data and its size. It ensures that all data is written correctly by checking if the write operation was successful.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Type</code> The reference to the data to be written. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-writestring">function WriteString</h3>
+<p><em>Writes a string to the data stream, including its length prefix.</em> </p>
 <pre><code class="language-C++">void AGE::DataWriter::WriteString (
     const std::string &amp; String
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>String</code> The string to write. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>None.</p>
+<p>Writes a string to the data stream, including its length prefix. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>String</code> The string to write. </li>
+</ul>
 <hr>
 
 <h3 id="function-writezero">function WriteZero</h3>
+<p><em>Writes a block of zeros to the data stream.</em> </p>
 <pre><code class="language-C++">void AGE::DataWriter::WriteZero (
     uint64_t Size
 ) 
 </code></pre>
+<p>This function writes a specified number of zero bytes to the data stream. It uses a loop to write each byte individually.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Size</code> The number of zero bytes to write.</li>
+</ul>
+<p>Writes a block of zeros to the data stream.</p>
+<p>This function writes a specified number of zero bytes to the data stream. The size of the block is determined by the input parameter 'Size'.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Size</code> The number of zero bytes to write to the data stream. </li>
+</ul>
 <hr>
 
 <h3 id="function-operator-bool">function operator bool</h3>
+<p><em>Checks the state of the stream.</em> </p>
 <pre><code class="language-C++">inline AGE::DataWriter::operator bool () const
 </code></pre>
+<p>This function returns a boolean value indicating whether or not the underlying stream is in a good state. It does this by calling the private method <code>IsStreamGood()</code>, which should be implemented elsewhere in the class.</p>
+<p><strong>Returns:</strong></p>
+<p>A boolean value indicating if the stream is in a good state.</p>
+<p>Checks the state of the stream.</p>
+<p>This function returns a boolean value indicating whether or not the stream is in a good state. It does this by calling the private method <code>IsStreamGood()</code>, which should be implemented elsewhere in the class.</p>
+<p><strong>Returns:</strong></p>
+<p>bool - Returns true if the stream is in a good state, false otherwise. </p>
 <hr>
 
 <h3 id="function-datawriter">function ~DataWriter</h3>
+<p><em>Virtual destructor for the</em> <a href="./"><em><strong>DataWriter</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">virtual AGE::DataWriter::~DataWriter () = default
 </code></pre>
+<p>This function is responsible for freeing any resources that were allocated by the <a href="./"><strong>DataWriter</strong></a> object, such as memory or file handles. It does not return anything (void) and thus it doesn't need a Doxygen comment to explain its behavior.</p>
+<p>Virtual destructor for the <a href="./"><strong>DataWriter</strong></a> class.</p>
+<p>This function is responsible for releasing any resources that were acquired by the object during its lifetime, such as memory or file handles. It does not return anything and has no parameters. </p>
 <hr>
 
 <hr />

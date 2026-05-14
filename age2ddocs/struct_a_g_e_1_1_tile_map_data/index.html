@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Struct AGE::float16 - AGE2D Docs</title>
+    <title>Struct AGE::TileMapData - AGE2D Docs</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Struct AGE::float16";
-        var mkdocs_page_input_path = "age2ddocs\\struct_a_g_e_1_1float16.md";
+        var mkdocs_page_name = "Struct AGE::TileMapData";
+        var mkdocs_page_input_path = "age2ddocs\\struct_a_g_e_1_1_tile_map_data.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -66,7 +66,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Struct AGE::float16</li>
+      <li class="breadcrumb-item active">Struct AGE::TileMapData</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -75,8 +75,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="struct-agefloat16">Struct AGE::float16</h1>
-<p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespace_a_g_e/"><strong>AGE</strong></a> <strong>&gt;</strong> <a href="./"><strong>float16</strong></a></p>
+                <h1 id="struct-agetilemapdata">Struct AGE::TileMapData</h1>
+<p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespace_a_g_e/"><strong>AGE</strong></a> <strong>&gt;</strong> <a href="./"><strong>TileMapData</strong></a></p>
 <h2 id="public-attributes">Public Attributes</h2>
 <table>
 <thead>
@@ -87,59 +87,28 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: right;">uint16_t</td>
-<td style="text-align: left;"><a href="#variable-bits"><strong>bits</strong></a>  <br></td>
-</tr>
-</tbody>
-</table>
-<h2 id="public-functions">Public Functions</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: right;">Type</th>
-<th style="text-align: left;">Name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-float16-12"><strong>float16</strong></a> () = default<br></td>
+<td style="text-align: right;">Ref&lt; <a href="../class_a_g_e_1_1_texture/"><strong>Texture</strong></a> &gt;</td>
+<td style="text-align: left;"><a href="#variable-m_atlastexture"><strong>m_AtlasTexture</strong></a>  <br></td>
 </tr>
 <tr>
-<td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-float16-22"><strong>float16</strong></a> (float value) <br></td>
-</tr>
-<tr>
-<td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-operator-float"><strong>operator float</strong></a> () const<br></td>
+<td style="text-align: right;">std::filesystem::path</td>
+<td style="text-align: left;"><a href="#variable-m_path"><strong>m_Path</strong></a>  <br></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-attributes-documentation">Public Attributes Documentation</h2>
-<h3 id="variable-bits">variable bits</h3>
-<pre><code class="language-C++">uint16_t AGE::float16::bits;
-</code></pre>
-<hr>
-<h2 id="public-functions-documentation">Public Functions Documentation</h2>
-<h3 id="function-float16-12">function float16 [1/2]</h3>
-<pre><code class="language-C++">AGE::float16::float16 () = default
+<h3 id="variable-m_atlastexture">variable m_AtlasTexture</h3>
+<pre><code class="language-C++">Ref&lt;Texture&gt; AGE::TileMapData::m_AtlasTexture;
 </code></pre>
 <hr>
 
-<h3 id="function-float16-22">function float16 [2/2]</h3>
-<pre><code class="language-C++">inline AGE::float16::float16 (
-    float value
-) 
-</code></pre>
-<hr>
-
-<h3 id="function-operator-float">function operator float</h3>
-<pre><code class="language-C++">inline AGE::float16::operator float () const
+<h3 id="variable-m_path">variable m_Path</h3>
+<pre><code class="language-C++">std::filesystem::path AGE::TileMapData::m_Path;
 </code></pre>
 <hr>
 
 <hr />
-<p>The documentation for this class was generated from the following file <code>C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Types.h</code></p>
+<p>The documentation for this class was generated from the following file <code>C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/TileMapManager.h</code></p>
               
             </div>
           </div><footer>

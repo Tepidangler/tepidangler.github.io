@@ -19,9 +19,9 @@ namespace AGE
     class FBXParser
     {
     public:
-        FBXParser() = default;
+FBXParser() = default;
 
-        static FBXParser& Get()
+static FBXParser& Get()
         {
             if (!s_Instance)
             {

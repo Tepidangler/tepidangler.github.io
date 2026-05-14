@@ -40,12 +40,14 @@
         <name>Buffer</name>
         <qualifiedname>AGE::Buffer::Buffer</qualifiedname>
         <briefdescription>
+<para><ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref> constructor initializes the data pointer to nullptr and size to 0. </para>
         </briefdescription>
         <detaileddescription>
+<para>Default constructor for the <ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref> class. Initializes an empty buffer with a data pointer set to nullptr and size set to 0. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" line="14" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" bodystart="14" bodyend="18"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" line="21" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" bodystart="21" bodyend="25"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_buffer_1a495950a8ebd2610800ab821dbf8266b2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -63,12 +65,48 @@
           <defval>0</defval>
         </param>
         <briefdescription>
+<para><ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref> constructor that initializes the buffer with given data and size. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the data to be stored in the buffer. Can be null. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the data pointed by &apos;data&apos;. Defaults to 0 if not provided.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref> constructor that initializes the buffer with a given pointer to data and its size. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the data to be stored in the buffer. Can be null. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the data pointed by &apos;data&apos;. Defaults to 0 if not provided. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" line="20" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" bodystart="20" bodyend="24"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" line="37" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" bodystart="37" bodyend="41"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_buffer_1a76903ac590000a2230f1c684dee0b7f4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -81,12 +119,35 @@
           <declname>size</declname>
         </param>
         <briefdescription>
+<para>Allocates memory for an array of characters. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function allocates a block of memory to store an array of characters. If the input size is zero, it simply returns without doing anything. The allocated memory should be deallocated using Free() when it&apos;s no longer needed.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of elements in the array to be allocated.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Allocates memory for an array of pointers to characters.</para>
+<para>This function allocates a block of memory for an array of <computeroutput>char</computeroutput> pointers. It first deletes the existing data if any, then it checks if the size is zero. If not, it allocates new memory and sets the <computeroutput>Size</computeroutput> variable accordingly.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of elements to be allocated. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" line="42" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" bodystart="42" bodyend="54"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" line="108" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" bodystart="108" bodyend="120"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_buffer_1ab14317b00b48d6925e47ce2cc7d8e4dd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -95,12 +156,21 @@
         <name>Release</name>
         <qualifiedname>AGE::Buffer::Release</qualifiedname>
         <briefdescription>
+<para>Releases the memory allocated for the data. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function deletes the dynamically allocated array of characters (char*) Data and sets it to null, effectively releasing the memory. It also resets Size to 0 indicating that no more data is present in the object.</para>
+<para><simplesect kind="return"><para>void</para>
+</simplesect>
+Releases the memory allocated for the data.</para>
+<para>This function deletes the dynamically allocated array of characters and sets the Data pointer to null, effectively releasing the memory. It also resets the Size variable to 0 indicating that no more data is present in the object.</para>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" line="56" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" bodystart="56" bodyend="61"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" line="136" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" bodystart="136" bodyend="141"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_buffer_1a59c4fe523b4867471965696c6e30baa7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -109,12 +179,19 @@
         <name>ZeroInitialize</name>
         <qualifiedname>AGE::Buffer::ZeroInitialize</qualifiedname>
         <briefdescription>
+<para>This function initializes a block of memory with zeros. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function takes no parameters and does not return anything. It uses the memset function from the C standard library to fill the Data array with zeros, which is of size Size.</para>
+<para>This function initializes a block of memory with zeros.</para>
+<para>The function takes no parameters and returns void. It uses the memset function from the cstring library to fill the Data array with zeros, which is assumed to be of size Size. If Data is null, nothing happens.</para>
+<para><simplesect kind="return"><para>Void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" line="63" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" bodystart="63" bodyend="69"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" line="155" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" bodystart="155" bodyend="161"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_buffer_1a68eb5e882bc1f314f20a91f976a07f8a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -133,12 +210,36 @@
           <defval>0</defval>
         </param>
         <briefdescription>
+<para>This function reads a value of type T from the data buffer at a specified offset. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position in the data buffer to read from, defaults to 0 if not provided. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the value of type T located at the given offset.</para>
+</simplesect>
+This function reads a value of type T from the data buffer at a specified offset. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position in the data buffer to read from, defaults to 0 if not provided. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the value of type T located at the given offset. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" line="72" column="3" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" bodystart="72" bodyend="75"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" line="174" column="3" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" bodystart="174" bodyend="177"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_buffer_1ae0d015771750cb3a5b5f4153cfb1a192" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>char *</type>
@@ -155,12 +256,73 @@
           <declname>offset</declname>
         </param>
         <briefdescription>
+<para>ReadBytes reads a specified number of bytes from the buffer starting at a given offset. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function checks if the requested read operation will result in a buffer overflow by comparing the sum of the size and offset with the total size of the buffer. If it&apos;s larger, an assertion is triggered to indicate a potential issue. It then allocates memory for a new char array of the specified size using &apos;new&apos;, copies the data from the buffer starting at the given offset into this newly allocated memory, and returns a pointer to this memory.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes to read. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position in the buffer where reading should start. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pointer to an array containing the read data. This must be deleted by the caller when it&apos;s no longer needed.</para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>std::runtime_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if there is a buffer overflow (i.e., the sum of size and offset exceeds the total size of the buffer).</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+ReadBytes reads a specified number of bytes from the buffer starting at a given offset.</para>
+<para>This function is used to read data from the buffer. It takes two parameters - &apos;size&apos; which specifies the number of bytes to be read and &apos;offset&apos;, which indicates the position in the buffer where reading should start. The function checks if the requested size plus the offset exceeds the total size of the buffer, and throws an error if it does. It then allocates a new character array of the specified size using dynamic memory allocation (new char[size]), copies &apos;size&apos; bytes from the buffer starting at the given offset to this newly allocated array, and returns this array. The caller is responsible for deallocating the returned pointer with delete[].</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to read. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position in the buffer where reading should start. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to a new character array containing the read data. Caller must free this memory using &apos;delete[]&apos;.</para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>std::runtime_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the requested size plus the offset exceeds the total size of the buffer. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" line="77" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" bodystart="77" bodyend="83"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" line="207" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" bodystart="207" bodyend="213"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_buffer_1a44802f197e7072dc4a5bbac86bb1336d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -182,12 +344,67 @@
           <defval>0</defval>
         </param>
         <briefdescription>
+<para>Writes a block of data to the buffer at a specified offset. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function copies &apos;size&apos; bytes from the memory area pointed by &apos;data&apos; into the buffer starting at &apos;offset&apos;. The destination buffer is assumed to be large enough to hold the copied data, i.e., it should have been allocated with Size bytes of space beforehand. If the sum of &apos;size&apos; and &apos;offset&apos; exceeds the total size of the buffer (Size), a buffer overflow error will occur.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the source of the data to be copied. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to copy from the source. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes in the destination buffer at which copying begins. Defaults to 0 if not specified.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Writes a block of data to the buffer at a specified offset.</para>
+<para>This function copies &apos;size&apos; bytes from the memory area pointed by &apos;data&apos; into the buffer starting at position &apos;offset&apos;. If the sum of &apos;offset&apos; and &apos;size&apos; exceeds the total size of the buffer, it results in a &quot;Buffer Overflow!&quot; error.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the source of the data to be copied. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to copy from the source. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position within the buffer at which copying begins. Defaults to 0 if not provided. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" line="85" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" bodystart="85" bodyend="89"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" line="236" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" bodystart="236" bodyend="240"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_buffer_1a6462ebdca8d1fd1841b396622a46fe5e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -196,12 +413,29 @@
         <name>operator bool</name>
         <qualifiedname>AGE::Buffer::operator bool</qualifiedname>
         <briefdescription>
+<para>This function returns a boolean value based on the truthiness of Data member. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if Data is not null, false otherwise.</para>
+</simplesect>
+Converts the object to a boolean value.</para>
+<para>This function returns true if Data is not null, and false otherwise. It provides an implicit conversion from the class instance to bool.</para>
+<para><simplesect kind="return"><para>True if Data is not null, False otherwise. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" line="91" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" bodystart="91" bodyend="94"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" line="254" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" bodystart="254" bodyend="257"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_buffer_1a7d8a94de34074527dd3ce0f83bd3011b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>char &amp;</type>
@@ -214,12 +448,37 @@
           <declname>Index</declname>
         </param>
         <briefdescription>
+<para>This function returns a reference to the character at the specified index in the Data array. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The zero-based index of the character to return. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the character at the given index.</para>
+</simplesect>
+This function returns a reference to the character at the specified index in the Data array.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The zero-based index of the character to return. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the character at the given index. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" line="96" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" bodystart="96" bodyend="99"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" line="270" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" bodystart="270" bodyend="273"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -234,12 +493,38 @@
           <declname>Other</declname>
         </param>
         <briefdescription>
+<para>Copies a <ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref> object by allocating the same size and copying data from another <ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref> object. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref> object to be copied. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new <ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref> object with the same size as the input and copied data.</para>
+</simplesect>
+Copies a <ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref> object by allocating the same size and copying data from another <ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref>.</para>
+<para>This function creates a new <ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref> object with the same size as the input <ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref>, then copies the data from the input <ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref> into this new one. The copied data is returned as the result of the function.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref> to be copied. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A copy of the input <ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref>. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" line="26" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" bodystart="26" bodyend="32"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" line="57" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" bodystart="57" bodyend="63"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_buffer_1afae425c1d797b34e116ed48909ee4eab" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref></type>
@@ -256,12 +541,55 @@
           <declname>size</declname>
         </param>
         <briefdescription>
+<para>Copies a block of memory into a new <ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref> object. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function creates a new <ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref> object and allocates the necessary memory to hold &apos;size&apos; bytes. It then uses memcpy() to copy &apos;data&apos; into this newly allocated memory. The copied data can be accessed through the Data property of the returned <ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref> object.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the block of memory to copy. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size in bytes of the block of memory to copy.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new <ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref> object containing a copy of &apos;data&apos;.</para>
+</simplesect>
+Copies a block of memory into a new <ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref> object.</para>
+<para>This function creates a new <ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref> object and allocates the necessary memory to hold &apos;size&apos; bytes. It then uses memcpy() to copy the data from the input pointer into this newly allocated memory. The copied buffer is returned as the result.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the block of memory to be copied. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes to copy from &apos;data&apos;.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new <ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref> object containing a copy of the input data. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" line="34" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" bodystart="34" bodyend="40"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" line="85" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" bodystart="85" bodyend="91"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_buffer_1afbe5e2a250c24b6e1e94e9ba4013f8e8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -278,12 +606,50 @@
           <declname>Instance</declname>
         </param>
         <briefdescription>
+<para>This function serializes a <ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref> instance into the provided <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function writes two pieces of data to the <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref>: the first byte of the buffer and its size. It uses WriteRaw method for writing raw bytes, which means it directly writes the memory content pointed by the pointer without any conversion or serialization process.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Serializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to a <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref> instance that will be used for serialization. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Instance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref> instance to be serialized.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This function serializes a buffer instance into the provided data writer.</para>
+<para>The function writes two pieces of information to the data writer: the first byte of the buffer and its size. It uses raw write operations, meaning it directly accesses the memory pointed by the Instance pointer without any additional processing. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Serializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to a <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref> object that will be used for serialization. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Instance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref> instance to be serialized. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" line="101" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" bodystart="101" bodyend="105"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" line="292" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" bodystart="292" bodyend="296"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_buffer_1ab3c5f41e4ddac9694a8e42eb814d6a0d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -300,19 +666,58 @@
           <declname>Instance</declname>
         </param>
         <briefdescription>
+<para>Deserialize a <ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref> instance from a <ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function reads raw data from the provided <ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref> and deserializes it into a <ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref> instance. The first byte read is stored in an uint8_t variable, which is then used to allocate memory for the buffer. The size of the buffer is read next as an uint64_t. After these two values are obtained, the buffer&apos;s memory is allocated and the bytes from the <ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref> are written into it.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Deserializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to a <ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref> instance that provides the raw data for deserialization. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Instance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref> instance where the deserialized data will be stored.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Deserialize a <ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref> instance from a <ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref>.</para>
+<para>This function reads raw data from the provided <ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref> and deserializes it into a <ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref> instance. The first byte read is stored in an uint8_t variable, which is then used to allocate memory for the buffer. The size of the buffer is read next as an uint64_t. After these two values are obtained, the buffer&apos;s memory is allocated and the bytes from the <ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref> are written into it.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Deserializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to a <ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref> instance that provides raw data for deserialization. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Instance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to a <ref refid="struct_a_g_e_1_1_buffer" kindref="compound">Buffer</ref> instance where the deserialized data will be stored. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" line="107" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" bodystart="107" bodyend="115"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" line="314" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" bodystart="314" bodyend="322"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" line="9" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" bodystart="10" bodyend="117"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" line="9" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/Buffer.h" bodystart="10" bodyend="324"/>
     <listofallmembers>
       <member refid="struct_a_g_e_1_1_buffer_1a76903ac590000a2230f1c684dee0b7f4" prot="public" virt="non-virtual"><scope>AGE::Buffer</scope><name>Allocate</name></member>
       <member refid="struct_a_g_e_1_1_buffer_1a7167bbbce4befe00f21bff6106245524" prot="public" virt="non-virtual"><scope>AGE::Buffer</scope><name>Buffer</name></member>

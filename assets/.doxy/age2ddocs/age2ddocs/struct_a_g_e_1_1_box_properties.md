@@ -60,7 +60,7 @@
 
 | Type | Name |
 | ---: | :--- |
-|   | [**BoxProperties**](#function-boxproperties) () = default<br> |
+|   | [**BoxProperties**](#function-boxproperties) () = default<br>_Default constructor for the_ [_**BoxProperties**_](struct_a_g_e_1_1_box_properties.md) _class._ |
 
 
 
@@ -163,6 +163,7 @@ Vector4 AGE::BoxProperties::TintColor;
 
 ### function BoxProperties 
 
+_Default constructor for the_ [_**BoxProperties**_](struct_a_g_e_1_1_box_properties.md) _class._
 ```C++
 AGE::BoxProperties::BoxProperties () = default
 ```

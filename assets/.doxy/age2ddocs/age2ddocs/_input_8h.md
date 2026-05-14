@@ -37,7 +37,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**Input**](class_a_g_e_1_1_input.md) <br> |
+| class | [**Input**](class_a_g_e_1_1_input.md) <br>_This class provides methods for checking the state of input devices._  |
 
 
 

@@ -15,11 +15,11 @@
 
 namespace AGE
 {
-    SceneCamera::SceneCamera()
+SceneCamera::SceneCamera()
     {
         RecalculateProjection();
     }
-    void SceneCamera::SetOrthographic(float Size, float NearClip, float FarClip)
+void SceneCamera::SetOrthographic(float Size, float NearClip, float FarClip)
     {
         m_ProjectionType = ProjectionType::Orthographic;
         m_OrthographicSize = Size;
@@ -27,7 +27,7 @@ namespace AGE
         m_OrthographicFar = FarClip;
         RecalculateProjection();
     }
-    void SceneCamera::SetPerspective(float VerticalFOV, float NearClip, float FarClip)
+void SceneCamera::SetPerspective(float VerticalFOV, float NearClip, float FarClip)
     {
         m_ProjectionType = ProjectionType::Perspective;
         m_PerspectiveFOV = VerticalFOV;
@@ -36,13 +36,13 @@ namespace AGE
 
         RecalculateProjection();
     }
-    void SceneCamera::SetViewportSize(uint32_t Width, uint32_t Height)
+void SceneCamera::SetViewportSize(uint32_t Width, uint32_t Height)
     {
         m_AspectRatio = (float)Width / (float)Height;
         
         RecalculateProjection();
     }
-    void SceneCamera::RecalculateProjection()
+void SceneCamera::RecalculateProjection()
     {
 
         if (m_ProjectionType == ProjectionType::Perspective && m_AspectRatio > 0.f)

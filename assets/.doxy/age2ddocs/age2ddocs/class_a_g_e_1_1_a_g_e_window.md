@@ -68,7 +68,7 @@
 | virtual void | [**SetVSync**](#function-setvsync) (bool Enabled) = 0<br> |
 | virtual void | [**SetWindowIcon**](#function-setwindowicon) (const std::filesystem::path & Path) = 0<br> |
 | virtual void | [**SwitchRenderer**](#function-switchrenderer) () = 0<br> |
-| virtual  | [**~AGEWindow**](#function-agewindow) () <br> |
+| virtual  | [**~AGEWindow**](#function-agewindow) () <br>_Virtual destructor for the_ [_**AGEWindow**_](class_a_g_e_1_1_a_g_e_window.md) _class._ |
 
 
 ## Public Static Functions
@@ -286,12 +286,23 @@ virtual void AGE::AGEWindow::SwitchRenderer () = 0
 
 ### function ~AGEWindow 
 
+_Virtual destructor for the_ [_**AGEWindow**_](class_a_g_e_1_1_a_g_e_window.md) _class._
 ```C++
 inline virtual AGE::AGEWindow::~AGEWindow () 
 ```
 
 
 
+This function is responsible for releasing any resources that were acquired by the object during its lifetime. It does not return anything and has no parameters.
+
+
+Virtual destructor for the [**AGEWindow**](class_a_g_e_1_1_a_g_e_window.md) class.
+
+
+This function is responsible for releasing any resources that were acquired by the [**AGEWindow**](class_a_g_e_1_1_a_g_e_window.md) object, such as memory or file handles. It does not return anything and thus has an empty return type (void). 
+
+
+        
 
 <hr>
 ## Public Static Functions Documentation

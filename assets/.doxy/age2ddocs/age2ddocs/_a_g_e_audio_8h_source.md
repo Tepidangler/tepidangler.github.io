@@ -23,7 +23,7 @@ namespace AGE
     {
     public:
         AGESound();
-        ~AGESound() override = default;
+~AGESound() override = default;
         virtual void Init() override;
         virtual void Start() override;
         virtual void Update() override;
@@ -65,7 +65,7 @@ namespace AGE
 
         //void AttachBufferToSource(uint32_t SourceID, ALsizei n, uint32_t* Buffer);
         //void DetachBuffersFromSource(uint32_t SourceID, ALsizei n, uint32_t& Buffers);
-        std::vector<std::string> GetAvailableSoundDevices() { return m_AvailableSoundDevices; }
+std::vector<std::string> GetAvailableSoundDevices() { return m_AvailableSoundDevices; }
 
         static bool DisplayErrorCode(const std::string& FN, const uint32_t line, ALenum Error);
 

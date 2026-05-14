@@ -35,18 +35,18 @@
 <codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;size_t&gt;<sp/>Log::s_Offsets;</highlight></codeline>
 <codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;LogType&gt;<sp/>Log::s_Type;</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Log::Init()</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::set_pattern(</highlight><highlight class="stringliteral">&quot;%^[%T]<sp/>%n:<sp/>%v%$&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s_AGECoreLogger<sp/>=<sp/>spdlog::stdout_color_mt(</highlight><highlight class="stringliteral">&quot;AGECORE&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s_AGECoreLogger-&gt;set_level(spdlog::level::trace);</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s_AGEGameLogger<sp/>=<sp/>spdlog::stdout_color_mt(</highlight><highlight class="stringliteral">&quot;AGEGAME&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s_AGEGameLogger-&gt;set_level(spdlog::level::trace);</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s_Offsets.push_back(0);</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_log_1a35c39ce640e98dbd1e3b7856275ead9b" kindref="member">Log::Init</ref>()</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::set_pattern(</highlight><highlight class="stringliteral">&quot;%^[%T]<sp/>%n:<sp/>%v%$&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s_AGECoreLogger<sp/>=<sp/>spdlog::stdout_color_mt(</highlight><highlight class="stringliteral">&quot;AGECORE&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s_AGECoreLogger-&gt;set_level(spdlog::level::trace);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s_AGEGameLogger<sp/>=<sp/>spdlog::stdout_color_mt(</highlight><highlight class="stringliteral">&quot;AGEGAME&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s_AGEGameLogger-&gt;set_level(spdlog::level::trace);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s_Offsets.push_back(0);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/Log.cpp"/>
   </compounddef>

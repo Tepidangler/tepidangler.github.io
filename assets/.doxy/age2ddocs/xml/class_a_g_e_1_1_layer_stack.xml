@@ -2,6 +2,28 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
   <compounddef id="class_a_g_e_1_1_layer_stack" kind="class" language="C++" prot="public">
     <compoundname>AGE::LayerStack</compoundname>
+    <includes local="no">LayerStack.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_a_g_e_1_1_layer_stack_1a6ab4b73b5f9a6eb63691991cc52883c9" prot="public" static="no" mutable="no">
+        <type>COMMENT</type>
+        <definition>COMMENT AGE::LayerStack::__pad0__</definition>
+        <argsstring></argsstring>
+        <name>__pad0__</name>
+        <qualifiedname>AGE::LayerStack::__pad0__</qualifiedname>
+        <bitfield>CONFIDENCE: 1.0</bitfield>
+        <briefdescription>
+<para>Returns an iterator pointing to the beginning of the Layers vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>An iterator pointing to the start of the Layers vector. If no layers exist, returns an iterator equal to <ref refid="class_a_g_e_1_1_layer_stack_1ab78f8f7bf719ad1dc2bcec8ad893a8ac" kindref="member">end()</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" line="37" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
     <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="class_a_g_e_1_1_layer_stack_1aa155b334fd3424cc222308388c3deeb4" prot="private" static="no" mutable="no">
         <type>std::vector&lt; <ref refid="class_a_g_e_1_1_layer" kindref="compound">Layer</ref> * &gt;</type>
@@ -15,7 +37,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" line="35" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" bodystart="35" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" line="81" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" bodystart="81" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_layer_stack_1acf8b01a50a569ee81aa0e569c8d8b7c4" prot="private" static="no" mutable="no">
         <type>unsigned int</type>
@@ -30,7 +52,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" line="36" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" bodystart="36" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" line="82" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" bodystart="82" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -41,12 +63,14 @@
         <name>LayerStack</name>
         <qualifiedname>AGE::LayerStack::LayerStack</qualifiedname>
         <briefdescription>
+<para><ref refid="class_a_g_e_1_1_layer_stack" kindref="compound">LayerStack</ref> is a class that manages layers in a stack-like structure. It provides methods for pushing, popping and managing the layers. </para>
         </briefdescription>
         <detaileddescription>
+<para><ref refid="class_a_g_e_1_1_layer_stack" kindref="compound">LayerStack</ref> is a class that manages layers in a stack-like structure. It provides methods for pushing, popping and managing layers. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" line="12" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/LayerStack.cpp" bodystart="6" bodyend="8"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" line="19" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/LayerStack.cpp" bodystart="14" bodyend="16"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_layer_stack_1afe024b5953520f058481e0e823175d60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -55,12 +79,14 @@
         <name>~LayerStack</name>
         <qualifiedname>AGE::LayerStack::~LayerStack</qualifiedname>
         <briefdescription>
+<para>Destructor for the <ref refid="class_a_g_e_1_1_layer_stack" kindref="compound">LayerStack</ref> class. This function is responsible for deleting all layers in the stack, freeing up memory that was previously allocated to them. It uses a range-based for loop to iterate over each layer and deletes it using the delete keyword. </para>
         </briefdescription>
         <detaileddescription>
+<para>Destructor for the <ref refid="class_a_g_e_1_1_layer_stack" kindref="compound">LayerStack</ref> class. This function is responsible for deleting all layers in the stack when an instance of the class is destroyed. It uses a range-based for loop to iterate over each layer and deletes it using &apos;delete&apos;. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" line="13" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/LayerStack.cpp" bodystart="10" bodyend="17"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" line="20" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/LayerStack.cpp" bodystart="28" bodyend="35"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_layer_stack_1a775acea8be34393ea21c361297a6924b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -73,12 +99,39 @@
           <declname>Layer</declname>
         </param>
         <briefdescription>
+<para>Pushes a layer onto the stack at the specified position. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function inserts a new layer into the <ref refid="class_a_g_e_1_1_layer_stack" kindref="compound">LayerStack</ref> at the specified index, effectively pushing it to the top of the rendering order. The layer is inserted before all existing layers. If no index is provided, it defaults to the end of the stack (top).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_a_g_e_1_1_layer" kindref="compound">Layer</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the layer that should be pushed onto the stack.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void No return value.</para>
+</simplesect>
+Pushes a layer onto the stack at the specified index.</para>
+<para>This function inserts a new layer into the <ref refid="class_a_g_e_1_1_layer_stack" kindref="compound">LayerStack</ref> at the position indicated by m_LayerInsertIndex. The layer is inserted before all existing layers with lower indices, and its index in the stack increases by one.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_a_g_e_1_1_layer" kindref="compound">Layer</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the layer that will be pushed onto the stack. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void No return value. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" line="15" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/LayerStack.cpp" bodystart="20" bodyend="24"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" line="22" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/LayerStack.cpp" bodystart="55" bodyend="59"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_layer_stack_1ada534989c8c78d6fbc78e4ab4b6e4657" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -91,12 +144,37 @@
           <declname>Overlay</declname>
         </param>
         <briefdescription>
+<para>Pushes an overlay layer onto the stack. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function adds a new layer to the top of the <ref refid="class_a_g_e_1_1_layer_stack" kindref="compound">LayerStack</ref>, making it visible and interactive. The layer is added at the end of the m_Layers vector, so it will be rendered on top of all other layers.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Overlay</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the overlay layer that should be pushed onto the stack. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void No return value.</para>
+</simplesect>
+Pushes an overlay layer onto the stack.</para>
+<para>This function adds a new layer to the top of the <ref refid="class_a_g_e_1_1_layer_stack" kindref="compound">LayerStack</ref>, making it visible and interactive. The layer is added at the end of the m_Layers vector, so it will be rendered on top of all other layers.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Overlay</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the overlay layer that should be pushed onto the stack. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" line="17" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/LayerStack.cpp" bodystart="25" bodyend="28"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" line="24" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/LayerStack.cpp" bodystart="77" bodyend="80"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_layer_stack_1a4ae9ac123b70c17f0f31e9aa511736bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -109,12 +187,33 @@
           <declname>Layer</declname>
         </param>
         <briefdescription>
+<para>This function is used to remove a layer from the <ref refid="class_a_g_e_1_1_layer_stack" kindref="compound">LayerStack</ref>. It calls the OnDetach() method of the provided layer, then it searches for that layer in the m_Layers vector and removes it if found. The index where this layer was inserted into the stack is also decremented by one. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_a_g_e_1_1_layer" kindref="compound">Layer</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the layer that needs to be removed from the stack.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Pop a layer from the stack and detach it.</para>
+<para>This function removes a specified <ref refid="class_a_g_e_1_1_layer" kindref="compound">Layer</ref> object from the <ref refid="class_a_g_e_1_1_layer_stack" kindref="compound">LayerStack</ref> by calling its OnDetach() method, then erases it from the m_Layers vector. The index of insertion is also decremented to reflect this removal. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_a_g_e_1_1_layer" kindref="compound">Layer</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the layer that needs to be removed. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" line="19" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/LayerStack.cpp" bodystart="29" bodyend="40"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" line="26" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/LayerStack.cpp" bodystart="93" bodyend="104"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_layer_stack_1ae87c887c78b5b4aeb6e3fe9eec655a0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -127,12 +226,37 @@
           <declname>Overlay</declname>
         </param>
         <briefdescription>
+<para>This function is used to remove an overlay from the layer stack. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Overlay</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the <ref refid="class_a_g_e_1_1_layer" kindref="compound">Layer</ref> object that needs to be removed.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void</para>
+</simplesect>
+This function is used to remove an overlay from the layer stack.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Overlay</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the <ref refid="class_a_g_e_1_1_layer" kindref="compound">Layer</ref> object that needs to be removed.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void No return value. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" line="21" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/LayerStack.cpp" bodystart="41" bodyend="49"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" line="28" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/LayerStack.cpp" bodystart="119" bodyend="127"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_layer_stack_1a3da9342fc66a2bd4ecefa2bfacd7bdc0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="class_a_g_e_1_1_layer" kindref="compound">Layer</ref> *</type>
@@ -145,12 +269,37 @@
           <declname>LayerName</declname>
         </param>
         <briefdescription>
+<para>This function is used to get a layer by its name. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function iterates over the layers in the stack and returns the first one whose name matches the input string. If no such layer exists, it returns nullptr.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>LayerName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A const reference to a std::string representing the name of the layer we are looking for. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to <ref refid="class_a_g_e_1_1_layer" kindref="compound">Layer</ref> if found, otherwise nullptr.</para>
+</simplesect>
+This function is used to get a layer by its name. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>LayerName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the layer that we want to find. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns a pointer to the found layer if it exists, otherwise returns nullptr. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" line="23" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/LayerStack.cpp" bodystart="51" bodyend="65"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" line="30" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/LayerStack.cpp" bodystart="142" bodyend="156"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_layer_stack_1aafa4ec50ce6b0decca45ce25b7e285bf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::vector&lt; <ref refid="class_a_g_e_1_1_layer" kindref="compound">Layer</ref> * &gt;::iterator</type>
@@ -164,7 +313,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" line="26" column="24" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" bodystart="26" bodyend="26"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" line="44" column="24" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" bodystart="44" bodyend="44"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_layer_stack_1ab78f8f7bf719ad1dc2bcec8ad893a8ac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::vector&lt; <ref refid="class_a_g_e_1_1_layer" kindref="compound">Layer</ref> * &gt;::iterator</type>
@@ -173,12 +322,18 @@
         <name>end</name>
         <qualifiedname>AGE::LayerStack::end</qualifiedname>
         <briefdescription>
+<para>Returns an iterator pointing to the theoretical element that follows the last element of the vector. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>An iterator to the theoretical element following the last element of the vector.</para>
+</simplesect>
+Returns an iterator pointing to the theoretical element past the last element of the container. <simplesect kind="return"><para>An iterator to the theoretical element past the end of the sequence of elements in the container. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" line="28" column="24" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" bodystart="28" bodyend="28"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" line="54" column="24" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" bodystart="54" bodyend="54"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_layer_stack_1a64701fe086a1c4bf64f280664351e9df" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>std::vector&lt; <ref refid="class_a_g_e_1_1_layer" kindref="compound">Layer</ref> * &gt;::const_iterator</type>
@@ -187,12 +342,18 @@
         <name>begin</name>
         <qualifiedname>AGE::LayerStack::begin</qualifiedname>
         <briefdescription>
+<para>Returns a constant iterator pointing to the beginning of the layers vector. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>A constant iterator to the start of the layers vector.</para>
+</simplesect>
+Returns a constant iterator pointing to the beginning of the layers vector. <simplesect kind="return"><para>A constant iterator pointing to the first element in the layers vector, or end if the layers vector is empty. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" line="30" column="30" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" bodystart="30" bodyend="30"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" line="64" column="30" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" bodystart="64" bodyend="64"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_layer_stack_1a47adcffde9623b2f0b8dbcb07700e0cf" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>std::vector&lt; <ref refid="class_a_g_e_1_1_layer" kindref="compound">Layer</ref> * &gt;::const_iterator</type>
@@ -201,20 +362,30 @@
         <name>end</name>
         <qualifiedname>AGE::LayerStack::end</qualifiedname>
         <briefdescription>
+<para>Returns a constant iterator pointing to the past-the-end element of the layer vector. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function returns a constant iterator that points to one position past the last element in the layer vector. It is used to indicate the end of the sequence of elements in the container, similar to how std::vector&apos;s member functions cend() return an iterator pointing to the past-the-end element.</para>
+<para><simplesect kind="return"><para>A constant iterator pointing to the past-the-end element.</para>
+</simplesect>
+Returns a constant iterator pointing to the past-the-end element of the layers vector. <simplesect kind="return"><para>A constant iterator pointing to the past-the-end element in the layers vector. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" line="32" column="30" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" bodystart="32" bodyend="32"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" line="78" column="30" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" bodystart="78" bodyend="78"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>A class for managing layers in a stack-like structure. </para>
     </briefdescription>
     <detaileddescription>
+<para>The <ref refid="class_a_g_e_1_1_layer_stack" kindref="compound">LayerStack</ref> class provides methods to push, pop and get layers by name. It also supports iteration over the layers using iterators. </para>
     </detaileddescription>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" line="9" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" bodystart="10" bodyend="37"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" line="16" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/LayerStack.h" bodystart="17" bodyend="83"/>
     <listofallmembers>
+      <member refid="class_a_g_e_1_1_layer_stack_1a6ab4b73b5f9a6eb63691991cc52883c9" prot="public" virt="non-virtual"><scope>AGE::LayerStack</scope><name>__pad0__</name></member>
       <member refid="class_a_g_e_1_1_layer_stack_1aafa4ec50ce6b0decca45ce25b7e285bf" prot="public" virt="non-virtual"><scope>AGE::LayerStack</scope><name>begin</name></member>
       <member refid="class_a_g_e_1_1_layer_stack_1a64701fe086a1c4bf64f280664351e9df" prot="public" virt="non-virtual"><scope>AGE::LayerStack</scope><name>begin</name></member>
       <member refid="class_a_g_e_1_1_layer_stack_1ab78f8f7bf719ad1dc2bcec8ad893a8ac" prot="public" virt="non-virtual"><scope>AGE::LayerStack</scope><name>end</name></member>

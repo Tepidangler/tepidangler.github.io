@@ -87,24 +87,24 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: right;">Ref&lt; <a href="../class_a_g_e_1_1_tilemap/"><strong>Tilemap</strong></a> &gt;</td>
-<td style="text-align: left;"><a href="#function-loadtilemap"><strong>LoadTileMap</strong></a> (const std::filesystem::path &amp; Path) <br></td>
+<td style="text-align: right;">void</td>
+<td style="text-align: left;"><a href="#function-loadtilemap"><strong>LoadTileMap</strong></a> (const std::filesystem::path &amp; Path) <br><em>Loads a tile map from the specified path into the</em> <a href="./"><em><strong>TileMapManager</strong></em></a> <em>.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-loadtilemaps-12"><strong>LoadTileMaps</strong></a> (const std::vector&lt; std::filesystem::path &gt; &amp; Paths) <br></td>
+<td style="text-align: left;"><a href="#function-loadtilemaps-12"><strong>LoadTileMaps</strong></a> (const std::vector&lt; std::filesystem::path &gt; &amp; Paths) <br><em>Loads a list of tile maps from the given paths into the manager's collection.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-loadtilemaps-22"><strong>LoadTileMaps</strong></a> (void * Addr) <br></td>
+<td style="text-align: left;"><a href="#function-loadtilemaps-22"><strong>LoadTileMaps</strong></a> (void * Addr) <br><em>Loads the tile maps into memory from a specified address.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-tilemapmanager"><strong>TileMapManager</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-tilemapmanager"><strong>TileMapManager</strong></a> () <br><em>Constructs a</em> <a href="./"><em><strong>TileMapManager</strong></em></a> <em>object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-tilemapmanager"><strong>~TileMapManager</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-tilemapmanager"><strong>~TileMapManager</strong></a> () = default<br><em>Default destructor for the</em> <a href="./"><em><strong>TileMapManager</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
@@ -119,67 +119,110 @@
 <tbody>
 <tr>
 <td style="text-align: right;"><a href="./"><strong>TileMapManager</strong></a> &amp;</td>
-<td style="text-align: left;"><a href="#function-get"><strong>Get</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-get"><strong>Get</strong></a> () <br><em>Get the singleton instance of the</em> <a href="./"><em><strong>TileMapManager</strong></em></a> <em>. If it doesn't exist, create a new one.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-imagefree"><strong>ImageFree</strong></a> (void * Address) <br></td>
+<td style="text-align: left;"><a href="#function-imagefree"><strong>ImageFree</strong></a> (void * Address) <br><em>Frees an image previously allocated with ImageAlloc.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void *</td>
-<td style="text-align: left;"><a href="#function-imageload"><strong>ImageLoad</strong></a> (const char * Path) <br></td>
+<td style="text-align: left;"><a href="#function-imageload"><strong>ImageLoad</strong></a> (const char * Path) <br><em>Loads an image from a specified path and creates a</em> <a href="../class_a_g_e_1_1_texture2_d/"><em><strong>Texture2D</strong></em></a> <em>object for it.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-loadtilemap">function LoadTileMap</h3>
-<pre><code class="language-C++">Ref&lt; Tilemap &gt; AGE::TileMapManager::LoadTileMap (
+<p><em>Loads a tile map from the specified path into the</em> <a href="./"><em><strong>TileMapManager</strong></em></a> <em>.</em></p>
+<pre><code class="language-C++">void AGE::TileMapManager::LoadTileMap (
     const std::filesystem::path &amp; Path
 ) 
 </code></pre>
+<p>This function takes in a file system path, uses an importer to import the map data from that path, creates a new <a href="../class_a_g_e_1_1_tilemap/"><strong>Tilemap</strong></a> object with this imported data, sets its data (atlas texture and path) based on the current tile map's data, and then adds it to the list of tile maps.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Path</code> The file system path where the tile map is located. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void No return value. </p>
 <hr>
 
 <h3 id="function-loadtilemaps-12">function LoadTileMaps [1/2]</h3>
+<p><em>Loads a list of tile maps from the given paths into the manager's collection.</em> </p>
 <pre><code class="language-C++">void AGE::TileMapManager::LoadTileMaps (
     const std::vector&lt; std::filesystem::path &gt; &amp; Paths
 ) 
 </code></pre>
+<p>This function iterates over each path in the provided vector, imports the corresponding tile map using the importer, and adds it to the manager's collection. The imported tile map is then configured with the current atlas texture and path before being added to the collection.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Paths</code> A list of file paths representing the locations of the tile maps to be loaded. </li>
+</ul>
 <hr>
 
 <h3 id="function-loadtilemaps-22">function LoadTileMaps [2/2]</h3>
+<p><em>Loads the tile maps into memory from a specified address.</em> </p>
 <pre><code class="language-C++">void AGE::TileMapManager::LoadTileMaps (
     void * Addr
 ) 
 </code></pre>
+<p>This function loads all the tile maps stored in memory at a given address. The address is passed as a void pointer, allowing for flexibility in terms of data types that can be loaded.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Addr</code> A pointer to the start of the tile map data. </li>
+</ul>
 <hr>
 
 <h3 id="function-tilemapmanager">function TileMapManager</h3>
+<p><em>Constructs a</em> <a href="./"><em><strong>TileMapManager</strong></em></a> <em>object.</em></p>
 <pre><code class="language-C++">AGE::TileMapManager::TileMapManager () 
 </code></pre>
+<p>This function initializes the <a href="./"><strong>TileMapManager</strong></a> by creating an instance of <code>tmx_resource_manager</code> and assigning it to member variable <code>m_Manager</code>.</p>
+<p>Constructs a <a href="./"><strong>TileMapManager</strong></a> object. This function initializes the <a href="./"><strong>TileMapManager</strong></a>, setting up the resource manager and tile map importer. </p>
 <hr>
 
 <h3 id="function-tilemapmanager_1">function ~TileMapManager</h3>
+<p><em>Default destructor for the</em> <a href="./"><em><strong>TileMapManager</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::TileMapManager::~TileMapManager () = default
 </code></pre>
+<p>This function is responsible for releasing any resources that were acquired by the <a href="./"><strong>TileMapManager</strong></a> during its lifetime, such as memory or file handles. It does not perform any operations on the objects themselves.</p>
+<p>Default destructor for <a href="./"><strong>TileMapManager</strong></a> class. </p>
 <hr>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
 <h3 id="function-get">function Get</h3>
+<p><em>Get the singleton instance of the</em> <a href="./"><em><strong>TileMapManager</strong></em></a> <em>. If it doesn't exist, create a new one.</em></p>
 <pre><code class="language-C++">static inline TileMapManager &amp; AGE::TileMapManager::Get () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>Reference to the single instance of <a href="./"><strong>TileMapManager</strong></a>. </p>
 <hr>
 
 <h3 id="function-imagefree">function ImageFree</h3>
+<p><em>Frees an image previously allocated with ImageAlloc.</em> </p>
 <pre><code class="language-C++">static void AGE::TileMapManager::ImageFree (
     void * Address
 ) 
 </code></pre>
+<p>This function takes a void pointer to an image that was previously allocated using the ImageAlloc function and frees it, effectively deallocating the memory used by this image. The size of the image is determined by sizeof(Texture2D).</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Address</code> A void pointer to the image to be freed. This should have been obtained from a previous call to ImageAlloc. </li>
+</ul>
 <hr>
 
 <h3 id="function-imageload">function ImageLoad</h3>
+<p><em>Loads an image from a specified path and creates a</em> <a href="../class_a_g_e_1_1_texture2_d/"><em><strong>Texture2D</strong></em></a> <em>object for it.</em></p>
 <pre><code class="language-C++">static void * AGE::TileMapManager::ImageLoad (
     const char * Path
 ) 
 </code></pre>
+<p>This function takes in a string representing the file path of the image to be loaded, loads this image using stb_image library, generates a texture from the image data, and returns a void pointer to that texture.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Path</code> The file path of the image to load. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A void pointer to the created <a href="../class_a_g_e_1_1_texture2_d/"><strong>Texture2D</strong></a> object. </p>
 <hr>
 
 <hr />

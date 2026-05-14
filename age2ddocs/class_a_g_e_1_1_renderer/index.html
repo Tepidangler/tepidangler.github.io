@@ -77,6 +77,21 @@
               
                 <h1 id="class-agerenderer">Class AGE::Renderer</h1>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespace_a_g_e/"><strong>AGE</strong></a> <strong>&gt;</strong> <a href="./"><strong>Renderer</strong></a></p>
+<h2 id="public-attributes">Public Attributes</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">COMMENT</td>
+<td style="text-align: left;"><a href="#variable-__pad0__"><strong>__pad0__</strong></a>  <br><em>Sets the rendering API to be used by the application.</em></td>
+</tr>
+</tbody>
+</table>
 <h2 id="public-static-functions">Public Static Functions</h2>
 <table>
 <thead>
@@ -88,35 +103,35 @@
 <tbody>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-beginscene-12"><strong>BeginScene</strong></a> (const <a href="../class_a_g_e_1_1_camera/"><strong>Camera</strong></a> &amp; Camera, const <a href="../struct_a_g_e_1_1_matrix4_d/"><strong>Matrix4D</strong></a> &amp; Transform) <br></td>
+<td style="text-align: left;"><a href="#function-beginscene-12"><strong>BeginScene</strong></a> (const <a href="../class_a_g_e_1_1_camera/"><strong>Camera</strong></a> &amp; Camera, const <a href="../struct_a_g_e_1_1_matrix4_d/"><strong>Matrix4D</strong></a> &amp; Transform) <br><em>Begins a 3D scene with the given camera and transformation.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-beginscene-22"><strong>BeginScene</strong></a> (const <a href="../class_a_g_e_1_1_editor_camera/"><strong>EditorCamera</strong></a> &amp; Camera) <br></td>
+<td style="text-align: left;"><a href="#function-beginscene-22"><strong>BeginScene</strong></a> (const <a href="../class_a_g_e_1_1_editor_camera/"><strong>EditorCamera</strong></a> &amp; Camera) <br><em>Begins a new scene with the specified camera.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-endscene"><strong>EndScene</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-endscene"><strong>EndScene</strong></a> () <br><em>Ends the current scene rendering.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-flush"><strong>Flush</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-flush"><strong>Flush</strong></a> () <br><em>Flushes the rendering queue by calling the</em> <code>Flush</code> <em>function of the</em><code>RenderCommand</code> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">RendererAPI::API</td>
-<td style="text-align: left;"><a href="#function-getapi"><strong>GetAPI</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getapi"><strong>GetAPI</strong></a> () <br><em>This function returns the current API being used by the renderer.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-init"><strong>Init</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-init"><strong>Init</strong></a> () <br><em>Initializes the renderer.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-onframebufferresize"><strong>OnFramebufferResize</strong></a> (uint32_t Width, uint32_t Height) <br></td>
+<td style="text-align: left;"><a href="#function-onframebufferresize"><strong>OnFramebufferResize</strong></a> (uint32_t Width, uint32_t Height) <br><em>This function is called when the framebuffer size changes. It sets the viewport to match the new dimensions.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-onwindowresize"><strong>OnWindowResize</strong></a> (uint32_t Width, uint32_t Height) <br></td>
+<td style="text-align: left;"><a href="#function-onwindowresize"><strong>OnWindowResize</strong></a> (uint32_t Width, uint32_t Height) <br><em>This function is called when the window size is resized. It sets the viewport to match the new dimensions.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
@@ -124,64 +139,151 @@
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-shutdown"><strong>Shutdown</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-shutdown"><strong>Shutdown</strong></a> () <br><em>Shuts down the renderer and its 2D component.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-submit"><strong>Submit</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-submit"><strong>Submit</strong></a> () <br><em>Submits a render command to the queue.</em></td>
 </tr>
 </tbody>
 </table>
+<h2 id="public-attributes-documentation">Public Attributes Documentation</h2>
+<h3 id="variable-__pad0__">variable __pad0__</h3>
+<p><em>Sets the rendering API to be used by the application.</em> </p>
+<pre><code class="language-C++">COMMENT AGE::Renderer::__pad0__;
+</code></pre>
+<p>This function sets the API that will be used for rendering operations in the application. The API can be one of three types: OpenGL, DirectX or Vulkan. It is important to note that this function does not handle any errors or exceptions related to invalid APIs. Therefore, it's crucial to ensure that the input value is a valid one (OpenGL, DirectX or Vulkan).</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><a href="./"><strong>Renderer</strong></a> The API to be set for rendering operations. It can be either RendererAPI::API::OPENGL, RendererAPI::API::DIRECTX or RendererAPI::API::VULKAN. </li>
+</ul>
+<hr>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
 <h3 id="function-beginscene-12">function BeginScene [1/2]</h3>
+<p><em>Begins a 3D scene with the given camera and transformation.</em> </p>
 <pre><code class="language-C++">static void AGE::Renderer::BeginScene (
     const Camera &amp; Camera,
     const Matrix4D &amp; Transform
 ) 
 </code></pre>
+<p>This function begins a new 3D scene using the provided camera and transformation matrix. It uses the <a href="../class_a_g_e_1_1_renderer2_d/#function-beginscene-12"><strong>Renderer2D::BeginScene()</strong></a> method to do this, passing in the camera and transform as parameters.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><a href="../class_a_g_e_1_1_camera/"><strong>Camera</strong></a> The camera used for rendering the scene. </li>
+<li><code>Transform</code> The transformation matrix applied to the scene objects.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void No return value is expected.</p>
+<p>Begins a new scene with the given camera and transformation.</p>
+<p>This function begins a new rendering scene using the provided camera and transformation matrix. It uses <a href="../class_a_g_e_1_1_renderer2_d/#function-beginscene-12"><strong>Renderer2D::BeginScene</strong></a> to start the scene, which is expected to handle the actual setup of the scene.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><a href="../class_a_g_e_1_1_camera/"><strong>Camera</strong></a> The camera that will be used for this scene. </li>
+<li><code>Transform</code> The transformation matrix that will be applied to everything in this scene. </li>
+</ul>
 <hr>
 
 <h3 id="function-beginscene-22">function BeginScene [2/2]</h3>
+<p><em>Begins a new scene with the specified camera.</em> </p>
 <pre><code class="language-C++">static void AGE::Renderer::BeginScene (
     const EditorCamera &amp; Camera
 ) 
 </code></pre>
+<p>This function begins a new rendering scene using the provided <a href="../class_a_g_e_1_1_editor_camera/"><strong>EditorCamera</strong></a> object. It utilizes the <a href="../class_a_g_e_1_1_renderer2_d/"><strong>Renderer2D</strong></a> class to begin the scene, which allows for efficient rendering of 2D graphics.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><a href="../class_a_g_e_1_1_camera/"><strong>Camera</strong></a> The editor camera that will be used in this scene.</li>
+</ul>
+<p>Begins a new scene with the specified camera.</p>
+<p>This function begins a new rendering scene using the provided <a href="../class_a_g_e_1_1_editor_camera/"><strong>EditorCamera</strong></a> object. It uses <a href="../class_a_g_e_1_1_renderer2_d/"><strong>Renderer2D</strong></a>'s BeginScene method to start the scene, passing in the camera as an argument.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><a href="../class_a_g_e_1_1_camera/"><strong>Camera</strong></a> The editor camera that will be used for this scene. </li>
+</ul>
 <hr>
 
 <h3 id="function-endscene">function EndScene</h3>
+<p><em>Ends the current scene rendering.</em> </p>
 <pre><code class="language-C++">static void AGE::Renderer::EndScene () 
 </code></pre>
+<p>This function is used to end the current scene rendering by calling the <code>EndScene</code> method of the <a href="../class_a_g_e_1_1_renderer2_d/"><strong>Renderer2D</strong></a> class. It does not take any parameters and returns void.</p>
+<p><strong>Returns:</strong></p>
+<p>None</p>
+<p>Ends the current scene rendering.</p>
+<p>This function is used to end the current scene rendering by calling the <code>EndScene</code> method of the <a href="../class_a_g_e_1_1_renderer2_d/"><strong>Renderer2D</strong></a> class. It does not take any parameters and returns void. </p>
 <hr>
 
 <h3 id="function-flush">function Flush</h3>
+<p><em>Flushes the rendering queue by calling the</em> <code>Flush</code> <em>function of the</em><code>RenderCommand</code> <em>class.</em></p>
 <pre><code class="language-C++">static void AGE::Renderer::Flush () 
 </code></pre>
+<p>This function is used to clear the rendering queue and ensure that all previous render commands are executed before any new ones are added. It calls the <code>Flush</code> function from the <code>RenderCommand</code> class, which should handle the actual flushing process.</p>
+<p>Flushes the rendering queue.</p>
+<p>This function is used to flush the rendering queue by calling the <code>Flush</code> method of the <a href="../class_a_g_e_1_1_render_command/"><strong>RenderCommand</strong></a> class. It ensures that all pending render commands are executed immediately, without waiting for a new command to be added. </p>
 <hr>
 
 <h3 id="function-getapi">function GetAPI</h3>
+<p><em>This function returns the current API being used by the renderer.</em> </p>
 <pre><code class="language-C++">static inline RendererAPI::API AGE::Renderer::GetAPI () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>The enum value representing the currently active API (RendererAPI::OpenGL, RendererAPI::Vulkan, etc.).</p>
+<p>This function returns the current API being used by the renderer. </p>
+<p><strong>Returns:</strong></p>
+<p>The enum value representing the current API, which can be either RendererAPI::None, RendererAPI::OpenGL, or RendererAPI::DirectX. </p>
 <hr>
 
 <h3 id="function-init">function Init</h3>
+<p><em>Initializes the renderer.</em> </p>
 <pre><code class="language-C++">static void AGE::Renderer::Init () 
 </code></pre>
+<p>This function initializes various subsystems of the renderer, including <a href="../class_a_g_e_1_1_render_command/"><strong>RenderCommand</strong></a> and <a href="../class_a_g_e_1_1_renderer2_d/"><strong>Renderer2D</strong></a>. It uses AGE_PROFILE_FUNCTION to record its performance.</p>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Initializes the renderer.</p>
+<p>This function initializes the renderer by calling the Init function from <a href="../class_a_g_e_1_1_render_command/"><strong>RenderCommand</strong></a> class. It is used to prepare the renderer for rendering operations.</p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-onframebufferresize">function OnFramebufferResize</h3>
+<p><em>This function is called when the framebuffer size changes. It sets the viewport to match the new dimensions.</em> </p>
 <pre><code class="language-C++">static void AGE::Renderer::OnFramebufferResize (
     uint32_t Width,
     uint32_t Height
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Width</code> The width of the new framebuffer in pixels. </li>
+<li><code>Height</code> The height of the new framebuffer in pixels.</li>
+</ul>
+<p>This function is called when the framebuffer size changes. It sets the viewport to match the new dimensions. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Width</code> The width of the new framebuffer in pixels. </li>
+<li><code>Height</code> The height of the new framebuffer in pixels. </li>
+</ul>
 <hr>
 
 <h3 id="function-onwindowresize">function OnWindowResize</h3>
+<p><em>This function is called when the window size is resized. It sets the viewport to match the new dimensions.</em> </p>
 <pre><code class="language-C++">static void AGE::Renderer::OnWindowResize (
     uint32_t Width,
     uint32_t Height
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Width</code> The new width of the window in pixels. </li>
+<li><code>Height</code> The new height of the window in pixels.</li>
+</ul>
+<p>This function is used to handle the window resize event. It sets the viewport size based on the provided width and height parameters. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Width</code> The new width of the window. </li>
+<li><code>Height</code> The new height of the window. </li>
+</ul>
 <hr>
 
 <h3 id="function-setapi">function SetAPI</h3>
@@ -192,13 +294,29 @@
 <hr>
 
 <h3 id="function-shutdown">function Shutdown</h3>
+<p><em>Shuts down the renderer and its 2D component.</em> </p>
 <pre><code class="language-C++">static void AGE::Renderer::Shutdown () 
 </code></pre>
+<p>This function is used to clean up resources held by the <a href="./"><strong>Renderer</strong></a> and its associated <a href="../class_a_g_e_1_1_renderer2_d/"><strong>Renderer2D</strong></a> component. It should be called when shutting down the application or before initializing a new scene.</p>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Shuts down the renderer and its 2D component.</p>
+<p>This function is used to clean up resources held by the <a href="./"><strong>Renderer</strong></a> and its associated <a href="../class_a_g_e_1_1_renderer2_d/"><strong>Renderer2D</strong></a> component. It should be called when shutting down the application or before initializing a new scene.</p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-submit">function Submit</h3>
+<p><em>Submits a render command to the queue.</em> </p>
 <pre><code class="language-C++">static void AGE::Renderer::Submit () 
 </code></pre>
+<p>This function submits a render command to the rendering system's queue, which will be processed and executed at some point in the future. The specific behavior of this function is not specified as it depends on the implementation details of the <a href="./"><strong>Renderer</strong></a> class and its associated <a href="../class_a_g_e_1_1_render_command/"><strong>RenderCommand</strong></a> classes.</p>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Submits the current render command to be processed by the renderer.</p>
+<p>This function submits a render command for processing by the <a href="./"><strong>Renderer</strong></a> class. It uses the <a href="../class_a_g_e_1_1_render_command/#function-submit"><strong>RenderCommand::Submit()</strong></a> method, which is responsible for adding the command to the queue of commands that need to be processed.</p>
+<p><strong>Returns:</strong></p>
+<p>void No return value. </p>
 <hr>
 
 <hr />

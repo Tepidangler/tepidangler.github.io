@@ -29,15 +29,15 @@ namespace AGE
         void DrawContent() override;
         void OnUpdate(TimeStep DeltaTime) override;
         void OnEvent(Event& Event) override;
-        void CallSerialize(DataWriter* Serializer) override
+void CallSerialize(DataWriter* Serializer) override
         {
             //Serializer->WriteObject<VerticalBoxComponent>(*this);
         }
-        void CallDeserialize(DataReader* Serializer) override
+void CallDeserialize(DataReader* Serializer) override
         {
             //Serializer->ReadObject<VerticalBoxComponent>(*this);
         }
-        void SetOnClickFunc(const std::function<void()>& func) { m_OnClick = func; }
+void SetOnClickFunc(const std::function<void()>& func) { m_OnClick = func; }
 
         RTTR_ENABLE(UIComponent)
         RTTR_REGISTRATION_FRIEND

@@ -116,12 +116,24 @@
           <declname>Filepath</declname>
         </param>
         <briefdescription>
+<para>Sets the quest file path. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function sets the QuestFilepath member variable to a new value, which represents the path of the quest file. The parameter &apos;Filepath&apos; is used as input for setting this member variable.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Filepath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A const reference to std::filesystem::path representing the new quest file path. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" line="29" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" bodystart="29" bodyend="32"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" line="37" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" bodystart="37" bodyend="40"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_project_info_1a386a93acd3968e3243c3eb9de5cbd5c8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -134,12 +146,26 @@
           <declname>Bindings</declname>
         </param>
         <briefdescription>
+<para>Updates the action bindings with new input bindings. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes a vector of references to <ref refid="struct_a_g_e_1_1_input_binding" kindref="compound">InputBinding</ref> objects and appends them to the existing ActionBindings list. The purpose is to update or extend the current set of actions that can be performed by the user.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Bindings</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A constant reference to a vector of <ref refid="struct_a_g_e_1_1_input_binding" kindref="compound">InputBinding</ref> objects, which represent new bindings to add. Each element in this vector represents an action and its associated input binding.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void No return value is expected as all changes are made directly on the ActionBindings list. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" line="34" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" bodystart="34" bodyend="37"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" line="53" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" bodystart="53" bodyend="56"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_project_info_1a74815d1791ac60641f2c9fa4fc70eede" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -152,19 +178,33 @@
           <declname>Bindings</declname>
         </param>
         <briefdescription>
+<para>Updates the Axis bindings with new input bindings. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes a vector of <ref refid="struct_a_g_e_1_1_input_binding" kindref="compound">InputBinding</ref> references and adds them to the existing Axis Bindings. The new bindings are appended at the end of the current list.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Bindings</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- A const reference to a std::vector of <ref refid="struct_a_g_e_1_1_input_binding" kindref="compound">InputBinding</ref> references. Each element in this vector represents an input binding that will be added to the existing set of axis bindings.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" line="38" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" bodystart="38" bodyend="41"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" line="67" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" bodystart="67" bodyend="70"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" line="18" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" bodystart="19" bodyend="42"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" line="18" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Project/Public/Project.h" bodystart="19" bodyend="71"/>
     <listofallmembers>
       <member refid="struct_a_g_e_1_1_project_info_1a08846551c0a9b3479ac62d975a7bc3df" prot="public" virt="non-virtual"><scope>AGE::ProjectInfo</scope><name>ActionBindings</name></member>
       <member refid="struct_a_g_e_1_1_project_info_1a30d4bb7406c96e266f4a748893b532c5" prot="public" virt="non-virtual"><scope>AGE::ProjectInfo</scope><name>AudioEngine</name></member>

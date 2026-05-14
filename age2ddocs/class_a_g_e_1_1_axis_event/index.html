@@ -105,15 +105,15 @@
 <tbody>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-axisevent"><strong>AxisEvent</strong></a> (int Axis, float Position) <br></td>
+<td style="text-align: left;"><a href="#function-axisevent"><strong>AxisEvent</strong></a> (int Axis, float Position) <br><em>Constructs an instance of the</em> <a href="./"><em><strong>AxisEvent</strong></em></a> <em>class with specified axis and position.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">int</td>
-<td style="text-align: left;"><a href="#function-getaxis"><strong>GetAxis</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getaxis"><strong>GetAxis</strong></a> () <br><em>This function returns the value of the member variable 'm_Axis'.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">float</td>
-<td style="text-align: left;"><a href="#function-getposition"><strong>GetPosition</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getposition"><strong>GetPosition</strong></a> () <br><em>This function returns the current position value.</em></td>
 </tr>
 </tbody>
 </table>
@@ -141,11 +141,11 @@
 </tr>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-isincategory"><strong>IsInCategory</strong></a> (EventCategory Category) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-isincategory"><strong>IsInCategory</strong></a> (EventCategory Category) <br><em>Checks if an event is in a specific category.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual std::string</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-tostring"><strong>ToString</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-tostring"><strong>ToString</strong></a> () const<br><em>Returns a string representation of the object.</em></td>
 </tr>
 </tbody>
 </table>
@@ -189,31 +189,60 @@
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_input_event/#function-inputevent-23"><strong>InputEvent</strong></a> (int Axis, float Position) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_input_event/#function-inputevent-23"><strong>InputEvent</strong></a> (int Axis, float Position) <br><em>Constructs an</em> <a href="../class_a_g_e_1_1_input_event/"><em><strong>InputEvent</strong></em></a> <em>object with the specified axis and position.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_input_event/#function-inputevent-33"><strong>InputEvent</strong></a> (int Button) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_input_event/#function-inputevent-33"><strong>InputEvent</strong></a> (int Button) <br><em>Constructor for the</em> <a href="../class_a_g_e_1_1_input_event/"><em><strong>InputEvent</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-axisevent">function AxisEvent</h3>
+<p><em>Constructs an instance of the</em> <a href="./"><em><strong>AxisEvent</strong></em></a> <em>class with specified axis and position.</em></p>
 <pre><code class="language-C++">inline AGE::AxisEvent::AxisEvent (
     int Axis,
     float Position
 ) 
 </code></pre>
+<p>This constructor creates a new instance of the <a href="./"><strong>AxisEvent</strong></a> class by initializing its base class (<a href="../class_a_g_e_1_1_input_event/"><strong>InputEvent</strong></a>) with the provided axis and position values.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Axis</code> The identifier for the input event's associated physical axis. </li>
+<li><code>Position</code> The current position of the physical axis in relation to its origin point.</li>
+</ul>
+<p>Constructs an instance of the <a href="./"><strong>AxisEvent</strong></a> class with specified axis and position.</p>
+<p>This constructor creates a new instance of the <a href="./"><strong>AxisEvent</strong></a> class by initializing its base class (<a href="../class_a_g_e_1_1_input_event/"><strong>InputEvent</strong></a>) with the provided axis and position values.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Axis</code> The identifier for the input event's associated physical axis, such as an x-axis or y-axis. </li>
+<li><code>Position</code> The current position on the specified axis. This could be a value between -1.0 and 1.0, representing full left to right movement.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>An instance of <a href="./"><strong>AxisEvent</strong></a> with the provided axis and position values. </p>
 <hr>
 
 <h3 id="function-getaxis">function GetAxis</h3>
+<p><em>This function returns the value of the member variable 'm_Axis'.</em> </p>
 <pre><code class="language-C++">inline int AGE::AxisEvent::GetAxis () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>The integer value stored in 'm_Axis'</p>
+<p>This function returns the current axis value.</p>
+<p><strong>Returns:</strong></p>
+<p>The integer value of the current axis. </p>
 <hr>
 
 <h3 id="function-getposition">function GetPosition</h3>
+<p><em>This function returns the current position value.</em> </p>
 <pre><code class="language-C++">inline float AGE::AxisEvent::GetPosition () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A floating-point number representing the current position.</p>
+<p>Returns the current position value.</p>
+<p>This function retrieves and returns the current position value stored in the member variable 'm_Position'. The returned value represents a float representing the position of an object or entity.</p>
+<p><strong>Returns:</strong></p>
+<p>A floating-point number representing the current position. </p>
 <hr>
 
 <hr />

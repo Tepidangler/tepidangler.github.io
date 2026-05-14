@@ -59,6 +59,63 @@
         </inbodydescription>
         <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="19" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="19" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_vector4_1a2ff2d7bd8349bb328ef38a414ac52739" prot="public" static="no" mutable="no">
+        <type>COMMENT</type>
+        <definition>COMMENT AGE::Vector4::__pad0__</definition>
+        <argsstring></argsstring>
+        <name>__pad0__</name>
+        <qualifiedname>AGE::Vector4::__pad0__</qualifiedname>
+        <bitfield>CONFIDENCE: 1.0</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="146" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_vector4_1a571248cac3ce260a33388def0d20f8f9" prot="public" static="no" mutable="no">
+        <type>COMMENT</type>
+        <definition>COMMENT AGE::Vector4::__pad1__</definition>
+        <argsstring></argsstring>
+        <name>__pad1__</name>
+        <qualifiedname>AGE::Vector4::__pad1__</qualifiedname>
+        <bitfield>CONFIDENCE: 1.0</bitfield>
+        <briefdescription>
+<para>Assigns the values of another <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> to this one. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This operator overload allows for easy assignment of the x, y and z components from a different <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object. The w component is always set to 1.0f.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to the <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> that we want to copy the values from. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="174" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_g_e_1_1_vector4_1a451a49e318ae3484ba837902ddae2927" prot="public" static="no" mutable="no">
+        <type>COMMENT</type>
+        <definition>COMMENT AGE::Vector4::__pad2__</definition>
+        <argsstring></argsstring>
+        <name>__pad2__</name>
+        <qualifiedname>AGE::Vector4::__pad2__</qualifiedname>
+        <bitfield>CONFIDENCE: 1.0</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="449" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="455" bodyend="-1"/>
+      </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
       <memberdef kind="function" id="struct_a_g_e_1_1_vector4_1ac7807d8f28b97178a8d20f973e32dd1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -68,12 +125,17 @@
         <name>Vector4</name>
         <qualifiedname>AGE::Vector4::Vector4</qualifiedname>
         <briefdescription>
+<para>Default constructor for the <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> class. Initializes all components to zero. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function initializes each component of a <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object, setting them all to zero. The four components are x, y, z and w. They represent different aspects of the vector such as position, direction or color intensity.</para>
+<para><simplesect kind="return"><para>void</para>
+</simplesect>
+Constructs a <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object with all components set to zero. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="20" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Vector4.cpp" bodystart="8" bodyend="13"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="20" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Vector4.cpp" bodystart="19" bodyend="24"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_vector4_1a55fbb822cbf613e219aa4ba3b051eabe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -86,12 +148,35 @@
           <declname>a</declname>
         </param>
         <briefdescription>
+<para>Constructs a <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> with all components set to the same value. </para>
         </briefdescription>
         <detaileddescription>
+<para>This constructor initializes each component of the vector to the provided float value &apos;a&apos;. The resulting vector will have x, y, z and w equal to &apos;a&apos;.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to initialize all four components of the <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> with.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Constructs a <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> with all components set to the same value.</para>
+<para>This constructor initializes each component of the vector to the provided float value. The resulting vector will have x, y, z and w equal to this single value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to initialize all four components of the <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> with. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="21" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Vector4.cpp" bodystart="15" bodyend="20"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="21" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Vector4.cpp" bodystart="42" bodyend="47"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_vector4_1a35bbc4ba4cde6b26363791467b689e9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -104,12 +189,35 @@
           <declname>vec</declname>
         </param>
         <briefdescription>
+<para>Constructs a <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object from a glm::vec4. </para>
         </briefdescription>
         <detaileddescription>
+<para>This constructor takes a glm::vec4 and assigns its x, y, z, w values to the corresponding members of this <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source vector.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Constructs a <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object from a glm::vec4.</para>
+<para>This constructor takes a glm::vec4 and assigns its x, y, z, w values to the corresponding members of this <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input vector. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="22" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Vector4.cpp" bodystart="22" bodyend="27"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="22" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Vector4.cpp" bodystart="63" bodyend="68"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_vector4_1af3f7cba1458be8263b0c66367339110c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -134,12 +242,83 @@
           <declname>d</declname>
         </param>
         <briefdescription>
+<para>Constructs a <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object with four components. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is used to initialize a <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object with the given four float values. The first two parameters represent x and y coordinates, while the next two are z and w respectively.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Float value representing the x component of the vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Float value representing the y component of the vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Float value representing the z component of the vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Float value representing the w component of the vector.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Constructs a <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object with four components.</para>
+<para>This function initializes a <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object with the given four float values, which represent the x, y, z and w coordinates of the vector respectively.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first component (x) of the vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second component (y) of the vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The third component (z) of the vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The fourth component (w) of the vector. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="23" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Vector4.cpp" bodystart="29" bodyend="34"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="23" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Vector4.cpp" bodystart="90" bodyend="95"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_vector4_1ac19142994ce52179c16c6b78e70fbf96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -164,12 +343,47 @@
           <declname>d</declname>
         </param>
         <briefdescription>
+<para>Constructs a <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object from four uint8_t values, each representing a byte of data. The bytes are converted to float and normalized between 0 and 100. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First input byte, represents the x-coordinate. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second input byte, represents the y-coordinate. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Third input byte, represents the z-coordinate. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Fourth input byte, represents the w-coordinate. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="24" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Vector4.cpp" bodystart="36" bodyend="54"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="24" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Vector4.cpp" bodystart="114" bodyend="132"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_vector4_1afbfead35b2f73868232d97941a7b42d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -182,12 +396,36 @@
           <declname>color</declname>
         </param>
         <briefdescription>
+<para>Constructs a <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object from an array of four floats. </para>
         </briefdescription>
         <detaileddescription>
+<para>The constructor takes in an array of four floats, which are used to initialize the x, y, z and w members of the <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of four floats representing the initial values for the <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object with its x, y, z and w members set to the corresponding elements in the input array.</para>
+</simplesect>
+Constructs a <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object from an array of four floats.</para>
+<para>This constructor takes in an array of four floats and assigns them to the x, y, z, and w members of the <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object respectively. The color parameter is expected to be in RGBA format where R (Red), G (Green), B (Blue) and A (Alpha) are float values between 0.0 and 1.0. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to an array of four floats representing the RGBA color values. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="25" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Vector4.cpp" bodystart="56" bodyend="61"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="25" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Vector4.cpp" bodystart="150" bodyend="155"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_vector4_1a96ded15ae8bf9cdfcbfe5040edede0cd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -200,12 +438,24 @@
           <declname>Other</declname>
         </param>
         <briefdescription>
+<para>Copy constructor for <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function creates a new instance of the <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> class by copying the values from another instance.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object to copy from. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="26" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="26" bodyend="32"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="33" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="33" bodyend="39"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_vector4_1a30cf0fd9cab4f32b84cd0eabf1ac128c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -214,12 +464,17 @@
         <name>~Vector4</name>
         <qualifiedname>AGE::Vector4::~Vector4</qualifiedname>
         <briefdescription>
+<para>Default destructor for the <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is responsible for releasing any resources that were acquired by the <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object, such as memory or file handles. It does not perform any operations on the actual data stored in the vector.</para>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="33" column="1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="47" column="1"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_vector4_1a6d0dae8619887f0137b112e34466b303" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> &amp;</type>
@@ -232,12 +487,26 @@
           <declname>Other</declname>
         </param>
         <briefdescription>
+<para>Assigns the values of another <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> to this one. </para>
         </briefdescription>
         <detaileddescription>
+<para>This operator overload allows for assignment of the values from one <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> instance to another. The vector components (x, y, z, w) are set to match those of the Other parameter.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A constant reference to a <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object whose values will be copied into this one. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the modified <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object for chaining operations. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="35" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="35" bodyend="42"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="57" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="57" bodyend="64"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_vector4_1a5f2212b32aabb034470f1b63efcff386" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -246,16 +515,21 @@
         <name>operator uint32_t</name>
         <qualifiedname>AGE::Vector4::operator uint32_t</qualifiedname>
         <briefdescription>
+<para>Converts the current color to a uint32_t representation. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function converts the current color into a 32-bit unsigned integer format, where each byte represents an RGBA component (Red, Green, Blue, Alpha). The conversion is done in such a way that if w &gt; 0, then each of the four bytes will be in the range [0, 255]. If w &lt;= 0, then all components are set to zero.</para>
+<para><simplesect kind="return"><para>A 32-bit unsigned integer representing the current color. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="48" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="48" bodyend="72"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="78" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="78" bodyend="102"/>
       </memberdef>
-      <memberdef kind="function" id="struct_a_g_e_1_1_vector4_1afb966f090753d17ab8eb99529a4b8b2a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type></type>
-        <definition>AGE::Vector4::operator uint32_t *</definition>
+      <memberdef kind="function" id="struct_a_g_e_1_1_vector4_1aed277afa9a4575ca7f4ce47d5bd3d4c4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>&lt; doxygen comment &gt;</type>
+        <definition>&lt; doxygen comment &gt; AGE::Vector4::operator uint32_t *</definition>
         <argsstring>()</argsstring>
         <name>operator uint32_t *</name>
         <qualifiedname>AGE::Vector4::operator uint32_t *</qualifiedname>
@@ -265,7 +539,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="74" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="74" bodyend="97"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="106" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="106" bodyend="129"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_vector4_1a5d1f10391debfdceb46f05821ff2bc2a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>float &amp;</type>
@@ -278,12 +552,36 @@
           <declname>i</declname>
         </param>
         <briefdescription>
+<para>This function returns a reference to the element at index &apos;i&apos; in an array of float values. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the element to return. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the float value at position &apos;i&apos;.</para>
+</simplesect>
+This function returns a reference to the element at index &apos;i&apos; in an array of floats. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the element to return. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the float at position &apos;i&apos;. If &apos;i&apos; is out of bounds, it will throw an exception. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="99" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="99" bodyend="102"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="142" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="142" bodyend="145"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_vector4_1a1b64d0cb436d55a3976c63c2e9b72e24" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const float &amp;</type>
@@ -296,12 +594,26 @@
           <declname>i</declname>
         </param>
         <briefdescription>
+<para>Returns a reference to the element at index &apos;i&apos; in an array of constant floats. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function returns a constant float reference that can be used for reading but not writing. The returned value is a reference to the i-th element of an internal array, where indices start from 0.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of the element in the array. Must be within the range [0, size of array - 1]. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Constant float reference to the i-th element of the array. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="103" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="103" bodyend="106"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="163" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="163" bodyend="166"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_vector4_1a3976f65abd5c6209899e4f6d052057de" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -319,7 +631,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="107" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="107" bodyend="113"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="185" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="185" bodyend="191"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_vector4_1af1748ff4fe2897d99e7c8e48eb0c2bb5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref></type>
@@ -332,12 +644,39 @@
           <declname>vec</declname>
         </param>
         <briefdescription>
+<para>Adds another vector to this one. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function adds the x, y and z components of another <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object to those of this object. The w component is not modified.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object to add to this one. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object resulting from the addition operation.</para>
+</simplesect>
+Adds another vector to this one.</para>
+<para>This function adds the x, y and z components of another <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object to those of this one. The w component of the other vector is added directly without modification.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object to add to this one. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object with the summed values. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="123" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="123" bodyend="125"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="236" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="236" bodyend="238"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_vector4_1aee0e2f9df0c1701ac6b123a23970590c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -350,12 +689,38 @@
           <declname>vec</declname>
         </param>
         <briefdescription>
+<para>This function adds the components of a <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> to this vector. </para>
         </briefdescription>
         <detaileddescription>
+<para>The operator+= is used for adding another <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object&apos;s values to the current one. It modifies the current object by adding the x, y, z and w components of the given <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> to the corresponding components of the current object. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A const reference to a <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object that will be added to this vector.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void</para>
+</simplesect>
+This function adds the components of another <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> to this one.</para>
+<para>The operator += is used to add the x, y, z and w values from a given <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> to the corresponding components in this <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A constant reference to a <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object whose components will be added to those of this <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="127" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="127" bodyend="132"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="258" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="258" bodyend="263"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_vector4_1a3ce12abd43c67b6f38756690d3330e23" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref></type>
@@ -368,12 +733,39 @@
           <declname>vec</declname>
         </param>
         <briefdescription>
+<para>Subtracts another vector from this one component by component. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function subtracts the corresponding components of the given vector from this vector&apos;s components. The result is a new <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> with the differences computed.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vector to be subtracted from this one. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> resulting from the component-wise subtraction.</para>
+</simplesect>
+Subtracts another vector from this one component by component.</para>
+<para>This function subtracts the corresponding components of the given vector from those of this vector. The result is a new <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> with the differences in its components.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vector to be subtracted from this one. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> containing the component-wise difference between this and the input vector. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="134" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="134" bodyend="136"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="283" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="283" bodyend="285"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_vector4_1a3440fa3bba001728c6b180ae76921932" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -386,12 +778,37 @@
           <declname>vec</declname>
         </param>
         <briefdescription>
+<para>Subtracts another <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> from this one. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function subtracts the x, y, z and w components of the given vector from the corresponding components of this vector.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> to be subtracted.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void</para>
+</simplesect>
+Subtracts another <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> from this one.</para>
+<para>This function subtracts the x, y, z and w components of the given vector from the corresponding components of this vector.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> to be subtracted. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="138" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="138" bodyend="143"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="303" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="303" bodyend="308"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_vector4_1acbf06e02d0bd86487701d021c92267ff" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref></type>
@@ -404,12 +821,38 @@
           <declname>scalar</declname>
         </param>
         <briefdescription>
+<para>This function returns a new vector that is the result of scaling this vector by a given scalar value. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scalar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to scale each component of the vector by. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> representing the scaled vector.</para>
+</simplesect>
+This function returns a new vector that is the result of scaling this vector by a given scalar.</para>
+<para>The resulting vector&apos;s x, y, z and w components are each multiplied by the provided scalar.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scalar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to scale the vector by. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> representing the scaled vector. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="145" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="145" bodyend="147"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="324" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="324" bodyend="326"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_vector4_1a88a1302862e49640819d6ef57aeaafb4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -422,12 +865,35 @@
           <declname>scalar</declname>
         </param>
         <briefdescription>
+<para>Multiplies the four components of this vector by a scalar. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function multiplies each component (x, y, z, w) of this vector by the given scalar. The result is stored in-place and does not return a new vector.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">scalar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to multiply with.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Multiplies the vector by a scalar value.</para>
+<para>This function multiplies each component of the vector (x, y, z, w) by the given scalar value. The result is stored in the same components of the vector.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">scalar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The scalar value to multiply with. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="149" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="149" bodyend="154"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="343" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="343" bodyend="348"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_vector4_1a03569f6791cf316ae0274311f4960277" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref></type>
@@ -440,12 +906,38 @@
           <declname>scalar</declname>
         </param>
         <briefdescription>
+<para>Performs division of the vector by a scalar value. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scalar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The float value to divide each component of the vector by. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> where each component is the result of dividing the corresponding component of this vector by the given scalar.</para>
+</simplesect>
+Divides the vector by a scalar value.</para>
+<para>This function divides each component of the vector by the provided scalar value. It returns a new <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> with divided components.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scalar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The scalar value to divide the vector by. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> where each component is the corresponding component of this vector divided by the scalar. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="156" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="156" bodyend="158"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="364" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="364" bodyend="366"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_vector4_1a002daec311585e55402ec11b24dc2445" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -458,12 +950,37 @@
           <declname>scalar</declname>
         </param>
         <briefdescription>
+<para>Divides the vector by a scalar value. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function divides each component of the vector (x, y, z, w) by the given scalar value. It modifies the original vector.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scalar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The scalar value to divide with.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void</para>
+</simplesect>
+Divides the vector by a scalar value.</para>
+<para>This function divides each component of the vector (x, y, z, w) by the given scalar value. It modifies the original vector.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scalar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The scalar value to divide with. Must not be zero to avoid division by zero. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="160" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="160" bodyend="165"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="386" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="386" bodyend="391"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_vector4_1acc672fedc1090a1277600211c24fc137" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>float</type>
@@ -476,12 +993,39 @@
           <declname>vec</declname>
         </param>
         <briefdescription>
+<para>Computes the dot product of this vector with another vector. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function takes a constant reference to another <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object and calculates the dot product by multiplying each corresponding component of both vectors (x, y, z, w) together and summing them up. It then returns the result as a float value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The other vector with which this one is to be multiplied. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A float representing the dot product of this vector and the input vector.</para>
+</simplesect>
+Computes the dot product of this vector with another <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object.</para>
+<para>The function takes a constant reference to another <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object and calculates the dot product by multiplying each component of the current <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object (x, y, z, w) with the corresponding component in the input <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object. It then returns the result as a float value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A const reference to the other <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object for which the dot product is calculated. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The computed dot product of this vector and the provided one. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="168" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="168" bodyend="171"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="412" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="412" bodyend="415"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_vector4_1a43f2e180351e6dbef61b68f3423daae3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>float</type>
@@ -494,12 +1038,39 @@
           <declname>vec</declname>
         </param>
         <briefdescription>
+<para>Calculates the magnitude of a four dimensional vector. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes in a constant reference to a <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object and calculates its magnitude by taking the square root of the sum of the squares of each component (x, y, z, w) subtracted from the corresponding components of the input vector. The result is returned as a float.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A constant reference to a <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object representing the vector for which we want to calculate the magnitude.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns a float value representing the magnitude of the input vector.</para>
+</simplesect>
+Calculates the magnitude of a four dimensional vector.</para>
+<para>This function takes a constant reference to a <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object and calculates its magnitude by applying the Euclidean distance formula on each component of the vector with respect to the origin (0,0,0,0). The result is returned as a float value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A constant reference to the <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object whose magnitude is being calculated. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns the magnitude of the input vector as a float. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="173" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="173" bodyend="182"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="438" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="438" bodyend="447"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_vector4_1a46a55f43d388e0f1e2a12f775d48ff5e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>float</type>
@@ -508,12 +1079,25 @@
         <name>magnitude</name>
         <qualifiedname>AGE::Vector4::magnitude</qualifiedname>
         <briefdescription>
+<para>Calculates the magnitude of a <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object using the Euclidean distance formula. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns a float representing the magnitude of the vector. If the vector is (0, 0, 0, 0), returns 0.0. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="184" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="184" bodyend="186"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="462" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="462" bodyend="464"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_vector4_1ab74be86930cb19fd590f6a7b365f9379" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref></type>
@@ -522,12 +1106,21 @@
         <name>normalize</name>
         <qualifiedname>AGE::Vector4::normalize</qualifiedname>
         <briefdescription>
+<para>Normalizes this vector. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function scales the vector so that its length (or magnitude) is equal to one, while maintaining its direction. If the vector has a zero length (i.e., it&apos;s a zero vector), the result will be another zero vector.</para>
+<para><simplesect kind="return"><para><ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> The normalized version of this vector.</para>
+</simplesect>
+Normalizes this vector.</para>
+<para>This function scales the components of the vector so that its length (magnitude) is equal to one, preserving the direction but making it a unit vector. If the vector has zero length (i.e., all elements are zero), the behavior is undefined and may result in division by zero or other unexpected errors.</para>
+<para><simplesect kind="return"><para>A new <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> object representing the normalized version of this vector. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="188" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Vector4.cpp" bodystart="79" bodyend="82"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="466" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Private/Vector4.cpp" bodystart="188" bodyend="191"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_vector4_1ad7d165717a40919bf4753c4757240015" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -540,12 +1133,39 @@
           <declname>vec</declname>
         </param>
         <briefdescription>
+<para>Compares this <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> with another for equality. </para>
         </briefdescription>
         <detaileddescription>
+<para>The comparison is done component-wise, i.e., it checks if the x, y, z and w components of both vectors are equal.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> to compare against. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if all components are equal, false otherwise.</para>
+</simplesect>
+Compares this <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> with another for equality.</para>
+<para>The function compares the x, y, z and w components of this <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> with those of the provided <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref>. If all four are equal, it returns true; otherwise, false is returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> to compare against.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the vectors are identical in x, y, z and w components; False otherwise. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="191" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="191" bodyend="193"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="486" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="486" bodyend="488"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_vector4_1a4784bceb1d21bc9eb4664d797c41b015" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -558,12 +1178,39 @@
           <declname>vec</declname>
         </param>
         <briefdescription>
+<para>Compares this <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> with another for inequality. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function compares each of the x, y, z and w components of this <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> to those of the provided <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref>. It returns true if any of these are not equal, false otherwise.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> to compare against. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if any component is different, false if all are identical.</para>
+</simplesect>
+Compares this <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> with another for inequality.</para>
+<para>This function compares each of the x, y, z and w components of this <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> with those of the provided <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref>. It returns true if any of these component are not equal, false otherwise.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> to compare against. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if any of the x, y, z or w components differ from this <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref>&apos;s corresponding components; false otherwise. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="195" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="195" bodyend="197"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="506" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="506" bodyend="508"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_vector4_1a57f128f6f6063e8cdf19966db4a2079d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -572,27 +1219,39 @@
         <name>operator std::string</name>
         <qualifiedname>AGE::Vector4::string</qualifiedname>
         <briefdescription>
+<para>Converts the object to a string representation. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function converts the current object into a string format that includes all its properties. The output is in the form &quot;X: &lt;x&gt; Y: &lt;y&gt; Z: &lt;z&gt; W: &lt;w&gt;&quot;.</para>
+<para><simplesect kind="return"><para>A std::string containing the formatted representation of the object.</para>
+</simplesect>
+Converts the object to a string representation.</para>
+<para>This function converts the current object into its string representation, which includes the values of x, y, z and w. The format is &quot;X: &lt;x&gt; Y: &lt;y&gt; Z: &lt;z&gt; W: &lt;w&gt;&quot;.</para>
+<para><simplesect kind="return"><para>A std::string containing the formatted coordinates. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="199" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="199" bodyend="206"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="526" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="526" bodyend="533"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="15" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="16" bodyend="208"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" line="15" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Math/Public/Vector4.h" bodystart="16" bodyend="535"/>
     <listofallmembers>
+      <member refid="struct_a_g_e_1_1_vector4_1a2ff2d7bd8349bb328ef38a414ac52739" prot="public" virt="non-virtual"><scope>AGE::Vector4</scope><name>__pad0__</name></member>
+      <member refid="struct_a_g_e_1_1_vector4_1a571248cac3ce260a33388def0d20f8f9" prot="public" virt="non-virtual"><scope>AGE::Vector4</scope><name>__pad1__</name></member>
+      <member refid="struct_a_g_e_1_1_vector4_1a451a49e318ae3484ba837902ddae2927" prot="public" virt="non-virtual"><scope>AGE::Vector4</scope><name>__pad2__</name></member>
       <member refid="struct_a_g_e_1_1_vector4_1acc672fedc1090a1277600211c24fc137" prot="public" virt="non-virtual"><scope>AGE::Vector4</scope><name>dot</name></member>
       <member refid="struct_a_g_e_1_1_vector4_1a46a55f43d388e0f1e2a12f775d48ff5e" prot="public" virt="non-virtual"><scope>AGE::Vector4</scope><name>magnitude</name></member>
       <member refid="struct_a_g_e_1_1_vector4_1a43f2e180351e6dbef61b68f3423daae3" prot="public" virt="non-virtual"><scope>AGE::Vector4</scope><name>norm</name></member>
       <member refid="struct_a_g_e_1_1_vector4_1ab74be86930cb19fd590f6a7b365f9379" prot="public" virt="non-virtual"><scope>AGE::Vector4</scope><name>normalize</name></member>
       <member refid="struct_a_g_e_1_1_vector4_1a57f128f6f6063e8cdf19966db4a2079d" prot="public" virt="non-virtual"><scope>AGE::Vector4</scope><name>operator std::string</name></member>
       <member refid="struct_a_g_e_1_1_vector4_1a5f2212b32aabb034470f1b63efcff386" prot="public" virt="non-virtual"><scope>AGE::Vector4</scope><name>operator uint32_t</name></member>
-      <member refid="struct_a_g_e_1_1_vector4_1afb966f090753d17ab8eb99529a4b8b2a" prot="public" virt="non-virtual"><scope>AGE::Vector4</scope><name>operator uint32_t *</name></member>
+      <member refid="struct_a_g_e_1_1_vector4_1aed277afa9a4575ca7f4ce47d5bd3d4c4" prot="public" virt="non-virtual"><scope>AGE::Vector4</scope><name>operator uint32_t *</name></member>
       <member refid="struct_a_g_e_1_1_vector4_1a4784bceb1d21bc9eb4664d797c41b015" prot="public" virt="non-virtual"><scope>AGE::Vector4</scope><name>operator!=</name></member>
       <member refid="struct_a_g_e_1_1_vector4_1acbf06e02d0bd86487701d021c92267ff" prot="public" virt="non-virtual"><scope>AGE::Vector4</scope><name>operator*</name></member>
       <member refid="struct_a_g_e_1_1_vector4_1a88a1302862e49640819d6ef57aeaafb4" prot="public" virt="non-virtual"><scope>AGE::Vector4</scope><name>operator*=</name></member>

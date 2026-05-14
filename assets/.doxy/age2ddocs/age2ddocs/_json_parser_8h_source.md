@@ -20,7 +20,7 @@ namespace AGE
     {
     public:
 
-        JsonParser() = default;
+JsonParser() = default;
         JsonParser(const std::string& FilePath);
 
         template<typename T>

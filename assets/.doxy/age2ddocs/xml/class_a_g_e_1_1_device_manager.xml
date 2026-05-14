@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" line="47" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" bodystart="47" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" line="95" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" bodystart="95" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_device_manager_1aa67fa30d2b1f32766f4f3b23f3ea8e2b" prot="private" static="no" mutable="no">
         <type>Scope&lt; <ref refid="class_a_g_e_1_1_audio_manager" kindref="compound">AudioManager</ref> &gt;</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" line="48" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" bodystart="48" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" line="96" column="7" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" bodystart="96" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="friend">
@@ -48,7 +48,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" line="52" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" bodystart="52" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" line="100" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" bodystart="100" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -68,12 +68,32 @@
           <defval>false</defval>
         </param>
         <briefdescription>
+<para>Constructs a <ref refid="class_a_g_e_1_1_device_manager" kindref="compound">DeviceManager</ref> object. </para>
         </briefdescription>
         <detaileddescription>
+<para>This constructor initializes the device manager with an audio engine type and a boolean flag indicating whether to use XInput or not. It creates an <ref refid="class_a_g_e_1_1_a_g_e_window" kindref="compound">AGEWindow</ref>, <ref refid="class_a_g_e_1_1_audio_manager" kindref="compound">AudioManager</ref>, and optionally an XInput instance based on the input parameters. The initialization is logged using CoreLogger::Info().</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_a_g_e_1_1_audio_engine" kindref="compound">AudioEngine</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of audio engine to be used by the device manager. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>UseXInput</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A boolean flag indicating whether or not to use XInput. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" line="31" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/DeviceManager.cpp" bodystart="7" bodyend="19"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" line="43" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/DeviceManager.cpp" bodystart="16" bodyend="28"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_device_manager_1a64f0572cc1d78cb363640e7c7b4df6dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -82,12 +102,14 @@
         <name>~DeviceManager</name>
         <qualifiedname>AGE::DeviceManager::~DeviceManager</qualifiedname>
         <briefdescription>
+<para>Virtual destructor for the <ref refid="class_a_g_e_1_1_device_manager" kindref="compound">DeviceManager</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is responsible for releasing any resources that were acquired by the <ref refid="class_a_g_e_1_1_device_manager" kindref="compound">DeviceManager</ref> instance, such as memory or file handles. It does not return anything and has no parameters. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" line="32" column="9"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" line="49" column="9"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_device_manager_1ac5476d5fd498b9ea8a14807868db297a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="class_a_g_e_1_1_a_g_e_window" kindref="compound">AGEWindow</ref> &amp;</type>
@@ -96,12 +118,17 @@
         <name>GetWindow</name>
         <qualifiedname>AGE::DeviceManager::GetWindow</qualifiedname>
         <briefdescription>
+<para>Returns a reference to the main application window. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function returns a reference to the main application window, which is used throughout the program for various operations such as rendering and user input handling.</para>
+<para><simplesect kind="return"><para>A reference to the main application window (<ref refid="class_a_g_e_1_1_a_g_e_window" kindref="compound">AGEWindow</ref>&amp;). </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" line="34" column="18" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" bodystart="34" bodyend="34"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" line="58" column="18" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" bodystart="58" bodyend="58"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_device_manager_1aafcfd7903613593c4368ea67ba903cd6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="class_a_g_e_1_1_audio_manager" kindref="compound">AudioManager</ref> &amp;</type>
@@ -110,12 +137,17 @@
         <name>GetAudioManager</name>
         <qualifiedname>AGE::DeviceManager::GetAudioManager</qualifiedname>
         <briefdescription>
+<para>Returns a reference to the global instance of the <ref refid="class_a_g_e_1_1_audio_manager" kindref="compound">AudioManager</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function returns a reference to the globally accessible instance of the <ref refid="class_a_g_e_1_1_audio_manager" kindref="compound">AudioManager</ref> class, which is used for managing audio in the application. The returned object can be used to interact with the audio system.</para>
+<para><simplesect kind="return"><para>Reference to the global <ref refid="class_a_g_e_1_1_audio_manager" kindref="compound">AudioManager</ref> instance. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" line="35" column="21" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" bodystart="35" bodyend="35"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" line="68" column="21" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" bodystart="68" bodyend="68"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_device_manager_1a0193a9edf00e0ec62169ec94154df233" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -124,19 +156,21 @@
         <name>UpdateWindow</name>
         <qualifiedname>AGE::DeviceManager::UpdateWindow</qualifiedname>
         <briefdescription>
+<para>This function updates the window by calling OnUpdate method of m_Window object. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function does not take any parameters and returns nothing. It directly calls the OnUpdate() method on the m_Window object, which presumably handles updating the window&apos;s content or properties based on some internal state. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" line="39" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" bodystart="39" bodyend="39"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" line="81" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" bodystart="81" bodyend="81"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" line="27" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" bodystart="28" bodyend="53"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" line="39" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" bodystart="40" bodyend="101"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_device_manager_1a4097b3e04a4f8ece21f5abe1b10e6323" prot="private" virt="non-virtual"><scope>AGE::DeviceManager</scope><name>App</name></member>
       <member refid="class_a_g_e_1_1_device_manager_1a62622bc4710c57998d9b5ddc73a412ed" prot="public" virt="non-virtual"><scope>AGE::DeviceManager</scope><name>DeviceManager</name></member>

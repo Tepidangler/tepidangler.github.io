@@ -139,15 +139,15 @@
 <tbody>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-asepritecelchunk"><strong>AsepriteCelChunk</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-asepritecelchunk"><strong>AsepriteCelChunk</strong></a> () = default<br><em>Default constructor for</em> <a href="./"><em><strong>AsepriteCelChunk</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">int</td>
-<td style="text-align: left;"><a href="#function-order"><strong>order</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-order"><strong>order</strong></a> () const<br><em>This function returns the sum of the 'LayerIndex' and 'zIndex'.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-asepritecelchunk"><strong>~AsepriteCelChunk</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-asepritecelchunk"><strong>~AsepriteCelChunk</strong></a> () = default<br><em>Default destructor for the</em> <a href="./"><em><strong>AsepriteCelChunk</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
@@ -203,18 +203,24 @@
 <hr>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-asepritecelchunk">function AsepriteCelChunk</h3>
+<p><em>Default constructor for</em> <a href="./"><em><strong>AsepriteCelChunk</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::AsepriteCelChunk::AsepriteCelChunk () = default
 </code></pre>
 <hr>
 
 <h3 id="function-order">function order</h3>
+<p><em>This function returns the sum of the 'LayerIndex' and 'zIndex'.</em> </p>
 <pre><code class="language-C++">inline int AGE::AsepriteCelChunk::order () const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>The sum of 'LayerIndex' and 'zIndex', as an integer. If either index is not set, it will return 0. </p>
 <hr>
 
 <h3 id="function-asepritecelchunk_1">function ~AsepriteCelChunk</h3>
+<p><em>Default destructor for the</em> <a href="./"><em><strong>AsepriteCelChunk</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::AsepriteCelChunk::~AsepriteCelChunk () = default
 </code></pre>
+<p>This function is responsible for releasing any resources that were acquired by the object during its lifetime, such as memory or file handles. It does not perform any operations on the actual data stored in the chunk. </p>
 <hr>
 
 <hr />

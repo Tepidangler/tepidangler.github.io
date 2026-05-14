@@ -59,18 +59,18 @@
 
 | Type | Name |
 | ---: | :--- |
-|  void | [**Activate**](#function-activate) () <br> |
-|   | [**CameraComponent**](#function-cameracomponent-12) () = default<br> |
-|   | [**CameraComponent**](#function-cameracomponent-22) (const [**CameraComponent**](struct_a_g_e_1_1_camera_component.md) &) = default<br> |
-|  void | [**Deactivate**](#function-deactivate) () <br> |
+|  void | [**Activate**](#function-activate) () <br>_This function is used to activate the object by setting its primary flag to true._  |
+|   | [**CameraComponent**](#function-cameracomponent-12) () = default<br>_Default constructor for the_ [_**CameraComponent**_](struct_a_g_e_1_1_camera_component.md) _class._ |
+|   | [**CameraComponent**](#function-cameracomponent-22) (const [**CameraComponent**](struct_a_g_e_1_1_camera_component.md) &) = default<br>_Default copy constructor for the_ [_**CameraComponent**_](struct_a_g_e_1_1_camera_component.md) _class._ |
+|  void | [**Deactivate**](#function-deactivate) () <br>_This function deactivates the object by setting bPrimary to false._  |
 
 
 ## Public Static Functions
 
 | Type | Name |
 | ---: | :--- |
-|  void | [**Deserialize**](#function-deserialize) ([**DataReader**](class_a_g_e_1_1_data_reader.md) \* Serializer, [**CameraComponent**](struct_a_g_e_1_1_camera_component.md) & Data) <br> |
-|  void | [**Serialize**](#function-serialize) ([**DataWriter**](class_a_g_e_1_1_data_writer.md) \* Serializer, const [**CameraComponent**](struct_a_g_e_1_1_camera_component.md) & Data) <br> |
+|  void | [**Deserialize**](#function-deserialize) ([**DataReader**](class_a_g_e_1_1_data_reader.md) \* Serializer, [**CameraComponent**](struct_a_g_e_1_1_camera_component.md) & Data) <br>_This function deserializes a_ [_**CameraComponent**_](struct_a_g_e_1_1_camera_component.md) _object from the provided_[_**DataReader**_](class_a_g_e_1_1_data_reader.md) _instance._ |
+|  void | [**Serialize**](#function-serialize) ([**DataWriter**](class_a_g_e_1_1_data_writer.md) \* Serializer, const [**CameraComponent**](struct_a_g_e_1_1_camera_component.md) & Data) <br>_This function serializes a camera component into a data writer object._  |
 
 
 
@@ -158,6 +158,7 @@ bool AGE::CameraComponent::bRecording;
 
 ### function Activate 
 
+_This function is used to activate the object by setting its primary flag to true._ 
 ```C++
 inline void AGE::CameraComponent::Activate () 
 ```
@@ -165,12 +166,24 @@ inline void AGE::CameraComponent::Activate ()
 
 
 
+
+**Returns:**
+
+void 
+
+
+
+
+
+        
+
 <hr>
 
 
 
 ### function CameraComponent [1/2]
 
+_Default constructor for the_ [_**CameraComponent**_](struct_a_g_e_1_1_camera_component.md) _class._
 ```C++
 AGE::CameraComponent::CameraComponent () = default
 ```
@@ -184,6 +197,7 @@ AGE::CameraComponent::CameraComponent () = default
 
 ### function CameraComponent [2/2]
 
+_Default copy constructor for the_ [_**CameraComponent**_](struct_a_g_e_1_1_camera_component.md) _class._
 ```C++
 AGE::CameraComponent::CameraComponent (
     const CameraComponent &
@@ -192,6 +206,20 @@ AGE::CameraComponent::CameraComponent (
 
 
 
+This function is used to create a new instance of the [**CameraComponent**](struct_a_g_e_1_1_camera_component.md) class by copying an existing one. It uses the '= default' syntax, which tells the compiler to use its default implementation for this member function.
+
+
+
+
+**Parameters:**
+
+
+* `other` The [**CameraComponent**](struct_a_g_e_1_1_camera_component.md) object to be copied. 
+
+
+
+
+        
 
 <hr>
 
@@ -199,12 +227,24 @@ AGE::CameraComponent::CameraComponent (
 
 ### function Deactivate 
 
+_This function deactivates the object by setting bPrimary to false._ 
 ```C++
 inline void AGE::CameraComponent::Deactivate () 
 ```
 
 
 
+
+
+**Returns:**
+
+void 
+
+
+
+
+
+        
 
 <hr>
 ## Public Static Functions Documentation
@@ -214,6 +254,7 @@ inline void AGE::CameraComponent::Deactivate ()
 
 ### function Deserialize 
 
+_This function deserializes a_ [_**CameraComponent**_](struct_a_g_e_1_1_camera_component.md) _object from the provided_[_**DataReader**_](class_a_g_e_1_1_data_reader.md) _instance._
 ```C++
 static inline void AGE::CameraComponent::Deserialize (
     DataReader * Serializer,
@@ -223,6 +264,28 @@ static inline void AGE::CameraComponent::Deserialize (
 
 
 
+The function reads data from the serialized format and populates the [**CameraComponent**](struct_a_g_e_1_1_camera_component.md) reference with the corresponding values.
+
+
+
+
+**Parameters:**
+
+
+* `Serializer` A pointer to the [**DataReader**](class_a_g_e_1_1_data_reader.md) instance that provides the serialized data. 
+* `Data` Reference to a [**CameraComponent**](struct_a_g_e_1_1_camera_component.md) object where the deserialized data will be stored.
+
+
+
+**Returns:**
+
+void 
+
+
+
+
+
+        
 
 <hr>
 
@@ -230,6 +293,7 @@ static inline void AGE::CameraComponent::Deserialize (
 
 ### function Serialize 
 
+_This function serializes a camera component into a data writer object._ 
 ```C++
 static inline void AGE::CameraComponent::Serialize (
     DataWriter * Serializer,
@@ -239,6 +303,18 @@ static inline void AGE::CameraComponent::Serialize (
 
 
 
+
+
+**Parameters:**
+
+
+* `Serializer` A pointer to the data writer object where the data will be written. 
+* `Data` The camera component that needs to be serialized. 
+
+
+
+
+        
 
 <hr>
 

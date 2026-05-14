@@ -21,21 +21,21 @@ RTTR_REGISTRATION{
 }
 namespace AGE
 {
-    HorizontalBoxComponent::HorizontalBoxComponent(const std::string &Name)
+HorizontalBoxComponent::HorizontalBoxComponent(const std::string &Name)
     {
         m_Name = Name;
         m_Type = UIComponentType::HorizontalBoxComponent;
     }
 
-    void HorizontalBoxComponent::OnUpdate(TimeStep DeltaTime)
+void HorizontalBoxComponent::OnUpdate(TimeStep DeltaTime)
     {
         UIComponent::OnUpdate(DeltaTime);
     }
 
-    void HorizontalBoxComponent::OnEvent(Event &Event) {
+void HorizontalBoxComponent::OnEvent(Event &Event) {
     }
 
-    void HorizontalBoxComponent::DrawContent() {
+void HorizontalBoxComponent::DrawContent() {
     }
 } // AGE
 ```

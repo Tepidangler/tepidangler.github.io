@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" line="22" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" bodystart="22" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" line="34" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" bodystart="34" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_audio_manager_1ade76658a5aa8ef033e43dd84cd887bea" prot="private" static="no" mutable="no">
         <type>AudioEngineType</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" line="24" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" bodystart="24" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" line="36" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" bodystart="36" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -44,12 +44,24 @@
           <declname>Type</declname>
         </param>
         <briefdescription>
+<para>Constructs an instance of the <ref refid="class_a_g_e_1_1_audio_manager" kindref="compound">AudioManager</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This constructor initializes an instance of the <ref refid="class_a_g_e_1_1_audio_manager" kindref="compound">AudioManager</ref> class with a specified audio engine type. It creates an instance of the appropriate audio engine based on the provided type and sets it as the current audio engine for the manager. The log message &quot;Audio Manager Initialized!&quot; is also printed to indicate successful initialization.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The type of audio engine that should be used by this <ref refid="class_a_g_e_1_1_audio_manager" kindref="compound">AudioManager</ref> instance. This can be one of the values defined in the AudioEngineType enum, such as kOpenAL or kFMOD. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" line="13" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/DeviceManager.cpp" bodystart="22" bodyend="27"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" line="13" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/DeviceManager.cpp" bodystart="38" bodyend="43"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_audio_manager_1ae00f8bbc899f033f31a49873f857b53a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>Ref&lt; <ref refid="class_a_g_e_1_1_audio_engine" kindref="compound">AudioEngine</ref> &gt;</type>
@@ -58,12 +70,17 @@
         <name>GetAudioEngine</name>
         <qualifiedname>AGE::AudioManager::GetAudioEngine</qualifiedname>
         <briefdescription>
+<para>Returns the Audio Engine instance. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function returns a reference to an <ref refid="class_a_g_e_1_1_audio_engine" kindref="compound">AudioEngine</ref> object which is currently being used by the application. The returned object can be used for various audio processing tasks.</para>
+<para><simplesect kind="return"><para>Reference to the current <ref refid="class_a_g_e_1_1_audio_engine" kindref="compound">AudioEngine</ref> instance. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" line="15" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" bodystart="15" bodyend="15"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" line="23" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" bodystart="23" bodyend="23"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_audio_manager_1aa706d730b053af24ba1b18fbc9f17c99" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>AudioEngineType</type>
@@ -72,12 +89,16 @@
         <name>GetAudioEngineType</name>
         <qualifiedname>AGE::AudioManager::GetAudioEngineType</qualifiedname>
         <briefdescription>
+<para>This function returns the type of audio engine being used by the application. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>The type of <ref refid="class_a_g_e_1_1_audio_engine" kindref="compound">AudioEngine</ref> as an enumeration value (e.g., kAudioEngineType1, kAudioEngineType2). </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" line="16" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" bodystart="16" bodyend="16"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" line="28" column="17" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" bodystart="28" bodyend="28"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_audio_manager_1acd1f2ba0c1e3171d00554dcf7e589dd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -90,19 +111,31 @@
           <declname>Type</declname>
         </param>
         <briefdescription>
+<para>Switches the audio engine being used by the <ref refid="class_a_g_e_1_1_audio_manager" kindref="compound">AudioManager</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function resets the current audio engine and replaces it with a new one of the specified type. The new audio engine is initialized immediately after its creation.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the new audio engine to be created. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" line="18" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/DeviceManager.cpp" bodystart="29" bodyend="34"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" line="30" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Private/DeviceManager.cpp" bodystart="52" bodyend="57"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" line="9" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" bodystart="10" bodyend="25"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" line="9" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/DeviceManager.h" bodystart="10" bodyend="37"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_audio_manager_1af5c7abac04c0bba92e4f1da6387e3e7b" prot="public" virt="non-virtual"><scope>AGE::AudioManager</scope><name>AudioManager</name></member>
       <member refid="class_a_g_e_1_1_audio_manager_1ae00f8bbc899f033f31a49873f857b53a" prot="public" virt="non-virtual"><scope>AGE::AudioManager</scope><name>GetAudioEngine</name></member>

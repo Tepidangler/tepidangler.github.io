@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" line="37" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" bodystart="37" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" line="107" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" bodystart="107" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_widget_stack_1a8e303626da5da4f3f81b48cf97717f5e" prot="private" static="no" mutable="no">
         <type><ref refid="class_a_g_e_1_1_entity" kindref="compound">Entity</ref></type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" line="38" column="8" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" bodystart="38" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" line="108" column="8" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" bodystart="108" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -40,12 +40,19 @@
         <name>WidgetStack</name>
         <qualifiedname>AGE::WidgetStack::WidgetStack</qualifiedname>
         <briefdescription>
+<para>Default constructor for the <ref refid="class_a_g_e_1_1_widget_stack" kindref="compound">WidgetStack</ref> class. This function initializes an instance of the <ref refid="class_a_g_e_1_1_widget_stack" kindref="compound">WidgetStack</ref> class with its members set to their default values. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>An instance of the <ref refid="class_a_g_e_1_1_widget_stack" kindref="compound">WidgetStack</ref> class with all member variables initialized to their default values.</para>
+</simplesect>
+Default constructor for the <ref refid="class_a_g_e_1_1_widget_stack" kindref="compound">WidgetStack</ref> class. This function initializes a new instance of the <ref refid="class_a_g_e_1_1_widget_stack" kindref="compound">WidgetStack</ref> class with an empty stack.</para>
+<para><simplesect kind="return"><para>A new instance of the <ref refid="class_a_g_e_1_1_widget_stack" kindref="compound">WidgetStack</ref> class. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" line="17" column="1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" line="29" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_widget_stack_1ad5ad1721b259b69effb46eb425bd6dc2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -54,12 +61,21 @@
         <name>~WidgetStack</name>
         <qualifiedname>AGE::WidgetStack::~WidgetStack</qualifiedname>
         <briefdescription>
+<para>Destructor for the <ref refid="class_a_g_e_1_1_widget_stack" kindref="compound">WidgetStack</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This destructor is used to clean up any resources that were allocated during the lifetime of an object of this class. It does not perform any specific actions related to the <ref refid="class_a_g_e_1_1_widget_stack" kindref="compound">WidgetStack</ref> class, but serves as a standard way to define and document such a destructor in Doxygen.</para>
+<para><simplesect kind="return"><para>Nothing is returned as it&apos;s a destructor.</para>
+</simplesect>
+Destructor for the <ref refid="class_a_g_e_1_1_widget_stack" kindref="compound">WidgetStack</ref> class.</para>
+<para>This destructor is used to clean up any resources that were allocated during the lifetime of an object of this class. It does not perform any specific operations related to the <ref refid="class_a_g_e_1_1_widget_stack" kindref="compound">WidgetStack</ref> class itself, but serves as a standard way to define and document such a destructor in Doxygen.</para>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" line="18" column="1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" line="46" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_widget_stack_1ae67dc7c656eeac979d0d45507749c068" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -72,12 +88,36 @@
           <declname>Widget</declname>
         </param>
         <briefdescription>
+<para>Pushes a <ref refid="class_a_g_e_1_1_scriptable_widget" kindref="compound">ScriptableWidget</ref> to the front of the stack. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes a reference to a <ref refid="class_a_g_e_1_1_scriptable_widget" kindref="compound">ScriptableWidget</ref> and pushes it onto the front of the m_Widgets list. The widget is added at the beginning of the list, so it will be the next one to be popped off the stack. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="struct_a_g_e_1_1_widget" kindref="compound">Widget</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to the <ref refid="class_a_g_e_1_1_scriptable_widget" kindref="compound">ScriptableWidget</ref> that should be pushed onto the stack.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Pushes a <ref refid="class_a_g_e_1_1_scriptable_widget" kindref="compound">ScriptableWidget</ref> to the front of the stack.</para>
+<para>This function takes in a reference to a <ref refid="class_a_g_e_1_1_scriptable_widget" kindref="compound">ScriptableWidget</ref> and pushes it to the front of the m_Widgets list. The widget is added at the beginning of the list, so it will be the next one to be popped off the stack if PopNextWidgetFromStack() is called.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="struct_a_g_e_1_1_widget" kindref="compound">Widget</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to a <ref refid="class_a_g_e_1_1_scriptable_widget" kindref="compound">ScriptableWidget</ref> that you want to push onto the stack. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void No return value. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" line="20" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Private/WidgetStack.cpp" bodystart="11" bodyend="14"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" line="48" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Private/WidgetStack.cpp" bodystart="25" bodyend="28"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_widget_stack_1a18b6f1f98786e63ab89663fe36a21685" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -86,12 +126,16 @@
         <name>PopWidgetFromStack</name>
         <qualifiedname>AGE::WidgetStack::PopWidgetFromStack</qualifiedname>
         <briefdescription>
+<para>Removes the first widget from the stack. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function removes the front element of the m_Widgets list, effectively popping the topmost widget off the stack. If there are no widgets in the stack, this function does nothing and has no effect.</para>
+<para>Removes the first widget from the stack.</para>
+<para>This function removes the frontmost element of the m_Widgets list, effectively &quot;popping&quot; the top-most widget off the stack. If the stack is empty, this operation has no effect. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" line="21" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Private/WidgetStack.cpp" bodystart="16" bodyend="19"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" line="49" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Private/WidgetStack.cpp" bodystart="42" bodyend="45"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_widget_stack_1a27bb4f8d6a85663690346ad78cf49000" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>Ref&lt; <ref refid="class_a_g_e_1_1_scriptable_widget" kindref="compound">ScriptableWidget</ref> &gt;</type>
@@ -100,12 +144,18 @@
         <name>GetActiveWidget</name>
         <qualifiedname>AGE::WidgetStack::GetActiveWidget</qualifiedname>
         <briefdescription>
+<para>This function returns the active widget from the list of widgets. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>A reference to the first element in the m_Widgets vector, which is the active widget. If the vector is empty, it will return a default-constructed Ref&lt;ScriptableWidget&gt; object.</para>
+</simplesect>
+Retrieves the active widget from the list of widgets. <simplesect kind="return"><para>A reference to the frontmost widget in the list. If there are no widgets, a default-constructed Ref&lt;ScriptableWidget&gt; is returned. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" line="23" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" bodystart="23" bodyend="23"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" line="59" column="5" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" bodystart="59" bodyend="59"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_widget_stack_1a3f3eeb7b3c4fe8e4d0f1fee288d9aa2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -118,12 +168,38 @@
           <declname>DeltaTime</declname>
         </param>
         <briefdescription>
+<para>This function updates the topmost widget in the stack based on a given time step. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>DeltaTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The amount of time that has passed since the last update.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void</para>
+</simplesect>
+This function updates the top widget in the stack based on a given time step.</para>
+<para>The function checks if there are any widgets in the stack (i.e., m_Widgets size is greater than 0). If so, it calls the OnUpdate() method for the frontmost widget with the provided DeltaTime. This allows the top widget to be updated based on time elapsed since the last frame.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>DeltaTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time step representing the amount of time that has passed since the last update.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" line="25" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Private/WidgetStack.cpp" bodystart="21" bodyend="27"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" line="61" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Private/WidgetStack.cpp" bodystart="63" bodyend="69"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_widget_stack_1ab0680e4cf7b1e12957783b1a1bb60a90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -132,12 +208,21 @@
         <name>ActivateWidget</name>
         <qualifiedname>AGE::WidgetStack::ActivateWidget</qualifiedname>
         <briefdescription>
+<para>Activates the widget at the front of the stack by setting its visibility to true. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function uses a member variable <computeroutput>m_Widgets</computeroutput>, which is assumed to be a container storing pointers to <ref refid="struct_a_g_e_1_1_widget" kindref="compound">Widget</ref> objects. The front element of this container (i.e., the first added widget) is activated by calling the SetVisibility method on it with an argument of true.</para>
+<para><simplesect kind="return"><para>void</para>
+</simplesect>
+Activates the widget at the front of the stack by setting its visibility to true.</para>
+<para>This function uses a member variable <computeroutput>m_Widgets</computeroutput>, which is assumed to be a container storing pointers to <ref refid="struct_a_g_e_1_1_widget" kindref="compound">Widget</ref> objects. The front element of this container (i.e., the first added widget) will have its visibility set to true using the <computeroutput>SetVisibility(true)</computeroutput> method.</para>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" line="27" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Private/WidgetStack.cpp" bodystart="29" bodyend="31"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" line="63" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Private/WidgetStack.cpp" bodystart="85" bodyend="87"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_widget_stack_1a34bb5b1014e376921c3616c04fbb8401" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -146,12 +231,16 @@
         <name>DeactivateWidget</name>
         <qualifiedname>AGE::WidgetStack::DeactivateWidget</qualifiedname>
         <briefdescription>
+<para>Deactivates the widget at the front of the stack by setting its visibility to false. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function removes the first element from the m_Widgets vector and sets its visibility to false, effectively deactivating it. If the stack is empty, this function does nothing.</para>
+<para>Deactivates the widget at the front of the stack by setting its visibility to false.</para>
+<para>This function removes the first widget from the stack and sets its visibility to false, effectively deactivating it. If there are no widgets in the stack, this function does nothing. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" line="28" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Private/WidgetStack.cpp" bodystart="33" bodyend="35"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" line="64" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Private/WidgetStack.cpp" bodystart="101" bodyend="103"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_widget_stack_1a5f8ac4b55f53eec7315ec9016a1707e3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::deque&lt; Ref&lt; <ref refid="class_a_g_e_1_1_scriptable_widget" kindref="compound">ScriptableWidget</ref> &gt; &gt;::iterator</type>
@@ -160,12 +249,18 @@
         <name>begin</name>
         <qualifiedname>AGE::WidgetStack::begin</qualifiedname>
         <briefdescription>
+<para>Returns an iterator pointing to the beginning of the deque container storing <ref refid="class_a_g_e_1_1_scriptable_widget" kindref="compound">ScriptableWidget</ref> objects. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>An iterator that points to the start of the deque.</para>
+</simplesect>
+Returns an iterator pointing to the beginning of the deque container storing <ref refid="class_a_g_e_1_1_scriptable_widget" kindref="compound">ScriptableWidget</ref> objects. <simplesect kind="return"><para>An iterator pointing to the first element in the deque. If the deque is empty, the returned iterator will be equal to <ref refid="class_a_g_e_1_1_widget_stack_1a3472d9367bd5aceb1e8fa80192fa93c6" kindref="member">end()</ref>. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" line="30" column="23" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" bodystart="30" bodyend="30"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" line="74" column="23" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" bodystart="74" bodyend="74"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_widget_stack_1a3472d9367bd5aceb1e8fa80192fa93c6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::deque&lt; Ref&lt; <ref refid="class_a_g_e_1_1_scriptable_widget" kindref="compound">ScriptableWidget</ref> &gt; &gt;::iterator</type>
@@ -174,12 +269,18 @@
         <name>end</name>
         <qualifiedname>AGE::WidgetStack::end</qualifiedname>
         <briefdescription>
+<para>Returns an iterator pointing to the past-the-end element in the deque container. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>An iterator pointing to the past-the-end element of the sequence controlled by the deque object.</para>
+</simplesect>
+Returns an iterator pointing to the past-the-end element in the deque container. <simplesect kind="return"><para>An iterator to the past-the-end of the sequence controlled by the deque object. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" line="31" column="23" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" bodystart="31" bodyend="31"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" line="83" column="23" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" bodystart="83" bodyend="83"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_widget_stack_1aa3f6b115685940e15ed9001b3e99dd21" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>std::deque&lt; Ref&lt; <ref refid="class_a_g_e_1_1_scriptable_widget" kindref="compound">ScriptableWidget</ref> &gt; &gt;::const_iterator</type>
@@ -188,12 +289,19 @@
         <name>begin</name>
         <qualifiedname>AGE::WidgetStack::begin</qualifiedname>
         <briefdescription>
+<para>Returns a constant iterator pointing to the beginning of the deque of <ref refid="class_a_g_e_1_1_scriptable_widget" kindref="compound">ScriptableWidget</ref> objects. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>A constant iterator pointing to the first element in the deque, or <ref refid="class_a_g_e_1_1_widget_stack_1a3472d9367bd5aceb1e8fa80192fa93c6" kindref="member">end()</ref> if the deque is empty.</para>
+</simplesect>
+Returns a constant iterator pointing to the beginning of the deque.</para>
+<para>This function returns a constant iterator that points to the first element in the deque &apos;m_Widgets&apos;. The returned iterator can be used to access and traverse all elements from the start of the deque. <simplesect kind="return"><para>A constant iterator pointing to the beginning of the deque. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" line="32" column="29" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" bodystart="32" bodyend="32"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" line="94" column="29" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" bodystart="94" bodyend="94"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_widget_stack_1aadd34e8450e1fca1191d6f7376e3f8bb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>std::deque&lt; Ref&lt; <ref refid="class_a_g_e_1_1_scriptable_widget" kindref="compound">ScriptableWidget</ref> &gt; &gt;::const_iterator</type>
@@ -202,19 +310,25 @@
         <name>end</name>
         <qualifiedname>AGE::WidgetStack::end</qualifiedname>
         <briefdescription>
+<para>Returns a constant iterator pointing to the past-the-end element of the deque container. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>A constant iterator pointing to the past-the-end element in the container.</para>
+</simplesect>
+Returns a constant iterator pointing to the past-the-end element of the deque container. <simplesect kind="return"><para>A constant iterator pointing to the past-the-end element in the container. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" line="33" column="29" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" bodystart="33" bodyend="33"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" line="103" column="29" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" bodystart="103" bodyend="103"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" line="14" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" bodystart="15" bodyend="39"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" line="14" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/UI/Public/WidgetStack.h" bodystart="15" bodyend="109"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_widget_stack_1ab0680e4cf7b1e12957783b1a1bb60a90" prot="public" virt="non-virtual"><scope>AGE::WidgetStack</scope><name>ActivateWidget</name></member>
       <member refid="class_a_g_e_1_1_widget_stack_1a5f8ac4b55f53eec7315ec9016a1707e3" prot="public" virt="non-virtual"><scope>AGE::WidgetStack</scope><name>begin</name></member>

@@ -15,15 +15,15 @@ namespace AGE
     class TimeStep
     {
     public:
-        TimeStep(float time = 0.f)
+TimeStep(float time = 0.f)
             :m_Time(time)
         {
         }
 
-        float GetSeconds() const { return m_Time; }
-        float GetMilliseconds() const { return m_Time * 1000.f; }
+float GetSeconds() const { return m_Time; }
+float GetMilliseconds() const { return m_Time * 1000.f; }
 
-        operator float() const { return m_Time; }
+operator float() const { return m_Time; }
 
     private:
         float m_Time;

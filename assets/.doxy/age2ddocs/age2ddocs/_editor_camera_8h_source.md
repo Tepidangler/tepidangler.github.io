@@ -21,7 +21,7 @@ namespace AGE
     class EditorCamera : public Camera
     {
     public:
-        EditorCamera() = default;
+EditorCamera() = default;
         EditorCamera(float FOV, float AspectRatio, float NearClip, float FarClip);
         EditorCamera(float Size, float NearClip, float FarClip);
 
@@ -29,32 +29,32 @@ namespace AGE
         void OnEvent(Event& E);
 
 
-        inline float GetDistance() const { return m_Distance; }
-        inline void SetDistance(float Distance) { m_Distance = Distance; }
+inline float GetDistance() const { return m_Distance; }
+inline void SetDistance(float Distance) { m_Distance = Distance; }
 
-        inline void SetViewportSize(float Width, float Height) { m_ViewportWidth = Width; m_ViewportHeight = Height; m_AspectRatio = (Width / Height);  UpdateProjection(); }
+inline void SetViewportSize(float Width, float Height) { m_ViewportWidth = Width; m_ViewportHeight = Height; m_AspectRatio = (Width / Height);  UpdateProjection(); }
 
-        Matrix4D GetViewMatrix() { return m_View; }
-        const Matrix4D GetViewMatrix() const { return m_View; }
+Matrix4D GetViewMatrix() { return m_View; }
+const Matrix4D GetViewMatrix() const { return m_View; }
 
-        Matrix4D GetViewProjMatrix() { return m_Projection *m_View; }
-        const Matrix4D GetViewProjMatrix() const { return m_Projection *m_View; }
+Matrix4D GetViewProjMatrix() { return m_Projection *m_View; }
+const Matrix4D GetViewProjMatrix() const { return m_Projection *m_View; }
 
         Vector3 GetUpDirection() const;
         Vector3 GetRightDirection() const;
         Vector3 GetForwardDirection() const;
 
-        const Vector3& GetPosition() const { return m_Position; }
+const Vector3& GetPosition() const { return m_Position; }
 
         //Quaternion GetOrientation() const; //TODO Make Compatible with GLM
 
         glm::quat GetOrientation() const;
 
-        float GetPitch() const { return m_Pitch; }
-        float GetYaw() const { return m_Yaw; }
+float GetPitch() const { return m_Pitch; }
+float GetYaw() const { return m_Yaw; }
 
-        ProjectionType GetProjectionType() const { return m_ProjectionType; }
-        void SetProjectionType(ProjectionType Type) { m_ProjectionType = Type; }
+ProjectionType GetProjectionType() const { return m_ProjectionType; }
+void SetProjectionType(ProjectionType Type) { m_ProjectionType = Type; }
 
 
     private:

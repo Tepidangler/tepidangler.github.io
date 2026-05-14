@@ -21,7 +21,7 @@ namespace AGE
     std::vector<size_t> Log::s_Offsets;
     std::vector<LogType> Log::s_Type;
 
-    void Log::Init()
+void Log::Init()
     {
         spdlog::set_pattern("%^[%T] %n: %v%$");
 

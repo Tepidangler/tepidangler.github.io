@@ -98,6 +98,10 @@
 <td style="text-align: right;"><a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a></td>
 <td style="text-align: left;"><a href="#variable-translation"><strong>Translation</strong></a>   = <code>{ 0.f }</code><br></td>
 </tr>
+<tr>
+<td style="text-align: right;">COMMENT</td>
+<td style="text-align: left;"><a href="#variable-__pad0__"><strong>__pad0__</strong></a>  <br></td>
+</tr>
 </tbody>
 </table>
 <h2 id="public-functions">Public Functions</h2>
@@ -111,15 +115,15 @@
 <tbody>
 <tr>
 <td style="text-align: right;"><a href="../struct_a_g_e_1_1_matrix4_d/"><strong>Matrix4D</strong></a></td>
-<td style="text-align: left;"><a href="#function-gettransform"><strong>GetTransform</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-gettransform"><strong>GetTransform</strong></a> () <br><em>This function returns the transformation matrix for this object. The transformation is composed of a translation, rotation and scale. It uses GLM (OpenGL Mathematics) library to perform these transformations.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-transformcomponent-13"><strong>TransformComponent</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-transformcomponent-13"><strong>TransformComponent</strong></a> () = default<br><em>Default constructor for the</em> <a href="./"><em><strong>TransformComponent</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-transformcomponent-23"><strong>TransformComponent</strong></a> (const <a href="./"><strong>TransformComponent</strong></a> &amp;) = default<br></td>
+<td style="text-align: left;"><a href="#function-transformcomponent-23"><strong>TransformComponent</strong></a> (const <a href="./"><strong>TransformComponent</strong></a> &amp;) = default<br><em>Default copy constructor for the</em> <a href="./"><em><strong>TransformComponent</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
@@ -127,7 +131,7 @@
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-operator-matrix4d"><strong>operator Matrix4D</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-operator-matrix4d"><strong>operator Matrix4D</strong></a> () <br><em>Converts the current object to a 4x4 matrix representation.</em></td>
 </tr>
 </tbody>
 </table>
@@ -142,11 +146,11 @@
 <tbody>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-deserialize"><strong>Deserialize</strong></a> (<a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> * Serializer, <a href="./"><strong>TransformComponent</strong></a> &amp; Data) <br></td>
+<td style="text-align: left;"><a href="#function-deserialize"><strong>Deserialize</strong></a> (<a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> * Serializer, <a href="./"><strong>TransformComponent</strong></a> &amp; Data) <br><em>This function deserializes data from a serialized format into the given</em> <a href="./"><em><strong>TransformComponent</strong></em></a> <em>object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-serialize"><strong>Serialize</strong></a> (<a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> * Serializer, const <a href="./"><strong>TransformComponent</strong></a> &amp; Data) <br></td>
+<td style="text-align: left;"><a href="#function-serialize"><strong>Serialize</strong></a> (<a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> * Serializer, const <a href="./"><strong>TransformComponent</strong></a> &amp; Data) <br><em>This function serializes the given transform component data into a format that can be stored or transmitted.</em></td>
 </tr>
 </tbody>
 </table>
@@ -165,22 +169,37 @@
 <pre><code class="language-C++">Vector3 AGE::TransformComponent::Translation;
 </code></pre>
 <hr>
+
+<h3 id="variable-__pad0__">variable __pad0__</h3>
+<pre><code class="language-C++">COMMENT AGE::TransformComponent::__pad0__;
+</code></pre>
+<hr>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-gettransform">function GetTransform</h3>
+<p><em>This function returns the transformation matrix for this object. The transformation is composed of a translation, rotation and scale. It uses GLM (OpenGL Mathematics) library to perform these transformations.</em> </p>
 <pre><code class="language-C++">inline Matrix4D AGE::TransformComponent::GetTransform () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p><a href="../struct_a_g_e_1_1_matrix4_d/"><strong>Matrix4D</strong></a> - Returns the combined transformation matrix. </p>
 <hr>
 
 <h3 id="function-transformcomponent-13">function TransformComponent [1/3]</h3>
+<p><em>Default constructor for the</em> <a href="./"><em><strong>TransformComponent</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::TransformComponent::TransformComponent () = default
 </code></pre>
 <hr>
 
 <h3 id="function-transformcomponent-23">function TransformComponent [2/3]</h3>
+<p><em>Default copy constructor for the</em> <a href="./"><em><strong>TransformComponent</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::TransformComponent::TransformComponent (
     const TransformComponent &amp;
 ) = default
 </code></pre>
+<p>This function is used to create a new instance of the <a href="./"><strong>TransformComponent</strong></a> class by copying an existing one. It uses the '= default' syntax, which tells the compiler to use the default implementation provided by the compiler.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>other</code> The <a href="./"><strong>TransformComponent</strong></a> instance to copy. </li>
+</ul>
 <hr>
 
 <h3 id="function-transformcomponent-33">function TransformComponent [3/3]</h3>
@@ -191,24 +210,40 @@
 <hr>
 
 <h3 id="function-operator-matrix4d">function operator Matrix4D</h3>
+<p><em>Converts the current object to a 4x4 matrix representation.</em> </p>
 <pre><code class="language-C++">inline AGE::TransformComponent::operator Matrix4D () 
 </code></pre>
+<p>This function converts the current object into a 4x4 matrix representation by calling the <code>GetTransform</code> method and returning its result. The conversion is done implicitly when this object is used in a context that expects a <a href="../struct_a_g_e_1_1_matrix4_d/"><strong>Matrix4D</strong></a>, such as passing it to a function or operator that accepts a <a href="../struct_a_g_e_1_1_matrix4_d/"><strong>Matrix4D</strong></a> parameter.</p>
+<p><strong>Returns:</strong></p>
+<p>A 4x4 matrix representing the current object's transformation. </p>
 <hr>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
 <h3 id="function-deserialize">function Deserialize</h3>
+<p><em>This function deserializes data from a serialized format into the given</em> <a href="./"><em><strong>TransformComponent</strong></em></a> <em>object.</em></p>
 <pre><code class="language-C++">static inline void AGE::TransformComponent::Deserialize (
     DataReader * Serializer,
     TransformComponent &amp; Data
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Serializer</code> A pointer to an instance of <a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> that provides the serialized data. </li>
+<li><code>Data</code> The <a href="./"><strong>TransformComponent</strong></a> object where the deserialized data will be stored. </li>
+</ul>
 <hr>
 
 <h3 id="function-serialize">function Serialize</h3>
+<p><em>This function serializes the given transform component data into a format that can be stored or transmitted.</em> </p>
 <pre><code class="language-C++">static inline void AGE::TransformComponent::Serialize (
     DataWriter * Serializer,
     const TransformComponent &amp; Data
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Serializer</code> A pointer to an instance of <a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> which is responsible for writing the serialized data. </li>
+<li><code>Data</code> The <a href="./"><strong>TransformComponent</strong></a> whose data needs to be serialized. </li>
+</ul>
 <hr>
 
 <hr />

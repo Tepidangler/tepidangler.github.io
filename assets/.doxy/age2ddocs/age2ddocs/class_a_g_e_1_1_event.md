@@ -8,8 +8,9 @@
 
 
 
+_Abstract base class for an event._ [More...](#detailed-description)
 
-
+* `#include <Event.h>`
 
 
 
@@ -60,8 +61,8 @@ Inherited by the following classes: [AGE::AppRenderEvent](class_a_g_e_1_1_app_re
 | virtual int | [**GetCategoryFlags**](#function-getcategoryflags) () const = 0<br> |
 | virtual EventType | [**GetEventType**](#function-geteventtype) () const = 0<br> |
 | virtual const char \* | [**GetName**](#function-getname) () const = 0<br> |
-|  bool | [**IsInCategory**](#function-isincategory) (EventCategory Category) <br> |
-| virtual std::string | [**ToString**](#function-tostring) () const<br> |
+|  bool | [**IsInCategory**](#function-isincategory) (EventCategory Category) <br>_Checks if an event is in a specific category._  |
+| virtual std::string | [**ToString**](#function-tostring) () const<br>_Returns a string representation of the object._  |
 
 
 
@@ -90,6 +91,19 @@ Inherited by the following classes: [AGE::AppRenderEvent](class_a_g_e_1_1_app_re
 
 
 
+## Detailed Description
+
+
+This is the abstract base class that represents a generic event in the system. It provides methods to get information about the type of the event, its category flags and whether it has been handled or not.
+
+
+Represents an event in the system.
+
+
+This class represents a generic event that can be handled by various components of the system. It provides methods to get information about the type, category and name of the event. The ToString method returns the name of the event as default implementation but subclasses may override it with more meaningful representation. 
+
+
+    
 ## Public Attributes Documentation
 
 
@@ -151,6 +165,7 @@ virtual const char * AGE::Event::GetName () const = 0
 
 ### function IsInCategory 
 
+_Checks if an event is in a specific category._ 
 ```C++
 inline bool AGE::Event::IsInCategory (
     EventCategory Category
@@ -159,6 +174,47 @@ inline bool AGE::Event::IsInCategory (
 
 
 
+This function checks whether the provided EventCategory is set within the categories that are currently active. The comparison is done by bitwise AND operation with GetCategoryFlags() and Category.
+
+
+
+
+**Parameters:**
+
+
+* `Category` - The category to check against. 
+
+
+
+**Returns:**
+
+True if the event is in the specified category, false otherwise.
+
+
+Checks if an event is in a specific category.
+
+
+This function checks whether the given EventCategory (bitmask) is set within the result of GetCategoryFlags(). It uses bitwise AND operation to compare the Category flag with all flags.
+
+
+
+
+**Parameters:**
+
+
+* `Category` The category to check against. 
+
+
+
+**Returns:**
+
+True if the event is in the specified category, false otherwise. 
+
+
+
+
+
+        
 
 <hr>
 
@@ -166,12 +222,40 @@ inline bool AGE::Event::IsInCategory (
 
 ### function ToString 
 
+_Returns a string representation of the object._ 
 ```C++
 inline virtual std::string AGE::Event::ToString () const
 ```
 
 
 
+This function returns a string that represents the current object's state. It does this by calling the `GetName` method and returning its result.
+
+
+
+
+**Returns:**
+
+A string representing the current object's name.
+
+
+Converts the object into a string representation.
+
+
+This function returns a string that represents the current object's name. It uses the `GetName` method to get the name of the object.
+
+
+
+
+**Returns:**
+
+A string representing the current object's name. 
+
+
+
+
+
+        
 
 <hr>
 

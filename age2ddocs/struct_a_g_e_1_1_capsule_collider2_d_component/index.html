@@ -131,11 +131,11 @@
 <tbody>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-capsulecollider2dcomponent-12"><strong>CapsuleCollider2DComponent</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-capsulecollider2dcomponent-12"><strong>CapsuleCollider2DComponent</strong></a> () = default<br><em>Default constructor for</em> <a href="./"><em><strong>CapsuleCollider2DComponent</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-capsulecollider2dcomponent-22"><strong>CapsuleCollider2DComponent</strong></a> (const <a href="./"><strong>CapsuleCollider2DComponent</strong></a> &amp;) = default<br></td>
+<td style="text-align: left;"><a href="#function-capsulecollider2dcomponent-22"><strong>CapsuleCollider2DComponent</strong></a> (const <a href="./"><strong>CapsuleCollider2DComponent</strong></a> &amp;) = default<br><em>Default copy constructor for the</em> <a href="./"><em><strong>CapsuleCollider2DComponent</strong></em></a> <em>class. This function is used to create a new instance of the class by copying an existing one. The copy operation will be performed using the '= default' directive provided by the compiler.</em></td>
 </tr>
 </tbody>
 </table>
@@ -150,11 +150,11 @@
 <tbody>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-deserialize"><strong>Deserialize</strong></a> (<a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> * Serializer, <a href="./"><strong>CapsuleCollider2DComponent</strong></a> &amp; Data) <br></td>
+<td style="text-align: left;"><a href="#function-deserialize"><strong>Deserialize</strong></a> (<a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> * Serializer, <a href="./"><strong>CapsuleCollider2DComponent</strong></a> &amp; Data) <br><em>This function deserializes a</em> <a href="./"><em><strong>CapsuleCollider2DComponent</strong></em></a> <em>from the provided</em><a href="../class_a_g_e_1_1_data_reader/"><em><strong>DataReader</strong></em></a> <em>.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-serialize"><strong>Serialize</strong></a> (<a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> * Serializer, const <a href="./"><strong>CapsuleCollider2DComponent</strong></a> &amp; Data) <br></td>
+<td style="text-align: left;"><a href="#function-serialize"><strong>Serialize</strong></a> (<a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> * Serializer, const <a href="./"><strong>CapsuleCollider2DComponent</strong></a> &amp; Data) <br><em>This function serializes the data of a</em> <a href="./"><em><strong>CapsuleCollider2DComponent</strong></em></a> <em>.</em></td>
 </tr>
 </tbody>
 </table>
@@ -200,31 +200,53 @@
 <hr>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-capsulecollider2dcomponent-12">function CapsuleCollider2DComponent [1/2]</h3>
+<p><em>Default constructor for</em> <a href="./"><em><strong>CapsuleCollider2DComponent</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::CapsuleCollider2DComponent::CapsuleCollider2DComponent () = default
 </code></pre>
 <hr>
 
 <h3 id="function-capsulecollider2dcomponent-22">function CapsuleCollider2DComponent [2/2]</h3>
+<p><em>Default copy constructor for the</em> <a href="./"><em><strong>CapsuleCollider2DComponent</strong></em></a> <em>class. This function is used to create a new instance of the class by copying an existing one. The copy operation will be performed using the '= default' directive provided by the compiler.</em></p>
 <pre><code class="language-C++">AGE::CapsuleCollider2DComponent::CapsuleCollider2DComponent (
     const CapsuleCollider2DComponent &amp;
 ) = default
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>other</code> - An instance of <a href="./"><strong>CapsuleCollider2DComponent</strong></a> to be copied. </li>
+</ul>
 <hr>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
 <h3 id="function-deserialize">function Deserialize</h3>
+<p><em>This function deserializes a</em> <a href="./"><em><strong>CapsuleCollider2DComponent</strong></em></a> <em>from the provided</em><a href="../class_a_g_e_1_1_data_reader/"><em><strong>DataReader</strong></em></a> <em>.</em></p>
 <pre><code class="language-C++">static inline void AGE::CapsuleCollider2DComponent::Deserialize (
     DataReader * Serializer,
     CapsuleCollider2DComponent &amp; Data
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Serializer</code> A pointer to the <a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> that contains the serialized data. </li>
+<li><code>Data</code> The <a href="./"><strong>CapsuleCollider2DComponent</strong></a> to be populated with deserialized data.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-serialize">function Serialize</h3>
+<p><em>This function serializes the data of a</em> <a href="./"><em><strong>CapsuleCollider2DComponent</strong></em></a> <em>.</em></p>
 <pre><code class="language-C++">static inline void AGE::CapsuleCollider2DComponent::Serialize (
     DataWriter * Serializer,
     const CapsuleCollider2DComponent &amp; Data
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Serializer</code> A pointer to an instance of <a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> that will be used for serialization. </li>
+<li><code>Data</code> The <a href="./"><strong>CapsuleCollider2DComponent</strong></a> whose data is being serialized. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <hr />

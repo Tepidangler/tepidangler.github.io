@@ -88,41 +88,66 @@
 <tbody>
 <tr>
 <td style="text-align: right;">float</td>
-<td style="text-align: left;"><a href="#function-elapsed"><strong>Elapsed</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-elapsed"><strong>Elapsed</strong></a> () <br><em>This function returns the elapsed time in milliseconds since the start time 'm_Start'.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">float</td>
-<td style="text-align: left;"><a href="#function-elapsedmillis"><strong>ElapsedMillis</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-elapsedmillis"><strong>ElapsedMillis</strong></a> () <br><em>This function returns the elapsed time in milliseconds since the last reset.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-reset"><strong>Reset</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-reset"><strong>Reset</strong></a> () <br><em>This function resets the start time to the current time.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-timer"><strong>Timer</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-timer"><strong>Timer</strong></a> () <br><em>Constructor for the</em> <a href="./"><em><strong>Timer</strong></em></a> <em>class. It initializes a new instance of the</em><a href="./"><em><strong>Timer</strong></em></a> <em>and resets it.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-elapsed">function Elapsed</h3>
+<p><em>This function returns the elapsed time in milliseconds since the start time 'm_Start'.</em> </p>
 <pre><code class="language-C++">inline float AGE::Timer::Elapsed () 
 </code></pre>
+<p>The function uses std::chrono to measure the duration between the current time and the start time. It then converts this duration from nanoseconds to milliseconds by dividing by 1,000,000 (since there are 1,000,000 nanoseconds in a millisecond). The result is returned as a float.</p>
+<p><strong>Returns:</strong></p>
+<p>A float representing the elapsed time in milliseconds.</p>
+<p>This function returns the elapsed time in milliseconds since the start time 'm_Start'.</p>
+<p>The function uses a high resolution clock to measure the elapsed time and then converts it into milliseconds. It does this by first converting the duration into nanoseconds, then dividing by 1 million (to convert from nanoseconds to microseconds) and finally again by 1000 (to convert from microseconds to milliseconds). The result is a float representing the elapsed time in milliseconds.</p>
+<p><strong>Returns:</strong></p>
+<p>A float representing the elapsed time in milliseconds since 'm_Start'. </p>
 <hr>
 
 <h3 id="function-elapsedmillis">function ElapsedMillis</h3>
+<p><em>This function returns the elapsed time in milliseconds since the last reset.</em> </p>
 <pre><code class="language-C++">inline float AGE::Timer::ElapsedMillis () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A float representing the elapsed time in milliseconds. If no timer has been set, it will return 0.0f.</p>
+<p>This function returns the elapsed time in milliseconds.</p>
+<p>The function multiplies the result of <code>Elapsed()</code> by 1000 to convert seconds into milliseconds. It assumes that <code>Elapsed()</code> is a function returning the elapsed time in seconds.</p>
+<p><strong>Returns:</strong></p>
+<p>A float representing the elapsed time in milliseconds. </p>
 <hr>
 
 <h3 id="function-reset">function Reset</h3>
+<p><em>This function resets the start time to the current time.</em> </p>
 <pre><code class="language-C++">inline void AGE::Timer::Reset () 
 </code></pre>
+<p>The function uses <code>std::chrono</code> library to get the current time and store it in m_Start variable. It is typically used at the beginning of a performance measurement session, setting the starting point for timing measurements.</p>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>This function resets the start time to the current time.</p>
+<p>The function uses <code>std::chrono</code> library to get the current time and assigns it to m_Start variable. It is typically used in timing operations where you want to measure how much time has passed since a certain point.</p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-timer">function Timer</h3>
+<p><em>Constructor for the</em> <a href="./"><em><strong>Timer</strong></em></a> <em>class. It initializes a new instance of the</em><a href="./"><em><strong>Timer</strong></em></a> <em>and resets it.</em></p>
 <pre><code class="language-C++">inline AGE::Timer::Timer () 
 </code></pre>
+<p>Constructor for the <a href="./"><strong>Timer</strong></a> class. Initializes a new instance of the timer and resets it to 0. </p>
 <hr>
 
 <hr />

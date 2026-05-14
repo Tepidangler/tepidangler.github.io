@@ -17,7 +17,9 @@
 
 namespace AGE
 {
-    Ref<AudioEngine> AudioEngine::Create(AudioEngineType Type)
+    
+
+Ref<AudioEngine> AudioEngine::Create(AudioEngineType Type)
     {
 
         switch (Type)
@@ -32,7 +34,7 @@ namespace AGE
 #if WITH_WWISE
             return CreateRef<Wwise>();
 #else
-            AGE_CORE_ASSERT(false, "AGE was not built with WWise! Check the value of your CMake variables and make sure BUILD_WITH_WWISE is ON and you have set a path for the SDK in WWISE_INSTALL_PATH");
+            CoreLogger::Assert(false, "AGE was not built with WWise! Check the value of your CMake variables and make sure BUILD_WITH_WWISE is ON and you have set a path for the SDK in WWISE_INSTALL_PATH");
             return nullptr;
 #endif
         }
@@ -42,7 +44,7 @@ namespace AGE
 #if WITH_FMOD
             return CreateRef<FmodEngine>();
 #else
-            AGE_CORE_ASSERT(false, "AGE was not built with FMod! Check the value of your CMake variables and make sure BUILD_WITH_FMOD is ON and you have set a path for the SDK in FMOD_INSTALL_PATH");
+            CoreLogger::Assert(false, "AGE was not built with FMod! Check the value of your CMake variables and make sure BUILD_WITH_FMOD is ON and you have set a path for the SDK in FMOD_INSTALL_PATH");
             return nullptr;
 #endif
         }
@@ -54,9 +56,9 @@ namespace AGE
     }
 
     template<typename T>
-    T* AudioEngine::As()
+T* AudioEngine::As()
     {
-        AGE_CORE_ASSERT(false, "As() Failed");
+        CoreLogger::Assert(false, "As() Failed");
     }
 
 

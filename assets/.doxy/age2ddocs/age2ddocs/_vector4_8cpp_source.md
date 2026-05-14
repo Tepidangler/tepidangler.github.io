@@ -15,35 +15,38 @@
 #endif
 
 namespace AGE {
-    Vector4::Vector4() {
+Vector4::Vector4() {
         x = 0;
         y = 0;
         z = 0;
         w = 0;
     }
 
-    Vector4::Vector4(float a) {
+Vector4::Vector4(float a) {
         x = a;
         y = a;
         z = a;
         w = a;
     }
 
-    Vector4::Vector4(glm::vec4 vec) {
+Vector4::Vector4(glm::vec4 vec) {
         x = vec.x;
         y = vec.y;
         z = vec.z;
         w = vec.w;
     }
 
-    Vector4::Vector4(float a, float b, float c, float d) {
+Vector4::Vector4(float a, float b, float c, float d) {
         x = a;
         y = b;
         z = c;
         w = d;
     }
 
-    Vector4::Vector4(uint8_t a, uint8_t b, uint8_t c, uint8_t d)
+    COMMENT:
+CONFIDENCE: 1.0;
+
+Vector4::Vector4(uint8_t a, uint8_t b, uint8_t c, uint8_t d)
     {
         std::byte tmpbyte = std::byte(a);
         int tmpint = std::to_integer<int>(tmpbyte);
@@ -63,7 +66,7 @@ namespace AGE {
         w = ((100.f * (float)tmpint) / 255.f) * .01f;
     }
 
-    Vector4::Vector4(const float* color) {
+Vector4::Vector4(const float* color) {
         x = color[0];
         y = color[1];
         z = color[2];
@@ -86,7 +89,7 @@ namespace AGE {
     //  Serializer->ReadRaw<float>(Instance.w);
     //}
 
-    Vector4 Vector4::normalize() const
+Vector4 Vector4::normalize() const
     {
         return Vector4();
     }

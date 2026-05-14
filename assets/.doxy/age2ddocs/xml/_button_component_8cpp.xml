@@ -17,7 +17,7 @@
         <initializer>{
 	rttr::registration::class_&lt;<ref refid="class_a_g_e_1_1_button_component" kindref="compound">AGE::ButtonComponent</ref>&gt;(&quot;ButtonComponent&quot;)
 	.constructor&lt;const std::string&amp;&gt;()
-	.method(&quot;OnUpdate&quot;, &amp;AGE::ButtonComponent::OnUpdate)
+	.method(&quot;OnUpdate&quot;, &amp;<ref refid="class_a_g_e_1_1_button_component_1a2abd07eb02072e41ced466ef9bcc0355" kindref="member">AGE::ButtonComponent::OnUpdate</ref>)
 	.property(&quot;BoxProperties&quot;, &amp;AGE::ButtonComponent::m_BoxProperties)(rttr::metadata(&quot;Description&quot;, &quot;Properties related to box surrounding the text&quot;))</initializer>
         <briefdescription>
         </briefdescription>
@@ -46,87 +46,87 @@
 <codeline lineno="11"><highlight class="normal">RTTR_REGISTRATION{</highlight></codeline>
 <codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>rttr::registration::class_&lt;AGE::ButtonComponent&gt;(</highlight><highlight class="stringliteral">&quot;ButtonComponent&quot;</highlight><highlight class="normal">)</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>.constructor&lt;</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;&gt;()</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>.method(</highlight><highlight class="stringliteral">&quot;OnUpdate&quot;</highlight><highlight class="normal">,<sp/>&amp;AGE::ButtonComponent::OnUpdate)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>.method(</highlight><highlight class="stringliteral">&quot;OnUpdate&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="class_a_g_e_1_1_button_component_1a2abd07eb02072e41ced466ef9bcc0355" kindref="member">AGE::ButtonComponent::OnUpdate</ref>)</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>.property(</highlight><highlight class="stringliteral">&quot;BoxProperties&quot;</highlight><highlight class="normal">,<sp/>&amp;AGE::ButtonComponent::m_BoxProperties)(rttr::metadata(</highlight><highlight class="stringliteral">&quot;Description&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Properties<sp/>related<sp/>to<sp/>box<sp/>surrounding<sp/>the<sp/>text&quot;</highlight><highlight class="normal">));</highlight></codeline>
 <codeline lineno="16"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="17"><highlight class="normal"></highlight></codeline>
 <codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">AGE</highlight></codeline>
 <codeline lineno="19"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>ButtonComponent::ButtonComponent(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>Name)</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_Name<sp/>=<sp/>Name;</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_Type<sp/>=<sp/>UIComponentType::ButtonComponent;</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_OnClick<sp/>=[]()<sp/>{</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CoreLogger::Info(</highlight><highlight class="stringliteral">&quot;Button<sp/>Clicked!&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ButtonComponent::DrawContent()<sp/>{</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ImGui::Text(</highlight><highlight class="stringliteral">&quot;Box<sp/>Properties&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DrawVec3Control(</highlight><highlight class="stringliteral">&quot;Screen<sp/>Position&quot;</highlight><highlight class="normal">,<sp/>m_BoxProperties.Position);</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DrawVec3Control(</highlight><highlight class="stringliteral">&quot;Screen<sp/>Rotation&quot;</highlight><highlight class="normal">,<sp/>m_BoxProperties.Rotation);</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DrawVec3Control(</highlight><highlight class="stringliteral">&quot;Screen<sp/>Scale&quot;</highlight><highlight class="normal">,<sp/>m_BoxProperties.Scale);</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ImGui::ColorEdit4(</highlight><highlight class="stringliteral">&quot;Box<sp/>Color&quot;</highlight><highlight class="normal">,<sp/>&amp;m_BoxProperties.TintColor.x);</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ButtonComponent::OnUpdate(<ref refid="class_a_g_e_1_1_time_step" kindref="compound">TimeStep</ref><sp/>DeltaTime)<sp/>{</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UIComponent::OnUpdate(DeltaTime);</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_CompProperties.Visible)</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QuadProperties<sp/>QuadProps;</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QuadProps.Transform<sp/>=<sp/>Math::MakeTransform(m_BoxProperties.Position,m_BoxProperties.Rotation,m_BoxProperties.Scale);</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QuadProps.Color<sp/>=<sp/>m_BoxProperties.TintColor;</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Renderer2D::DrawQuad(QuadProps);</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ButtonComponent::OnEvent(<ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref><sp/>&amp;<ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref>)</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AGE::EventDispatcher<sp/>Dispatcher(Event);</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_CompProperties.Focused)</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dispatcher.Dispatch&lt;KeyPressedEvent&gt;(BIND_EVENT_FN(ButtonComponent::OnKeyPressed));</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(IsButtonHovered())<sp/>{</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dispatcher.Dispatch&lt;MouseButtonPressedEvent&gt;(BIND_EVENT_FN(ButtonComponent::OnClicked));</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"></highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ButtonComponent::IsButtonHovered()</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Vector2<sp/>MousePos<sp/>=<sp/>App::Get().GetDeviceManager().GetWindow().GetMousePos();</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Vector2<sp/>FramebufferSize<sp/>=<sp/>App::Get().GetFramebufferSize();</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Vector2<sp/>NormalizedMousePos<sp/>=<sp/>(MousePos<sp/>/<sp/>FramebufferSize)<sp/>*<sp/>2.f<sp/><sp/>-<sp/>1.f;</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NormalizedMousePos.y<sp/>*=<sp/>-1.f;</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NormalizedMousePos.x<sp/>&gt;<sp/>(m_Bounds[0].x<sp/>-<sp/>m_Bounds[1].x<sp/>*<sp/>.5f)<sp/>&amp;&amp;<sp/>NormalizedMousePos.x<sp/>&lt;<sp/>(m_Bounds[0].x<sp/>+<sp/>m_Bounds[1].x<sp/>*<sp/>.5f)</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/>NormalizedMousePos.y<sp/>&gt;<sp/>(m_Bounds[0].y<sp/>-<sp/>m_Bounds[1].y<sp/>*<sp/>.5f)<sp/>&amp;&amp;<sp/>NormalizedMousePos.y<sp/>&lt;<sp/>(m_Bounds[0].y<sp/>+<sp/>m_Bounds[1].y<sp/>*<sp/>.5f);</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"></highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ButtonComponent::OnKeyPressed(<ref refid="class_a_g_e_1_1_key_pressed_event" kindref="compound">KeyPressedEvent</ref><sp/>&amp;E)</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!m_CompProperties.Focused)<sp/>{</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(E.GetKeyCode())</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>Key::ENTER:<sp/>{<sp/></highlight><highlight class="comment">//<sp/>This<sp/>in<sp/>theory<sp/>should<sp/>be<sp/>whatever<sp/>key<sp/>is<sp/>&apos;ACCEPT&apos;<sp/>or<sp/>&apos;CONFIRM&apos;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_OnClick();</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"></highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ButtonComponent::OnClicked(<ref refid="class_a_g_e_1_1_mouse_button_pressed_event" kindref="compound">MouseButtonPressedEvent</ref><sp/>&amp;E)</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_OnClick();</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="94"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>AGE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><ref refid="class_a_g_e_1_1_button_component_1a707e9a9f06c18ff0fb83ac96f347ec9b" kindref="member">ButtonComponent::ButtonComponent</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>Name)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_Name<sp/>=<sp/>Name;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_Type<sp/>=<sp/>UIComponentType::ButtonComponent;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_OnClick<sp/>=[]()<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CoreLogger::Info(</highlight><highlight class="stringliteral">&quot;Button<sp/>Clicked!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_button_component_1ae3d6bf628ce87f47af1103aaa9198156" kindref="member">ButtonComponent::DrawContent</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ImGui::Text(</highlight><highlight class="stringliteral">&quot;Box<sp/>Properties&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_a_g_e_1_1_u_i_component_1af6baa3f8d5e27906bb0cf5505920323d" kindref="member">DrawVec3Control</ref>(</highlight><highlight class="stringliteral">&quot;Screen<sp/>Position&quot;</highlight><highlight class="normal">,<sp/>m_BoxProperties.Position);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_a_g_e_1_1_u_i_component_1af6baa3f8d5e27906bb0cf5505920323d" kindref="member">DrawVec3Control</ref>(</highlight><highlight class="stringliteral">&quot;Screen<sp/>Rotation&quot;</highlight><highlight class="normal">,<sp/>m_BoxProperties.Rotation);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_a_g_e_1_1_u_i_component_1af6baa3f8d5e27906bb0cf5505920323d" kindref="member">DrawVec3Control</ref>(</highlight><highlight class="stringliteral">&quot;Screen<sp/>Scale&quot;</highlight><highlight class="normal">,<sp/>m_BoxProperties.Scale);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ImGui::ColorEdit4(</highlight><highlight class="stringliteral">&quot;Box<sp/>Color&quot;</highlight><highlight class="normal">,<sp/>&amp;m_BoxProperties.TintColor.x);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_button_component_1a2abd07eb02072e41ced466ef9bcc0355" kindref="member">ButtonComponent::OnUpdate</ref>(<ref refid="class_a_g_e_1_1_time_step" kindref="compound">TimeStep</ref><sp/>DeltaTime)<sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UIComponent::OnUpdate(DeltaTime);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_CompProperties.Visible)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QuadProperties<sp/>QuadProps;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QuadProps.Transform<sp/>=<sp/><ref refid="class_a_g_e_1_1_math_1a63d9b6d7b019df1aaedd2b06d7e6a0e6" kindref="member">Math::MakeTransform</ref>(m_BoxProperties.Position,m_BoxProperties.Rotation,m_BoxProperties.Scale);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QuadProps.Color<sp/>=<sp/>m_BoxProperties.TintColor;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_a_g_e_1_1_renderer2_d_1a012305ca47d628775a684d8bf730415f" kindref="member">Renderer2D::DrawQuad</ref>(QuadProps);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_button_component_1af83679edef87b696c95bd38768b3529d" kindref="member">ButtonComponent::OnEvent</ref>(<ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref><sp/>&amp;<ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref>)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AGE::EventDispatcher<sp/>Dispatcher(Event);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_CompProperties.Focused)</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dispatcher.Dispatch&lt;KeyPressedEvent&gt;(BIND_EVENT_FN(ButtonComponent::OnKeyPressed));</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_a_g_e_1_1_button_component_1abaf8f088dc961e76ad47afe15d308c26" kindref="member">IsButtonHovered</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dispatcher.Dispatch&lt;MouseButtonPressedEvent&gt;(BIND_EVENT_FN(ButtonComponent::OnClicked));</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_a_g_e_1_1_button_component_1abaf8f088dc961e76ad47afe15d308c26" kindref="member">ButtonComponent::IsButtonHovered</ref>()</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Vector2<sp/>MousePos<sp/>=<sp/><ref refid="class_a_g_e_1_1_app_1aa12c4bddce167e5c4870260bbefa20e1" kindref="member">App::Get</ref>().<ref refid="class_a_g_e_1_1_app_1a6e45cb5c0ba9de18ba8e8638003d2c71" kindref="member">GetDeviceManager</ref>().<ref refid="class_a_g_e_1_1_device_manager_1ac5476d5fd498b9ea8a14807868db297a" kindref="member">GetWindow</ref>().GetMousePos();</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Vector2<sp/>FramebufferSize<sp/>=<sp/><ref refid="class_a_g_e_1_1_app_1aa12c4bddce167e5c4870260bbefa20e1" kindref="member">App::Get</ref>().<ref refid="class_a_g_e_1_1_app_1a35d8dbb20ad546e3c653809bf4808274" kindref="member">GetFramebufferSize</ref>();</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Vector2<sp/>NormalizedMousePos<sp/>=<sp/>(MousePos<sp/>/<sp/>FramebufferSize)<sp/>*<sp/>2.f<sp/><sp/>-<sp/>1.f;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NormalizedMousePos.y<sp/>*=<sp/>-1.f;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NormalizedMousePos.x<sp/>&gt;<sp/>(m_Bounds[0].x<sp/>-<sp/>m_Bounds[1].x<sp/>*<sp/>.5f)<sp/>&amp;&amp;<sp/>NormalizedMousePos.x<sp/>&lt;<sp/>(m_Bounds[0].x<sp/>+<sp/>m_Bounds[1].x<sp/>*<sp/>.5f)</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/>NormalizedMousePos.y<sp/>&gt;<sp/>(m_Bounds[0].y<sp/>-<sp/>m_Bounds[1].y<sp/>*<sp/>.5f)<sp/>&amp;&amp;<sp/>NormalizedMousePos.y<sp/>&lt;<sp/>(m_Bounds[0].y<sp/>+<sp/>m_Bounds[1].y<sp/>*<sp/>.5f);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ButtonComponent::OnKeyPressed(<ref refid="class_a_g_e_1_1_key_pressed_event" kindref="compound">KeyPressedEvent</ref><sp/>&amp;E)</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!m_CompProperties.Focused)<sp/>{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(E.GetKeyCode())</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>Key::ENTER:<sp/>{<sp/></highlight><highlight class="comment">//<sp/>This<sp/>in<sp/>theory<sp/>should<sp/>be<sp/>whatever<sp/>key<sp/>is<sp/>&apos;ACCEPT&apos;<sp/>or<sp/>&apos;CONFIRM&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_OnClick();</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ButtonComponent::OnClicked(<ref refid="class_a_g_e_1_1_mouse_button_pressed_event" kindref="compound">MouseButtonPressedEvent</ref><sp/>&amp;E)</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_OnClick();</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="199"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>AGE</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="C:/Programming/AGE2D/Engine/src/AGE/UI/Components/Private/ButtonComponent.cpp"/>
   </compounddef>

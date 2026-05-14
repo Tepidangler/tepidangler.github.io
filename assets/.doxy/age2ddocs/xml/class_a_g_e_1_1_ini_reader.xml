@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/IniReader.h" line="39" column="23" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/IniReader.h" bodystart="39" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/IniReader.h" line="51" column="23" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/IniReader.h" bodystart="51" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_ini_reader_1ac2ebcc8686ebeb180189d6312fc4aef5" prot="private" static="no" mutable="no">
         <type>CSimpleIniA</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/IniReader.h" line="40" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/IniReader.h" bodystart="40" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/IniReader.h" line="52" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/IniReader.h" bodystart="52" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -44,12 +44,32 @@
           <declname>Path</declname>
         </param>
         <briefdescription>
+<para>Constructor for the <ref refid="class_a_g_e_1_1_ini_reader" kindref="compound">IniReader</ref> class. Takes a path to an .ini file as input and loads it into memory. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filesystem path to the .ini file that will be loaded.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Constructor for the <ref refid="class_a_g_e_1_1_ini_reader" kindref="compound">IniReader</ref> class. It takes a file path as input and loads the INI file at that location into memory. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filesystem path to the INI file which is to be loaded. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/IniReader.h" line="32" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Private/IniReader.cpp" bodystart="11" bodyend="22"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/IniReader.h" line="32" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Private/IniReader.cpp" bodystart="19" bodyend="30"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_ini_reader_1a3e9fa22b79f068af0e6e98b357ed05b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -58,12 +78,19 @@
         <name>~IniReader</name>
         <qualifiedname>AGE::IniReader::~IniReader</qualifiedname>
         <briefdescription>
+<para>Destructor for the <ref refid="class_a_g_e_1_1_ini_reader" kindref="compound">IniReader</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is responsible for freeing any resources that were allocated during the lifetime of an instance of this class.</para>
+<para>Destructor for the <ref refid="class_a_g_e_1_1_ini_reader" kindref="compound">IniReader</ref> class.</para>
+<para>This function is responsible for freeing any resources that were allocated during the lifetime of an instance of this class, such as memory or file handles. It&apos;s important to ensure that all resources are properly released when they are no longer needed to prevent potential memory leaks or other issues in your program.</para>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/IniReader.h" line="33" column="1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/IniReader.h" line="45" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_ini_reader_1a3664bc58ba3636572eff6046854f4547" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -84,12 +111,71 @@
           <declname>HasMultipleValues</declname>
         </param>
         <briefdescription>
+<para>This function reads a value from the INI file. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function retrieves a value associated with a given key in a specified section of the INI file. If the key does not exist, it logs an error message and returns an empty string.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Section</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the section to read from. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key for which to retrieve a value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">HasMultipleValues</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A flag indicating whether the key has multiple values in the INI file.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns the value associated with the given key, or an empty string if the key does not exist.</para>
+</simplesect>
+This function reads a value from the INI file.</para>
+<para>The function takes three parameters - section name, key and a boolean reference to indicate if there are multiple values for the given key in the specified section. It returns an empty string if it fails to read the value or the key-value pair does not exist.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Section</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A constant reference to the section name where the key is located. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A constant reference to the key whose value needs to be retrieved. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>HasMultipleValues</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A boolean reference that indicates if there are multiple values for the given key in the specified section.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns a string containing the value of the key-value pair, or an empty string if it fails to read the value or the key-value pair does not exist. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/IniReader.h" line="35" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Private/IniReader.cpp" bodystart="24" bodyend="38"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/IniReader.h" line="47" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Private/IniReader.cpp" bodystart="54" bodyend="68"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_ini_reader_1a4549ad062a50895ed08455263198fd37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::vector&lt; std::string &gt;</type>
@@ -106,19 +192,62 @@
           <declname>Key</declname>
         </param>
         <briefdescription>
+<para>Reads all values associated with a given key in a specified section of the INI file. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function retrieves all values associated with a specific key within a particular section of the INI file. If no such key exists, it logs an error message and returns an empty vector. The results are sorted based on their load order as defined by CSimpleIniA::Entry::LoadOrder().</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Section</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string representing the name of the section in the INI file to be read from. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string representing the key whose values are to be retrieved. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A vector of strings containing all values associated with the provided key in the specified section, sorted based on their load order. If no such key exists, an empty vector is returned.</para>
+</simplesect>
+Reads all values associated with a given key in a specified section of the INI file.</para>
+<para>This function retrieves all values associated with a specific key within a particular section of the INI file. If no such key exists, it returns an empty vector.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Section</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the section to search for keys in. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key whose associated values are being retrieved. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A vector containing all values associated with the provided key in the specified section. If no such key exists, it returns an empty vector. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/IniReader.h" line="37" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Private/IniReader.cpp" bodystart="40" bodyend="61"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/IniReader.h" line="49" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Private/IniReader.cpp" bodystart="88" bodyend="109"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/IniReader.h" line="29" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/IniReader.h" bodystart="30" bodyend="41"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/IniReader.h" line="29" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Serializers/Public/IniReader.h" bodystart="30" bodyend="53"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_ini_reader_1a770d48b4bf777b85af2f108292eabbe0" prot="public" virt="non-virtual"><scope>AGE::IniReader</scope><name>IniReader</name></member>
       <member refid="class_a_g_e_1_1_ini_reader_1ac2ebcc8686ebeb180189d6312fc4aef5" prot="private" virt="non-virtual"><scope>AGE::IniReader</scope><name>m_Ini</name></member>

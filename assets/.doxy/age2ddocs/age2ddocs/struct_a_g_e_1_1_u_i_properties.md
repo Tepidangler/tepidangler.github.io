@@ -60,7 +60,7 @@
 
 | Type | Name |
 | ---: | :--- |
-|   | [**UIProperties**](#function-uiproperties) () = default<br> |
+|   | [**UIProperties**](#function-uiproperties) () = default<br>_Default constructor for_ [_**UIProperties**_](struct_a_g_e_1_1_u_i_properties.md) _class._ |
 
 
 
@@ -163,6 +163,7 @@ bool AGE::UIProperties::Visible;
 
 ### function UIProperties 
 
+_Default constructor for_ [_**UIProperties**_](struct_a_g_e_1_1_u_i_properties.md) _class._
 ```C++
 AGE::UIProperties::UIProperties () = default
 ```

@@ -23,9 +23,11 @@ namespace AGE
     {
     public:
 
-        Physics2D() = default;
+        Ph
+ysics2D() = default;
 
-        ~Physics2D() = default;
+        ~P
+hysics2D() = default;
 
         bool CreateNewPhysicsWorld(Ref<Scene> scene);
 
@@ -69,10 +71,12 @@ namespace AGE
 
         bool QueryHit(const QueryParams& Params);
 
-        Ref<World>& GetWorld() { return m_World; }
+        Re
+f<World>& GetWorld() { return m_World; }
 
         template<typename T>
-        static T GetShapeFromID(b2ShapeId ID)
+        st
+atic T GetShapeFromID(b2ShapeId ID)
         {
             switch (b2Shape_GetType(ID))
             {

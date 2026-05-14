@@ -15,18 +15,18 @@
 
 namespace AGE
 {
-    Layer::Layer(const std::string& DebugName)
+Layer::Layer(const std::string& DebugName)
         : m_DebugName(DebugName)
     {
 
 
     }
 
-    Layer::~Layer()
+Layer::~Layer()
     {
 
     }
-    float Layer::GetTime()
+float Layer::GetTime()
     {
         return static_cast<float>(glfwGetTime());
     }

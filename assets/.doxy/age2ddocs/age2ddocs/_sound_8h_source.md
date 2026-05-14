@@ -22,32 +22,32 @@ namespace AGE
         AudioSource(const std::string& FilePath);
         //~AudioSource();
 
-        std::string GetFilePath() const { return m_FilePath; }
-        std::string GetName() const { return m_Name; }
-        UUID& GetAssetID() { return m_AssetID; }
+std::string GetFilePath() const { return m_FilePath; }
+std::string GetName() const { return m_Name; }
+UUID& GetAssetID() { return m_AssetID; }
 
-        void SetAssetID(const UUID& ID) { m_AssetID = ID; }
+void SetAssetID(const UUID& ID) { m_AssetID = ID; }
         void SetPosition(const Vector3& P);
         void SetPosition(float x, float y, float z);
         void SetGain(float Gain);
         void SetPitch(float Pitch);
         void SetSpatial(bool Spatial);
         void SetLoop(bool Loop);
-        void SetPlaying(bool Playing) { bIsPlaying = Playing; }
-        void SetSoundData(std::vector<char> Data) { m_SoundData = Data; }
+void SetPlaying(bool Playing) { bIsPlaying = Playing; }
+void SetSoundData(std::vector<char> Data) { m_SoundData = Data; }
 
         std::pair<uint32_t, uint32_t> GetLengthMinutesAndSeconds() const;
 
 
         static AudioSource LoadFromFile(const std::string& File, bool Spatial = false);
 
-        bool IsLooping() { return bLoop; }
-        bool IsLoaded() const { return bLoaded; }
-        bool IsPlaying() const { return bIsPlaying; }
+bool IsLooping() { return bLoop; }
+bool IsLoaded() const { return bLoaded; }
+bool IsPlaying() const { return bIsPlaying; }
 
     private:
-        AudioSource() = default;
-        AudioSource(const AudioSource&) = default;
+AudioSource() = default;
+AudioSource(const AudioSource&) = default;
         AudioSource(uint32_t Handle, bool Loaded, double Length);
         AudioSource(uint32_t Handle, bool Loaded, double Length, std::vector<char> Data);
 

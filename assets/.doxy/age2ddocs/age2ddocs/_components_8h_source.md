@@ -43,17 +43,17 @@ namespace AGE
     {
         UUID ID;
 
-        IDComponent() = default;
-        IDComponent(const IDComponent&) = default;
+IDComponent() = default;
+IDComponent(const IDComponent&) = default;
     };
 
     struct TagComponent
     {
         std::string Tag;
 
-        TagComponent() = default;
-        TagComponent(const TagComponent&) = default;
-        TagComponent(const std::string T)
+TagComponent() = default;
+TagComponent(const TagComponent&) = default;
+TagComponent(const std::string T)
             : Tag(T) {}
 
     };
@@ -64,12 +64,15 @@ namespace AGE
         Vector3 Scale{ 1.f };
 
 
-        TransformComponent() = default;
-        TransformComponent(const TransformComponent&) = default;
-        TransformComponent(const Vector3& T)
+TransformComponent() = default;
+TransformComponent(const TransformComponent&) = default;
+        COMMENT:
+CONFIDENCE: 1.0;
+
+TransformComponent(const Vector3& T)
             :Translation(T) {}
 
-        Matrix4D GetTransform()
+Matrix4D GetTransform()
         { 
             Matrix4D Rot = glm::toMat4((glm::quat)Rotation);
             
@@ -77,17 +80,17 @@ namespace AGE
             return glm::translate(Matrix4D(1.f).ToGLM(),(glm::vec3)Translation) * Rot.ToGLM() * glm::scale(Matrix4D(1.f).ToGLM(), (glm::vec3)Scale);
         }
 
-        static void Serialize(DataWriter* Serializer, const TransformComponent& Data)
+static void Serialize(DataWriter* Serializer, const TransformComponent& Data)
         {
 
         }
 
-        static void Deserialize(DataReader* Serializer, TransformComponent& Data)
+static void Deserialize(DataReader* Serializer, TransformComponent& Data)
         {
 
         }
 
-        operator Matrix4D()
+operator Matrix4D()
         {
             return GetTransform();
         }
@@ -97,10 +100,16 @@ namespace AGE
     {
         QuadProperties QuadProps;
         Vector4 Color{ 1.f };
+        int TileID = -1;
         int CurrentAnimationID = -1;
         Ref<Texture2D> Texture;
         Ref<Texture2D> DiagTexture;
         Ref<SubTexture2D> SubTexture;
+        Vector2 TileLocation;
+        int TilesLayer = -1;
+        float TileWidth;
+        float TileHeight;
+        bool bTile = false;
         std::vector<AnimationSpecification> AnimTextures;
         CharMovementStatus MovementStatus = CharMovementStatus::Idle;
         std::string RigidBodyType = "Dynamic";
@@ -109,22 +118,25 @@ namespace AGE
 
         Animation AnimInstance;
 
-        SpriteRendererComponent() = default;
-        SpriteRendererComponent(const SpriteRendererComponent&) = default;
-        SpriteRendererComponent(const Vector4& C)
+SpriteRendererComponent() = default;
+SpriteRendererComponent(const SpriteRendererComponent&) = default;
+        COMMENT:
+CONFIDENCE: 1.0;
+
+SpriteRendererComponent(const Vector4& C)
             :Color(C) {}
 
-        static void Serialize(DataWriter* Serializer, const SpriteRendererComponent& Data)
+static void Serialize(DataWriter* Serializer, const SpriteRendererComponent& Data)
         {
 
         }
 
-        static void Deserialize(DataReader* Serializer, SpriteRendererComponent& Data)
+static void Deserialize(DataReader* Serializer, SpriteRendererComponent& Data)
         {
 
         }
 
-        bool AnimIsReady()
+bool AnimIsReady()
         {
             if (AnimTextures.empty())
             {
@@ -154,20 +166,30 @@ namespace AGE
     {
         std::string Name;
         Ref<Tilemap> TileMap;
-        bool IsShaderDataSet = false;
+#if 0
+        std::vector<Vector2> TileLocs;
+        std::vector <Ref<SubTexture2D>> TileTextures;
+        std::vector<tmx_layer*> Layers;
+        int LayerCount = -1;
+        std::vector<uint64_t> IDs;
+        std::string TileMapPath;
+        int TileCount = 0;
+        bool bFirstPass = true;
+        bool bLoaded = false;
+#endif
 
 
-        TileMapRendererComponent() = default;
-        TileMapRendererComponent(const TileMapRendererComponent&) = default;
-        TileMapRendererComponent(const std::string& N)
+TileMapRendererComponent() = default;
+TileMapRendererComponent(const TileMapRendererComponent&) = default;
+TileMapRendererComponent(const std::string& N)
             :Name(N) {}
 
-        Ref<Tilemap> GetTileMap()
+Ref<Tilemap> GetTileMap()
         {
             return TileMap;
         }
 
-        void SetTileMap(Ref<Tilemap> Map)
+void SetTileMap(Ref<Tilemap> Map)
         {
             TileMap = Map;
         }
@@ -176,16 +198,16 @@ namespace AGE
 
     struct MovementComponent
     {
-        MovementComponent() = default;
-        MovementComponent(const MovementComponent&) = default;
+MovementComponent() = default;
+MovementComponent(const MovementComponent&) = default;
 
         float Speed = .5f;
     };
 
     struct BoxComponent
     {
-        BoxComponent() = default;
-        BoxComponent(const BoxComponent&) = default;
+BoxComponent() = default;
+BoxComponent(const BoxComponent&) = default;
 
         Vector4 Color{ 1.f };
         Ref<Texture2D> Texture;
@@ -198,15 +220,15 @@ namespace AGE
         float Thickness = 1.f;
         float Fade = .005f;
 
-        CircleRendererComponent() = default;
-        CircleRendererComponent(const CircleRendererComponent&) = default;
+CircleRendererComponent() = default;
+CircleRendererComponent(const CircleRendererComponent&) = default;
 
-        static void Serialize(DataWriter* Serializer, const CircleRendererComponent& Data)
+static void Serialize(DataWriter* Serializer, const CircleRendererComponent& Data)
         {
 
         }
 
-        static void Deserialize(DataReader* Serializer, CircleRendererComponent& Data)
+static void Deserialize(DataReader* Serializer, CircleRendererComponent& Data)
         {
 
         }
@@ -224,25 +246,25 @@ namespace AGE
         //ALint State = AL_INITIAL;
         //std::size_t Cursor = 65536 * 4;
 
-        AudioComponent(const Ref<AudioEngine>& Engine)
+AudioComponent(const Ref<AudioEngine>& Engine)
         {
             Audio = Engine;
         }
 
-        AudioComponent(const AudioComponent&) = default;
+AudioComponent(const AudioComponent&) = default;
 
 
-        static void Serialize(DataWriter* Serializer, const AudioComponent& Data)
+static void Serialize(DataWriter* Serializer, const AudioComponent& Data)
         {
 
         }
 
-        static void Deserialize(DataReader* Serializer, AudioComponent& Data)
+static void Deserialize(DataReader* Serializer, AudioComponent& Data)
         {
 
         }
 
-        void AddSound(Ref<AudioSource> Sound) 
+void AddSound(Ref<AudioSource> Sound) 
         {
             if (Sound)
             {
@@ -250,7 +272,7 @@ namespace AGE
             }
         }
 
-        Ref<AudioEngine>& GetAudioEngine() { return Audio; }
+Ref<AudioEngine>& GetAudioEngine() { return Audio; }
     };
     struct CameraComponent
     {
@@ -260,26 +282,26 @@ namespace AGE
         bool bFixedAspectRatio = false;
         bool bRecording = false;
 
-        CameraComponent() = default;
-        CameraComponent(const CameraComponent& ) = default;
+CameraComponent() = default;
+CameraComponent(const CameraComponent& ) = default;
 
 
-        static void Serialize(DataWriter* Serializer, const CameraComponent& Data)
+static void Serialize(DataWriter* Serializer, const CameraComponent& Data)
         {
 
         }
 
-        static void Deserialize(DataReader* Serializer, CameraComponent& Data)
+static void Deserialize(DataReader* Serializer, CameraComponent& Data)
         {
 
         }
 
-        void Activate()
+void Activate()
         {
             bPrimary = true;
         }
 
-        void Deactivate()
+void Deactivate()
         {
             bPrimary = false;
         }
@@ -301,17 +323,17 @@ namespace AGE
 
         b2BodyId BodyID = b2_nullBodyId;
 
-        BodyType GetBodyType() { return Type; }
-        void SetBodyType(BodyType type) { Type = type; }
-        RigidBody2DComponent() = default;
-        RigidBody2DComponent(const RigidBody2DComponent&) = default;
+BodyType GetBodyType() { return Type; }
+void SetBodyType(BodyType type) { Type = type; }
+RigidBody2DComponent() = default;
+RigidBody2DComponent(const RigidBody2DComponent&) = default;
 
-        static void Serialize(DataWriter* Serializer, const RigidBody2DComponent& Data)
+static void Serialize(DataWriter* Serializer, const RigidBody2DComponent& Data)
         {
 
         }
 
-        static void Deserialize(DataReader* Serializer, RigidBody2DComponent& Data)
+static void Deserialize(DataReader* Serializer, RigidBody2DComponent& Data)
         {
 
         }
@@ -332,15 +354,15 @@ namespace AGE
 
         bool bGeneratePhysicsEvents = false;
 
-        BoxCollider2DComponent() = default;
-        BoxCollider2DComponent(const BoxCollider2DComponent&) = default;
+BoxCollider2DComponent() = default;
+BoxCollider2DComponent(const BoxCollider2DComponent&) = default;
 
-        static void Serialize(DataWriter* Serializer, const BoxCollider2DComponent& Data)
+static void Serialize(DataWriter* Serializer, const BoxCollider2DComponent& Data)
         {
 
         }
 
-        static void Deserialize(DataReader* Serializer, BoxCollider2DComponent& Data)
+static void Deserialize(DataReader* Serializer, BoxCollider2DComponent& Data)
         {
 
         }
@@ -362,15 +384,15 @@ namespace AGE
         
         bool bGeneratePhysicsEvents = false;
 
-        CapsuleCollider2DComponent() = default;
-        CapsuleCollider2DComponent(const CapsuleCollider2DComponent&) = default;
+CapsuleCollider2DComponent() = default;
+CapsuleCollider2DComponent(const CapsuleCollider2DComponent&) = default;
 
-        static void Serialize(DataWriter* Serializer, const CapsuleCollider2DComponent& Data)
+static void Serialize(DataWriter* Serializer, const CapsuleCollider2DComponent& Data)
         {
 
         }
 
-        static void Deserialize(DataReader* Serializer, CapsuleCollider2DComponent& Data)
+static void Deserialize(DataReader* Serializer, CapsuleCollider2DComponent& Data)
         {
 
         }
@@ -389,15 +411,15 @@ namespace AGE
         b2ShapeId ShapeID = b2_nullShapeId;
         bool bGeneratePhysicsEvents = false;
 
-        SegmentCollider2DComponent() = default;
-        SegmentCollider2DComponent(const SegmentCollider2DComponent&) = default;
+SegmentCollider2DComponent() = default;
+SegmentCollider2DComponent(const SegmentCollider2DComponent&) = default;
 
-        static void Serialize(DataWriter* Serializer, const SegmentCollider2DComponent& Data)
+static void Serialize(DataWriter* Serializer, const SegmentCollider2DComponent& Data)
         {
 
         }
 
-        static void Deserialize(DataReader* Serializer, SegmentCollider2DComponent& Data)
+static void Deserialize(DataReader* Serializer, SegmentCollider2DComponent& Data)
         {
 
         }
@@ -408,12 +430,12 @@ namespace AGE
     struct NativeScriptComponent
     {
 
-        static void Serialize(DataWriter* Serializer, const NativeScriptComponent& Data)
+static void Serialize(DataWriter* Serializer, const NativeScriptComponent& Data)
         {
 
         }
 
-        static void Deserialize(DataReader* Serializer, NativeScriptComponent& Data)
+static void Deserialize(DataReader* Serializer, NativeScriptComponent& Data)
         {
 
         }
@@ -424,7 +446,7 @@ namespace AGE
         void (*DestroyScript)(NativeScriptComponent*);
 
         template<typename T>
-        void Bind()
+void Bind()
         {
             InstantiateScript = []() {return static_cast<ScriptableEntity*>(new T()); };
 #ifdef __clang__

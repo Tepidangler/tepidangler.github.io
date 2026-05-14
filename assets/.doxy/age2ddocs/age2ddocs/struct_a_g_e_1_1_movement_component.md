@@ -56,8 +56,8 @@
 
 | Type | Name |
 | ---: | :--- |
-|   | [**MovementComponent**](#function-movementcomponent-12) () = default<br> |
-|   | [**MovementComponent**](#function-movementcomponent-22) (const [**MovementComponent**](struct_a_g_e_1_1_movement_component.md) &) = default<br> |
+|   | [**MovementComponent**](#function-movementcomponent-12) () = default<br>_Default constructor for the_ [_**MovementComponent**_](struct_a_g_e_1_1_movement_component.md) _class._ |
+|   | [**MovementComponent**](#function-movementcomponent-22) (const [**MovementComponent**](struct_a_g_e_1_1_movement_component.md) &) = default<br>_Default copy constructor for the_ [_**MovementComponent**_](struct_a_g_e_1_1_movement_component.md) _class._ |
 
 
 
@@ -108,12 +108,27 @@ float AGE::MovementComponent::Speed;
 
 ### function MovementComponent [1/2]
 
+_Default constructor for the_ [_**MovementComponent**_](struct_a_g_e_1_1_movement_component.md) _class._
 ```C++
 AGE::MovementComponent::MovementComponent () = default
 ```
 
 
 
+This function initializes a new instance of the [**MovementComponent**](struct_a_g_e_1_1_movement_component.md) class with default values. It does not take any parameters and returns nothing. The component is initialized to have no movement properties set.
+
+
+
+
+**Returns:**
+
+void 
+
+
+
+
+
+        
 
 <hr>
 
@@ -121,6 +136,7 @@ AGE::MovementComponent::MovementComponent () = default
 
 ### function MovementComponent [2/2]
 
+_Default copy constructor for the_ [_**MovementComponent**_](struct_a_g_e_1_1_movement_component.md) _class._
 ```C++
 AGE::MovementComponent::MovementComponent (
     const MovementComponent &
@@ -129,6 +145,20 @@ AGE::MovementComponent::MovementComponent (
 
 
 
+This function is used to create a new instance of the [**MovementComponent**](struct_a_g_e_1_1_movement_component.md) class by copying an existing one. It uses the '= default' syntax, which tells the compiler to use the default implementation provided by the compiler.
+
+
+
+
+**Parameters:**
+
+
+* `other` The existing [**MovementComponent**](struct_a_g_e_1_1_movement_component.md) instance to copy. 
+
+
+
+
+        
 
 <hr>
 

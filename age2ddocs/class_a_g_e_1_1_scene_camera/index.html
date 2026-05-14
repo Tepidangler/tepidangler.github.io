@@ -78,6 +78,30 @@
                 <h1 id="class-agescenecamera">Class AGE::SceneCamera</h1>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespace_a_g_e/"><strong>AGE</strong></a> <strong>&gt;</strong> <a href="./"><strong>SceneCamera</strong></a></p>
 <p>Inherits the following classes: <a href="../class_a_g_e_1_1_camera/">AGE::Camera</a></p>
+<h2 id="public-attributes-inherited-from-agecamera">Public Attributes inherited from AGE::Camera</h2>
+<p>See <a href="../class_a_g_e_1_1_camera/">AGE::Camera</a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">COMMENT</td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_camera/#variable-__pad0__"><strong>__pad0__</strong></a>  <br><em>Default constructor for the</em> <a href="../class_a_g_e_1_1_camera/"><em><strong>Camera</strong></em></a> <em>class.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">COMMENT</td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_camera/#variable-__pad1__"><strong>__pad1__</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">COMMENT</td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_camera/#variable-__pad2__"><strong>__pad2__</strong></a>  <br></td>
+</tr>
+</tbody>
+</table>
 <h2 id="public-functions">Public Functions</h2>
 <table>
 <thead>
@@ -89,79 +113,79 @@
 <tbody>
 <tr>
 <td style="text-align: right;">float</td>
-<td style="text-align: left;"><a href="#function-getorthographicfarclip"><strong>GetOrthographicFarClip</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-getorthographicfarclip"><strong>GetOrthographicFarClip</strong></a> () const<br><em>This function returns the orthographic far clip value.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">float</td>
-<td style="text-align: left;"><a href="#function-getorthographicnearclip"><strong>GetOrthographicNearClip</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-getorthographicnearclip"><strong>GetOrthographicNearClip</strong></a> () const<br><em>This function returns the near clipping plane of the camera in orthographic mode.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">float</td>
-<td style="text-align: left;"><a href="#function-getorthographicsize"><strong>GetOrthographicSize</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-getorthographicsize"><strong>GetOrthographicSize</strong></a> () const<br><em>This function returns the orthographic size of the camera.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">float</td>
-<td style="text-align: left;"><a href="#function-getperspectivefarclip"><strong>GetPerspectiveFarClip</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-getperspectivefarclip"><strong>GetPerspectiveFarClip</strong></a> () const<br><em>This function returns the perspective far clip value.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">float</td>
-<td style="text-align: left;"><a href="#function-getperspectivenearclip"><strong>GetPerspectiveNearClip</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-getperspectivenearclip"><strong>GetPerspectiveNearClip</strong></a> () const<br><em>This function returns the near clipping plane of the perspective projection.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">float</td>
-<td style="text-align: left;"><a href="#function-getperspectiveverticalfov"><strong>GetPerspectiveVerticalFOV</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-getperspectiveverticalfov"><strong>GetPerspectiveVerticalFOV</strong></a> () const<br><em>This function returns the vertical field of view for a perspective camera.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">ProjectionType</td>
-<td style="text-align: left;"><a href="#function-getprojectiontype"><strong>GetProjectionType</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-getprojectiontype"><strong>GetProjectionType</strong></a> () const<br><em>Returns the projection type of this object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-scenecamera"><strong>SceneCamera</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-scenecamera"><strong>SceneCamera</strong></a> () <br><em>Constructor for the</em> <a href="./"><em><strong>SceneCamera</strong></em></a> <em>class. Initializes a new instance of</em><a href="./"><em><strong>SceneCamera</strong></em></a> <em>and calls RecalculateProjection to set up the projection matrix.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setorthographic"><strong>SetOrthographic</strong></a> (float Size, float NearClip, float FarClip) <br></td>
+<td style="text-align: left;"><a href="#function-setorthographic"><strong>SetOrthographic</strong></a> (float Size, float NearClip, float FarClip) <br><em>Sets the camera's projection to Orthographic.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setorthographicfarclip"><strong>SetOrthographicFarClip</strong></a> (float FarClip) <br></td>
+<td style="text-align: left;"><a href="#function-setorthographicfarclip"><strong>SetOrthographicFarClip</strong></a> (float FarClip) <br><em>Sets the far clip plane for an orthographic projection.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setorthographicnearclip"><strong>SetOrthographicNearClip</strong></a> (float NearClip) <br></td>
+<td style="text-align: left;"><a href="#function-setorthographicnearclip"><strong>SetOrthographicNearClip</strong></a> (float NearClip) <br><em>Sets the near clipping plane for an orthographic projection.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setorthographicsize"><strong>SetOrthographicSize</strong></a> (float Size) <br></td>
+<td style="text-align: left;"><a href="#function-setorthographicsize"><strong>SetOrthographicSize</strong></a> (float Size) <br><em>Sets the orthographic size for the camera.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setperspective"><strong>SetPerspective</strong></a> (float VerticalFOV, float NearClip, float FarClip) <br></td>
+<td style="text-align: left;"><a href="#function-setperspective"><strong>SetPerspective</strong></a> (float VerticalFOV, float NearClip, float FarClip) <br><em>Sets the perspective parameters of the camera.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setperspectivefarclip"><strong>SetPerspectiveFarClip</strong></a> (float FarClip) <br></td>
+<td style="text-align: left;"><a href="#function-setperspectivefarclip"><strong>SetPerspectiveFarClip</strong></a> (float FarClip) <br><em>Sets the perspective far clip plane value.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setperspectivenearclip"><strong>SetPerspectiveNearClip</strong></a> (float NearClip) <br></td>
+<td style="text-align: left;"><a href="#function-setperspectivenearclip"><strong>SetPerspectiveNearClip</strong></a> (float NearClip) <br><em>Sets the perspective near clip plane value.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setperspectiveverticalfov"><strong>SetPerspectiveVerticalFOV</strong></a> (float VerticalFOV) <br></td>
+<td style="text-align: left;"><a href="#function-setperspectiveverticalfov"><strong>SetPerspectiveVerticalFOV</strong></a> (float VerticalFOV) <br><em>Sets the vertical field of view for the perspective projection.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-setprojectiontype"><strong>SetProjectionType</strong></a> (ProjectionType Type) override<br></td>
+<td style="text-align: left;"><a href="#function-setprojectiontype"><strong>SetProjectionType</strong></a> (ProjectionType Type) override<br><em>This function sets the projection type and adjusts the corresponding parameters accordingly.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setviewportsize"><strong>SetViewportSize</strong></a> (uint32_t Width, uint32_t Height) <br></td>
+<td style="text-align: left;"><a href="#function-setviewportsize"><strong>SetViewportSize</strong></a> (uint32_t Width, uint32_t Height) <br><em>Set the viewport size of the scene camera.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual</td>
-<td style="text-align: left;"><a href="#function-scenecamera"><strong>~SceneCamera</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-scenecamera"><strong>~SceneCamera</strong></a> () = default<br><em>Virtual destructor for the</em> <a href="./"><em><strong>SceneCamera</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
@@ -185,43 +209,43 @@
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_camera/#function-camera-33"><strong>Camera</strong></a> (<a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> Eye, <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> At, <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> Up) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_camera/#function-camera-33"><strong>Camera</strong></a> (<a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> Eye, <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> At, <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> Up) <br><em>Constructor for the</em> <a href="../class_a_g_e_1_1_camera/"><em><strong>Camera</strong></em></a> <em>class that initializes a camera with an eye position, at position and up direction.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">const <a href="../struct_a_g_e_1_1__constant_buffer_struct/"><strong>ConstantBufferStruct</strong></a></td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_camera/#function-getconstantbufferdata-12"><strong>GetConstantBufferData</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_camera/#function-getconstantbufferdata-12"><strong>GetConstantBufferData</strong></a> () const<br><em>This function returns the constant buffer data.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"><a href="../struct_a_g_e_1_1__constant_buffer_struct/"><strong>ConstantBufferStruct</strong></a></td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_camera/#function-getconstantbufferdata-22"><strong>GetConstantBufferData</strong></a> () <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_camera/#function-getconstantbufferdata-22"><strong>GetConstantBufferData</strong></a> () <br><em>This function returns the constant buffer data.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">const <a href="../struct_a_g_e_1_1_matrix4_d/"><strong>Matrix4D</strong></a> &amp;</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_camera/#function-getprojection-12"><strong>GetProjection</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_camera/#function-getprojection-12"><strong>GetProjection</strong></a> () const<br><em>Returns the projection matrix used for rendering.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"><a href="../struct_a_g_e_1_1_matrix4_d/"><strong>Matrix4D</strong></a> &amp;</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_camera/#function-getprojection-22"><strong>GetProjection</strong></a> () <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_camera/#function-getprojection-22"><strong>GetProjection</strong></a> () <br><em>Returns the projection matrix of the camera.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">ProjectionType</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_camera/#function-getprojectiontype"><strong>GetProjectionType</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_camera/#function-getprojectiontype"><strong>GetProjectionType</strong></a> () const<br><em>Returns the projection type of this object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">const <a href="../struct_a_g_e_1_1_matrix4_d/"><strong>Matrix4D</strong></a></td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_camera/#function-getworldmatrix-12"><strong>GetWorldMatrix</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_camera/#function-getworldmatrix-12"><strong>GetWorldMatrix</strong></a> () const<br><em>Returns the world matrix of the object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"><a href="../struct_a_g_e_1_1_matrix4_d/"><strong>Matrix4D</strong></a></td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_camera/#function-getworldmatrix-22"><strong>GetWorldMatrix</strong></a> () <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_camera/#function-getworldmatrix-22"><strong>GetWorldMatrix</strong></a> () <br><em>Returns the world matrix of the object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_camera/#function-setprojectiontype"><strong>SetProjectionType</strong></a> (ProjectionType Type) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_camera/#function-setprojectiontype"><strong>SetProjectionType</strong></a> (ProjectionType Type) <br><em>Sets the projection type of the object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_camera/#function-camera"><strong>~Camera</strong></a> () <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_camera/#function-camera"><strong>~Camera</strong></a> () <br><em>Virtual destructor for the</em> <a href="../class_a_g_e_1_1_camera/"><em><strong>Camera</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
@@ -255,124 +279,310 @@
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-getorthographicfarclip">function GetOrthographicFarClip</h3>
+<p><em>This function returns the orthographic far clip value.</em> </p>
 <pre><code class="language-C++">inline float AGE::SceneCamera::GetOrthographicFarClip () const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A float representing the orthographic far clip value.</p>
+<p>Returns the orthographic far clip plane value.</p>
+<p>This function returns the current value of the orthographic far clip plane, which is used to determine how far objects are clipped in an orthographic perspective.</p>
+<p><strong>Returns:</strong></p>
+<p>The current value of m_OrthographicFar as a float. </p>
 <hr>
 
 <h3 id="function-getorthographicnearclip">function GetOrthographicNearClip</h3>
+<p><em>This function returns the near clipping plane of the camera in orthographic mode.</em> </p>
 <pre><code class="language-C++">inline float AGE::SceneCamera::GetOrthographicNearClip () const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A float representing the near clipping plane value.</p>
+<p>Returns the near clipping plane for an orthographic camera. </p>
+<p><strong>Returns:</strong></p>
+<p>The near clipping plane value as a float. </p>
 <hr>
 
 <h3 id="function-getorthographicsize">function GetOrthographicSize</h3>
+<p><em>This function returns the orthographic size of the camera.</em> </p>
 <pre><code class="language-C++">inline float AGE::SceneCamera::GetOrthographicSize () const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A float representing the current orthographic size.</p>
+<p>Returns the orthographic size of the camera. </p>
+<p><strong>Returns:</strong></p>
+<p>A float representing the current orthographic size. </p>
 <hr>
 
 <h3 id="function-getperspectivefarclip">function GetPerspectiveFarClip</h3>
+<p><em>This function returns the perspective far clip value.</em> </p>
 <pre><code class="language-C++">inline float AGE::SceneCamera::GetPerspectiveFarClip () const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A float representing the perspective far clip value.</p>
+<p>This function returns the perspective far clip plane value. </p>
+<p><strong>Returns:</strong></p>
+<p>A float representing the perspective far clip plane value. </p>
 <hr>
 
 <h3 id="function-getperspectivenearclip">function GetPerspectiveNearClip</h3>
+<p><em>This function returns the near clipping plane of the perspective projection.</em> </p>
 <pre><code class="language-C++">inline float AGE::SceneCamera::GetPerspectiveNearClip () const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A float representing the near clipping plane value.</p>
+<p>Returns the perspective near clip plane value.</p>
+<p>This function returns the current value of the perspective near clip plane, which is used in rendering calculations to determine what objects are visible on the screen.</p>
+<p><strong>Returns:</strong></p>
+<p>The current value of the perspective near clip plane as a float. </p>
 <hr>
 
 <h3 id="function-getperspectiveverticalfov">function GetPerspectiveVerticalFOV</h3>
+<p><em>This function returns the vertical field of view for a perspective camera.</em> </p>
 <pre><code class="language-C++">inline float AGE::SceneCamera::GetPerspectiveVerticalFOV () const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A float representing the vertical FOV in degrees.</p>
+<p>This function returns the vertical field of view for a perspective camera. </p>
+<p><strong>Returns:</strong></p>
+<p>A float representing the vertical FOV in degrees. </p>
 <hr>
 
 <h3 id="function-getprojectiontype">function GetProjectionType</h3>
+<p><em>Returns the projection type of this object.</em> </p>
 <pre><code class="language-C++">inline ProjectionType AGE::SceneCamera::GetProjectionType () const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>The ProjectionType of this object, which can be either ORTHOGRAPHIC or PERSPECTIVE.</p>
+<p>Gets the projection type of this object.</p>
+<p><strong>Returns:</strong></p>
+<p>The ProjectionType of this object. </p>
 <hr>
 
 <h3 id="function-scenecamera">function SceneCamera</h3>
+<p><em>Constructor for the</em> <a href="./"><em><strong>SceneCamera</strong></em></a> <em>class. Initializes a new instance of</em><a href="./"><em><strong>SceneCamera</strong></em></a> <em>and calls RecalculateProjection to set up the projection matrix.</em></p>
 <pre><code class="language-C++">AGE::SceneCamera::SceneCamera () 
 </code></pre>
+<p>Constructor for the <a href="./"><strong>SceneCamera</strong></a> class. Initializes a new instance of the <a href="./"><strong>SceneCamera</strong></a> with default values and calculates the projection matrix. </p>
 <hr>
 
 <h3 id="function-setorthographic">function SetOrthographic</h3>
+<p><em>Sets the camera's projection to Orthographic.</em> </p>
 <pre><code class="language-C++">void AGE::SceneCamera::SetOrthographic (
     float Size,
     float NearClip,
     float FarClip
 ) 
 </code></pre>
+<p>This function sets the camera's projection type to Orthographic and updates the size, near clip, and far clip values. It then calls RecalculateProjection() to recreate the projection matrix based on these new values. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Size</code> The desired orthographic size (width or height). </li>
+<li><code>NearClip</code> The distance from the camera to the near clipping plane. </li>
+<li><code>FarClip</code> The distance from the camera to the far clipping plane.</li>
+</ul>
+<p>Sets the camera's projection to an orthographic projection.</p>
+<p>This function sets the camera's projection type to Orthographic and updates the size, near clip, and far clip values for the new projection. It then calls RecalculateProjection() to recreate the projection matrix based on these new parameters.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Size</code> The desired orthographic size (half of width or height). </li>
+<li><code>NearClip</code> The distance from the camera to the near clipping plane. </li>
+<li><code>FarClip</code> The distance from the camera to the far clipping plane. </li>
+</ul>
 <hr>
 
 <h3 id="function-setorthographicfarclip">function SetOrthographicFarClip</h3>
+<p><em>Sets the far clip plane for an orthographic projection.</em> </p>
 <pre><code class="language-C++">inline void AGE::SceneCamera::SetOrthographicFarClip (
     float FarClip
 ) 
 </code></pre>
+<p>This function sets the 'm_OrthographicFar' variable to the provided parameter 'FarClip'. It then calls RecalculateProjection() to update any associated projection matrices with this new value.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>FarClip</code> The new far clip plane value.</li>
+</ul>
+<p>Sets the far clip plane for an orthographic projection.</p>
+<p>This function sets the 'm_OrthographicFar' member variable to the provided parameter, and then calls the 'RecalculateProjection()' function to update the projection matrix based on this new value. The purpose of this function is to allow for dynamic adjustment of the far clip plane distance in an orthographic projection.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>FarClip</code> A float representing the desired far clip plane distance. </li>
+</ul>
 <hr>
 
 <h3 id="function-setorthographicnearclip">function SetOrthographicNearClip</h3>
+<p><em>Sets the near clipping plane for an orthographic projection.</em> </p>
 <pre><code class="language-C++">inline void AGE::SceneCamera::SetOrthographicNearClip (
     float NearClip
 ) 
 </code></pre>
+<p>This function sets the value of the member variable <code>m_OrthographicNear</code> to the provided parameter <code>NearClip</code>, and then calls the <code>RecalculateProjection()</code> function to update the projection matrix based on this new near clipping plane value.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>NearClip</code> The new near clipping plane value. This should be a positive number that is less than or equal to the far clipping plane value (<code>m_OrthographicFar</code>).</li>
+</ul>
+<p>Sets the near clip plane for an orthographic projection.</p>
+<p>This function sets the value of the member variable <code>m_OrthographicNear</code> to the provided parameter <code>NearClip</code>, and then calls the <code>RecalculateProjection()</code> function to update the projection matrix based on this new near clip plane value.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>NearClip</code> The new near clip plane value to be set. This should be a positive float number representing the distance from the camera to the near clipping plane in world units. </li>
+</ul>
 <hr>
 
 <h3 id="function-setorthographicsize">function SetOrthographicSize</h3>
+<p><em>Sets the orthographic size for the camera.</em> </p>
 <pre><code class="language-C++">inline void AGE::SceneCamera::SetOrthographicSize (
     float Size
 ) 
 </code></pre>
+<p>This function sets the orthographic size of the camera, which determines how large the visible area is in world units. The aspect ratio and near/far planes are also updated to maintain the same view frustum.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Size</code> The new orthographic size for the camera. Must be greater than 0.</li>
+</ul>
+<p>Sets the orthographic size for the camera. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Size</code> The new orthographic size to be set. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>None </p>
 <hr>
 
 <h3 id="function-setperspective">function SetPerspective</h3>
+<p><em>Sets the perspective parameters of the camera.</em> </p>
 <pre><code class="language-C++">void AGE::SceneCamera::SetPerspective (
     float VerticalFOV,
     float NearClip,
     float FarClip
 ) 
 </code></pre>
+<p>This function sets the vertical field of view (FOV), near clip plane, and far clip plane for a perspective projection. It also recalculates the projection matrix based on these new values.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>VerticalFOV</code> The vertical field of view in degrees. </li>
+<li><code>NearClip</code> The distance to the near clipping plane. </li>
+<li><code>FarClip</code> The distance to the far clipping plane.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Set the perspective parameters of the camera.</p>
+<p>This function sets the vertical field of view (FOV), near clip plane, and far clip plane for a perspective projection. It also recalculates the projection matrix based on these new values.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>VerticalFOV</code> The vertical field of view in degrees. </li>
+<li><code>NearClip</code> The distance to the near clipping plane. </li>
+<li><code>FarClip</code> The distance to the far clipping plane.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-setperspectivefarclip">function SetPerspectiveFarClip</h3>
+<p><em>Sets the perspective far clip plane value.</em> </p>
 <pre><code class="language-C++">inline void AGE::SceneCamera::SetPerspectiveFarClip (
     float FarClip
 ) 
 </code></pre>
+<p>This function sets the far clip plane of the perspective projection matrix to a new value. It updates the member variable m_PerspectiveFar with the provided parameter and then calls RecalculateProjection() to recalculate the projection matrix based on the updated values.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>FarClip</code> The new far clip plane value.</li>
+</ul>
+<p>Sets the perspective far clip plane value.</p>
+<p>This function sets the far clip plane of the perspective projection matrix to a new value. It updates the member variable m_PerspectiveFar with the provided parameter and then calls RecalculateProjection() to recalculate the projection matrix based on the updated values.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>FarClip</code> The new far clip plane value. </li>
+</ul>
 <hr>
 
 <h3 id="function-setperspectivenearclip">function SetPerspectiveNearClip</h3>
+<p><em>Sets the perspective near clip plane value.</em> </p>
 <pre><code class="language-C++">inline void AGE::SceneCamera::SetPerspectiveNearClip (
     float NearClip
 ) 
 </code></pre>
+<p>This function sets the near clipping plane for a perspective projection matrix. It updates the private member variable m_PerspectiveNear with the provided NearClip parameter and then calls RecalculateProjection() to recalculate the projection matrix based on the new near clip plane value.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>NearClip</code> The new near clipping plane value.</li>
+</ul>
+<p>Sets the perspective near clip plane value.</p>
+<p>This function sets the near clipping plane for a perspective projection matrix. It updates the member variable m_PerspectiveNear with the provided NearClip parameter and then calls RecalculateProjection() to recalculate the projection matrix based on the new near clip plane value.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>NearClip</code> The new near clipping plane value to be set. </li>
+</ul>
 <hr>
 
 <h3 id="function-setperspectiveverticalfov">function SetPerspectiveVerticalFOV</h3>
+<p><em>Sets the vertical field of view for the perspective projection.</em> </p>
 <pre><code class="language-C++">inline void AGE::SceneCamera::SetPerspectiveVerticalFOV (
     float VerticalFOV
 ) 
 </code></pre>
+<p>This function sets the value of the member variable <code>m_PerspectiveFOV</code> to the input parameter <code>VerticalFOV</code>, and then calls the <code>RecalculateProjection()</code> function to update the perspective matrix based on this new field of view.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>VerticalFOV</code> The new vertical field of view in degrees.</li>
+</ul>
+<p>Sets the vertical field of view for a perspective projection.</p>
+<p>This function updates the private member variable <code>m_PerspectiveFOV</code> with the provided value and then calls <code>RecalculateProjection()</code> to update any associated projection matrices based on this new FOV value.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>VerticalFOV</code> The new vertical field of view angle in degrees. </li>
+</ul>
 <hr>
 
 <h3 id="function-setprojectiontype">function SetProjectionType</h3>
+<p><em>This function sets the projection type and adjusts the corresponding parameters accordingly.</em> </p>
 <pre><code class="language-C++">inline virtual void AGE::SceneCamera::SetProjectionType (
     ProjectionType Type
 ) override
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Type</code> The new ProjectionType to be set.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Sets the projection type and adjusts the corresponding parameters.</p>
+<p>This function sets the ProjectionType to the provided value and then calls either SetPerspective or SetOrthographic, depending on the new ProjectionType. The SetPerspective function is called if the ProjectionType is 0 (perspective), while the SetOrthographic function is called for any other value.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Type</code> The new ProjectionType to set. </li>
+</ul>
 <p>Implements <a href="../class_a_g_e_1_1_camera/#function-setprojectiontype"><em>AGE::Camera::SetProjectionType</em></a></p>
 <hr>
 
 <h3 id="function-setviewportsize">function SetViewportSize</h3>
+<p><em>Set the viewport size of the scene camera.</em> </p>
 <pre><code class="language-C++">void AGE::SceneCamera::SetViewportSize (
     uint32_t Width,
     uint32_t Height
 ) 
 </code></pre>
+<p>This function sets the width and height of the viewport, calculates the aspect ratio based on these dimensions, and updates the projection matrix accordingly.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Width</code> The new width of the viewport. </li>
+<li><code>Height</code> The new height of the viewport.</li>
+</ul>
+<p>Sets the viewport size and recalculates the projection matrix.</p>
+<p>This function sets the width and height of the viewport, calculates the aspect ratio from these values, and then calls RecalculateProjection() to update the projection matrix based on this new aspect ratio. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Width</code> The width of the viewport in pixels. </li>
+<li><code>Height</code> The height of the viewport in pixels. </li>
+</ul>
 <hr>
 
 <h3 id="function-scenecamera_1">function ~SceneCamera</h3>
+<p><em>Virtual destructor for the</em> <a href="./"><em><strong>SceneCamera</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">virtual AGE::SceneCamera::~SceneCamera () = default
 </code></pre>
+<p>This function is responsible for releasing any resources that were acquired by the <a href="./"><strong>SceneCamera</strong></a> object, such as memory or file handles. It does not return anything and has no parameters.</p>
+<p>Virtual destructor for the <a href="./"><strong>SceneCamera</strong></a> class.</p>
+<p>This function is responsible for releasing any resources that were acquired by the <a href="./"><strong>SceneCamera</strong></a> object during its lifetime. It does not return anything and has no parameters. </p>
 <hr>
 
 <hr />

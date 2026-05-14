@@ -74,18 +74,18 @@
 
 | Type | Name |
 | ---: | :--- |
-|   | [**AGEPin**](#function-agepin-12) () = default<br> |
-|   | [**AGEPin**](#function-agepin-22) ([**UUID**](class_a_g_e_1_1_u_u_i_d.md) id, const char \* name, AGEPinType type) <br> |
-|  rttr::variant | [**GetValue**](#function-getvalue) (AGEPinType Type) <br> |
-| virtual  | [**~AGEPin**](#function-agepin) () = default<br> |
+|   | [**AGEPin**](#function-agepin-12) () = default<br>_Default constructor for the_ [_**AGEPin**_](struct_a_g_e_1_1_a_g_e_pin.md) _class._ |
+|   | [**AGEPin**](#function-agepin-22) ([**UUID**](class_a_g_e_1_1_u_u_i_d.md) id, const char \* name, AGEPinType type) <br>_Constructs an instance of_ [_**AGEPin**_](struct_a_g_e_1_1_a_g_e_pin.md) _with the given parameters._ |
+|  rttr::variant | [**GetValue**](#function-getvalue) (AGEPinType Type) <br>_GetValue is a function that returns an rttr::variant based on the input AGEPinType._  |
+| virtual  | [**~AGEPin**](#function-agepin) () = default<br>_Virtual destructor for the_ [_**AGEPin**_](struct_a_g_e_1_1_a_g_e_pin.md) _class._ |
 
 
 ## Public Static Functions
 
 | Type | Name |
 | ---: | :--- |
-|  void | [**Deserialize**](#function-deserialize) ([**DataReader**](class_a_g_e_1_1_data_reader.md) \* Serializer, [**AGEPin**](struct_a_g_e_1_1_a_g_e_pin.md) & Data) <br> |
-|  void | [**Serialize**](#function-serialize) ([**DataWriter**](class_a_g_e_1_1_data_writer.md) \* Serializer, const [**AGEPin**](struct_a_g_e_1_1_a_g_e_pin.md) & Data) <br> |
+|  void | [**Deserialize**](#function-deserialize) ([**DataReader**](class_a_g_e_1_1_data_reader.md) \* Serializer, [**AGEPin**](struct_a_g_e_1_1_a_g_e_pin.md) & Data) <br>_Deserialize function for the_ [_**AGEPin**_](struct_a_g_e_1_1_a_g_e_pin.md) _structure. This function reads data from a_[_**DataReader**_](class_a_g_e_1_1_data_reader.md) _object and populates an_[_**AGEPin**_](struct_a_g_e_1_1_a_g_e_pin.md) _object with it. The function assumes that the_[_**DataReader**_](class_a_g_e_1_1_data_reader.md) _is correctly initialized and ready to read data._ |
+|  void | [**Serialize**](#function-serialize) ([**DataWriter**](class_a_g_e_1_1_data_writer.md) \* Serializer, const [**AGEPin**](struct_a_g_e_1_1_a_g_e_pin.md) & Data) <br>_This function serializes an_ [_**AGEPin**_](struct_a_g_e_1_1_a_g_e_pin.md) _object into a_[_**DataWriter**_](class_a_g_e_1_1_data_writer.md) _._ |
 
 
 
@@ -368,12 +368,20 @@ Vector4 AGE::AGEPin::Vector4D;
 
 ### function AGEPin [1/2]
 
+_Default constructor for the_ [_**AGEPin**_](struct_a_g_e_1_1_a_g_e_pin.md) _class._
 ```C++
 AGE::AGEPin::AGEPin () = default
 ```
 
 
 
+This function initializes an instance of the [**AGEPin**](struct_a_g_e_1_1_a_g_e_pin.md) class with its default values. It does not take any parameters and returns nothing.
+
+
+Default constructor for the [**AGEPin**](struct_a_g_e_1_1_a_g_e_pin.md) class. 
+
+
+        
 
 <hr>
 
@@ -381,6 +389,7 @@ AGE::AGEPin::AGEPin () = default
 
 ### function AGEPin [2/2]
 
+_Constructs an instance of_ [_**AGEPin**_](struct_a_g_e_1_1_a_g_e_pin.md) _with the given parameters._
 ```C++
 inline AGE::AGEPin::AGEPin (
     UUID id,
@@ -391,6 +400,41 @@ inline AGE::AGEPin::AGEPin (
 
 
 
+This constructor initializes a new instance of [**AGEPin**](struct_a_g_e_1_1_a_g_e_pin.md) with the provided [**UUID**](class_a_g_e_1_1_u_u_i_d.md), name, and type. The Node pointer is initialized to nullptr, Kind is set to [**Input**](class_a_g_e_1_1_input.md), and other members are assigned their respective values. 
+
+**Parameters:**
+
+
+* `id` Unique identifier for this pin. 
+* `name` Name or label associated with this pin. 
+* `type` Specifies the kind of data that this pin can handle.
+
+
+
+**Returns:**
+
+[**AGEPin**](struct_a_g_e_1_1_a_g_e_pin.md)
+
+
+Constructs an instance of [**AGEPin**](struct_a_g_e_1_1_a_g_e_pin.md) with the given parameters.
+
+
+This constructor initializes a new instance of [**AGEPin**](struct_a_g_e_1_1_a_g_e_pin.md) with the provided [**UUID**](class_a_g_e_1_1_u_u_i_d.md), name, and type. The Node pointer is set to nullptr, Kind is initialized as [**Input**](class_a_g_e_1_1_input.md).
+
+
+
+
+**Parameters:**
+
+
+* `id` Unique identifier for this pin. 
+* `name` Name or label associated with this pin. 
+* `type` Specifies the type of the pin ([**Input**](class_a_g_e_1_1_input.md), Output, etc.). 
+
+
+
+
+        
 
 <hr>
 
@@ -398,6 +442,7 @@ inline AGE::AGEPin::AGEPin (
 
 ### function GetValue 
 
+_GetValue is a function that returns an rttr::variant based on the input AGEPinType._ 
 ```C++
 inline rttr::variant AGE::AGEPin::GetValue (
     AGEPinType Type
@@ -406,6 +451,44 @@ inline rttr::variant AGE::AGEPin::GetValue (
 
 
 
+The function takes one parameter, Type of type AGEPinType and returns an rttr::variant. It uses a switch statement to determine which variant to return based on the integer value of Type.
+
+
+
+
+**Parameters:**
+
+
+* `Type` An enumeration that specifies the type of variant to be returned. 
+
+
+
+**Returns:**
+
+The function returns an rttr::variant corresponding to the input AGEPinType. If no matching case is found, it returns nullptr.
+
+
+GetValue is a function that returns an rttr::variant based on the input AGEPinType.
+
+
+
+
+**Parameters:**
+
+
+* `Type` The type of pin to get the value for. This can be one of several types defined in AGEPinType, including Boolean, Integer, Integer16, etc. 
+
+
+
+**Returns:**
+
+rttr::variant The variant corresponding to the input type. If the type is not recognized, nullptr is returned. 
+
+
+
+
+
+        
 
 <hr>
 
@@ -413,12 +496,40 @@ inline rttr::variant AGE::AGEPin::GetValue (
 
 ### function ~AGEPin 
 
+_Virtual destructor for the_ [_**AGEPin**_](struct_a_g_e_1_1_a_g_e_pin.md) _class._
 ```C++
 virtual AGE::AGEPin::~AGEPin () = default
 ```
 
 
 
+This function is responsible for freeing any resources that were allocated by the object, such as memory or file handles. It's a virtual function because it can be overridden in derived classes to provide specific cleanup behavior.
+
+
+
+
+**Returns:**
+
+void
+
+
+Virtual destructor for the [**AGEPin**](struct_a_g_e_1_1_a_g_e_pin.md) class.
+
+
+This function is responsible for releasing any resources that were acquired by the object during its lifetime, such as memory or file handles. It does not perform any specific actions related to the AGEPIN object itself.
+
+
+
+
+**Returns:**
+
+void 
+
+
+
+
+
+        
 
 <hr>
 ## Public Static Functions Documentation
@@ -428,6 +539,7 @@ virtual AGE::AGEPin::~AGEPin () = default
 
 ### function Deserialize 
 
+_Deserialize function for the_ [_**AGEPin**_](struct_a_g_e_1_1_a_g_e_pin.md) _structure. This function reads data from a_[_**DataReader**_](class_a_g_e_1_1_data_reader.md) _object and populates an_[_**AGEPin**_](struct_a_g_e_1_1_a_g_e_pin.md) _object with it. The function assumes that the_[_**DataReader**_](class_a_g_e_1_1_data_reader.md) _is correctly initialized and ready to read data._
 ```C++
 static inline void AGE::AGEPin::Deserialize (
     DataReader * Serializer,
@@ -438,12 +550,39 @@ static inline void AGE::AGEPin::Deserialize (
 
 
 
+
+**Parameters:**
+
+
+* `Serializer` Pointer to the [**DataReader**](class_a_g_e_1_1_data_reader.md) object which provides the serialized data. 
+* `Data` Reference to the [**AGEPin**](struct_a_g_e_1_1_a_g_e_pin.md) object where the deserialized data will be stored.
+
+Deserialize function for [**AGEPin**](struct_a_g_e_1_1_a_g_e_pin.md) data.
+
+
+This function reads various types of data from a [**DataReader**](class_a_g_e_1_1_data_reader.md) object and assigns them to an [**AGEPin**](struct_a_g_e_1_1_a_g_e_pin.md) object. It handles different types such as uint64\_t, [**UUID**](class_a_g_e_1_1_u_u_i_d.md), bool, int, int16\_t, int64\_t, uint16\_t, uint32\_t, uint64\_t, float, [**Vector2**](struct_a_g_e_1_1_vector2.md), [**Vector3**](struct_a_g_e_1_1_vector3.md), and [**Vector4**](struct_a_g_e_1_1_vector4.md).
+
+
+
+
+**Parameters:**
+
+
+* `Serializer` Pointer to the [**DataReader**](class_a_g_e_1_1_data_reader.md) object that provides serialized data. 
+* `Data` Reference to the [**AGEPin**](struct_a_g_e_1_1_a_g_e_pin.md) object where the deserialized data will be stored. 
+
+
+
+
+        
+
 <hr>
 
 
 
 ### function Serialize 
 
+_This function serializes an_ [_**AGEPin**_](struct_a_g_e_1_1_a_g_e_pin.md) _object into a_[_**DataWriter**_](class_a_g_e_1_1_data_writer.md) _._
 ```C++
 static inline void AGE::AGEPin::Serialize (
     DataWriter * Serializer,
@@ -453,6 +592,38 @@ static inline void AGE::AGEPin::Serialize (
 
 
 
+The function writes various properties of the [**AGEPin**](struct_a_g_e_1_1_a_g_e_pin.md), including its ID, NextNodeID, Name, Type, Kind, String, Boolean, Integer, Integer16, Integer64, UInteger16, UInteger32, UInteger64, Value, Vector2D, Vector3D, and Vector4D. It also handles the case where an object pointer is present in the [**AGEPin**](struct_a_g_e_1_1_a_g_e_pin.md). If it exists, a boolean value of true is written to indicate that an object is being serialized, followed by its [**UUID**](class_a_g_e_1_1_u_u_i_d.md). Otherwise, a boolean value of false is written.
+
+
+
+
+**Parameters:**
+
+
+* `Serializer` Pointer to the [**DataWriter**](class_a_g_e_1_1_data_writer.md) instance which will be used for serialization. 
+* `Data` Const reference to the [**AGEPin**](struct_a_g_e_1_1_a_g_e_pin.md) object that needs to be serialized.
+
+This function serializes an [**AGEPin**](struct_a_g_e_1_1_a_g_e_pin.md) object into a [**DataWriter**](class_a_g_e_1_1_data_writer.md).
+
+
+The function writes various properties of the [**AGEPin**](struct_a_g_e_1_1_a_g_e_pin.md) to the provided [**DataWriter**](class_a_g_e_1_1_data_writer.md), including its ID, NextNodeID, Name, Type, Kind, String, Boolean, Integer, Integer16, Integer64, UInteger16, UInteger32, UInteger64, Value, Vector2D, Vector3D, and Vector4D.
+
+
+It also checks if the [**AGEPin**](struct_a_g_e_1_1_a_g_e_pin.md) has an associated [**ScriptableEntity**](class_a_g_e_1_1_scriptable_entity.md) object (ObjPtr). If it does, it writes a true flag followed by the [**UUID**](class_a_g_e_1_1_u_u_i_d.md) of the associated entity; otherwise, it writes a false flag.
+
+
+
+
+**Parameters:**
+
+
+* `Serializer` Pointer to the [**DataWriter**](class_a_g_e_1_1_data_writer.md) where the serialized data will be written. 
+* `Data` The [**AGEPin**](struct_a_g_e_1_1_a_g_e_pin.md) object that needs to be serialized. 
+
+
+
+
+        
 
 <hr>
 

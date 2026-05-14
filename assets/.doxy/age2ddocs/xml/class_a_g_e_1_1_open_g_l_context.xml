@@ -3,6 +3,7 @@
   <compounddef id="class_a_g_e_1_1_open_g_l_context" kind="class" language="C++" prot="public">
     <compoundname>AGE::OpenGLContext</compoundname>
     <basecompoundref refid="class_a_g_e_1_1_graphics_context" prot="public" virt="non-virtual">AGE::GraphicsContext</basecompoundref>
+    <includes local="no">OpenGlContext.h</includes>
     <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="class_a_g_e_1_1_open_g_l_context_1a271f4603f7cb9ea82ceec3230c5ee914" prot="private" static="no" mutable="no">
         <type>GLFWwindow *</type>
@@ -16,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGlContext.h" line="35" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGlContext.h" bodystart="35" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGlContext.h" line="43" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGlContext.h" bodystart="43" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_open_g_l_context_1ace0a5458e42fd00919cd0bf4ff4b8851" prot="private" static="no" mutable="no">
         <type><ref refid="class_a_g_e_1_1_open_g_l_pipeline" kindref="compound">OpenGLPipeline</ref> *</type>
@@ -30,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGlContext.h" line="36" column="16" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGlContext.h" bodystart="36" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGlContext.h" line="44" column="16" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGlContext.h" bodystart="44" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -45,12 +46,35 @@
           <declname>WindowHandle</declname>
         </param>
         <briefdescription>
+<para>Constructs an <ref refid="class_a_g_e_1_1_open_g_l_context" kindref="compound">OpenGLContext</ref> object. </para>
         </briefdescription>
         <detaileddescription>
+<para>This constructor initializes the OpenGL context using a GLFWwindow pointer. It asserts that the window handle is not null.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>WindowHandle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the GLFWwindow instance for which this <ref refid="class_a_g_e_1_1_open_g_l_context" kindref="compound">OpenGLContext</ref> will be created.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Constructor for <ref refid="class_a_g_e_1_1_open_g_l_context" kindref="compound">OpenGLContext</ref> class.</para>
+<para>This constructor initializes an instance of the <ref refid="class_a_g_e_1_1_open_g_l_context" kindref="compound">OpenGLContext</ref> class with a GLFWwindow pointer. It asserts that the window handle is not null, logging an error if it is.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>WindowHandle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the GLFWwindow object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGlContext.h" line="17" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGlContext.cpp" bodystart="10" bodyend="15"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGlContext.h" line="27" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGlContext.cpp" bodystart="24" bodyend="29"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_context_1a7526ab548cf0e78df3dec6a51b42dc44" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -59,12 +83,15 @@
         <name>~OpenGLContext</name>
         <qualifiedname>AGE::OpenGLContext::~OpenGLContext</qualifiedname>
         <briefdescription>
+<para>Destructor for the <ref refid="class_a_g_e_1_1_open_g_l_context" kindref="compound">OpenGLContext</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is responsible for cleaning up any resources that were acquired during the lifetime of this object, such as deleting buffers and textures. It does not perform any operations on the actual rendering context itself.</para>
+<para>Destructor for the <ref refid="class_a_g_e_1_1_open_g_l_context" kindref="compound">OpenGLContext</ref> class. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGlContext.h" line="20" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGlContext.cpp" bodystart="17" bodyend="20"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGlContext.h" line="30" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGlContext.cpp" bodystart="39" bodyend="42"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_context_1a7fe573f1fcd98984f7a686b077856c47" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -74,12 +101,17 @@
         <qualifiedname>AGE::OpenGLContext::Init</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_graphics_context_1a689088cae6269a64d5b67c5cca819944">Init</reimplements>
         <briefdescription>
+<para>Initializes the OpenGL context. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function sets up the OpenGL context for use by making it the current context using glfwMakeContextCurrent(). It then initializes GLAD, a library that provides easy access to OpenGL functions and extensions in desktop OpenGL. The status of this initialization is checked with an assertion to ensure successful completion. Finally, information about the OpenGL implementation is logged.</para>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGlContext.h" line="23" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGlContext.cpp" bodystart="22" bodyend="37"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGlContext.h" line="33" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGlContext.cpp" bodystart="52" bodyend="65"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_context_1afe8b0381db6bd327e037aa7760b6d2e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -89,12 +121,18 @@
         <qualifiedname>AGE::OpenGLContext::SwapBuffers</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_graphics_context_1aa5c747044fc475a9bdc0e1e789985aa2">SwapBuffers</reimplements>
         <briefdescription>
+<para>Swaps the front and back buffers of the specified window. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is used to swap the front and back buffers of a window when rendering, effectively displaying what has been rendered. The behavior of this function depends on the specific implementation of the OpenGL library being used.</para>
+<para><simplesect kind="return"><para>void</para>
+</simplesect>
+Swaps the front and back buffers of the specified window.</para>
+<para>This function is used to swap the front and back buffers of a window when rendering, effectively displaying what has been rendered so far on the screen. The behavior of this function depends on the platform and graphics API being used. For example, it may not be necessary or possible to call this function at every frame. However, calling it once per frame ensures that the display is updated as quickly as possible. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGlContext.h" line="24" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGlContext.cpp" bodystart="38" bodyend="44"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGlContext.h" line="34" column="14" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGlContext.cpp" bodystart="81" bodyend="87"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_context_1a33f044d5c1a39c674daff70dd022878b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="class_a_g_e_1_1_open_g_l_pipeline" kindref="compound">OpenGLPipeline</ref> *</type>
@@ -103,12 +141,21 @@
         <name>GetPipeline</name>
         <qualifiedname>AGE::OpenGLContext::GetPipeline</qualifiedname>
         <briefdescription>
+<para>Get the pipeline object associated with this context. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function returns a pointer to the <ref refid="class_a_g_e_1_1_open_g_l_pipeline" kindref="compound">OpenGLPipeline</ref> object that is currently bound to this context. The returned object can be used for rendering operations.</para>
+<para><simplesect kind="return"><para>OpenGLPipeline* A pointer to the current <ref refid="class_a_g_e_1_1_open_g_l_pipeline" kindref="compound">OpenGLPipeline</ref> object, or nullptr if no pipeline is set.</para>
+</simplesect>
+Get the pipeline object associated with this context.</para>
+<para>This function returns a pointer to the <ref refid="class_a_g_e_1_1_open_g_l_pipeline" kindref="compound">OpenGLPipeline</ref> object that is currently bound to this context. The returned object can be used for rendering operations.</para>
+<para><simplesect kind="return"><para>OpenGLPipeline* A pointer to the current <ref refid="class_a_g_e_1_1_open_g_l_pipeline" kindref="compound">OpenGLPipeline</ref> object, or nullptr if no pipeline has been set. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGlContext.h" line="27" column="16" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGlContext.cpp" bodystart="46" bodyend="49"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGlContext.h" line="37" column="16" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGlContext.cpp" bodystart="103" bodyend="106"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_context_1af9ec1c99236d9267c8cc5d4a4a1ef6ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -121,61 +168,60 @@
           <declname>Pipeline</declname>
         </param>
         <briefdescription>
+<para>This function sets the pipeline for the OpenGL context. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in"><ref refid="class_a_g_e_1_1_pipeline" kindref="compound">Pipeline</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new OpenGL pipeline to be set.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Sets the OpenGL pipeline for rendering.</para>
+<para>This function sets the OpenGL pipeline that will be used to render graphics. The pipeline is an object of type <computeroutput><ref refid="class_a_g_e_1_1_open_g_l_pipeline" kindref="compound">OpenGLPipeline</ref></computeroutput>, which encapsulates all the necessary settings and shaders to perform a full-featured 3D rendering operation.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_a_g_e_1_1_pipeline" kindref="compound">Pipeline</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the OpenGL pipeline to use for rendering. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGlContext.h" line="29" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGlContext.cpp" bodystart="51" bodyend="54"/>
-      </memberdef>
-    </sectiondef>
-    <sectiondef kind="public-static-func">
-      <memberdef kind="function" id="class_a_g_e_1_1_open_g_l_context_1a32bad9d87f2ec55088653390c5641cf4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void AGE::OpenGLContext::OpenGLErrorCallback</definition>
-        <argsstring>(uint32_t source, uint32_t type, uint32_t id, uint32_t severity, int length, const char *message, const void *userParam)</argsstring>
-        <name>OpenGLErrorCallback</name>
-        <qualifiedname>AGE::OpenGLContext::OpenGLErrorCallback</qualifiedname>
-        <param>
-          <type>uint32_t</type>
-          <declname>source</declname>
-        </param>
-        <param>
-          <type>uint32_t</type>
-          <declname>type</declname>
-        </param>
-        <param>
-          <type>uint32_t</type>
-          <declname>id</declname>
-        </param>
-        <param>
-          <type>uint32_t</type>
-          <declname>severity</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>length</declname>
-        </param>
-        <param>
-          <type>const char *</type>
-          <declname>message</declname>
-        </param>
-        <param>
-          <type>const void *</type>
-          <declname>userParam</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGlContext.h" line="31" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGlContext.cpp" bodystart="56" bodyend="75"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGlContext.h" line="39" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGlContext.cpp" bodystart="120" bodyend="123"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>Constructor for <ref refid="class_a_g_e_1_1_open_g_l_context" kindref="compound">OpenGLContext</ref>. Initializes the context with a GLFW window handle. </para>
     </briefdescription>
     <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>WindowHandle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to an existing GLFWwindow object that this context will be bound to.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This class represents an OpenGL context. It is responsible for initializing and managing the OpenGL pipeline.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>WindowHandle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to a GLFWwindow object, which represents the window that this context will be associated with. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
     </detaileddescription>
     <inheritancegraph>
       <node id="2">
@@ -201,7 +247,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGlContext.h" line="14" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGlContext.h" bodystart="15" bodyend="38"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGlContext.h" line="24" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Public/OpenGlContext.h" bodystart="25" bodyend="46"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_graphics_context_1ac590188247ab154d722e874e0e8e5479" prot="public" virt="non-virtual"><scope>AGE::OpenGLContext</scope><name>As</name></member>
       <member refid="class_a_g_e_1_1_graphics_context_1a3208c4785281d9eb6044dd4278f586ed" prot="public" virt="non-virtual"><scope>AGE::OpenGLContext</scope><name>As</name></member>
@@ -211,7 +257,6 @@
       <member refid="class_a_g_e_1_1_open_g_l_context_1ace0a5458e42fd00919cd0bf4ff4b8851" prot="private" virt="non-virtual"><scope>AGE::OpenGLContext</scope><name>m_Pipeline</name></member>
       <member refid="class_a_g_e_1_1_open_g_l_context_1a271f4603f7cb9ea82ceec3230c5ee914" prot="private" virt="non-virtual"><scope>AGE::OpenGLContext</scope><name>m_WindowHandle</name></member>
       <member refid="class_a_g_e_1_1_open_g_l_context_1a8bb40d0f01ed8013b74fc4b63b55e6dd" prot="public" virt="non-virtual"><scope>AGE::OpenGLContext</scope><name>OpenGLContext</name></member>
-      <member refid="class_a_g_e_1_1_open_g_l_context_1a32bad9d87f2ec55088653390c5641cf4" prot="public" virt="non-virtual"><scope>AGE::OpenGLContext</scope><name>OpenGLErrorCallback</name></member>
       <member refid="class_a_g_e_1_1_open_g_l_context_1af9ec1c99236d9267c8cc5d4a4a1ef6ce" prot="public" virt="non-virtual"><scope>AGE::OpenGLContext</scope><name>SetPipeline</name></member>
       <member refid="class_a_g_e_1_1_open_g_l_context_1afe8b0381db6bd327e037aa7760b6d2e5" prot="public" virt="virtual"><scope>AGE::OpenGLContext</scope><name>SwapBuffers</name></member>
       <member refid="class_a_g_e_1_1_graphics_context_1a7691e44b7eb8a6e51d474d03dc39dd39" prot="public" virt="virtual"><scope>AGE::OpenGLContext</scope><name>~GraphicsContext</name></member>

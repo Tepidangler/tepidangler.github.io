@@ -15,7 +15,7 @@
 
 namespace AGE
 {
-     class AGE_API Input
+class AGE_API Input
      {
         public:
             static bool IsKeyPressed(int Keycode);

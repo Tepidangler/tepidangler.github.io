@@ -78,6 +78,29 @@
                 <h1 id="class-agecamera">Class AGE::Camera</h1>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespace_a_g_e/"><strong>AGE</strong></a> <strong>&gt;</strong> <a href="./"><strong>Camera</strong></a></p>
 <p>Inherited by the following classes: <a href="../class_a_g_e_1_1_editor_camera/">AGE::EditorCamera</a>,  <a href="../class_a_g_e_1_1_scene_camera/">AGE::SceneCamera</a></p>
+<h2 id="public-attributes">Public Attributes</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">COMMENT</td>
+<td style="text-align: left;"><a href="#variable-__pad0__"><strong>__pad0__</strong></a>  <br><em>Default constructor for the</em> <a href="./"><em><strong>Camera</strong></em></a> <em>class.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">COMMENT</td>
+<td style="text-align: left;"><a href="#variable-__pad1__"><strong>__pad1__</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">COMMENT</td>
+<td style="text-align: left;"><a href="#variable-__pad2__"><strong>__pad2__</strong></a>  <br></td>
+</tr>
+</tbody>
+</table>
 <h2 id="public-functions">Public Functions</h2>
 <table>
 <thead>
@@ -97,43 +120,43 @@
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-camera-33"><strong>Camera</strong></a> (<a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> Eye, <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> At, <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> Up) <br></td>
+<td style="text-align: left;"><a href="#function-camera-33"><strong>Camera</strong></a> (<a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> Eye, <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> At, <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> Up) <br><em>Constructor for the</em> <a href="./"><em><strong>Camera</strong></em></a> <em>class that initializes a camera with an eye position, at position and up direction.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">const <a href="../struct_a_g_e_1_1__constant_buffer_struct/"><strong>ConstantBufferStruct</strong></a></td>
-<td style="text-align: left;"><a href="#function-getconstantbufferdata-12"><strong>GetConstantBufferData</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-getconstantbufferdata-12"><strong>GetConstantBufferData</strong></a> () const<br><em>This function returns the constant buffer data.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"><a href="../struct_a_g_e_1_1__constant_buffer_struct/"><strong>ConstantBufferStruct</strong></a></td>
-<td style="text-align: left;"><a href="#function-getconstantbufferdata-22"><strong>GetConstantBufferData</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getconstantbufferdata-22"><strong>GetConstantBufferData</strong></a> () <br><em>This function returns the constant buffer data.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">const <a href="../struct_a_g_e_1_1_matrix4_d/"><strong>Matrix4D</strong></a> &amp;</td>
-<td style="text-align: left;"><a href="#function-getprojection-12"><strong>GetProjection</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-getprojection-12"><strong>GetProjection</strong></a> () const<br><em>Returns the projection matrix used for rendering.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"><a href="../struct_a_g_e_1_1_matrix4_d/"><strong>Matrix4D</strong></a> &amp;</td>
-<td style="text-align: left;"><a href="#function-getprojection-22"><strong>GetProjection</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getprojection-22"><strong>GetProjection</strong></a> () <br><em>Returns the projection matrix of the camera.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">ProjectionType</td>
-<td style="text-align: left;"><a href="#function-getprojectiontype"><strong>GetProjectionType</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-getprojectiontype"><strong>GetProjectionType</strong></a> () const<br><em>Returns the projection type of this object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">const <a href="../struct_a_g_e_1_1_matrix4_d/"><strong>Matrix4D</strong></a></td>
-<td style="text-align: left;"><a href="#function-getworldmatrix-12"><strong>GetWorldMatrix</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-getworldmatrix-12"><strong>GetWorldMatrix</strong></a> () const<br><em>Returns the world matrix of the object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"><a href="../struct_a_g_e_1_1_matrix4_d/"><strong>Matrix4D</strong></a></td>
-<td style="text-align: left;"><a href="#function-getworldmatrix-22"><strong>GetWorldMatrix</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getworldmatrix-22"><strong>GetWorldMatrix</strong></a> () <br><em>Returns the world matrix of the object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-setprojectiontype"><strong>SetProjectionType</strong></a> (ProjectionType Type) <br></td>
+<td style="text-align: left;"><a href="#function-setprojectiontype"><strong>SetProjectionType</strong></a> (ProjectionType Type) <br><em>Sets the projection type of the object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual</td>
-<td style="text-align: left;"><a href="#function-camera"><strong>~Camera</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-camera"><strong>~Camera</strong></a> () <br><em>Virtual destructor for the</em> <a href="./"><em><strong>Camera</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
@@ -164,6 +187,23 @@
 </tr>
 </tbody>
 </table>
+<h2 id="public-attributes-documentation">Public Attributes Documentation</h2>
+<h3 id="variable-__pad0__">variable __pad0__</h3>
+<p><em>Default constructor for the</em> <a href="./"><em><strong>Camera</strong></em></a> <em>class.</em></p>
+<pre><code class="language-C++">COMMENT AGE::Camera::__pad0__;
+</code></pre>
+<p>This function initializes a new instance of the <a href="./"><strong>Camera</strong></a> class with default values. It does not take any parameters and returns nothing. </p>
+<hr>
+
+<h3 id="variable-__pad1__">variable __pad1__</h3>
+<pre><code class="language-C++">COMMENT AGE::Camera::__pad1__;
+</code></pre>
+<hr>
+
+<h3 id="variable-__pad2__">variable __pad2__</h3>
+<pre><code class="language-C++">COMMENT AGE::Camera::__pad2__;
+</code></pre>
+<hr>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-camera-13">function Camera [1/3]</h3>
 <pre><code class="language-C++">AGE::Camera::Camera () = default
@@ -178,59 +218,137 @@
 <hr>
 
 <h3 id="function-camera-33">function Camera [3/3]</h3>
+<p><em>Constructor for the</em> <a href="./"><em><strong>Camera</strong></em></a> <em>class that initializes a camera with an eye position, at position and up direction.</em></p>
 <pre><code class="language-C++">inline AGE::Camera::Camera (
     Vector4 Eye,
     Vector4 At,
     Vector4 Up
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Eye</code> The eye position of the camera as a <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> object. </li>
+<li><code>At</code> The at position of the camera as a <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> object. This is usually the point in 3D space that the camera is looking at. </li>
+<li><code>Up</code> The up direction of the camera as a <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> object. This defines the orientation of the camera.</li>
+</ul>
+<p>Constructor for the <a href="./"><strong>Camera</strong></a> class. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Eye</code> A <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> representing the eye position in world space coordinates. </li>
+<li><code>At</code> A <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> representing the point at which to look in world space coordinates. </li>
+<li><code>Up</code> A <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> representing the up direction in world space coordinates. </li>
+</ul>
 <hr>
 
 <h3 id="function-getconstantbufferdata-12">function GetConstantBufferData [1/2]</h3>
+<p><em>This function returns the constant buffer data.</em> </p>
 <pre><code class="language-C++">inline const ConstantBufferStruct AGE::Camera::GetConstantBufferData () const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A struct of type ConstantBufferStruct containing the constant buffer data.</p>
+<p>Retrieves the constant buffer data.</p>
+<p>This function returns a copy of the constant buffer data stored in the object. The returned data is a struct that contains all the necessary information for rendering.</p>
+<p><strong>Returns:</strong></p>
+<p>A ConstantBufferStruct containing the constant buffer data. </p>
 <hr>
 
 <h3 id="function-getconstantbufferdata-22">function GetConstantBufferData [2/2]</h3>
+<p><em>This function returns the constant buffer data.</em> </p>
 <pre><code class="language-C++">inline ConstantBufferStruct AGE::Camera::GetConstantBufferData () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>ConstantBufferStruct object containing the constant buffer data.</p>
+<p>This function returns the constant buffer data. </p>
+<p><strong>Returns:</strong></p>
+<p>ConstantBufferStruct object containing the constant buffer data. </p>
 <hr>
 
 <h3 id="function-getprojection-12">function GetProjection [1/2]</h3>
+<p><em>Returns the projection matrix used for rendering.</em> </p>
 <pre><code class="language-C++">inline const Matrix4D &amp; AGE::Camera::GetProjection () const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A constant reference to the projection matrix (m_Projection).</p>
+<p>Returns the projection matrix used for rendering. </p>
+<p><strong>Returns:</strong></p>
+<p>A constant reference to the projection matrix (m_Projection). </p>
 <hr>
 
 <h3 id="function-getprojection-22">function GetProjection [2/2]</h3>
+<p><em>Returns the projection matrix of the camera.</em> </p>
 <pre><code class="language-C++">inline Matrix4D &amp; AGE::Camera::GetProjection () 
 </code></pre>
+<p>This function returns a reference to the projection matrix used by the camera for rendering. The returned object can be modified directly, which will affect all subsequent calls to this method and any other methods that use the same projection matrix.</p>
+<p><strong>Returns:</strong></p>
+<p>A reference to the projection matrix.</p>
+<p>Returns the projection matrix of the camera. </p>
+<p><strong>Returns:</strong></p>
+<p>A reference to the projection matrix (m_Projection). </p>
 <hr>
 
 <h3 id="function-getprojectiontype">function GetProjectionType</h3>
+<p><em>Returns the projection type of this object.</em> </p>
 <pre><code class="language-C++">inline ProjectionType AGE::Camera::GetProjectionType () const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>The ProjectionType of this object. Possible values are defined in an enumeration.</p>
+<p>Returns the projection type of the camera. </p>
+<p><strong>Returns:</strong></p>
+<p>ProjectionType - The current projection type (ORTHOGRAPHIC, PERSPECTIVE). </p>
 <hr>
 
 <h3 id="function-getworldmatrix-12">function GetWorldMatrix [1/2]</h3>
+<p><em>Returns the world matrix of the object.</em> </p>
 <pre><code class="language-C++">inline const Matrix4D AGE::Camera::GetWorldMatrix () const
 </code></pre>
+<p>This function returns the current world transformation matrix of the object. It is used to transform the object's vertices from local space to world space.</p>
+<p><strong>Returns:</strong></p>
+<p>The 4x4 world matrix as a <a href="../struct_a_g_e_1_1_matrix4_d/"><strong>Matrix4D</strong></a> object.</p>
+<p>Returns the world matrix of the object.</p>
+<p>This function returns the current world matrix of the object, which is used for transformations and other calculations in the scene.</p>
+<p><strong>Returns:</strong></p>
+<p><a href="../struct_a_g_e_1_1_matrix4_d/"><strong>Matrix4D</strong></a> The current world matrix of the object. </p>
 <hr>
 
 <h3 id="function-getworldmatrix-22">function GetWorldMatrix [2/2]</h3>
+<p><em>Returns the world matrix of the object.</em> </p>
 <pre><code class="language-C++">inline Matrix4D AGE::Camera::GetWorldMatrix () 
 </code></pre>
+<p>This function returns the current world matrix of the object, which is used for transformations and other calculations in the scene.</p>
+<p><strong>Returns:</strong></p>
+<p><a href="../struct_a_g_e_1_1_matrix4_d/"><strong>Matrix4D</strong></a> The current world matrix of the object.</p>
+<p>Returns the world matrix of the object.</p>
+<p>This function returns the current world matrix of the object, which is used for transformations and other calculations in the scene.</p>
+<p><strong>Returns:</strong></p>
+<p><a href="../struct_a_g_e_1_1_matrix4_d/"><strong>Matrix4D</strong></a> The current world matrix of the object. </p>
 <hr>
 
 <h3 id="function-setprojectiontype">function SetProjectionType</h3>
+<p><em>Sets the projection type of the object.</em> </p>
 <pre><code class="language-C++">inline virtual void AGE::Camera::SetProjectionType (
     ProjectionType Type
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Type</code> The ProjectionType to be set. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>None</p>
+<p>Sets the projection type of the object. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Type</code> The ProjectionType to be set. </li>
+</ul>
 <hr>
 
 <h3 id="function-camera">function ~Camera</h3>
+<p><em>Virtual destructor for the</em> <a href="./"><em><strong>Camera</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">inline virtual AGE::Camera::~Camera () 
 </code></pre>
+<p>This function is a virtual destructor that cleans up any resources used by an instance of the <a href="./"><strong>Camera</strong></a> class. It does not take any parameters and returns nothing.</p>
+<p>Virtual destructor for the <a href="./"><strong>Camera</strong></a> class.</p>
+<p>This function is a virtual destructor that cleans up any resources used by an instance of the <a href="./"><strong>Camera</strong></a> class. It does not take any parameters and returns no value. </p>
 <hr>
 <h2 id="protected-attributes-documentation">Protected Attributes Documentation</h2>
 <h3 id="variable-m_constantbuffer">variable m_ConstantBuffer</h3>

@@ -89,31 +89,31 @@
 <tbody>
 <tr>
 <td style="text-align: right;">virtual uint64_t</td>
-<td style="text-align: left;"><a href="#function-getstreamposition"><strong>GetStreamPosition</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getstreamposition"><strong>GetStreamPosition</strong></a> () <br><em>Get the current position of the stream in bytes.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual bool</td>
-<td style="text-align: left;"><a href="#function-isstreamgood"><strong>IsStreamGood</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-isstreamgood"><strong>IsStreamGood</strong></a> () const<br><em>Checks the state of the stream object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-memorystreamwriter-12"><strong>MemoryStreamWriter</strong></a> (void * Addr) <br></td>
+<td style="text-align: left;"><a href="#function-memorystreamwriter-12"><strong>MemoryStreamWriter</strong></a> (void * Addr) <br><em>Constructs a</em> <a href="./"><em><strong>MemoryStreamWriter</strong></em></a> <em>object with the given address.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-memorystreamwriter-22"><strong>MemoryStreamWriter</strong></a> (const <a href="./"><strong>MemoryStreamWriter</strong></a> &amp;) = delete<br></td>
+<td style="text-align: left;"><a href="#function-memorystreamwriter-22"><strong>MemoryStreamWriter</strong></a> (const <a href="./"><strong>MemoryStreamWriter</strong></a> &amp;) = delete<br><em>This is a copy constructor for the</em> <a href="./"><em><strong>MemoryStreamWriter</strong></em></a> <em>class. It's marked as deleted to prevent copying of objects.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-setstreamposition"><strong>SetStreamPosition</strong></a> (uint64_t Pos) <br></td>
+<td style="text-align: left;"><a href="#function-setstreamposition"><strong>SetStreamPosition</strong></a> (uint64_t Pos) <br><em>Sets the stream position to a specified value.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual bool</td>
-<td style="text-align: left;"><a href="#function-writedata"><strong>WriteData</strong></a> (const char * Data, size_t Size) <br></td>
+<td style="text-align: left;"><a href="#function-writedata"><strong>WriteData</strong></a> (const char * Data, size_t Size) <br><em>Writes data to the memory stream.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual</td>
-<td style="text-align: left;"><a href="#function-memorystreamwriter"><strong>~MemoryStreamWriter</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-memorystreamwriter"><strong>~MemoryStreamWriter</strong></a> () <br><em>Destructor for</em> <a href="./"><em><strong>MemoryStreamWriter</strong></em></a> <em>class. Clears the stream associated with this object.</em></td>
 </tr>
 </tbody>
 </table>
@@ -141,11 +141,11 @@
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_data_writer/#function-writearray"><strong>WriteArray</strong></a> (const std::vector&lt; T &gt; &amp; Array, bool WriteSize=true) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_data_writer/#function-writearray"><strong>WriteArray</strong></a> (const std::vector&lt; T &gt; &amp; Array, bool WriteSize=true) <br><em>Writes an array to a stream.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_data_writer/#function-writebuffer"><strong>WriteBuffer</strong></a> (<a href="../struct_a_g_e_1_1_buffer/"><strong>Buffer</strong></a> buffer, bool WriteSize=true) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_data_writer/#function-writebuffer"><strong>WriteBuffer</strong></a> (<a href="../struct_a_g_e_1_1_buffer/"><strong>Buffer</strong></a> buffer, bool WriteSize=true) <br><em>Writes a buffer to the data stream.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual bool</td>
@@ -153,89 +153,159 @@
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_data_writer/#function-writemap-13"><strong>WriteMap</strong></a> (const std::map&lt; Key, Value &gt; &amp; Map, bool WriteSize=true) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_data_writer/#function-writemap-13"><strong>WriteMap</strong></a> (const std::map&lt; Key, Value &gt; &amp; Map, bool WriteSize=true) <br><em>Writes a map to the underlying storage.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_data_writer/#function-writemap-23"><strong>WriteMap</strong></a> (const std::unordered_map&lt; Key, Value &gt; &amp; Map, bool WriteSize=true) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_data_writer/#function-writemap-23"><strong>WriteMap</strong></a> (const std::unordered_map&lt; Key, Value &gt; &amp; Map, bool WriteSize=true) <br><em>This function writes an unordered map to a data stream. It can optionally write the size of the map as well.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_data_writer/#function-writemap-33"><strong>WriteMap</strong></a> (const std::unordered_map&lt; std::string, Value &gt; &amp; Map, bool WriteSize=true) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_data_writer/#function-writemap-33"><strong>WriteMap</strong></a> (const std::unordered_map&lt; std::string, Value &gt; &amp; Map, bool WriteSize=true) <br><em>Writes a map to the stream. If WriteSize is true, it writes the size of the map first. Then for each key-value pair in the map, it writes the key as a string and the value. For trivial types, it directly writes the value using WriteRaw. For non-trivial types, it uses WriteObject.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_data_writer/#function-writeobject"><strong>WriteObject</strong></a> (const T &amp; Obj) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_data_writer/#function-writeobject"><strong>WriteObject</strong></a> (const T &amp; Obj) <br><em>This function writes an object to the stream by serializing it.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_data_writer/#function-writeraw"><strong>WriteRaw</strong></a> (const T &amp; Type) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_data_writer/#function-writeraw"><strong>WriteRaw</strong></a> (const T &amp; Type) <br><em>Writes raw data of a specific type.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_data_writer/#function-writestring"><strong>WriteString</strong></a> (const std::string &amp; String) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_data_writer/#function-writestring"><strong>WriteString</strong></a> (const std::string &amp; String) <br><em>Writes a string to the data stream, including its length prefix.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_data_writer/#function-writezero"><strong>WriteZero</strong></a> (uint64_t Size) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_data_writer/#function-writezero"><strong>WriteZero</strong></a> (uint64_t Size) <br><em>Writes a block of zeros to the data stream.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_data_writer/#function-operator-bool"><strong>operator bool</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_data_writer/#function-operator-bool"><strong>operator bool</strong></a> () const<br><em>Checks the state of the stream.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_data_writer/#function-datawriter"><strong>~DataWriter</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_data_writer/#function-datawriter"><strong>~DataWriter</strong></a> () = default<br><em>Virtual destructor for the</em> <a href="../class_a_g_e_1_1_data_writer/"><em><strong>DataWriter</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-getstreamposition">function GetStreamPosition</h3>
+<p><em>Get the current position of the stream in bytes.</em> </p>
 <pre><code class="language-C++">inline virtual uint64_t AGE::MemoryStreamWriter::GetStreamPosition () 
 </code></pre>
+<p>This function retrieves the current position within a stream object, which is useful for determining how much data has been written to the stream so far. The return value is always non-negative and represents the number of characters successfully read from the stream buffer. If an error occurs during reading (e.g., end of file), it returns UINT64_MAX indicating failure.</p>
+<p><strong>Returns:</strong></p>
+<p>uint64_t Current position in bytes, or UINT64_MAX if there was an error.</p>
+<p>Get the current position in the stream</p>
+<p>This function retrieves the current position within a stream. It returns this as an unsigned 64-bit integer. If the tellp() call fails, it will return UINT64_MAX to indicate failure.</p>
+<p><strong>Returns:</strong></p>
+<p>uint64_t The current position in the stream </p>
 <p>Implements <a href="../class_a_g_e_1_1_data_writer/#function-getstreamposition"><em>AGE::DataWriter::GetStreamPosition</em></a></p>
 <hr>
 
 <h3 id="function-isstreamgood">function IsStreamGood</h3>
+<p><em>Checks the state of the stream object.</em> </p>
 <pre><code class="language-C++">inline virtual bool AGE::MemoryStreamWriter::IsStreamGood () const
 </code></pre>
+<p>This function checks whether the underlying input/output operations on the stream are good or not. It returns true if the stream is in a good state, false otherwise.</p>
+<p><strong>Returns:</strong></p>
+<p>True if the stream is in a good state, false otherwise.</p>
+<p>Checks the state of the stream.</p>
+<p>This function checks whether the underlying stream is in a good state, i.e., it has no errors or failures that would prevent further operations on it.</p>
+<p><strong>Returns:</strong></p>
+<p>True if the stream is in a good state, false otherwise. </p>
 <p>Implements <a href="../class_a_g_e_1_1_data_writer/#function-isstreamgood"><em>AGE::DataWriter::IsStreamGood</em></a></p>
 <hr>
 
 <h3 id="function-memorystreamwriter-12">function MemoryStreamWriter [1/2]</h3>
+<p><em>Constructs a</em> <a href="./"><em><strong>MemoryStreamWriter</strong></em></a> <em>object with the given address.</em></p>
 <pre><code class="language-C++">AGE::MemoryStreamWriter::MemoryStreamWriter (
     void * Addr
 ) 
 </code></pre>
+<p>This constructor initializes the memory stream writer with an address to write data into. The mode of the stream is set to binary and out for writing operations.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Addr</code> A void pointer representing the starting address in memory where data will be written.</li>
+</ul>
+<p>Constructs a <a href="./"><strong>MemoryStreamWriter</strong></a> object with the given address.</p>
+<p>This constructor initializes the memory stream writer with an address to write data into. The stream is initialized as binary and outgoing.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Addr</code> A void pointer representing the address where data will be written. </li>
+</ul>
 <hr>
 
 <h3 id="function-memorystreamwriter-22">function MemoryStreamWriter [2/2]</h3>
+<p><em>This is a copy constructor for the</em> <a href="./"><em><strong>MemoryStreamWriter</strong></em></a> <em>class. It's marked as deleted to prevent copying of objects.</em></p>
 <pre><code class="language-C++">AGE::MemoryStreamWriter::MemoryStreamWriter (
     const MemoryStreamWriter &amp;
 ) = delete
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>other</code> The object to be copied.</li>
+</ul>
+<p>This is a copy constructor for the <a href="./"><strong>MemoryStreamWriter</strong></a> class. It's marked as deleted to prevent copying of objects. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>other</code> The object to be copied. </li>
+</ul>
 <hr>
 
 <h3 id="function-setstreamposition">function SetStreamPosition</h3>
+<p><em>Sets the stream position to a specified value.</em> </p>
 <pre><code class="language-C++">inline virtual void AGE::MemoryStreamWriter::SetStreamPosition (
     uint64_t Pos
 ) 
 </code></pre>
+<p>This function sets the current read/write position in the stream to the provided position. The new position is calculated as an offset from the beginning of the file, which is given by the parameter 'Pos'.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Pos</code> The new position to set in the stream.</li>
+</ul>
+<p>Sets the stream position to a specified value.</p>
+<p>This function sets the current read/write position in the stream to the provided position. The new position is calculated as an offset from the beginning of the file, measured in bytes.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Pos</code> The desired position in the stream, measured in bytes. </li>
+</ul>
 <p>Implements <a href="../class_a_g_e_1_1_data_writer/#function-setstreamposition"><em>AGE::DataWriter::SetStreamPosition</em></a></p>
 <hr>
 
 <h3 id="function-writedata">function WriteData</h3>
+<p><em>Writes data to the memory stream.</em> </p>
 <pre><code class="language-C++">virtual bool AGE::MemoryStreamWriter::WriteData (
     const char * Data,
     size_t Size
 ) 
 </code></pre>
+<p>This function writes a block of data of specified size into the memory stream. It takes in a pointer to the data and its size, then writes that data into the stream. The function returns true if the write operation is successful, false otherwise.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Data</code> Pointer to the data to be written. </li>
+<li><code>Size</code> Size of the data to be written.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>True if the write operation was successful, false otherwise.</p>
+<p>Writes data to the memory stream.</p>
+<p>This function writes a block of data of a specified size into the memory stream. It takes in a pointer to the data and its size, then writes this data into the stream. The function returns true if the write operation is successful, false otherwise.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Data</code> Pointer to the data that needs to be written into the stream. </li>
+<li><code>Size</code> Size of the data block in bytes.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>True if the data was successfully written into the memory stream, false otherwise. </p>
 <p>Implements <a href="../class_a_g_e_1_1_data_writer/#function-writedata"><em>AGE::DataWriter::WriteData</em></a></p>
 <hr>
 
 <h3 id="function-memorystreamwriter">function ~MemoryStreamWriter</h3>
+<p><em>Destructor for</em> <a href="./"><em><strong>MemoryStreamWriter</strong></em></a> <em>class. Clears the stream associated with this object.</em></p>
 <pre><code class="language-C++">virtual AGE::MemoryStreamWriter::~MemoryStreamWriter () 
 </code></pre>
+<p>Destructor for <a href="./"><strong>MemoryStreamWriter</strong></a> class. Clears the stream associated with this instance. </p>
 <hr>
 
 <hr />

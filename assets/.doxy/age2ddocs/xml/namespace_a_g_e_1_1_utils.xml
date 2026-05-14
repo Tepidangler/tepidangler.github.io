@@ -15,12 +15,39 @@
           <declname>Multisampled</declname>
         </param>
         <briefdescription>
+<para>Determines the OpenGL texture target based on whether multisampling is enabled. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes a boolean parameter indicating if multisampling should be used. If true, it returns GL_TEXTURE_2D_MULTISAMPLE; otherwise, it returns GL_TEXTURE_2D.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Multisampled</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A boolean value indicating whether to use multisampling or not. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The OpenGL texture target corresponding to the input parameter.</para>
+</simplesect>
+Determines the OpenGL texture target based on whether multisampling is enabled.</para>
+<para>This function takes a boolean parameter indicating if multisampling should be used. If true, it returns GL_TEXTURE_2D_MULTISAMPLE; otherwise, it returns GL_TEXTURE_2D.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Multisampled</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A boolean value indicating whether to use multisampling or not. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The OpenGL texture target based on the input parameter. Returns GL_TEXTURE_2D if false is passed and GL_TEXTURE_2D_MULTISAMPLE if true is passed. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLFrameBuffer.cpp" line="9" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLFrameBuffer.cpp" bodystart="9" bodyend="12"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLFrameBuffer.cpp" line="25" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLFrameBuffer.cpp" bodystart="25" bodyend="28"/>
       </memberdef>
       <memberdef kind="function" id="_open_g_l_frame_buffer_8cpp_1a013d19bcf93435e5c26f95b058de4bfb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -41,12 +68,69 @@
           <declname>Count</declname>
         </param>
         <briefdescription>
+<para>Creates a set of textures. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function creates a set of OpenGL textures using the glCreateTextures function. The number of textures to be created is specified by &apos;Count&apos;. The parameter &apos;Multisampled&apos; determines whether the textures are multisampled or not, and &apos;OutID&apos; is an array that will hold the IDs of the newly created textures.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Multisampled</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A boolean value indicating if the textures should be multisampled. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>OutID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array to store the IDs of the newly created textures. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of textures to create.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void</para>
+</simplesect>
+Creates a set of textures.</para>
+<para>This function creates a set of OpenGL textures with the specified parameters. The number of textures to be created is given by &apos;Count&apos;. If &apos;Multisampled&apos; is true, multisampling will be used for the textures; otherwise, they won&apos;t. The IDs of the newly created textures are stored in the array pointed to by &apos;OutID&apos;.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Multisampled</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A boolean indicating whether or not to use multisampling. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>OutID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array that will store the IDs of the newly created textures. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of textures to be created. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLFrameBuffer.cpp" line="14" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLFrameBuffer.cpp" bodystart="14" bodyend="17"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLFrameBuffer.cpp" line="52" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLFrameBuffer.cpp" bodystart="52" bodyend="55"/>
       </memberdef>
       <memberdef kind="function" id="_open_g_l_frame_buffer_8cpp_1ac585c03a7213a0dda36f4b92a353bd47" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -63,12 +147,55 @@
           <declname>ID</declname>
         </param>
         <briefdescription>
+<para>This function binds a texture to the OpenGL context. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function takes two parameters, a boolean indicating whether the texture is multisampled and an unsigned integer representing the ID of the texture. It uses these values to determine the appropriate target for binding the texture with glBindTexture().</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Multisampled</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A boolean value that indicates if the texture is multisampled or not. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An unsigned integer representing the ID of the texture to be bound.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void</para>
+</simplesect>
+This function binds a texture to the OpenGL context.</para>
+<para>It takes two parameters, one boolean and one unsigned integer. The boolean indicates whether the texture is multisampled or not, while the unsigned integer represents the ID of the texture. The function uses these inputs to determine the correct target for binding the texture using glBindTexture().</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Multisampled</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A boolean indicating if the texture is multisampled (true) or not (false). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An unsigned integer representing the ID of the texture.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLFrameBuffer.cpp" line="19" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLFrameBuffer.cpp" bodystart="19" bodyend="22"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLFrameBuffer.cpp" line="78" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLFrameBuffer.cpp" bodystart="78" bodyend="81"/>
       </memberdef>
       <memberdef kind="function" id="_open_g_l_frame_buffer_8cpp_1a97b40ed3ebb0c3c1b8443c912418d10c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -105,12 +232,74 @@
           <declname>Index</declname>
         </param>
         <briefdescription>
+<para>Attaches a color texture to the framebuffer. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function sets up and attaches a color texture to the OpenGL framebuffer object. The texture can be either multisampled or regular, depending on the &apos;Samples&apos; parameter. It then binds this texture as a color attachment point for rendering.</para>
+<para>Attach a color texture to the framebuffer.</para>
+<para>This function attaches a color texture to the OpenGL framebuffer. The texture can be either multisampled or regular. If it&apos;s multisampled, we use glTexImage2DMultisample to create the texture with specified samples and internal format. Otherwise, we use glTexImage2D to create a 2D texture with given width, height, and format. We then set various texture parameters such as minification and magnification filters, wrapping modes etc., before attaching it to the framebuffer using glFramebufferTexture2D.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The OpenGL ID of the texture to attach. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Samples</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of samples for multisampling (if any). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>InternalFormat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The internal format of the texture. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The format of the pixel data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The width of the texture. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The height of the texture. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index for color attachment point in framebuffer object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLFrameBuffer.cpp" line="24" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLFrameBuffer.cpp" bodystart="24" bodyend="44"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLFrameBuffer.cpp" line="101" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLFrameBuffer.cpp" bodystart="101" bodyend="121"/>
       </memberdef>
       <memberdef kind="function" id="_open_g_l_frame_buffer_8cpp_1a201f845a6e4d330f1570d96b0881d115" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -145,10 +334,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para>This function is used to attach a depth texture to the frame buffer. It takes in several parameters including the OpenGL ID, number of samples for multisampling, format of the texture data, type of attachment and dimensions of the texture. The function first checks if the texture should be multisampled based on the provided sample count. If it is, a multisample texture image is created using glTexImage2DMultisample. Otherwise, a regular 2D texture storage is created with glTexStorage2D and some basic parameters are set for the texture. Finally, the function attaches the texture to the frame buffer using glFramebufferTexture2D. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLFrameBuffer.cpp" line="47" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLFrameBuffer.cpp" bodystart="47" bodyend="67"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLFrameBuffer.cpp" line="130" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLFrameBuffer.cpp" bodystart="130" bodyend="150"/>
       </memberdef>
       <memberdef kind="function" id="_open_g_l_frame_buffer_8cpp_1a124313c59ae76a97a88dc5985a0b7015" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -161,12 +351,39 @@
           <declname>Format</declname>
         </param>
         <briefdescription>
+<para>Checks if the given format is a depth format. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function checks whether the provided FramebufferTextureFormat is one of the depth formats. It returns true for DEPTH24STENCIL8 and false otherwise.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The format to check. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the format is a depth format, false otherwise.</para>
+</simplesect>
+Checks if the given format is a depth format.</para>
+<para>This function checks whether the provided FramebufferTextureFormat is one of the depth formats. The only depth format currently supported by this application is DEPTH24STENCIL8.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The format to check. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the format is a depth format, false otherwise. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLFrameBuffer.cpp" line="70" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLFrameBuffer.cpp" bodystart="70" bodyend="86"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLFrameBuffer.cpp" line="169" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLFrameBuffer.cpp" bodystart="169" bodyend="185"/>
       </memberdef>
       <memberdef kind="function" id="_open_g_l_frame_buffer_8cpp_1a689f1fc2886126a156cdafdda4645a93" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>GLenum</type>
@@ -179,12 +396,39 @@
           <declname>Format</declname>
         </param>
         <briefdescription>
+<para>Converts a FramebufferTextureFormat to its corresponding GLenum. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes in a FramebufferTextureFormat and returns the equivalent GLenum value. It handles four formats: RGBA8, RED_INTEGER. For any other format, it asserts false and returns 0.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The FramebufferTextureFormat to convert. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The corresponding GLenum for the input FramebufferTextureFormat. If the input is not a recognized format, it will return 0.</para>
+</simplesect>
+Converts a FramebufferTextureFormat to its corresponding GLenum.</para>
+<para>This function takes in a FramebufferTextureFormat and returns the equivalent GLenum value. It handles four cases: RGBA8, which corresponds to GL_RGBA8, RED_INTEGER, which corresponds to GL_RED_INTEGER, and any other format that is not handled by this function results in an assertion failure with a message &quot;Invalid Format&quot;.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The FramebufferTextureFormat to convert. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The corresponding GLenum value for the given FramebufferTextureFormat. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLFrameBuffer.cpp" line="88" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLFrameBuffer.cpp" bodystart="88" bodyend="107"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLFrameBuffer.cpp" line="203" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLFrameBuffer.cpp" bodystart="203" bodyend="222"/>
       </memberdef>
       <memberdef kind="function" id="_open_g_l_texture_8cpp_1af320dcc780f3f3d20f2f999c10867816" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>GLenum</type>
@@ -197,12 +441,26 @@
           <declname>Format</declname>
         </param>
         <briefdescription>
+<para>Converts an ImageFormat to a GLenum data format. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes in an ImageFormat and returns the corresponding GLenum data format. It uses a switch-case statement to handle different ImageFormats, returning GL_RGB for RGB8 and GL_RGBA for RGBA8. If the ImageFormat is not supported by AGE (which should never happen), it asserts false and returns 0.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ImageFormat to convert. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The corresponding GLenum data format. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLTexture.cpp" line="15" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLTexture.cpp" bodystart="15" bodyend="45"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLTexture.cpp" line="24" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLTexture.cpp" bodystart="24" bodyend="44"/>
       </memberdef>
       <memberdef kind="function" id="_open_g_l_texture_8cpp_1a3fe034ac491dbc92ff221d66db60adee" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>GLenum</type>
@@ -215,12 +473,26 @@
           <declname>Format</declname>
         </param>
         <briefdescription>
+<para>Converts an ImageFormat to its corresponding GL internal format. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes in an ImageFormat and returns the equivalent GL internal format. It uses a switch-case statement to handle different ImageFormats, returning the appropriate GL_RGB8 or GL_RGBA8 based on the input. If the input is not supported by AGE (which should never happen as we only have two defined formats), it asserts false and returns 0.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ImageFormat to convert. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The corresponding GL internal format, or 0 if the ImageFormat is not supported. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLTexture.cpp" line="47" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLTexture.cpp" bodystart="47" bodyend="84"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLTexture.cpp" line="54" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Platform/OpenGL/Private/OpenGLTexture.cpp" bodystart="54" bodyend="74"/>
       </memberdef>
       <memberdef kind="function" id="_render_a_p_i_8h_1aebed823ebf8a88da624361917cea13ae" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -229,12 +501,17 @@
         <name>ConvertAPIToString</name>
         <qualifiedname>AGE::Utils::ConvertAPIToString</qualifiedname>
         <briefdescription>
+<para>Converts the current <ref refid="class_a_g_e_1_1_renderer_a_p_i" kindref="compound">RendererAPI</ref> to a string. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function converts the enum value of <ref refid="class_a_g_e_1_1_renderer_a_p_i" kindref="compound">RendererAPI</ref> into a human-readable string representation. It uses a switch statement to check the integer equivalent of the <ref refid="class_a_g_e_1_1_renderer_a_p_i" kindref="compound">RendererAPI</ref> and returns a corresponding string. If the <ref refid="class_a_g_e_1_1_renderer_a_p_i" kindref="compound">RendererAPI</ref> is not recognized, it defaults to &quot;UNDEFINED&quot;.</para>
+<para><simplesect kind="return"><para>A string representing the current <ref refid="class_a_g_e_1_1_renderer_a_p_i" kindref="compound">RendererAPI</ref>. Possible values are: &quot;Headless&quot;, &quot;OpenGL&quot;, or &quot;UNDEFINED&quot; if the API is unknown. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" line="52" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" bodystart="52" bodyend="73"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" line="74" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Render/Public/RenderAPI.h" bodystart="74" bodyend="95"/>
       </memberdef>
       <memberdef kind="function" id="_scriptable_entity_8cpp_1ac9b97a5b91f925a00492b5b9381339f6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -251,12 +528,55 @@
           <declname>Value</declname>
         </param>
         <briefdescription>
+<para>Converts a boolean value to its string representation. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes an AGEPinType and a boolean value as input, converts the boolean value into its string representation (&quot;True&quot; or &quot;False&quot;), and returns it along with the AGEPinType in a formatted string.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of pin to be converted. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The boolean value to be converted. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The string representation of the input boolean value.</para>
+</simplesect>
+Converts a boolean value to its string representation.</para>
+<para>This function takes an AGEPinType and a boolean value as input, converts the boolean value into its string representation (&quot;True&quot; or &quot;False&quot;), and returns it as a std::string.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of pin that is being converted. This parameter does not contribute to the function&apos;s output but is included for context. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The boolean value to be converted into its string representation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A std::string containing &quot;True&quot; if Value is true, and &quot;False&quot; otherwise. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/ScriptableEntity.cpp" line="17" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/ScriptableEntity.cpp" bodystart="17" bodyend="17"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/ScriptableEntity.cpp" line="47" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/ScriptableEntity.cpp" bodystart="47" bodyend="47"/>
       </memberdef>
       <memberdef kind="function" id="_scriptable_entity_8cpp_1a6d0f1eb94357f8c6b0e384ca302b65f9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -273,12 +593,55 @@
           <declname>Value</declname>
         </param>
         <briefdescription>
+<para>Converts an integer value to a string. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes in two parameters, an AGEPinType and an int Value. It converts the int Value into a string using std::to_string() and returns it as a std::string. The purpose of this function is to provide a standardized way of converting integer values to strings for use in various parts of the AGE system.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This parameter represents the type of pin that we are working with, but its actual meaning or functionality within the context of the AGE system is not specified here as it&apos;s beyond the scope of this function&apos;s documentation. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The integer value to be converted into a string.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns a std::string that represents the input integer Value in textual form. If the conversion fails, an empty string (&quot;&quot;) is returned.</para>
+</simplesect>
+Converts an integer value to a string.</para>
+<para>This function takes in two parameters, an enumeration of type AGEPinType and an integer Value. It converts the integer into a string representation using std::to_string() and returns it. The purpose of this conversion is typically for logging or debugging purposes where you might want to display the value as a string instead of its numeric representation.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An enumeration representing different types of pins. This parameter does not contribute to the functionality of the function, but it provides context about what kind of pin the Value represents. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The integer value that will be converted into a string.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns a std::string representation of the input integer Value. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/ScriptableEntity.cpp" line="18" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/ScriptableEntity.cpp" bodystart="18" bodyend="18"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/ScriptableEntity.cpp" line="72" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/ScriptableEntity.cpp" bodystart="72" bodyend="72"/>
       </memberdef>
       <memberdef kind="function" id="_scriptable_entity_8cpp_1a17c9d8bc189d001b234a9c10b11bd299" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -295,12 +658,55 @@
           <declname>Value</declname>
         </param>
         <briefdescription>
+<para>Converts a numeric value to string. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes an AGEPinType and an int16_t as input, converts the int16_t to a string using std::to_string(), and returns it. The purpose of this conversion is unknown at present.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An enumeration value representing the type of pin being processed. This parameter&apos;s role in the function is not clear from the context provided, so its documentation has been left as &quot;Unknown&quot;. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A numeric value to be converted to a string.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The input int16_t value as a string.</para>
+</simplesect>
+Converts a numeric value to string.</para>
+<para>This function takes an AGEPinType and an int16_t as input, converts the int16_t to a string using std::to_string(), and returns this string. The purpose of this conversion is unknown at present.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An enumeration value representing the type of pin being processed. This parameter&apos;s role in the function is not clear. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A numeric value to be converted to a string.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns a string representation of the input int16_t Value. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/ScriptableEntity.cpp" line="19" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/ScriptableEntity.cpp" bodystart="19" bodyend="19"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/ScriptableEntity.cpp" line="96" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/ScriptableEntity.cpp" bodystart="96" bodyend="96"/>
       </memberdef>
       <memberdef kind="function" id="_scriptable_entity_8cpp_1ab4bb270fcf156a29ba0ddc40e84242d4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -317,12 +723,55 @@
           <declname>Value</declname>
         </param>
         <briefdescription>
+<para>Converts a numeric value to string. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes an AGEPinType and an int64_t as input, converts the int64_t to a string representation, and returns it. The purpose of this conversion is unknown at present.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The type of pin being converted. It&apos;s not clear what this parameter represents or its significance. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The numeric value to be converted into a string.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns the string representation of the input int64_t Value.</para>
+</simplesect>
+Converts a value to string.</para>
+<para>This function takes an AGEPinType and an int64_t as input, converts the int64_t to a string representation, and returns it. The purpose of this conversion is unknown at present.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The type of pin being converted. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The value to be converted to a string. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A string representation of the input value. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/ScriptableEntity.cpp" line="20" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/ScriptableEntity.cpp" bodystart="20" bodyend="20"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/ScriptableEntity.cpp" line="118" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/ScriptableEntity.cpp" bodystart="118" bodyend="118"/>
       </memberdef>
       <memberdef kind="function" id="_scriptable_entity_8cpp_1a1fc47db0bc41e19e16cb209478c0f57d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -339,12 +788,55 @@
           <declname>Value</declname>
         </param>
         <briefdescription>
+<para>Converts a numeric value to string. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes an AGEPinType and a uint16_t as input, converts the uint16_t to a string representation, and returns it. The purpose of this conversion is unknown at present.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The type of pin being converted. Not used in the conversion process. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The numeric value to be converted to a string.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A string representation of the input uint16_t value.</para>
+</simplesect>
+Converts a numeric value to string.</para>
+<para>This function takes an AGEPinType and a uint16_t as input, converts the uint16_t to a string representation, and returns it. The purpose of this conversion is unknown at present.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The type of pin being converted. It&apos;s not clear what this parameter represents or its significance. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The numeric value to be converted to a string.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns the string representation of the input uint16_t value. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/ScriptableEntity.cpp" line="21" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/ScriptableEntity.cpp" bodystart="21" bodyend="21"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/ScriptableEntity.cpp" line="141" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/ScriptableEntity.cpp" bodystart="141" bodyend="141"/>
       </memberdef>
       <memberdef kind="function" id="_scriptable_entity_8cpp_1adb248fe1b0b159b7232ea839eb3f0335" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -361,12 +853,55 @@
           <declname>Value</declname>
         </param>
         <briefdescription>
+<para>Converts a value of an AGE pin type to its string representation. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes in the type of the AGE pin and its corresponding value, converts the value into a string representation using std::to_string() and returns it.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the AGE pin (not used in this conversion but included for completeness). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to be converted to a string. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns the string representation of the input value.</para>
+</simplesect>
+Converts a numeric value to string.</para>
+<para>This function takes an AGEPinType and a uint32_t as input, converts the latter to a string representation, and returns it. The conversion is done using std::to_string() function from C++ standard library.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The type of pin being converted. This parameter does not contribute to the functionality of this function. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The numeric value to be converted to a string.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns a string representation of the input uint32_t value. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/ScriptableEntity.cpp" line="22" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/ScriptableEntity.cpp" bodystart="22" bodyend="22"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/ScriptableEntity.cpp" line="163" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/ScriptableEntity.cpp" bodystart="163" bodyend="163"/>
       </memberdef>
       <memberdef kind="function" id="_scriptable_entity_8cpp_1a2d70f78b1cdba576ffc129e57c49f6a0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -383,12 +918,55 @@
           <declname>Value</declname>
         </param>
         <briefdescription>
+<para>Converts a value of any type to string. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes an AGEPinType and a uint64_t as input, converts the uint64_t to a string representation, and returns it. The conversion is done based on the provided AGEPinType which can be used for further processing or presentation of the value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The type of pin that needs to be converted. This parameter does not contribute to the actual conversion but provides context about what kind of representation is expected from the function. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The uint64_t value which needs to be converted to string.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns a string representation of the input uint64_t value.</para>
+</simplesect>
+Converts a value to string.</para>
+<para>This function takes an AGEPinType and a uint64_t as input, converts the uint64_t to a string representation, and returns it. The conversion is done based on the provided AGEPinType which can be used for further processing or display purposes.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The type of pin that we are converting from. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The value of the pin that we want to convert into a string.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns a string representation of the input uint64_t value. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/ScriptableEntity.cpp" line="23" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/ScriptableEntity.cpp" bodystart="23" bodyend="23"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/ScriptableEntity.cpp" line="186" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/ScriptableEntity.cpp" bodystart="186" bodyend="186"/>
       </memberdef>
       <memberdef kind="function" id="_scriptable_entity_8cpp_1a452bb58230b5833b4a7a1bb4ddcd8bbe" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -405,12 +983,55 @@
           <declname>Value</declname>
         </param>
         <briefdescription>
+<para>Converts an AGEPinType and a <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> to a string. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes in an AGEPinType and a <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> as parameters, converts the <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> to a string using static_cast, then returns this string. The purpose of this conversion is unknown at present.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of pin being converted. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value of the pin being converted. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A string representation of the input parameters.</para>
+</simplesect>
+Converts a given AGEPinType and <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> value to string.</para>
+<para>This function takes an AGEPinType and a <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> as input, converts the <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> value to string format using static_cast, then returns this converted string. The returned string is empty if the conversion fails.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of pin that needs to be converted. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value of the pin that needs to be converted. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A string representation of the input <ref refid="struct_a_g_e_1_1_vector2" kindref="compound">Vector2</ref> value, or an empty string if the conversion failed. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/ScriptableEntity.cpp" line="24" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/ScriptableEntity.cpp" bodystart="24" bodyend="24"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/ScriptableEntity.cpp" line="207" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/ScriptableEntity.cpp" bodystart="207" bodyend="207"/>
       </memberdef>
       <memberdef kind="function" id="_scriptable_entity_8cpp_1a6f9f5499f163d4f43d86aaf6d9103d15" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -427,12 +1048,55 @@
           <declname>Value</declname>
         </param>
         <briefdescription>
+<para>Converts an AGEPinType and a <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> to a string. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes in two parameters, an AGEPinType and a <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref>. It converts the <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> to a string using the <computeroutput>std::string</computeroutput> constructor and returns it. The conversion is done by simply casting the <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> object to a std::string.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of pin that we are converting. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value of the pin, represented as a <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A string representation of the input parameters.</para>
+</simplesect>
+Converts a given AGEPinType and <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> value to string.</para>
+<para>This function takes an AGEPinType and a <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> as input, converts the <ref refid="struct_a_g_e_1_1_vector3" kindref="compound">Vector3</ref> into a string representation, and returns it along with the AGEPinType in string format.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of pin that needs to be converted to string. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value of the pin that needs to be converted to string. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns the string representation of the input values. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/ScriptableEntity.cpp" line="25" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/ScriptableEntity.cpp" bodystart="25" bodyend="25"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/ScriptableEntity.cpp" line="229" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/ScriptableEntity.cpp" bodystart="229" bodyend="229"/>
       </memberdef>
       <memberdef kind="function" id="_scriptable_entity_8cpp_1aa1ec214e1139d8618a0e192f44c8c059" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -449,12 +1113,55 @@
           <declname>Value</declname>
         </param>
         <briefdescription>
+<para>Converts a given AGEPinType and <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> to string. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes an AGEPinType and a <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> as input, converts the <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> to a string representation, and returns it along with the AGEPinType. The conversion is done by simply casting the <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> to a std::string.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of pin that we are converting. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value of the pin in <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> format. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns the string representation of the input <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> along with the AGEPinType.</para>
+</simplesect>
+Converts a given AGEPinType and <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> to string.</para>
+<para>This function takes an AGEPinType and a <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> as input, converts the <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> to a string using static_cast, and returns this string. The purpose of this conversion is unknown at present.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of pin that we are converting. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value of the pin that we are converting.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns the converted string representation of the <ref refid="struct_a_g_e_1_1_vector4" kindref="compound">Vector4</ref> input. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/ScriptableEntity.cpp" line="26" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/ScriptableEntity.cpp" bodystart="26" bodyend="26"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/ScriptableEntity.cpp" line="251" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/ScriptableEntity.cpp" bodystart="251" bodyend="251"/>
       </memberdef>
       <memberdef kind="function" id="_scriptable_entity_8cpp_1aa95733443e391d32fcbd2eb4813bfa3e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -471,12 +1178,55 @@
           <declname>Value</declname>
         </param>
         <briefdescription>
+<para>Converts a floating-point value to a string. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes an AGEPinType and a float as input, converts the float to a string using std::to_string(), and returns this string. The purpose of this conversion is unknown at present.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An enumeration value representing the type of pin being processed. This parameter&apos;s role in the function is not clear from the context provided. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A floating-point number to be converted to a string.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The float value as a string. If an error occurs during conversion, it returns an empty string.</para>
+</simplesect>
+Converts a floating-point value to a string.</para>
+<para>This function takes an AGEPinType and a float as input, converts the float to a string using std::to_string(), and returns this string. The purpose of this conversion is unknown at present.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An enum representing different types of pins in the system. It&apos;s not clear what this parameter represents or its significance. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A floating-point value to be converted to a string.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The float value as a string. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/ScriptableEntity.cpp" line="27" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/ScriptableEntity.cpp" bodystart="27" bodyend="27"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/ScriptableEntity.cpp" line="274" column="20" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Scene/Private/ScriptableEntity.cpp" bodystart="274" bodyend="274"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

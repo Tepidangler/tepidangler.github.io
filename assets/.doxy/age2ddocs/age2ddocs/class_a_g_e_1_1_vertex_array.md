@@ -64,14 +64,14 @@ Inherited by the following classes: [AGE::OpenGLVertexArray](class_a_g_e_1_1_ope
 | virtual std::vector&lt; Ref&lt; [**VertexBuffer**](class_a_g_e_1_1_vertex_buffer.md) &gt; &gt;::const\_iterator | [**begin**](#function-begin-22) () const = 0<br> |
 | virtual std::vector&lt; Ref&lt; [**VertexBuffer**](class_a_g_e_1_1_vertex_buffer.md) &gt; &gt;::iterator | [**end**](#function-end-12) () = 0<br> |
 | virtual std::vector&lt; Ref&lt; [**VertexBuffer**](class_a_g_e_1_1_vertex_buffer.md) &gt; &gt;::const\_iterator | [**end**](#function-end-22) () const = 0<br> |
-| virtual  | [**~VertexArray**](#function-vertexarray) () <br> |
+| virtual  | [**~VertexArray**](#function-vertexarray) () <br>_Virtual destructor for the_ [_**VertexArray**_](class_a_g_e_1_1_vertex_array.md) _class._ |
 
 
 ## Public Static Functions
 
 | Type | Name |
 | ---: | :--- |
-|  Ref&lt; [**VertexArray**](class_a_g_e_1_1_vertex_array.md) &gt; | [**Create**](#function-create) () <br> |
+|  Ref&lt; [**VertexArray**](class_a_g_e_1_1_vertex_array.md) &gt; | [**Create**](#function-create) () <br>_Creates a new_ [_**VertexArray**_](class_a_g_e_1_1_vertex_array.md) _object based on the current_[_**RendererAPI**_](class_a_g_e_1_1_renderer_a_p_i.md) _._ |
 
 
 
@@ -274,12 +274,23 @@ virtual std::vector< Ref< VertexBuffer > >::const_iterator AGE::VertexArray::end
 
 ### function ~VertexArray 
 
+_Virtual destructor for the_ [_**VertexArray**_](class_a_g_e_1_1_vertex_array.md) _class._
 ```C++
 inline virtual AGE::VertexArray::~VertexArray () 
 ```
 
 
 
+This function is responsible for releasing any resources that were acquired by the object during its lifetime, such as memory or GPU resources. It does not return anything and thus has an empty return type (void).
+
+
+Virtual destructor for the [**VertexArray**](class_a_g_e_1_1_vertex_array.md) class.
+
+
+This function is responsible for releasing any resources that were acquired by the object during its lifetime, such as memory or GPU resources. It does not perform any operations on the actual data stored in the array. 
+
+
+        
 
 <hr>
 ## Public Static Functions Documentation
@@ -289,12 +300,40 @@ inline virtual AGE::VertexArray::~VertexArray ()
 
 ### function Create 
 
+_Creates a new_ [_**VertexArray**_](class_a_g_e_1_1_vertex_array.md) _object based on the current_[_**RendererAPI**_](class_a_g_e_1_1_renderer_a_p_i.md) _._
 ```C++
 static Ref< VertexArray > AGE::VertexArray::Create () 
 ```
 
 
 
+This function creates and returns a reference to a new [**VertexArray**](class_a_g_e_1_1_vertex_array.md) object, which is specific to the currently used [**RendererAPI**](class_a_g_e_1_1_renderer_a_p_i.md). If the API is not supported or unknown, it asserts false and returns nullptr.
+
+
+
+
+**Returns:**
+
+Ref&lt;VertexArray&gt; A reference to the newly created [**VertexArray**](class_a_g_e_1_1_vertex_array.md) object.
+
+
+Creates a new [**VertexArray**](class_a_g_e_1_1_vertex_array.md) based on the current [**RendererAPI**](class_a_g_e_1_1_renderer_a_p_i.md).
+
+
+This function creates and returns a reference to a new [**VertexArray**](class_a_g_e_1_1_vertex_array.md) object, which is specific to the currently used [**RendererAPI**](class_a_g_e_1_1_renderer_a_p_i.md). If no supported API is found, it asserts false and returns nullptr.
+
+
+
+
+**Returns:**
+
+Ref&lt;VertexArray&gt; A reference to the newly created [**VertexArray**](class_a_g_e_1_1_vertex_array.md). 
+
+
+
+
+
+        
 
 <hr>
 

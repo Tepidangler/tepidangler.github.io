@@ -88,17 +88,35 @@
 <tbody>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="#function-operator"><strong>operator()</strong></a> (const ax::NodeEditor::NodeId &amp; lhs, const ax::NodeEditor::NodeId rhs) const<br></td>
+<td style="text-align: left;"><a href="#function-operator"><strong>operator()</strong></a> (const ax::NodeEditor::NodeId &amp; lhs, const ax::NodeEditor::NodeId rhs) const<br><em>Compares two NodeIds for less than comparison.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-operator">function operator()</h3>
+<p><em>Compares two NodeIds for less than comparison.</em> </p>
 <pre><code class="language-C++">inline bool AGE::NodeIdLess::operator() (
     const ax::NodeEditor::NodeId &amp; lhs,
     const ax::NodeEditor::NodeId rhs
 ) const
 </code></pre>
+<p>This function compares the underlying pointers of two NodeId objects and returns true if the pointer of lhs is less than that of rhs, otherwise it returns false.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>lhs</code> The first NodeId to compare. </li>
+<li><code>rhs</code> The second NodeId to compare. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>True if the pointer of lhs is less than that of rhs, False otherwise.</p>
+<p>Compares two NodeIds for less than comparison.</p>
+<p>This function compares the underlying pointers of two NodeId objects and returns true if the left hand side is less than the right hand side, otherwise it returns false.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>lhs</code> The first NodeId to compare. </li>
+<li><code>rhs</code> The second NodeId to compare. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>True if lhs &lt; rhs, False otherwise. </p>
 <hr>
 
 <hr />

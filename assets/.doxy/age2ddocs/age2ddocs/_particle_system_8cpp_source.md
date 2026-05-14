@@ -23,7 +23,7 @@
 namespace AGE
 {
 
-    ParticleSystem::ParticleSystem(uint32_t MaxParticles)
+ParticleSystem::ParticleSystem(uint32_t MaxParticles)
         :m_PoolIndex(MaxParticles -1)
     {
         m_ParticlePool.resize(MaxParticles);
@@ -31,7 +31,7 @@ namespace AGE
 
     }
 
-    void ParticleSystem::OnUpdate(TimeStep ts)
+void ParticleSystem::OnUpdate(TimeStep ts)
     {
         for (auto& particle : m_ParticlePool)
         {
@@ -50,7 +50,8 @@ namespace AGE
         }
     }
 
-    void ParticleSystem::OnRender(const Camera& Camera, const Matrix4D& Transform)
+    "This function renders the particle system using a provided camera and transformation matrix."
+void ParticleSystem::OnRender(const Camera& Camera, const Matrix4D& Transform)
     {
         Renderer2D::BeginScene(Camera, Transform);
 
@@ -71,7 +72,7 @@ namespace AGE
         Renderer2D::EndScene();
     }
 
-    void ParticleSystem::Emit(const ParticleProps& particleProps)
+void ParticleSystem::Emit(const ParticleProps& particleProps)
     {
         Particle& particle = m_ParticlePool[m_PoolIndex];
         particle.Active = true;

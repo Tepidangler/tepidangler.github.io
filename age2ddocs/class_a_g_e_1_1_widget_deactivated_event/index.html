@@ -105,15 +105,15 @@
 <tbody>
 <tr>
 <td style="text-align: right;">uint8_t</td>
-<td style="text-align: left;"><a href="#function-getstack"><strong>GetStack</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-getstack"><strong>GetStack</strong></a> () const<br><em>This function returns the current value of the stack variable.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">Ref&lt; <a href="../class_a_g_e_1_1_scriptable_widget/"><strong>ScriptableWidget</strong></a> &gt;</td>
-<td style="text-align: left;"><a href="#function-getwidget"><strong>GetWidget</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-getwidget"><strong>GetWidget</strong></a> () const<br><em>Returns the</em> <a href="../class_a_g_e_1_1_scriptable_widget/"><em><strong>ScriptableWidget</strong></em></a> <em>object associated with this instance.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-widgetdeactivatedevent"><strong>WidgetDeactivatedEvent</strong></a> (const Ref&lt; <a href="../class_a_g_e_1_1_scriptable_widget/"><strong>ScriptableWidget</strong></a> &gt; UIWidget, uint8_t Stack) <br></td>
+<td style="text-align: left;"><a href="#function-widgetdeactivatedevent"><strong>WidgetDeactivatedEvent</strong></a> (const Ref&lt; <a href="../class_a_g_e_1_1_scriptable_widget/"><strong>ScriptableWidget</strong></a> &gt; UIWidget, uint8_t Stack) <br><em>Constructs a new instance of</em> <a href="./"><em><strong>WidgetDeactivatedEvent</strong></em></a> <em>.</em></td>
 </tr>
 </tbody>
 </table>
@@ -141,31 +141,57 @@
 </tr>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-isincategory"><strong>IsInCategory</strong></a> (EventCategory Category) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-isincategory"><strong>IsInCategory</strong></a> (EventCategory Category) <br><em>Checks if an event is in a specific category.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual std::string</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-tostring"><strong>ToString</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-tostring"><strong>ToString</strong></a> () const<br><em>Returns a string representation of the object.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-getstack">function GetStack</h3>
+<p><em>This function returns the current value of the stack variable.</em> </p>
 <pre><code class="language-C++">inline uint8_t AGE::WidgetDeactivatedEvent::GetStack () const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>uint8_t Returns the current value of the stack variable as a uint8_t type.</p>
+<p>This function returns the current value of the stack variable. </p>
+<p><strong>Returns:</strong></p>
+<p>uint8_t The current value of the stack variable. </p>
 <hr>
 
 <h3 id="function-getwidget">function GetWidget</h3>
+<p><em>Returns the</em> <a href="../class_a_g_e_1_1_scriptable_widget/"><em><strong>ScriptableWidget</strong></em></a> <em>object associated with this instance.</em></p>
 <pre><code class="language-C++">inline Ref&lt; ScriptableWidget &gt; AGE::WidgetDeactivatedEvent::GetWidget () const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A reference to the <a href="../class_a_g_e_1_1_scriptable_widget/"><strong>ScriptableWidget</strong></a> object. If no such object exists, returns an empty Ref&lt;ScriptableWidget&gt;.</p>
+<p>Returns the <a href="../class_a_g_e_1_1_scriptable_widget/"><strong>ScriptableWidget</strong></a> object associated with this instance. </p>
+<p><strong>Returns:</strong></p>
+<p>A reference to the <a href="../class_a_g_e_1_1_scriptable_widget/"><strong>ScriptableWidget</strong></a> object. If no such object exists, an empty Ref will be returned. </p>
 <hr>
 
 <h3 id="function-widgetdeactivatedevent">function WidgetDeactivatedEvent</h3>
+<p><em>Constructs a new instance of</em> <a href="./"><em><strong>WidgetDeactivatedEvent</strong></em></a> <em>.</em></p>
 <pre><code class="language-C++">inline AGE::WidgetDeactivatedEvent::WidgetDeactivatedEvent (
     const Ref&lt; ScriptableWidget &gt; UIWidget,
     uint8_t Stack
 ) 
 </code></pre>
+<p>This constructor initializes the object with the given parameters. It sets the stack level and the scriptable widget reference.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>UIWidget</code> A reference to the <a href="../class_a_g_e_1_1_scriptable_widget/"><strong>ScriptableWidget</strong></a> that is deactivating. </li>
+<li><code>Stack</code> The stack level of the deactivated widget.</li>
+</ul>
+<p>Constructs a new instance of <a href="../struct_a_g_e_1_1_widget/"><strong>Widget</strong></a> Deactivated <a href="../class_a_g_e_1_1_event/"><strong>Event</strong></a>.</p>
+<p>This constructor initializes the event with a reference to the Scriptable <a href="../struct_a_g_e_1_1_widget/"><strong>Widget</strong></a> and the stack number.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>UIWidget</code> A const reference to the Scriptable <a href="../struct_a_g_e_1_1_widget/"><strong>Widget</strong></a> that is deactivating. </li>
+<li><code>Stack</code> The stack number of the widget being deactivated. </li>
+</ul>
 <hr>
 
 <hr />

@@ -14,7 +14,7 @@
 namespace AGE
 {
     template<typename T>
-    std::pair<int, int> CSVParser::ParseFile(const std::string& FileName, std::vector<T>& OutVec)
+std::pair<int, int> CSVParser::ParseFile(const std::string& FileName, std::vector<T>& OutVec)
     {
         std::vector<T> Values;
         rapidcsv::Document Doc(FileName, rapidcsv::LabelParams(0, 0));
@@ -37,7 +37,7 @@ namespace AGE
     }
 
     template<>
-    std::pair<int, int> CSVParser::ParseFile(const std::string& FileName, std::vector<float>& OutVec)
+std::pair<int, int> CSVParser::ParseFile(const std::string& FileName, std::vector<float>& OutVec)
     {
         std::vector<float> Values;
         rapidcsv::Document Doc(FileName, rapidcsv::LabelParams(0, 0));

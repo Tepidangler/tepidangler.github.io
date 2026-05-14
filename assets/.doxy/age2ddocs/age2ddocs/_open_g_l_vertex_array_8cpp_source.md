@@ -16,7 +16,7 @@
 namespace AGE
 {
 
-    static GLenum ShaderDataTypeToOpenGLBaseType(ShaderDataType Type)
+static GLenum ShaderDataTypeToOpenGLBaseType(ShaderDataType Type)
     {
         switch ((int)Type)
         {
@@ -53,18 +53,6 @@ namespace AGE
             return GL_INT;
             break;
         case 11:
-            return GL_UNSIGNED_INT;
-            break;
-        case 12:
-            return GL_UNSIGNED_INT;
-            break;
-        case 13:
-            return GL_UNSIGNED_INT;
-            break;
-        case 14:
-            return GL_UNSIGNED_INT;
-            break;
-        case 15:
             return GL_BOOL;
             break;
         default:
@@ -73,36 +61,40 @@ namespace AGE
         }
         }
 
-        AGE_CORE_ASSERT(false, "Unknown ShaderDataType!");
+        CoreLogger::Assert(false, "Unknown ShaderDataType!");
         return 0;
     }
 
-    OpenGLVertexArray::OpenGLVertexArray()
+    COMMENT:
+CONFIDENCE: 1.0;
+
+OpenGLVertexArray::OpenGLVertexArray()
     {
         AGE_PROFILE_FUNCTION();
         glCreateVertexArrays(1, &m_ArrayID);
     }
-    OpenGLVertexArray::~OpenGLVertexArray()
+OpenGLVertexArray::~OpenGLVertexArray()
     {
         AGE_PROFILE_FUNCTION();
         glDeleteVertexArrays(1, &m_ArrayID);
         
     }
-    void OpenGLVertexArray::Bind() const
+void OpenGLVertexArray::Bind() const
     {
         AGE_PROFILE_FUNCTION();
         glBindVertexArray(m_ArrayID);
     }
-    void OpenGLVertexArray::Unbind() const
+void OpenGLVertexArray::Unbind() const
     {
         AGE_PROFILE_FUNCTION();
         glBindVertexArray(0);
         
     }
-    void OpenGLVertexArray::AddVertexBuffer(Ref<VertexBuffer>& VertexBuffer)
+    
+void OpenGLVertexArray::AddVertexBuffer(Ref<VertexBuffer>& VertexBuffer)
     {
         AGE_PROFILE_FUNCTION();
-        AGE_CORE_ASSERT(!VertexBuffer->GetLayout().GetElements().empty(), "Vertex Buffer has no layout!");
+        CoreLogger::Assert(!VertexBuffer->GetLayout().GetElements().empty(), "Vertex Buffer has no layout!");
 
         glBindVertexArray(m_ArrayID);
 
@@ -155,10 +147,6 @@ namespace AGE
             case ShaderDataType::Int2:
             case ShaderDataType::Int3:
             case ShaderDataType::Int4:
-            case ShaderDataType::UInt:
-            case ShaderDataType::UInt2:
-            case ShaderDataType::UInt3:
-            case ShaderDataType::UInt4:
             case ShaderDataType::Boolean:
             {
                 EnableVertexAttribArray(index);
@@ -173,7 +161,7 @@ namespace AGE
             }
             default:
             {
-                AGE_CORE_ASSERT(false, "Unknown Data Type");
+                CoreLogger::Assert(false, "Unknown Data Type");
                 break;
             }
             }
@@ -183,7 +171,7 @@ namespace AGE
 
         m_VertexBuffers.push_back(VertexBuffer);
     }
-    void OpenGLVertexArray::SetIndexBuffer(Ref<IndexBuffer>& IndexBuffer)
+void OpenGLVertexArray::SetIndexBuffer(Ref<IndexBuffer>& IndexBuffer)
     {
         AGE_PROFILE_FUNCTION();
         glBindVertexArray(m_ArrayID);
@@ -192,11 +180,11 @@ namespace AGE
 
         m_IndexBuffer = IndexBuffer;
     }
-    void OpenGLVertexArray::EnableVertexAttribArray(uint32_t ArrayID) const
+void OpenGLVertexArray::EnableVertexAttribArray(uint32_t ArrayID) const
     {
         glEnableVertexAttribArray(ArrayID);
     }
-    void OpenGLVertexArray::MakeVertexAttribPtr(uint32_t index, int size, uint32_t type, uint8_t normalized, int stride, const void* pointer) const
+void OpenGLVertexArray::MakeVertexAttribPtr(uint32_t index, int size, uint32_t type, uint8_t normalized, int stride, const void* pointer) const
     {
         if (type == GL_FLOAT || type == GL_INT)
         {
@@ -204,7 +192,7 @@ namespace AGE
             return;
         }
 
-        AGE_CORE_ASSERT(false, "MakeVertexAttribPtr Failed: Must be GL_FLOAT or GL_INT");
+        CoreLogger::Assert(false, "MakeVertexAttribPtr Failed: Must be GL_FLOAT or GL_INT");
     
     }
 

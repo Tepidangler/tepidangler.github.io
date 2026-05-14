@@ -89,7 +89,7 @@
 <tbody>
 <tr>
 <td style="text-align: right;">T *</td>
-<td style="text-align: left;"><a href="#function-as"><strong>As</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-as"><strong>As</strong></a> () <br><em>This function is currently not implemented and will always throw an assertion. It returns a null pointer of type T*. The purpose of this function is unknown.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
@@ -141,7 +141,7 @@
 </tr>
 <tr>
 <td style="text-align: right;">virtual</td>
-<td style="text-align: left;"><a href="#function-framebuffer"><strong>~FrameBuffer</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-framebuffer"><strong>~FrameBuffer</strong></a> () <br><em>Virtual destructor for the</em> <a href="./"><em><strong>FrameBuffer</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
@@ -156,15 +156,21 @@
 <tbody>
 <tr>
 <td style="text-align: right;">Ref&lt; <a href="./"><strong>FrameBuffer</strong></a> &gt;</td>
-<td style="text-align: left;"><a href="#function-create"><strong>Create</strong></a> (const <a href="../struct_a_g_e_1_1_frame_buffer_specification/"><strong>FrameBufferSpecification</strong></a> &amp; Spec) <br></td>
+<td style="text-align: left;"><a href="#function-create"><strong>Create</strong></a> (const <a href="../struct_a_g_e_1_1_frame_buffer_specification/"><strong>FrameBufferSpecification</strong></a> &amp; Spec) <br><em>Creates a new</em> <a href="./"><em><strong>FrameBuffer</strong></em></a> <em>based on the specified specification. The type of</em><a href="./"><em><strong>FrameBuffer</strong></em></a> <em>to create is determined by the current</em><a href="../class_a_g_e_1_1_renderer_a_p_i/"><em><strong>RendererAPI</strong></em></a> <em>in use.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-as">function As</h3>
+<p><em>This function is currently not implemented and will always throw an assertion. It returns a null pointer of type T*. The purpose of this function is unknown.</em> </p>
 <pre><code class="language-C++">template&lt;typename T&gt;
 T * AGE::FrameBuffer::As () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A null pointer of type T*</p>
+<p>This function is currently not implemented and will always throw an assertion error. It returns a null pointer of type T*. The purpose of this function is unknown.</p>
+<p><strong>Returns:</strong></p>
+<p>A null pointer of type T* </p>
 <hr>
 
 <h3 id="function-bind">function Bind</h3>
@@ -242,15 +248,33 @@ T * AGE::FrameBuffer::As ()
 <hr>
 
 <h3 id="function-framebuffer">function ~FrameBuffer</h3>
+<p><em>Virtual destructor for the</em> <a href="./"><em><strong>FrameBuffer</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">inline virtual AGE::FrameBuffer::~FrameBuffer () 
 </code></pre>
+<p>This function is responsible for releasing any resources that were acquired by the <a href="./"><strong>FrameBuffer</strong></a> object, such as memory or file handles. It does not return anything (void) and thus it doesn't need a Doxygen comment to document its return value.</p>
+<p>Virtual destructor for the <a href="./"><strong>FrameBuffer</strong></a> class.</p>
+<p>This function is responsible for releasing any resources that were acquired by the object during its lifetime, such as memory or file handles. It does not return anything and thus has an empty return type (void). </p>
 <hr>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
 <h3 id="function-create">function Create</h3>
+<p><em>Creates a new</em> <a href="./"><em><strong>FrameBuffer</strong></em></a> <em>based on the specified specification. The type of</em><a href="./"><em><strong>FrameBuffer</strong></em></a> <em>to create is determined by the current</em><a href="../class_a_g_e_1_1_renderer_a_p_i/"><em><strong>RendererAPI</strong></em></a> <em>in use.</em></p>
 <pre><code class="language-C++">static Ref&lt; FrameBuffer &gt; AGE::FrameBuffer::Create (
     const FrameBufferSpecification &amp; Spec
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Spec</code> The specification for the <a href="./"><strong>FrameBuffer</strong></a> to be created. This includes things like width, height and color attachments. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A reference to the newly created <a href="./"><strong>FrameBuffer</strong></a>. If the <a href="../class_a_g_e_1_1_renderer_a_p_i/"><strong>RendererAPI</strong></a> in use does not support a <a href="./"><strong>FrameBuffer</strong></a> of that type, nullptr is returned instead.</p>
+<p>Creates a new frame buffer based on the given specification. The type of <a href="./"><strong>FrameBuffer</strong></a> to create is determined by the current <a href="../class_a_g_e_1_1_renderer_a_p_i/"><strong>RendererAPI</strong></a> in use.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Spec</code> The specification for the new frame buffer. This includes things like width, height and color attachments. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A reference to the newly created <a href="./"><strong>FrameBuffer</strong></a>. If no suitable <a href="./"><strong>FrameBuffer</strong></a> could be created (e.g., due to unsupported <a href="../class_a_g_e_1_1_renderer_a_p_i/"><strong>RendererAPI</strong></a>), nullptr is returned instead. </p>
 <hr>
 
 <hr />

@@ -61,11 +61,11 @@ namespace AGE
 
         static void Init();
 
-        inline static Ref<spdlog::logger>& GetCoreLogger() { return s_AGECoreLogger; }
-        inline static Ref<spdlog::logger>& GetGameLogger() { return s_AGEGameLogger; }
-        inline static std::vector<char>& GetLogs() { return s_Logs; }
-        inline static std::vector<size_t>& GetOffsets() { return s_Offsets; }
-        inline static std::vector<LogType>& GetTypes() { return s_Type; }
+inline static Ref<spdlog::logger>& GetCoreLogger() { return s_AGECoreLogger; }
+inline static Ref<spdlog::logger>& GetGameLogger() { return s_AGEGameLogger; }
+inline static std::vector<char>& GetLogs() { return s_Logs; }
+inline static std::vector<size_t>& GetOffsets() { return s_Offsets; }
+inline static std::vector<LogType>& GetTypes() { return s_Type; }
 
 
     private:
@@ -82,7 +82,7 @@ namespace AGE
     namespace CoreLogger
     {
         template<typename ... Args>
-        void Trace(std::string_view fmt, Args&& ... args)
+void Trace(std::string_view fmt, Args&& ... args)
         {
             std::string Line = "[AGECORE] " + std::vformat(fmt, std::make_format_args(args...)) + "\n";
             size_t Size = Line.size();
@@ -101,7 +101,8 @@ namespace AGE
 #endif
         }
         template<typename ... Args>
-        void Info(std::string_view fmt, Args&& ... args)
+        
+void Info(std::string_view fmt, Args&& ... args)
         {
             std::string Line = "[AGECORE] " + std::vformat(fmt, std::make_format_args(args...)) + "\n";
             size_t Size = Line.size();
@@ -122,7 +123,7 @@ namespace AGE
 #endif
         }
         template<typename ... Args>
-        void Warn(std::string_view fmt, Args&& ... args)
+void Warn(std::string_view fmt, Args&& ... args)
         {
             std::string Line = "[AGECORE] " + std::vformat(fmt, std::make_format_args(args...)) + "\n";
             size_t Size = Line.size();
@@ -143,7 +144,7 @@ namespace AGE
 #endif
         }
         template<typename ... Args>
-        void Error(std::string_view fmt, Args&& ... args)
+void Error(std::string_view fmt, Args&& ... args)
         {
             std::string Line = "[AGECORE] " + std::vformat(fmt, std::make_format_args(args...)) + "\n";
             size_t Size = Line.size();
@@ -164,7 +165,7 @@ namespace AGE
 #endif
         }
         template<typename ... Args>
-        void Critical(std::string_view fmt, Args&& ... args)
+void Critical(std::string_view fmt, Args&& ... args)
         {
             std::string Line = "[AGECORE] " + std::vformat(fmt, std::make_format_args(args...)) + "\n";
             size_t Size = Line.size();
@@ -184,6 +185,41 @@ namespace AGE
             printf("%s", Line.c_str());
 #endif
         }
+#if defined(AGE_ENABLE_ASSERTS)
+        template<typename ... Args> // CoreLogger->Assert(true ==  false, "True does not equal false")
+        "This function is a critical part of debugging and should only be used when you know what you're doing."
+void Assert(bool Condition, std::string_view fmt, Args&& ... args)
+        {
+            if (!(Condition)) {
+                std::string Line = "[AGECOREASSERT] " + std::vformat(fmt, std::make_format_args(args...)) + "\n";
+                size_t Size = Line.size();
+                Log::GetCoreLogger()->critical(Line);
+                for (auto& c : Line)
+                {
+                    Log::GetLogs().push_back(c);
+
+
+                }
+                Log::GetOffsets().push_back(Log::GetOffsets().back() + Size);
+                Log::GetTypes().push_back(LogType::Critical);
+#ifdef AG_PLATFORM_WINDOWS
+                std::wstring wLine(Line.begin(), Line.end());
+                OutputDebugString(wLine.c_str());
+                __debugbreak();
+#elif defined(AG_PLATFORM_LINUX)
+                printf("%s", Line.c_str());
+    #ifdef __clang__
+                __builtin_debugtrap();
+    #else
+                __builtin_trap();
+    #endif
+#endif
+            }
+        }
+#else// Just Do Nothing
+        template<typename ... Args>
+void Assert(bool Condition, std::string_view fmt, Args&& ... args){}
+#endif
 
     }
 
@@ -191,7 +227,7 @@ namespace AGE
     {
         // GameLogger::Trace("This is a logged event {0}", 12);
         template<typename ... Args>
-        void Trace(std::string_view fmt, Args&& ... args)
+void Trace(std::string_view fmt, Args&& ... args)
         {
             std::string Line = "[AGEGAME] " + std::vformat(fmt, std::make_format_args(args...)) + "\n";
             size_t Size = Line.size();
@@ -212,7 +248,7 @@ namespace AGE
 #endif
         }
         template<typename ... Args>
-        void Info(std::string_view fmt, Args&& ... args)
+void Info(std::string_view fmt, Args&& ... args)
         {
             std::string Line = "[AGEGAME] " + std::vformat(fmt, std::make_format_args(args...)) + "\n";
             size_t Size = Line.size();
@@ -233,7 +269,7 @@ namespace AGE
 #endif
         }
         template<typename ... Args>
-        void Warn(std::string_view fmt, Args&& ... args)
+void Warn(std::string_view fmt, Args&& ... args)
         {
             std::string Line = "[AGEGAME] " + std::vformat(fmt, std::make_format_args(args...)) + "\n";
             size_t Size = Line.size();
@@ -254,7 +290,7 @@ namespace AGE
 #endif
         }
         template<typename ... Args>
-        void Error(std::string_view fmt, Args&& ... args)
+void Error(std::string_view fmt, Args&& ... args)
         {
             std::string Line = "[AGEGAME] " + std::vformat(fmt, std::make_format_args(args...)) + "\n";
             size_t Size = Line.size();
@@ -275,7 +311,8 @@ namespace AGE
 #endif
         }
         template<typename ... Args>
-        void Critical(std::string_view fmt, Args&& ... args)
+        
+void Critical(std::string_view fmt, Args&& ... args)
         {
             std::string Line = "[AGEGAME] " + std::vformat(fmt, std::make_format_args(args...)) + "\n";
             size_t Size = Line.size();
@@ -295,17 +332,45 @@ namespace AGE
             printf("%s", Line.c_str());
 #endif
         }
+#ifdef AGE_ENABLE_ASSERTS
+        template<typename ... Args>
+        "This function is used for asserting conditions in the code. If a condition fails, it logs a critical message and triggers a debug breakpoint."
+"This function serves as an assertion mechanism, checking if a certain condition is met. If not, it logs a critical message and triggers a debug breakpoint."
+void Assert(bool Condition, std::string_view fmt, Args&& ... args)
+        {
+            if (!(Condition)) {
+                std::string Line = "[AGEGAMEASSERT] " + std::vformat(fmt, std::make_format_args(args...)) + "\n";
+                size_t Size = Line.size();
+                Log::GetCoreLogger()->critical(Line);
+                for (auto& c : Line)
+                {
+                    Log::GetLogs().push_back(c);
+
+
+                }
+                Log::GetOffsets().push_back(Log::GetOffsets().back() + Size);
+                Log::GetTypes().push_back(LogType::Critical);
+#ifdef AG_PLATFORM_WINDOWS
+                std::wstring wLine(Line.begin(), Line.end());
+                OutputDebugString(wLine.c_str());
+                __debugbreak();
+#elif defined(AG_PLATFORM_LINUX)
+                printf("%s", Line.c_str());
+#ifdef __clang__
+                __builtin_debugtrap();
+#else
+                __builtin_trap();
+#endif
+#endif
+            }
+        }
+#else //Just Do Nothing
+        template<typename ... Args>
+void Assert(bool Condition, std::string_view fmt, Args&& ... args){}
+#endif
     }
 
 }
-
-#ifdef AGE_ENABLE_ASSERTS
-#define AGE_GAME_ASSERT(x, ...) {if(!(x)) {AGE::GameLogger::Critical("[AGEGAMEASSERT] Assertion Failed: {0}", __VA_ARGS__); __debugbreak();}}
-#define AGE_CORE_ASSERT(x, ...) {if(!(x)) {AGE::CoreLogger::Critical("[AGECOREASSERT] Assertion Failed: {0}", __VA_ARGS__); __debugbreak();}}
-#else
-#define AGE_GAME_ASSERT(x, ...)
-#define AGE_CORE_ASSERT(x, ...)
-#endif
 ```
 
 

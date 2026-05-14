@@ -58,8 +58,8 @@
 
 | Type | Name |
 | ---: | :--- |
-|   | [**AsepriteChunk**](#function-asepritechunk-12) () = default<br> |
-|   | [**AsepriteChunk**](#function-asepritechunk-22) (const [**AsepriteChunk**](struct_a_g_e_1_1_aseprite_chunk.md) &) = default<br> |
+|   | [**AsepriteChunk**](#function-asepritechunk-12) () = default<br>_Default constructor for_ [_**AsepriteChunk**_](struct_a_g_e_1_1_aseprite_chunk.md) _class._ |
+|   | [**AsepriteChunk**](#function-asepritechunk-22) (const [**AsepriteChunk**](struct_a_g_e_1_1_aseprite_chunk.md) &) = default<br>_Default copy constructor for the_ [_**AsepriteChunk**_](struct_a_g_e_1_1_aseprite_chunk.md) _class._ |
 
 
 
@@ -136,6 +136,7 @@ AsepriteChunkType AGE::AsepriteChunk::Type;
 
 ### function AsepriteChunk [1/2]
 
+_Default constructor for_ [_**AsepriteChunk**_](struct_a_g_e_1_1_aseprite_chunk.md) _class._
 ```C++
 AGE::AsepriteChunk::AsepriteChunk () = default
 ```
@@ -149,6 +150,7 @@ AGE::AsepriteChunk::AsepriteChunk () = default
 
 ### function AsepriteChunk [2/2]
 
+_Default copy constructor for the_ [_**AsepriteChunk**_](struct_a_g_e_1_1_aseprite_chunk.md) _class._
 ```C++
 AGE::AsepriteChunk::AsepriteChunk (
     const AsepriteChunk &
@@ -157,6 +159,20 @@ AGE::AsepriteChunk::AsepriteChunk (
 
 
 
+This function is used to create a new instance of [**AsepriteChunk**](struct_a_g_e_1_1_aseprite_chunk.md) by copying an existing one. It uses the '= default' syntax, which instructs the compiler to generate a default implementation for this member function.
+
+
+
+
+**Parameters:**
+
+
+* `other` The existing [**AsepriteChunk**](struct_a_g_e_1_1_aseprite_chunk.md) instance to copy from. 
+
+
+
+
+        
 
 <hr>
 

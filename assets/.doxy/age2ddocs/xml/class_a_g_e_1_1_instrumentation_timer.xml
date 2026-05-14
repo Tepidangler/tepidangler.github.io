@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" line="169" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" bodystart="169" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" line="344" column="12" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" bodystart="344" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_instrumentation_timer_1aa436b472bff86f326bd1560de5c82e0f" prot="private" static="no" mutable="no">
         <type>std::chrono::time_point&lt; std::chrono::steady_clock &gt;</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" line="170" column="25" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" bodystart="170" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" line="345" column="25" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" bodystart="345" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_a_g_e_1_1_instrumentation_timer_1a7553f504400b802bb1d5078c879db154" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" line="171" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" bodystart="171" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" line="346" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" bodystart="346" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -58,12 +58,32 @@
           <declname>name</declname>
         </param>
         <briefdescription>
+<para>Constructs an <ref refid="class_a_g_e_1_1_instrumentation_timer" kindref="compound">InstrumentationTimer</ref> object with a given name. </para>
         </briefdescription>
         <detaileddescription>
+<para>The constructor initializes the timer with the provided name and sets m_Stopped to false. It also records the current time point using std::chrono::steady_clock::now() and stores it in m_StartTimepoint. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string representing the name of the instrumentation timer.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Constructs an <ref refid="class_a_g_e_1_1_instrumentation_timer" kindref="compound">InstrumentationTimer</ref> object with a given name. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name to be associated with the timer.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This constructor initializes the timer with the provided name and sets m_Stopped to false, indicating that the timer is not stopped yet. It also records the current time point using std::chrono::steady_clock::now() and stores it in m_StartTimepoint. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" line="146" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" bodystart="146" bodyend="150"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" line="301" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" bodystart="301" bodyend="305"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_instrumentation_timer_1afdf2b29c131d9b972a635319ddaa539c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -72,12 +92,14 @@
         <name>~InstrumentationTimer</name>
         <qualifiedname>AGE::InstrumentationTimer::~InstrumentationTimer</qualifiedname>
         <briefdescription>
+<para>Destructor for the <ref refid="class_a_g_e_1_1_instrumentation_timer" kindref="compound">InstrumentationTimer</ref> class. Stops the timer if it has not been stopped already. </para>
         </briefdescription>
         <detaileddescription>
+<para>Destructor for the <ref refid="class_a_g_e_1_1_instrumentation_timer" kindref="compound">InstrumentationTimer</ref> class. Stops the timer if it hasn&apos;t been stopped already. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" line="152" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" bodystart="152" bodyend="156"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" line="313" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" bodystart="313" bodyend="317"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_instrumentation_timer_1a2d0ff1da3ecb406aea90bcc529554edb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -86,19 +108,28 @@
         <name>Stop</name>
         <qualifiedname>AGE::InstrumentationTimer::Stop</qualifiedname>
         <briefdescription>
+<para>Stops the timer and writes a profile to the instrumentor. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function stops the timer by capturing the current time point using <computeroutput>std::chrono::steady_clock::now()</computeroutput>, calculates the elapsed time since the start timepoint was set in microseconds, then writes this information along with other details such as the name of the timer and the ID of the thread to the instrumentor.</para>
+<para><simplesect kind="return"><para>void</para>
+</simplesect>
+Stops the timer and writes a profile to the instrumentor.</para>
+<para>This function measures the time elapsed since the start of the timer, writes this information to the <ref refid="class_a_g_e_1_1_instrumentor" kindref="compound">Instrumentor</ref>, and then resets the timer. The profile includes the name of the timer, the start time, the elapsed time, and the ID of the thread that executed the code.</para>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" line="158" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" bodystart="158" bodyend="167"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" line="333" column="6" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" bodystart="333" bodyend="342"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" line="143" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" bodystart="144" bodyend="172"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" line="286" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Debug/Public/Instrumentor.h" bodystart="287" bodyend="347"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_instrumentation_timer_1ad183986087c7f163e58004730324b2c2" prot="public" virt="non-virtual"><scope>AGE::InstrumentationTimer</scope><name>InstrumentationTimer</name></member>
       <member refid="class_a_g_e_1_1_instrumentation_timer_1ab176bb918a6b3ffce3c6d9c5e84a802e" prot="private" virt="non-virtual"><scope>AGE::InstrumentationTimer</scope><name>m_Name</name></member>

@@ -78,6 +78,21 @@
                 <h1 id="class-agescriptableentity">Class AGE::ScriptableEntity</h1>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespace_a_g_e/"><strong>AGE</strong></a> <strong>&gt;</strong> <a href="./"><strong>ScriptableEntity</strong></a></p>
 <p>Inherits the following classes: std::enable_shared_from_this&lt; ScriptableEntity &gt;</p>
+<h2 id="public-attributes">Public Attributes</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">viCOMMENT</td>
+<td style="text-align: left;"><a href="#variable-__pad0__"><strong>__pad0__</strong></a>  <br></td>
+</tr>
+</tbody>
+</table>
 <h2 id="public-functions">Public Functions</h2>
 <table>
 <thead>
@@ -93,7 +108,7 @@
 </tr>
 <tr>
 <td style="text-align: right;">T &amp;</td>
-<td style="text-align: left;"><a href="#function-addcomponent"><strong>AddComponent</strong></a> (Args &amp;&amp;... args) <br></td>
+<td style="text-align: left;"><a href="#function-addcomponent"><strong>AddComponent</strong></a> (Args &amp;&amp;... args) <br><em>This function adds a component of type T to the entity.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
@@ -105,51 +120,51 @@
 </tr>
 <tr>
 <td style="text-align: right;">T &amp;</td>
-<td style="text-align: left;"><a href="#function-getcomponent"><strong>GetComponent</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getcomponent"><strong>GetComponent</strong></a> () <br><em>Retrieves the component of type T from the entity.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;">virtual <a href="../class_a_g_e_1_1_u_u_i_d/"><strong>UUID</strong></a></td>
-<td style="text-align: left;"><a href="#function-getid"><strong>GetID</strong></a> () <br></td>
+<td style="text-align: right;">vi rtual UU ID</td>
+<td style="text-align: left;"><a href="#function-getid"><strong>GetID</strong></a> () <br><em>Returns the unique identifier of the entity.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;">virtual <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a></td>
-<td style="text-align: left;"><a href="#function-getlocation"><strong>GetLocation</strong></a> () <br></td>
+<td style="text-align: right;">rt ual <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a></td>
+<td style="text-align: left;"><a href="#function-getlocation"><strong>GetLocation</strong></a> () <br><em>Returns the location of an object in a three-dimensional space.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;">virtual std::string</td>
-<td style="text-align: left;"><a href="#function-getname"><strong>GetName</strong></a> () <br></td>
+<td style="text-align: right;">vi rtual st d::string</td>
+<td style="text-align: left;"><a href="#function-getname"><strong>GetName</strong></a> () <br><em>Returns the name of the object.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;">virtual std::string</td>
-<td style="text-align: left;"><a href="#function-getscriptableentitytype"><strong>GetScriptableEntityType</strong></a> () <br></td>
+<td style="text-align: right;">vi rtual st d::string</td>
+<td style="text-align: left;"><a href="#function-getscriptableentitytype"><strong>GetScriptableEntityType</strong></a> () <br><em>This function returns the scriptable entity type as a string.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;">virtual bool</td>
-<td style="text-align: left;"><a href="#function-ischaracter"><strong>IsCharacter</strong></a> () <br></td>
+<td style="text-align: right;">vi rtual bo ol</td>
+<td style="text-align: left;"><a href="#function-ischaracter"><strong>IsCharacter</strong></a> () <br><em>Checks whether the scriptable entity is of type "Character".</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
 <td style="text-align: left;"><a href="#function-onevent"><strong>OnEvent</strong></a> (<a href="../class_a_g_e_1_1_event/"><strong>Event</strong></a> &amp; E) <br></td>
 </tr>
 <tr>
-<td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-onhit"><strong>OnHit</strong></a> () <br></td>
+<td style="text-align: right;">vi rtual vo id</td>
+<td style="text-align: left;"><a href="#function-onhit"><strong>OnHit</strong></a> () <br><em>This function is called when an object gets hit by another object.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-onoverlapstart"><strong>OnOverlapStart</strong></a> () <br></td>
+<td style="text-align: right;">vi rtual vo id</td>
+<td style="text-align: left;"><a href="#function-onoverlapstart"><strong>OnOverlapStart</strong></a> () <br><em>This function is called when an overlap starts between two objects.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-onoverlapstop"><strong>OnOverlapStop</strong></a> () <br></td>
+<td style="text-align: right;">vi rtual vo id</td>
+<td style="text-align: left;"><a href="#function-onoverlapstop"><strong>OnOverlapStop</strong></a> () <br><em>This function is called when an overlap stops.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-setlocation"><strong>SetLocation</strong></a> (const <a href="../struct_a_g_e_1_1_vector3/"><strong>AGE::Vector3</strong></a> &amp; Location) <br></td>
+<td style="text-align: right;">vi rtual vo id</td>
+<td style="text-align: left;"><a href="#function-setlocation"><strong>SetLocation</strong></a> (const <a href="../struct_a_g_e_1_1_vector3/"><strong>AGE::Vector3</strong></a> &amp; Location) <br><em>Sets the location of an object.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;">virtual</td>
-<td style="text-align: left;"><a href="#function-scriptableentity"><strong>~ScriptableEntity</strong></a> () <br></td>
+<td style="text-align: right;">vi rtual ~S</td>
+<td style="text-align: left;"><a href="#function-criptableentity"><strong>criptableEntity</strong></a> () <br><em>Virtual destructor for the</em> <a href="./"><em><strong>ScriptableEntity</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
@@ -163,8 +178,8 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: right;">virtual <a href="../class_a_g_e_1_1_entity/"><strong>Entity</strong></a> &amp;</td>
-<td style="text-align: left;"><a href="#function-getentityhandle"><strong>GetEntityHandle</strong></a> () <br></td>
+<td style="text-align: right;">vi rtual En tity &amp;</td>
+<td style="text-align: left;"><a href="#function-getentityhandle"><strong>GetEntityHandle</strong></a> () <br><em>This function returns a reference to the entity object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
@@ -184,7 +199,7 @@
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-pushcomp"><strong>PushComp</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-pushcomp"><strong>PushComp</strong></a> () <br><em>Pushes this scriptable entity into the application's scriptable component stack.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
@@ -192,6 +207,11 @@
 </tr>
 </tbody>
 </table>
+<h2 id="public-attributes-documentation">Public Attributes Documentation</h2>
+<h3 id="variable-__pad0__">variable __pad0__</h3>
+<pre><code class="language-C++">viCOMMENT AGE::ScriptableEntity::__pad0__;
+</code></pre>
+<hr>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-addbeginplayfunctions">function AddBeginPlayFunctions</h3>
 <pre><code class="language-C++">inline virtual void AGE::ScriptableEntity::AddBeginPlayFunctions (
@@ -201,11 +221,35 @@
 <hr>
 
 <h3 id="function-addcomponent">function AddComponent</h3>
+<p><em>This function adds a component of type T to the entity.</em> </p>
 <pre><code class="language-C++">template&lt;typename T, typename ... Args&gt;
 inline T &amp; AGE::ScriptableEntity::AddComponent (
     Args &amp;&amp;... args
 ) 
 </code></pre>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>T</code> The type of the component to be added. </li>
+<li><code>Args</code> The types of any additional arguments required by the AddComponent method. </li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>args</code> Any additional arguments required by the AddComponent method. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Returns the result of calling m_Entity's AddComponent method with template parameter T and provided arguments.</p>
+<p>This function adds a component of type T to the entity. </p>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>T</code> The type of the component to be added. </li>
+<li><code>Args</code> The types of any additional arguments required by the AddComponent method. </li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>args</code> Any additional arguments required by the AddComponent method. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Returns the result of calling m_Entity's AddComponent method with template parameter T and provided arguments. </p>
 <hr>
 
 <h3 id="function-addtickfunctions">function AddTickFunctions</h3>
@@ -221,6 +265,7 @@ inline T &amp; AGE::ScriptableEntity::AddComponent (
 <hr>
 
 <h3 id="function-getcomponent">function GetComponent</h3>
+<p><em>Retrieves the component of type T from the entity.</em> </p>
 <pre><code class="language-C++">template&lt;typename T&gt;
 inline T &amp; AGE::ScriptableEntity::GetComponent () 
 </code></pre>
@@ -234,30 +279,61 @@ inline T &amp; AGE::ScriptableEntity::GetComponent ()
 </ul>
 <p><strong>Author:</strong></p>
 <p>De'Lano Wilcox </p>
+<p>This function retrieves a component of type T from the entity using the GetComponent method from the m_Entity object, which is assumed to provide this functionality. If the component exists, it returns it; otherwise, it returns a default value for type T.</p>
+<p><strong>Returns:</strong></p>
+<p>The component of type T if it exists, or a default value for type T if it does not exist.</p>
+<p>Gets the component of type T from the entity.</p>
+<p>This function retrieves a component of type T from the entity. It uses the GetComponent method from the m_Entity object, which is assumed to be an instance of some class that provides this functionality.</p>
+<p><strong>Returns:</strong></p>
+<p>The component of type T if it exists, otherwise it returns a default value for type T. </p>
 <hr>
 
 <h3 id="function-getid">function GetID</h3>
-<pre><code class="language-C++">inline virtual UUID AGE::ScriptableEntity::GetID () 
+<p><em>Returns the unique identifier of the entity.</em> </p>
+<pre><code class="language-C++">inline vi rtual UU ID AGE::ScriptableEntity::GetID () 
 </code></pre>
+<p>This function retrieves and returns the unique identifier (<a href="../class_a_g_e_1_1_u_u_i_d/"><strong>UUID</strong></a>) associated with an entity. The <a href="../class_a_g_e_1_1_u_u_i_d/"><strong>UUID</strong></a> is a universally unique identifier that is used to identify entities in a system.</p>
+<p><strong>Returns:</strong></p>
+<p>A <a href="../class_a_g_e_1_1_u_u_i_d/"><strong>UUID</strong></a> representing the identity of the entity.</p>
+<p>This function returns the ID of an entity. </p>
+<p><strong>Returns:</strong></p>
+<p>The <a href="../class_a_g_e_1_1_u_u_i_d/"><strong>UUID</strong></a> (Universally Unique Identifier) of the entity. </p>
 <hr>
 
 <h3 id="function-getlocation">function GetLocation</h3>
-<pre><code class="language-C++">inline virtual Vector3 AGE::ScriptableEntity::GetLocation () 
+<p><em>Returns the location of an object in a three-dimensional space.</em> </p>
+<pre><code class="language-C++">inline rt ual Vector3 AGE::ScriptableEntity::GetLocation () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> object representing the location of the object. If no specific location is set, it returns a default constructed one. </p>
 <hr>
 
 <h3 id="function-getname">function GetName</h3>
-<pre><code class="language-C++">inline virtual std::string AGE::ScriptableEntity::GetName () 
+<p><em>Returns the name of the object.</em> </p>
+<pre><code class="language-C++">inline vi rtual st d::string AGE::ScriptableEntity::GetName () 
 </code></pre>
+<p>This function returns a string that represents the name of the object. It is designed to be overridden in derived classes, so it will return an empty string by default.</p>
+<p><strong>Returns:</strong></p>
+<p>A std::string representing the name of the object. In this case, it will always return an empty string.</p>
+<p>This function returns the name of an object. </p>
+<p><strong>Returns:</strong></p>
+<p>A string representing the name of the object. In this case, it will always be an empty string as there is no specific name set for the object. </p>
 <hr>
 
 <h3 id="function-getscriptableentitytype">function GetScriptableEntityType</h3>
-<pre><code class="language-C++">inline virtual std::string AGE::ScriptableEntity::GetScriptableEntityType () 
+<p><em>This function returns the scriptable entity type as a string.</em> </p>
+<pre><code class="language-C++">inline vi rtual st d::string AGE::ScriptableEntity::GetScriptableEntityType () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A string representing the scriptable entity type, or "Unknown" if not known.</p>
+<p>This function returns the scriptable entity type as a string. </p>
+<p><strong>Returns:</strong></p>
+<p>A string representing the scriptable entity type, or an empty string if no specific type is set. </p>
 <hr>
 
 <h3 id="function-ischaracter">function IsCharacter</h3>
-<pre><code class="language-C++">inline virtual bool AGE::ScriptableEntity::IsCharacter () 
+<p><em>Checks whether the scriptable entity is of type "Character".</em> </p>
+<pre><code class="language-C++">inline vi rtual bo ol AGE::ScriptableEntity::IsCharacter () 
 </code></pre>
 <p><strong>Return value:</strong></p>
 <ul>
@@ -265,6 +341,13 @@ inline T &amp; AGE::ScriptableEntity::GetComponent ()
 </ul>
 <p><strong>Author:</strong></p>
 <p>De'Lano Wilcox </p>
+<p>This function compares the result of <code>GetScriptableEntityType</code> with the string literal "Character", and returns true if they match. Otherwise, it returns false.</p>
+<p><strong>Returns:</strong></p>
+<p>True if the scriptable entity type equals "Character", False otherwise.</p>
+<p>Checks whether the scriptable entity type is a character.</p>
+<p>This function compares the scriptable entity type to "Character". If they match, it returns true; otherwise, false.</p>
+<p><strong>Returns:</strong></p>
+<p>True if the scriptable entity type is "Character", false otherwise. </p>
 <hr>
 
 <h3 id="function-onevent">function OnEvent</h3>
@@ -275,35 +358,80 @@ inline T &amp; AGE::ScriptableEntity::GetComponent ()
 <hr>
 
 <h3 id="function-onhit">function OnHit</h3>
-<pre><code class="language-C++">inline virtual void AGE::ScriptableEntity::OnHit () 
+<p><em>This function is called when an object gets hit by another object.</em> </p>
+<pre><code class="language-C++">inline vi rtual vo id AGE::ScriptableEntity::OnHit () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>None</p>
+<p>This function is called when an object gets hit by another object.</p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-onoverlapstart">function OnOverlapStart</h3>
-<pre><code class="language-C++">inline virtual void AGE::ScriptableEntity::OnOverlapStart () 
+<p><em>This function is called when an overlap starts between two objects.</em> </p>
+<pre><code class="language-C++">inline vi rtual vo id AGE::ScriptableEntity::OnOverlapStart () 
 </code></pre>
+<p>The exact behavior of this function depends on the specific implementation in any derived classes. It's assumed that it will be overridden by those classes to provide their own functionality.</p>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>This function is called when an overlap starts.</p>
+<p><strong>Returns:</strong></p>
+<p>Unknown </p>
 <hr>
 
 <h3 id="function-onoverlapstop">function OnOverlapStop</h3>
-<pre><code class="language-C++">inline virtual void AGE::ScriptableEntity::OnOverlapStop () 
+<p><em>This function is called when an overlap stops.</em> </p>
+<pre><code class="language-C++">inline vi rtual vo id AGE::ScriptableEntity::OnOverlapStop () 
 </code></pre>
+<p>Detailed explanation of what this function does goes here. It should be concise and clear, explaining the purpose and behavior of the function in a way that's understandable to someone unfamiliar with the codebase.</p>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>This function is called when an overlap occurs between two objects. The exact behavior of this function is not known as it has not been implemented yet. </p>
+<p><strong>Returns:</strong></p>
+<p>Unknown </p>
 <hr>
 
 <h3 id="function-setlocation">function SetLocation</h3>
-<pre><code class="language-C++">inline virtual void AGE::ScriptableEntity::SetLocation (
+<p><em>Sets the location of an object.</em> </p>
+<pre><code class="language-C++">inline vi rtual vo id AGE::ScriptableEntity::SetLocation (
     const AGE::Vector3 &amp; Location
 ) 
 </code></pre>
+<p>This function sets the location of an object in a three-dimensional space. The location is represented by a <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> structure, which contains x, y and z coordinates.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Location</code> A const reference to an <a href="../struct_a_g_e_1_1_vector3/"><strong>AGE::Vector3</strong></a> representing the new location of the object. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Sets the location of an object.</p>
+<p>This function sets the location of an object in a 3D space. The location is represented by a <a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a> structure, which contains x, y and z coordinates.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Location</code> A const reference to an <a href="../struct_a_g_e_1_1_vector3/"><strong>AGE::Vector3</strong></a> representing the new location of the object. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Unknown </p>
 <hr>
 
-<h3 id="function-scriptableentity">function ~ScriptableEntity</h3>
-<pre><code class="language-C++">inline virtual AGE::ScriptableEntity::~ScriptableEntity () 
+<h3 id="function-criptableentity">function criptableEntity</h3>
+<p><em>Virtual destructor for the</em> <a href="./"><em><strong>ScriptableEntity</strong></em></a> <em>class.</em></p>
+<pre><code class="language-C++">inline vi rtual ~S AGE::ScriptableEntity::criptableEntity () 
 </code></pre>
+<p>This function is a virtual destructor that cleans up any resources used by an instance of the class when it's no longer needed. It does not take any parameters and returns nothing.</p>
+<p>Constructor for the CriptableEntity class. </p>
 <hr>
 <h2 id="protected-functions-documentation">Protected Functions Documentation</h2>
 <h3 id="function-getentityhandle">function GetEntityHandle</h3>
-<pre><code class="language-C++">inline virtual Entity &amp; AGE::ScriptableEntity::GetEntityHandle () 
+<p><em>This function returns a reference to the entity object.</em> </p>
+<pre><code class="language-C++">inline vi rtual En tity &amp; AGE::ScriptableEntity::GetEntityHandle () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A reference to the entity object (m_Entity).</p>
+<p>This function returns a reference to the entity object. </p>
+<p><strong>Returns:</strong></p>
+<p>A reference to the entity object (m_Entity). </p>
 <hr>
 
 <h3 id="function-onbeginplay">function OnBeginPlay</h3>
@@ -329,8 +457,12 @@ inline T &amp; AGE::ScriptableEntity::GetComponent ()
 <hr>
 
 <h3 id="function-pushcomp">function PushComp</h3>
+<p><em>Pushes this scriptable entity into the application's scriptable component stack.</em> </p>
 <pre><code class="language-C++">virtual void AGE::ScriptableEntity::PushComp () 
 </code></pre>
+<p>This function pushes the current instance of <a href="./"><strong>ScriptableEntity</strong></a> (<code>this</code>) into the stack of scriptable components in the <a href="../class_a_g_e_1_1_app/"><strong>App</strong></a> class. It does not return anything, so its return type is void.</p>
+<p>Pushes this scriptable entity into the application's scriptable component stack.</p>
+<p>This function pushes a reference to this <a href="./"><strong>ScriptableEntity</strong></a> instance onto the stack of scriptable components in the <a href="../class_a_g_e_1_1_app/"><strong>App</strong></a> class. It is used when a new scriptable object needs to be added to the system. </p>
 <hr>
 
 <h3 id="function-reset">function Reset</h3>

@@ -89,11 +89,11 @@
 <tbody>
 <tr>
 <td style="text-align: right;">T *</td>
-<td style="text-align: left;"><a href="#function-as-12"><strong>As</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-as-12"><strong>As</strong></a> () <br><em>This function is a placeholder and will always fail an assertion. It's used as a stub for future development.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"><a href="../class_a_g_e_1_1_a_g_e_sound/"><strong>AGESound</strong></a> *</td>
-<td style="text-align: left;"><a href="#function-as-22"><strong>As</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-as-22"><strong>As</strong></a> () <br><em>This function returns a pointer to the</em> <a href="../class_a_g_e_1_1_a_g_e_sound/"><em><strong>AGESound</strong></em></a> <em>object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual std::string &amp;</td>
@@ -149,7 +149,7 @@
 </tr>
 <tr>
 <td style="text-align: right;">virtual</td>
-<td style="text-align: left;"><a href="#function-audioengine"><strong>~AudioEngine</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-audioengine"><strong>~AudioEngine</strong></a> () = default<br><em>Virtual destructor for the</em> <a href="./"><em><strong>AudioEngine</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
@@ -170,15 +170,28 @@
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-as-12">function As [1/2]</h3>
+<p><em>This function is a placeholder and will always fail an assertion. It's used as a stub for future development.</em> </p>
 <pre><code class="language-C++">template&lt;typename T&gt;
 T * AGE::AudioEngine::As () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>Unknown</p>
+<p>This function is a placeholder and should not be called directly. It always asserts false with an error message indicating that the <a href="./#function-as-12"><strong>As()</strong></a> function has failed. </p>
+<p><strong>Returns:</strong></p>
+<p>Unknown </p>
 <hr>
 
 <h3 id="function-as-22">function As [2/2]</h3>
+<p><em>This function returns a pointer to the</em> <a href="../class_a_g_e_1_1_a_g_e_sound/"><em><strong>AGESound</strong></em></a> <em>object.</em></p>
 <pre><code class="language-C++">template&lt;&gt;
 AGESound * AGE::AudioEngine::As () 
 </code></pre>
+<p>The function is used to obtain an instance of <a href="../class_a_g_e_1_1_a_g_e_sound/"><strong>AGESound</strong></a> that can be cast back into its original class type using dynamic_cast. It does this by returning 'this' as a pointer to <a href="../class_a_g_e_1_1_a_g_e_sound/"><strong>AGESound</strong></a>, which allows it to be treated as if it were an instance of the <a href="../class_a_g_e_1_1_a_g_e_sound/"><strong>AGESound</strong></a> class.</p>
+<p><strong>Returns:</strong></p>
+<p>A pointer to the <a href="../class_a_g_e_1_1_a_g_e_sound/"><strong>AGESound</strong></a> object.</p>
+<p>This function returns a pointer to <a href="../class_a_g_e_1_1_a_g_e_sound/"><strong>AGESound</strong></a> object casted from the current instance of <a href="./"><strong>AudioEngine</strong></a>. </p>
+<p><strong>Returns:</strong></p>
+<p>A pointer to an <a href="../class_a_g_e_1_1_a_g_e_sound/"><strong>AGESound</strong></a> object, or nullptr if this is not an <a href="../class_a_g_e_1_1_a_g_e_sound/"><strong>AGESound</strong></a> instance. </p>
 <hr>
 
 <h3 id="function-getcurrenteventname">function GetCurrentEventName</h3>
@@ -260,8 +273,10 @@ AGESound * AGE::AudioEngine::As ()
 <hr>
 
 <h3 id="function-audioengine">function ~AudioEngine</h3>
+<p><em>Virtual destructor for the</em> <a href="./"><em><strong>AudioEngine</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">virtual AGE::AudioEngine::~AudioEngine () = default
 </code></pre>
+<p>This function is responsible for releasing any resources that were acquired by the <a href="./"><strong>AudioEngine</strong></a> instance, such as memory or file handles. It does not return anything (void) and thus it doesn't need a Doxygen comment to specify its return type. </p>
 <hr>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
 <h3 id="function-create">function Create</h3>

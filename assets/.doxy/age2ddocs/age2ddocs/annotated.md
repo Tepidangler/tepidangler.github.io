@@ -18,7 +18,7 @@ Here are the classes, structs, unions and interfaces with brief descriptions:
     * **class** [**AGEWindow**](class_a_g_e_1_1_a_g_e_window.md)     
     * **class** [**Animation**](class_a_g_e_1_1_animation.md)     
     * **struct** [**AnimationSpecification**](struct_a_g_e_1_1_animation_specification.md)     
-    * **class** [**App**](class_a_g_e_1_1_app.md)     
+    * **class** [**App**](class_a_g_e_1_1_app.md) _The main application class._     
     * **struct** [**AppConfig**](struct_a_g_e_1_1_app_config.md)     
     * **class** [**AppRenderEvent**](class_a_g_e_1_1_app_render_event.md)     
     * **class** [**AppTickEvent**](class_a_g_e_1_1_app_tick_event.md)     
@@ -79,7 +79,7 @@ Here are the classes, structs, unions and interfaces with brief descriptions:
     * **class** [**DeviceManager**](class_a_g_e_1_1_device_manager.md)     
     * **class** [**EditorCamera**](class_a_g_e_1_1_editor_camera.md)     
     * **class** [**Entity**](class_a_g_e_1_1_entity.md)     
-    * **class** [**Event**](class_a_g_e_1_1_event.md)     
+    * **class** [**Event**](class_a_g_e_1_1_event.md) _Abstract base class for an event._     
     * **class** [**EventDispatcher**](class_a_g_e_1_1_event_dispatcher.md)     
     * **class** [**FBXParser**](class_a_g_e_1_1_f_b_x_parser.md)     
     * **class** [**FileDialogs**](class_a_g_e_1_1_file_dialogs.md)     
@@ -88,7 +88,7 @@ Here are the classes, structs, unions and interfaces with brief descriptions:
     * **class** [**FrameBuffer**](class_a_g_e_1_1_frame_buffer.md)     
     * **struct** [**FrameBufferSpecification**](struct_a_g_e_1_1_frame_buffer_specification.md)     
     * **struct** [**FramebufferAttachmentSpecification**](struct_a_g_e_1_1_framebuffer_attachment_specification.md)     
-    * **class** [**FramebufferResizeEvent**](class_a_g_e_1_1_framebuffer_resize_event.md)     
+    * **class** [**FramebufferResizeEvent**](class_a_g_e_1_1_framebuffer_resize_event.md) _Represents a framebuffer resize event._     
     * **struct** [**FramebufferTextureSpecification**](struct_a_g_e_1_1_framebuffer_texture_specification.md)     
     * **namespace** [**GameLogger**](namespace_a_g_e_1_1_game_logger.md)     
     * **namespace** [**GamePad**](namespace_a_g_e_1_1_game_pad.md)     
@@ -98,13 +98,13 @@ Here are the classes, structs, unions and interfaces with brief descriptions:
     * **class** [**GraphicsContext**](class_a_g_e_1_1_graphics_context.md)     
     * **class** [**HorizontalBoxComponent**](class_a_g_e_1_1_horizontal_box_component.md)     
     * **struct** [**IDComponent**](struct_a_g_e_1_1_i_d_component.md)     
-    * **class** [**ImGuiLayer**](class_a_g_e_1_1_im_gui_layer.md)     
+    * **class** [**ImGuiLayer**](class_a_g_e_1_1_im_gui_layer.md) _This class represents the ImGui layer in a system. It is responsible for rendering and handling user interface events._     
     * **class** [**Image**](class_a_g_e_1_1_image.md)     
-    * **struct** [**ImageSpecification**](struct_a_g_e_1_1_image_specification.md)     
+    * **struct** [**ImageSpecification**](struct_a_g_e_1_1_image_specification.md) _Constructor for_ [_**ImageSpecification**_](struct_a_g_e_1_1_image_specification.md) _class._    
     * **class** [**IndexBuffer**](class_a_g_e_1_1_index_buffer.md)     
     * **class** [**IniReader**](class_a_g_e_1_1_ini_reader.md)     
     * **class** [**IniWriter**](class_a_g_e_1_1_ini_writer.md)     
-    * **class** [**Input**](class_a_g_e_1_1_input.md)     
+    * **class** [**Input**](class_a_g_e_1_1_input.md) _This class provides methods for checking the state of input devices._     
     * **struct** [**InputBinding**](struct_a_g_e_1_1_input_binding.md)     
     * **class** [**InputEvent**](class_a_g_e_1_1_input_event.md)     
     * **struct** [**InstrumentationSession**](struct_a_g_e_1_1_instrumentation_session.md)     
@@ -116,13 +116,13 @@ Here are the classes, structs, unions and interfaces with brief descriptions:
     * **class** [**JsonParser**](class_a_g_e_1_1_json_parser.md)     
     * **struct** [**KBMInputBinding**](struct_a_g_e_1_1_k_b_m_input_binding.md)     
     * **namespace** [**Key**](namespace_a_g_e_1_1_key.md)     
-    * **class** [**KeyEvent**](class_a_g_e_1_1_key_event.md)     
-    * **class** [**KeyPressedEvent**](class_a_g_e_1_1_key_pressed_event.md)     
+    * **class** [**KeyEvent**](class_a_g_e_1_1_key_event.md) _Represents a keyboard event._     
+    * **class** [**KeyPressedEvent**](class_a_g_e_1_1_key_pressed_event.md) _Returns the repeat count of a certain process or operation._     
     * **class** [**KeyReleasedEvent**](class_a_g_e_1_1_key_released_event.md)     
     * **namespace** [**KeyState**](namespace_a_g_e_1_1_key_state.md)     
-    * **class** [**KeyTypedEvent**](class_a_g_e_1_1_key_typed_event.md)     
+    * **class** [**KeyTypedEvent**](class_a_g_e_1_1_key_typed_event.md) _Represents a Key Typed_ [_**Event**_](class_a_g_e_1_1_event.md) _in the system._    
     * **class** [**Layer**](class_a_g_e_1_1_layer.md)     
-    * **class** [**LayerStack**](class_a_g_e_1_1_layer_stack.md)     
+    * **class** [**LayerStack**](class_a_g_e_1_1_layer_stack.md) _A class for managing layers in a stack-like structure._     
     * **struct** [**Line**](struct_a_g_e_1_1_line.md)     
     * **struct** [**LineProperties**](struct_a_g_e_1_1_line_properties.md) 
     * **struct** [**LineVertex**](struct_a_g_e_1_1_line_vertex.md)     
@@ -136,8 +136,8 @@ Here are the classes, structs, unions and interfaces with brief descriptions:
     * **class** [**MemoryStreamWriter**](class_a_g_e_1_1_memory_stream_writer.md)     
     * **namespace** [**Mouse**](namespace_a_g_e_1_1_mouse.md)     
     * **class** [**MouseButtonPressedEvent**](class_a_g_e_1_1_mouse_button_pressed_event.md)     
-    * **class** [**MouseButtonReleasedEvent**](class_a_g_e_1_1_mouse_button_released_event.md)     
-    * **class** [**MouseEvent**](class_a_g_e_1_1_mouse_event.md)     
+    * **class** [**MouseButtonReleasedEvent**](class_a_g_e_1_1_mouse_button_released_event.md) _Represents a mouse button released event._     
+    * **class** [**MouseEvent**](class_a_g_e_1_1_mouse_event.md) _Represents a mouse event._     
     * **class** [**MouseMovedEvent**](class_a_g_e_1_1_mouse_moved_event.md)     
     * **class** [**MouseScrolledEvent**](class_a_g_e_1_1_mouse_scrolled_event.md)     
     * **struct** [**MovementComponent**](struct_a_g_e_1_1_movement_component.md)     
@@ -146,7 +146,7 @@ Here are the classes, structs, unions and interfaces with brief descriptions:
     * **class** [**NodeEditorManager**](class_a_g_e_1_1_node_editor_manager.md)     
     * **class** [**NodeEditorWindow**](class_a_g_e_1_1_node_editor_window.md)     
     * **struct** [**NodeIdLess**](struct_a_g_e_1_1_node_id_less.md)     
-    * **class** [**OpenGLContext**](class_a_g_e_1_1_open_g_l_context.md)     
+    * **class** [**OpenGLContext**](class_a_g_e_1_1_open_g_l_context.md) _Constructor for_ [_**OpenGLContext**_](class_a_g_e_1_1_open_g_l_context.md) _. Initializes the context with a GLFW window handle._    
     * **class** [**OpenGLFrameBuffer**](class_a_g_e_1_1_open_g_l_frame_buffer.md)     
     * **class** [**OpenGLIndexBuffer**](class_a_g_e_1_1_open_g_l_index_buffer.md)     
     * **class** [**OpenGLPipeline**](class_a_g_e_1_1_open_g_l_pipeline.md)     
@@ -201,10 +201,11 @@ Here are the classes, structs, unions and interfaces with brief descriptions:
     * **class** [**SquirrelNoise**](class_a_g_e_1_1_squirrel_noise.md)     
     * **class** [**SquirrelRNG**](class_a_g_e_1_1_squirrel_r_n_g.md)     
     * **struct** [**Statistics**](struct_a_g_e_1_1_statistics.md)     
-    * **class** [**StringCopyEvent**](class_a_g_e_1_1_string_copy_event.md)     
-    * **class** [**StringPasteEvent**](class_a_g_e_1_1_string_paste_event.md)     
+    * **class** [**StringCopyEvent**](class_a_g_e_1_1_string_copy_event.md) _Represents a string copy event. This event is triggered when a string is copied to the clipboard._     
+    * **class** [**StringPasteEvent**](class_a_g_e_1_1_string_paste_event.md) _Represents a string paste event. This event is triggered when a string is pasted from the clipboard._     
     * **struct** [**StringProperties**](struct_a_g_e_1_1_string_properties.md)     
     * **class** [**SubTexture2D**](class_a_g_e_1_1_sub_texture2_d.md)     
+    * **struct** [**TMXData**](struct_a_g_e_1_1_t_m_x_data.md)     
     * **struct** [**TagComponent**](struct_a_g_e_1_1_tag_component.md)     
     * **class** [**TextBoxComponent**](class_a_g_e_1_1_text_box_component.md)     
     * **class** [**TextComponent**](class_a_g_e_1_1_text_component.md)     
@@ -212,13 +213,12 @@ Here are the classes, structs, unions and interfaces with brief descriptions:
     * **class** [**Texture**](class_a_g_e_1_1_texture.md)     
     * **class** [**Texture2D**](class_a_g_e_1_1_texture2_d.md)     
     * **struct** [**TextureSpecification**](struct_a_g_e_1_1_texture_specification.md)     
+    * **struct** [**TileMapData**](struct_a_g_e_1_1_tile_map_data.md)     
     * **class** [**TileMapImporter**](class_a_g_e_1_1_tile_map_importer.md)     
     * **class** [**TileMapManager**](class_a_g_e_1_1_tile_map_manager.md)     
     * **struct** [**TileMapRendererComponent**](struct_a_g_e_1_1_tile_map_renderer_component.md)     
+    * **struct** [**TileVertex**](struct_a_g_e_1_1_tile_vertex.md)     
     * **class** [**Tilemap**](class_a_g_e_1_1_tilemap.md)     
-    * **struct** [**TilemapProperties**](struct_a_g_e_1_1_tilemap_properties.md)     
-    * **struct** [**TilemapVertex**](struct_a_g_e_1_1_tilemap_vertex.md)     
-    * **struct** [**TilesetData**](struct_a_g_e_1_1_tileset_data.md)     
     * **class** [**TimeStep**](class_a_g_e_1_1_time_step.md)     
     * **class** [**Timer**](class_a_g_e_1_1_timer.md)     
     * **struct** [**Transform4D**](struct_a_g_e_1_1_transform4_d.md)     
@@ -250,14 +250,13 @@ Here are the classes, structs, unions and interfaces with brief descriptions:
     * **class** [**WindowLostFocusEvent**](class_a_g_e_1_1_window_lost_focus_event.md)     
     * **class** [**WindowMovedEvent**](class_a_g_e_1_1_window_moved_event.md)     
     * **struct** [**WindowProps**](struct_a_g_e_1_1_window_props.md)     
-    * **class** [**WindowResizeEvent**](class_a_g_e_1_1_window_resize_event.md)     
+    * **class** [**WindowResizeEvent**](class_a_g_e_1_1_window_resize_event.md) _Represents a window resize event._     
     * **class** [**World**](class_a_g_e_1_1_world.md)     
     * **class** [**World2D**](class_a_g_e_1_1_world2_d.md)     
     * **struct** [**\_constantBufferStruct**](struct_a_g_e_1_1__constant_buffer_struct.md)     
     * **struct** [**\_constantBufferStruct2D**](struct_a_g_e_1_1__constant_buffer_struct2_d.md)     
     * **struct** [**\_vertexPositionColor**](struct_a_g_e_1_1__vertex_position_color.md)     
     * **struct** [**\_vertexPositionColorTangent**](struct_a_g_e_1_1__vertex_position_color_tangent.md)     
-    * **struct** [**float16**](struct_a_g_e_1_1float16.md)     
 * **struct** [**Particle**](struct_a_g_e_1_1_particle_system_1_1_particle.md)     
 * **struct** [**SceneData**](struct_a_g_e_1_1_renderer_1_1_scene_data.md)     
 * **namespace** [**AK**](namespace_a_k.md)     

@@ -52,7 +52,7 @@
 
 | Type | Name |
 | ---: | :--- |
-|  int | [**main**](#function-main) (int argc, char \*\* argv) <br> |
+|  int | [**main**](#function-main) (int argc, char \*\* argv) <br>_Main function of the application. Initializes logging, creates an instance of the application, runs it and deletes it before ending the program._  |
 
 
 
@@ -88,6 +88,7 @@
 
 ### function main 
 
+_Main function of the application. Initializes logging, creates an instance of the application, runs it and deletes it before ending the program._ 
 ```C++
 int main (
     int argc,
@@ -97,6 +98,25 @@ int main (
 
 
 
+
+
+**Parameters:**
+
+
+* `argc` The number of command line arguments passed to the program. 
+* `argv` An array of pointers to the command line arguments.
+
+
+
+**Returns:**
+
+int Returns 0 upon successful execution of the application. 
+
+
+
+
+
+        
 
 <hr>
 

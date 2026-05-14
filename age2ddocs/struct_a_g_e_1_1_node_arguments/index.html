@@ -103,7 +103,7 @@
 <tbody>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-nodearguments"><strong>NodeArguments</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-nodearguments"><strong>NodeArguments</strong></a> () = default<br><em>Default constructor for</em> <a href="./"><em><strong>NodeArguments</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
@@ -117,12 +117,12 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: right;">void</td>
+<td style="text-align: right;">Deserialize function for static <a href="./"><strong>NodeArguments</strong></a> void</td>
 <td style="text-align: left;"><a href="#function-deserialize"><strong>Deserialize</strong></a> (<a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> * Serializer, <a href="./"><strong>NodeArguments</strong></a> &amp; Data) <br></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-serialize"><strong>Serialize</strong></a> (<a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> * Serializer, const <a href="./"><strong>NodeArguments</strong></a> &amp; Data) <br></td>
+<td style="text-align: left;"><a href="#function-serialize"><strong>Serialize</strong></a> (<a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> * Serializer, const <a href="./"><strong>NodeArguments</strong></a> &amp; Data) <br><em>This function is responsible for converting a</em> <a href="./"><em><strong>NodeArguments</strong></em></a> <em>object into a format that can be easily stored or transmitted. It does this by iterating over each argument in the</em><a href="./"><em><strong>NodeArguments</strong></em></a> <em>and writing its type and value to the</em><a href="../class_a_g_e_1_1_data_writer/"><em><strong>DataWriter</strong></em></a> <em>. The type of each argument is written as a byte, followed by the actual data.</em></td>
 </tr>
 </tbody>
 </table>
@@ -133,12 +133,17 @@
 <hr>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-nodearguments">function NodeArguments</h3>
+<p><em>Default constructor for</em> <a href="./"><em><strong>NodeArguments</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::NodeArguments::NodeArguments () = default
 </code></pre>
+<p>This function initializes the object with its default state. It is used to create an instance of the <a href="./"><strong>NodeArguments</strong></a> class without any arguments.</p>
+<p><strong>Returns:</strong></p>
+<p>An instance of the <a href="./"><strong>NodeArguments</strong></a> class with all members initialized to their default values.</p>
+<p>Default constructor for <a href="./"><strong>NodeArguments</strong></a> class. </p>
 <hr>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
 <h3 id="function-deserialize">function Deserialize</h3>
-<pre><code class="language-C++">static inline void AGE::NodeArguments::Deserialize (
+<pre><code class="language-C++">static inline Deserialize function for static NodeArguments void AGE::NodeArguments::Deserialize (
     DataReader * Serializer,
     NodeArguments &amp; Data
 ) 
@@ -146,11 +151,26 @@
 <hr>
 
 <h3 id="function-serialize">function Serialize</h3>
+<p><em>This function is responsible for converting a</em> <a href="./"><em><strong>NodeArguments</strong></em></a> <em>object into a format that can be easily stored or transmitted. It does this by iterating over each argument in the</em><a href="./"><em><strong>NodeArguments</strong></em></a> <em>and writing its type and value to the</em><a href="../class_a_g_e_1_1_data_writer/"><em><strong>DataWriter</strong></em></a> <em>. The type of each argument is written as a byte, followed by the actual data.</em></p>
 <pre><code class="language-C++">static inline void AGE::NodeArguments::Serialize (
     DataWriter * Serializer,
     const NodeArguments &amp; Data
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Serializer</code> A pointer to an object that can write raw bytes or strings to a storage medium. </li>
+<li><code>Data</code> An object containing the arguments to be serialized.</li>
+</ul>
+<p>This function serializes the given data into a format that can be easily stored or transmitted.</p>
+<p>The function takes in two parameters, a <a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> object and a <a href="./"><strong>NodeArguments</strong></a> object. It writes to the <a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> object based on the type of each argument in the <a href="./"><strong>NodeArguments</strong></a> object.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Serializer</code> A pointer to an instance of <a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> that will be used for writing data. </li>
+<li><code>Data</code> The arguments to serialize, stored as a <a href="./"><strong>NodeArguments</strong></a> object.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void This function does not return any value. It directly writes the serialized data into the provided <a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> object. </p>
 <hr>
 
 <hr />

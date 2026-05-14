@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Struct AGE::TilemapProperties - AGE2D Docs</title>
+    <title>Struct AGE::TileVertex - AGE2D Docs</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Struct AGE::TilemapProperties";
-        var mkdocs_page_input_path = "age2ddocs\\struct_a_g_e_1_1_tilemap_properties.md";
+        var mkdocs_page_name = "Struct AGE::TileVertex";
+        var mkdocs_page_input_path = "age2ddocs\\struct_a_g_e_1_1_tile_vertex.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -66,7 +66,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Struct AGE::TilemapProperties</li>
+      <li class="breadcrumb-item active">Struct AGE::TileVertex</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -75,8 +75,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="struct-agetilemapproperties">Struct AGE::TilemapProperties</h1>
-<p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespace_a_g_e/"><strong>AGE</strong></a> <strong>&gt;</strong> <a href="./"><strong>TilemapProperties</strong></a></p>
+                <h1 id="struct-agetilevertex">Struct AGE::TileVertex</h1>
+<p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespace_a_g_e/"><strong>AGE</strong></a> <strong>&gt;</strong> <a href="./"><strong>TileVertex</strong></a></p>
 <h2 id="public-attributes">Public Attributes</h2>
 <table>
 <thead>
@@ -88,58 +88,58 @@
 <tbody>
 <tr>
 <td style="text-align: right;"><a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a></td>
-<td style="text-align: left;"><a href="#variable-color"><strong>Color</strong></a>   = <code>{1.f,1.f,1.f,1.f}</code><br></td>
+<td style="text-align: left;"><a href="#variable-vertexcolor"><strong>VertexColor</strong></a>  <br></td>
 </tr>
 <tr>
 <td style="text-align: right;">int</td>
-<td style="text-align: left;"><a href="#variable-entityid"><strong>EntityID</strong></a>  <br></td>
+<td style="text-align: left;"><a href="#variable-vertexentityid"><strong>VertexEntityID</strong></a>   = <code>-1</code><br></td>
 </tr>
 <tr>
-<td style="text-align: right;">uint32_t</td>
-<td style="text-align: left;"><a href="#variable-numoflayers"><strong>NumofLayers</strong></a>   = <code>1</code><br></td>
+<td style="text-align: right;"><a href="../struct_a_g_e_1_1_vector3/"><strong>Vector3</strong></a></td>
+<td style="text-align: left;"><a href="#variable-vertexposition"><strong>VertexPosition</strong></a>  <br></td>
 </tr>
 <tr>
-<td style="text-align: right;">uint32_t</td>
-<td style="text-align: left;"><a href="#variable-tilesetid"><strong>TileSetID</strong></a>   = <code>0</code><br></td>
+<td style="text-align: right;"><a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a></td>
+<td style="text-align: left;"><a href="#variable-vertextexcoords"><strong>VertexTexCoords</strong></a>  <br></td>
 </tr>
 <tr>
-<td style="text-align: right;"><a href="../struct_a_g_e_1_1_matrix4_d/"><strong>Matrix4D</strong></a></td>
-<td style="text-align: left;"><a href="#variable-transform"><strong>Transform</strong></a>  <br></td>
+<td style="text-align: right;">float</td>
+<td style="text-align: left;"><a href="#variable-vertextexid"><strong>VertexTexID</strong></a>  <br></td>
 </tr>
 <tr>
-<td style="text-align: right;">std::map&lt; uint32_t, std::vector&lt; <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> * &gt; &gt;</td>
-<td style="text-align: left;"><a href="#variable-uv"><strong>UV</strong></a>  <br></td>
+<td style="text-align: right;">float</td>
+<td style="text-align: left;"><a href="#variable-vertextilingfactor"><strong>VertexTilingFactor</strong></a>  <br></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-attributes-documentation">Public Attributes Documentation</h2>
-<h3 id="variable-color">variable Color</h3>
-<pre><code class="language-C++">Vector4 AGE::TilemapProperties::Color;
+<h3 id="variable-vertexcolor">variable VertexColor</h3>
+<pre><code class="language-C++">Vector4 AGE::TileVertex::VertexColor;
 </code></pre>
 <hr>
 
-<h3 id="variable-entityid">variable EntityID</h3>
-<pre><code class="language-C++">int AGE::TilemapProperties::EntityID;
+<h3 id="variable-vertexentityid">variable VertexEntityID</h3>
+<pre><code class="language-C++">int AGE::TileVertex::VertexEntityID;
 </code></pre>
 <hr>
 
-<h3 id="variable-numoflayers">variable NumofLayers</h3>
-<pre><code class="language-C++">uint32_t AGE::TilemapProperties::NumofLayers;
+<h3 id="variable-vertexposition">variable VertexPosition</h3>
+<pre><code class="language-C++">Vector3 AGE::TileVertex::VertexPosition;
 </code></pre>
 <hr>
 
-<h3 id="variable-tilesetid">variable TileSetID</h3>
-<pre><code class="language-C++">uint32_t AGE::TilemapProperties::TileSetID;
+<h3 id="variable-vertextexcoords">variable VertexTexCoords</h3>
+<pre><code class="language-C++">Vector2 AGE::TileVertex::VertexTexCoords;
 </code></pre>
 <hr>
 
-<h3 id="variable-transform">variable Transform</h3>
-<pre><code class="language-C++">Matrix4D AGE::TilemapProperties::Transform;
+<h3 id="variable-vertextexid">variable VertexTexID</h3>
+<pre><code class="language-C++">float AGE::TileVertex::VertexTexID;
 </code></pre>
 <hr>
 
-<h3 id="variable-uv">variable UV</h3>
-<pre><code class="language-C++">std::map&lt;uint32_t, std::vector&lt;Vector2*&gt; &gt; AGE::TilemapProperties::UV;
+<h3 id="variable-vertextilingfactor">variable VertexTilingFactor</h3>
+<pre><code class="language-C++">float AGE::TileVertex::VertexTilingFactor;
 </code></pre>
 <hr>
 

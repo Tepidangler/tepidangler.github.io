@@ -6,8 +6,6 @@
 ## a
 
 * **AGE\_SOUNDBANK\_H** ([**Soundbank.h**](_soundbank_8h.md))
-* **AGE\_CORE\_ASSERT** ([**Log.h**](_log_8h.md))
-* **AGE\_GAME\_ASSERT** ([**Log.h**](_log_8h.md))
 * **AGE2D\_POINTERS\_H** ([**Pointers.h**](_pointers_8h.md))
 * **AGE\_FUNC\_SIG** ([**Instrumentor.h**](_instrumentor_8h.md))
 * **AGE\_PROFILE** ([**Instrumentor.h**](_instrumentor_8h.md))

@@ -36,9 +36,9 @@ namespace AGE
         void OnAttach();
         void OnImGuiRender(TimeStep DeltaTime);
 
-        const std::string& GetWindowName() const { return m_Name; }
+const std::string& GetWindowName() const { return m_Name; }
 
-        static void Serialize(DataWriter* Serializer, const NodeEditorWindow& Data)
+static void Serialize(DataWriter* Serializer, const NodeEditorWindow& Data)
         {
             std::vector<AGENode> Nodes(Data.m_Nodes.size());
             std::vector<AGENodeLink> Links(Data.m_Links.size());
@@ -58,7 +58,9 @@ namespace AGE
             Serializer->WriteRaw<bool>(Data.m_ShowOrdinals);
         }
 
-        static void Deserialize(DataReader* Serializer, NodeEditorWindow& Data)
+        
+
+static void Deserialize(DataReader* Serializer, NodeEditorWindow& Data)
         {
             uint64_t ID;
             std::vector<AGENode> Nodes;

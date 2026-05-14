@@ -78,6 +78,25 @@
                 <h1 id="struct-agematrix4d">Struct AGE::Matrix4D</h1>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespace_a_g_e/"><strong>AGE</strong></a> <strong>&gt;</strong> <a href="./"><strong>Matrix4D</strong></a></p>
 <p>Inherited by the following classes: <a href="../struct_a_g_e_1_1_transform4_d/">AGE::Transform4D</a></p>
+<h2 id="public-attributes">Public Attributes</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">COMMENT</td>
+<td style="text-align: left;"><a href="#variable-__pad0__"><strong>__pad0__</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">COMMENT</td>
+<td style="text-align: left;"><a href="#variable-__pad1__"><strong>__pad1__</strong></a>  <br></td>
+</tr>
+</tbody>
+</table>
 <h2 id="public-functions">Public Functions</h2>
 <table>
 <thead>
@@ -89,7 +108,7 @@
 <tbody>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-matrix4d-17"><strong>Matrix4D</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-matrix4d-17"><strong>Matrix4D</strong></a> () = default<br><em>Default constructor for the</em> <a href="./"><em><strong>Matrix4D</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
@@ -97,7 +116,7 @@
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-matrix4d-37"><strong>Matrix4D</strong></a> (float f) <br></td>
+<td style="text-align: left;"><a href="#function-matrix4d-37"><strong>Matrix4D</strong></a> (float f) <br><em>Constructs a 4x4 matrix with the given value on the diagonal and zeros elsewhere.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
@@ -105,39 +124,39 @@
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-matrix4d-57"><strong>Matrix4D</strong></a> (const <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> &amp; a, const <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> &amp; b, const <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> &amp; c, const <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> &amp; d) <br></td>
+<td style="text-align: left;"><a href="#function-matrix4d-57"><strong>Matrix4D</strong></a> (const <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> &amp; a, const <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> &amp; b, const <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> &amp; c, const <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> &amp; d) <br><em>Constructs a 4D Matrix from four</em> <a href="../struct_a_g_e_1_1_vector4/"><em><strong>Vector4</strong></em></a> <em>instances.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-matrix4d-67"><strong>Matrix4D</strong></a> (void * Ptr) <br></td>
+<td style="text-align: left;"><a href="#function-matrix4d-67"><strong>Matrix4D</strong></a> (void * Ptr) <br><em>Constructs a</em> <a href="./"><em><strong>Matrix4D</strong></em></a> <em>object from an existing pointer to another</em><a href="./"><em><strong>Matrix4D</strong></em></a> <em>.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-matrix4d-77"><strong>Matrix4D</strong></a> (const <a href="./"><strong>Matrix4D</strong></a> &amp; other) = default<br></td>
+<td style="text-align: left;"><a href="#function-matrix4d-77"><strong>Matrix4D</strong></a> (const <a href="./"><strong>Matrix4D</strong></a> &amp; other) = default<br><em>Copy constructor for the</em> <a href="./"><em><strong>Matrix4D</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">glm::mat4</td>
-<td style="text-align: left;"><a href="#function-toglm-12"><strong>ToGLM</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-toglm-12"><strong>ToGLM</strong></a> () <br><em>Converts the current matrix to a GLM mat4.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">glm::mat4</td>
-<td style="text-align: left;"><a href="#function-toglm-22"><strong>ToGLM</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-toglm-22"><strong>ToGLM</strong></a> () const<br><em>Converts the matrix to a GLM mat4.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">float &amp;</td>
-<td style="text-align: left;"><a href="#function-operator"><strong>operator()</strong></a> (int i, int j) <br></td>
+<td style="text-align: left;"><a href="#function-operator"><strong>operator()</strong></a> (int i, int j) <br><em>Accesses the element at position (i, j) in a two-dimensional array.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">const float &amp;</td>
-<td style="text-align: left;"><a href="#function-operator_1"><strong>operator()</strong></a> (int i, int j) const<br></td>
+<td style="text-align: left;"><a href="#function-operator_1"><strong>operator()</strong></a> (int i, int j) const<br><em>This function returns a constant reference to the element at position (i, j) in the matrix.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"><a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> &amp;</td>
-<td style="text-align: left;"><a href="#function-operator_2"><strong>operator[]</strong></a> (int j) <br></td>
+<td style="text-align: left;"><a href="#function-operator_2"><strong>operator[]</strong></a> (int j) <br><em>This function returns a reference to the</em> <a href="../struct_a_g_e_1_1_vector4/"><em><strong>Vector4</strong></em></a> <em>object at index 'j' in the array.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">const <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> &amp;</td>
-<td style="text-align: left;"><a href="#function-operator_3"><strong>operator[]</strong></a> (int j) const<br></td>
+<td style="text-align: left;"><a href="#function-operator_3"><strong>operator[]</strong></a> (int j) const<br><em>This function returns a constant reference to the</em> <a href="../struct_a_g_e_1_1_vector4/"><em><strong>Vector4</strong></em></a> <em>at index 'j' in the array.</em></td>
 </tr>
 </tbody>
 </table>
@@ -156,10 +175,24 @@
 </tr>
 </tbody>
 </table>
+<h2 id="public-attributes-documentation">Public Attributes Documentation</h2>
+<h3 id="variable-__pad0__">variable __pad0__</h3>
+<pre><code class="language-C++">COMMENT AGE::Matrix4D::__pad0__;
+</code></pre>
+<hr>
+
+<h3 id="variable-__pad1__">variable __pad1__</h3>
+<pre><code class="language-C++">COMMENT AGE::Matrix4D::__pad1__;
+</code></pre>
+<hr>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-matrix4d-17">function Matrix4D [1/7]</h3>
+<p><em>Default constructor for the</em> <a href="./"><em><strong>Matrix4D</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::Matrix4D::Matrix4D () = default
 </code></pre>
+<p>Initializes a new instance of the <a href="./"><strong>Matrix4D</strong></a> class with all elements set to zero.</p>
+<p>Default constructor for the <a href="./"><strong>Matrix4D</strong></a> class.</p>
+<p>Initializes a new instance of the <a href="./"><strong>Matrix4D</strong></a> class with all elements set to zero. </p>
 <hr>
 
 <h3 id="function-matrix4d-27">function Matrix4D [2/7]</h3>
@@ -185,10 +218,21 @@
 <hr>
 
 <h3 id="function-matrix4d-37">function Matrix4D [3/7]</h3>
+<p><em>Constructs a 4x4 matrix with the given value on the diagonal and zeros elsewhere.</em> </p>
 <pre><code class="language-C++">inline AGE::Matrix4D::Matrix4D (
     float f
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>f</code> The value to be placed on the diagonal of the matrix.</li>
+</ul>
+<p>This constructor initializes a 4x4 matrix where all elements are zero except for the main diagonal, which contains 'f'.</p>
+<p>Constructs a 4x4 matrix with the given value on the diagonal and zero elsewhere.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>f</code> The value to be placed on the diagonal of the matrix. </li>
+</ul>
 <hr>
 
 <h3 id="function-matrix4d-47">function Matrix4D [4/7]</h3>
@@ -199,6 +243,7 @@
 <hr>
 
 <h3 id="function-matrix4d-57">function Matrix4D [5/7]</h3>
+<p><em>Constructs a 4D Matrix from four</em> <a href="../struct_a_g_e_1_1_vector4/"><em><strong>Vector4</strong></em></a> <em>instances.</em></p>
 <pre><code class="language-C++">inline AGE::Matrix4D::Matrix4D (
     const Vector4 &amp; a,
     const Vector4 &amp; b,
@@ -206,60 +251,184 @@
     const Vector4 &amp; d
 ) 
 </code></pre>
+<p>The function takes in four <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> instances, each representing one row of the matrix. It assigns the x, y, z and w components of these vectors to the corresponding elements in the matrix.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>a</code> First <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> instance representing the first row of the matrix. </li>
+<li><code>b</code> Second <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> instance representing the second row of the matrix. </li>
+<li><code>c</code> Third <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> instance representing the third row of the matrix. </li>
+<li><code>d</code> Fourth <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> instance representing the fourth row of the matrix.</li>
+</ul>
+<p>Constructs a 4D matrix using four vectors.</p>
+<p>The constructor initializes the 4x4 matrix with values from four <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> objects, each representing one row of the matrix.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>a</code> First vector to initialize the first row of the matrix. </li>
+<li><code>b</code> Second vector to initialize the second row of the matrix. </li>
+<li><code>c</code> Third vector to initialize the third row of the matrix. </li>
+<li><code>d</code> Fourth vector to initialize the fourth row of the matrix. </li>
+</ul>
 <hr>
 
 <h3 id="function-matrix4d-67">function Matrix4D [6/7]</h3>
+<p><em>Constructs a</em> <a href="./"><em><strong>Matrix4D</strong></em></a> <em>object from an existing pointer to another</em><a href="./"><em><strong>Matrix4D</strong></em></a> <em>.</em></p>
 <pre><code class="language-C++">inline AGE::Matrix4D::Matrix4D (
     void * Ptr
 ) 
 </code></pre>
+<p>This constructor creates a new <a href="./"><strong>Matrix4D</strong></a> object that is initialized with the values of the <a href="./"><strong>Matrix4D</strong></a> pointed to by Ptr. The matrix elements are copied one-by-one, ensuring accurate copying of all data.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Ptr</code> A pointer to an existing <a href="./"><strong>Matrix4D</strong></a> object.</li>
+</ul>
+<p>Constructs a <a href="./"><strong>Matrix4D</strong></a> object from a void pointer.</p>
+<p>This function takes in a void pointer to an existing <a href="./"><strong>Matrix4D</strong></a> object, and copies its values into the new <a href="./"><strong>Matrix4D</strong></a> object. The input is expected to be of type <code>void*</code> which can hold any data type but should point to a valid <a href="./"><strong>Matrix4D</strong></a> object. If the provided pointer does not point to a valid <a href="./"><strong>Matrix4D</strong></a> object, the behavior is undefined.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Ptr</code> A void pointer to an existing <a href="./"><strong>Matrix4D</strong></a> object. </li>
+</ul>
 <hr>
 
 <h3 id="function-matrix4d-77">function Matrix4D [7/7]</h3>
+<p><em>Copy constructor for the</em> <a href="./"><em><strong>Matrix4D</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::Matrix4D::Matrix4D (
     const Matrix4D &amp; other
 ) = default
 </code></pre>
+<p>This function creates a new instance of the <a href="./"><strong>Matrix4D</strong></a> class by copying all data from another existing <a href="./"><strong>Matrix4D</strong></a> object.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>other</code> The <a href="./"><strong>Matrix4D</strong></a> object to copy from.</li>
+</ul>
+<p>Copy constructor for a 4x4 matrix class.</p>
+<p>This function creates a deep copy of the input matrix, copying all elements to the newly created object.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>other</code> The <a href="./"><strong>Matrix4D</strong></a> instance to be copied. </li>
+</ul>
 <hr>
 
 <h3 id="function-toglm-12">function ToGLM [1/2]</h3>
+<p><em>Converts the current matrix to a GLM mat4.</em> </p>
 <pre><code class="language-C++">inline glm::mat4 AGE::Matrix4D::ToGLM () 
 </code></pre>
+<p>This function converts the current matrix into a glm::mat4 by directly copying its values into the new object. The order of elements is as follows:
+* n[0][0] through n[0][3]
+* n[1][0] through n[1][3]
+* n[2][0] through n[2][3]
+* n[3][0] through n[3][3]</p>
+<p><strong>Returns:</strong></p>
+<p>glm::mat4 The converted matrix.</p>
+<p>Converts the current matrix to a GLM mat4.</p>
+<p>This function converts the current matrix into a glm::mat4 by directly copying each element from the original matrix to the new one. The resulting matrix will have the same values as the original, but it is in the format used by GLM (OpenGL Mathematics).</p>
+<p><strong>Returns:</strong></p>
+<p>A glm::mat4 containing the same data as the current matrix. </p>
 <hr>
 
 <h3 id="function-toglm-22">function ToGLM [2/2]</h3>
+<p><em>Converts the matrix to a GLM mat4.</em> </p>
 <pre><code class="language-C++">inline glm::mat4 AGE::Matrix4D::ToGLM () const
 </code></pre>
+<p>This function converts the current matrix into a glm::mat4 by directly copying each element from the original matrix to the new one. The order of elements is maintained in row-major order (i.e., n[0][0] through n[3][3]).</p>
+<p><strong>Returns:</strong></p>
+<p>A glm::mat4 with the same values as this matrix, but in a format compatible with GLM.</p>
+<p>Converts the matrix to a GLM mat4.</p>
+<p>This function converts the current matrix into a glm::mat4 by directly copying each element from the original matrix to the new one. The order of elements is as follows: [0][0], [0][1], [0][2], [0][3], [1][0], [1][1], [1][2], [1][3], [2][0], [2][1], [2][2], [2][3], [3][0], [3][1], [3][2], [3][3].</p>
+<p><strong>Returns:</strong></p>
+<p>glm::mat4 The converted matrix. </p>
 <hr>
 
 <h3 id="function-operator">function operator()</h3>
+<p><em>Accesses the element at position (i, j) in a two-dimensional array.</em> </p>
 <pre><code class="language-C++">inline float &amp; AGE::Matrix4D::operator() (
     int i,
     int j
 ) 
 </code></pre>
+<p>This function allows for accessing and modifying elements of a two-dimensional array using the subscript operator syntax. The indices i and j specify the location of the desired element within the array.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>i</code> The first index, representing the row in the two-dimensional array. </li>
+<li><code>j</code> The second index, representing the column in the two-dimensional array.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A reference to the float value at position (i, j) in the array.</p>
+<p>Accesses an element in the matrix using two indices.</p>
+<p>This function allows access to a specific element in the matrix by providing two indices, i and j. It returns a reference to this element. The returned value can be used for reading or writing the value of the specified element.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>i</code> The first index. Must be within the range [0, size1). </li>
+<li><code>j</code> The second index. Must be within the range [0, size2).</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A reference to the matrix element at position (i,j). </p>
 <hr>
 
 <h3 id="function-operator_1">function operator()</h3>
+<p><em>This function returns a constant reference to the element at position (i, j) in the matrix.</em> </p>
 <pre><code class="language-C++">inline const float &amp; AGE::Matrix4D::operator() (
     int i,
     int j
 ) const
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>i</code> The row index of the element to return. </li>
+<li><code>j</code> The column index of the element to return. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A constant reference to the element at position (i, j).</p>
+<p>Access the element at position (i, j) in a two-dimensional array.</p>
+<p>This function allows for constant access to an element at position (i, j) in a 2D array. The indices i and j should be within the valid range of the array.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>i</code> The row index of the element to access. </li>
+<li><code>j</code> The column index of the element to access. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A constant reference to the accessed element. </p>
 <hr>
 
 <h3 id="function-operator_2">function operator[]</h3>
+<p><em>This function returns a reference to the</em> <a href="../struct_a_g_e_1_1_vector4/"><em><strong>Vector4</strong></em></a> <em>object at index 'j' in the array.</em></p>
 <pre><code class="language-C++">inline Vector4 &amp; AGE::Matrix4D::operator[] (
     int j
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>j</code> The index of the <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> object in the array. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A reference to the <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> object at index 'j'.</p>
+<p>This function returns a reference to the <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> object at index 'j' in the array.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>j</code> The index of the <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> object in the array. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A reference to the <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> object at index 'j'. </p>
 <hr>
 
 <h3 id="function-operator_3">function operator[]</h3>
+<p><em>This function returns a constant reference to the</em> <a href="../struct_a_g_e_1_1_vector4/"><em><strong>Vector4</strong></em></a> <em>at index 'j' in the array.</em></p>
 <pre><code class="language-C++">inline const Vector4 &amp; AGE::Matrix4D::operator[] (
     int j
 ) const
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>j</code> The index of the <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> in the array. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A constant reference to the <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> at index 'j'.</p>
+<p>This function returns a constant reference to the <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> at index 'j' in the array.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>j</code> The index of the <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> element to return. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A constant reference to the <a href="../struct_a_g_e_1_1_vector4/"><strong>Vector4</strong></a> at index 'j'. </p>
 <hr>
 <h2 id="protected-attributes-documentation">Protected Attributes Documentation</h2>
 <h3 id="variable-n">variable n</h3>

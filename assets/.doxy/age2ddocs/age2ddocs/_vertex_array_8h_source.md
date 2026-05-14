@@ -18,7 +18,7 @@ namespace AGE
     {
     public:
         
-        virtual ~VertexArray() {};
+virtual ~VertexArray() {};
 
         virtual void Bind() const = 0;
 

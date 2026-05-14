@@ -3,6 +3,7 @@
   <compounddef id="class_a_g_e_1_1_key_typed_event" kind="class" language="C++" prot="public">
     <compoundname>AGE::KeyTypedEvent</compoundname>
     <basecompoundref refid="class_a_g_e_1_1_key_event" prot="public" virt="non-virtual">AGE::KeyEvent</basecompoundref>
+    <includes local="no">KeyEvent.h</includes>
     <sectiondef kind="public-func">
       <memberdef kind="function" id="class_a_g_e_1_1_key_typed_event_1af6500d70ef6b4be959193d13ad8e818b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -20,7 +21,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/KeyEvent.h" line="64" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/KeyEvent.h" bodystart="64" bodyend="65"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/KeyEvent.h" line="138" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/KeyEvent.h" bodystart="138" bodyend="139"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_key_typed_event_1a54a808dbe8ff99bcae1a92df92649e98" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type>std::string</type>
@@ -30,17 +31,33 @@
         <qualifiedname>AGE::KeyTypedEvent::ToString</qualifiedname>
         <reimplements refid="class_a_g_e_1_1_event_1abb5a1a933883fb8fb99999523e8805a8">ToString</reimplements>
         <briefdescription>
+<para>Converts the event into a string format. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function converts the <ref refid="class_a_g_e_1_1_key_typed_event" kindref="compound">KeyTypedEvent</ref> object into a string format that includes the key code of the event. The resulting string is returned by this method.</para>
+<para><simplesect kind="return"><para>A string representation of the <ref refid="class_a_g_e_1_1_key_typed_event" kindref="compound">KeyTypedEvent</ref> object, including the key code.</para>
+</simplesect>
+Converts the event to a string representation.</para>
+<para>This function converts the <ref refid="class_a_g_e_1_1_key_typed_event" kindref="compound">KeyTypedEvent</ref> into a string format that includes the key code of the event. The resulting string is returned by this method.</para>
+<para><simplesect kind="return"><para>A string in the format &quot;KeyTypedEvent: &lt;key_code&gt;&quot;. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/KeyEvent.h" line="67" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/KeyEvent.h" bodystart="67" bodyend="72"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/KeyEvent.h" line="157" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/KeyEvent.h" bodystart="157" bodyend="162"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>Represents a Key Typed <ref refid="class_a_g_e_1_1_event" kindref="compound">Event</ref> in the system. </para>
     </briefdescription>
     <detaileddescription>
+<para>This class extends the base <ref refid="class_a_g_e_1_1_key_event" kindref="compound">KeyEvent</ref> class and represents an event where a key has been typed into the system. It provides a method to convert this event into a string representation.</para>
+<para>Converts the event into a string format.</para>
+<para>This function converts the <ref refid="class_a_g_e_1_1_key_typed_event" kindref="compound">KeyTypedEvent</ref> object into a string format that includes the key code of the event. The resulting string is returned by this method.</para>
+<para><simplesect kind="return"><para>A string representation of the <ref refid="class_a_g_e_1_1_key_typed_event" kindref="compound">KeyTypedEvent</ref> object, including the key code. </para>
+</simplesect>
+</para>
     </detaileddescription>
     <inheritancegraph>
       <node id="3">
@@ -78,7 +95,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/KeyEvent.h" line="61" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/KeyEvent.h" bodystart="62" bodyend="75"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/KeyEvent.h" line="135" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Events/Public/KeyEvent.h" bodystart="136" bodyend="165"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_event_1ae76fb834a0ee69601539da677f1333fa" prot="public" virt="pure-virtual"><scope>AGE::KeyTypedEvent</scope><name>GetCategoryFlags</name></member>
       <member refid="class_a_g_e_1_1_event_1a4cfb95332801a921e9449a03a34b87b0" prot="public" virt="pure-virtual"><scope>AGE::KeyTypedEvent</scope><name>GetEventType</name></member>

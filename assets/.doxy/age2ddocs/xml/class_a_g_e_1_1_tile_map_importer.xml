@@ -10,12 +10,13 @@
         <name>TileMapImporter</name>
         <qualifiedname>AGE::TileMapImporter::TileMapImporter</qualifiedname>
         <briefdescription>
+<para>Default constructor for the <ref refid="class_a_g_e_1_1_tile_map_importer" kindref="compound">TileMapImporter</ref> class. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/TileMapImporter.h" line="12" column="1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/TileMapImporter.h" line="15" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_tile_map_importer_1af6a71a125ae902f9912e9623c1475023" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -27,12 +28,25 @@
           <type>const <ref refid="class_a_g_e_1_1_tile_map_importer" kindref="compound">TileMapImporter</ref> &amp;</type>
         </param>
         <briefdescription>
+<para>This function is a copy constructor for the <ref refid="class_a_g_e_1_1_tile_map_importer" kindref="compound">TileMapImporter</ref> class and it has been explicitly deleted to prevent copying of objects. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The object to be copied.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>No return value as this function is declared &apos;= delete&apos;. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/TileMapImporter.h" line="13" column="1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/TileMapImporter.h" line="23" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_tile_map_importer_1a402c9bd59965d3566c205eea44087929" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -41,12 +55,14 @@
         <name>~TileMapImporter</name>
         <qualifiedname>AGE::TileMapImporter::~TileMapImporter</qualifiedname>
         <briefdescription>
+<para>Destructor for the <ref refid="class_a_g_e_1_1_tile_map_importer" kindref="compound">TileMapImporter</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is responsible for releasing any resources that were acquired during the lifetime of an instance of this class, such as memory or file handles. It does not perform any operations on the actual data contained within the object itself. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/TileMapImporter.h" line="14" column="1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/TileMapImporter.h" line="29" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_a_g_e_1_1_tile_map_importer_1ab87c08a90ab039237b562eb44aa30e27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>tmx_map *</type>
@@ -59,19 +75,33 @@
           <declname>FilePath</declname>
         </param>
         <briefdescription>
+<para>Import a tile map from the given file path. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function attempts to load a tmx_map object from the provided file path. If the file path is empty or if there&apos;s an issue with loading the file, it returns nullptr. Otherwise, it logs that the map was loaded successfully and then returns the map.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FilePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path of the tile map file to load. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pointer to a tmx_map object representing the loaded tile map or nullptr if there&apos;s an issue with loading the file. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/TileMapImporter.h" line="16" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Private/TileMapImporter.cpp" bodystart="13" bodyend="28"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/TileMapImporter.h" line="31" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Private/TileMapImporter.cpp" bodystart="21" bodyend="36"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/TileMapImporter.h" line="8" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/TileMapImporter.h" bodystart="9" bodyend="19"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/TileMapImporter.h" line="8" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/TileMap/Public/TileMapImporter.h" bodystart="9" bodyend="34"/>
     <listofallmembers>
       <member refid="class_a_g_e_1_1_tile_map_importer_1ab87c08a90ab039237b562eb44aa30e27" prot="public" virt="non-virtual"><scope>AGE::TileMapImporter</scope><name>ImportMap</name></member>
       <member refid="class_a_g_e_1_1_tile_map_importer_1a08affe1a400e4250376ebf523a4dde00" prot="public" virt="non-virtual"><scope>AGE::TileMapImporter</scope><name>TileMapImporter</name></member>

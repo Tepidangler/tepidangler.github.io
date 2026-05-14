@@ -8,8 +8,9 @@
 
 
 
+_Represents a mouse event._ [More...](#detailed-description)
 
-
+* `#include <MouseEvent.h>`
 
 
 
@@ -92,8 +93,8 @@ See [AGE::Event](class_a_g_e_1_1_event.md)
 | virtual int | [**GetCategoryFlags**](class_a_g_e_1_1_event.md#function-getcategoryflags) () const = 0<br> |
 | virtual EventType | [**GetEventType**](class_a_g_e_1_1_event.md#function-geteventtype) () const = 0<br> |
 | virtual const char \* | [**GetName**](class_a_g_e_1_1_event.md#function-getname) () const = 0<br> |
-|  bool | [**IsInCategory**](class_a_g_e_1_1_event.md#function-isincategory) (EventCategory Category) <br> |
-| virtual std::string | [**ToString**](class_a_g_e_1_1_event.md#function-tostring) () const<br> |
+|  bool | [**IsInCategory**](class_a_g_e_1_1_event.md#function-isincategory) (EventCategory Category) <br>_Checks if an event is in a specific category._  |
+| virtual std::string | [**ToString**](class_a_g_e_1_1_event.md#function-tostring) () const<br>_Returns a string representation of the object._  |
 
 
 
@@ -154,8 +155,8 @@ See [AGE::Event](class_a_g_e_1_1_event.md)
 | Type | Name |
 | ---: | :--- |
 |   | [**MouseEvent**](#function-mouseevent-13) (int Button) <br> |
-|   | [**MouseEvent**](#function-mouseevent-23) (float x, float y) <br> |
-|   | [**MouseEvent**](#function-mouseevent-33) (float xOffset, float yOffset, bool Scrolled) <br> |
+|   | [**MouseEvent**](#function-mouseevent-23) (float x, float y) <br>_Constructs a_ [_**MouseEvent**_](class_a_g_e_1_1_mouse_event.md) _object with the given coordinates._ |
+|   | [**MouseEvent**](#function-mouseevent-33) (float xOffset, float yOffset, bool Scrolled) <br>_Constructs a_ [_**MouseEvent**_](class_a_g_e_1_1_mouse_event.md) _object with given offsets._ |
 
 
 
@@ -164,6 +165,13 @@ See [AGE::Event](class_a_g_e_1_1_event.md)
 
 
 
+## Detailed Description
+
+
+This class is used to represent different types of mouse events, such as button presses or scrolls. It provides methods for getting the type and position of the mouse event. 
+
+
+    
 ## Public Functions Documentation
 
 
@@ -268,6 +276,7 @@ inline AGE::MouseEvent::MouseEvent (
 
 ### function MouseEvent [2/3]
 
+_Constructs a_ [_**MouseEvent**_](class_a_g_e_1_1_mouse_event.md) _object with the given coordinates._
 ```C++
 inline AGE::MouseEvent::MouseEvent (
     float x,
@@ -278,12 +287,36 @@ inline AGE::MouseEvent::MouseEvent (
 
 
 
+
+**Parameters:**
+
+
+* `x` The x-coordinate of the mouse event. 
+* `y` The y-coordinate of the mouse event.
+
+Constructs a [**MouseEvent**](class_a_g_e_1_1_mouse_event.md) object with the given coordinates.
+
+
+
+
+**Parameters:**
+
+
+* `x` The x-coordinate of the mouse event. 
+* `y` The y-coordinate of the mouse event. 
+
+
+
+
+        
+
 <hr>
 
 
 
 ### function MouseEvent [3/3]
 
+_Constructs a_ [_**MouseEvent**_](class_a_g_e_1_1_mouse_event.md) _object with given offsets._
 ```C++
 inline AGE::MouseEvent::MouseEvent (
     float xOffset,
@@ -294,6 +327,37 @@ inline AGE::MouseEvent::MouseEvent (
 
 
 
+This function is used to create a new [**MouseEvent**](class_a_g_e_1_1_mouse_event.md) instance with the specified x and y offsets. The boolean Scrolled parameter is not actually utilized in this function, so it can be safely ignored for now.
+
+
+
+
+**Parameters:**
+
+
+* `xOffset` The horizontal scroll offset. 
+* `yOffset` The vertical scroll offset. 
+* `Scrolled` A boolean indicating whether the mouse scrolled or not (not used).
+
+Constructs a [**MouseEvent**](class_a_g_e_1_1_mouse_event.md) object with given x and y offset values.
+
+
+This constructor is used to create a new [**MouseEvent**](class_a_g_e_1_1_mouse_event.md) instance with the specified x and y offset values, which are then stored in member variables m\_XOffset and m\_YOffset respectively. The boolean Scrolled parameter is not utilized as it's not clear what its purpose would be without additional context or information about how this class is intended to be used.
+
+
+
+
+**Parameters:**
+
+
+* `xOffset` The horizontal offset value for the mouse event. 
+* `yOffset` The vertical offset value for the mouse event. 
+* `Scrolled` A boolean indicating whether the scroll wheel was moved (not currently utilized). 
+
+
+
+
+        
 
 <hr>
 

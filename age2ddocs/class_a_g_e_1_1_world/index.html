@@ -89,11 +89,11 @@
 <tbody>
 <tr>
 <td style="text-align: right;">T *</td>
-<td style="text-align: left;"><a href="#function-as-12"><strong>As</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-as-12"><strong>As</strong></a> () <br><em>This function is currently not implemented and will always assert false. It returns a null pointer.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;"><a href="../class_a_g_e_1_1_world2_d/"><strong>World2D</strong></a> *</td>
-<td style="text-align: left;"><a href="#function-as-22"><strong>As</strong></a> () <br></td>
+<td style="text-align: right;">Wo rld2D *</td>
+<td style="text-align: left;"><a href="#function-as-22"><strong>As</strong></a> () <br><em>This function returns a pointer to the derived class '</em> <a href="../class_a_g_e_1_1_world2_d/"><em><strong>World2D</strong></em></a> <em>' from the base class '</em><a href="./"><em><strong>World</strong></em></a> <em>'. It is used for polymorphism and dynamic binding. The returned object can be treated as an instance of</em><a href="../class_a_g_e_1_1_world2_d/"><em><strong>World2D</strong></em></a> <em>.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
@@ -136,21 +136,30 @@
 <tbody>
 <tr>
 <td style="text-align: right;">Ref&lt; <a href="./"><strong>World</strong></a> &gt;</td>
-<td style="text-align: left;"><a href="#function-create"><strong>Create</strong></a> (Ref&lt; <a href="../class_a_g_e_1_1_scene/"><strong>Scene</strong></a> &gt; scene) <br></td>
+<td style="text-align: left;"><a href="#function-create"><strong>Create</strong></a> (Ref&lt; <a href="../class_a_g_e_1_1_scene/"><strong>Scene</strong></a> &gt; scene) <br><em>Creates a new instance of the</em> <a href="./"><em><strong>World</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-as-12">function As [1/2]</h3>
+<p><em>This function is currently not implemented and will always assert false. It returns a null pointer.</em> </p>
 <pre><code class="language-C++">template&lt;typename T&gt;
 T * AGE::World::As () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>nullptr Always.</p>
+<p>This function is currently not implemented and will always assert false. It returns a null pointer.</p>
+<p><strong>Returns:</strong></p>
+<p>nullptr Always. </p>
 <hr>
 
 <h3 id="function-as-22">function As [2/2]</h3>
+<p><em>This function returns a pointer to the derived class '</em> <a href="../class_a_g_e_1_1_world2_d/"><em><strong>World2D</strong></em></a> <em>' from the base class '</em><a href="./"><em><strong>World</strong></em></a> <em>'. It is used for polymorphism and dynamic binding. The returned object can be treated as an instance of</em><a href="../class_a_g_e_1_1_world2_d/"><em><strong>World2D</strong></em></a> <em>.</em></p>
 <pre><code class="language-C++">template&lt;&gt;
-World2D * AGE::World::As () 
+Wo rld2D * AGE::World::As () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A pointer to the derived class '<a href="../class_a_g_e_1_1_world2_d/"><strong>World2D</strong></a>'. </p>
 <hr>
 
 <h3 id="function-destroyworld">function DestroyWorld</h3>
@@ -199,10 +208,26 @@ World2D * AGE::World::As ()
 <hr>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
 <h3 id="function-create">function Create</h3>
+<p><em>Creates a new instance of the</em> <a href="./"><em><strong>World</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">static Ref&lt; World &gt; AGE::World::Create (
     Ref&lt; Scene &gt; scene
 ) 
 </code></pre>
+<p>This function creates and returns a new instance of the <a href="./"><strong>World</strong></a> class, which is specialized for handling 2D scenes. The scene parameter specifies the <a href="../class_a_g_e_1_1_scene/"><strong>Scene</strong></a> that this world will be associated with.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>scene</code> A reference to the <a href="../class_a_g_e_1_1_scene/"><strong>Scene</strong></a> object that this world will be associated with. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A reference to the newly created <a href="./"><strong>World</strong></a> instance.</p>
+<p>Creates a new instance of the <a href="./"><strong>World</strong></a> class.</p>
+<p>This function creates and returns a new instance of the <a href="./"><strong>World</strong></a> class, which is specialized for handling 2D scenes. The scene parameter specifies the <a href="../class_a_g_e_1_1_scene/"><strong>Scene</strong></a> that this world will be associated with.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>scene</code> A reference to the <a href="../class_a_g_e_1_1_scene/"><strong>Scene</strong></a> object that this world will be associated with. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A reference to the newly created <a href="./"><strong>World</strong></a> instance. </p>
 <hr>
 
 <hr />

@@ -23,12 +23,55 @@
           <declname>OutVec</declname>
         </param>
         <briefdescription>
+<para>Parses a CSV file and stores the values in an output vector. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function reads a CSV file specified by its filename, extracts all column names and row names from it using rapidcsv library. It then iterates over each column, retrieving the values of that column into a temporary vector. These values are then pushed back to the output vector. The function finally returns a pair of integers where the first element is the average number of elements per column and the second one is the average number of elements per row in the CSV file.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A constant string reference representing the name of the CSV file to be parsed. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>OutVec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An output vector where all values from the CSV file will be stored. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pair of integers, where the first element is the average number of elements per column and the second one is the average number of elements per row in the CSV file.</para>
+</simplesect>
+Parses a CSV file and stores the values in an output vector.</para>
+<para>This function reads a CSV file specified by its filename, extracts all column names and row names from it using rapidcsv library. It then iterates over each column, retrieving the corresponding values of type T (template parameter), and pushes them into the output vector. The function finally returns a pair of integers representing the average number of elements per column and row in the CSV file.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A constant string reference to the filename of the CSV file to be parsed. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>OutVec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An output vector where the values from the CSV file will be stored.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pair of integers representing the average number of elements per column and row in the CSV file. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/CsvParser.h" line="15" column="18" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Parser/Private/CsvParser.cpp" bodystart="7" bodyend="27"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Parser/Public/CsvParser.h" line="15" column="18" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Parser/Private/CsvParser.cpp" bodystart="36" bodyend="56"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -49,12 +92,55 @@
           <declname>OutVec</declname>
         </param>
         <briefdescription>
+<para>Parses a CSV file and stores the values in an output vector. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function reads a CSV file specified by its filename, extracts all column names and row names from it using rapidcsv library, then iterates over each column to get its values as floats. These float values are pushed back into the provided output vector. The number of columns and rows in the CSV file is returned as a pair.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A constant string reference representing the filename of the CSV file to be parsed. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>OutVec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to an output vector where the extracted float values will be stored.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pair of integers, where the first integer represents the number of columns in the CSV file and the second integer represents the number of rows.</para>
+</simplesect>
+Parses a CSV file and stores the values in an output vector.</para>
+<para>This function reads a CSV file specified by its filename, extracts all column names and row names from it using rapidcsv library. It then iterates over each column, retrieving the values as floats and pushing them into the provided output vector. The number of columns and rows in the CSV file are returned as a pair.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A constant string reference representing the filename of the CSV file to be parsed. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>OutVec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector of floats that will store all values from the CSV file. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pair of integers, where the first value is the number of columns in the CSV file and the second value is the number of rows. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Parser/Private/CsvParser.cpp" line="30" column="11" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Parser/Private/CsvParser.cpp" bodystart="30" bodyend="50"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Parser/Private/CsvParser.cpp" line="81" column="11" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Parser/Private/CsvParser.cpp" bodystart="81" bodyend="101"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

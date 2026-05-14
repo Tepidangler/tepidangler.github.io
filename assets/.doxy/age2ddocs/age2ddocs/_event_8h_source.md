@@ -58,16 +58,16 @@ namespace AGE
 
 #define EVENT_CLASS_CATEGORY(category) virtual int GetCategoryFlags() const override { return category;}
 
-    class AGE_API Event
+class AGE_API Event
     {
         friend class EventDispatcher;
     public:
         virtual EventType GetEventType() const = 0;
         virtual const char* GetName() const = 0;
         virtual int GetCategoryFlags() const = 0;
-        virtual std::string ToString() const { return GetName(); }
+virtual std::string ToString() const { return GetName(); }
 
-        inline bool IsInCategory(EventCategory Category)
+inline bool IsInCategory(EventCategory Category)
         {
             return GetCategoryFlags() & Category; // Check Category flag against all flags
         }
@@ -81,12 +81,12 @@ namespace AGE
         template <typename T>
         using EventFn = std::function<bool(T&)>;
     public:
-        EventDispatcher(Event& Event)
+EventDispatcher(Event& Event)
             : m_Event(Event) {}
 
 
         template<typename T>
-        bool Dispatch (EventFn<T> func)
+bool Dispatch (EventFn<T> func)
         {
             if (m_Event.GetEventType() == T::GetStaticType())
             {
@@ -102,7 +102,7 @@ namespace AGE
 
     
 
-    inline std::ostream& operator<<(std::ostream& OS, const Event& E)
+inline std::ostream& operator<<(std::ostream& OS, const Event& E)
     {
         return OS << E.ToString();
     }

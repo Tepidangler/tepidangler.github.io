@@ -89,23 +89,23 @@
 <tbody>
 <tr>
 <td style="text-align: right;">T &amp;</td>
-<td style="text-align: left;"><a href="#function-addcomponent"><strong>AddComponent</strong></a> (Args &amp;&amp;... args) <br></td>
+<td style="text-align: left;"><a href="#function-addcomponent"><strong>AddComponent</strong></a> (Args &amp;&amp;... args) <br><em>This function adds a component of type T to the entity.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">T &amp;</td>
-<td style="text-align: left;"><a href="#function-getcomponent"><strong>GetComponent</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getcomponent"><strong>GetComponent</strong></a> () <br><em>This function returns a reference to the component of type T associated with the entity.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual <a href="../class_a_g_e_1_1_u_u_i_d/"><strong>UUID</strong></a></td>
-<td style="text-align: left;"><a href="#function-getid"><strong>GetID</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getid"><strong>GetID</strong></a> () <br><em>This function returns the unique identifier (</em> <a href="../class_a_g_e_1_1_u_u_i_d/"><em><strong>UUID</strong></em></a> <em>) of an entity.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual std::string</td>
-<td style="text-align: left;"><a href="#function-getname"><strong>GetName</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getname"><strong>GetName</strong></a> () <br><em>Returns the name of this object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual bool</td>
-<td style="text-align: left;"><a href="#function-isvisible"><strong>IsVisible</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-isvisible"><strong>IsVisible</strong></a> () <br><em>This function checks whether the object is visible or not.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
@@ -113,11 +113,11 @@
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-setvisibility"><strong>SetVisibility</strong></a> (bool Visibility) <br></td>
+<td style="text-align: left;"><a href="#function-setvisibility"><strong>SetVisibility</strong></a> (bool Visibility) <br><em>Sets the visibility of an object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual</td>
-<td style="text-align: left;"><a href="#function-scriptablewidget"><strong>~ScriptableWidget</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-scriptablewidget"><strong>~ScriptableWidget</strong></a> () <br><em>Virtual destructor for the</em> <a href="./"><em><strong>ScriptableWidget</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
@@ -163,58 +163,115 @@
 <tbody>
 <tr>
 <td style="text-align: right;">virtual <a href="../class_a_g_e_1_1_entity/"><strong>Entity</strong></a> &amp;</td>
-<td style="text-align: left;"><a href="#function-getentityhandle"><strong>GetEntityHandle</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getentityhandle"><strong>GetEntityHandle</strong></a> () <br><em>Returns a reference to the entity object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-onconstruct"><strong>OnConstruct</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-onconstruct"><strong>OnConstruct</strong></a> () <br><em>This function is called when the object is being constructed.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-ondestroy"><strong>OnDestroy</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-ondestroy"><strong>OnDestroy</strong></a> () <br><em>This function is called when the object is being destroyed.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-oninit"><strong>OnInit</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-oninit"><strong>OnInit</strong></a> () <br><em>Initializes the object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-onupdate"><strong>OnUpdate</strong></a> (<a href="../class_a_g_e_1_1_time_step/"><strong>TimeStep</strong></a> DeltaTime) <br></td>
+<td style="text-align: left;"><a href="#function-onupdate"><strong>OnUpdate</strong></a> (<a href="../class_a_g_e_1_1_time_step/"><strong>TimeStep</strong></a> DeltaTime) <br><em>This function is called every frame to update the game state based on the time elapsed since the last call.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-reset"><strong>Reset</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-reset"><strong>Reset</strong></a> () <br><em>This function is used to reset the state of an object or a system. It does not take any parameters and returns nothing. The exact effect depends on the specific implementation of the class that uses this method.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-addcomponent">function AddComponent</h3>
+<p><em>This function adds a component of type T to the entity.</em> </p>
 <pre><code class="language-C++">template&lt;typename T, typename ... Args&gt;
 inline T &amp; AGE::ScriptableWidget::AddComponent (
     Args &amp;&amp;... args
 ) 
 </code></pre>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>T</code> The type of the component that is being added. </li>
+<li><code>Args</code> The types of any additional arguments required for the component's construction. </li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>args</code> The arguments necessary for constructing the new component. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A reference to the newly created component.</p>
+<p>Adds a component of type T to the entity. </p>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>T</code> The type of the component to be added. </li>
+<li><code>Args</code> The types of any additional arguments required by the component's constructor. </li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>args</code> Any additional arguments required by the component's constructor. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A reference to the newly created component. </p>
 <hr>
 
 <h3 id="function-getcomponent">function GetComponent</h3>
+<p><em>This function returns a reference to the component of type T associated with the entity.</em> </p>
 <pre><code class="language-C++">template&lt;typename T&gt;
 inline T &amp; AGE::ScriptableWidget::GetComponent () 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>None</code> </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A reference to the component of type T.</p>
+<p>This function returns a reference to the component of type T associated with an entity.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>None</code> </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A reference to the component of type T. </p>
 <hr>
 
 <h3 id="function-getid">function GetID</h3>
+<p><em>This function returns the unique identifier (</em> <a href="../class_a_g_e_1_1_u_u_i_d/"><em><strong>UUID</strong></em></a> <em>) of an entity.</em></p>
 <pre><code class="language-C++">inline virtual UUID AGE::ScriptableWidget::GetID () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>The <a href="../class_a_g_e_1_1_u_u_i_d/"><strong>UUID</strong></a> of the entity as a <a href="../class_a_g_e_1_1_u_u_i_d/"><strong>UUID</strong></a> object.</p>
+<p>This function returns the unique identifier (<a href="../class_a_g_e_1_1_u_u_i_d/"><strong>UUID</strong></a>) of an entity. </p>
+<p><strong>Returns:</strong></p>
+<p>The <a href="../class_a_g_e_1_1_u_u_i_d/"><strong>UUID</strong></a> of the entity as a <a href="../class_a_g_e_1_1_u_u_i_d/"><strong>UUID</strong></a> object. </p>
 <hr>
 
 <h3 id="function-getname">function GetName</h3>
+<p><em>Returns the name of this object.</em> </p>
 <pre><code class="language-C++">inline virtual std::string AGE::ScriptableWidget::GetName () 
 </code></pre>
+<p>This function returns the name of the object as a string. It is used to identify the object in various contexts.</p>
+<p><strong>Returns:</strong></p>
+<p>std::string - The name of the object.</p>
+<p>Returns the name of this object.</p>
+<p><strong>Returns:</strong></p>
+<p>The name as a string. </p>
 <hr>
 
 <h3 id="function-isvisible">function IsVisible</h3>
+<p><em>This function checks whether the object is visible or not.</em> </p>
 <pre><code class="language-C++">inline virtual bool AGE::ScriptableWidget::IsVisible () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>Returns true if the object is visible, false otherwise.</p>
+<p>This function checks whether the object is visible. </p>
+<p><strong>Returns:</strong></p>
+<p>Returns true if the object is visible, false otherwise. </p>
 <hr>
 
 <h3 id="function-onevent">function OnEvent</h3>
@@ -225,15 +282,35 @@ inline T &amp; AGE::ScriptableWidget::GetComponent ()
 <hr>
 
 <h3 id="function-setvisibility">function SetVisibility</h3>
+<p><em>Sets the visibility of an object.</em> </p>
 <pre><code class="language-C++">inline virtual void AGE::ScriptableWidget::SetVisibility (
     bool Visibility
 ) 
 </code></pre>
+<p>This function sets the visibility state of an object to either visible or not visible (hidden). The new visibility state is stored in the member variable 'bIsVisible'.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Visibility</code> A boolean value indicating whether the object should be visible (true) or hidden (false).</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Sets the visibility of an object.</p>
+<p>This function sets the visibility state of an object to either visible or not visible (hidden). The new visibility state is stored in the member variable 'bIsVisible'.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Visibility</code> A boolean value indicating whether the object should be visible (true) or hidden (false). </li>
+</ul>
 <hr>
 
 <h3 id="function-scriptablewidget">function ~ScriptableWidget</h3>
+<p><em>Virtual destructor for the</em> <a href="./"><em><strong>ScriptableWidget</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">inline virtual AGE::ScriptableWidget::~ScriptableWidget () 
 </code></pre>
+<p>This function is responsible for freeing any resources that were allocated by the widget, such as memory or file handles. It's a virtual function to allow subclasses of <a href="./"><strong>ScriptableWidget</strong></a> to override this behavior if necessary.</p>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>Virtual destructor for the <a href="./"><strong>ScriptableWidget</strong></a> class.</p>
+<p>This function is responsible for freeing any resources that were allocated by the widget, such as memory or file handles. It's a virtual function to allow subclasses of <a href="./"><strong>ScriptableWidget</strong></a> to override this behavior if necessary. </p>
 <hr>
 <h2 id="protected-attributes-documentation">Protected Attributes Documentation</h2>
 <h3 id="variable-bisvisible">variable bIsVisible</h3>
@@ -262,35 +339,76 @@ inline T &amp; AGE::ScriptableWidget::GetComponent ()
 <hr>
 <h2 id="protected-functions-documentation">Protected Functions Documentation</h2>
 <h3 id="function-getentityhandle">function GetEntityHandle</h3>
+<p><em>Returns a reference to the entity object.</em> </p>
 <pre><code class="language-C++">inline virtual Entity &amp; AGE::ScriptableWidget::GetEntityHandle () 
 </code></pre>
+<p>This function returns a reference to the internal entity object, which can be used for further operations on it.</p>
+<p><strong>Returns:</strong></p>
+<p>A reference to the entity object (<a href="../class_a_g_e_1_1_entity/"><strong>Entity</strong></a>&amp;).</p>
+<p>This function returns a reference to the entity object. </p>
+<p><strong>Returns:</strong></p>
+<p>A reference to the entity object (m_Entity). </p>
 <hr>
 
 <h3 id="function-onconstruct">function OnConstruct</h3>
+<p><em>This function is called when the object is being constructed.</em> </p>
 <pre><code class="language-C++">inline virtual void AGE::ScriptableWidget::OnConstruct () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>None</p>
+<p>This function is called when the object is being constructed.</p>
+<p>It does not take any parameters and does not return anything. The exact behavior of this function depends on its implementation in derived classes. </p>
 <hr>
 
 <h3 id="function-ondestroy">function OnDestroy</h3>
+<p><em>This function is called when the object is being destroyed.</em> </p>
 <pre><code class="language-C++">inline virtual void AGE::ScriptableWidget::OnDestroy () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>None</p>
+<p>This function is called when the object is being destroyed.</p>
+<p><strong>Returns:</strong></p>
+<p>None </p>
 <hr>
 
 <h3 id="function-oninit">function OnInit</h3>
+<p><em>Initializes the object.</em> </p>
 <pre><code class="language-C++">inline virtual void AGE::ScriptableWidget::OnInit () 
 </code></pre>
+<p>This function is responsible for initializing the object and its internal state. It does not take any parameters and does not return anything.</p>
+<p>Initializes the object.</p>
+<p>This function is responsible for initializing the object and its internal state. It does not take any parameters and does not return anything. </p>
 <hr>
 
 <h3 id="function-onupdate">function OnUpdate</h3>
+<p><em>This function is called every frame to update the game state based on the time elapsed since the last call.</em> </p>
 <pre><code class="language-C++">inline virtual void AGE::ScriptableWidget::OnUpdate (
     TimeStep DeltaTime
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>DeltaTime</code> The time step representing the amount of time that has passed since the previous frame. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void No return value expected as this function does not provide any meaningful result.</p>
+<p>This function is called every frame to update the game state.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>DeltaTime</code> The time elapsed since the last frame, used for smooth movement and animation. </li>
+</ul>
 <hr>
 
 <h3 id="function-reset">function Reset</h3>
+<p><em>This function is used to reset the state of an object or a system. It does not take any parameters and returns nothing. The exact effect depends on the specific implementation of the class that uses this method.</em> </p>
 <pre><code class="language-C++">inline virtual void AGE::ScriptableWidget::Reset () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>This function resets the state of an object to its initial state.</p>
+<p>The exact behavior of this function depends on the specific implementation of the class that contains it. It may reset all internal data, set default values, or perform other actions as specified by the class's design.</p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <hr />

@@ -123,19 +123,19 @@
 <tbody>
 <tr>
 <td style="text-align: right;">BodyType</td>
-<td style="text-align: left;"><a href="#function-getbodytype"><strong>GetBodyType</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getbodytype"><strong>GetBodyType</strong></a> () <br><em>This function returns the body type of an object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-rigidbody2dcomponent-12"><strong>RigidBody2DComponent</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-rigidbody2dcomponent-12"><strong>RigidBody2DComponent</strong></a> () = default<br><em>Default constructor for the</em> <a href="./"><em><strong>RigidBody2DComponent</strong></em></a> <em>class. This function initializes a new instance of the</em><a href="./"><em><strong>RigidBody2DComponent</strong></em></a> <em>with default values. The component is assumed to have no mass, an inertia tensor of zero, and a center of mass at the origin.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-rigidbody2dcomponent-22"><strong>RigidBody2DComponent</strong></a> (const <a href="./"><strong>RigidBody2DComponent</strong></a> &amp;) = default<br></td>
+<td style="text-align: left;"><a href="#function-rigidbody2dcomponent-22"><strong>RigidBody2DComponent</strong></a> (const <a href="./"><strong>RigidBody2DComponent</strong></a> &amp;) = default<br><em>Default copy constructor for the</em> <a href="./"><em><strong>RigidBody2DComponent</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setbodytype"><strong>SetBodyType</strong></a> (BodyType type) <br></td>
+<td style="text-align: left;"><a href="#function-setbodytype"><strong>SetBodyType</strong></a> (BodyType type) <br><em>Sets the body type of an object.</em></td>
 </tr>
 </tbody>
 </table>
@@ -150,11 +150,11 @@
 <tbody>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-deserialize"><strong>Deserialize</strong></a> (<a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> * Serializer, <a href="./"><strong>RigidBody2DComponent</strong></a> &amp; Data) <br></td>
+<td style="text-align: left;"><a href="#function-deserialize"><strong>Deserialize</strong></a> (<a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> * Serializer, <a href="./"><strong>RigidBody2DComponent</strong></a> &amp; Data) <br><em>This function deserializes the data from a serialized format into an instance of</em> <a href="./"><em><strong>RigidBody2DComponent</strong></em></a> <em>.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-serialize"><strong>Serialize</strong></a> (<a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> * Serializer, const <a href="./"><strong>RigidBody2DComponent</strong></a> &amp; Data) <br></td>
+<td style="text-align: left;"><a href="#function-serialize"><strong>Serialize</strong></a> (<a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> * Serializer, const <a href="./"><strong>RigidBody2DComponent</strong></a> &amp; Data) <br><em>This function serializes the data of a</em> <a href="./"><em><strong>RigidBody2DComponent</strong></em></a> <em>.</em></td>
 </tr>
 </tbody>
 </table>
@@ -190,43 +190,75 @@
 <hr>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-getbodytype">function GetBodyType</h3>
+<p><em>This function returns the body type of an object.</em> </p>
 <pre><code class="language-C++">inline BodyType AGE::RigidBody2DComponent::GetBodyType () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>BodyType The type of the body (e.g., human, animal). </p>
 <hr>
 
 <h3 id="function-rigidbody2dcomponent-12">function RigidBody2DComponent [1/2]</h3>
+<p><em>Default constructor for the</em> <a href="./"><em><strong>RigidBody2DComponent</strong></em></a> <em>class. This function initializes a new instance of the</em><a href="./"><em><strong>RigidBody2DComponent</strong></em></a> <em>with default values. The component is assumed to have no mass, an inertia tensor of zero, and a center of mass at the origin.</em></p>
 <pre><code class="language-C++">AGE::RigidBody2DComponent::RigidBody2DComponent () = default
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A new instance of <a href="./"><strong>RigidBody2DComponent</strong></a> with default properties. </p>
 <hr>
 
 <h3 id="function-rigidbody2dcomponent-22">function RigidBody2DComponent [2/2]</h3>
+<p><em>Default copy constructor for the</em> <a href="./"><em><strong>RigidBody2DComponent</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::RigidBody2DComponent::RigidBody2DComponent (
     const RigidBody2DComponent &amp;
 ) = default
 </code></pre>
+<p>This function is used to create a new instance of the <a href="./"><strong>RigidBody2DComponent</strong></a> class by copying an existing one. It uses the '= default' syntax, which tells the compiler to use the default implementation provided by the compiler.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>other</code> The <a href="./"><strong>RigidBody2DComponent</strong></a> instance to be copied. </li>
+</ul>
 <hr>
 
 <h3 id="function-setbodytype">function SetBodyType</h3>
+<p><em>Sets the body type of an object.</em> </p>
 <pre><code class="language-C++">inline void AGE::RigidBody2DComponent::SetBodyType (
     BodyType type
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>type</code> The new BodyType to set for the object. </li>
+</ul>
 <hr>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
 <h3 id="function-deserialize">function Deserialize</h3>
+<p><em>This function deserializes the data from a serialized format into an instance of</em> <a href="./"><em><strong>RigidBody2DComponent</strong></em></a> <em>.</em></p>
 <pre><code class="language-C++">static inline void AGE::RigidBody2DComponent::Deserialize (
     DataReader * Serializer,
     RigidBody2DComponent &amp; Data
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Serializer</code> A pointer to the <a href="../class_a_g_e_1_1_data_reader/"><strong>DataReader</strong></a> object that contains the serialized data. </li>
+<li><code>Data</code> The <a href="./"><strong>RigidBody2DComponent</strong></a> instance where the deserialized data will be stored.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-serialize">function Serialize</h3>
+<p><em>This function serializes the data of a</em> <a href="./"><em><strong>RigidBody2DComponent</strong></em></a> <em>.</em></p>
 <pre><code class="language-C++">static inline void AGE::RigidBody2DComponent::Serialize (
     DataWriter * Serializer,
     const RigidBody2DComponent &amp; Data
 ) 
 </code></pre>
+<p>The function takes in two parameters - a pointer to a <a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> object and a constant reference to a <a href="./"><strong>RigidBody2DComponent</strong></a> object. It does not return anything as it is a void function.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Serializer</code> A pointer to the <a href="../class_a_g_e_1_1_data_writer/"><strong>DataWriter</strong></a> object that will be used for serialization. </li>
+<li><code>Data</code> The <a href="./"><strong>RigidBody2DComponent</strong></a> whose data needs to be serialized. </li>
+</ul>
 <hr>
 
 <hr />

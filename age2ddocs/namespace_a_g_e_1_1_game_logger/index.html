@@ -88,70 +88,175 @@
 <tbody>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-critical"><strong>Critical</strong></a> (std::string_view fmt, Args &amp;&amp;... args) <br></td>
+<td style="text-align: left;"><a href="#function-assert"><strong>Assert</strong></a> (bool Condition, std::string_view fmt, Args &amp;&amp;... args) <br><em>This function is used to assert a condition. If the condition is not met, it throws an exception with a formatted message.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-error"><strong>Error</strong></a> (std::string_view fmt, Args &amp;&amp;... args) <br></td>
+<td style="text-align: left;"><a href="#function-critical"><strong>Critical</strong></a> (std::string_view fmt, Args &amp;&amp;... args) <br><em>This function logs a critical message to the game logger and various other logging systems.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-info"><strong>Info</strong></a> (std::string_view fmt, Args &amp;&amp;... args) <br></td>
+<td style="text-align: left;"><a href="#function-error"><strong>Error</strong></a> (std::string_view fmt, Args &amp;&amp;... args) <br><em>This function is used for logging errors in the game. It takes a format string and variable arguments, formats them into a line of text, logs it to various outputs (game log, debug output on Windows, standard output on Linux), and stores it for later retrieval.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-trace"><strong>Trace</strong></a> (std::string_view fmt, Args &amp;&amp;... args) <br></td>
+<td style="text-align: left;"><a href="#function-info"><strong>Info</strong></a> (std::string_view fmt, Args &amp;&amp;... args) <br><em>This function logs informational messages to the game logger and various other logging systems.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-warn"><strong>Warn</strong></a> (std::string_view fmt, Args &amp;&amp;... args) <br></td>
+<td style="text-align: left;"><a href="#function-trace"><strong>Trace</strong></a> (std::string_view fmt, Args &amp;&amp;... args) <br><em>This function traces a message to the game logger and various other logging systems.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">void</td>
+<td style="text-align: left;"><a href="#function-warn"><strong>Warn</strong></a> (std::string_view fmt, Args &amp;&amp;... args) <br><em>This function is used for logging warnings in the game. It takes a format string and variable arguments, formats them into a string, then logs this string as a warning along with other information such as log type and offsets. The formatted string is also added to the game's logs. If the platform is Windows, it uses OutputDebugString for logging; if it's Linux, printf is used instead.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
+<h3 id="function-assert">function Assert</h3>
+<p><em>This function is used to assert a condition. If the condition is not met, it throws an exception with a formatted message.</em> </p>
+<pre><code class="language-C++">template&lt;typename ... Args&gt;
+void AGE::GameLogger::Assert (
+    bool Condition,
+    std::string_view fmt,
+    Args &amp;&amp;... args
+) 
+</code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Condition</code> The condition that needs to be checked. </li>
+<li><code>fmt</code> A format string for the error message. </li>
+<li><code>args</code> Arguments for the format string.</li>
+</ul>
+<p>This function is used for asserting a condition in the code. If the condition is not met, it throws an exception with a formatted message. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Condition</code> The boolean condition to be checked. </li>
+<li><code>fmt</code> A format string that describes what happened. </li>
+<li><code>args</code> Variadic arguments providing additional information about the event. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void This function does not return any value. It only throws exceptions in case of failure. </p>
+<hr>
+
 <h3 id="function-critical">function Critical</h3>
+<p><em>This function logs a critical message to the game logger and various other logging systems.</em> </p>
 <pre><code class="language-C++">template&lt;typename ... Args&gt;
 void AGE::GameLogger::Critical (
     std::string_view fmt,
     Args &amp;&amp;... args
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>fmt</code> The format string for the log message. </li>
+<li><code>args</code> Variadic arguments used to fill in placeholders in the format string.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>None </p>
 <hr>
 
 <h3 id="function-error">function Error</h3>
+<p><em>This function is used for logging errors in the game. It takes a format string and variable arguments, formats them into a line of text, logs it to various outputs (game log, debug output on Windows, standard output on Linux), and stores it for later retrieval.</em> </p>
 <pre><code class="language-C++">template&lt;typename ... Args&gt;
 void AGE::GameLogger::Error (
     std::string_view fmt,
     Args &amp;&amp;... args
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>fmt</code> The format string used to generate the error message. This should be a printf-style format string. </li>
+<li><code>args</code> The variable arguments that will replace placeholders in the format string.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void No return value is expected as this function only logs errors and does not handle them.</p>
+<p>This function logs an error message to the game logger and various other logging systems.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>fmt</code> A format string for the error message, which can include placeholders for variable arguments. </li>
+<li><code>args</code> The variable arguments that will be substituted into the format string.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-info">function Info</h3>
+<p><em>This function logs informational messages to the game logger and various other logging systems.</em> </p>
 <pre><code class="language-C++">template&lt;typename ... Args&gt;
 void AGE::GameLogger::Info (
     std::string_view fmt,
     Args &amp;&amp;... args
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>fmt</code> A format string that specifies how subsequent arguments are converted for output. </li>
+<li><code>args</code> Arguments following the format string.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>None</p>
+<p>This function logs informational messages to the game logger and various other logging systems.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>fmt</code> A format string that specifies how subsequent arguments are converted for output. </li>
+<li><code>args</code> Arguments referenced by the format specifiers in the format string.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-trace">function Trace</h3>
+<p><em>This function traces a message to the game logger and various other logging systems.</em> </p>
 <pre><code class="language-C++">template&lt;typename ... Args&gt;
 void AGE::GameLogger::Trace (
     std::string_view fmt,
     Args &amp;&amp;... args
 ) 
 </code></pre>
+<p>The function takes in a format string and variable arguments, formats them into a line of text, then logs this line both to the game logger and any number of additional loggers. It also records the offsets at which each character was logged for later retrieval.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>fmt</code> A std::string_view representing the format string. </li>
+<li><code>args</code> Variable arguments representing values to be inserted into the format string.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>This function traces a message to the game logger and various other logging systems.</p>
+<p>The function takes a format string and variable arguments, formats them into a string with prefix "[AGEGAME] ", then logs this string to the game logger and various other logging systems. It also pushes each character of the logged string onto another log for later analysis. The offsets are updated accordingly.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>fmt</code> A std::string_view representing the format string. </li>
+<li><code>args</code> Variable arguments representing values to be formatted into the format string.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <h3 id="function-warn">function Warn</h3>
+<p><em>This function is used for logging warnings in the game. It takes a format string and variable arguments, formats them into a string, then logs this string as a warning along with other information such as log type and offsets. The formatted string is also added to the game's logs. If the platform is Windows, it uses OutputDebugString for logging; if it's Linux, printf is used instead.</em> </p>
 <pre><code class="language-C++">template&lt;typename ... Args&gt;
 void AGE::GameLogger::Warn (
     std::string_view fmt,
     Args &amp;&amp;... args
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>fmt</code> A format string that specifies how the remaining arguments are converted to strings. </li>
+<li><code>...args</code> Variable number of arguments, which will be formatted according to the provided format string. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<p>This function logs a warning message with the given format string and arguments.</p>
+<p>The formatted message is prefixed with "[AGEGAME] " and logged to various outputs based on the platform.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>fmt</code> A std::string_view representing the format string for the warning message. </li>
+<li><code>args</code> Variadic parameters representing the arguments for the format string.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void This function does not return a value. </p>
 <hr>
 
 <hr />

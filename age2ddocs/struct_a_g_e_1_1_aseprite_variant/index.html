@@ -89,69 +89,106 @@
 <tbody>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-asepritevariant-13"><strong>AsepriteVariant</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-asepritevariant-13"><strong>AsepriteVariant</strong></a> () = default<br><em>Default constructor for</em> <a href="./"><em><strong>AsepriteVariant</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-asepritevariant-23"><strong>AsepriteVariant</strong></a> (const <a href="./"><strong>AsepriteVariant</strong></a> &amp; v) = default<br></td>
+<td style="text-align: left;"><a href="#function-asepritevariant-23"><strong>AsepriteVariant</strong></a> (const <a href="./"><strong>AsepriteVariant</strong></a> &amp; v) = default<br><em>Copy constructor for the</em> <a href="./"><em><strong>AsepriteVariant</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-asepritevariant-33"><strong>AsepriteVariant</strong></a> (T &amp;&amp; v) <br></td>
+<td style="text-align: left;"><a href="#function-asepritevariant-33"><strong>AsepriteVariant</strong></a> (T &amp;&amp; v) <br><em>Constructs a variant object with the given value.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"><a href="./"><strong>AsepriteVariant</strong></a> &amp;</td>
-<td style="text-align: left;"><a href="#function-operator"><strong>operator=</strong></a> (const char *) = delete<br></td>
+<td style="text-align: left;"><a href="#function-operator"><strong>operator=</strong></a> (const char *) = delete<br><em>Overloaded assignment operator that disallows the use of a const char* as an argument.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"><a href="./"><strong>AsepriteVariant</strong></a> &amp;</td>
-<td style="text-align: left;"><a href="#function-operator_1"><strong>operator=</strong></a> (T &amp;&amp; v) <br></td>
+<td style="text-align: left;"><a href="#function-operator_1"><strong>operator=</strong></a> (T &amp;&amp; v) <br><em>Assignment operator for</em> <a href="./"><em><strong>AsepriteVariant</strong></em></a> <em>.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">const size_t</td>
-<td style="text-align: left;"><a href="#function-type"><strong>type</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-type"><strong>type</strong></a> () const<br><em>Returns the value of the 'index' function for this object.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-asepritevariant-13">function AsepriteVariant [1/3]</h3>
+<p><em>Default constructor for</em> <a href="./"><em><strong>AsepriteVariant</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::AsepriteVariant::AsepriteVariant () = default
 </code></pre>
 <hr>
 
 <h3 id="function-asepritevariant-23">function AsepriteVariant [2/3]</h3>
+<p><em>Copy constructor for the</em> <a href="./"><em><strong>AsepriteVariant</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::AsepriteVariant::AsepriteVariant (
     const AsepriteVariant &amp; v
 ) = default
 </code></pre>
+<p>This function creates a new instance of <a href="./"><strong>AsepriteVariant</strong></a> that is a copy of an existing one. It uses the '= default' syntax to delegate the work to the compiler-generated copy constructor.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>v</code> The existing <a href="./"><strong>AsepriteVariant</strong></a> instance to be copied. </li>
+</ul>
 <hr>
 
 <h3 id="function-asepritevariant-33">function AsepriteVariant [3/3]</h3>
+<p><em>Constructs a variant object with the given value.</em> </p>
 <pre><code class="language-C++">template&lt;typename T&gt;
 inline AGE::AsepriteVariant::AsepriteVariant (
     T &amp;&amp; v
 ) 
 </code></pre>
+<p>This constructor takes an rvalue reference to construct a variant object from a temporary value. It uses std::forward to ensure that the correct move semantics are used based on whether T is an lvalue or rvalue.</p>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>T</code> The type of the value being moved into the variant. </li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>v</code> The value being moved into the variant. </li>
+</ul>
 <hr>
 
 <h3 id="function-operator">function operator=</h3>
+<p><em>Overloaded assignment operator that disallows the use of a const char* as an argument.</em> </p>
 <pre><code class="language-C++">AsepriteVariant &amp; AGE::AsepriteVariant::operator= (
     const char *
 ) = delete
 </code></pre>
+<p>This function is marked as deleted to prevent its usage with a const char*. It will not compile if someone tries to assign a const char* value to this object.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>str</code> The string to be assigned, which should not be of type const char*.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A reference to the modified <a href="./"><strong>AsepriteVariant</strong></a> object. </p>
 <hr>
 
 <h3 id="function-operator_1">function operator=</h3>
+<p><em>Assignment operator for</em> <a href="./"><em><strong>AsepriteVariant</strong></em></a> <em>.</em></p>
 <pre><code class="language-C++">template&lt;typename T&gt;
 inline AsepriteVariant &amp; AGE::AsepriteVariant::operator= (
     T &amp;&amp; v
 ) 
 </code></pre>
+<p>This function overloads the assignment operator to allow for moving of values into an <a href="./"><strong>AsepriteVariant</strong></a> object. It takes a rvalue reference (T&amp;&amp;) as its parameter, which allows it to accept both lvalues and rvalues. The function then calls the assignment operator of VariantBase with std::forward to handle the forwarding of the argument.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>v</code> The value to be moved into this <a href="./"><strong>AsepriteVariant</strong></a> object. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Reference to the modified <a href="./"><strong>AsepriteVariant</strong></a> object. </p>
 <hr>
 
 <h3 id="function-type">function type</h3>
+<p><em>Returns the value of the 'index' function for this object.</em> </p>
 <pre><code class="language-C++">inline const size_t AGE::AsepriteVariant::type () const
 </code></pre>
+<p>This function is a simple wrapper around another function, 'index', which returns an unsigned integer. It simply calls that function and returns its result. The purpose of this function could be to provide a consistent interface or to add additional functionality in derived classes.</p>
+<p><strong>Returns:</strong></p>
+<p>The value returned by the 'index' function for this object. </p>
 <hr>
 
 <hr />

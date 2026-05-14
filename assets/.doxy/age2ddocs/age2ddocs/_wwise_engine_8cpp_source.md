@@ -16,24 +16,26 @@
 
 namespace AGE
 {
-    Wwise::Wwise()
+Wwise::Wwise()
     {
         g_LowLevelIO = new CAkFilePackageLowLevelIODeferred();
         Init();
     }
 
-    Wwise::~Wwise()
+Wwise::~Wwise()
     {
         Shutdown();
     }
-    void Wwise::Init()
+    
+
+void Wwise::Init()
     {
 
         AkMemSettings MemSettings;
         AK::MemoryMgr::GetDefaultSettings(MemSettings);
         if (AK::MemoryMgr::Init(&MemSettings) != AK_Success)
         {
-            AGE_CORE_ASSERT(false, "Could Not Create The Memory Manager!");
+            CoreLogger::Assert(false, "Could Not Create The Memory Manager!");
             return;
 
         }
@@ -43,7 +45,7 @@ namespace AGE
         AK::StreamMgr::GetDefaultSettings(StmSettings);
         if (!AK::StreamMgr::Create(StmSettings))
         {
-            AGE_CORE_ASSERT(false, "Could Not Create The Streaming Manager!");
+            CoreLogger::Assert(false, "Could Not Create The Streaming Manager!");
             return;
         }
         CoreLogger::Trace("Initialized Wwise Streaming Manager!");
@@ -54,7 +56,7 @@ namespace AGE
 
         if (g_LowLevelIO->Init(DeviceSettings) != AK_Success)
         {
-            AGE_CORE_ASSERT(false, "Could Not Create The Streaming Device and Low-Level I/O System!");
+            CoreLogger::Assert(false, "Could Not Create The Streaming Device and Low-Level I/O System!");
             return;
         }
         CoreLogger::Trace("Initialized Wwise Streaming Device and Low-Level I/O System!");
@@ -70,7 +72,7 @@ namespace AGE
 
         if (AK::SoundEngine::Init(&InitSettings, &PlatformInitSettings) != AK_Success)
         {
-            AGE_CORE_ASSERT(false, "Could Not Initialize The Sound Engine!");
+            CoreLogger::Assert(false, "Could Not Initialize The Sound Engine!");
             return;
         }
         CoreLogger::Trace("Initialized Wwise Sound Engine!");
@@ -83,7 +85,7 @@ namespace AGE
         AK::MusicEngine::GetDefaultInitSettings(MusicSettings);
         if (AK::MusicEngine::Init(&MusicSettings) != AK_Success)
         {
-            AGE_CORE_ASSERT(false, "Could Not Initialize The Music Engine!");
+            CoreLogger::Assert(false, "Could Not Initialize The Music Engine!");
             return;
         }
         CoreLogger::Trace("Initialized Wwise Music Engine!");
@@ -91,7 +93,7 @@ namespace AGE
         AkSpatialAudioInitSettings SAInitSettings;
         if (AK::SpatialAudio::Init(SAInitSettings) != AK_Success)
         {
-            AGE_CORE_ASSERT(false, "Could Not Initialize The Spatial Audio!");
+            CoreLogger::Assert(false, "Could Not Initialize The Spatial Audio!");
             return;
         }
         CoreLogger::Trace("Initialized Wwise Spatial Audio!");
@@ -100,7 +102,7 @@ namespace AGE
         AK::Comm::GetDefaultInitSettings(CommSettings);
         if (AK::Comm::Init(CommSettings) != AK_Success)
         {
-            AGE_CORE_ASSERT(false, "Could Not Initialize Communication!");
+            CoreLogger::Assert(false, "Could Not Initialize Communication!");
             return;
         }
         CoreLogger::Trace("Initialized Wwise Communication");
@@ -109,19 +111,19 @@ namespace AGE
         //InitPlugins();
     }
 
-    void Wwise::Start()
+void Wwise::Start()
     {
     }
 
-    void Wwise::Update()
+void Wwise::Update()
     {
     }
 
-    void Wwise::Stop()
+void Wwise::Stop()
     {
     }
 
-    void Wwise::Shutdown()
+void Wwise::Shutdown()
     {
 #ifndef AK_OPTIMIZED
         AK::Comm::Term();
@@ -138,37 +140,37 @@ namespace AGE
         AK::MemoryMgr::Term();
     }
 
-    void Wwise::LoadBanks(const std::vector<Ref<SoundBank>> &Banks)
+void Wwise::LoadBanks(const std::vector<Ref<SoundBank>> &Banks)
     {
     }
 
-    void Wwise::LoadBank(Ref<SoundBank> Bank)
+void Wwise::LoadBank(Ref<SoundBank> Bank)
     {
     }
 
-    std::string & Wwise::GetCurrentEventName()
+std::string & Wwise::GetCurrentEventName()
     {
         return m_MarkerLabel;
     }
 
-    void Wwise::SetCurrentEventName(const std::string &Name)
+void Wwise::SetCurrentEventName(const std::string &Name)
     {
     }
 
-    bool Wwise::IsEventValid(const std::string& EventName)
+bool Wwise::IsEventValid(const std::string& EventName)
     {
         return false;
     }
 
-    void Wwise::SetParameterByName(const std::string &Name, float Value)
+void Wwise::SetParameterByName(const std::string &Name, float Value)
     {
     }
 
-    void Wwise::Set3DAttributes(void *Attributes)
+void Wwise::Set3DAttributes(void *Attributes)
     {
     }
 
-    void Wwise::ProcessAudio()
+void Wwise::ProcessAudio()
     {
         if (AK::SoundEngine::IsInitialized())
         {
@@ -176,111 +178,111 @@ namespace AGE
         }
     }
 
-    void Wwise::SetBasePath(const AkOSChar* Path)
+void Wwise::SetBasePath(const AkOSChar* Path)
     {
         AKRESULT Result = g_LowLevelIO->SetBasePath(Path);
-        AGE_CORE_ASSERT(Result == AK_Success, "Failed to Set Base Path");
+        CoreLogger::Assert(Result == AK_Success, "Failed to Set Base Path");
         CoreLogger::Warn("Wwise Error: {0} {1}", ProcessResultErrorCode(Result), ProcessResultErrorCode(Result));
 
     }
 #if 0
-    void Wwise::LoadBank(const std::string& Name)
+void Wwise::LoadBank(const std::string& Name)
     {
         uint32_t BankID;
         AKRESULT eResult = AK::SoundEngine::LoadBank(Name.c_str(), BankID);
-        AGE_CORE_ASSERT(eResult == AK_Success, "LoadBank() Failed to Load Soundbank!");
+        CoreLogger::Assert(eResult == AK_Success, "LoadBank() Failed to Load Soundbank!");
 
     }
 
-    void Wwise::LoadBank(const uint32_t Name)
+void Wwise::LoadBank(const uint32_t Name)
     {
         AkBankType BankType = AkBankTypeEnum::AkBankType_User;
         AKRESULT eResult = AK::SoundEngine::LoadBank(Name, BankType);
-        AGE_CORE_ASSERT(eResult == AK_Success, "LoadBank() Failed to Load Soundbank!");
+        CoreLogger::Assert(eResult == AK_Success, "LoadBank() Failed to Load Soundbank!");
     }
 #endif
-    void Wwise::UnloadBank(const std::string& Name)
+void Wwise::UnloadBank(const std::string& Name)
     {
 
         AKRESULT eResult = AK::SoundEngine::UnloadBank(Name.c_str(), 0);
-        AGE_CORE_ASSERT(eResult == AK_Success, "LoadBank() Returned AK_Success!");
+        CoreLogger::Assert(eResult == AK_Success, "LoadBank() Returned AK_Success!");
 
     }
 
-    void Wwise::UnloadBank(const uint32_t Name)
+void Wwise::UnloadBank(const uint32_t Name)
     {
         AKRESULT eResult = AK::SoundEngine::UnloadBank(Name, 0);
-        AGE_CORE_ASSERT(eResult == AK_Success, "LoadBank() Returned AK_Success!");
+        CoreLogger::Assert(eResult == AK_Success, "LoadBank() Returned AK_Success!");
     }
 
-    AkPlayingID Wwise::PostMarkerEvent(const char* EventID, uint64_t GameObjID)
+AkPlayingID Wwise::PostMarkerEvent(const char* EventID, uint64_t GameObjID)
     {
         AkPlayingID PlayingID = AK::SoundEngine::PostEvent(EventID, GameObjID);
         return PlayingID;
     }
 
-    AkPlayingID Wwise::PostMarkerEvent(const uint32_t EventID, uint64_t GameObjID)
+AkPlayingID Wwise::PostMarkerEvent(const uint32_t EventID, uint64_t GameObjID)
     {
         AkPlayingID PlayingID = AK::SoundEngine::PostEvent(EventID, GameObjID);
 
         return PlayingID;
     }
 
-    AKRESULT Wwise::SetPosition(uint64_t GameObjID, AkSoundPosition SoundPos)
+AKRESULT Wwise::SetPosition(uint64_t GameObjID, AkSoundPosition SoundPos)
     {
         return AK::SoundEngine::SetPosition(GameObjID, SoundPos);
     }
 
-    AKRESULT Wwise::SetRTPCValue(const char* Name, AkRtpcValue nRPM)
+AKRESULT Wwise::SetRTPCValue(const char* Name, AkRtpcValue nRPM)
     {
         return AK::SoundEngine::SetRTPCValue(Name, nRPM);
     }
 
-    AKRESULT Wwise::SetState(uint32_t StateGroupID, uint32_t StateID)
+AKRESULT Wwise::SetState(uint32_t StateGroupID, uint32_t StateID)
     {
         return AK::SoundEngine::SetState(StateGroupID, StateID);
     }
 
-    AKRESULT Wwise::SetState(const char* Name, const char* Group)
+AKRESULT Wwise::SetState(const char* Name, const char* Group)
     {
         return AK::SoundEngine::SetState(Name, Group);
     }
 
-    AKRESULT Wwise::SetSwitch(uint32_t SwitchGroupID, uint32_t SwitchID, uint64_t GameObjID)
+AKRESULT Wwise::SetSwitch(uint32_t SwitchGroupID, uint32_t SwitchID, uint64_t GameObjID)
     {
         return AK::SoundEngine::SetSwitch(SwitchGroupID, SwitchID, GameObjID);
     }
 
-    AKRESULT Wwise::SetSwitch(const char* SwitchGroup, const char* Switch, uint64_t GameObjID)
+AKRESULT Wwise::SetSwitch(const char* SwitchGroup, const char* Switch, uint64_t GameObjID)
     {
         return AK::SoundEngine::SetSwitch(SwitchGroup, Switch, GameObjID);
     }
 
-    void Wwise::ParseSoundBankFile(const std::string& Filepath)
+void Wwise::ParseSoundBankFile(const std::string& Filepath)
     {
 
 
     }
 
-    AKRESULT Wwise::RegisterGameObj(uint64_t GameObjID, const char* Name)
+AKRESULT Wwise::RegisterGameObj(uint64_t GameObjID, const char* Name)
     {
 
         AKRESULT Result = AK::SoundEngine::RegisterGameObj(GameObjID, Name);
-        AGE_CORE_ASSERT(Result == AK_Success, "Failed to Register Game Object!");
+        CoreLogger::Assert(Result == AK_Success, "Failed to Register Game Object!");
         return Result;
     }
 
 
 
-    AKRESULT Wwise::UnregisterGameObj(uint64_t GameObjID)
+AKRESULT Wwise::UnregisterGameObj(uint64_t GameObjID)
     {
         AKRESULT Result = AK::SoundEngine::UnregisterGameObj(GameObjID);
-        AGE_CORE_ASSERT(Result == AK_Success, "Failed to Unregister Game Object!");
+        CoreLogger::Assert(Result == AK_Success, "Failed to Unregister Game Object!");
         return Result;
     }
 
 
-    void Wwise::MIDICallback(bool LastCall)
+void Wwise::MIDICallback(bool LastCall)
     {
         AkMIDIPost aPosts[2];
 
@@ -309,14 +311,16 @@ namespace AGE
 
         PostMIDIOnEvent(EventID, REGISTERED_MIDI_GAME_OBJECT, aPosts, 2);
     }
-    AkPlayingID Wwise::PostMIDIOnEvent(uint32_t EventID, uint64_t GameObjID, AkMIDIPost* Posts, uint16_t NumPosts)
+AkPlayingID Wwise::PostMIDIOnEvent(uint32_t EventID, uint64_t GameObjID, AkMIDIPost* Posts, uint16_t NumPosts)
     {
         return AK::SoundEngine::PostMIDIOnEvent(EventID, GameObjID, Posts, NumPosts);
     }
 
 
 
-    const char* Wwise::ProcessResultErrorCode(AKRESULT Code)
+    
+
+const char* Wwise::ProcessResultErrorCode(AKRESULT Code)
     {
         switch (Code)
         {
@@ -560,7 +564,7 @@ namespace AGE
     }
 
     template<>
-    Wwise* AudioEngine::As()
+Wwise* AudioEngine::As()
     {
         return (Wwise*)this;
     }

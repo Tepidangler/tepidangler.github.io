@@ -88,45 +88,64 @@
 <tbody>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-audiomanager"><strong>AudioManager</strong></a> (AudioEngineType Type) <br></td>
+<td style="text-align: left;"><a href="#function-audiomanager"><strong>AudioManager</strong></a> (AudioEngineType Type) <br><em>Constructs an instance of the</em> <a href="./"><em><strong>AudioManager</strong></em></a> <em>class.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">Ref&lt; <a href="../class_a_g_e_1_1_audio_engine/"><strong>AudioEngine</strong></a> &gt;</td>
-<td style="text-align: left;"><a href="#function-getaudioengine"><strong>GetAudioEngine</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getaudioengine"><strong>GetAudioEngine</strong></a> () <br><em>Returns the Audio Engine instance.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">AudioEngineType</td>
-<td style="text-align: left;"><a href="#function-getaudioenginetype"><strong>GetAudioEngineType</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getaudioenginetype"><strong>GetAudioEngineType</strong></a> () <br><em>This function returns the type of audio engine being used by the application.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-switchaudioengine"><strong>SwitchAudioEngine</strong></a> (AudioEngineType Type) <br></td>
+<td style="text-align: left;"><a href="#function-switchaudioengine"><strong>SwitchAudioEngine</strong></a> (AudioEngineType Type) <br><em>Switches the audio engine being used by the</em> <a href="./"><em><strong>AudioManager</strong></em></a> <em>.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-audiomanager">function AudioManager</h3>
+<p><em>Constructs an instance of the</em> <a href="./"><em><strong>AudioManager</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::AudioManager::AudioManager (
     AudioEngineType Type
 ) 
 </code></pre>
+<p>This constructor initializes an instance of the <a href="./"><strong>AudioManager</strong></a> class with a specified audio engine type. It creates an instance of the appropriate audio engine based on the provided type and sets it as the current audio engine for the manager. The log message "Audio Manager Initialized!" is also printed to indicate successful initialization.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Type</code> - The type of audio engine that should be used by this <a href="./"><strong>AudioManager</strong></a> instance. This can be one of the values defined in the AudioEngineType enum, such as kOpenAL or kFMOD. </li>
+</ul>
 <hr>
 
 <h3 id="function-getaudioengine">function GetAudioEngine</h3>
+<p><em>Returns the Audio Engine instance.</em> </p>
 <pre><code class="language-C++">inline Ref&lt; AudioEngine &gt; AGE::AudioManager::GetAudioEngine () 
 </code></pre>
+<p>This function returns a reference to an <a href="../class_a_g_e_1_1_audio_engine/"><strong>AudioEngine</strong></a> object which is currently being used by the application. The returned object can be used for various audio processing tasks.</p>
+<p><strong>Returns:</strong></p>
+<p>Reference to the current <a href="../class_a_g_e_1_1_audio_engine/"><strong>AudioEngine</strong></a> instance. </p>
 <hr>
 
 <h3 id="function-getaudioenginetype">function GetAudioEngineType</h3>
+<p><em>This function returns the type of audio engine being used by the application.</em> </p>
 <pre><code class="language-C++">inline AudioEngineType AGE::AudioManager::GetAudioEngineType () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>The type of <a href="../class_a_g_e_1_1_audio_engine/"><strong>AudioEngine</strong></a> as an enumeration value (e.g., kAudioEngineType1, kAudioEngineType2). </p>
 <hr>
 
 <h3 id="function-switchaudioengine">function SwitchAudioEngine</h3>
+<p><em>Switches the audio engine being used by the</em> <a href="./"><em><strong>AudioManager</strong></em></a> <em>.</em></p>
 <pre><code class="language-C++">void AGE::AudioManager::SwitchAudioEngine (
     AudioEngineType Type
 ) 
 </code></pre>
+<p>This function resets the current audio engine and replaces it with a new one of the specified type. The new audio engine is initialized immediately after its creation.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Type</code> The type of the new audio engine to be created. </li>
+</ul>
 <hr>
 
 <hr />

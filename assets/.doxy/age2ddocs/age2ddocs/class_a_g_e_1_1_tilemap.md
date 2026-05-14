@@ -13,7 +13,6 @@
 
 
 
-Inherits the following classes: std::enable_shared_from_this< Tilemap >
 
 
 
@@ -52,21 +51,14 @@ Inherits the following classes: std::enable_shared_from_this< Tilemap >
 
 | Type | Name |
 | ---: | :--- |
-|  void | [**BindData**](#function-binddata) () <br> |
-|  void | [**BuildTilemapData**](#function-buildtilemapdata) () <br> |
-|  [**UUID**](class_a_g_e_1_1_u_u_i_d.md) | [**GetAssetID**](#function-getassetid) () <br> |
-|  std::vector&lt; [**TilesetData**](struct_a_g_e_1_1_tileset_data.md) &gt; & | [**GetData**](#function-getdata) () <br> |
-|  std::pair&lt; uint32\_t, uint32\_t &gt; | [**GetMapDimensions**](#function-getmapdimensions) () <br> |
-|  const uint32\_t | [**GetNumberOfLayers**](#function-getnumberoflayers) () <br> |
-|  std::filesystem::path | [**GetPath**](#function-getpath) () const<br> |
-|  Ref&lt; [**Scene**](class_a_g_e_1_1_scene.md) &gt; | [**GetScene**](#function-getscene) () <br> |
-|  std::map&lt; uint32\_t, std::vector&lt; [**Vector2**](struct_a_g_e_1_1_vector2.md) \* &gt; &gt; & | [**GetUVs**](#function-getuvs) () <br> |
-|  void | [**SetPath**](#function-setpath) (const std::filesystem::path & Path) <br> |
-|  void | [**SetScene**](#function-setscene) (Ref&lt; [**Scene**](class_a_g_e_1_1_scene.md) &gt; & scene) <br> |
-|  void | [**SetShaderData**](#function-setshaderdata) () <br> |
-|  void | [**SetTileLocations**](#function-settilelocations) () <br> |
-|   | [**Tilemap**](#function-tilemap) (tmx\_map \* Map) <br> |
-|   | [**~Tilemap**](#function-tilemap) () <br> |
+|  [**UUID**](class_a_g_e_1_1_u_u_i_d.md) | [**GetAssetID**](#function-getassetid) () <br>_This function returns the asset ID of an object._  |
+|  std::filesystem::path | [**GetPath**](#function-getpath) () const<br>_Returns the path stored in the object._  |
+|  Ref&lt; [**Scene**](class_a_g_e_1_1_scene.md) &gt; | [**GetScene**](#function-getscene) () <br>_Retrieves the current scene object._  |
+|  Ref&lt; [**Texture**](class_a_g_e_1_1_texture.md) &gt; | [**GetTexture**](#function-gettexture) () <br>_Gets the texture associated with this_ [_**Tilemap**_](class_a_g_e_1_1_tilemap.md) _object._ |
+|  void | [**SetData**](#function-setdata) (Ref&lt; [**Texture**](class_a_g_e_1_1_texture.md) &gt; Atlas, std::filesystem::path & path) <br>_Sets the data for the tilemap._  |
+|  void | [**SetScene**](#function-setscene) (Ref&lt; [**Scene**](class_a_g_e_1_1_scene.md) &gt; scene) <br>_Sets the_ [_**Scene**_](class_a_g_e_1_1_scene.md) _for the_[_**Tilemap**_](class_a_g_e_1_1_tilemap.md) _object._ |
+|   | [**Tilemap**](#function-tilemap) (tmx\_map \* Map) <br>_Constructs a_ [_**Tilemap**_](class_a_g_e_1_1_tilemap.md) _object from a tmx\_map pointer._ |
+|   | [**~Tilemap**](#function-tilemap) () <br>_Destructor for the_ [_**Tilemap**_](class_a_g_e_1_1_tilemap.md) _class._ |
 
 
 
@@ -100,34 +92,9 @@ Inherits the following classes: std::enable_shared_from_this< Tilemap >
 
 
 
-### function BindData 
-
-```C++
-void AGE::Tilemap::BindData () 
-```
-
-
-
-
-<hr>
-
-
-
-### function BuildTilemapData 
-
-```C++
-void AGE::Tilemap::BuildTilemapData () 
-```
-
-
-
-
-<hr>
-
-
-
 ### function GetAssetID 
 
+_This function returns the asset ID of an object._ 
 ```C++
 inline UUID AGE::Tilemap::GetAssetID () 
 ```
@@ -135,44 +102,16 @@ inline UUID AGE::Tilemap::GetAssetID ()
 
 
 
-<hr>
 
+**Returns:**
 
-
-### function GetData 
-
-```C++
-inline std::vector< TilesetData > & AGE::Tilemap::GetData () 
-```
+[**UUID**](class_a_g_e_1_1_u_u_i_d.md) The unique identifier for the asset. 
 
 
 
 
-<hr>
 
-
-
-### function GetMapDimensions 
-
-```C++
-inline std::pair< uint32_t, uint32_t > AGE::Tilemap::GetMapDimensions () 
-```
-
-
-
-
-<hr>
-
-
-
-### function GetNumberOfLayers 
-
-```C++
-const uint32_t AGE::Tilemap::GetNumberOfLayers () 
-```
-
-
-
+        
 
 <hr>
 
@@ -180,6 +119,7 @@ const uint32_t AGE::Tilemap::GetNumberOfLayers ()
 
 ### function GetPath 
 
+_Returns the path stored in the object._ 
 ```C++
 inline std::filesystem::path AGE::Tilemap::GetPath () const
 ```
@@ -187,46 +127,98 @@ inline std::filesystem::path AGE::Tilemap::GetPath () const
 
 
 
+
+**Returns:**
+
+The path as a std::filesystem::path object. 
+
+
+
+
+
+        
+
 <hr>
 
 
 
 ### function GetScene 
 
+_Retrieves the current scene object._ 
 ```C++
 inline Ref< Scene > AGE::Tilemap::GetScene () 
 ```
 
 
 
+This function returns a reference to the currently active scene in the application. The returned [**Scene**](class_a_g_e_1_1_scene.md) object can be used for various operations such as rendering, updating, and interacting with the objects within it.
+
+
+
+
+**Returns:**
+
+A reference to the current scene (Ref&lt;Scene&gt;). If no scene is set, this function will return an empty reference. 
+
+
+
+
+
+        
 
 <hr>
 
 
 
-### function GetUVs 
+### function GetTexture 
 
+_Gets the texture associated with this_ [_**Tilemap**_](class_a_g_e_1_1_tilemap.md) _object._
 ```C++
-inline std::map< uint32_t, std::vector< Vector2 * > > & AGE::Tilemap::GetUVs () 
+inline Ref< Texture > AGE::Tilemap::GetTexture () 
 ```
 
 
 
 
+
+**Returns:**
+
+A reference to the [**Texture**](class_a_g_e_1_1_texture.md) object that is used by this [**Tilemap**](class_a_g_e_1_1_tilemap.md). 
+
+
+
+
+
+        
+
 <hr>
 
 
 
-### function SetPath 
+### function SetData 
 
+_Sets the data for the tilemap._ 
 ```C++
-inline void AGE::Tilemap::SetPath (
-    const std::filesystem::path & Path
+void AGE::Tilemap::SetData (
+    Ref< Texture > Atlas,
+    std::filesystem::path & path
 ) 
 ```
 
 
 
+This function sets the texture atlas and file path for the tilemap. The Atlas parameter is moved into the m\_AtlasTexture member variable, while the path parameter is assigned to m\_Path. After this operation, both parameters are cleared. 
+
+**Parameters:**
+
+
+* `Atlas` A reference to a [**Texture**](class_a_g_e_1_1_texture.md) object that will be used as the texture atlas for the tilemap. 
+* `path` The file path of the tilemap data. 
+
+
+
+
+        
 
 <hr>
 
@@ -234,40 +226,29 @@ inline void AGE::Tilemap::SetPath (
 
 ### function SetScene 
 
+_Sets the_ [_**Scene**_](class_a_g_e_1_1_scene.md) _for the_[_**Tilemap**_](class_a_g_e_1_1_tilemap.md) _object._
 ```C++
 void AGE::Tilemap::SetScene (
-    Ref< Scene > & scene
+    Ref< Scene > scene
 ) 
 ```
 
 
 
-
-<hr>
-
-
-
-### function SetShaderData 
-
-```C++
-void AGE::Tilemap::SetShaderData () 
-```
+This function sets the [**Scene**](class_a_g_e_1_1_scene.md) member variable of the [**Tilemap**](class_a_g_e_1_1_tilemap.md) class to a given Ref&lt;Scene&gt; object. It takes in one parameter, which is the new scene that will be set.
 
 
 
 
-<hr>
+**Parameters:**
+
+
+* `scene` The new [**Scene**](class_a_g_e_1_1_scene.md) to be set for the [**Tilemap**](class_a_g_e_1_1_tilemap.md) object. 
 
 
 
-### function SetTileLocations 
 
-```C++
-void AGE::Tilemap::SetTileLocations () 
-```
-
-
-
+        
 
 <hr>
 
@@ -275,6 +256,7 @@ void AGE::Tilemap::SetTileLocations ()
 
 ### function Tilemap 
 
+_Constructs a_ [_**Tilemap**_](class_a_g_e_1_1_tilemap.md) _object from a tmx\_map pointer._
 ```C++
 AGE::Tilemap::Tilemap (
     tmx_map * Map
@@ -283,6 +265,20 @@ AGE::Tilemap::Tilemap (
 
 
 
+This function takes in a pointer to a tmx\_map structure and assigns it to the member variable m\_Map. The purpose of this constructor is to initialize an instance of the [**Tilemap**](class_a_g_e_1_1_tilemap.md) class with a map data structure.
+
+
+
+
+**Parameters:**
+
+
+* `Map` Pointer to a tmx\_map object containing the map data. 
+
+
+
+
+        
 
 <hr>
 
@@ -290,6 +286,7 @@ AGE::Tilemap::Tilemap (
 
 ### function ~Tilemap 
 
+_Destructor for the_ [_**Tilemap**_](class_a_g_e_1_1_tilemap.md) _class._
 ```C++
 AGE::Tilemap::~Tilemap () 
 ```

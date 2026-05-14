@@ -57,9 +57,9 @@
 
 | Type | Name |
 | ---: | :--- |
-|   | [**AsepriteFileData**](#function-asepritefiledata-13) () = default<br> |
-|   | [**AsepriteFileData**](#function-asepritefiledata-23) (const [**AsepriteHeader**](struct_a_g_e_1_1_aseprite_header.md) & HeaderData) <br> |
-|   | [**AsepriteFileData**](#function-asepritefiledata-33) (const [**AsepriteFileData**](struct_a_g_e_1_1_aseprite_file_data.md) &) = default<br> |
+|   | [**AsepriteFileData**](#function-asepritefiledata-13) () = default<br>_Default constructor for_ [_**AsepriteFileData**_](struct_a_g_e_1_1_aseprite_file_data.md) _class._ |
+|   | [**AsepriteFileData**](#function-asepritefiledata-23) (const [**AsepriteHeader**](struct_a_g_e_1_1_aseprite_header.md) & HeaderData) <br>_Constructs an instance of the_ [_**AsepriteFileData**_](struct_a_g_e_1_1_aseprite_file_data.md) _class using a const reference to an_[_**AsepriteHeader**_](struct_a_g_e_1_1_aseprite_header.md) _object._ |
+|   | [**AsepriteFileData**](#function-asepritefiledata-33) (const [**AsepriteFileData**](struct_a_g_e_1_1_aseprite_file_data.md) &) = default<br>_Default copy constructor for the_ [_**AsepriteFileData**_](struct_a_g_e_1_1_aseprite_file_data.md) _class._ |
 
 
 
@@ -123,12 +123,27 @@ AsepriteHeader AGE::AsepriteFileData::Header;
 
 ### function AsepriteFileData [1/3]
 
+_Default constructor for_ [_**AsepriteFileData**_](struct_a_g_e_1_1_aseprite_file_data.md) _class._
 ```C++
 AGE::AsepriteFileData::AsepriteFileData () = default
 ```
 
 
 
+This function initializes an instance of the [**AsepriteFileData**](struct_a_g_e_1_1_aseprite_file_data.md) class with default values. It is used to create a new object without any specific initialization.
+
+
+
+
+**Returns:**
+
+An instance of [**AsepriteFileData**](struct_a_g_e_1_1_aseprite_file_data.md) with all fields initialized to their default values. 
+
+
+
+
+
+        
 
 <hr>
 
@@ -136,6 +151,7 @@ AGE::AsepriteFileData::AsepriteFileData () = default
 
 ### function AsepriteFileData [2/3]
 
+_Constructs an instance of the_ [_**AsepriteFileData**_](struct_a_g_e_1_1_aseprite_file_data.md) _class using a const reference to an_[_**AsepriteHeader**_](struct_a_g_e_1_1_aseprite_header.md) _object._
 ```C++
 inline AGE::AsepriteFileData::AsepriteFileData (
     const AsepriteHeader & HeaderData
@@ -145,12 +161,24 @@ inline AGE::AsepriteFileData::AsepriteFileData (
 
 
 
+
+**Parameters:**
+
+
+* `HeaderData` A const reference to an [**AsepriteHeader**](struct_a_g_e_1_1_aseprite_header.md) object containing header data for the [**Aseprite**](class_a_g_e_1_1_aseprite.md) file. 
+
+
+
+
+        
+
 <hr>
 
 
 
 ### function AsepriteFileData [3/3]
 
+_Default copy constructor for the_ [_**AsepriteFileData**_](struct_a_g_e_1_1_aseprite_file_data.md) _class._
 ```C++
 AGE::AsepriteFileData::AsepriteFileData (
     const AsepriteFileData &
@@ -159,6 +187,20 @@ AGE::AsepriteFileData::AsepriteFileData (
 
 
 
+This function is used to create a new instance of [**AsepriteFileData**](struct_a_g_e_1_1_aseprite_file_data.md) by copying an existing one. It uses the '= default' syntax, which tells the compiler to generate the body of this function using the default behavior provided by the compiler.
+
+
+
+
+**Parameters:**
+
+
+* `other` The existing [**AsepriteFileData**](struct_a_g_e_1_1_aseprite_file_data.md) instance to copy. 
+
+
+
+
+        
 
 <hr>
 

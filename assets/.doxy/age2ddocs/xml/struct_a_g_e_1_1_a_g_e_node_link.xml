@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" line="842" column="24" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" bodystart="842" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" line="1056" column="24" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" bodystart="1056" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_a_g_e_1_1_a_g_e_node_link_1a0df5afe79238bf1427a6dfc5e930c327" prot="public" static="no" mutable="no">
         <type>ax::NodeEditor::PinId</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" line="843" column="23" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" bodystart="843" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" line="1057" column="23" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" bodystart="1057" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_a_g_e_1_1_a_g_e_node_link_1a408a088f38de7b85859af239cdc50aee" prot="public" static="no" mutable="no">
         <type>ax::NodeEditor::PinId</type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" line="844" column="23" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" bodystart="844" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" line="1058" column="23" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" bodystart="1058" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_a_g_e_1_1_a_g_e_node_link_1a66513b27a31651006fc007b50649655f" prot="public" static="no" mutable="no">
         <type>ImColor</type>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" line="846" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" bodystart="846" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" line="1060" column="9" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" bodystart="1060" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -68,12 +68,17 @@
         <name>AGENodeLink</name>
         <qualifiedname>AGE::AGENodeLink::AGENodeLink</qualifiedname>
         <briefdescription>
+<para>Default constructor for <ref refid="struct_a_g_e_1_1_a_g_e_node_link" kindref="compound">AGENodeLink</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function initializes an instance of the <ref refid="struct_a_g_e_1_1_a_g_e_node_link" kindref="compound">AGENodeLink</ref> class with its members set to their default values. The default value is determined by the C++ standard, which may vary depending on the specific type of each member variable. For example, if a member variable is of type int, it will be initialized to 0; for pointers, they will be initialized to nullptr. If you need more control over initialization, consider using an initializer list in the constructor definition.</para>
+<para><simplesect kind="return"><para>An instance of <ref refid="struct_a_g_e_1_1_a_g_e_node_link" kindref="compound">AGENodeLink</ref> with all members set to their default values.</para>
+</simplesect>
+Default constructor for <ref refid="struct_a_g_e_1_1_a_g_e_node_link" kindref="compound">AGENodeLink</ref> class. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" line="848" column="1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" line="1075" column="1"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_a_g_e_node_link_1adcb04b537a07b9c5da1fffc0ec65bd0f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -94,12 +99,64 @@
           <declname>EPID</declname>
         </param>
         <briefdescription>
+<para>Constructs an instance of <ref refid="struct_a_g_e_1_1_a_g_e_node_link" kindref="compound">AGENodeLink</ref> with the given LinkId, StartPinId and EndPinId. The color is set to white (255, 255, 255). </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>LID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unique identifier for this link. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>SPID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The id of the start pin of this link. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>EPID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The id of the end pin of this link.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Constructs an instance of <ref refid="struct_a_g_e_1_1_a_g_e_node_link" kindref="compound">AGENodeLink</ref> with the given LinkId, StartPinId and EndPinId. The color is set to white (255, 255, 255). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>LID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unique identifier for the link. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>SPID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Identifier for the start pin of the link. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>EPID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Identifier for the end pin of the link. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" line="850" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" bodystart="850" bodyend="854"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" line="1090" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" bodystart="1090" bodyend="1094"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_a_g_e_node_link_1aa0016b87f5dc4b96ab283f63121864ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -108,12 +165,16 @@
         <name>~AGENodeLink</name>
         <qualifiedname>AGE::AGENodeLink::~AGENodeLink</qualifiedname>
         <briefdescription>
+<para>Virtual destructor for the <ref refid="struct_a_g_e_1_1_a_g_e_node_link" kindref="compound">AGENodeLink</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is responsible for freeing any resources that were allocated by the object during its lifetime. It does not take any parameters and returns void.</para>
+<para>Virtual destructor for the <ref refid="struct_a_g_e_1_1_a_g_e_node_link" kindref="compound">AGENodeLink</ref> class.</para>
+<para>This function is responsible for releasing any resources that were acquired by the object during its lifetime. It does not take any parameters and returns void. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" line="856" column="9"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" line="1106" column="9"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -132,12 +193,51 @@
           <declname>Data</declname>
         </param>
         <briefdescription>
+<para>This function serializes an <ref refid="struct_a_g_e_1_1_a_g_e_node_link" kindref="compound">AGENodeLink</ref> object into a <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function writes the ID, StartPinID, EndPinID and Color of the given <ref refid="struct_a_g_e_1_1_a_g_e_node_link" kindref="compound">AGENodeLink</ref> to the provided <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref>. It uses WriteRaw method from <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref> to write each value as raw binary data.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Serializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to a <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref> object that will be used for serialization. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to an <ref refid="struct_a_g_e_1_1_a_g_e_node_link" kindref="compound">AGENodeLink</ref> object that needs to be serialized.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This function serializes an <ref refid="struct_a_g_e_1_1_a_g_e_node_link" kindref="compound">AGENodeLink</ref> object into a <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref>.</para>
+<para>The function writes the ID, StartPinID, EndPinID and Color of the given <ref refid="struct_a_g_e_1_1_a_g_e_node_link" kindref="compound">AGENodeLink</ref> to the provided <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref>. It uses WriteRaw method for each data type (uint64_t, uint32_t) to write the respective values into the serializer.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Serializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to a <ref refid="class_a_g_e_1_1_data_writer" kindref="compound">DataWriter</ref> object where the serialized data will be written. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to an <ref refid="struct_a_g_e_1_1_a_g_e_node_link" kindref="compound">AGENodeLink</ref> object that needs to be serialized. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" line="858" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" bodystart="858" bodyend="865"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" line="1126" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" bodystart="1126" bodyend="1133"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_a_g_e_node_link_1a74223b7d297667efeb5310387b25c3ff" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -154,19 +254,59 @@
           <declname>Data</declname>
         </param>
         <briefdescription>
+<para>Deserializes data from a <ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref> into an <ref refid="struct_a_g_e_1_1_a_g_e_node_link" kindref="compound">AGENodeLink</ref> object. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function reads raw data from the provided <ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref> and populates an <ref refid="struct_a_g_e_1_1_a_g_e_node_link" kindref="compound">AGENodeLink</ref> object with it. The data read includes IDs for the node link, start pin ID, end pin ID, and color of the link.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Serializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to a <ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref> that provides the serialized data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An <ref refid="struct_a_g_e_1_1_a_g_e_node_link" kindref="compound">AGENodeLink</ref> object where the deserialized data will be stored.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void</para>
+</simplesect>
+Deserialize function for <ref refid="struct_a_g_e_1_1_a_g_e_node_link" kindref="compound">AGENodeLink</ref> data structure. This function reads raw data from a <ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref> object and populates an <ref refid="struct_a_g_e_1_1_a_g_e_node_link" kindref="compound">AGENodeLink</ref> object with the deserialized data.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Serializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the <ref refid="class_a_g_e_1_1_data_reader" kindref="compound">DataReader</ref> object that provides the serialized data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to the <ref refid="struct_a_g_e_1_1_a_g_e_node_link" kindref="compound">AGENodeLink</ref> object where the deserialized data will be stored. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" line="867" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" bodystart="867" bodyend="879"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" line="1152" column="13" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" bodystart="1152" bodyend="1164"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" line="840" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" bodystart="841" bodyend="880"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" line="1054" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/VisualScripting/Public/VisualScriptingStructs.h" bodystart="1055" bodyend="1165"/>
     <listofallmembers>
       <member refid="struct_a_g_e_1_1_a_g_e_node_link_1a49ebb57ba5105dbf74296349fb35a79c" prot="public" virt="non-virtual"><scope>AGE::AGENodeLink</scope><name>AGENodeLink</name></member>
       <member refid="struct_a_g_e_1_1_a_g_e_node_link_1adcb04b537a07b9c5da1fffc0ec65bd0f" prot="public" virt="non-virtual"><scope>AGE::AGENodeLink</scope><name>AGENodeLink</name></member>

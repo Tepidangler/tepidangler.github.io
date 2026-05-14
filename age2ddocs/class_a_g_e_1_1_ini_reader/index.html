@@ -88,50 +88,104 @@
 <tbody>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-inireader"><strong>IniReader</strong></a> (const std::filesystem::path &amp; Path) <br></td>
+<td style="text-align: left;"><a href="#function-inireader"><strong>IniReader</strong></a> (const std::filesystem::path &amp; Path) <br><em>Constructor for the</em> <a href="./"><em><strong>IniReader</strong></em></a> <em>class. Takes a path to an .ini file as input and loads it into memory.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">std::string</td>
-<td style="text-align: left;"><a href="#function-read"><strong>Read</strong></a> (const std::string &amp; Section, const std::string &amp; Key, bool &amp; HasMultipleValues) <br></td>
+<td style="text-align: left;"><a href="#function-read"><strong>Read</strong></a> (const std::string &amp; Section, const std::string &amp; Key, bool &amp; HasMultipleValues) <br><em>This function reads a value from the INI file.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">std::vector&lt; std::string &gt;</td>
-<td style="text-align: left;"><a href="#function-readall"><strong>ReadAll</strong></a> (const std::string &amp; Section, const std::string &amp; Key) <br></td>
+<td style="text-align: left;"><a href="#function-readall"><strong>ReadAll</strong></a> (const std::string &amp; Section, const std::string &amp; Key) <br><em>Reads all values associated with a given key in a specified section of the INI file.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-inireader"><strong>~IniReader</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-inireader"><strong>~IniReader</strong></a> () = default<br><em>Destructor for the</em> <a href="./"><em><strong>IniReader</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-inireader">function IniReader</h3>
+<p><em>Constructor for the</em> <a href="./"><em><strong>IniReader</strong></em></a> <em>class. Takes a path to an .ini file as input and loads it into memory.</em></p>
 <pre><code class="language-C++">AGE::IniReader::IniReader (
     const std::filesystem::path &amp; Path
 ) 
 </code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Path</code> The filesystem path to the .ini file that will be loaded.</li>
+</ul>
+<p>Constructor for the <a href="./"><strong>IniReader</strong></a> class. It takes a file path as input and loads the INI file at that location into memory. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Path</code> The filesystem path to the INI file which is to be loaded. </li>
+</ul>
 <hr>
 
 <h3 id="function-read">function Read</h3>
+<p><em>This function reads a value from the INI file.</em> </p>
 <pre><code class="language-C++">std::string AGE::IniReader::Read (
     const std::string &amp; Section,
     const std::string &amp; Key,
     bool &amp; HasMultipleValues
 ) 
 </code></pre>
+<p>The function retrieves a value associated with a given key in a specified section of the INI file. If the key does not exist, it logs an error message and returns an empty string.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Section</code> The name of the section to read from. </li>
+<li><code>Key</code> The key for which to retrieve a value. </li>
+<li><code>HasMultipleValues</code> A flag indicating whether the key has multiple values in the INI file.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Returns the value associated with the given key, or an empty string if the key does not exist.</p>
+<p>This function reads a value from the INI file.</p>
+<p>The function takes three parameters - section name, key and a boolean reference to indicate if there are multiple values for the given key in the specified section. It returns an empty string if it fails to read the value or the key-value pair does not exist.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Section</code> A constant reference to the section name where the key is located. </li>
+<li><code>Key</code> A constant reference to the key whose value needs to be retrieved. </li>
+<li><code>HasMultipleValues</code> A boolean reference that indicates if there are multiple values for the given key in the specified section.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Returns a string containing the value of the key-value pair, or an empty string if it fails to read the value or the key-value pair does not exist. </p>
 <hr>
 
 <h3 id="function-readall">function ReadAll</h3>
+<p><em>Reads all values associated with a given key in a specified section of the INI file.</em> </p>
 <pre><code class="language-C++">std::vector&lt; std::string &gt; AGE::IniReader::ReadAll (
     const std::string &amp; Section,
     const std::string &amp; Key
 ) 
 </code></pre>
+<p>This function retrieves all values associated with a specific key within a particular section of the INI file. If no such key exists, it logs an error message and returns an empty vector. The results are sorted based on their load order as defined by CSimpleIniA::Entry::LoadOrder().</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Section</code> A string representing the name of the section in the INI file to be read from. </li>
+<li><code>Key</code> A string representing the key whose values are to be retrieved. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A vector of strings containing all values associated with the provided key in the specified section, sorted based on their load order. If no such key exists, an empty vector is returned.</p>
+<p>Reads all values associated with a given key in a specified section of the INI file.</p>
+<p>This function retrieves all values associated with a specific key within a particular section of the INI file. If no such key exists, it returns an empty vector.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Section</code> The name of the section to search for keys in. </li>
+<li><code>Key</code> The key whose associated values are being retrieved. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A vector containing all values associated with the provided key in the specified section. If no such key exists, it returns an empty vector. </p>
 <hr>
 
 <h3 id="function-inireader_1">function ~IniReader</h3>
+<p><em>Destructor for the</em> <a href="./"><em><strong>IniReader</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::IniReader::~IniReader () = default
 </code></pre>
+<p>This function is responsible for freeing any resources that were allocated during the lifetime of an instance of this class.</p>
+<p>Destructor for the <a href="./"><strong>IniReader</strong></a> class.</p>
+<p>This function is responsible for freeing any resources that were allocated during the lifetime of an instance of this class, such as memory or file handles. It's important to ensure that all resources are properly released when they are no longer needed to prevent potential memory leaks or other issues in your program.</p>
+<p><strong>Returns:</strong></p>
+<p>void </p>
 <hr>
 
 <hr />

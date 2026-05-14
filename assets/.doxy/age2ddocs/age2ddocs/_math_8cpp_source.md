@@ -62,7 +62,7 @@ namespace AGE
 {
 
 
-    bool Math::IntersectThreePlanes(const Plane& f1, const Plane& f2, const Plane& f3, Point3D* p)
+bool Math::IntersectThreePlanes(const Plane& f1, const Plane& f2, const Plane& f3, Point3D* p)
     {
         const Vector3& n1 = f1.GetNormal();
         const Vector3& n2 = f2.GetNormal();
@@ -78,7 +78,8 @@ namespace AGE
         return false;
     }
 
-    bool Math::IntersectTwoPlanes(const Plane& f1, const Plane& f2, Point3D* p, Vector3* v)
+    
+bool Math::IntersectTwoPlanes(const Plane& f1, const Plane& f2, Point3D* p, Vector3* v)
     {
         const Vector3& n1 = f1.GetNormal();
         const Vector3& n2 = f2.GetNormal();
@@ -93,25 +94,25 @@ namespace AGE
         return false;
     }
 
-    float Math::DistPointLine2D(const Vector2& q, const Vector2& v)
+float Math::DistPointLine2D(const Vector2& q, const Vector2& v)
     {
         //Vector2 a = CrossProduct2D(q, v);
         return 0.0f;
     }
 
-    float Math::DistLineLine2D(const Vector2& p1, const Vector2& v1)
+float Math::DistLineLine2D(const Vector2& p1, const Vector2& v1)
     {
         return 0.0f;
     }
 
-    float Math::DistPointLine3D(const Point3D& q, const Point3D& p, const Vector3& v)
+float Math::DistPointLine3D(const Point3D& q, const Point3D& p, const Vector3& v)
     {
         Vector3 a = CrossProduct(q - p, v);
 
         return (std::sqrt(DotProduct3D(a, a) / DotProduct3D(v, v)));
     }
 
-    float Math::DistLineLine3D(const Point3D& p1, const Vector3& v1, const Point3D& p2, const Vector3& v2)
+float Math::DistLineLine3D(const Point3D& p1, const Vector3& v1, const Point3D& p2, const Vector3& v2)
     {
         Vector3 dp = p2 - p1;
 
@@ -136,7 +137,7 @@ namespace AGE
         return (std::sqrt(DotProduct3D(a, a) / v12));
     }
 
-    float Math::Determinant(const Matrix3D& M)
+float Math::Determinant(const Matrix3D& M)
     {
         return (
             M(0, 0) * (M(1, 1) * M(2, 2) - M(1, 2) * M(2, 1)) +
@@ -144,7 +145,7 @@ namespace AGE
             M(0, 2) * (M(1, 0) * M(2, 1) - M(1, 1) * M(2, 0)));
     }
 
-    Matrix3D Math::Inverse(const Matrix3D& M)
+Matrix3D Math::Inverse(const Matrix3D& M)
     {
         const Vector3& a = M[0];
         const Vector3& b = M[1];
@@ -162,7 +163,7 @@ namespace AGE
             r2[0] * invDet, r2[1] * invDet, r2[2] * invDet));
     }
 
-    Matrix4D Math::Inverse(const Matrix4D& M)
+Matrix4D Math::Inverse(const Matrix4D& M)
     {
         //const Vector4& a = M[0];
         //const Vector4& b = M[1];
@@ -178,7 +179,7 @@ namespace AGE
         return Matrix4D();
     }
 
-    bool Math::IntersectLinePlane(const Point3D& p, const Vector3& v, const Plane& f, Point3D* q)
+bool Math::IntersectLinePlane(const Point3D& p, const Vector3& v, const Plane& f, Point3D* q)
     {
         float fv = DotProductPlaneVector(f, v);
         if (std::fabs(fv) > FLT_MIN)
@@ -190,7 +191,7 @@ namespace AGE
         return false;
     }
 
-    Matrix3D Math::MakeRotationX(float t)
+Matrix3D Math::MakeRotationX(float t)
     {
         float c = std::cos(t);
         float s = std::sin(t);
@@ -201,7 +202,7 @@ namespace AGE
             0.f, s, c));
     }
 
-    Matrix3D Math::MakeRotationY(float t)
+Matrix3D Math::MakeRotationY(float t)
     {
         float c = std::cos(t);
         float s = std::sin(t);
@@ -213,7 +214,7 @@ namespace AGE
             -s, 0.f, c));
     }
 
-    Matrix3D Math::MakeRotationZ(float t)
+Matrix3D Math::MakeRotationZ(float t)
     {
 
         float c = std::cos(t);
@@ -226,7 +227,10 @@ namespace AGE
             0.f, 0.f, 1.f));
     }
 
-    Matrix3D Math::MakeRotation(float t, const Vector3& a)
+    COMMENT:
+CONFIDENCE: 1.0;
+
+Matrix3D Math::MakeRotation(float t, const Vector3& a)
     {
 
         float c = std::cos(t);
@@ -246,7 +250,7 @@ namespace AGE
             axaz - s * a[1], ayaz + s * a[0], c + z * a[2]));
     }
 
-    Matrix4D Math::MakeRotation(float t, const Vector4& a)
+Matrix4D Math::MakeRotation(float t, const Vector4& a)
     {
 
         float c = std::cos(t);
@@ -266,7 +270,10 @@ namespace AGE
             axaz - s * a[1], ayaz + s * a[0], c + z * a[2],0.f,
             0.f,0.f,0.f,1.f));
     }
-    Matrix3D Math::MakeReflection(const Vector3& a)
+    COMMENT:
+CONFIDENCE: 1.0;
+
+Matrix3D Math::MakeReflection(const Vector3& a)
     {
         float x = a[0] * -2.f;
         float y = a[1] * -2.f;
@@ -283,7 +290,7 @@ namespace AGE
             axaz, ayaz, z * a[2] + 1.f));
     }
 
-    Matrix3D Math::MakeInvolution(const Vector3& a)
+Matrix3D Math::MakeInvolution(const Vector3& a)
     {
         float x = a[0] * 2.f;
         float y = a[1] * 2.f;
@@ -300,7 +307,7 @@ namespace AGE
             axaz, ayaz, z * a[2] - 1.f));
     }
 
-    Matrix3D Math::MakeScale(float s, const Vector3& a)
+Matrix3D Math::MakeScale(float s, const Vector3& a)
     {
         s -= 1.f;
         float x = a[0] * s;
@@ -318,7 +325,7 @@ namespace AGE
             axaz, ayaz, z * a[2] + 1.f));
     }
 
-    Matrix4D Math::MakeScale(Matrix4D M, const Vector4& a)
+Matrix4D Math::MakeScale(Matrix4D M, const Vector4& a)
     {
         M[0][0] *= a.x;
         M[1][1] *= a.y;
@@ -333,7 +340,7 @@ namespace AGE
         //  x, y, z, w);
     }
 
-    Matrix4D Math::Translate(Matrix4D M, const Vector4& a)
+Matrix4D Math::Translate(Matrix4D M, const Vector4& a)
     {
         M[0][0] += a.x;
         M[1][1] += a.y;
@@ -349,7 +356,7 @@ namespace AGE
         //  x, y, z, w);
     }
 
-    Matrix3D Math::MakeSkew(float t, const Vector3& a, const Vector3& b)
+Matrix3D Math::MakeSkew(float t, const Vector3& a, const Vector3& b)
     {
         t = std::tan(t);
         float x = a[0] * t;
@@ -362,7 +369,7 @@ namespace AGE
             z * b[0], z * b[1], z * b[2] + 1.f));
     }
 
-    Transform4D Math::Inverse(const Transform4D& H)
+Transform4D Math::Inverse(const Transform4D& H)
     {
         const Vector3& a = H[0];
         const Vector3& b = H[1];
@@ -388,7 +395,7 @@ namespace AGE
             s[0], s[1], s[2], -DotProduct3D(d, s)));
     }
 
-    Vector3 Math::Transform(const Vector3& v, const Quaternion& q)
+Vector3 Math::Transform(const Vector3& v, const Quaternion& q)
     {
         const Vector3& b = q.GetVectorPart();
         float b2 = b[0] * b[0] + b[1] * b[1] + b[2] * b[2];
@@ -400,7 +407,7 @@ namespace AGE
 
     }
 
-    Transform4D Math::MakeReflection(const Plane& f)
+Transform4D Math::MakeReflection(const Plane& f)
     {
         float x = f.x * -2.f;
         float y = f.y * -2.f;
@@ -415,7 +422,7 @@ namespace AGE
             nxnz, nynz, z * f.z + 1.f, z * f.w));
     }
 
-    Matrix4D Math::MakeTransform(const Vector3 &Position, const Vector3 &Rotation, const Vector3 &Scale)
+Matrix4D Math::MakeTransform(const Vector3 &Position, const Vector3 &Rotation, const Vector3 &Scale)
     {
 
         Matrix4D Rot = glm::toMat4((glm::quat)*const_cast<Vector3*>(&Rotation));
@@ -425,7 +432,8 @@ namespace AGE
 
     }
 
-    bool Math::DecomposeTransform(const Matrix4D& Transform, Vector3& Translation, Vector3& Rotation, Vector3& Scale)
+
+bool Math::DecomposeTransform(const Matrix4D& Transform, Vector3& Translation, Vector3& Rotation, Vector3& Scale)
     {
         // From glm::decompose in matrix_decompose.inl
 
@@ -500,7 +508,7 @@ namespace AGE
     }
     
 
-    Matrix3D Quaternion::GetRotationMatrix(void)
+Matrix3D Quaternion::GetRotationMatrix(void)
     {
         float x2 = x * x;
         float y2 = y * y;
@@ -519,7 +527,8 @@ namespace AGE
 
     }
 
-    void Quaternion::SetRotationMatrix(const Matrix3D& m)
+
+void Quaternion::SetRotationMatrix(const Matrix3D& m)
     {
         float m00 = m(0, 0);
         float m11 = m(1, 1);

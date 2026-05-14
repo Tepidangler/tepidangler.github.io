@@ -14,7 +14,8 @@
 
 namespace AGE
 {
-    static b2BodyType Rigid2DTypeToBox2DBody(BodyType BodyType)
+    st
+atic b2BodyType Rigid2DTypeToBox2DBody(BodyType BodyType)
     {
         switch (BodyType)
         {
@@ -32,11 +33,12 @@ namespace AGE
         }
         }
 
-        AGE_CORE_ASSERT(false, "Unknown Body Type");
+        CoreLogger::Assert(false, "Unknown Body Type");
         return b2_staticBody;
     }
 
-    World2D::World2D(Ref<Scene> scene)
+    Wo
+rld2D::World2D(Ref<Scene> scene)
         :m_WorldScene(scene)
     {
         CoreLogger::Trace("Initializing World {}", scene->GetName());
@@ -45,7 +47,8 @@ namespace AGE
         m_World = b2CreateWorld(&WorldDef);
     }
 
-    World2D::~World2D()
+    Wo
+rld2D::~World2D()
     {
         if (b2World_IsValid(m_World))
         { 
@@ -53,24 +56,28 @@ namespace AGE
         }
     }
 
-    void World2D::DestroyWorld()
+    vo
+id World2D::DestroyWorld()
     {
         b2DestroyWorld(m_World);
     }
 
-    void World2D::Step(TimeStep DeltaTime)
+    vo
+id World2D::Step(TimeStep DeltaTime)
     {
         const int32_t SubStepCount = 4;
 
         b2World_Step(m_World, DeltaTime, SubStepCount);
     }
 
-    void World2D::MakeDefaultQueryFilter()
+    vo
+id World2D::MakeDefaultQueryFilter()
     {
         m_QueryFilter = b2DefaultQueryFilter(); 
     }
 
-    void World2D::QueryBoxOverlap(const QueryParams& Params)
+    vo"This function queries for overlaps within a 2D world using Box2D. It takes as input a QueryParams struct containing all necessary parameters for the overlap query."
+id World2D::QueryBoxOverlap(const QueryParams& Params)
     {
         [[maybe_unused]] Box2DQueryContext QC = { Params.Point2D,Params.InstigatorID };
         b2ShapeProxy Proxy{};
@@ -85,7 +92,8 @@ namespace AGE
         b2World_OverlapShape(m_World, &Proxy,GetQueryFilter(),Params.OverlapFunc2D, Params.Context);
     }
 
-    void World2D::QueryCapsuleOverlap(const QueryParams& Params)
+    vo
+id World2D::QueryCapsuleOverlap(const QueryParams& Params)
     {
         [[maybe_unused]] Box2DQueryContext QC = { Params.Point2D,Params.InstigatorID };
         b2ShapeProxy Proxy{};
@@ -99,7 +107,8 @@ namespace AGE
         b2World_OverlapShape(m_World, &Proxy,GetQueryFilter(),Params.OverlapFunc2D, Params.Context);
     }
 
-    void World2D::QuerySegmentOverlap(const QueryParams& Params)
+    vo"Unknown"
+id World2D::QuerySegmentOverlap(const QueryParams& Params)
     {
 
         Box2DQueryContext QC = { Params.Point2D,Params.InstigatorID };
@@ -110,7 +119,8 @@ namespace AGE
         b2World_OverlapAABB(m_World, SegAABB, GetQueryFilter(), Params.OverlapFunc2D, &QC);
     }
 
-    void World2D::QueryHit(const QueryParams& Params)
+    vo
+id World2D::QueryHit(const QueryParams& Params)
     {
         Box2DQueryContext QC = { Params.Point2D, Params.InstigatorID };
         b2Vec2 Origin = { Params.Point2D.x, Params.Point2D.y };
@@ -120,7 +130,8 @@ namespace AGE
         b2World_CastRay(m_World, Origin, Translation, GetQueryFilter(), Params.CastFunc2D, &QC);
     }
 
-    b2BodyDef World2D::MakeBodyDefinition(const BodyType& Type, const Vector3& Translation, const Vector3& Rotation, bool IsRotationFixed, void* UserData)
+    b2
+BodyDef World2D::MakeBodyDefinition(const BodyType& Type, const Vector3& Translation, const Vector3& Rotation, bool IsRotationFixed, void* UserData)
     {
         b2BodyDef Def = b2DefaultBodyDef();
 
@@ -135,7 +146,8 @@ namespace AGE
         return Def;
     }
 
-    b2ShapeDef World2D::MakeShapeDefinition(float Density, float Friction, float Restitution, bool ShouldGenerateEvents, void* UserData)
+    b2
+ShapeDef World2D::MakeShapeDefinition(float Density, float Friction, float Restitution, bool ShouldGenerateEvents, void* UserData)
     {
         b2ShapeDef Fixture = b2DefaultShapeDef();
         Fixture.userData = UserData;
@@ -148,22 +160,26 @@ namespace AGE
         return Fixture;
     }
 
-    b2Rot World2D::MakeRotation(float Z)
+    b2
+Rot World2D::MakeRotation(float Z)
     {
         return b2MakeRot(Z);
     }
 
-    b2Polygon World2D::CreateBox(float HeightX, float HeightY, const Vector3& Scale)
+    b2
+Polygon World2D::CreateBox(float HeightX, float HeightY, const Vector3& Scale)
     {
         return b2MakeBox(HeightX * Scale.x, HeightY * Scale.y);
     }
 
-    b2ShapeId World2D::CreatePolygonShape(const b2BodyId& ID, const b2ShapeDef& Fixture, const b2Polygon& Box)
+    b2
+ShapeId World2D::CreatePolygonShape(const b2BodyId& ID, const b2ShapeDef& Fixture, const b2Polygon& Box)
     {
         return b2CreatePolygonShape(ID, &Fixture, &Box);
     }
 
-    b2Capsule World2D::CreateCapsule(const Vector2& Offset, const Vector3& Scale, const float Radius)
+    b2
+Capsule World2D::CreateCapsule(const Vector2& Offset, const Vector3& Scale, const float Radius)
     {
         b2Capsule Capsule;
         Capsule.center1 = { Offset.x * Scale.x, Offset.y * Scale.y };
@@ -173,68 +189,81 @@ namespace AGE
         return Capsule;
     }
 
-    b2ShapeId World2D::CreateCapsuleShape(const b2BodyId& ID, const b2ShapeDef& Fixture, const b2Capsule& Capsule)
+    b2
+ShapeId World2D::CreateCapsuleShape(const b2BodyId& ID, const b2ShapeDef& Fixture, const b2Capsule& Capsule)
     {
         return b2CreateCapsuleShape(ID, &Fixture, &Capsule);
     }
 
-    b2Segment World2D::CreateSegment()
+    b2
+Segment World2D::CreateSegment()
     {
         return { {0.f, 0.f},{1.f, 0.f} };
     }
 
-    b2ShapeId World2D::CreateSegmentShape(const b2BodyId& ID, const b2ShapeDef& Fixture, const b2Segment& Segment)
+    b2
+ShapeId World2D::CreateSegmentShape(const b2BodyId& ID, const b2ShapeDef& Fixture, const b2Segment& Segment)
     {
         return b2CreateSegmentShape(ID, &Fixture, &Segment);
     }
 
-    b2BodyId World2D::CreateBody(b2BodyDef& Def)
+    b2
+BodyId World2D::CreateBody(b2BodyDef& Def)
     {
         return b2CreateBody(m_World, &Def);;
     }
 
-    b2BodyId World2D::GetBody(const b2ShapeId& ID)
+    b2
+BodyId World2D::GetBody(const b2ShapeId& ID)
     {
         return b2Shape_GetBody(ID);
     }
 
-    Vector2 World2D::GetBodyPosition(const b2BodyId& ID)
+    Ve
+ctor2 World2D::GetBodyPosition(const b2BodyId& ID)
     {
         b2Vec2 Vec = b2Body_GetPosition(ID);
         return Vector2(Vec.x, Vec.y);
     }
 
-    b2Polygon World2D::GetPolygon(const b2ShapeId& ID)
+    b2
+Polygon World2D::GetPolygon(const b2ShapeId& ID)
     {
         return b2Shape_GetPolygon(ID);
     }
 
-    b2Capsule World2D::GetCapsule(const b2ShapeId& ID)
+    b2
+Capsule World2D::GetCapsule(const b2ShapeId& ID)
     {
         return b2Shape_GetCapsule(ID);
     }
 
-    float World2D::GetRotationAngle(const b2BodyId& ID)
+    fl
+oat World2D::GetRotationAngle(const b2BodyId& ID)
     {
         return Math::Degrees(b2Rot_GetAngle(b2Body_GetRotation(ID)));
     }
 
-    void* World2D::GetUserData(const b2ShapeId& ID)
+    vo
+id* World2D::GetUserData(const b2ShapeId& ID)
     {
         return b2Shape_GetUserData(ID);
     }
 
-    b2WorldId& World2D::GetWorld()
+    b2
+WorldId& World2D::GetWorld()
     {
         return m_World;
     }
-    Ref<Scene>& World2D::GetWorldScene()
+    Re
+f<Scene>& World2D::GetWorldScene()
     {
         return m_WorldScene;
     }
 
     template<>
-    World2D* World::As()
+    Wo
+rld2D* World::As()
     {
         return (World2D*)this;
     }

@@ -77,7 +77,6 @@
               
                 <h1 id="class-agetilemap">Class AGE::Tilemap</h1>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespace_a_g_e/"><strong>AGE</strong></a> <strong>&gt;</strong> <a href="./"><strong>Tilemap</strong></a></p>
-<p>Inherits the following classes: std::enable_shared_from_this&lt; Tilemap &gt;</p>
 <h2 id="public-functions">Public Functions</h2>
 <table>
 <thead>
@@ -88,145 +87,116 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-binddata"><strong>BindData</strong></a> () <br></td>
-</tr>
-<tr>
-<td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-buildtilemapdata"><strong>BuildTilemapData</strong></a> () <br></td>
-</tr>
-<tr>
 <td style="text-align: right;"><a href="../class_a_g_e_1_1_u_u_i_d/"><strong>UUID</strong></a></td>
-<td style="text-align: left;"><a href="#function-getassetid"><strong>GetAssetID</strong></a> () <br></td>
-</tr>
-<tr>
-<td style="text-align: right;">std::vector&lt; <a href="../struct_a_g_e_1_1_tileset_data/"><strong>TilesetData</strong></a> &gt; &amp;</td>
-<td style="text-align: left;"><a href="#function-getdata"><strong>GetData</strong></a> () <br></td>
-</tr>
-<tr>
-<td style="text-align: right;">std::pair&lt; uint32_t, uint32_t &gt;</td>
-<td style="text-align: left;"><a href="#function-getmapdimensions"><strong>GetMapDimensions</strong></a> () <br></td>
-</tr>
-<tr>
-<td style="text-align: right;">const uint32_t</td>
-<td style="text-align: left;"><a href="#function-getnumberoflayers"><strong>GetNumberOfLayers</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getassetid"><strong>GetAssetID</strong></a> () <br><em>This function returns the asset ID of an object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">std::filesystem::path</td>
-<td style="text-align: left;"><a href="#function-getpath"><strong>GetPath</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-getpath"><strong>GetPath</strong></a> () const<br><em>Returns the path stored in the object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">Ref&lt; <a href="../class_a_g_e_1_1_scene/"><strong>Scene</strong></a> &gt;</td>
-<td style="text-align: left;"><a href="#function-getscene"><strong>GetScene</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getscene"><strong>GetScene</strong></a> () <br><em>Retrieves the current scene object.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;">std::map&lt; uint32_t, std::vector&lt; <a href="../struct_a_g_e_1_1_vector2/"><strong>Vector2</strong></a> * &gt; &gt; &amp;</td>
-<td style="text-align: left;"><a href="#function-getuvs"><strong>GetUVs</strong></a> () <br></td>
-</tr>
-<tr>
-<td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setpath"><strong>SetPath</strong></a> (const std::filesystem::path &amp; Path) <br></td>
+<td style="text-align: right;">Ref&lt; <a href="../class_a_g_e_1_1_texture/"><strong>Texture</strong></a> &gt;</td>
+<td style="text-align: left;"><a href="#function-gettexture"><strong>GetTexture</strong></a> () <br><em>Gets the texture associated with this</em> <a href="./"><em><strong>Tilemap</strong></em></a> <em>object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setscene"><strong>SetScene</strong></a> (Ref&lt; <a href="../class_a_g_e_1_1_scene/"><strong>Scene</strong></a> &gt; &amp; scene) <br></td>
+<td style="text-align: left;"><a href="#function-setdata"><strong>SetData</strong></a> (Ref&lt; <a href="../class_a_g_e_1_1_texture/"><strong>Texture</strong></a> &gt; Atlas, std::filesystem::path &amp; path) <br><em>Sets the data for the tilemap.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setshaderdata"><strong>SetShaderData</strong></a> () <br></td>
-</tr>
-<tr>
-<td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-settilelocations"><strong>SetTileLocations</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-setscene"><strong>SetScene</strong></a> (Ref&lt; <a href="../class_a_g_e_1_1_scene/"><strong>Scene</strong></a> &gt; scene) <br><em>Sets the</em> <a href="../class_a_g_e_1_1_scene/"><em><strong>Scene</strong></em></a> <em>for the</em><a href="./"><em><strong>Tilemap</strong></em></a> <em>object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-tilemap"><strong>Tilemap</strong></a> (tmx_map * Map) <br></td>
+<td style="text-align: left;"><a href="#function-tilemap"><strong>Tilemap</strong></a> (tmx_map * Map) <br><em>Constructs a</em> <a href="./"><em><strong>Tilemap</strong></em></a> <em>object from a tmx_map pointer.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-tilemap"><strong>~Tilemap</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-tilemap"><strong>~Tilemap</strong></a> () <br><em>Destructor for the</em> <a href="./"><em><strong>Tilemap</strong></em></a> <em>class.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
-<h3 id="function-binddata">function BindData</h3>
-<pre><code class="language-C++">void AGE::Tilemap::BindData () 
-</code></pre>
-<hr>
-
-<h3 id="function-buildtilemapdata">function BuildTilemapData</h3>
-<pre><code class="language-C++">void AGE::Tilemap::BuildTilemapData () 
-</code></pre>
-<hr>
-
 <h3 id="function-getassetid">function GetAssetID</h3>
+<p><em>This function returns the asset ID of an object.</em> </p>
 <pre><code class="language-C++">inline UUID AGE::Tilemap::GetAssetID () 
 </code></pre>
-<hr>
-
-<h3 id="function-getdata">function GetData</h3>
-<pre><code class="language-C++">inline std::vector&lt; TilesetData &gt; &amp; AGE::Tilemap::GetData () 
-</code></pre>
-<hr>
-
-<h3 id="function-getmapdimensions">function GetMapDimensions</h3>
-<pre><code class="language-C++">inline std::pair&lt; uint32_t, uint32_t &gt; AGE::Tilemap::GetMapDimensions () 
-</code></pre>
-<hr>
-
-<h3 id="function-getnumberoflayers">function GetNumberOfLayers</h3>
-<pre><code class="language-C++">const uint32_t AGE::Tilemap::GetNumberOfLayers () 
-</code></pre>
+<p><strong>Returns:</strong></p>
+<p><a href="../class_a_g_e_1_1_u_u_i_d/"><strong>UUID</strong></a> The unique identifier for the asset. </p>
 <hr>
 
 <h3 id="function-getpath">function GetPath</h3>
+<p><em>Returns the path stored in the object.</em> </p>
 <pre><code class="language-C++">inline std::filesystem::path AGE::Tilemap::GetPath () const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>The path as a std::filesystem::path object. </p>
 <hr>
 
 <h3 id="function-getscene">function GetScene</h3>
+<p><em>Retrieves the current scene object.</em> </p>
 <pre><code class="language-C++">inline Ref&lt; Scene &gt; AGE::Tilemap::GetScene () 
 </code></pre>
+<p>This function returns a reference to the currently active scene in the application. The returned <a href="../class_a_g_e_1_1_scene/"><strong>Scene</strong></a> object can be used for various operations such as rendering, updating, and interacting with the objects within it.</p>
+<p><strong>Returns:</strong></p>
+<p>A reference to the current scene (Ref&lt;Scene&gt;). If no scene is set, this function will return an empty reference. </p>
 <hr>
 
-<h3 id="function-getuvs">function GetUVs</h3>
-<pre><code class="language-C++">inline std::map&lt; uint32_t, std::vector&lt; Vector2 * &gt; &gt; &amp; AGE::Tilemap::GetUVs () 
+<h3 id="function-gettexture">function GetTexture</h3>
+<p><em>Gets the texture associated with this</em> <a href="./"><em><strong>Tilemap</strong></em></a> <em>object.</em></p>
+<pre><code class="language-C++">inline Ref&lt; Texture &gt; AGE::Tilemap::GetTexture () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A reference to the <a href="../class_a_g_e_1_1_texture/"><strong>Texture</strong></a> object that is used by this <a href="./"><strong>Tilemap</strong></a>. </p>
 <hr>
 
-<h3 id="function-setpath">function SetPath</h3>
-<pre><code class="language-C++">inline void AGE::Tilemap::SetPath (
-    const std::filesystem::path &amp; Path
+<h3 id="function-setdata">function SetData</h3>
+<p><em>Sets the data for the tilemap.</em> </p>
+<pre><code class="language-C++">void AGE::Tilemap::SetData (
+    Ref&lt; Texture &gt; Atlas,
+    std::filesystem::path &amp; path
 ) 
 </code></pre>
+<p>This function sets the texture atlas and file path for the tilemap. The Atlas parameter is moved into the m_AtlasTexture member variable, while the path parameter is assigned to m_Path. After this operation, both parameters are cleared. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Atlas</code> A reference to a <a href="../class_a_g_e_1_1_texture/"><strong>Texture</strong></a> object that will be used as the texture atlas for the tilemap. </li>
+<li><code>path</code> The file path of the tilemap data. </li>
+</ul>
 <hr>
 
 <h3 id="function-setscene">function SetScene</h3>
+<p><em>Sets the</em> <a href="../class_a_g_e_1_1_scene/"><em><strong>Scene</strong></em></a> <em>for the</em><a href="./"><em><strong>Tilemap</strong></em></a> <em>object.</em></p>
 <pre><code class="language-C++">void AGE::Tilemap::SetScene (
-    Ref&lt; Scene &gt; &amp; scene
+    Ref&lt; Scene &gt; scene
 ) 
 </code></pre>
-<hr>
-
-<h3 id="function-setshaderdata">function SetShaderData</h3>
-<pre><code class="language-C++">void AGE::Tilemap::SetShaderData () 
-</code></pre>
-<hr>
-
-<h3 id="function-settilelocations">function SetTileLocations</h3>
-<pre><code class="language-C++">void AGE::Tilemap::SetTileLocations () 
-</code></pre>
+<p>This function sets the <a href="../class_a_g_e_1_1_scene/"><strong>Scene</strong></a> member variable of the <a href="./"><strong>Tilemap</strong></a> class to a given Ref&lt;Scene&gt; object. It takes in one parameter, which is the new scene that will be set.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>scene</code> The new <a href="../class_a_g_e_1_1_scene/"><strong>Scene</strong></a> to be set for the <a href="./"><strong>Tilemap</strong></a> object. </li>
+</ul>
 <hr>
 
 <h3 id="function-tilemap">function Tilemap</h3>
+<p><em>Constructs a</em> <a href="./"><em><strong>Tilemap</strong></em></a> <em>object from a tmx_map pointer.</em></p>
 <pre><code class="language-C++">AGE::Tilemap::Tilemap (
     tmx_map * Map
 ) 
 </code></pre>
+<p>This function takes in a pointer to a tmx_map structure and assigns it to the member variable m_Map. The purpose of this constructor is to initialize an instance of the <a href="./"><strong>Tilemap</strong></a> class with a map data structure.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Map</code> Pointer to a tmx_map object containing the map data. </li>
+</ul>
 <hr>
 
 <h3 id="function-tilemap_1">function ~Tilemap</h3>
+<p><em>Destructor for the</em> <a href="./"><em><strong>Tilemap</strong></em></a> <em>class.</em></p>
 <pre><code class="language-C++">AGE::Tilemap::~Tilemap () 
 </code></pre>
 <hr>

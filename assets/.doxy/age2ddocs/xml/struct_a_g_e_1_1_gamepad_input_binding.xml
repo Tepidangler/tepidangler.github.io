@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="165" column="18" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="165" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="298" column="18" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="298" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_a_g_e_1_1_gamepad_input_binding_1aed3e19085aa42d918d17347a5e98796b" prot="public" static="no" mutable="no">
         <type>GamePad::Axes</type>
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="166" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="166" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="299" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="299" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_a_g_e_1_1_gamepad_input_binding_1a6f0976f2ef11d8155faa50928a4d2954" prot="public" static="no" mutable="no">
         <type>Binding::Type</type>
@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="167" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="167" bodyend="-1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="300" column="15" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="300" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -65,12 +65,32 @@
           <declname>type</declname>
         </param>
         <briefdescription>
+<para>Constructor for <ref refid="struct_a_g_e_1_1_gamepad_input_binding" kindref="compound">GamepadInputBinding</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This constructor initializes a new instance of the <ref refid="struct_a_g_e_1_1_gamepad_input_binding" kindref="compound">GamepadInputBinding</ref> class with the given name and type. It sets default values for some member variables such as bPaired, bConsumeInput, bExecuteWhenPaused, m_Handle, and m_State.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the binding. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the binding (Keyboard, Mouse etc.). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="114" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="114" bodyend="123"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="221" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="221" bodyend="230"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_gamepad_input_binding_1aa97c089aef2ade297768293ba402521b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -91,12 +111,41 @@
           <declname>type</declname>
         </param>
         <briefdescription>
+<para><ref refid="struct_a_g_e_1_1_gamepad_input_binding" kindref="compound">GamepadInputBinding</ref> is a constructor for the class that initializes an instance of <ref refid="struct_a_g_e_1_1_gamepad_input_binding" kindref="compound">GamepadInputBinding</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the binding, which will be used to identify it in the gamepad input system. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>button</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The specific button on the gamepad that this binding corresponds to. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the binding (e.&lt;｜begin▁of▁sentence｜&gt;croll down for more details).</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>None </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="124" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="124" bodyend="133"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="239" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="239" bodyend="248"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_gamepad_input_binding_1ac35b6ecee822ae01faec72275b6a6e04" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -117,12 +166,39 @@
           <declname>type</declname>
         </param>
         <briefdescription>
+<para><ref refid="struct_a_g_e_1_1_gamepad_input_binding" kindref="compound">GamepadInputBinding</ref> is a constructor for the class that initializes an instance of <ref refid="struct_a_g_e_1_1_gamepad_input_binding" kindref="compound">GamepadInputBinding</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the input binding, represented as a string_view reference. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>axes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Axes represents the axes of the gamepad input. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type represents the type of the binding (e.g., KeyBoard, Mouse). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="134" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="134" bodyend="143"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="255" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="255" bodyend="264"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_gamepad_input_binding_1ab634bdb62bace2ae9fbc32d73eb01852" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -131,12 +207,14 @@
         <name>~GamepadInputBinding</name>
         <qualifiedname>AGE::GamepadInputBinding::~GamepadInputBinding</qualifiedname>
         <briefdescription>
+<para>Destructor for the <ref refid="struct_a_g_e_1_1_gamepad_input_binding" kindref="compound">GamepadInputBinding</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function is responsible for freeing any resources that were allocated during the lifetime of an instance of this class. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="144" column="1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="270" column="1"/>
       </memberdef>
       <memberdef kind="function" id="struct_a_g_e_1_1_gamepad_input_binding_1ac64f1f74bf920a51999728f3c6686470" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type>uint16_t</type>
@@ -146,12 +224,17 @@
         <qualifiedname>AGE::GamepadInputBinding::GetKey</qualifiedname>
         <reimplements refid="struct_a_g_e_1_1_input_binding_1abc4c7f83099bcd471cc58d18f511d38c">GetKey</reimplements>
         <briefdescription>
+<para>GetKey returns the key value based on the binding type. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function checks the m_BindingType and returns different values depending on its state. If it&apos;s an Axis, it returns the m_Axes value. If it&apos;s an Action, it returns the m_Button value. For all other cases, it returns UINT16_MAX to indicate an error or invalid state.</para>
+<para><simplesect kind="return"><para>uint16_t The key value based on the binding type. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="146" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="146" bodyend="163"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="279" column="10" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="279" bodyend="296"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -162,12 +245,14 @@
         <name>GamepadInputBinding</name>
         <qualifiedname>AGE::GamepadInputBinding::GamepadInputBinding</qualifiedname>
         <briefdescription>
+<para>Default constructor for the <ref refid="struct_a_g_e_1_1_gamepad_input_binding" kindref="compound">GamepadInputBinding</ref> class. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function initializes a new instance of the <ref refid="struct_a_g_e_1_1_gamepad_input_binding" kindref="compound">GamepadInputBinding</ref> class with default values. It does not take any parameters and returns nothing. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="170" column="1"/>
+        <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="308" column="1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -198,7 +283,7 @@
         <link refid="struct_a_g_e_1_1_input_binding"/>
       </node>
     </collaborationgraph>
-    <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="112" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="113" bodyend="171"/>
+    <location file="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" line="211" column="1" bodyfile="C:/Programming/AGE2D/Engine/src/AGE/Core/Public/InputBinding.h" bodystart="212" bodyend="309"/>
     <listofallmembers>
       <member refid="struct_a_g_e_1_1_input_binding_1a56278a58dd39b9414406b303ae044c7a" prot="public" virt="non-virtual"><scope>AGE::GamepadInputBinding</scope><name>ActionCallbackFn</name></member>
       <member refid="struct_a_g_e_1_1_input_binding_1a5f0b234a7b0ebb772d215394602d78ff" prot="public" virt="non-virtual"><scope>AGE::GamepadInputBinding</scope><name>ActionExecute</name></member>

@@ -63,16 +63,16 @@
 
 | Type | Name |
 | ---: | :--- |
-|   | [**CapsuleCollider2DComponent**](#function-capsulecollider2dcomponent-12) () = default<br> |
-|   | [**CapsuleCollider2DComponent**](#function-capsulecollider2dcomponent-22) (const [**CapsuleCollider2DComponent**](struct_a_g_e_1_1_capsule_collider2_d_component.md) &) = default<br> |
+|   | [**CapsuleCollider2DComponent**](#function-capsulecollider2dcomponent-12) () = default<br>_Default constructor for_ [_**CapsuleCollider2DComponent**_](struct_a_g_e_1_1_capsule_collider2_d_component.md) _class._ |
+|   | [**CapsuleCollider2DComponent**](#function-capsulecollider2dcomponent-22) (const [**CapsuleCollider2DComponent**](struct_a_g_e_1_1_capsule_collider2_d_component.md) &) = default<br>_Default copy constructor for the_ [_**CapsuleCollider2DComponent**_](struct_a_g_e_1_1_capsule_collider2_d_component.md) _class. This function is used to create a new instance of the class by copying an existing one. The copy operation will be performed using the '= default' directive provided by the compiler._ |
 
 
 ## Public Static Functions
 
 | Type | Name |
 | ---: | :--- |
-|  void | [**Deserialize**](#function-deserialize) ([**DataReader**](class_a_g_e_1_1_data_reader.md) \* Serializer, [**CapsuleCollider2DComponent**](struct_a_g_e_1_1_capsule_collider2_d_component.md) & Data) <br> |
-|  void | [**Serialize**](#function-serialize) ([**DataWriter**](class_a_g_e_1_1_data_writer.md) \* Serializer, const [**CapsuleCollider2DComponent**](struct_a_g_e_1_1_capsule_collider2_d_component.md) & Data) <br> |
+|  void | [**Deserialize**](#function-deserialize) ([**DataReader**](class_a_g_e_1_1_data_reader.md) \* Serializer, [**CapsuleCollider2DComponent**](struct_a_g_e_1_1_capsule_collider2_d_component.md) & Data) <br>_This function deserializes a_ [_**CapsuleCollider2DComponent**_](struct_a_g_e_1_1_capsule_collider2_d_component.md) _from the provided_[_**DataReader**_](class_a_g_e_1_1_data_reader.md) _._ |
+|  void | [**Serialize**](#function-serialize) ([**DataWriter**](class_a_g_e_1_1_data_writer.md) \* Serializer, const [**CapsuleCollider2DComponent**](struct_a_g_e_1_1_capsule_collider2_d_component.md) & Data) <br>_This function serializes the data of a_ [_**CapsuleCollider2DComponent**_](struct_a_g_e_1_1_capsule_collider2_d_component.md) _._ |
 
 
 
@@ -212,6 +212,7 @@ bool AGE::CapsuleCollider2DComponent::bGeneratePhysicsEvents;
 
 ### function CapsuleCollider2DComponent [1/2]
 
+_Default constructor for_ [_**CapsuleCollider2DComponent**_](struct_a_g_e_1_1_capsule_collider2_d_component.md) _class._
 ```C++
 AGE::CapsuleCollider2DComponent::CapsuleCollider2DComponent () = default
 ```
@@ -225,6 +226,7 @@ AGE::CapsuleCollider2DComponent::CapsuleCollider2DComponent () = default
 
 ### function CapsuleCollider2DComponent [2/2]
 
+_Default copy constructor for the_ [_**CapsuleCollider2DComponent**_](struct_a_g_e_1_1_capsule_collider2_d_component.md) _class. This function is used to create a new instance of the class by copying an existing one. The copy operation will be performed using the '= default' directive provided by the compiler._
 ```C++
 AGE::CapsuleCollider2DComponent::CapsuleCollider2DComponent (
     const CapsuleCollider2DComponent &
@@ -234,6 +236,17 @@ AGE::CapsuleCollider2DComponent::CapsuleCollider2DComponent (
 
 
 
+
+**Parameters:**
+
+
+* `other` - An instance of [**CapsuleCollider2DComponent**](struct_a_g_e_1_1_capsule_collider2_d_component.md) to be copied. 
+
+
+
+
+        
+
 <hr>
 ## Public Static Functions Documentation
 
@@ -242,6 +255,7 @@ AGE::CapsuleCollider2DComponent::CapsuleCollider2DComponent (
 
 ### function Deserialize 
 
+_This function deserializes a_ [_**CapsuleCollider2DComponent**_](struct_a_g_e_1_1_capsule_collider2_d_component.md) _from the provided_[_**DataReader**_](class_a_g_e_1_1_data_reader.md) _._
 ```C++
 static inline void AGE::CapsuleCollider2DComponent::Deserialize (
     DataReader * Serializer,
@@ -252,12 +266,32 @@ static inline void AGE::CapsuleCollider2DComponent::Deserialize (
 
 
 
+
+**Parameters:**
+
+
+* `Serializer` A pointer to the [**DataReader**](class_a_g_e_1_1_data_reader.md) that contains the serialized data. 
+* `Data` The [**CapsuleCollider2DComponent**](struct_a_g_e_1_1_capsule_collider2_d_component.md) to be populated with deserialized data.
+
+
+
+**Returns:**
+
+void 
+
+
+
+
+
+        
+
 <hr>
 
 
 
 ### function Serialize 
 
+_This function serializes the data of a_ [_**CapsuleCollider2DComponent**_](struct_a_g_e_1_1_capsule_collider2_d_component.md) _._
 ```C++
 static inline void AGE::CapsuleCollider2DComponent::Serialize (
     DataWriter * Serializer,
@@ -267,6 +301,25 @@ static inline void AGE::CapsuleCollider2DComponent::Serialize (
 
 
 
+
+
+**Parameters:**
+
+
+* `Serializer` A pointer to an instance of [**DataWriter**](class_a_g_e_1_1_data_writer.md) that will be used for serialization. 
+* `Data` The [**CapsuleCollider2DComponent**](struct_a_g_e_1_1_capsule_collider2_d_component.md) whose data is being serialized. 
+
+
+
+**Returns:**
+
+void 
+
+
+
+
+
+        
 
 <hr>
 

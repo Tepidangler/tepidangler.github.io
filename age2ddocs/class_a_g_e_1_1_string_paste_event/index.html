@@ -77,6 +77,10 @@
               
                 <h1 id="class-agestringpasteevent">Class AGE::StringPasteEvent</h1>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespace_a_g_e/"><strong>AGE</strong></a> <strong>&gt;</strong> <a href="./"><strong>StringPasteEvent</strong></a></p>
+<p><em>Represents a string paste event. This event is triggered when a string is pasted from the clipboard.</em> <a href="#detailed-description">More...</a></p>
+<ul>
+<li><code>#include &lt;ApplicationEvent.h&gt;</code></li>
+</ul>
 <p>Inherits the following classes: <a href="../class_a_g_e_1_1_event/">AGE::Event</a></p>
 <h2 id="public-attributes-inherited-from-ageevent">Public Attributes inherited from AGE::Event</h2>
 <p>See <a href="../class_a_g_e_1_1_event/">AGE::Event</a></p>
@@ -105,7 +109,7 @@
 <tbody>
 <tr>
 <td style="text-align: right;">const char *</td>
-<td style="text-align: left;"><a href="#function-getstring"><strong>GetString</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-getstring"><strong>GetString</strong></a> () <br><em>This function returns a pointer to the string stored in the object.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
@@ -113,7 +117,7 @@
 </tr>
 <tr>
 <td style="text-align: right;">virtual std::string</td>
-<td style="text-align: left;"><a href="#function-tostring"><strong>ToString</strong></a> () override const<br></td>
+<td style="text-align: left;"><a href="#function-tostring"><strong>ToString</strong></a> () override const<br><em>This function returns a string representation of the event. The returned string includes details about what string was pasted and from where (clipboard).</em></td>
 </tr>
 </tbody>
 </table>
@@ -141,18 +145,30 @@
 </tr>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-isincategory"><strong>IsInCategory</strong></a> (EventCategory Category) <br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-isincategory"><strong>IsInCategory</strong></a> (EventCategory Category) <br><em>Checks if an event is in a specific category.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual std::string</td>
-<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-tostring"><strong>ToString</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="../class_a_g_e_1_1_event/#function-tostring"><strong>ToString</strong></a> () const<br><em>Returns a string representation of the object.</em></td>
 </tr>
 </tbody>
 </table>
+<h2 id="detailed-description">Detailed Description</h2>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>String</code> The string that was pasted.</li>
+</ul>
+<p>This class represents a string paste event. It is an application event that includes details about what string was pasted and from where (clipboard). </p>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-getstring">function GetString</h3>
+<p><em>This function returns a pointer to the string stored in the object.</em> </p>
 <pre><code class="language-C++">inline const char * AGE::StringPasteEvent::GetString () 
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>A constant character pointer pointing to the internal string of the object. If no string is set, it will return nullptr.</p>
+<p>This function returns a pointer to the string stored in the object. </p>
+<p><strong>Returns:</strong></p>
+<p>A pointer to the internal string of this object. </p>
 <hr>
 
 <h3 id="function-stringpasteevent">function StringPasteEvent</h3>
@@ -163,8 +179,14 @@
 <hr>
 
 <h3 id="function-tostring">function ToString</h3>
+<p><em>This function returns a string representation of the event. The returned string includes details about what string was pasted and from where (clipboard).</em> </p>
 <pre><code class="language-C++">inline virtual std::string AGE::StringPasteEvent::ToString () override const
 </code></pre>
+<p><strong>Returns:</strong></p>
+<p>std::string A string containing information about the paste event.</p>
+<p>This function returns a string representation of the event. The returned string includes details about what string was pasted and where it came from (clipboard).</p>
+<p><strong>Returns:</strong></p>
+<p>A string containing information about the paste event. </p>
 <p>Implements <a href="../class_a_g_e_1_1_event/#function-tostring"><em>AGE::Event::ToString</em></a></p>
 <hr>
 
