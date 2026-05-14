@@ -50,17 +50,7 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#notable-systems-where-to-look">Notable systems &amp; where to look</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#build-instructions">Build Instructions</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#windows-build-visual-studio-cmake">Windows build (Visual Studio + CMake)</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#linux">Linux</a>
-    </li>
-        </ul>
-    </li>
     <li class="toctree-l2"><a class="reference internal" href="#native-c-scripting-real-api-concise">Native C++ scripting — real API, concise</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#how-to-write-and-bind-a-native-script">How to write and bind a native script</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#technical-highlights">Technical highlights</a>
     </li>
@@ -148,59 +138,7 @@
 <li>Renderer2D (Render/Public/Renderer2D.h/.cpp) — 2D draw calls: quads, sprites, circles, text</li>
 <li>Build + vendor libraries: CMakeLists.txt (top level) and Engine/CMakeLists.txt (vendor add_subdirectory calls)</li>
 </ul>
-<p><a name="build-instructions"></a></p>
-<h2 id="build-instructions">Build Instructions</h2>
-<p><a name="windows-build-visual-studio--cmake"></a></p>
-<h3 id="windows-build-visual-studio-cmake">Windows build (Visual Studio + CMake)</h3>
-<p>The project uses C++20 and is configured to build with Visual Studio on Windows. Steps:</p>
-<ol>
-<li>Clone</li>
-</ol>
-<pre><code>   git clone https://github.com/Tepidangler/AGE2D.git
-
-   cd AGE2D
-</code></pre>
-<ol>
-<li>Create and configure a build directory (Visual Studio 2022 example)</li>
-</ol>
-<p><code>mkdir build
-   cd build
-   cmake.exe .. -G "Ninja Multi-Config" -DCMAKE_TOOLCHAIN_FILE=path\to\vcpkg.cmake -S path/to/source -B path/to/build/dir</code></p>
-<p>Notes:
-   - The Engine CMake config references many vendor libs under Engine/libs/vendor. The default setup includes those with add_subdirectory so no extra steps are usually required.
-   - If you move vendors or use system libraries, set the Engine CMake cache variables (INC_GLFW, INC_GLAD, INC_GLM, etc.) or use vcpkg and point CMAKE_TOOLCHAIN_FILE appropriately.</p>
-<ol>
-<li>Build
-   <code>cmake --build . --config (Debug/Release/Distribution)</code></li>
-<li>
-<p>Artifacts</p>
-</li>
-<li>
-<p>The build produces <code>Engine</code> (static lib) and the <code>Editor</code> and <code>Game</code> targets where applicable. There are no packaged sample runtime executables by default — the Game directory is the place to add your playable demo or test runner.</p>
-</li>
-</ol>
-<p><a name="linux"></a></p>
-<h3 id="linux">Linux</h3>
-<ol>
-<li>
-<p>Installing Dependencies </p>
-</li>
-<li>
-<p>Debian
-       <code>sudo apt-get update
-       sudo apt-get install -y libgl1-mesa-dev libfreetype6-dev libxml2-dev zlib1g-dev libx11-dev libxcursor-dev libxrandr-dev libxi-dev libxinerama-dev libxext-dev libtinyxml2-dev libspdlog-dev libyaml-cpp-dev libpqxx-dev libglm-dev libglfw3-dev libboost-all-dev libgtk-4-dev ninja-build</code></p>
-</li>
-<li>
-<p>Fedora (untested)
-      <code>sudo dnf update
-      sudo dnf install -y libgl1-mesa-devel libfreetype6-devel libxml2-devel zlib1g-devel libx11-devel libxcursor-devel libxrandr-devel libxi-devel libxinerama-devel libxext-devel libtinyxml2-devel libspdlog-devel libyaml-cpp-devel libpqxx-devel libglm-devel gtk-4-devel libglfw3-devel libboost-all-devel ninja-build</code></p>
-</li>
-<li>
-<p>CMake
-    <code>/usr/bin/cmake -DCMAKE_CXX_COMPILER=/path/to/compiler++ -G "Ninja Multi-Config" -S path/to/source -B path/to/build/dir</code>
-<a name="native-c-scripting-real-api--example"></a></p>
-</li>
-</ol>
+<p><a name="native-c-scripting-real-api--example"></a></p>
 <h2 id="native-c-scripting-real-api-concise">Native C++ scripting — real API, concise</h2>
 <p>AGE2D uses a native C++ script base type. The relevant classes and patterns are taken directly from the repository:</p>
 <ul>
@@ -232,59 +170,6 @@
 </ul>
 </li>
 </ul>
-<p><a name="how-to-write-and-bind-a-native-script"></a></p>
-<h2 id="how-to-write-and-bind-a-native-script">How to write and bind a native script</h2>
-<ul>
-<li>File: Game/src/Scripts/ExampleScript.hpp (example; add it to your Game project)</li>
-</ul>
-<pre><code class="language-cpp">#pragma once
-
-#include &quot;Scene/Public/ScriptableEntity.h&quot;
-#include &quot;Scene/Public/Components.h&quot;   // TransformComponent, NativeScriptComponent
-#include &quot;Core/Public/DeltaTime.h&quot;     // TimeStep
-
-namespace GameFramework
-{
-    class ExampleScript : public AGE::ScriptableEntity
-    {
-    public:
-        ExampleScript() = default;
-        virtual ~ExampleScript() = default;
-
-        void OnCreate() override
-        {
-            // Called when the script instance is created
-        }
-
-        void OnBeginPlay() override
-        {
-            // Called when the scene/actor begins play
-        }
-
-        void OnUpdate(AGE::TimeStep DeltaTime) override
-        {
-            // Move right at 100 units/sec
-            auto&amp; transform = GetComponent&lt;AGE::TransformComponent&gt;();
-            transform.Translation.x += 100.0f * DeltaTime;
-        }
-
-        void OnDestroy() override
-        {
-            // Cleanup
-        }
-    };
-}
-</code></pre>
-<p>Bind the script to an entity (example usage inside a scene-setup function):</p>
-<pre><code class="language-cpp">// `scene` is a Ref&lt;AGE::Scene&gt; obtained from your project/app
-AGE::Entity player = scene-&gt;CreateEntity(&quot;Player&quot;);
-
-// Attach NativeScriptComponent and bind ExampleScript
-auto&amp; nsc = player.AddComponent&lt;AGE::NativeScriptComponent&gt;();
-nsc.Bind&lt;GameFramework::ExampleScript&gt;();
-
-// The runtime will call nsc.InstantiateScript() -&gt; sets Instance, and lifecycle methods OnCreate/OnBeginPlay/OnUpdate will be called by the engine.
-</code></pre>
 <p><a name="technical-highlights"></a></p>
 <h2 id="technical-highlights">Technical highlights</h2>
 <ul>
@@ -364,5 +249,5 @@ nsc.Bind&lt;GameFramework::ExampleScript&gt;();
 
 <!--
 MkDocs version : 1.6.1
-Build Date UTC : 2026-05-14 13:00:25.339703+00:00
+Build Date UTC : 2026-05-14 13:35:36.574646+00:00
 -->
